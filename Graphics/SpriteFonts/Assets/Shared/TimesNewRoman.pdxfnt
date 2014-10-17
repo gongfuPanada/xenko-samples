@@ -1,0 +1,18 @@
+!SpriteFont
+Id: 19910975-44f8-4f1f-abba-4bc79e2fa402
+Tags: []
+Source: null
+FontName: Times New Roman
+Size: 12
+Style: Regular
+IsDynamic: true
+DefaultCharacter: ' '
+CharacterSet: null
+CharacterRegions:
+    -   Start: ' '
+        End: "\x7F"
+AntiAlias: Grayscale
+NoPremultiply: false
+Spacing: 0
+LineSpacing: 0
+UseKerning: false

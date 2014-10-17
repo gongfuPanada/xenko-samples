@@ -1,0 +1,11 @@
+!TemplateSample
+Id: 7174D040-C0FB-4D5C-8170-3411AD8AA4C2
+Name: Accelerometer Gravity Sample
+Scope: Session
+Description: Creates a sample project which describes how to use the physic system.
+FullDescription: Creates a sample project which describes how to use the physic system.
+Group: Samples/Physics
+Icon: ../.pdxtpl/NewPhysics.png
+DefaultOutputName: AccelerometerGravity
+Screenshots:
+    - .pdxtpl/screenshot_small.jpg

@@ -1,0 +1,14 @@
+!Texture
+Id: a68e642d-ec61-41c4-9517-62891a57305a
+Tags: []
+Source: ../../RawAssets/knight/sourceimages/c100_weapon_cm.jpg
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+PremultiplyAlpha: false
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

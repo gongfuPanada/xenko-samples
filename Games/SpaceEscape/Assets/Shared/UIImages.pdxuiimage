@@ -1,0 +1,31 @@
+!UIImageGroup
+Id: 71fa79e9-eff2-4538-9b6b-c04d0c5266ac
+Tags: []
+Images:
+    -   Source: ../../RawAssets/ui_texture/space_escape_ui.png
+        Name: button
+        TextureRegion:
+            X: 278
+            Y: 0
+            Width: 219
+            Height: 89
+        Borders: {X: 125, Y: 50, Z: 0, W: 0}
+    -   Source: ../../RawAssets/ui_texture/space_escape_ui.png
+        Name: pdx_logo
+        TextureRegion:
+            X: 0
+            Y: 0
+            Width: 274
+            Height: 283
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/ui_texture/space_escape_ui.png
+        Name: distance_bg
+        TextureRegion:
+            X: 0
+            Y: 287
+            Width: 541
+            Height: 183
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: TrueColor
+Alpha: Explicit

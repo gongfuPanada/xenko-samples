@@ -1,0 +1,41 @@
+!Package
+Id: 69972eae-e2a4-4a4f-9059-59063dbb633c
+Tags: []
+Meta:
+    Name: AccelerometerGravity
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha01
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: ec1eed7a-9f01-45ff-9bed-29ec8635b18a
+                Location: AccelerometerGravity.Game/AccelerometerGravity.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: 62dec7c9-c494-4f3b-8aa6-a58d61fb5e07
+                Location: AccelerometerGravity.Windows/AccelerometerGravity.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

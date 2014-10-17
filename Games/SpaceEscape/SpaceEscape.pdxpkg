@@ -1,0 +1,44 @@
+!Package
+Id: 3665e984-37e5-4b32-b351-d4254f5e6d94
+Tags: []
+Meta:
+    Name: SpaceEscape
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha01
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: SpaceEscape.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+        ProjectReferences:
+            -   Id: 8573b1cb-c5a4-47a0-9b8e-092466e1cd0f
+                Location: SpaceEscape.Game/SpaceEscape.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: c9b0b66a-5a11-4866-ad75-718c80ec383a
+                Location: SpaceEscape.Windows/SpaceEscape.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

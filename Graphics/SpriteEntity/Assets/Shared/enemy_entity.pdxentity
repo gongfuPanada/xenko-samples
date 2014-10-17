@@ -1,0 +1,20 @@
+!Entity
+Id: 59b2e051-64ad-4233-923f-92cce3681730
+Tags: []
+Data:
+    Name: null
+    Components:
+        TransformationComponent.Key: !TransformationComponentData
+            Children: []
+            Rotation:
+                W: 0
+                X: 0
+                Y: 0
+                Z: 0
+            Scaling: {X: 1, Y: 1, Z: 1}
+            Translation: {X: 0, Y: 0, Z: 0}
+            UseTRS: true
+        SpriteComponent.Key: !SpriteComponentData
+            Color: {R: 255, G: 255, B: 255, A: 255}
+            SpriteEffect: None
+            SpriteGroupInternal: 93ec5def-ca22-4a5c-9bd0-78d53c1d84c8:enemy_active

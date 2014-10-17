@@ -1,0 +1,8 @@
+!ColliderShapeAsset
+Id: 8b9351d6-658f-4244-822b-29265fe70d0b
+Tags: []
+Data:
+    ColliderShapes:
+        - !StaticPlaneColliderShapeDesc
+            Normal: {X: 0, Y: -1, Z: 0}
+            Offset: 0

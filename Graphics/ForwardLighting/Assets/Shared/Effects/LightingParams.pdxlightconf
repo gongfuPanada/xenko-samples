@@ -1,0 +1,34 @@
+!LightingConfiguration
+Id: ab903105-47e4-43ba-8253-70788007b203
+BuildOrder: 1000
+Tags: []
+Permutations:
+    Keys:
+        Lighting.MaxDirectionalLights: !fxparam.range
+            From: 0
+            To: 2
+        Lighting.MaxPointLights:
+            - 0
+            - 1
+        Lighting.MaxSpotLights:
+            - 0
+            - 1
+    Children:
+        -   Keys:
+                ShadowMapParameters.ShadowConfigurations:
+                    - !ShadowConfigurationArray
+                        Groups:
+                            -   ShadowCount: 1
+                                CascadeCount: 4
+                                FilterType: Variance
+                    - !ShadowConfigurationArray
+                        Groups:
+                            -   ShadowCount: 1
+                                CascadeCount: 4
+                                FilterType: Variance
+                            -   ShadowCount: 1
+                                CascadeCount: 4
+                                FilterType: Variance
+            Children: []
+        -   Keys: {}
+            Children: []

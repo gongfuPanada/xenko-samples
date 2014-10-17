@@ -1,0 +1,43 @@
+!Model
+Id: 6d812dcb-06b9-4816-a76d-205f90dace2b
+BuildOrder: 500
+Tags: []
+Source: ../../RawAssets/cube.fbx
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+SourceHash: df8d21196cc158e2aa1659a9b9713ea8
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: Cube, Depth: 1, Preserve: false}
+UpAxis: {X: 0, Y: 0, Z: 1}
+FrontAxis: {X: 0, Y: 1, Z: 0}
+MeshParameters:
+    Cube:
+        NodeName: Cube
+        Material: 11911f11-38da-4d99-ac5e-1659a54aa127:cube_material_Material_1
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 500
+        Tags: []
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: Cube, Depth: 1, Preserve: false}
+        UpAxis: {X: 0, Y: 0, Z: 1}
+        FrontAxis: {X: 0, Y: 1, Z: 0}
+        MeshParameters:
+            Cube:
+                NodeName: Cube
+                Material: 11911f11-38da-4d99-ac5e-1659a54aa127:cube_material_Material_1
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0

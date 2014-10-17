@@ -1,0 +1,28 @@
+!Entity
+Id: d7f15a79-de7f-4fb7-a055-0ecb348a7251
+Tags: []
+Data:
+    Name: character_00
+    Components:
+        ModelComponent.Key: !ModelComponentData
+            DrawOrder: 0
+            Enabled: true
+            Model: ec491e0e-4f4c-42ce-b4de-8dfe54b6d96b:character_00_model
+            Parameters:
+                Capacity: 0
+                ~Items: {}
+~Base:
+    Location: --import--
+    Asset: !Entity
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Data:
+            Name: character_00
+            Components:
+                ModelComponent.Key: !ModelComponentData
+                    DrawOrder: 0
+                    Enabled: true
+                    Model: ec491e0e-4f4c-42ce-b4de-8dfe54b6d96b:character_00_model
+                    Parameters:
+                        Capacity: 0
+                        ~Items: {}

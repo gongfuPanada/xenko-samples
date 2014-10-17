@@ -1,0 +1,18 @@
+!SpriteFont
+Id: e2660742-64e6-4f3b-9819-bb6262c8c683
+Tags: []
+Source: null
+FontName: Arial
+Size: 12
+Style: Regular
+IsDynamic: true
+DefaultCharacter: ' '
+CharacterSet: null
+CharacterRegions:
+    -   Start: ' '
+        End: "\x7F"
+AntiAlias: Grayscale
+NoPremultiply: false
+Spacing: 0
+LineSpacing: 0
+UseKerning: false

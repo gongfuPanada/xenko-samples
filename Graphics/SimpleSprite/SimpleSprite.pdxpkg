@@ -1,0 +1,44 @@
+!Package
+Id: 5c3b20c3-522a-4637-a7b2-661cac6c7724
+Tags: []
+Meta:
+    Name: SimpleSprite
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha01
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: SimpleSprite.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+        ProjectReferences:
+            -   Id: 3236d26b-652b-4daa-a32f-2790bd955a96
+                Location: SimpleSprite.Game/SimpleSprite.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: 474576ba-e4d5-4ff8-98e1-8f528022e175
+                Location: SimpleSprite.Windows/SimpleSprite.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

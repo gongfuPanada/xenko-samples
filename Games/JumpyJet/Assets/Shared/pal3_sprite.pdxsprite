@@ -1,0 +1,16 @@
+!SpriteGroup
+Id: a19bb74c-5d3e-4e6b-980d-c047c8e83f2f
+Tags: []
+Images:
+    -   Source: ../../RawAssets/tex1.png
+        Name: floor
+        TextureRegion:
+            X: 0
+            Y: 1140
+            Width: 1920
+            Height: 279
+        Center: {X: 320, Y: 139.5}
+        CenterFromMiddle: false
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: TrueColor
+Alpha: Explicit

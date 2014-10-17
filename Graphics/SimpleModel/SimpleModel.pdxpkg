@@ -1,0 +1,44 @@
+!Package
+Id: 8f259d3b-5c10-4e31-8370-5b42f0ae54df
+Tags: []
+Meta:
+    Name: SimpleModel
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha01
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: SimpleModel.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+        ProjectReferences:
+            -   Id: 928e9f79-b937-4133-b6ef-2a107adc5946
+                Location: SimpleModel.Game/SimpleModel.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: 981f0236-2f31-4879-930a-f924dbad6465
+                Location: SimpleModel.Windows/SimpleModel.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

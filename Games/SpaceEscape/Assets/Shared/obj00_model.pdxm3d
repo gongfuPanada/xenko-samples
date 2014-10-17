@@ -1,0 +1,87 @@
+!Model
+Id: 5800a5e3-6c63-4c90-b0f6-220aee428077
+BuildOrder: 500
+Tags: []
+Source: ../../RawAssets/model/BG/scene/obj00.FBX
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+SourceHash: b67d92d3f1774d22af885fd1623c97c0
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: Root, Depth: 1, Preserve: false}
+    - {Name: part, Depth: 2, Preserve: false}
+    - {Name: obj001, Depth: 3, Preserve: false}
+    - {Name: obj000, Depth: 3, Preserve: false}
+    - {Name: obj002, Depth: 3, Preserve: false}
+UpAxis: {X: 0, Y: 1, Z: 0}
+FrontAxis: {X: 0, Y: 0, Z: 1}
+MeshParameters:
+    obj000:
+        NodeName: obj000
+        Material: 1038cbcc-e5c1-48af-a181-d05d68f81b19:obj00_material_obj00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    obj001:
+        NodeName: obj001
+        Material: 1038cbcc-e5c1-48af-a181-d05d68f81b19:obj00_material_obj00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    obj002:
+        NodeName: obj002
+        Material: 1038cbcc-e5c1-48af-a181-d05d68f81b19:obj00_material_obj00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 500
+        Tags: []
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: Root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: obj001, Depth: 3, Preserve: false}
+            - {Name: obj000, Depth: 3, Preserve: false}
+            - {Name: obj002, Depth: 3, Preserve: false}
+        UpAxis: {X: 0, Y: 0, Z: 1}
+        FrontAxis: {X: 0, Y: 1, Z: 0}
+        MeshParameters:
+            obj000:
+                NodeName: obj000
+                Material: 1038cbcc-e5c1-48af-a181-d05d68f81b19:obj00_material_obj00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            obj001:
+                NodeName: obj001
+                Material: 1038cbcc-e5c1-48af-a181-d05d68f81b19:obj00_material_obj00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            obj002:
+                NodeName: obj002
+                Material: 1038cbcc-e5c1-48af-a181-d05d68f81b19:obj00_material_obj00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0

@@ -1,0 +1,48 @@
+!MaterialAsset
+Id: 79f4b4e4-0f70-4582-b579-70aaab87c726
+BuildOrder: 250
+Tags: []
+Material:
+    Nodes:
+        obj_01: !MaterialTextureNode
+            TextureReference: d255702a-4f92-455f-9dcc-21019ecd8367:obj01_obj_01
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        pdx_diffuseOpaque: !MaterialBinaryNode
+            Operand: Opaque
+            LeftChild: !MaterialReferenceNode
+                Name: obj_01
+            RightChild: null
+    ColorNodes:
+        MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+    Parameters:
+        Capacity: 4
+        ~Items:
+            Material.SpecularColorValue: !Color4 {R: 0.9, G: 0.9, B: 0.9, A: 1}
+            Material.SpecularIntensity: 0
+            Material.SpecularPower: 0.02
+~Base:
+    Location: --import--
+    Asset: !MaterialAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 250
+        Tags: []
+        Material:
+            Nodes:
+                obj_01: !MaterialTextureNode
+                    TextureReference: d255702a-4f92-455f-9dcc-21019ecd8367:obj01_obj_01
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                pdx_diffuseOpaque: !MaterialBinaryNode
+                    Operand: Opaque
+                    LeftChild: !MaterialReferenceNode
+                        Name: obj_01
+                    RightChild: null
+            ColorNodes:
+                MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+            Parameters:
+                Capacity: 4
+                ~Items:
+                    Material.SpecularColorValue: !Color4 {R: 0.9, G: 0.9, B: 0.9, A: 1}
+                    Material.SpecularIntensity: 0
+                    Material.SpecularPower: 0.02

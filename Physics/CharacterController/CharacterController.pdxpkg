@@ -1,0 +1,44 @@
+!Package
+Id: 207c8460-0747-4fc7-b3c3-5e4f94ef0ee8
+Tags: []
+Meta:
+    Name: CharacterController
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha03
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: CharacterController.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+        ProjectReferences:
+            -   Id: 6da9dc17-e343-44a3-bb3b-023a48c5a64f
+                Location: CharacterController.Game/CharacterController.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: 305476ee-ec8e-4791-a9b3-e629dcf59433
+                Location: CharacterController.Windows/CharacterController.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

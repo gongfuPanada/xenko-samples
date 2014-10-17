@@ -1,0 +1,11 @@
+!TemplateSample
+Id: A182E3F3-1BE2-4631-BF3A-F19724FA8962
+Name: HelloWorld Sample
+Scope: Session
+Description: Creates an empty that performs a simple clear screen
+FullDescription: This create smallest sample possible that performs a simple clear screen.
+Group: Samples/Graphics
+Icon: ../.pdxtpl/NewGraphics.png
+DefaultOutputName: HelloWorld
+Screenshots:
+    - .pdxtpl/screenshot_small.jpg

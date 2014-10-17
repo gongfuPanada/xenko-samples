@@ -1,0 +1,86 @@
+!MaterialAsset
+Id: c402cdad-5d3c-4d99-a27e-e4ddd6bee6a2
+BuildOrder: 250
+Tags: []
+Material:
+    Nodes:
+        c100_weapon_cm: !MaterialTextureNode
+            TextureReference: a68e642d-ec61-41c4-9517-62891a57305a:knight_c100_weapon_cm
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        c100_weapon_nm: !MaterialTextureNode
+            TextureReference: 32d45e31-dac4-415e-9e4d-7838423a20dd:knight_c100_weapon_nm
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        c100_weapon_sp: !MaterialTextureNode
+            TextureReference: 5cad9f3b-4fc4-4bc7-ad34-260b0f9b8327:knight_c100_weapon_sp
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        normalMap: !MaterialReferenceNode
+            Name: c100_weapon_nm
+        pdx_diffuseOpaque: !MaterialBinaryNode
+            Operand: Opaque
+            LeftChild: !MaterialReferenceNode
+                Name: c100_weapon_cm
+            RightChild: null
+        specular: !MaterialReferenceNode
+            Name: c100_weapon_sp
+        specularIntensity: !MaterialFloatNode
+            Value: 1
+            AutoAssignKey: false
+            Key: Material.SpecularIntensity
+            IsReducible: false
+        specularPower: !MaterialFloatNode
+            Value: 2
+            AutoAssignKey: false
+            Key: Material.SpecularPower
+            IsReducible: false
+    ColorNodes:
+        MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+        MaterialParameters.AlbedoSpecular: specular
+        MaterialParameters.NormalMap: normalMap
+        MaterialParameters.SpecularIntensityMap: specularIntensity
+        MaterialParameters.SpecularPowerMap: specularPower
+    Parameters:
+        Capacity: 4
+        ~Items:
+            Material.SpecularColorValue: !Color4 {R: 0.5, G: 0.5, B: 0.5, A: 1}
+~Base:
+    Location: --import--
+    Asset: !MaterialAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 250
+        Tags: []
+        Material:
+            Nodes:
+                c100_weapon_cm: !MaterialTextureNode
+                    TextureReference: a68e642d-ec61-41c4-9517-62891a57305a:knight_c100_weapon_cm
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                c100_weapon_nm: !MaterialTextureNode
+                    TextureReference: 32d45e31-dac4-415e-9e4d-7838423a20dd:knight_c100_weapon_nm
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                c100_weapon_sp: !MaterialTextureNode
+                    TextureReference: 5cad9f3b-4fc4-4bc7-ad34-260b0f9b8327:knight_c100_weapon_sp
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                normalMap: !MaterialReferenceNode
+                    Name: c100_weapon_nm
+                pdx_diffuseOpaque: !MaterialBinaryNode
+                    Operand: Opaque
+                    LeftChild: !MaterialReferenceNode
+                        Name: c100_weapon_cm
+                    RightChild: null
+                specular: !MaterialReferenceNode
+                    Name: c100_weapon_sp
+            ColorNodes:
+                MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+                MaterialParameters.AlbedoSpecular: specular
+                MaterialParameters.NormalMap: normalMap
+            Parameters:
+                Capacity: 4
+                ~Items:
+                    Material.SpecularColorValue: !Color4 {R: 0.5, G: 0.5, B: 0.5, A: 1}
+                    Material.SpecularIntensity: 1
+                    Material.SpecularPower: 0.02

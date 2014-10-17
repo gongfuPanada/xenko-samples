@@ -1,0 +1,15 @@
+
+namespace AnimatedModel
+{
+    class AnimatedModelApp
+    {
+        static void Main(string[] args)
+        {
+            // Profiler.EnableAll();
+            using (var game = new AnimatedModelGame())
+            {
+                game.Run();
+            }
+        }
+    }
+}

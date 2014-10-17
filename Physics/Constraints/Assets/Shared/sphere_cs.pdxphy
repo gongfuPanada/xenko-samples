@@ -1,0 +1,9 @@
+!ColliderShapeAsset
+Id: 94aeb499-a929-4322-bb9a-1f67fd34d9eb
+Tags: []
+Data:
+    ColliderShapes:
+        - !SphereColliderShapeDesc
+            Is2D: false
+            LocalOffset: {X: 0, Y: 0, Z: 0}
+            Radius: 4

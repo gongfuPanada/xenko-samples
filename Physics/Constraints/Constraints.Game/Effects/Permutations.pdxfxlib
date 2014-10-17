@@ -1,0 +1,10 @@
+!EffectLibrary
+Id: 12c67d92-6375-42b9-9206-86865538102c
+BuildOrder: 1000
+Tags: []
+Permutations:
+    Keys:
+        Effect.Name: ConstraintsEffectMain
+        MaterialAsset.UseParameters: true
+        Mesh.UseParameters: true
+    Children: []

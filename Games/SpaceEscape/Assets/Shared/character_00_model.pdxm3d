@@ -1,0 +1,393 @@
+!Model
+Id: 469307bc-f68d-4528-beb6-c39546db6a08
+BuildOrder: 500
+Tags: []
+Source: ../../RawAssets/model/character/scene/character_00.FBX
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+SourceHash: 1a0b83c9b02b333469043d7a7a964b16
+Nodes:
+    - {Name: RootNode, Depth: 0}
+    - {Name: Root, Depth: 1}
+    - {Name: part, Depth: 2}
+    - {Name: jet_F_R_1, Depth: 3}
+    - {Name: jet_F_R1_1, Depth: 4}
+    - {Name: jet_F_R1_2, Depth: 5}
+    - {Name: ef_B, Depth: 5}
+    - {Name: ef00_R002, Depth: 6}
+    - {Name: ef002, Depth: 7}
+    - {Name: ef003, Depth: 8}
+    - {Name: ef00_R003, Depth: 6}
+    - {Name: ef004, Depth: 7}
+    - {Name: ef005, Depth: 8}
+    - {Name: jet_F_R_2, Depth: 4}
+    - {Name: jet_F_L_1, Depth: 3}
+    - {Name: jet_F_L1, Depth: 4}
+    - {Name: jet_F_L002, Depth: 5}
+    - {Name: ef_C, Depth: 5}
+    - {Name: ef00_R004, Depth: 6}
+    - {Name: ef006, Depth: 7}
+    - {Name: ef009, Depth: 8}
+    - {Name: ef00_R005, Depth: 6}
+    - {Name: ef008, Depth: 7}
+    - {Name: ef010, Depth: 8}
+    - {Name: jet_F_L_2, Depth: 4}
+    - {Name: Jet_B, Depth: 3}
+    - {Name: Jet_B001, Depth: 4}
+    - {Name: ef_A, Depth: 4}
+    - {Name: ef00_R1, Depth: 5}
+    - {Name: ef01_1, Depth: 6}
+    - {Name: ef01_2, Depth: 7}
+    - {Name: ef00_R0, Depth: 5}
+    - {Name: ef00_1, Depth: 6}
+    - {Name: ef00_2, Depth: 7}
+    - {Name: engine, Depth: 3}
+    - {Name: engine001, Depth: 4}
+    - {Name: mc_body00, Depth: 3}
+    - {Name: driver_body001, Depth: 3}
+    - {Name: cloth_B_1, Depth: 3}
+    - {Name: cloth_B_2, Depth: 4}
+    - {Name: cloth_a_1, Depth: 3}
+    - {Name: cloth_a_2, Depth: 4}
+UpAxis: {X: 0, Y: 1, Z: 0}
+FrontAxis: {X: 0, Y: 0, Z: 1}
+MeshParameters:
+    Jet_B001:
+        NodeName: Jet_B001
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    cloth_B:
+        NodeName: cloth_B_2
+        Material: da215963-ab58-42a8-b8b2-ebf30d9caffd:character_00_material_mc01
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    cloth_a:
+        NodeName: cloth_a_2
+        Material: da215963-ab58-42a8-b8b2-ebf30d9caffd:character_00_material_mc01
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    driver_body001:
+        NodeName: driver_body001
+        Material: da215963-ab58-42a8-b8b2-ebf30d9caffd:character_00_material_mc01
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    ef00:
+        NodeName: ef00_2
+        Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    ef003:
+        NodeName: ef003
+        Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    ef005:
+        NodeName: ef005
+        Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    ef009:
+        NodeName: ef009
+        Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    ef01:
+        NodeName: ef01_2
+        Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    ef010:
+        NodeName: ef010
+        Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    engine001:
+        NodeName: engine001
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    jet_F_L:
+        NodeName: jet_F_L_2
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    jet_F_L002:
+        NodeName: jet_F_L002
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    jet_F_R:
+        NodeName: jet_F_R_2
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    jet_F_R1:
+        NodeName: jet_F_R1_2
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    mc_body00:
+        NodeName: mc_body00
+        Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 500
+        Tags: []
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: Root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: jet_F_R_1, Depth: 3, Preserve: false}
+            - {Name: jet_F_R1_1, Depth: 4, Preserve: false}
+            - {Name: jet_F_R1_2, Depth: 5, Preserve: false}
+            - {Name: ef_B, Depth: 5, Preserve: false}
+            - {Name: ef00_R002, Depth: 6, Preserve: false}
+            - {Name: ef002, Depth: 7, Preserve: false}
+            - {Name: ef003, Depth: 8, Preserve: false}
+            - {Name: ef00_R003, Depth: 6, Preserve: false}
+            - {Name: ef004, Depth: 7, Preserve: false}
+            - {Name: ef005, Depth: 8, Preserve: false}
+            - {Name: jet_F_R_2, Depth: 4, Preserve: false}
+            - {Name: jet_F_L_1, Depth: 3, Preserve: false}
+            - {Name: jet_F_L1, Depth: 4, Preserve: false}
+            - {Name: jet_F_L002, Depth: 5, Preserve: false}
+            - {Name: ef_C, Depth: 5, Preserve: false}
+            - {Name: ef00_R004, Depth: 6, Preserve: false}
+            - {Name: ef006, Depth: 7, Preserve: false}
+            - {Name: ef009, Depth: 8, Preserve: false}
+            - {Name: ef00_R005, Depth: 6, Preserve: false}
+            - {Name: ef008, Depth: 7, Preserve: false}
+            - {Name: ef010, Depth: 8, Preserve: false}
+            - {Name: jet_F_L_2, Depth: 4, Preserve: false}
+            - {Name: Jet_B, Depth: 3, Preserve: false}
+            - {Name: Jet_B001, Depth: 4, Preserve: false}
+            - {Name: ef_A, Depth: 4, Preserve: false}
+            - {Name: ef00_R1, Depth: 5, Preserve: false}
+            - {Name: ef01_1, Depth: 6, Preserve: false}
+            - {Name: ef01_2, Depth: 7, Preserve: false}
+            - {Name: ef00_R0, Depth: 5, Preserve: false}
+            - {Name: ef00_1, Depth: 6, Preserve: false}
+            - {Name: ef00_2, Depth: 7, Preserve: false}
+            - {Name: engine, Depth: 3, Preserve: false}
+            - {Name: engine001, Depth: 4, Preserve: false}
+            - {Name: mc_body00, Depth: 3, Preserve: false}
+            - {Name: driver_body001, Depth: 3, Preserve: false}
+            - {Name: cloth_B_1, Depth: 3, Preserve: false}
+            - {Name: cloth_B_2, Depth: 4, Preserve: false}
+            - {Name: cloth_a_1, Depth: 3, Preserve: false}
+            - {Name: cloth_a_2, Depth: 4, Preserve: false}
+        UpAxis: {X: 0, Y: 0, Z: 1}
+        FrontAxis: {X: 0, Y: 1, Z: 0}
+        MeshParameters:
+            Jet_B001:
+                NodeName: Jet_B001
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            cloth_B:
+                NodeName: cloth_B_2
+                Material: da215963-ab58-42a8-b8b2-ebf30d9caffd:character_00_material_mc01
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            cloth_a:
+                NodeName: cloth_a_2
+                Material: da215963-ab58-42a8-b8b2-ebf30d9caffd:character_00_material_mc01
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            driver_body001:
+                NodeName: driver_body001
+                Material: da215963-ab58-42a8-b8b2-ebf30d9caffd:character_00_material_mc01
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            ef00:
+                NodeName: ef00_2
+                Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            ef003:
+                NodeName: ef003
+                Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            ef005:
+                NodeName: ef005
+                Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            ef009:
+                NodeName: ef009
+                Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            ef01:
+                NodeName: ef01_2
+                Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            ef010:
+                NodeName: ef010
+                Material: 163885cf-ed41-4ec7-918a-d51a00e911ca:character_00_material_ef 00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            engine001:
+                NodeName: engine001
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            jet_F_L:
+                NodeName: jet_F_L_2
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            jet_F_L002:
+                NodeName: jet_F_L002
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            jet_F_R:
+                NodeName: jet_F_R_2
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            jet_F_R1:
+                NodeName: jet_F_R1_2
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            mc_body00:
+                NodeName: mc_body00
+                Material: 4f0c4488-ff15-4a18-b24c-0f714937a44c:character_00_material_mc00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0

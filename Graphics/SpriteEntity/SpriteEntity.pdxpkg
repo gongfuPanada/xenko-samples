@@ -1,0 +1,44 @@
+!Package
+Id: 3c734625-3973-4009-b5ff-fe75cb2b6fc6
+Tags: []
+Meta:
+    Name: SpriteEntity
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha01
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: SpriteEntity.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+        ProjectReferences:
+            -   Id: ccc7ebbe-c387-4e4d-9bf1-76a5306f7766
+                Location: SpriteEntity.Game/SpriteEntity.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: cf73c920-19ce-4bee-8c26-5752b444d821
+                Location: SpriteEntity.Windows/SpriteEntity.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

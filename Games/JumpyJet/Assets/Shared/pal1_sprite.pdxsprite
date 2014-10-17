@@ -1,0 +1,15 @@
+!SpriteGroup
+Id: 04d46b94-f30b-4e6d-af90-cefe14224c90
+Tags: []
+Images:
+    -   Source: ../../RawAssets/tex2.png
+        Name: parallax_gear
+        TextureRegion:
+            X: 0
+            Y: 0
+            Width: 1920
+            Height: 1136
+        Center: {X: 320, Y: 568}
+        CenterFromMiddle: false
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: TrueColor

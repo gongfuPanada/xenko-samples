@@ -1,0 +1,21 @@
+!EffectLibrary
+Id: a6b71d8d-22f2-4bfd-8f78-ee987d0466d5
+BuildOrder: 1000
+Tags: []
+Permutations:
+    Keys: {}
+    Children:
+        -   Keys:
+                Effect.Name: ForwardLightingEffectMain
+                MaterialAsset.UseParameters: true
+                Mesh.UseParameters: true
+                ShadowMapParameters.FilterType:
+                    - !ShadowMapFilterType Nearest
+                    - !ShadowMapFilterType Variance
+            Children: []
+        -   Keys:
+                Effect.Name: HorizontalVsmBlur
+            Children: []
+        -   Keys:
+                Effect.Name: VerticalVsmBlur
+            Children: []

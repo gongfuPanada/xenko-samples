@@ -1,0 +1,45 @@
+!Model
+Id: bb36ec8a-ceaf-44c2-903c-9024bf9fd723
+BuildOrder: 500
+Tags: []
+Source: ../../RawAssets/model/character/scene/shadow00.FBX
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+SourceHash: 0cf6e2f82f1283993c0c99def9f707d1
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: root, Depth: 1, Preserve: false}
+    - {Name: shadow, Depth: 2, Preserve: false}
+UpAxis: {X: 0, Y: 1, Z: 0}
+FrontAxis: {X: 0, Y: 0, Z: 1}
+MeshParameters:
+    shadow:
+        NodeName: shadow
+        Material: 36c3d946-ef11-4635-b16f-e66d0e2591ab:shadow00_material_shadow_00
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 500
+        Tags: []
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: root, Depth: 1, Preserve: false}
+            - {Name: shadow, Depth: 2, Preserve: false}
+        UpAxis: {X: 0, Y: 0, Z: 1}
+        FrontAxis: {X: 0, Y: 1, Z: 0}
+        MeshParameters:
+            shadow:
+                NodeName: shadow
+                Material: 36c3d946-ef11-4635-b16f-e66d0e2591ab:shadow00_material_shadow_00
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0

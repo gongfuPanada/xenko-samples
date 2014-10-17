@@ -1,0 +1,45 @@
+!Package
+Id: 23f2fc76-c8e1-42f8-9857-c6f4f3f34f68
+Tags: []
+Meta:
+    Name: SimpleDynamicTexture
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha10
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: SimpleDynamicTexture.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+        ProjectReferences:
+            -   Id: 668e1483-e53b-44be-8cc8-944b4ea2ba0a
+                Location: SimpleDynamicTexture.Game/SimpleDynamicTexture.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: 48933185-ffb0-46e0-ac7c-e06bf4bff159
+                Location: SimpleDynamicTexture.Windows/SimpleDynamicTexture.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

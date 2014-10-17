@@ -1,0 +1,70 @@
+!MaterialAsset
+Id: 36c3d946-ef11-4635-b16f-e66d0e2591ab
+BuildOrder: 250
+Tags: []
+Material:
+    Nodes:
+        diffuse: !MaterialReferenceNode
+            Name: shadow_00
+        pdx_diffuseWithAlpha: !MaterialBinaryNode
+            Operand: SubstituteAlpha
+            LeftChild: !MaterialReferenceNode
+                Name: shadow_00
+            RightChild: !MaterialReferenceNode
+                Name: shadow_00_1
+        shadow_00: !MaterialTextureNode
+            TextureReference: b1563f92-7639-4418-96db-e7efc0a14be2:shadow00_shadow_00
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        shadow_00_1: !MaterialTextureNode
+            TextureReference: b1563f92-7639-4418-96db-e7efc0a14be2:shadow00_shadow_00
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        transparent: !MaterialReferenceNode
+            Name: shadow_00_1
+    ColorNodes:
+        MaterialParameters.AlbedoDiffuse: pdx_diffuseWithAlpha
+        MaterialParameters.TransparencyMap: transparent
+    Parameters:
+        Capacity: 4
+        ~Items:
+            Material.SpecularColorValue: !Color4 {R: 0.9, G: 0.9, B: 0.9, A: 1}
+            Material.SpecularIntensity: 0
+            Material.SpecularPower: 0.02
+            MaterialParameters.UseTransparent: true
+~Base:
+    Location: --import--
+    Asset: !MaterialAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 250
+        Tags: []
+        Material:
+            Nodes:
+                diffuse: !MaterialReferenceNode
+                    Name: shadow_00
+                pdx_diffuseWithAlpha: !MaterialBinaryNode
+                    Operand: SubstituteAlpha
+                    LeftChild: !MaterialReferenceNode
+                        Name: shadow_00
+                    RightChild: !MaterialReferenceNode
+                        Name: shadow_00_1
+                shadow_00: !MaterialTextureNode
+                    TextureReference: b1563f92-7639-4418-96db-e7efc0a14be2:shadow00_shadow_00
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                shadow_00_1: !MaterialTextureNode
+                    TextureReference: b1563f92-7639-4418-96db-e7efc0a14be2:shadow00_shadow_00
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                transparent: !MaterialReferenceNode
+                    Name: shadow_00_1
+            ColorNodes:
+                MaterialParameters.AlbedoDiffuse: pdx_diffuseWithAlpha
+                MaterialParameters.TransparencyMap: transparent
+            Parameters:
+                Capacity: 4
+                ~Items:
+                    Material.SpecularColorValue: !Color4 {R: 0.9, G: 0.9, B: 0.9, A: 1}
+                    Material.SpecularIntensity: 0
+                    Material.SpecularPower: 0.02
+                    MaterialParameters.UseTransparent: true

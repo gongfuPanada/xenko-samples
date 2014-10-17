@@ -1,0 +1,107 @@
+!Model
+Id: fea92ceb-b793-4c50-9feb-ce0aa698a764
+BuildOrder: 500
+Tags: []
+Source: ../../RawAssets/model/BG/scene/bg_b00.FBX
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+SourceHash: aa0861ee6855d86bd5397e72cdae8d89
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: root, Depth: 1, Preserve: false}
+    - {Name: part, Depth: 2, Preserve: false}
+    - {Name: bg_a_wall01, Depth: 3, Preserve: false}
+    - {Name: bg_a_wall00, Depth: 3, Preserve: false}
+    - {Name: tube_00, Depth: 3, Preserve: false}
+    - {Name: bg_a_wall03, Depth: 3, Preserve: false}
+UpAxis: {X: 0, Y: 1, Z: 0}
+FrontAxis: {X: 0, Y: 0, Z: 1}
+MeshParameters:
+    bg_a_wall00:
+        NodeName: bg_a_wall00
+        Material: 4bfc48f0-b63e-4732-9295-3eae8012d2fb:bg_b00_material_BG_wall01
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    bg_a_wall01:
+        NodeName: bg_a_wall01
+        Material: 4bfc48f0-b63e-4732-9295-3eae8012d2fb:bg_b00_material_BG_wall01
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    bg_a_wall03:
+        NodeName: bg_a_wall03
+        Material: e5b4d16e-913b-4343-8353-9a7cf2817144:bg_b00_material_bg_wall02
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+    tube_00:
+        NodeName: tube_00
+        Material: 7203b1ab-13c5-4f95-bace-8aa347bf2bac:bg_b00_material_BG_Lane_02
+        Parameters:
+            Capacity: 4
+            ~Items:
+                Lighting.MaxDirectionalLights: 0
+                Lighting.MaxPointLights: 0
+                Lighting.MaxSpotLights: 0
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 500
+        Tags: []
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: bg_a_wall01, Depth: 3, Preserve: false}
+            - {Name: bg_a_wall00, Depth: 3, Preserve: false}
+            - {Name: tube_00, Depth: 3, Preserve: false}
+            - {Name: bg_a_wall03, Depth: 3, Preserve: false}
+        UpAxis: {X: 0, Y: 0, Z: 1}
+        FrontAxis: {X: 0, Y: 1, Z: 0}
+        MeshParameters:
+            bg_a_wall00:
+                NodeName: bg_a_wall00
+                Material: 4bfc48f0-b63e-4732-9295-3eae8012d2fb:bg_b00_material_BG_wall01
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            bg_a_wall01:
+                NodeName: bg_a_wall01
+                Material: 4bfc48f0-b63e-4732-9295-3eae8012d2fb:bg_b00_material_BG_wall01
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            bg_a_wall03:
+                NodeName: bg_a_wall03
+                Material: e5b4d16e-913b-4343-8353-9a7cf2817144:bg_b00_material_bg_wall02
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0
+            tube_00:
+                NodeName: tube_00
+                Material: 7203b1ab-13c5-4f95-bace-8aa347bf2bac:bg_b00_material_BG_Lane_02
+                Parameters:
+                    Capacity: 4
+                    ~Items:
+                        Lighting.MaxDirectionalLights: 0
+                        Lighting.MaxPointLights: 0
+                        Lighting.MaxSpotLights: 0

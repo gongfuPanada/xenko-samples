@@ -1,0 +1,47 @@
+!Entity
+Id: f2181d07-528c-45fb-8ebf-516f130161d2
+Tags: []
+Data:
+    Name: cube
+    Components:
+        ModelComponent.Key: !ModelComponentData
+            DrawOrder: 0
+            Enabled: true
+            Model: 6d812dcb-06b9-4816-a76d-205f90dace2b:cube_model_1
+            Parameters:
+                Capacity: 0
+                ~Items: {}
+        PhysicsComponent.Key: !PhysicsComponentData
+            Elements:
+                -   CanCollideWith: 0
+                    CollisionGroup: 0
+                    LinkedBoneName: null
+                    Shape: 716c1d2e-c8ee-47ec-ba6c-96fd2cbd79d2:cube_cs
+                    Sprite: false
+                    StepHeight: 0
+                    Type: DynamicRigidBody
+        TransformationComponent.Key: !TransformationComponentData
+            Children: []
+            Rotation:
+                W: 0
+                X: 0
+                Y: 0
+                Z: 0
+            Scaling: {X: 4, Y: 4, Z: 4}
+            Translation: {X: 0, Y: 0, Z: 0}
+            UseTRS: true
+~Base:
+    Location: --import--
+    Asset: !Entity
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Data:
+            Name: cube
+            Components:
+                ModelComponent.Key: !ModelComponentData
+                    DrawOrder: 0
+                    Enabled: true
+                    Model: 6d812dcb-06b9-4816-a76d-205f90dace2b:cube_model
+                    Parameters:
+                        Capacity: 0
+                        ~Items: {}

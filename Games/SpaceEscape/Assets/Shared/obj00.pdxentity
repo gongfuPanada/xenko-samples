@@ -1,0 +1,28 @@
+!Entity
+Id: f242fea9-5775-4642-ac47-2ba5906c038b
+Tags: []
+Data:
+    Name: obj00
+    Components:
+        ModelComponent.Key: !ModelComponentData
+            DrawOrder: 0
+            Enabled: true
+            Model: 5800a5e3-6c63-4c90-b0f6-220aee428077:obj00_model
+            Parameters:
+                Capacity: 0
+                ~Items: {}
+~Base:
+    Location: --import--
+    Asset: !Entity
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Data:
+            Name: obj00
+            Components:
+                ModelComponent.Key: !ModelComponentData
+                    DrawOrder: 0
+                    Enabled: true
+                    Model: 5800a5e3-6c63-4c90-b0f6-220aee428077:obj00_model
+                    Parameters:
+                        Capacity: 0
+                        ~Items: {}

@@ -1,0 +1,25 @@
+!Entity
+Id: 7276142b-3097-493b-96c8-0cf78f78110e
+Tags: []
+Data:
+    Name: null
+    Components:
+        PhysicsComponent.Key: !PhysicsComponentData
+            Elements:
+                -   CanCollideWith: 0
+                    CollisionGroup: 0
+                    LinkedBoneName: null
+                    Shape: c20e143a-ff84-42db-a33a-aacb5ab3aa84:ground_cs
+                    Sprite: false
+                    StepHeight: 0
+                    Type: StaticCollider
+        TransformationComponent.Key: !TransformationComponentData
+            Children: []
+            Rotation:
+                W: 0
+                X: 0
+                Y: 0
+                Z: 0
+            Scaling: {X: 1, Y: 1, Z: 1}
+            Translation: {X: 0, Y: -10, Z: 0}
+            UseTRS: true

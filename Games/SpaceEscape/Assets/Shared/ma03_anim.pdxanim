@@ -1,0 +1,12 @@
+!Animation
+Id: aa675f12-ba2b-48d0-8579-2537ad7a68f8
+Tags: []
+Source: ../../RawAssets/model/character/scene/ma03.FBX
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+RepeatMode: PlayOnce
+~Base:
+    Location: --import--
+    Asset: !Animation
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        RepeatMode: LoopInfinite

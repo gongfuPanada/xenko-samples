@@ -1,0 +1,29 @@
+!Entity
+Id: c6946245-7a67-4de1-b5e3-1b4622e43966
+Tags: []
+Data:
+    Name: null
+    Components:
+        TransformationComponent.Key: !TransformationComponentData
+            Children: []
+            Rotation:
+                W: 0
+                X: 0
+                Y: 0
+                Z: 0
+            Scaling: {X: 1, Y: 1, Z: 1}
+            Translation: {X: 0, Y: 0, Z: 0}
+            UseTRS: true
+        PhysicsComponent.Key: !PhysicsComponentData
+            Elements:
+                -   CanCollideWith: 0
+                    CollisionGroup: 0
+                    LinkedBoneName: null
+                    Shape: e1a76a1a-4489-41b5-9f1d-c0bd8231671d:enemy_cs
+                    Sprite: true
+                    StepHeight: 0
+                    Type: DynamicRigidBody
+        SpriteComponent.Key: !SpriteComponentData
+            Color: {R: 255, G: 255, B: 255, A: 255}
+            SpriteEffect: None
+            SpriteGroupInternal: 4a17b086-10b4-4c11-b9ec-8baad5730240:enemy_active

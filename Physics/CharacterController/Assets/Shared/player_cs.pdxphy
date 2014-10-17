@@ -1,0 +1,11 @@
+!ColliderShapeAsset
+Id: 9c03c508-1518-4156-855b-ee15853f4533
+Tags: []
+Data:
+    ColliderShapes:
+        - !CapsuleColliderShapeDesc
+            Is2D: true
+            LocalOffset: {X: 0, Y: 0, Z: 0}
+            Radius: 20
+            Height: 50
+            UpAxis: {X: 0, Y: 1, Z: 0}

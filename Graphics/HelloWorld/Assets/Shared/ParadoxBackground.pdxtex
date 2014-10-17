@@ -1,0 +1,12 @@
+!Texture
+Id: af255c1b-0451-4815-9e85-9fefb38a1b42
+Tags: []
+Source: ../../RawAssets/ParadoxBackground.jpg
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: TrueColor
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

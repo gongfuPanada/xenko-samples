@@ -1,0 +1,12 @@
+!Animation
+Id: 6ed30202-8e47-4ed2-a535-b3a30ffadb1f
+Tags: []
+Source: ../../RawAssets/knight/scenes/he03_run.fbx
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+RepeatMode: LoopInfinite
+~Base:
+    Location: --import--
+    Asset: !Animation
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        RepeatMode: LoopInfinite

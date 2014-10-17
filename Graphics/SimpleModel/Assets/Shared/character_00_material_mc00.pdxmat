@@ -1,0 +1,55 @@
+!MaterialAsset
+Id: 2a6382ae-73b1-4376-a2e8-9834816c406f
+BuildOrder: 250
+Tags: []
+Material:
+    Nodes:
+        mc_00: !MaterialTextureNode
+            TextureReference: bf5fe903-3ae6-492f-9cfe-d97f4eda3966:character_00_mc_00
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        pdx_diffuseOpaque: !MaterialBinaryNode
+            Operand: Opaque
+            LeftChild: !MaterialReferenceNode
+                Name: mc_00
+            RightChild: null
+        specular: !MaterialColorNode
+            Value: {R: 0.8980392, G: 0.8980392, B: 0.8980392, A: 1}
+            AutoAssignKey: false
+            Key: Material.SpecularColorValue
+            IsReducible: false
+        specularPower: !MaterialFloatNode
+            Value: 100
+            Key: Material.SpecularPower
+    ColorNodes:
+        MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+        MaterialParameters.AlbedoSpecular: specular
+        MaterialParameters.SpecularPowerMap: specularPower
+    Parameters:
+        Capacity: 4
+        ~Items: {}
+~Base:
+    Location: --import--
+    Asset: !MaterialAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        BuildOrder: 250
+        Tags: []
+        Material:
+            Nodes:
+                mc_00: !MaterialTextureNode
+                    TextureReference: bf5fe903-3ae6-492f-9cfe-d97f4eda3966:character_00_mc_00
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+                pdx_diffuseOpaque: !MaterialBinaryNode
+                    Operand: Opaque
+                    LeftChild: !MaterialReferenceNode
+                        Name: mc_00
+                    RightChild: null
+            ColorNodes:
+                MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+            Parameters:
+                Capacity: 4
+                ~Items:
+                    Material.SpecularColorValue: !Color4 {R: 0.9, G: 0.9, B: 0.9, A: 1}
+                    Material.SpecularIntensity: 0
+                    Material.SpecularPower: 0.02

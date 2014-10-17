@@ -1,0 +1,61 @@
+﻿class VertexTextureTerrain : ComputeColor, ColorBase, TransformationBase, PositionStream4
+{
+	SamplerState MeshTextureSampler
+	{
+		Filter = MIN_MAG_MIP_LINEAR;
+		AddressU = Wrap;
+		AddressV = Wrap;
+	};
+
+    struct TerrainRegion
+    {
+        float MinimumHeight;
+        float OptimalHeight;
+        float MaximumHeight;    
+    };
+
+	[Link("TerrainRegion.TerrainRegion0")]
+    stage TerrainRegion RegionTerrain0;
+
+	[Link("TerrainRegion.TerrainRegion1")]
+    stage TerrainRegion RegionTerrain1;
+
+	[Link("TerrainRegion.TerrainRegion2")]
+    stage TerrainRegion RegionTerrain2;
+
+    stage stream float Texture0InfluenceFactor;
+    stage stream float Texture1InfluenceFactor;
+    stage stream float Texture2InfluenceFactor;
+
+    stage Texture2D MeshTexture0;
+    stage Texture2D MeshTexture1;
+    stage Texture2D MeshTexture2;
+
+    stage stream float2 TexCoord : TEXCOORD0;
+
+	float CalculateInfluenceFactor(float height, TerrainRegion terrainRegion)
+    {
+	    if( height < terrainRegion.MinimumHeight || height > terrainRegion.MaximumHeight ) return 0.0f;
+
+		return (height > terrainRegion.OptimalHeight) 
+		  ? 1.0f - (height - terrainRegion.OptimalHeight)/(terrainRegion.MaximumHeight - terrainRegion.OptimalHeight)
+		  : (height - terrainRegion.MinimumHeight)/(terrainRegion.OptimalHeight - terrainRegion.MinimumHeight);
+    }
+
+    stage override void PreTransformPosition()
+    {
+        base.PreTransformPosition();
+
+		streams.Texture0InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, RegionTerrain0);
+        streams.Texture1InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, RegionTerrain1);
+        streams.Texture2InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, RegionTerrain2);
+    }
+
+    override float4 Compute()
+    {
+        // Sample pixels from all available Textures
+        return ( MeshTexture0.Sample(MeshTextureSampler, streams.TexCoord * 4) * streams.Texture0InfluenceFactor 
+               + MeshTexture1.Sample(MeshTextureSampler, streams.TexCoord * 4) * streams.Texture1InfluenceFactor
+               + MeshTexture2.Sample(MeshTextureSampler, streams.TexCoord * 4) * streams.Texture2InfluenceFactor);
+    }
+};

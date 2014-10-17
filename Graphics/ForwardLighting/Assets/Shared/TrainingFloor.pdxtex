@@ -1,0 +1,12 @@
+!Texture
+Id: c6fd05cf-8937-49f5-99e2-f78473df73f6
+Tags: []
+Source: ../../RawAssets/TrainingFloor.dds
+ImporterId: 6219bcd1-2a7b-461b-9103-6b66b8ff69dc
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

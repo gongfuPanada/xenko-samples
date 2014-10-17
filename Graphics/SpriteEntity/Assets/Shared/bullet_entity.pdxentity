@@ -1,0 +1,20 @@
+!Entity
+Id: ae297b2c-5124-46b9-b9ae-171c84c9ab57
+Tags: []
+Data:
+    Name: null
+    Components:
+        TransformationComponent.Key: !TransformationComponentData
+            Children: []
+            Rotation:
+                W: 0
+                X: 0
+                Y: 0
+                Z: 0
+            Scaling: {X: 1, Y: 1, Z: 1}
+            Translation: {X: 0, Y: 0, Z: 0}
+            UseTRS: true
+        SpriteComponent.Key: !SpriteComponentData
+            Color: {R: 255, G: 255, B: 255, A: 255}
+            SpriteEffect: None
+            SpriteGroupInternal: ab7c38b8-f780-4a59-9b8e-328ce5946c4c:bullet

@@ -1,0 +1,28 @@
+!Entity
+Id: 7d511391-3b5a-4e51-90ee-8e714dbb28d9
+Tags: []
+Data:
+    Name: bg_b02
+    Components:
+        ModelComponent.Key: !ModelComponentData
+            DrawOrder: 0
+            Enabled: true
+            Model: b62ec788-3cfc-47dd-a11b-035ca76cdb38:bg_b02_model
+            Parameters:
+                Capacity: 0
+                ~Items: {}
+~Base:
+    Location: --import--
+    Asset: !Entity
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Data:
+            Name: bg_b02
+            Components:
+                ModelComponent.Key: !ModelComponentData
+                    DrawOrder: 0
+                    Enabled: true
+                    Model: b62ec788-3cfc-47dd-a11b-035ca76cdb38:bg_b02_model
+                    Parameters:
+                        Capacity: 0
+                        ~Items: {}

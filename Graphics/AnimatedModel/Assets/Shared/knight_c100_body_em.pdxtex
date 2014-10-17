@@ -1,0 +1,14 @@
+!Texture
+Id: fe3bed71-458f-4d0b-be18-828f17c4655f
+Tags: []
+Source: ../../RawAssets/knight/sourceimages/c100_body_em.jpg
+ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+PremultiplyAlpha: false
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

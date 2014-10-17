@@ -1,0 +1,43 @@
+!Package
+Id: 4a02919d-c2fb-4541-bbce-02a878b1d10a
+Tags: []
+Meta:
+    Name: HelloWorld
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-alpha01
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: HelloWorld.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: acd0c122-4e0b-4587-a594-aaccce2474b6
+                Location: HelloWorld.Game/HelloWorld.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+        ProjectReferences:
+            -   Id: f7e8c525-7a32-436a-8962-5f3288060896
+                Location: HelloWorld.Windows/HelloWorld.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

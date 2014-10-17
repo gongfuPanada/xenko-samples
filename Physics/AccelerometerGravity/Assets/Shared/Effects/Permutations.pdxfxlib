@@ -1,0 +1,10 @@
+!EffectLibrary
+Id: bd15125b-cb7f-4790-96ca-4200263fc076
+BuildOrder: 1000
+Tags: []
+Permutations:
+    Keys:
+        Effect.Name: AccelerometerGravityEffectMain
+        MaterialAsset.UseParameters: true
+        Mesh.UseParameters: true
+    Children: []

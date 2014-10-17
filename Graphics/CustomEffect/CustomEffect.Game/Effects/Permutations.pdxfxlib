@@ -1,0 +1,9 @@
+!EffectLibrary
+Id: 998ec6d1-b570-4df7-a437-de16b5a577ea
+BuildOrder: 1000
+Tags: []
+Permutations:
+    Keys:
+        Effect.Name: CustomEffect
+        Mesh.UseParameters: true
+    Children: []

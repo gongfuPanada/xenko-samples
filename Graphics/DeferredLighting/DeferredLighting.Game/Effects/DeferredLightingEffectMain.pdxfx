@@ -1,0 +1,14 @@
+﻿using SiliconStudio.Paradox.Effects.Data;
+
+namespace DeferredLighting.Effects
+{
+    shader DeferredLightingPrepassEffect
+    {
+        mixin ParadoxDefaultLightPrepassEffect;
+    }
+
+    shader DeferredLightingEffectMain
+    {
+        mixin ParadoxDefaultDeferredShader;
+    };
+}
