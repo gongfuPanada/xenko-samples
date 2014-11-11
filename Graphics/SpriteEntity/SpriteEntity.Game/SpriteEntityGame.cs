@@ -83,7 +83,7 @@ namespace SpriteEntity
         private SpriteGroup agentIdle;
         private SpriteGroup agentRun;
         private SpriteGroup agentShoot;
-        private Rectangle agentSpriteRegion;
+        private RectangleF agentSpriteRegion;
 
         // Touch input state
         private PointerEvent pointerState;

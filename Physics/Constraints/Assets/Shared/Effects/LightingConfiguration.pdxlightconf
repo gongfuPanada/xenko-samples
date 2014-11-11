@@ -18,15 +18,18 @@ Permutations:
                 ShadowMapParameters.ShadowConfigurations:
                     - !ShadowConfigurationArray
                         Groups:
-                            -   ShadowCount: 1
+                            -   LightType: Directional
+                                ShadowCount: 1
                                 CascadeCount: 4
                                 FilterType: Nearest
                     - !ShadowConfigurationArray
                         Groups:
-                            -   ShadowCount: 1
+                            -   LightType: Directional
+                                ShadowCount: 1
                                 CascadeCount: 4
                                 FilterType: Nearest
-                            -   ShadowCount: 1
+                            -   LightType: Directional
+                                ShadowCount: 1
                                 CascadeCount: 4
                                 FilterType: Nearest
             Children: []

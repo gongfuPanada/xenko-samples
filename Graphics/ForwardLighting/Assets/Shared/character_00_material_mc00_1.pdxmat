@@ -23,7 +23,7 @@ Material:
             Key: Material.SpecularIntensity
             IsReducible: false
         specularPower: !MaterialFloatNode
-            Value: 100
+            Value: 0.43
             Key: Material.SpecularPower
             IsReducible: false
     ColorNodes:
@@ -32,9 +32,8 @@ Material:
         MaterialParameters.SpecularIntensityMap: specularIntensity
         MaterialParameters.SpecularPowerMap: specularPower
     Parameters:
-        Capacity: 4
-        ~Items:
-            MaterialParameters.SpecularModel: !MaterialSpecularModel BlinnPhong
+        Capacity: 8
+        ~Items: {}
 ~Base:
     Location: --import--
     Asset: !MaterialAsset

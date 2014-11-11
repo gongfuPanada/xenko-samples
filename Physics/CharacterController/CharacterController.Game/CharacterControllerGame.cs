@@ -15,6 +15,8 @@ namespace CharacterController
 {
     public class CharacterControllerGame : Game
     {
+        private IPhysicsSystem physicsSystem;
+
         public CharacterControllerGame()
         {
             // Target 9.1 profile by default
@@ -46,13 +48,16 @@ namespace CharacterController
 
             CreatePipeline();
 
+            //physics is a plug-in now, needs explicit initialization
+            physicsSystem = new Bullet2PhysicsSystem(this);
+            physicsSystem.PhysicsEngine.Initialize();
+
+            //sprites need a tweaked gravity
+            physicsSystem.PhysicsEngine.Gravity = new Vector3(0, -1000, 0);
+
             VirtualResolution = new Vector3(1280, 720, 1);
 
             IsMouseVisible = true;
-
-            // Init physics subsystem
-            Physics.PhysicsEngine.Initialize(PhysicsEngineFlags.None);
-            Physics.PhysicsEngine.Gravity = new Vector3(0, -1000, 0);
 
             // Load ground
             var ground = Asset.Load<Entity>("ground");

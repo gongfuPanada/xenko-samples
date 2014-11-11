@@ -40,7 +40,7 @@ namespace GameMenu
         private readonly List<UIImage> borderStarImages = new List<UIImage>();
 
         // Life gauge
-        private Rectangle gaugeBarRegion;
+        private RectangleF gaugeBarRegion;
         private Grid lifeBarGrid;
         private UIImage lifeBarGaugeImage;
 
@@ -188,10 +188,10 @@ namespace GameMenu
                 gaugePercentage = Math.Min(1f, gaugePercentage + (float)Game.UpdateTime.Elapsed.TotalSeconds*0.02f);
 
                 var gaugeCurrentRegion = lifeBarGaugeImage.Region;
-                gaugeCurrentRegion.Width = (int)(gaugePercentage*gaugeBarRegion.Width);
+                gaugeCurrentRegion.Width = gaugePercentage*gaugeBarRegion.Width;
                 lifeBarGaugeImage.Region = gaugeCurrentRegion;
 
-                lifeBarGrid.ColumnDefinitions[1].SizeValue = gaugeCurrentRegion.Width / (float)gaugeBarRegion.Width;
+                lifeBarGrid.ColumnDefinitions[1].SizeValue = gaugeCurrentRegion.Width / gaugeBarRegion.Width;
                 lifeBarGrid.ColumnDefinitions[2].SizeValue = 1 - lifeBarGrid.ColumnDefinitions[1].SizeValue;
             }
         }

@@ -150,7 +150,7 @@ namespace SimpleTerrain
             await GenerateTerrain();
 
             defaultRasterizerState = GraphicsDevice.Parameters.Get(Effect.RasterizerStateKey);
-            wireFrameRasterizerState = new RasterizerState(GraphicsDevice, new RasterizerStateDescription(CullMode.None) { FillMode = FillMode.Wireframe });
+            wireFrameRasterizerState = RasterizerState.New(GraphicsDevice, new RasterizerStateDescription(CullMode.None) { FillMode = FillMode.Wireframe });
 
             Script.Add(UpdateInput);
         }

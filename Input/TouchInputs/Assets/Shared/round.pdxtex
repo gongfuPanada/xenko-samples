@@ -4,8 +4,8 @@ Tags: []
 Source: ../../RawAssets/round.png
 ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
 ColorKeyColor: {R: 0, G: 0, B: 0, A: 255}
-ColorKeyEnabled: true
-Alpha: Mask
+ColorKeyEnabled: false
+Alpha: Interpolated
 GenerateMipmaps: false
 ~Base:
     Location: --import--

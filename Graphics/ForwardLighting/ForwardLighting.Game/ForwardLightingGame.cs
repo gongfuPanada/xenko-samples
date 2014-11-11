@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using SiliconStudio.Core;
@@ -9,7 +7,6 @@ using SiliconStudio.Paradox;
 using SiliconStudio.Paradox.DataModel;
 using SiliconStudio.Paradox.Effects;
 using SiliconStudio.Paradox.Effects.Modules;
-using SiliconStudio.Paradox.Effects.Modules.Shading;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
 using SiliconStudio.Paradox.Graphics;
@@ -33,6 +30,7 @@ namespace ForwardLighting
         private CameraComponent camera;
         private Button buttonShadow0;
         private Button buttonShadow1;
+        private Button buttonSpotShadow;
         private float rotationFactor;
         private float lastDrag;
 
@@ -174,6 +172,12 @@ namespace ForwardLighting
                 buttonShadow1.Opacity = directionalLight[1].Enabled ? 1.0f : 0.3f;
                 buttonShadow1.CanBeHitByUser = directionalLight[1].Enabled;
                 buttonShadow1.Click += ToggleShadowMap;
+
+                buttonSpotShadow = CreateButton("spotShadow", GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap),
+                    font, new Thickness(20, 5, 5, 5));
+                buttonSpotShadow.Opacity = spotLight.Enabled ? 1.0f : 0.3f;
+                buttonSpotShadow.CanBeHitByUser = spotLight.Enabled;
+                buttonSpotShadow.Click += ToggleShadowMap;
             }
 
             stackPanel.Children.Add(buttonLightDirect0);
@@ -184,6 +188,8 @@ namespace ForwardLighting
                 stackPanel.Children.Add(buttonShadow1);
             stackPanel.Children.Add(buttonLightPoint);
             stackPanel.Children.Add(buttonLightSpot);
+            if (allowShadows)
+                stackPanel.Children.Add(buttonSpotShadow);
             canvas.Children.Add(stackPanel);
             UI.RootElement = canvas;
         }
@@ -200,6 +206,11 @@ namespace ForwardLighting
             {
                 directionalLight[1].ShadowMap = !directionalLight[1].ShadowMap;
                 ((TextBlock) button.Content).Text = GetButtonTextOnOff("Shadow 1: ", directionalLight[1].ShadowMap);
+            }
+            else if (button.Name == "spotShadow")
+            {
+                spotLight.ShadowMap = !spotLight.ShadowMap;
+                ((TextBlock)button.Content).Text = GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap);
             }
         }
 
@@ -369,7 +380,11 @@ namespace ForwardLighting
                     LightDirection = target - position,
                     SpotBeamAngle = beamAngle,
                     SpotFieldAngle = fieldAngle,
-                    ShadowMap = false
+                    ShadowMap = false,
+                    ShadowNearDistance = 1,
+                    ShadowFarDistance = 1000,
+                    ShadowMapCascadeCount = 1,
+                    ShadowMapFilterType = ShadowMapFilterType.Nearest,
                 },
                 new TransformationComponent {Translation = position}
             };

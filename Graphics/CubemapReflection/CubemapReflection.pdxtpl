@@ -1,0 +1,11 @@
+!TemplateSample
+Id: 491c7ff7-4542-4d67-8962-b9ed0f62d20d
+Name: Cubemap Reflection Sample
+Scope: Session
+Description: Creates a sample project where cubemap reflection is activated.
+FullDescription: This samples shows you how to add cubemap reflections to a deferred pipeline.
+Group: Samples/Graphics
+Icon: ../.pdxtpl/NewGraphics.png
+DefaultOutputName: CubemapReflection
+Screenshots:
+    - .pdxtpl/screenshot_small.jpg

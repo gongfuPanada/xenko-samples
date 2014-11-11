@@ -41,12 +41,12 @@ namespace JumpyJet
         public bool IsUpdating { get; set; }
 
         public Entity Entity { get { return agentEntity; } }
-        public int AgentWidth { get; protected set; }
-        public int AgentHeight { get; protected set; }
+        public float AgentWidth { get; protected set; }
+        public float AgentHeight { get; protected set; }
         public AgentState State { get; private set; }
         public bool IsAlive { get { return State == AgentState.Alive; } }
-        public Rectangle BodyCollider { get { return bodyCollider; } }
-        public Rectangle HeadCollider {get { return headCollider; }}
+        public RectangleF BodyCollider { get { return bodyCollider; } }
+        public RectangleF HeadCollider {get { return headCollider; }}
 
         private readonly InputManager inputManager;
         private readonly Entity agentEntity;
@@ -55,8 +55,8 @@ namespace JumpyJet
         private Vector3 velocity;
         private readonly Vector3 topLeftOffset;
 
-        private Rectangle bodyCollider;
-        private Rectangle headCollider;
+        private RectangleF bodyCollider;
+        private RectangleF headCollider;
 
         public Agent(Entity agentEntity, InputManager inputManager, Vector3 screenResolution)
         {
@@ -155,11 +155,11 @@ namespace JumpyJet
             UpdateAgentAnimation();
 
             // Update Colliders' positions
-            bodyCollider.X = BodyRectangle.X + (int)Position.X - AgentWidth / 2;
-            bodyCollider.Y = BodyRectangle.Y + (int)Position.Y - AgentHeight / 2;
+            bodyCollider.X = BodyRectangle.X + Position.X - AgentWidth / 2;
+            bodyCollider.Y = BodyRectangle.Y + Position.Y - AgentHeight / 2;
 
-            headCollider.X = HeadRectangle.X + (int)Position.X - AgentWidth / 2;
-            headCollider.Y = HeadRectangle.Y + (int)Position.Y - AgentHeight / 2;
+            headCollider.X = HeadRectangle.X + Position.X - AgentWidth / 2;
+            headCollider.Y = HeadRectangle.Y + Position.Y - AgentHeight / 2;
         }
 
         private void UpdateAgentAnimation()

@@ -18,10 +18,10 @@ namespace JumpyJet
         public Entity BottomSpriteEntity { get; private set; }
 
         public float ScrollSpeed { get; private set; }
-        public int ScrollPos { get; private set; }
+        public float ScrollPos { get; private set; }
         public bool IsVisible { get; private set; }
-        public int PipeWidth { get; private set; }
-        public int PipeHeight { get; private set; }
+        public float PipeWidth { get; private set; }
+        public float PipeHeight { get; private set; }
         public float HalfPipeWidth { get; private set; }
         public bool IsPassedAgent { get; set; }
         public bool ShouldReset { get; private set; }
@@ -29,9 +29,9 @@ namespace JumpyJet
         private readonly TransformationComponent topTComp;
         private readonly TransformationComponent bottomTComp;
         private readonly Random random = new Random();
-        private Rectangle topPartCollider;
-        private Rectangle bodyPartCollider;
-        private readonly int startScrollPos;
+        private RectangleF topPartCollider;
+        private RectangleF bodyPartCollider;
+        private readonly float startScrollPos;
         private readonly float halfScrollWidth;
         private Vector3 topPipePosition;
         private Vector3 bottomPipePosition;
@@ -66,8 +66,8 @@ namespace JumpyJet
             HalfPipeWidth = PipeWidth/2f;
 
             // Setup collider
-            topPartCollider = new Rectangle(0, 0, PipeWidth, 95);
-            bodyPartCollider = new Rectangle(0, 0, PipeWidth, PipeHeight - 95);
+            topPartCollider = new RectangleF(0, 0, PipeWidth, 95);
+            bodyPartCollider = new RectangleF(0, 0, PipeWidth, PipeHeight - 95);
 
             // Setup initial position for top and bottom pipe.
             topPipePosition = new Vector3(this.startScrollPos, - 568f, 0f);
@@ -86,7 +86,7 @@ namespace JumpyJet
             ResetPipe(startScrollPos);
         }
 
-        public void ResetPipe(int resetScrollPos)
+        public void ResetPipe(float resetScrollPos)
         {
             ScrollPos = resetScrollPos;
             IsPassedAgent = false;

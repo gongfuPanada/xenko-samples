@@ -48,8 +48,8 @@ Nodes:
     - {Name: cloth_B_2, Depth: 4, Preserve: false}
     - {Name: cloth_a_1, Depth: 3, Preserve: false}
     - {Name: cloth_a_2, Depth: 4, Preserve: false}
-UpAxis: {X: 0, Y: 0, Z: 1}
-FrontAxis: {X: 0, Y: 1, Z: 0}
+UpAxis: {X: 0, Y: 1, Z: 0}
+FrontAxis: {X: 0, Y: 0, Z: 1}
 MeshParameters:
     Jet_B001:
         NodeName: Jet_B001

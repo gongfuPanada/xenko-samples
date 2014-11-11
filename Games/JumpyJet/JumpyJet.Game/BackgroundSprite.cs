@@ -14,17 +14,17 @@ namespace JumpyJet
 
         // Texture
         private Texture texture;
-        private Rectangle textureRegion;
+        private RectangleF textureRegion;
 
         // First quad parameters
         private readonly Vector2 firstQuadPos;
         private Vector2 firstQuadOrigin;
-        private Rectangle firstQuadRegion;
+        private RectangleF firstQuadRegion;
 
         // Second quad parameters
         private Vector2 secondQuadPos;
         private Vector2 secondQuadOrigin;
-        private Rectangle secondQuadRegion;
+        private RectangleF secondQuadRegion;
 
         public bool IsUpdating { get; set; }
         public bool IsRunning { get; protected set; }
@@ -74,7 +74,7 @@ namespace JumpyJet
             }
         }
 
-        private void CreateBackground(Texture2D bgTexture, Rectangle texReg)
+        private void CreateBackground(Texture2D bgTexture, RectangleF texReg)
         {
             texture = bgTexture;
             textureRegion = texReg;

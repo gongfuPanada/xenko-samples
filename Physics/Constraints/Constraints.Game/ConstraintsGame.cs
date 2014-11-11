@@ -17,6 +17,8 @@ namespace Constraints
 {
     public class ConstraintsGame : Game
     {
+        private IPhysicsSystem physicsSystem;
+
         public ConstraintsGame()
         {
             // Target 9.1 profile by default
@@ -41,8 +43,8 @@ namespace Constraints
             sphereRigidBody.LinearFactor = new Vector3(1, 1, 1);
             sphereRigidBody.AngularFactor = new Vector3(1, 1, 1);
 
-            currentConstraint = Physics.PhysicsEngine.CreateConstraint(ConstraintTypes.Point2Point, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
-            Physics.PhysicsEngine.AddConstraint(currentConstraint);
+            currentConstraint = physicsSystem.PhysicsEngine.CreateConstraint(ConstraintTypes.Point2Point, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
+            physicsSystem.PhysicsEngine.AddConstraint(currentConstraint);
             constraintNameBlock.Text = "Point to Point";
 
             //there are no limits so the sphere will orbit once we apply this
@@ -56,8 +58,8 @@ namespace Constraints
             sphereRigidBody.LinearFactor = new Vector3(1, 1, 1);
             sphereRigidBody.AngularFactor = new Vector3(1, 1, 1);
 
-            currentConstraint = Physics.PhysicsEngine.CreateConstraint(ConstraintTypes.Hinge, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
-            Physics.PhysicsEngine.AddConstraint(currentConstraint);
+            currentConstraint = physicsSystem.PhysicsEngine.CreateConstraint(ConstraintTypes.Hinge, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
+            physicsSystem.PhysicsEngine.AddConstraint(currentConstraint);
             constraintNameBlock.Text = "Hinge";
 
             //applying this impulse will show the hinge limits stopping it
@@ -71,8 +73,8 @@ namespace Constraints
             sphereRigidBody.LinearFactor = Vector3.Zero;
             sphereRigidBody.AngularFactor = new Vector3(1, 1, 1);
 
-            currentConstraint = Physics.PhysicsEngine.CreateConstraint(ConstraintTypes.Gear, sphereRigidBody, cubeRigidBody, Matrix.Translation(new Vector3(1, 0, 0)), Matrix.Translation(new Vector3(1, 0, 0)));
-            Physics.PhysicsEngine.AddConstraint(currentConstraint);
+            currentConstraint = physicsSystem.PhysicsEngine.CreateConstraint(ConstraintTypes.Gear, sphereRigidBody, cubeRigidBody, Matrix.Translation(new Vector3(1, 0, 0)), Matrix.Translation(new Vector3(1, 0, 0)));
+            physicsSystem.PhysicsEngine.AddConstraint(currentConstraint);
             constraintNameBlock.Text = "Gear";
 
             //this force will start a motion in the sphere which gets propagated into the cube
@@ -86,8 +88,8 @@ namespace Constraints
             sphereRigidBody.LinearFactor = new Vector3(1, 1, 1);
             sphereRigidBody.AngularFactor = new Vector3(1, 1, 1);
 
-            currentConstraint = Physics.PhysicsEngine.CreateConstraint(ConstraintTypes.Slider, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Identity, true);
-            Physics.PhysicsEngine.AddConstraint(currentConstraint);
+            currentConstraint = physicsSystem.PhysicsEngine.CreateConstraint(ConstraintTypes.Slider, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Identity, true);
+            physicsSystem.PhysicsEngine.AddConstraint(currentConstraint);
             constraintNameBlock.Text = "Slider";
 
             var slider = (SliderConstraint)currentConstraint;
@@ -119,8 +121,8 @@ namespace Constraints
             sphereRigidBody.LinearFactor = new Vector3(1, 1, 1);
             sphereRigidBody.AngularFactor = new Vector3(1, 1, 1);
 
-            currentConstraint = Physics.PhysicsEngine.CreateConstraint(ConstraintTypes.ConeTwist, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
-            Physics.PhysicsEngine.AddConstraint(currentConstraint);
+            currentConstraint = physicsSystem.PhysicsEngine.CreateConstraint(ConstraintTypes.ConeTwist, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
+            physicsSystem.PhysicsEngine.AddConstraint(currentConstraint);
             constraintNameBlock.Text = "Cone Twist";
 
             var coneTwist = (ConeTwistConstraint)currentConstraint;
@@ -137,8 +139,8 @@ namespace Constraints
             sphereRigidBody.LinearFactor = new Vector3(1, 1, 1);
             sphereRigidBody.AngularFactor = new Vector3(1, 1, 1);
 
-            currentConstraint = Physics.PhysicsEngine.CreateConstraint(ConstraintTypes.Generic6DoF, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
-            Physics.PhysicsEngine.AddConstraint(currentConstraint);
+            currentConstraint = physicsSystem.PhysicsEngine.CreateConstraint(ConstraintTypes.Generic6DoF, cubeRigidBody, sphereRigidBody, Matrix.Identity, Matrix.Translation(new Vector3(20, 0, 0)));
+            physicsSystem.PhysicsEngine.AddConstraint(currentConstraint);
             constraintNameBlock.Text = "Generic 6D of Freedom";
 
             sphereRigidBody.ApplyImpulse(new Vector3(0, 0, 250));
@@ -150,8 +152,9 @@ namespace Constraints
 
             CreatePipeline();
 
-            //Initialize the physic module
-            Physics.PhysicsEngine.Initialize(PhysicsEngineFlags.None);
+            //physics is a plug-in now, needs explicit initialization
+            physicsSystem = new Bullet2PhysicsSystem(this);
+            physicsSystem.PhysicsEngine.Initialize();
 
             // Load and initialize entities
             var ground = Asset.Load<Entity>("ground");
@@ -213,7 +216,7 @@ namespace Constraints
         private void ChangeConstraint(int offset)
         {
             //Remove and dispose the current constraint
-            Physics.PhysicsEngine.RemoveConstraint(currentConstraint);
+            physicsSystem.PhysicsEngine.RemoveConstraint(currentConstraint);
             currentConstraint.Dispose();
 
             //Stop motion and reset the rigid bodies

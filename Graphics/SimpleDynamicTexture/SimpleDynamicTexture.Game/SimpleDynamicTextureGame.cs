@@ -38,8 +38,6 @@ namespace SimpleDynamicTexture
             6, 15
         };
 
-        private static readonly Vector2 ScreenSize = new Vector2(640, 1136);
-
         /// <summary>
         /// Lit color
         /// </summary>
@@ -58,15 +56,14 @@ namespace SimpleDynamicTexture
         private const int RenderTextureSize = 16;
         private Texture2D renderTexture;
         private readonly ColorBGRA[] textureData = new ColorBGRA[RenderTextureSize * RenderTextureSize];
-        private RectangleF destinationRectangle = new RectangleF(0, 0, ScreenSize.X, ScreenSize.Y);
 
         private SpriteFont arial;
 
         public SimpleDynamicTextureGame()
         {
             GraphicsDeviceManager.PreferredGraphicsProfile = new[] { GraphicsProfile.Level_9_1 };
-            GraphicsDeviceManager.PreferredBackBufferWidth = (int) ScreenSize.X;
-            GraphicsDeviceManager.PreferredBackBufferHeight = (int) ScreenSize.Y;
+            GraphicsDeviceManager.PreferredBackBufferWidth = 640;
+            GraphicsDeviceManager.PreferredBackBufferHeight = 1136;
         }
 
         /// <summary>
@@ -140,10 +137,12 @@ namespace SimpleDynamicTexture
 
                 if (Input.PointerEvents.Count == 0) continue;
 
+                var destinationRectangle = new RectangleF(0, 0, GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+
                 // Process pointer event
                 foreach (var pointerEvent in Input.PointerEvents)
                 {
-                    var pixelPosition = pointerEvent.Position * ScreenSize;
+                    var pixelPosition = pointerEvent.Position * new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
 
                     if (pointerEvent.State != PointerState.Down || !destinationRectangle.Contains(pixelPosition)) continue;
 
@@ -167,7 +166,7 @@ namespace SimpleDynamicTexture
         {
             spriteBatch.Begin(SpriteSortMode.Texture, null, GraphicsDevice.SamplerStates.PointClamp);
 
-            spriteBatch.Draw(renderTexture, destinationRectangle, Color.White);
+            spriteBatch.Draw(renderTexture, new RectangleF(0, 0, GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height), Color.White);
 
             spriteBatch.End();
         }

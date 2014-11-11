@@ -18,6 +18,8 @@ namespace Raycasting
 {
     public class RaycastingGame : Game
     {
+        private IPhysicsSystem physicsSystem;
+
         public RaycastingGame()
         {
             // Target 9.1 profile by default
@@ -34,8 +36,9 @@ namespace Raycasting
 
             CreatePipeline();
 
-            // Initialize physics
-            Physics.PhysicsEngine.Initialize(PhysicsEngineFlags.None);
+            //physics is a plug-in now, needs explicit initialization
+            physicsSystem = new Bullet2PhysicsSystem(this);
+            physicsSystem.PhysicsEngine.Initialize();
 
             // Let mouse show
             IsMouseVisible = true;
@@ -96,7 +99,7 @@ namespace Raycasting
                     RenderSystem.Pipeline.Parameters.Get(TransformationKeys.Projection),
                     RenderSystem.Pipeline.Parameters.Get(TransformationKeys.View), Matrix.Identity);
 
-            var result = Physics.PhysicsEngine.Raycast(unprojectedNear, unprojectedFar);
+            var result = physicsSystem.PhysicsEngine.Raycast(unprojectedNear, unprojectedFar);
             if (!result.Succeeded || result.Collider == null) return;
 
             var rigidBody = result.Collider as RigidBody;

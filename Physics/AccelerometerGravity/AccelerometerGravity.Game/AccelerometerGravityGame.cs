@@ -21,6 +21,8 @@ namespace AccelerometerGravity
         private readonly bool simulateGravity = Platform.Type == PlatformType.Windows;
         private TextBlock textBlock;
 
+        private IPhysicsSystem physicsSystem;
+
         public AccelerometerGravityGame()
         {
             // Target 9.1 profile by default
@@ -33,9 +35,11 @@ namespace AccelerometerGravity
         {
             await base.LoadContent();
 
-            Physics.PhysicsEngine.Initialize(PhysicsEngineFlags.None);
-
             CreatePipeline();
+
+            //physics is a plug-in now, needs explicit initialization
+            physicsSystem = new Bullet2PhysicsSystem(this);
+            physicsSystem.PhysicsEngine.Initialize();
 
             //Set a fixed resolution
             VirtualResolution = new Vector3(1280, 720, 1);
@@ -86,7 +90,7 @@ namespace AccelerometerGravity
             SpriteAnimation.Play(ball1Sprite, 0, ball1Sprite.SpriteGroup.Images.Count - 1, AnimationRepeatMode.LoopInfinite, 2);
 
             //Set gravity to zero as default
-            Physics.PhysicsEngine.Gravity = new Vector3(0, 0, 0);
+            physicsSystem.PhysicsEngine.Gravity = new Vector3(0, 0, 0);
 
             if (simulateGravity)
             {
@@ -109,9 +113,9 @@ namespace AccelerometerGravity
 
         public void SetAccelerometerVector(Vector3 readings)
         {
-            if (Physics.PhysicsEngine.Initialized)
+            if (physicsSystem != null && physicsSystem.PhysicsEngine.Initialized)
             {
-                Physics.PhysicsEngine.Gravity = new Vector3(readings.X, readings.Y, 0.0f) * 100.0f;
+                physicsSystem.PhysicsEngine.Gravity = new Vector3(readings.X, readings.Y, 0.0f) * 100.0f;
             }
         }
 
@@ -150,7 +154,7 @@ namespace AccelerometerGravity
                         hasTouchedArrows = true;
                     }
 
-                    Physics.PhysicsEngine.Gravity = gravity;
+                    physicsSystem.PhysicsEngine.Gravity = gravity;
 
                     if (hasTouchedArrows)
                         textBlock.TextColor *= 0.965f;

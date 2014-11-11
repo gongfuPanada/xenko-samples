@@ -24,7 +24,7 @@ Material:
             Key: Material.SpecularIntensity
             IsReducible: false
         specularPower: !MaterialFloatNode
-            Value: 200
+            Value: 0.5
             AutoAssignKey: false
             Key: Material.SpecularPower
             IsReducible: false
