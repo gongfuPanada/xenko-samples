@@ -9,6 +9,7 @@ using SiliconStudio.Paradox.Effects;
 using SiliconStudio.Paradox.Effects.Modules;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
+using SiliconStudio.Paradox.Extensions;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.UI;
 using SiliconStudio.Paradox.UI.Controls;
@@ -29,6 +30,7 @@ namespace DeferredLighting
         private CameraComponent camera;
         private bool rotateLights;
         private Button buttonShadow;
+        private Button buttonSpotShadow;
         private Button buttonLightRotate;
         private float rotationFactor;
 
@@ -75,11 +77,11 @@ namespace DeferredLighting
             Entities.Add(standBorderEntity);
 
             // create the lights
-            var directLightEntity = CreateDirectLight(new Vector3(-1, 1, -1), new Color3(1, 1, 1), 0.2f);
+            var directLightEntity = CreateDirectLight(new Vector3(-1, 1, -1), new Color3(1, 1, 1), 0.9f);
             directionalLight = directLightEntity.Get<LightComponent>();
             Entities.Add(directLightEntity);
 
-            var spotLightEntity = CreateSpotLight(new Vector3(0, -500, 600), new Vector3(0, -200, 0), 15, 20, new Color3(1, 1, 1), 0.35f);
+            var spotLightEntity = CreateSpotLight(new Vector3(0, -500, 600), new Vector3(0, -200, 0), 15, 20, new Color3(1, 1, 1), 0.9f);
             Entities.Add(spotLightEntity);
             spotLight = spotLightEntity.Get<LightComponent>();
 
@@ -144,6 +146,11 @@ namespace DeferredLighting
             buttonShadow.CanBeHitByUser = directionalLight.Enabled;
             buttonShadow.Click += ToggleShadowMap;
 
+            buttonSpotShadow = CreateButton("spot", GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap), font, new Thickness(20, 5, 5, 5));
+            buttonSpotShadow.Opacity = spotLight.Enabled ? 1.0f : 0.3f;
+            buttonSpotShadow.CanBeHitByUser = spotLight.Enabled;
+            buttonSpotShadow.Click += ToggleShadowMap;
+
             buttonLightRotate = CreateButton("rotate", GetButtonTextOnOff("Lights rotation: ", rotateLights), font, new Thickness(20, 5, 5, 5));
             var enabled = pointLights.Count > 0 && pointLights[0].Enabled;
             buttonLightRotate.Opacity = enabled ? 1.0f : 0.3f;
@@ -155,6 +162,7 @@ namespace DeferredLighting
             stackPanel.Children.Add(buttonLightPoint);
             stackPanel.Children.Add(buttonLightRotate);
             stackPanel.Children.Add(buttonLightSpot);
+            stackPanel.Children.Add(buttonSpotShadow);
             canvas.Children.Add(stackPanel);
             UI.RootElement = canvas;
         }
@@ -166,6 +174,11 @@ namespace DeferredLighting
             {
                 directionalLight.ShadowMap = !directionalLight.ShadowMap;
                 ((TextBlock) button.Content).Text = GetButtonTextOnOff("Shadow: ", directionalLight.ShadowMap);
+            }
+            else if (button.Name == "spot")
+            {
+                spotLight.ShadowMap = !spotLight.ShadowMap;
+                ((TextBlock)button.Content).Text = GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap);
             }
         }
 
@@ -209,7 +222,6 @@ namespace DeferredLighting
         private async Task UpdateScene()
         {
             var dragValue = 0f;
-
             while (IsRunning)
             {
                 // Wait next rendering frame
@@ -258,19 +270,20 @@ namespace DeferredLighting
 
         private Entity CreateStand(Material material)
         {
+            var mesh = new Mesh
+            {
+                Draw = GeometricPrimitive.Cylinder.New(GraphicsDevice, 10, 720, 64, 6).ToMeshDraw(),
+                Material = material
+            };
+            mesh.Parameters.Set(LightingKeys.ReceiveShadows, true);
+
             return new Entity()
             {
                 new ModelComponent
                 {
                     Model = new Model()
                     {
-                        new Mesh
-                        {
-                            Draw = GeometricPrimitive.Cylinder.New(GraphicsDevice, 10, 720, 64, 6).ToMeshDraw(),
-                            Layer = RenderLayers.RenderLayerAll,
-                            ReceiveShadows = true,
-                            Material = material
-                        }
+                        mesh
                     },
                     Parameters =
                     {
@@ -284,19 +297,20 @@ namespace DeferredLighting
 
         private Entity CreateStandBorder(Material material)
         {
+            var mesh = new Mesh
+            {
+                Draw = GeometricPrimitive.Torus.New(GraphicsDevice, 720, 10, 64).ToMeshDraw(),
+                Material = material
+            };
+            mesh.Parameters.Set(LightingKeys.ReceiveShadows, true);
+
             return new Entity()
             {
                 new ModelComponent
                 {
                     Model = new Model()
                     {
-                        new Mesh
-                        {
-                            Draw = GeometricPrimitive.Torus.New(GraphicsDevice, 720, 10, 64).ToMeshDraw(),
-                            Layer = RenderLayers.RenderLayerAll,
-                            ReceiveShadows = true,
-                            Material = material
-                        }
+                        mesh
                     },
                     Parameters =
                     {
@@ -336,11 +350,16 @@ namespace DeferredLighting
                     Deferred = true,
                     Enabled = true,
                     Intensity = intensity,
+                    DecayStart = 500,
                     Layers = RenderLayers.RenderLayerAll,
                     LightDirection = target - position,
                     SpotBeamAngle = beamAngle,
                     SpotFieldAngle = fieldAngle,
-                    ShadowMap = false
+                    ShadowMap = false,
+                    ShadowFarDistance = 10000,
+                    ShadowNearDistance = 10,
+                    ShadowMapFilterType = ShadowMapFilterType.Nearest,
+                    ShadowMapCascadeCount = 1
                 },
                 new TransformationComponent {Translation = position}
             };

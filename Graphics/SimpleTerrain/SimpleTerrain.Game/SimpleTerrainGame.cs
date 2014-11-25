@@ -544,7 +544,7 @@ namespace SimpleTerrain
                 IndexBuffer = new IndexBufferBinding(terrainIndexBuffer, true, terrainIndexBuffer.ElementCount),
             };
 
-            terrainMesh = new Mesh { Draw = meshDraw, Layer = RenderLayers.RenderLayerAll, Material = LoadAsset<Material>("TerrainMaterial") };
+            terrainMesh = new Mesh { Draw = meshDraw, Material = LoadAsset<Material>("TerrainMaterial") };
             terrainEntity = new Entity { { ModelComponent.Key, new ModelComponent { Model = new Model { terrainMesh } } } };
         }
 

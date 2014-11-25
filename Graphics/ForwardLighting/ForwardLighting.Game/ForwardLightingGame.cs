@@ -9,6 +9,7 @@ using SiliconStudio.Paradox.Effects;
 using SiliconStudio.Paradox.Effects.Modules;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
+using SiliconStudio.Paradox.Extensions;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.UI;
@@ -80,7 +81,7 @@ namespace ForwardLighting
             characterEntity.Transformation.Translation = characterInitPos;
             // remove self shadowing
             foreach (var subMesh in characterEntity.Get<ModelComponent>().Model.Meshes)
-                subMesh.ReceiveShadows = false;
+                subMesh.Parameters.Set(LightingKeys.ReceiveShadows, false);
             Entities.Add(characterEntity);
 
             // create the stand
@@ -173,7 +174,7 @@ namespace ForwardLighting
                 buttonShadow1.CanBeHitByUser = directionalLight[1].Enabled;
                 buttonShadow1.Click += ToggleShadowMap;
 
-                buttonSpotShadow = CreateButton("spotShadow", GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap),
+                buttonSpotShadow = CreateButton("spot", GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap),
                     font, new Thickness(20, 5, 5, 5));
                 buttonSpotShadow.Opacity = spotLight.Enabled ? 1.0f : 0.3f;
                 buttonSpotShadow.CanBeHitByUser = spotLight.Enabled;
@@ -207,7 +208,7 @@ namespace ForwardLighting
                 directionalLight[1].ShadowMap = !directionalLight[1].ShadowMap;
                 ((TextBlock) button.Content).Text = GetButtonTextOnOff("Shadow 1: ", directionalLight[1].ShadowMap);
             }
-            else if (button.Name == "spotShadow")
+            else if (button.Name == "spot")
             {
                 spotLight.ShadowMap = !spotLight.ShadowMap;
                 ((TextBlock)button.Content).Text = GetButtonTextOnOff("Shadow: ", spotLight.ShadowMap);
@@ -295,21 +296,21 @@ namespace ForwardLighting
 
         private Entity CreateStand(Material material, LightingConfigurationsSet lighting)
         {
-            
+            var mesh = new Mesh
+            {
+                Draw = GeometricPrimitive.Cylinder.New(GraphicsDevice, 10, 720, 64, 6).ToMeshDraw(),
+                Material = material
+            };
+            mesh.Parameters.Set(LightingKeys.ReceiveShadows, true);
+            mesh.Parameters.Set(LightingKeys.CastShadows, false);
+            mesh.Parameters.Set(LightingKeys.LightingConfigurations, lighting);
             return new Entity()
             {
                 new ModelComponent
                 {
                     Model = new Model()
                     {
-                        new Mesh
-                        {
-                            Draw = GeometricPrimitive.Cylinder.New(GraphicsDevice, 10, 720, 64, 6).ToMeshDraw(),
-                            Layer = RenderLayers.RenderLayerAll,
-                            ReceiveShadows = true,
-                            Lighting = lighting,
-                            Material = material
-                        }
+                        mesh
                     },
                     Parameters =
                     {
@@ -323,20 +324,21 @@ namespace ForwardLighting
 
         private Entity CreateStandBorder(Material material, LightingConfigurationsSet lighting)
         {
+            var mesh = new Mesh
+            {
+                Draw = GeometricPrimitive.Torus.New(GraphicsDevice, 720, 10, 64).ToMeshDraw(),
+                Material = material
+            };
+            mesh.Parameters.Set(LightingKeys.ReceiveShadows, true);
+            mesh.Parameters.Set(LightingKeys.CastShadows, false);
+            mesh.Parameters.Set(LightingKeys.LightingConfigurations, lighting);
             return new Entity()
             {
                 new ModelComponent
                 {
                     Model = new Model()
                     {
-                        new Mesh
-                        {
-                            Draw = GeometricPrimitive.Torus.New(GraphicsDevice, 720, 10, 64).ToMeshDraw(),
-                            Layer = RenderLayers.RenderLayerAll,
-                            ReceiveShadows = true,
-                            Lighting = lighting,
-                            Material = material
-                        }
+                        mesh
                     },
                     Parameters =
                     {
@@ -376,6 +378,7 @@ namespace ForwardLighting
                     Deferred = false,
                     Enabled = true,
                     Intensity = intensity,
+                    DecayStart = 500,
                     Layers = RenderLayers.RenderLayerAll,
                     LightDirection = target - position,
                     SpotBeamAngle = beamAngle,
@@ -384,7 +387,7 @@ namespace ForwardLighting
                     ShadowNearDistance = 1,
                     ShadowFarDistance = 1000,
                     ShadowMapCascadeCount = 1,
-                    ShadowMapFilterType = ShadowMapFilterType.Nearest,
+                    ShadowMapFilterType = ShadowMapFilterType.Variance,
                 },
                 new TransformationComponent {Translation = position}
             };

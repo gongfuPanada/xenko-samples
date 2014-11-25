@@ -45,7 +45,13 @@ namespace CharacterController
         protected override async Task LoadContent()
         {
             await base.LoadContent();
+            
+            VirtualResolution = new Vector3(1280, 720, 2);
 
+            // Create the camera
+            camera = new Entity("Camera") { new CameraComponent { UseProjectionMatrix = true, ProjectionMatrix = SpriteBatch.CalculateDefaultProjection(VirtualResolution) } };
+            Entities.Add(camera);
+            
             CreatePipeline();
 
             //physics is a plug-in now, needs explicit initialization
@@ -54,8 +60,6 @@ namespace CharacterController
 
             //sprites need a tweaked gravity
             physicsSystem.PhysicsEngine.Gravity = new Vector3(0, -1000, 0);
-
-            VirtualResolution = new Vector3(1280, 720, 1);
 
             IsMouseVisible = true;
 
@@ -99,6 +103,7 @@ namespace CharacterController
 
         private void CreatePipeline()
         {
+            RenderSystem.Pipeline.Renderers.Add(new CameraSetter(Services) { Camera = camera.Get<CameraComponent>()});
             RenderSystem.Pipeline.Renderers.Add(new RenderTargetSetter(Services) { ClearColor = Color.CornflowerBlue });
             RenderSystem.Pipeline.Renderers.Add(new BackgroundRenderer(Services, "ParadoxBackground"));
             RenderSystem.Pipeline.Renderers.Add(new SpriteRenderer(Services));
@@ -117,6 +122,7 @@ namespace CharacterController
         Vector3 oldDirection = Vector3.Zero;
         bool movingToTarget;
         Vector3 autoPilotTarget = Vector3.Zero;
+        private Entity camera;
 
         void playerController_OnFirstContactBegin(object sender, CollisionArgs e)
         {

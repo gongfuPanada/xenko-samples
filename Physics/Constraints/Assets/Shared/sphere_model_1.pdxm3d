@@ -1,5 +1,6 @@
 !Model
-Id: 86909be5-56a3-4294-97be-49945ae2679d
+Id: fde777fb-09af-4900-8efe-73314b715945
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/sphere.fbx
@@ -24,6 +25,7 @@ MeshParameters:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         Nodes:

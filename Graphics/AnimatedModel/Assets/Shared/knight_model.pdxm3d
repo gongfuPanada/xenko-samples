@@ -1,5 +1,6 @@
 !Model
-Id: 508c7805-a17b-43fc-afd3-d5f7b198d647
+Id: 6577d5dd-8880-4117-8ef5-ea234d3dcc74
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/knight/scenes/knight.fbx
@@ -202,6 +203,7 @@ MeshParameters:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         Nodes:

@@ -13,7 +13,7 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Graphics;
 
 
-#line 1 "C:\Projects\Paradox\samples2\Graphics\DeferredLighting\DeferredLighting\DeferredLighting.Game\Effects\DeferredLightingEffectMain.pdxfx"
+#line 1 "C:\Projects\Paradox\samples\Graphics\DeferredLighting\DeferredLighting.Game\Effects\DeferredLightingEffectMain.pdxfx"
 using SiliconStudio.Paradox.Effects.Data;
 
 #line 3

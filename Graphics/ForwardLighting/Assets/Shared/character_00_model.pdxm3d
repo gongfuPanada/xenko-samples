@@ -1,5 +1,6 @@
 !Model
-Id: bcc3bfd0-2bfb-463b-b077-28bccfa6b937
+Id: 29a4d55f-ffc5-44b6-a358-0741878ef4dd
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/character/scene/character_00.FBX
@@ -54,130 +55,137 @@ MeshParameters:
     Jet_B001:
         NodeName: Jet_B001
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     cloth_B:
         NodeName: cloth_B_2
         Material: 324587b2-0598-4189-a5cd-7431819da9e5:character_00_material_mc01
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     cloth_a:
         NodeName: cloth_a_2
         Material: 324587b2-0598-4189-a5cd-7431819da9e5:character_00_material_mc01
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     driver_body001:
         NodeName: driver_body001
         Material: 324587b2-0598-4189-a5cd-7431819da9e6:character_00_material_mc01_opaque
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     ef00:
         NodeName: ef00_2
         Material: a3747a2a-5147-4257-8e47-d97179961f4c:character_00_material_ef 00
-        Layer: RenderLayer1
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: false
+                Lighting.ReceiveShadows: false
     ef003:
         NodeName: ef003
         Material: a3747a2a-5147-4257-8e47-d97179961f4c:character_00_material_ef 00
-        Layer: RenderLayer1
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: false
+                Lighting.ReceiveShadows: false
     ef005:
         NodeName: ef005
         Material: a3747a2a-5147-4257-8e47-d97179961f4c:character_00_material_ef 00
-        Layer: RenderLayer1
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: false
+                Lighting.ReceiveShadows: false
     ef009:
         NodeName: ef009
         Material: a3747a2a-5147-4257-8e47-d97179961f4c:character_00_material_ef 00
-        Layer: RenderLayer1
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: false
+                Lighting.ReceiveShadows: false
     ef01:
         NodeName: ef01_2
         Material: a3747a2a-5147-4257-8e47-d97179961f4c:character_00_material_ef 00
-        Layer: RenderLayer1
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: false
+                Lighting.ReceiveShadows: false
     ef010:
         NodeName: ef010
         Material: a3747a2a-5147-4257-8e47-d97179961f4c:character_00_material_ef 00
-        Layer: RenderLayer1
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: false
+                Lighting.ReceiveShadows: false
     engine001:
         NodeName: engine001
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
-        ReceiveShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
+                Lighting.ReceiveShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     jet_F_L:
         NodeName: jet_F_L_2
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     jet_F_L002:
         NodeName: jet_F_L002
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     jet_F_R:
         NodeName: jet_F_R_2
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     jet_F_R1:
         NodeName: jet_F_R1_2
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
     mc_body00:
         NodeName: mc_body00
         Material: 69f2de85-3fda-4367-97e3-5de9e48b658d:character_00_material_mc00_1
-        CastShadows: true
         Parameters:
             Capacity: 4
-            ~Items: {}
+            ~Items:
+                Lighting.CastShadows: true
         LightingParameters: ab903105-47e4-43ba-8253-70788007b203:Effects/LightingParams
 ~Base:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         Nodes:

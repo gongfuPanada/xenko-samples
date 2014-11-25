@@ -7,7 +7,7 @@ Data:
         ModelComponent.Key: !ModelComponentData
             DrawOrder: 0
             Enabled: true
-            Model: 86909be5-56a3-4294-97be-49945ae2679d:sphere_model_1
+            Model: fde777fb-09af-4900-8efe-73314b715945:sphere_model_1
             Parameters:
                 Capacity: 0
                 ~Items: {}

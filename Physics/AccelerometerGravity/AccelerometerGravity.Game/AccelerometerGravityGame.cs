@@ -22,6 +22,7 @@ namespace AccelerometerGravity
         private TextBlock textBlock;
 
         private IPhysicsSystem physicsSystem;
+        private Entity camera;
 
         public AccelerometerGravityGame()
         {
@@ -34,15 +35,19 @@ namespace AccelerometerGravity
         protected override async Task LoadContent()
         {
             await base.LoadContent();
+            
+            //Set a fixed resolution
+            VirtualResolution = new Vector3(1280, 720, 2);
+
+            // Create the camera
+            camera = new Entity("Camera") { new CameraComponent{ UseProjectionMatrix = true, ProjectionMatrix =  SpriteBatch.CalculateDefaultProjection(VirtualResolution)} };
+            Entities.Add(camera);
 
             CreatePipeline();
 
             //physics is a plug-in now, needs explicit initialization
             physicsSystem = new Bullet2PhysicsSystem(this);
             physicsSystem.PhysicsEngine.Initialize();
-
-            //Set a fixed resolution
-            VirtualResolution = new Vector3(1280, 720, 1);
 
             var ground0 = Asset.Load<Entity>("screen_limit_1");
             ground0.Transformation.Translation = new Vector3(0, VirtualResolution.Y, 0); // DOWN
@@ -105,6 +110,7 @@ namespace AccelerometerGravity
 
         private void CreatePipeline()
         {
+            RenderSystem.Pipeline.Renderers.Add(new CameraSetter(Services) { Camera = camera.Get<CameraComponent>()});
             RenderSystem.Pipeline.Renderers.Add(new RenderTargetSetter(Services) { ClearColor = Color.CornflowerBlue });
             RenderSystem.Pipeline.Renderers.Add(new BackgroundRenderer(Services, "ParadoxBackground"));
             RenderSystem.Pipeline.Renderers.Add(new SpriteRenderer(Services));

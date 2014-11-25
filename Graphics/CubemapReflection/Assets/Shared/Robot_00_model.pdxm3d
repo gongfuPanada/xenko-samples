@@ -1,5 +1,6 @@
 !Model
-Id: e32d3afa-b009-46da-9605-7807deed6519
+Id: 0de5853c-7b42-4376-9070-78d02aca0cef
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/Robot/scenes/Robot_00.FBX
@@ -321,6 +322,7 @@ MeshParameters:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595

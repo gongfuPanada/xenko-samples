@@ -136,7 +136,7 @@ namespace CubemapReflection
 
             RenderSystem.Pipeline.Renderers.Add(new SkyboxRenderer(Services, environment));
             RenderSystem.Pipeline.Renderers.Add(new RenderStateSetter(Services) { DepthStencilState = GraphicsDevice.DepthStencilStates.DepthRead });
-            RenderSystem.Pipeline.Renderers.Add(new OpaqueModelRenderer(Services, "CubemapReflectionEffectMain"));
+            RenderSystem.Pipeline.Renderers.Add(new ModelRenderer(Services, "CubemapReflectionEffectMain").AddOpaqueFilter());
 
             GraphicsDevice.Parameters.Set(RenderingParameters.UseDeferred, true);
         }

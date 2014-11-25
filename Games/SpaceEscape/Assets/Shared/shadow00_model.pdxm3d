@@ -1,5 +1,6 @@
 !Model
-Id: bb36ec8a-ceaf-44c2-903c-9024bf9fd723
+Id: 254e0889-a98d-4081-9604-f971753d481c
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/model/character/scene/shadow00.FBX
@@ -25,6 +26,7 @@ MeshParameters:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         Nodes:

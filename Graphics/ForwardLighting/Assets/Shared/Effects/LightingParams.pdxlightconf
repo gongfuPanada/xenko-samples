@@ -37,7 +37,7 @@ Permutations:
                             -   LightType: Spot
                                 ShadowCount: 1
                                 CascadeCount: 1
-                                FilterType: Nearest
+                                FilterType: Variance
                             -   LightType: Directional
                                 ShadowCount: 1
                                 CascadeCount: 4

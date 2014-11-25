@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox;
 using SiliconStudio.Paradox.Effects;
+using SiliconStudio.Paradox.Engine;
+using SiliconStudio.Paradox.EntityModel;
 using SiliconStudio.Paradox.Graphics;
 
 namespace JumpyJet
@@ -22,11 +24,12 @@ namespace JumpyJet
 
         // Setting Virtual Resolution so that the screen has 640 and 1136 of Width and Height respectively.
         // Note that the Z component indicates the near and farplane [near, far] = [-10, 10]
-        private static readonly Vector3 GameVirtualResolution = new Vector3(640, 1136, 10f);
+        private static readonly Vector3 GameVirtualResolution = new Vector3(640, 1136, 20f);
 
         private GameModule gameModule;
         private UIModule uiModule;
         private GameState gameState;
+        private Entity camera;
 
         private new GameState State
         {
@@ -78,11 +81,15 @@ namespace JumpyJet
         protected override async Task LoadContent()
         {
             await base.LoadContent();
-
-            CreateRenderingPipelines();
-
+            
             // Set virtual Resolution
             VirtualResolution = GameVirtualResolution;
+
+            // Create the camera
+            camera = new Entity("Camera") { new CameraComponent { UseProjectionMatrix = true, ProjectionMatrix = SpriteBatch.CalculateDefaultProjection(VirtualResolution)} };
+            Entities.Add(camera);
+
+            CreateRenderingPipelines();
 
             // Enable visual of mouse in the game
             Window.IsMouseVisible = true;
@@ -113,6 +120,9 @@ namespace JumpyJet
 
         private void CreateRenderingPipelines()
         {
+            // Create the camera setter. This set the camera at the beginning of the pipeline
+            var cameraSetter = new CameraSetter(Services) {Camera = camera.Get<CameraComponent>()};
+
             // Create the RenderTarget setter. This clears and sets the render targets.
             var renderTargetSetter = new RenderTargetSetter(Services) { ClearColor = Color.LightBlue };
 
@@ -128,6 +138,7 @@ namespace JumpyJet
 
             // Add renderers into the pipeline. Note that the order matters. 
             // The renderers are called in the same order they are included into the pipeline.
+            RenderSystem.Pipeline.Renderers.Add(cameraSetter);
             RenderSystem.Pipeline.Renderers.Add(renderTargetSetter);
             RenderSystem.Pipeline.Renderers.Add(delegateBackgroundRenderer);
             RenderSystem.Pipeline.Renderers.Add(spriteRenderer);

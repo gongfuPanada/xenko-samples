@@ -17,6 +17,9 @@ Permutations:
                     - !ShadowMapFilterType Nearest
                     - !ShadowMapFilterType PercentageCloserFiltering
                     - !ShadowMapFilterType Variance
+                ShadowMapParameters.LightType:
+                    - !LightType Directional
+                    - !LightType Spot
                 ShadowMapParameters.ShadowMapCascadeCount: !fxparam.range
                     From: 1
                     To: 4

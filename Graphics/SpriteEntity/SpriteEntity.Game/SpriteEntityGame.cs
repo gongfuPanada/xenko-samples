@@ -102,7 +102,8 @@ namespace SpriteEntity
 
         // Setting Virtual Resolution so that the screen has 640 and 1136 of Width and Height respectively.
         // Note that the Z component indicates the near and farplane [near, far] = [-10, 10].
-        private static readonly Vector3 GameVirtualResolution = new Vector3(1136, 640, 10f);
+        private static readonly Vector3 GameVirtualResolution = new Vector3(1136, 640, 20f);
+        private Entity camera;
 
         public SpriteEntityGame()
         {
@@ -123,13 +124,18 @@ namespace SpriteEntity
         protected override async Task LoadContent()
         {
             await base.LoadContent();
-
-            CreateRenderingPipeline();
-
+            
             // Set virtual resolution for Sprite
             VirtualResolution = GameVirtualResolution;
 
-            IsMouseVisible = true; // Enable mouse Cursor, if there is one
+            // Creates and add the game camera
+            camera = new Entity("Camera") { new CameraComponent { UseProjectionMatrix = true, ProjectionMatrix = SpriteBatch.CalculateDefaultProjection(VirtualResolution)} };
+            Entities.Add(camera);
+
+            CreateRenderingPipeline();
+
+            // Enable mouse Cursor, if there is one
+            IsMouseVisible = true; 
 
             // Disable multi-touch input for the game, since there is no need
             Input.MultiTouchEnabled = false;
@@ -208,6 +214,8 @@ namespace SpriteEntity
         /// </summary>
         private void CreateRenderingPipeline()
         {
+            // Create the camera setter. This sets the camera to use at each frame
+            RenderSystem.Pipeline.Renderers.Add(new CameraSetter(Services) { Camera = camera.Get<CameraComponent>() });
             // Create the RenderTarget setter. This clears and sets the render targets
             RenderSystem.Pipeline.Renderers.Add(new RenderTargetSetter(Services) { ClearColor = Color.CornflowerBlue });
             // Create a Sprite Renderer

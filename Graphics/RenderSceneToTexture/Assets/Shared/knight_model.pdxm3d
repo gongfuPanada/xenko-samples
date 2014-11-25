@@ -1,5 +1,6 @@
 !Model
-Id: ee3cda62-b9c9-48ca-a19d-c82490d24825
+Id: 09b742ac-4711-4dcc-a39a-69eb4fac08c9
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/knight/scenes/knight.fbx
@@ -77,8 +78,8 @@ Nodes:
     - {Name: ch00_Knight_directionalLight1, Depth: 2, Preserve: false}
     - {Name: ch00_Knight_directionalLight2, Depth: 2, Preserve: false}
     - {Name: ch00_Knight_ambientLight1, Depth: 2, Preserve: false}
-UpAxis: {X: 0, Y: 1, Z: 0}
-FrontAxis: {X: 0, Y: 0, Z: 1}
+UpAxis: {X: 0, Y: 0, Z: 1}
+FrontAxis: {X: 0, Y: -1, Z: 0}
 MeshParameters:
     c100:chr:ch00_Knight_Belt_1:
         NodeName: ch00_Knight_Belt
@@ -201,6 +202,7 @@ MeshParameters:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595

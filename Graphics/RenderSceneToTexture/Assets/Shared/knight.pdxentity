@@ -7,7 +7,7 @@ Data:
         ModelComponent.Key: !ModelComponentData
             DrawOrder: 0
             Enabled: true
-            Model: ee3cda62-b9c9-48ca-a19d-c82490d24825:knight_model
+            Model: 09b742ac-4711-4dcc-a39a-69eb4fac08c9:knight_model
             Parameters:
                 Capacity: 0
                 ~Items: {}

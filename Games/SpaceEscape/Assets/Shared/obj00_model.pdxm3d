@@ -1,5 +1,6 @@
 !Model
-Id: 5800a5e3-6c63-4c90-b0f6-220aee428077
+Id: bd816317-9170-4f2b-8592-f8d66252389a
+SerializedVersion: 1
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/model/BG/scene/obj00.FBX
@@ -46,6 +47,7 @@ MeshParameters:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         BuildOrder: 500
         Tags: []
         Nodes:

@@ -7,7 +7,7 @@ Data:
         ModelComponent.Key: !ModelComponentData
             DrawOrder: 0
             Enabled: true
-            Model: 5800a5e3-6c63-4c90-b0f6-220aee428077:obj00_model
+            Model: bd816317-9170-4f2b-8592-f8d66252389a:obj00_model
             Parameters:
                 Capacity: 0
                 ~Items: {}
