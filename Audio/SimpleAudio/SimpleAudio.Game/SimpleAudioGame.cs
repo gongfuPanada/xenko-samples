@@ -58,12 +58,13 @@ namespace SimpleAudio
             const float textSize = 60f;
             const string text = "Tap on the screen!";
             var screenCenter = new Vector2(VirtualResolution.X, VirtualResolution.Y) / 2;
+            var screenSize = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
             
             spriteBatch.Begin();
             spriteBatch.Draw(djTexture, screenCenter + djOffset, Color.White, 0, new Vector2(djTexture.Width, djTexture.Height) / 2); // dj
             spriteBatch.Draw(waveTexture, screenCenter + new Vector2(-waveCurrentOffset.X, waveCurrentOffset.Y), waveCurrentAlpha * Color.White, 0, new Vector2(waveTexture.Width, waveTexture.Height) / 2); // left wave
             spriteBatch.Draw(waveTexture, screenCenter + new Vector2(+waveCurrentOffset.X, waveCurrentOffset.Y), waveCurrentAlpha * Color.White, 0, new Vector2(waveTexture.Width, waveTexture.Height) / 2); // right wave
-            spriteBatch.DrawString(font, text, textSize, screenCenter - spriteBatch.MeasureString(font, text, textSize) / 2 + textOffset, Color.White, 0f, Vector2.Zero, Vector2.One, SpriteEffects.None, 0, TextAlignment.Left);
+            spriteBatch.DrawString(font, text, textSize, screenCenter - spriteBatch.MeasureString(font, text, textSize, screenSize) / 2 + textOffset, Color.White, 0f, Vector2.Zero, Vector2.One, SpriteEffects.None, 0, TextAlignment.Left);
             spriteBatch.End();
         }
 
