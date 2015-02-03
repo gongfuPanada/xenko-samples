@@ -6,7 +6,7 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox;
 using SiliconStudio.Paradox.DataModel;
 using SiliconStudio.Paradox.Effects;
-using SiliconStudio.Paradox.Effects.Modules;
+using SiliconStudio.Paradox.Effects;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
 using SiliconStudio.Paradox.Extensions;
@@ -173,7 +173,7 @@ namespace DeferredLighting
             if (button.Name == "direct")
             {
                 directionalLight.ShadowMap = !directionalLight.ShadowMap;
-                ((TextBlock) button.Content).Text = GetButtonTextOnOff("Shadow: ", directionalLight.ShadowMap);
+                ((TextBlock)button.Content).Text = GetButtonTextOnOff("Shadow: ", directionalLight.ShadowMap);
             }
             else if (button.Name == "spot")
             {
@@ -188,14 +188,16 @@ namespace DeferredLighting
             if (button.Name == "direct")
             {
                 directionalLight.Enabled = !directionalLight.Enabled;
-                ((TextBlock) button.Content).Text = GetButtonTextOnOff("Direct light: ", directionalLight.Enabled);
+                ((TextBlock)button.Content).Text = GetButtonTextOnOff("Direct light: ", directionalLight.Enabled);
                 buttonShadow.Opacity = directionalLight.Enabled ? 1.0f : 0.3f;
                 buttonShadow.CanBeHitByUser = directionalLight.Enabled;
             }
             else if (button.Name == "spot")
             {
                 spotLight.Enabled = !spotLight.Enabled;
-                ((TextBlock) button.Content).Text = GetButtonTextOnOff("Spot light: ", spotLight.Enabled);
+                ((TextBlock)button.Content).Text = GetButtonTextOnOff("Spot light: ", spotLight.Enabled);
+                buttonSpotShadow.Opacity = directionalLight.Enabled ? 1.0f : 0.3f;
+                buttonSpotShadow.CanBeHitByUser = directionalLight.Enabled;
             }
             else if (button.Name == "point")
             {
@@ -287,7 +289,7 @@ namespace DeferredLighting
                     },
                     Parameters =
                     {
-                        {TexturingKeys.Texture0, Asset.Load<Texture2D>("TrainingFloor")},
+                        {TexturingKeys.Texture0, Asset.Load<Texture>("TrainingFloor")},
                         {TexturingKeys.Sampler0, GraphicsDevice.SamplerStates.AnisotropicWrap},
                         {MaterialKeys.SpecularColorValue, 0.1f*Color4.White}
                     }
@@ -314,7 +316,7 @@ namespace DeferredLighting
                     },
                     Parameters =
                     {
-                        {TexturingKeys.Texture0, Asset.Load<Texture2D>("red")},
+                        {TexturingKeys.Texture0, Asset.Load<Texture>("red")},
                         {TexturingKeys.Sampler0, GraphicsDevice.SamplerStates.AnisotropicWrap},
                         {MaterialKeys.SpecularColorValue, 0.3f*Color4.White}
                     }

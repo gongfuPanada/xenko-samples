@@ -69,7 +69,7 @@ namespace GeometricPrimitives
                              };
 
             // Load the texture, and create SimpleEffect
-            simpleEffect = new SimpleEffect(GraphicsDevice) {Texture = Asset.Load<Texture2D>("texture")};
+            simpleEffect = new SimpleEffect(GraphicsDevice) {Texture = Asset.Load<Texture>("texture")};
 
             // Create the view and projection matrices
             view = Matrix.LookAtRH(PerimeterDirectionVector * 10f + new Vector3(0, 2.0f, 0.0f), new Vector3(0, -4, 0), Vector3.UnitY);

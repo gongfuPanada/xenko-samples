@@ -16,7 +16,7 @@ namespace SimpleSprite
         private const int SphereTotalCount = 32;
 
         private SpriteBatch spriteBatch;
-        private Texture2D sphere;
+        private Texture sphere;
 
         private Vector2 resolution;
         private Vector2 ballHalfSize;
@@ -33,7 +33,7 @@ namespace SimpleSprite
         {
             // create the ball sprite.
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = VirtualResolution };
-            sphere = await Asset.LoadAsync<Texture2D>("sphere");
+            sphere = await Asset.LoadAsync<Texture>("sphere");
 
             // Initialize ball's state related variables.
             resolution = new Vector2(VirtualResolution.X, VirtualResolution.Y);

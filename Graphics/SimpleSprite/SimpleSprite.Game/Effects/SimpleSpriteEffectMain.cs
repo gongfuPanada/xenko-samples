@@ -6,71 +6,49 @@
 // and re-save the associated .pdxfx.
 // </auto-generated>
 
+using System;
 using SiliconStudio.Core;
 using SiliconStudio.Paradox.Effects;
+using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Shaders;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Graphics;
+using Buffer = SiliconStudio.Paradox.Graphics.Buffer;
 
-
-#line 1 "E:\Code\Paradox\samples2\Graphics\SimpleSprite\SimpleSprite.Game\Effects\SimpleSpriteEffectMain.pdxfx"
 using SiliconStudio.Paradox.Effects.Data;
-
-#line 3
 namespace SimpleSprite.Effects
 {
-
-    #line 5
-    public partial class SimpleSpriteEffectMain  : IShaderMixinBuilder
+    internal static partial class ShaderMixins
     {
-        public void Generate(ShaderMixinSourceTree mixin, ShaderMixinContext context)
+        internal partial class SimpleSpriteEffectMain  : IShaderMixinBuilder
         {
-
-            #line 11
-            context.Mixin(mixin, "ShaderBase");
-
-            #line 12
-            context.Mixin(mixin, "TransformationWAndVP");
-
-            #line 13
-            context.Mixin(mixin, "BRDFDiffuseBase");
-
-            #line 14
-            context.Mixin(mixin, "BRDFSpecularBase");
-
-            #line 15
-            context.Mixin(mixin, "AlbedoFlatShading");
-
-            #line 17
-            if (context.GetParam(MaterialParameters.AlbedoDiffuse) != null)
-
-                {
-
-                    #line 18
-                    var __subMixin = new ShaderMixinSourceTree() { Parent = mixin };
-
-                    #line 18
-                    context.Mixin(__subMixin, context.GetParam(MaterialParameters.AlbedoDiffuse));
-                    mixin.Mixin.AddComposition("albedoDiffuse", __subMixin.Mixin);
-                }
-
-            #line 20
-            if (context.GetParam(MaterialParameters.HasSkinningPosition))
+            public void Generate(ShaderMixinSourceTree mixin, ShaderMixinContext context)
             {
+                context.Mixin(mixin, "ShaderBase");
+                context.Mixin(mixin, "TransformationWAndVP");
+                context.Mixin(mixin, "BRDFDiffuseBase");
+                context.Mixin(mixin, "BRDFSpecularBase");
+                context.Mixin(mixin, "AlbedoFlatShading");
+                if (context.GetParam(MaterialParameters.AlbedoDiffuse) != null)
 
-                #line 22
-                mixin.Mixin.AddMacro("SkinningMaxBones", context.GetParam(MaterialParameters.SkinningMaxBones));
-
-                #line 23
-                context.Mixin(mixin, "TransformationSkinning");
+                    {
+                        var __subMixin = new ShaderMixinSourceTree() { Parent = mixin };
+                        context.PushComposition(mixin, "albedoDiffuse", __subMixin);
+                        context.Mixin(__subMixin, context.GetParam(MaterialParameters.AlbedoDiffuse));
+                        context.PopComposition();
+                    }
+                if (context.GetParam(MaterialParameters.HasSkinningPosition))
+                {
+                    mixin.Mixin.AddMacro("SkinningMaxBones", context.GetParam(MaterialParameters.SkinningMaxBones));
+                    context.Mixin(mixin, "TransformationSkinning");
+                }
             }
-        }
 
-        [ModuleInitializer]
-        internal static void __Initialize__()
+            [ModuleInitializer]
+            internal static void __Initialize__()
 
-        {
-            ShaderMixinManager.Register("SimpleSpriteEffectMain", new SimpleSpriteEffectMain());
+            {
+                ShaderMixinManager.Register("SimpleSpriteEffectMain", new SimpleSpriteEffectMain());
+            }
         }
     }
 }

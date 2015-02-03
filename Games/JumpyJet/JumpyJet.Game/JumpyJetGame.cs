@@ -43,6 +43,7 @@ namespace JumpyJet
         public JumpyJetGame()
         {
             // Target 9.1 profile by default.
+            GraphicsDeviceManager.DeviceCreationFlags = DeviceCreationFlags.Debug;
             GraphicsDeviceManager.PreferredGraphicsProfile = new[] { GraphicsProfile.Level_9_1 };
             GraphicsDeviceManager.PreferredBackBufferWidth = (int) GameVirtualResolution.X;
             GraphicsDeviceManager.PreferredBackBufferHeight = (int) GameVirtualResolution.Y;

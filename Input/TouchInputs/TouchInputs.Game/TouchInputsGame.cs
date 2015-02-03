@@ -80,7 +80,7 @@ namespace TouchInputs
             spriteFont11 = Asset.Load<SpriteFont>("Font");
 
             // load the round texture 
-            roundTexture = Asset.Load<Texture2D>("round");
+            roundTexture = Asset.Load<Texture>("round");
 
             // create the SpriteBatch used to render them
             spriteBatch = new SpriteBatch(GraphicsDevice) {VirtualResolution = VirtualResolution};

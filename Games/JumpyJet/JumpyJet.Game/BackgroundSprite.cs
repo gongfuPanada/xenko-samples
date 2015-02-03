@@ -74,7 +74,7 @@ namespace JumpyJet
             }
         }
 
-        private void CreateBackground(Texture2D bgTexture, RectangleF texReg)
+        private void CreateBackground(Texture bgTexture, RectangleF texReg)
         {
             texture = bgTexture;
             textureRegion = texReg;

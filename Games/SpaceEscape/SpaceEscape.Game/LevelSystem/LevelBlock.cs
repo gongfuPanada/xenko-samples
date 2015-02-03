@@ -88,6 +88,14 @@ namespace SpaceEscape.LevelSystem
                 collidableObstacle.BoundingBoxes.Add(modelComponent.BoundingBox);
             }
 
+            // Remove collision model (without materials)
+            for (int index = 0; index < modelComponent.Meshes.Count; index++)
+            {
+                var mesh = modelComponent.Meshes[index];
+                if (mesh.Material == null)
+                    modelComponent.Meshes.RemoveAt(index--);
+            }
+
             CollidableObstacles.Add(collidableObstacle);
 
             return this;

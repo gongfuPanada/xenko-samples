@@ -6,7 +6,7 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox;
 using SiliconStudio.Paradox.DataModel;
 using SiliconStudio.Paradox.Effects;
-using SiliconStudio.Paradox.Effects.Modules;
+using SiliconStudio.Paradox.Effects;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
 using SiliconStudio.Paradox.Extensions;
@@ -242,6 +242,11 @@ namespace ForwardLighting
             {
                 spotLight.Enabled = !spotLight.Enabled;
                 ((TextBlock) button.Content).Text = GetButtonTextOnOff("Spot light: ", spotLight.Enabled);
+                if (buttonSpotShadow != null)
+                {
+                    buttonSpotShadow.Opacity = spotLight.Enabled ? 1.0f : 0.3f;
+                    buttonSpotShadow.CanBeHitByUser = spotLight.Enabled;
+                }
             }
             else if (button.Name == "point")
             {
@@ -314,7 +319,7 @@ namespace ForwardLighting
                     },
                     Parameters =
                     {
-                        {TexturingKeys.Texture0, Asset.Load<Texture2D>("TrainingFloor")},
+                        {TexturingKeys.Texture0, Asset.Load<Texture>("TrainingFloor")},
                         {TexturingKeys.Sampler0, GraphicsDevice.SamplerStates.AnisotropicWrap},
                         {MaterialKeys.SpecularColorValue, 0.1f*Color4.White}
                     }
@@ -342,7 +347,7 @@ namespace ForwardLighting
                     },
                     Parameters =
                     {
-                        {TexturingKeys.Texture0, Asset.Load<Texture2D>("red")},
+                        {TexturingKeys.Texture0, Asset.Load<Texture>("red")},
                         {TexturingKeys.Sampler0, GraphicsDevice.SamplerStates.AnisotropicWrap},
                         {MaterialKeys.SpecularColorValue, 0.3f*Color4.White}
                     }

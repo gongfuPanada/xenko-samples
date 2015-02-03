@@ -5,9 +5,10 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox;
 using SiliconStudio.Paradox.DataModel;
 using SiliconStudio.Paradox.Effects;
-using SiliconStudio.Paradox.Effects.Modules;
-using SiliconStudio.Paradox.Effects.Modules.Processors;
-using SiliconStudio.Paradox.Effects.Modules.Renderers;
+using SiliconStudio.Paradox.Effects.Cubemap;
+using SiliconStudio.Paradox.Effects.Processors;
+using SiliconStudio.Paradox.Effects.Renderers;
+using SiliconStudio.Paradox.Effects.Skybox;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
 using SiliconStudio.Paradox.Graphics;
@@ -31,7 +32,7 @@ namespace CubemapReflection
             await base.LoadContent();
 
             // load environment map
-            var environment = Asset.Load<TextureCube>("environment");
+            var environment = Asset.Load<Texture>("environment");
 
             CreatePipeline(environment);
             
@@ -87,7 +88,7 @@ namespace CubemapReflection
             Script.Add(GameScript1);
         }
 
-        private void CreatePipeline(TextureCube environment)
+        private void CreatePipeline(Texture environment)
         {
             // Processor
             Entities.Processors.Add(new CubemapSourceProcessor(GraphicsDevice));
@@ -112,11 +113,11 @@ namespace CubemapReflection
             // Add sthe G-buffer pass to the pipeline.
             RenderSystem.Pipeline.Renderers.Add(gbufferProcessor);
 
-            var readOnlyDepthBuffer = GraphicsDevice.DepthStencilBuffer.Texture.ToDepthStencilBuffer(true);
+            var readOnlyDepthBuffer = GraphicsDevice.DepthStencilBuffer.ToDepthStencilReadOnlyTexture();
 
             // Performs the light prepass on opaque geometry.
             // Adds this pass to the pipeline.
-            var lightDeferredProcessor = new LightingPrepassRenderer(Services, "CubemapReflectionLightingPrepass", GraphicsDevice.DepthStencilBuffer.Texture, gbufferProcessor.GBufferTexture);
+            var lightDeferredProcessor = new LightingPrepassRenderer(Services, "CubemapReflectionLightingPrepass", GraphicsDevice.DepthStencilBuffer, gbufferProcessor.GBufferTexture);
             RenderSystem.Pipeline.Renderers.Add(lightDeferredProcessor);
 
             var iblRenderer = new LightingIBLRenderer(Services, "CubemapIBLSpecular", readOnlyDepthBuffer);

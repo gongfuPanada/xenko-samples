@@ -18,8 +18,8 @@ namespace SimpleAudio
 
         // Graphic
         private SpriteBatch spriteBatch;
-        private Texture2D djTexture;
-        private Texture2D waveTexture;
+        private Texture djTexture;
+        private Texture waveTexture;
 
         private readonly Vector2 djOffset = new Vector2(0, 50);
         private readonly Vector2 textOffset = new Vector2(0, 380);
@@ -39,8 +39,8 @@ namespace SimpleAudio
 
             // Load and create graphic objects
             spriteBatch = new SpriteBatch(GraphicsDevice) {VirtualResolution = VirtualResolution};
-            djTexture = Asset.Load<Texture2D>("dj");
-            waveTexture = Asset.Load<Texture2D>("wave");
+            djTexture = Asset.Load<Texture>("dj");
+            waveTexture = Asset.Load<Texture>("wave");
             font = Asset.Load<SpriteFont>("Font");
 
             // Create the rendering pipeline

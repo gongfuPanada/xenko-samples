@@ -54,7 +54,7 @@ namespace SimpleDynamicTexture
         private SpriteBatch spriteBatch;
 
         private const int RenderTextureSize = 16;
-        private Texture2D renderTexture;
+        private Texture renderTexture;
         private readonly ColorBGRA[] textureData = new ColorBGRA[RenderTextureSize * RenderTextureSize];
 
         private SpriteFont arial;
@@ -100,7 +100,7 @@ namespace SimpleDynamicTexture
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            renderTexture = Texture2D.New(GraphicsDevice, RenderTextureSize, RenderTextureSize, 1, PixelFormat.B8G8R8A8_UNorm, usage:GraphicsResourceUsage.Dynamic);
+            renderTexture = Texture.New2D(GraphicsDevice, RenderTextureSize, RenderTextureSize, 1, PixelFormat.B8G8R8A8_UNorm, usage:GraphicsResourceUsage.Dynamic);
 
             // Setup initial data in "SymmetricDefaultShape" to the texture
             for (var i = 0; i < SymmetricDefaultShape.Length; i += 2)

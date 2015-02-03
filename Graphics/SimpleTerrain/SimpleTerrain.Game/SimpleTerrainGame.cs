@@ -7,7 +7,7 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox;
 using SiliconStudio.Paradox.DataModel;
 using SiliconStudio.Paradox.Effects;
-using SiliconStudio.Paradox.Effects.Modules;
+using SiliconStudio.Paradox.Effects;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.EntityModel;
 using SiliconStudio.Paradox.Graphics;
@@ -33,8 +33,8 @@ namespace SimpleTerrain
         private readonly Dictionary<string, object> loadedAssets = new Dictionary<string, object>();
 
         // Terrain Parameters
-        private const int TerrainVertexBufferSize               = 64 * 512 * 512;
-        private const int TerrainIndexBufferSize                = 8 * 512 * 512;
+        private const int MinTerrainSizePowerFactor = 2;
+        private const int MaxTerrainSizePowerFactor = 9;
 
         private Entity terrainEntity;       // Manipulate the entity components: Transformation component
         private Mesh terrainMesh;           // Update a number of element to draw
@@ -42,7 +42,7 @@ namespace SimpleTerrain
         private Buffer terrainIndexBuffer;  // Set Index Buffer on the fly
 
         // Fault formation algorithm Parameters
-        private int terrainSizePowerFactor                      = 9;
+        private int terrainSizePowerFactor                      = MaxTerrainSizePowerFactor;
         private int iterationPowerFactor                        = 5;
         private float filterHeightBandStrength                  = 0.7f;
         private float terrainHeightScale                        = 200f;
@@ -83,8 +83,8 @@ namespace SimpleTerrain
             get { return terrainSizePowerFactor; }
             set
             {
-                if (value < 2) value = 2;
-                if (value > 9) value = 9;
+                if (value < MinTerrainSizePowerFactor) value = MinTerrainSizePowerFactor;
+                if (value > MaxTerrainSizePowerFactor) value = MaxTerrainSizePowerFactor;
                 terrainSizePowerFactor = value;
             }
         }
@@ -145,7 +145,10 @@ namespace SimpleTerrain
 
             CreateLight();
 
-            CreateTerrainModelEntity(TerrainVertexBufferSize, TerrainIndexBufferSize);
+            var maxTerrainSize = (int)Math.Pow(2, MaxTerrainSizePowerFactor);
+            var maxVerticesCount = maxTerrainSize * maxTerrainSize;
+            var maxIndicesCount = 2 * maxTerrainSize * maxTerrainSize; // each index appear on average twice since the mesh is rendered as triangle strips
+            CreateTerrainModelEntity(maxVerticesCount, maxIndicesCount);
 
             await GenerateTerrain();
 
@@ -526,22 +529,25 @@ namespace SimpleTerrain
         /// Creates an Entity that contains our dynamic Vertex and Index buffers.
         /// This Entity will be rendered by the model renderer.
         /// </summary>
-        /// <param name="vertexBufferSize"></param>
-        /// <param name="indexBufferSize"></param>
-        private void CreateTerrainModelEntity(int vertexBufferSize, int indexBufferSize)
+        /// <param name="verticesCount"></param>
+        /// <param name="indicesCount"></param>
+        private void CreateTerrainModelEntity(int verticesCount, int indicesCount)
         {
+            // Compute sizes
+            var vertexDeclaration = VertexNormalTexture.VertexDeclaration;
+            var vertexBufferSize = verticesCount * vertexDeclaration.CalculateSize();
+            var indexBufferSize = indicesCount * sizeof(int);
+
             // Create Vertex and Index buffers
             terrainVertexBuffer = Buffer.Vertex.New(GraphicsDevice, vertexBufferSize, GraphicsResourceUsage.Dynamic);
             terrainIndexBuffer = Buffer.New(GraphicsDevice, indexBufferSize, BufferFlags.IndexBuffer, GraphicsResourceUsage.Dynamic);
 
             // Prepare mesh and entity
-            var vertexDeclaration = VertexNormalTexture.VertexDeclaration;
-
             var meshDraw = new MeshDraw
             {
                 PrimitiveType = PrimitiveType.TriangleStrip,
-                VertexBuffers = new[] { new VertexBufferBinding(terrainVertexBuffer, vertexDeclaration, terrainVertexBuffer.ElementCount) },
-                IndexBuffer = new IndexBufferBinding(terrainIndexBuffer, true, terrainIndexBuffer.ElementCount),
+                VertexBuffers = new[] { new VertexBufferBinding(terrainVertexBuffer, vertexDeclaration, verticesCount) },
+                IndexBuffer = new IndexBufferBinding(terrainIndexBuffer, true, indicesCount),
             };
 
             terrainMesh = new Mesh { Draw = meshDraw, Material = LoadAsset<Material>("TerrainMaterial") };
@@ -564,11 +570,11 @@ namespace SimpleTerrain
                 if (Input.PointerEvents.Count > 0)
                 {
                     var sumDelta = (2 * (float)Math.PI) * Input.PointerEvents.Aggregate(Vector2.Zero, (current, pointerEvent) => current + pointerEvent.DeltaPosition);
-                    rotY -= sumDelta.X;
-                    rotX += sumDelta.Y;
+                    rotY += sumDelta.X;
+                    rotX -= sumDelta.Y;
                 }
                 // Rotate the terrain
-                rotY += (float)(2 * Math.PI * (UpdateTime.Total.TotalMilliseconds % 20000000) / 20000000);
+                rotY += (float)(2 * Math.PI * (UpdateTime.Elapsed.TotalMilliseconds % 20000) / 20000);
 
                 terrainEntity.Transformation.Rotation = Quaternion.RotationAxis(Vector3.UnitY, rotY) * Quaternion.RotationAxis(Vector3.UnitX, rotX);
             }

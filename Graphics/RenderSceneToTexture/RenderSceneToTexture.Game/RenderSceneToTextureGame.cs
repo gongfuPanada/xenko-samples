@@ -24,7 +24,7 @@ namespace RenderSceneToTexture
 
         private readonly RectangleF textureDestination = new RectangleF(ScreenSize.X - TextureDestinationWidth, 0, TextureDestinationWidth, TextureDestinationHeight);
 
-        private Texture2D targetRenderTexture;
+        private Texture targetRenderTexture;
         private SpriteBatch spriteBatch;
 
         public RenderSceneToTextureGame()
@@ -44,6 +44,7 @@ namespace RenderSceneToTexture
             await base.LoadContent();
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch.VirtualResolution = VirtualResolution;
 
             var knightEntity = Asset.Load<Entity>("knight");
             knightEntity.Get(AnimationComponent.Key).Play("Idle");
@@ -100,11 +101,11 @@ namespace RenderSceneToTexture
         /// </summary>
         private void CreatePipeline(CameraComponent firstCamera, CameraComponent secondCamera)
         {
-            targetRenderTexture = Texture2D.New(GraphicsDevice, (int) ScreenSize.X, (int)ScreenSize.Y, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource | TextureFlags.RenderTarget);
+            targetRenderTexture = Texture.New2D(GraphicsDevice, (int) ScreenSize.X, (int)ScreenSize.Y, PixelFormat.R8G8B8A8_UNorm, TextureFlags.ShaderResource | TextureFlags.RenderTarget);
 
             // 1st pass
             RenderSystem.Pipeline.Renderers.Add(new CameraSetter(Services) { Camera = firstCamera });
-            RenderSystem.Pipeline.Renderers.Add(new RenderTargetSetter(Services) { RenderTarget = targetRenderTexture.ToRenderTarget(ViewType.Single, 0, 0) });
+            RenderSystem.Pipeline.Renderers.Add(new RenderTargetSetter(Services) { RenderTarget = targetRenderTexture });
             RenderSystem.Pipeline.Renderers.Add(new BackgroundRenderer(Services, "ParadoxBackground"));
             RenderSystem.Pipeline.Renderers.Add(new ModelRenderer(Services, "RenderSceneToTextureEffectMain"));
 
