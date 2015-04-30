@@ -1,9 +1,9 @@
 !SpriteFont
-Id: b042d9e7-08cd-435c-9130-ebc0a1e0d83d
+Id: 61f4751d-2878-4118-b212-ac554de05399
 Tags: []
 Source: null
 FontName: Segoe UI
-Size: 20
+Size: 30
 Style: Regular
 IsDynamic: true
 DefaultCharacter: ' '

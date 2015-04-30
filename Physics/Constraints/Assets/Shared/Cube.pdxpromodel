@@ -1,0 +1,8 @@
+!ProceduralModelAsset
+Id: 140faeee-f1b9-4f29-91a2-14b11ae22718
+SerializedVersion: 1
+Tags: []
+Type: !CubeProceduralModel
+    Size: 2
+    MaterialInstance:
+        Material: 852eb1d0-def9-4296-a57d-810589cf4ec9:Material

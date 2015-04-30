@@ -1,7 +1,5 @@
-﻿class TransformationTextureUV : ShaderBase
+﻿class TransformationTextureUV : ShaderBase, Texturing
 {
-    stage stream float2 TexCoord : TEXCOORD0;
-
     override void VSMain()
     {
         TransformUV_VS();

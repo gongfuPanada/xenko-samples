@@ -8,22 +8,23 @@
 
 using System;
 using SiliconStudio.Core;
-using SiliconStudio.Paradox.Effects;
+using SiliconStudio.Paradox.Rendering;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Shaders;
 using SiliconStudio.Core.Mathematics;
 using Buffer = SiliconStudio.Paradox.Graphics.Buffer;
 
-using SiliconStudio.Paradox.Effects.Data;
+using SiliconStudio.Paradox.Rendering.Data;
 namespace SimpleTerrain.Effects
 {
     internal static partial class ShaderMixins
     {
         internal partial class SimpleTerrainEffectMain  : IShaderMixinBuilder
         {
-            public void Generate(ShaderMixinSourceTree mixin, ShaderMixinContext context)
+            public void Generate(ShaderMixinSource mixin, ShaderMixinContext context)
             {
-                context.Mixin(mixin, "ParadoxDefaultForwardShader");
+                //context.Mixin(mixin, "ParadoxDefaultForwardShader");
+                context.Mixin(mixin, "ParadoxForwardShadingEffect");
             }
 
             [ModuleInitializer]

@@ -1,0 +1,10 @@
+!ProceduralModelAsset
+Id: 20192b41-7766-4193-9f6b-c3b7d418d138
+SerializedVersion: 1
+Tags: []
+Type: !CylinderProceduralModel
+    Height: 0.02
+    Diameter: 22
+    Tessellation: 64
+    MaterialInstance:
+        Material: 8cfd86fb-8c2d-4c8f-b86e-7a5a58552f0f:z_ground

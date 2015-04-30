@@ -79,7 +79,7 @@
       <Generator>ParadoxShaderKeyGenerator</Generator>
       <LastGenOutput>CustomEffect.cs</LastGenOutput>
     </None>
-    <Compile Include="CustomEffectGame.cs" />
+    <Compile Include="EffectScript.cs" />
     <Compile Include="Effects\CustomEffect.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

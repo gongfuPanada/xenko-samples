@@ -75,19 +75,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\ForwardLightingEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>ForwardLightingEffectMain.pdxfx</DependentUpon>
-    </Compile>
-    <None Include="Effects\ForwardLightingEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>ForwardLightingEffectMain.cs</LastGenOutput>
-    </None>
-    <Compile Include="ForwardLightingGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Effects\Permutations.pdxfxlib" />
+    <Compile Include="RotateEntity.cs" />
+    <Compile Include="UIScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />

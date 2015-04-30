@@ -1,4 +1,6 @@
 
+using SiliconStudio.Paradox.Engine;
+
 namespace SpaceEscape
 {
     class SpaceEscapeApp
@@ -6,7 +8,7 @@ namespace SpaceEscape
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SpaceEscapeGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace CustomEffect
 {
@@ -6,7 +7,7 @@ namespace CustomEffect
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new CustomEffectGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

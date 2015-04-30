@@ -1,0 +1,14 @@
+!Texture
+Id: a05dc255-f378-4167-b474-1562b18dfc90
+Tags: []
+Source: ../../RawAssets/model/character/Sourceimages/shadow_00.png
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Alpha: Interpolated
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

@@ -75,8 +75,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeometricPrimitivesGame.cs" />
+    <Compile Include="CameraNavigationScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RotateEntityScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />

@@ -1,4 +1,6 @@
 
+using SiliconStudio.Paradox.Engine;
+
 namespace ForwardLighting
 {
     class ForwardLightingApp
@@ -6,7 +8,7 @@ namespace ForwardLighting
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new ForwardLightingGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

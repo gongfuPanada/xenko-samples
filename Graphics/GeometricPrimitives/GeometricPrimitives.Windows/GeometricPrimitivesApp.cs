@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace GeometricPrimitives
 {
@@ -6,7 +7,7 @@ namespace GeometricPrimitives
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new GeometricPrimitivesGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

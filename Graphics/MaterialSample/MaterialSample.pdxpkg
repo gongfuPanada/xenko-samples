@@ -1,0 +1,49 @@
+!Package
+Id: d333b61b-4f5a-4775-aa06-b0c4f387a3d7
+Tags: []
+Meta:
+    Name: MaterialSample
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: MaterialSample
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.0.0-beta07
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: MaterialSample.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_11_0
+            GameSettingsAsset.DefaultScene: c2262423-9422-4dd1-9fcb-ead76f9a93ba:Scene
+            Paradox.DisplayOrientation: LandscapeRight
+        ProjectReferences:
+            -   Id: c3dc0b22-2b80-42ad-87c0-ce849fc01eba
+                Location: MaterialSample.Game/MaterialSample.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: Direct3D11
+        ProjectReferences:
+            -   Id: 5aa31d46-082f-4f06-9111-4b2a73913e71
+                Location: MaterialSample.Windows/MaterialSample.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

@@ -1,0 +1,141 @@
+!SceneAsset
+Id: 29e02098-532b-4738-ac20-a4483eb406b9
+Tags: []
+Hierarchy:
+    RootEntity: d5e84a80-4837-43b8-bf9c-857fb5161886
+    Entities:
+        -   Name: Ground
+            Components:
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
+                            StepHeight: 0
+                            Type: StaticRigidBody
+                TransformComponent.Key:
+                    Position: {X: 0, Y: -5, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 178f557d-4b28-406a-a883-599a87f8bd67
+        -   Name: Enemy
+            Components:
+                SpriteComponent.Key:
+                    SpriteProvider: !SpriteFromSpriteGroup
+                        SpriteGroup: 4a17b086-10b4-4c11-b9ec-8baad5730240:enemy_active
+                    Color: {R: 255, G: 255, B: 255, A: 255}
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
+                            StepHeight: 0
+                            Type: StaticRigidBody
+                ScriptComponent.Key:
+                    Scripts:
+                        - !CharacterController.EnemyScript,CharacterController.Game
+                            Id: cf0aaa0c-5091-485a-b18d-50fec9ea3f2f
+                TransformComponent.Key:
+                    Position: {X: 0, Y: -4.6, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 2d5858c9-0df9-4c6c-a24d-65e699737666
+        -   Name: Background
+            Components:
+                BackgroundComponent.Key:
+                    Texture: bbb04728-fa87-4c1e-9e1c-f191031914eb:ParadoxBackground
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 5f802772-8c57-4a8f-8284-d161bc6c6323
+        -   Name: Camera
+            Components:
+                CameraComponent.Key:
+                    Projection: Orthographic
+                    FarClipPlane: 10
+                    AspectRatio: 1.777
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 5}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2
+        -   Name: Player
+            Components:
+                SpriteComponent.Key:
+                    SpriteProvider: !SpriteFromSpriteGroup
+                        SpriteGroup: 8c0a1b54-0f77-4ef6-8bb7-ca31c03c004e:player_idle
+                    Color: {R: 255, G: 255, B: 255, A: 255}
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
+                            StepHeight: 0.1
+                            Type: CharacterController
+                ScriptComponent.Key:
+                    Scripts:
+                        - !CharacterController.CharacterScript,%20CharacterController.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                            Id: 85aa35f0-a9e3-4c55-9fd8-3f2eecdd6e9a
+                TransformComponent.Key:
+                    Position: {X: -4, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1.5, Y: 1.5, Z: 0}
+                    Children: []
+            Id: 9a60a268-6c2d-44d9-bac2-a4c569a73ef0
+        - !Scene
+            Name: Root
+            Components:
+                SceneComponent.Key:
+                    GraphicsCompositor: !SceneGraphicsCompositorLayers
+                        Cameras:
+                            -   Name: null
+                                Camera:
+                                    Entity: {Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2}
+                                    Component: CameraComponent.Key
+                        Layers: []
+                        Master:
+                            Name: SceneGraphicsLayer
+                            Output: !MasterRenderFrameProvider {}
+                            Renderers:
+                                - !ClearRenderFrameRenderer
+                                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
+                                    Output: !CurrentRenderFrameProvider {}
+                                - !SceneCameraRenderer
+                                    Mode: !CameraRendererModeForward {}
+                                    Camera:
+                                        Index: 0
+                                    Output: !CurrentRenderFrameProvider {}
+                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
+                    EditorSettings:
+                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+                        SceneUnit: 1
+                        Camera:
+                            Projection: Orthographic
+                            OrthographicSize: 12
+                            FarPlane: 100
+                        Mode: !SceneEditorGraphicsModeLDRSettings
+                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children:
+                        -   Entity: {Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 9a60a268-6c2d-44d9-bac2-a4c569a73ef0}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 2d5858c9-0df9-4c6c-a24d-65e699737666}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 178f557d-4b28-406a-a883-599a87f8bd67}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 5f802772-8c57-4a8f-8284-d161bc6c6323}
+                            Component: TransformComponent.Key
+            Id: d5e84a80-4837-43b8-bf9c-857fb5161886

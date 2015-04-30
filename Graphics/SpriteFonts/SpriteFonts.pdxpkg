@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -20,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: df7aa22c-6efc-4706-8c07-03a643513525:SpriteFontScene
+            Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: a38806f0-3b25-4aaf-9ec3-476bbcdcaf52
                 Location: SpriteFonts.Game/SpriteFonts.Game.csproj
@@ -33,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 4534cf31-201d-4b3b-9cd1-c0fdfb5fb61b
                 Location: SpriteFonts.Windows/SpriteFonts.Windows.csproj

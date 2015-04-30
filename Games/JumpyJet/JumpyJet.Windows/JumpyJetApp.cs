@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace JumpyJet
 {
@@ -5,8 +6,7 @@ namespace JumpyJet
     {
         static void Main(string[] args)
         {
-            // Profiler.EnableAll();
-            using (var game = new JumpyJetGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

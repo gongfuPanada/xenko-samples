@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace SpriteFonts
 {
@@ -6,7 +7,7 @@ namespace SpriteFonts
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SpriteFontsGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

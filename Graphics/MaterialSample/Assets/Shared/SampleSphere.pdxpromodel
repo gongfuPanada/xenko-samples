@@ -1,0 +1,8 @@
+!ProceduralModelAsset
+Id: f97daf3b-009a-4948-aba0-d655a7663e89
+SerializedVersion: 1
+Tags: []
+Type: !SphereProceduralModel
+    UVScales: {X: 4, Y: 2}
+    MaterialInstance:
+        Material: 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0

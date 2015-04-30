@@ -1,0 +1,14 @@
+!Texture
+Id: b12c0820-311f-40db-a981-edf4fde58188
+Tags: []
+Source: ../../RawAssets/model/BG/sourceimages/BG_wall02.jpg
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+PremultiplyAlpha: false
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

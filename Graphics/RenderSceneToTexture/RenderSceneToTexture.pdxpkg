@@ -8,7 +8,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha10
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -21,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+            GameSettingsAsset.BackBufferHeight: 1136
+            GameSettingsAsset.BackBufferWidth: 640
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa:Scene
+            Paradox.DisplayOrientation: Portrait
         ProjectReferences:
             -   Id: 97573d6f-2f59-4551-a817-bea17e1a4c4c
                 Location: RenderSceneToTexture.Game/RenderSceneToTexture.Game.csproj
@@ -34,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: c05ef9c0-c3c5-45b2-8885-072228e80992
                 Location: RenderSceneToTexture.Windows/RenderSceneToTexture.Windows.csproj

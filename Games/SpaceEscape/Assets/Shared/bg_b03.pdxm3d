@@ -1,0 +1,49 @@
+!Model
+Id: a966e37f-0bb7-4a02-9630-d871321a615d
+SerializedVersion: 2
+Tags: []
+Source: ../../RawAssets/model/BG/scene/bg_b03.FBX
+SourceHash: 2beada0e2906b5b6739d80d1cc37a614
+Materials:
+    -   Name: BG_wall01
+        MaterialInstance:
+            Material: 05f36d0e-8f45-4a56-a9de-b3f1b088482e:BG_wall01_1
+    -   Name: BG_Lane_02
+        MaterialInstance:
+            Material: 31b92ab0-3d24-4bc0-b1a6-550bb6ee42c9:BG_Lane_02
+    -   Name: bg_wall02
+        MaterialInstance:
+            Material: ef070a60-83e2-4bd7-a95f-6599de22a8fa:BG_wall02_1
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: root, Depth: 1, Preserve: false}
+    - {Name: part, Depth: 2, Preserve: false}
+    - {Name: bg_a_wall01, Depth: 3, Preserve: false}
+    - {Name: bg_a_wall00, Depth: 3, Preserve: false}
+    - {Name: tube_00, Depth: 3, Preserve: false}
+    - {Name: bg_a_wall03, Depth: 3, Preserve: false}
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 2
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        Materials:
+            -   Name: BG_wall01
+                MaterialInstance:
+                    Material: edb009b1-ef64-4846-9547-70ba90266dc1:BG_wall01_6
+            -   Name: BG_Lane_02
+                MaterialInstance:
+                    Material: 39723b46-52c7-4288-9890-0ae9f8669944:BG_Lane_02_3
+            -   Name: bg_wall02
+                MaterialInstance:
+                    Material: 12b956ac-b73b-4fc1-b4f7-b0a12e524e91:bg_wall02_4
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: bg_a_wall01, Depth: 3, Preserve: false}
+            - {Name: bg_a_wall00, Depth: 3, Preserve: false}
+            - {Name: tube_00, Depth: 3, Preserve: false}
+            - {Name: bg_a_wall03, Depth: 3, Preserve: false}

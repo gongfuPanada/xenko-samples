@@ -75,17 +75,8 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\AnimatedModelEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>AnimatedModelEffectMain.pdxfx</DependentUpon>
-    </Compile>
-    <None Include="Effects\AnimatedModelEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>AnimatedModelEffectMain.cs</LastGenOutput>
-    </None>
-    <Compile Include="AnimatedModelGame.cs" />
+    <Compile Include="RotateEntity.cs" />
+    <Compile Include="UIScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

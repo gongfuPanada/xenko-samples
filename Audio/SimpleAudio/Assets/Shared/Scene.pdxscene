@@ -1,0 +1,147 @@
+!SceneAsset
+Id: 5f4a3789-b182-4b32-9088-acbf9e13edb5
+Tags: []
+Hierarchy:
+    RootEntity: 0e18b0ad-a283-4c63-ad50-e6540f6d9f01
+    Entities:
+        - !Scene
+            Name: Root
+            Components:
+                SceneComponent.Key:
+                    GraphicsCompositor: !SceneGraphicsCompositorLayers
+                        Cameras:
+                            -   Name: null
+                                Camera:
+                                    Entity: {Id: 970d3c33-9819-4206-a101-d81f9259477f}
+                                    Component: CameraComponent.Key
+                        Layers: []
+                        Master:
+                            Name: SceneGraphicsLayer
+                            Output: !MasterRenderFrameProvider {}
+                            Renderers:
+                                - !ClearRenderFrameRenderer
+                                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
+                                    Output: !CurrentRenderFrameProvider {}
+                                - !SceneCameraRenderer
+                                    Mode: !CameraRendererModeForward {}
+                                    Camera:
+                                        Index: 0
+                                    Output: !CurrentRenderFrameProvider {}
+                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
+                    EditorSettings:
+                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+                        SceneUnit: 1
+                        Camera: {}
+                        Mode: !SceneEditorGraphicsModeLDRSettings
+                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children:
+                        -   Entity: {Id: 970d3c33-9819-4206-a101-d81f9259477f}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 417ebdb3-c892-47ab-b8b0-079d12e1ead1}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: c76eafe8-9bb0-4801-b112-6825735d4fff}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: dececd10-b6ea-46fa-8129-c8683f4a6974}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 969256bc-2fe4-4874-9af8-a87db2d1bd85}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: ea66315a-6e99-498e-b3b7-b20eff3d7a04}
+                            Component: TransformComponent.Key
+            Id: 0e18b0ad-a283-4c63-ad50-e6540f6d9f01
+        -   Name: DJ Sprite
+            Components:
+                SpriteComponent.Key:
+                    SpriteProvider: !SpriteFromTexture
+                        Texture: 2c702280-1481-4bd0-b87c-36640ed371ed:dj
+                        Center: {X: 0, Y: 0}
+                    Color: {R: 255, G: 255, B: 255, A: 255}
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 417ebdb3-c892-47ab-b8b0-079d12e1ead1
+        -   Name: Background
+            Components:
+                BackgroundComponent.Key:
+                    Texture: e805d745-0992-4f74-87e0-6b87248791de:ParadoxBackground
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 969256bc-2fe4-4874-9af8-a87db2d1bd85
+        -   Name: MainCamera
+            Components:
+                CameraComponent.Key:
+                    Projection: Perspective
+                    FarClipPlane: 10
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 2.5}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 970d3c33-9819-4206-a101-d81f9259477f
+        -   Name: RightWaveSprite
+            Components:
+                SpriteComponent.Key:
+                    SpriteProvider: !SpriteFromTexture
+                        Texture: b13f7add-d3fd-4965-a268-dd27b54fd012:wave
+                        Center: {X: 0, Y: 0}
+                    Color: {R: 255, G: 255, B: 255, A: 255}
+                TransformComponent.Key:
+                    Position: {X: 0.5, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 0.3, Y: -0.3, Z: 1}
+                    Children: []
+            Id: c76eafe8-9bb0-4801-b112-6825735d4fff
+        -   Name: LeftWaveSprite
+            Components:
+                SpriteComponent.Key:
+                    SpriteProvider: !SpriteFromTexture
+                        Texture: b13f7add-d3fd-4965-a268-dd27b54fd012:wave
+                        Center: {X: 0, Y: 0}
+                    Color: {R: 255, G: 255, B: 255, A: 255}
+                TransformComponent.Key:
+                    Position: {X: -0.5, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 0.3, Y: 0.3, Z: 1}
+                    Children: []
+            Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3
+        -   Name: SoundScript
+            Components:
+                ScriptComponent.Key:
+                    Scripts:
+                        - !SimpleAudio.SoundScript,SimpleAudio.Game
+                            Id: 48a6638f-a42f-4d59-b3cf-9c5d37cbb31e
+                            LeftWave:
+                                Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3
+                            RightWave:
+                                Id: c76eafe8-9bb0-4801-b112-6825735d4fff
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: dececd10-b6ea-46fa-8129-c8683f4a6974
+        -   Name: UIText
+            Components:
+                UIComponent.Key:
+                    VirtualResolution: {X: 1280, Y: 720, Z: 1000}
+                ScriptComponent.Key:
+                    Scripts:
+                        - !SimpleAudio.UITextScript,SimpleAudio.Game
+                            Id: 5cbe8100-1454-44a8-84bd-7860b2290374
+                            UIText: Tap on the screen!
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: ea66315a-6e99-498e-b3b7-b20eff3d7a04

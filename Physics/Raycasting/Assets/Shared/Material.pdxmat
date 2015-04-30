@@ -1,0 +1,53 @@
+!MaterialAsset
+Id: 2685fa72-22c3-4025-bd46-7d546f9f915b
+Tags: []
+Attributes:
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 19790231-202d-4500-8309-d8274ea0e215:texture
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialSpecularMapFeature
+        SpecularMap: !ComputeColor
+            Value: {R: 0.754416645, G: 0.754416645, B: 0.754416645, A: 1}
+        Intensity: !ComputeFloat
+            Value: 1
+    SpecularModel: !MaterialSpecularMicrofacetModelFeature
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+    Overrides:
+        UVScale: {X: 1, Y: 1}
+Layers: []
+Parameters: {}
+~Base:
+    Location: --import--
+    Asset: !MaterialAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Attributes:
+            Diffuse: !MaterialDiffuseMapFeature
+                DiffuseMap: !ComputeTextureColor
+                    Texture: 19790231-202d-4500-8309-d8274ea0e215:texture
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+            DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+            Specular: !MaterialSpecularMapFeature
+                SpecularMap: !ComputeColor
+                    Value: {R: 0.2, G: 0.2, B: 0.2, A: 1}
+                Intensity: !ComputeFloat
+                    Value: 1
+            SpecularModel: !MaterialSpecularMicrofacetModelFeature
+                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
+                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
+            Emissive: !MaterialEmissiveMapFeature
+                EmissiveMap: !ComputeColor
+                    Value: {R: 0.8, G: 0.8, B: 0.8, A: 1}
+                Intensity: !ComputeFloat
+                    Value: 1
+            Overrides:
+                UVScale: {X: 1, Y: 1}
+        Layers: []
+        Parameters: {}

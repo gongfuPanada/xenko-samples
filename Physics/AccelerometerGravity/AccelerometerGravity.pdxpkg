@@ -8,16 +8,21 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
                 RawImports: []
         OutputGroupDirectories: {}
-        Properties: {}
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77:Scene
         ProjectReferences:
             -   Id: ec1eed7a-9f01-45ff-9bed-29ec8635b18a
                 Location: AccelerometerGravity.Game/AccelerometerGravity.Game.csproj
@@ -30,8 +35,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 62dec7c9-c494-4f3b-8aa6-a58d61fb5e07
                 Location: AccelerometerGravity.Windows/AccelerometerGravity.Windows.csproj

@@ -75,18 +75,8 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\ConstraintsEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>ConstraintsEffectMain.pdxfx</DependentUpon>
-    </Compile>
-    <None Include="Effects\Permutations.pdxfxlib" />
-    <None Include="Effects\ConstraintsEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>ConstraintsEffectMain.cs</LastGenOutput>
-    </None>
     <Compile Include="ConstraintsGame.cs" />
+    <Compile Include="DemoScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

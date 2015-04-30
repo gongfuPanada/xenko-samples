@@ -1,0 +1,49 @@
+!MaterialAsset
+Id: 46639b44-fd13-4ebe-90b9-cff74b292b22
+Tags: []
+Attributes:
+    Surface: !MaterialNormalMapFeature
+        NormalMap: !ComputeTextureColor
+            Texture: 610954b4-328c-46f5-b7ed-4e0b6f4384ce:c100_body_nm
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: fc98d0f4-d182-47c8-8cd3-7afa531a36c7:c100_body_cm
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Overrides:
+        UVScale: {X: 1, Y: 1}
+Layers: []
+Parameters: {}
+~Base:
+    Location: --import--
+    Asset: !MaterialAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Attributes:
+            Surface: !MaterialNormalMapFeature
+                NormalMap: !ComputeTextureColor
+                    Texture: 610954b4-328c-46f5-b7ed-4e0b6f4384ce:c100_body_nm
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+            Diffuse: !MaterialDiffuseMapFeature
+                DiffuseMap: !ComputeTextureColor
+                    Texture: fc98d0f4-d182-47c8-8cd3-7afa531a36c7:c100_body_cm
+                    Scale: {X: 1, Y: 1}
+                    Offset: {X: 0, Y: 0}
+            DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+            Specular: !MaterialSpecularMapFeature
+                SpecularMap: !ComputeColor
+                    Value: {R: 0.5, G: 0.5, B: 0.5, A: 1}
+                Intensity: !ComputeFloat
+                    Value: 1
+            SpecularModel: !MaterialSpecularMicrofacetModelFeature
+                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
+                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
+            Overrides:
+                UVScale: {X: 1, Y: 1}
+        Layers: []
+        Parameters: {}

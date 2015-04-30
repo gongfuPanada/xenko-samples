@@ -1,30 +1,19 @@
 !UIImageGroup
-Id: e2461b34-9fa7-4e42-975b-29502cbcc8ac
+Id: 85da6663-b688-4a62-91f9-d8868f3a2d4f
 Tags: []
 Images:
     -   Source: ../../RawAssets/tex1.png
         Name: button
-        TextureRegion:
-            X: 0
-            Y: 1909
-            Width: 183
-            Height: 89
+        TextureRegion: {X: 0, Y: 1904, Width: 183, Height: 90}
         Borders: {X: 125, Y: 50, Z: 0, W: 0}
     -   Source: ../../RawAssets/tex1.png
         Name: pdx_logo
-        TextureRegion:
-            X: 0
-            Y: 1423
-            Width: 277
-            Height: 285
+        TextureRegion: {X: 0, Y: 1423, Width: 277, Height: 284}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/tex1.png
         Name: score_bg
-        TextureRegion:
-            X: 0
-            Y: 1712
-            Width: 204
-            Height: 193
+        TextureRegion: {X: 0, Y: 1712, Width: 204, Height: 189}
         Borders: {X: 0, Y: 0, Z: 0, W: 0}
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
 Alpha: Explicit

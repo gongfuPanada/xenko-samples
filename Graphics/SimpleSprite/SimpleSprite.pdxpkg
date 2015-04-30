@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -20,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
+            GameSettingsAsset.DefaultScene: 2871eb8a-27ef-40c9-a40a-9026b53ab794:Scene
+            Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: 3236d26b-652b-4daa-a32f-2790bd955a96
                 Location: SimpleSprite.Game/SimpleSprite.Game.csproj
@@ -33,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 474576ba-e4d5-4ff8-98e1-8f528022e175
                 Location: SimpleSprite.Windows/SimpleSprite.Windows.csproj

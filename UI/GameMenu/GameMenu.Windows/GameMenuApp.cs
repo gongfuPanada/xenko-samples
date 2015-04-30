@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace GameMenu
 {
@@ -6,7 +7,7 @@ namespace GameMenu
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new GameMenuGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

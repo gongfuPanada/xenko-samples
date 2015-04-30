@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -20,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+            GameSettingsAsset.BackBufferHeight: 1136
+            GameSettingsAsset.BackBufferWidth: 640
+            GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
+            GameSettingsAsset.DefaultScene: 7207a5b4-cbf4-4edc-a7fb-0dfa83e2414e:Scene
+            Paradox.DisplayOrientation: Portrait
         ProjectReferences:
             -   Id: 8573b1cb-c5a4-47a0-9b8e-092466e1cd0f
                 Location: SpaceEscape.Game/SpaceEscape.Game.csproj
@@ -33,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: c9b0b66a-5a11-4866-ad75-718c80ec383a
                 Location: SpaceEscape.Windows/SpaceEscape.Windows.csproj

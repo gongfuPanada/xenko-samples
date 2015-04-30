@@ -1,0 +1,28 @@
+!MaterialAsset
+Id: 8cfd86fb-8c2d-4c8f-b86e-7a5a58552f0f
+Tags: []
+Attributes:
+    MicroSurface: !MaterialGlossinessMapFeature
+        GlossinessMap: !ComputeTextureScalar
+            Texture: 608adbcb-4270-4d31-b68d-cd53143b0435:plane0_gls
+            Scale: {X: 5, Y: 5}
+            Offset: {X: 0, Y: 0}
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 858bfb56-fcf6-4c15-9c5f-ee4d89cad8db:plane0
+            Scale: {X: 5, Y: 5}
+            Offset: {X: 0, Y: 0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialMetalnessMapFeature
+        MetalnessMap: !ComputeTextureScalar
+            Texture: 71eebbdf-2481-433e-99e4-437ffaf19340:plane0_mtl
+            Scale: {X: 5, Y: 5}
+            Offset: {X: 0, Y: 0}
+    SpecularModel: !MaterialSpecularMicrofacetModelFeature
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+    Overrides:
+        UVScale: {X: 1, Y: 1}
+Layers: []
+Parameters: {}

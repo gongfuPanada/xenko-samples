@@ -1,22 +1,14 @@
 !SpriteGroup
-Id: 93ec5def-ca22-4a5c-9bd0-78d53c1d84c8
+Id: 3464e1d8-d90c-43f6-a3bc-bc068346a78c
 Tags: []
 Images:
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: active0
-        TextureRegion:
-            X: 924
-            Y: 182
-            Width: 80
-            Height: 80
+        TextureRegion: {X: 924, Y: 182, Width: 80, Height: 80}
         Center: {X: 0, Y: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: active1
-        TextureRegion:
-            X: 875
-            Y: 98
-            Width: 80
-            Height: 80
+        TextureRegion: {X: 875, Y: 98, Width: 80, Height: 80}
         Center: {X: 0, Y: 0}
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: TrueColor
+Format: Color32Bits

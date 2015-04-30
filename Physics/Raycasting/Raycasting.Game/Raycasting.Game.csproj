@@ -75,19 +75,11 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\RaycastingEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>RaycastingEffectMain.pdxfx</DependentUpon>
-    </Compile>
-    <None Include="Effects\Permutations.pdxfxlib" />
-    <None Include="Effects\RaycastingEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>RaycastingEffectMain.cs</LastGenOutput>
-    </None>
+    <Compile Include="ImpulseOnSpaceScript.cs" />
+    <Compile Include="GuiScript.cs" />
     <Compile Include="RaycastingGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaycastingScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />

@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -20,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: 45f5d521-b83c-4608-937d-64f93812fba7:Scene
+            Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: 95cfd515-3747-41ce-893e-b7e279be5f2d
                 Location: Constraints.Game/Constraints.Game.csproj
@@ -33,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 3c442dd9-2a24-4523-aad1-0d7e778a2594
                 Location: Constraints.Windows/Constraints.Windows.csproj

@@ -1,0 +1,45 @@
+!MaterialAsset
+Id: 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce
+Tags: []
+Attributes:
+    Surface: !MaterialNormalMapFeature
+        NormalMap: !ComputeTextureColor
+            Texture: 5280f12b-5ab1-4796-b126-599ef03066f8:wood0_nml
+            Scale: {X: 1.5, Y: 1.5}
+            Offset: {X: 0, Y: 0}
+    MicroSurface: !MaterialGlossinessMapFeature
+        GlossinessMap: !ComputeTextureScalar
+            Texture: da6d5bfc-143a-48c6-822a-ba2c25a193ac:wood0_gls
+            Scale: {X: 1.5, Y: 1.5}
+            Offset: {X: 0, Y: 0}
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 261bc7c8-382f-4558-a1f6-0cc523129194:wood0_dif
+            Scale: {X: 1.5, Y: 1.5}
+            Offset: {X: 0, Y: 0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialMetalnessMapFeature
+        MetalnessMap: !ComputeFloat
+            Value: 0
+    SpecularModel: !MaterialSpecularMicrofacetModelFeature
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+    Occlusion: !MaterialOcclusionMapFeature
+        AmbientOcclusionMap: !ComputeTextureScalar
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+        DirectLightingFactor: !ComputeFloat
+            Value: 0
+        CavityMap: !ComputeTextureScalar
+            Texture: 3114788b-522f-463f-bf38-f7b4215e949d:wood0_cav
+            Scale: {X: 1.5, Y: 1.5}
+            Offset: {X: 0, Y: 0}
+        DiffuseCavity: !ComputeFloat
+            Value: 1
+        SpecularCavity: !ComputeFloat
+            Value: 1
+    Overrides:
+        UVScale: {X: 1, Y: 1}
+Layers: []
+Parameters: {}

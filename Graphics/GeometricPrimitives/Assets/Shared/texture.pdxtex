@@ -1,12 +1,12 @@
 !Texture
-Id: 5efe0c5a-40c1-4883-9318-b89c142eddbb
+Id: 7b9eb68b-ff60-42c5-be5a-bf760bec2f5c
 Tags: []
 Source: ../../RawAssets/texture.jpg
-ImporterId: 6219bcd1-2a7b-461b-9103-6b66b8ff69dc
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

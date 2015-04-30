@@ -1,0 +1,205 @@
+!SceneAsset
+Id: 86fed268-baa8-4929-9eba-4d14cf3a0e68
+Tags: []
+Hierarchy:
+    RootEntity: cdda7c96-36f9-4875-9618-b4fc33bf3788
+    Entities:
+        -   Name: UI
+            Components:
+                UIComponent.Key:
+                    VirtualResolution: {X: 1280, Y: 720, Z: 1000}
+                ScriptComponent.Key:
+                    Scripts:
+                        - !Raycasting.GuiScript,Raycasting.Game
+                            Id: c780a5dd-7fbf-44b0-99b7-8a048d3b2557
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 17dfe0be-43e7-4fb6-83eb-e987a8b844e8
+        -   Name: Background
+            Components:
+                BackgroundComponent.Key:
+                    Texture: d2ae7171-f414-4455-863c-cb002ee3b2bf:ParadoxBackground
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 33ffa674-1b2b-477c-be9c-f112ad4d7f25
+        -   Name: cube3
+            Components:
+                ModelComponent.Key:
+                    Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
+                    Materials:
+                        - null
+                    DrawOrder: 0
+                    Parameters: {}
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                            StepHeight: 0
+                            Type: DynamicRigidBody
+                ScriptComponent.Key:
+                    Scripts:
+                        - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
+                            Id: e4041541-6dc1-40e6-a1c1-d80fc78f88ef
+                TransformComponent.Key:
+                    Position: {X: -0.75, Y: 0, Z: -17.77}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 492b70e8-7fe8-4891-8313-fc83f68ea561
+        -   Name: Ground
+            Components:
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: 1a7f15af-ac01-4464-adfe-7689bd50966e:ground_cs
+                            StepHeight: 0
+                            Type: StaticRigidBody
+                TransformComponent.Key:
+                    Position: {X: 0, Y: -0.5, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: 9a3a924c-3e9a-4867-8670-08bbf1cfe213
+        -   Name: cube2
+            Components:
+                ModelComponent.Key:
+                    Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
+                    Materials:
+                        - null
+                    DrawOrder: 0
+                    Parameters: {}
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                            StepHeight: 0
+                            Type: DynamicRigidBody
+                ScriptComponent.Key:
+                    Scripts:
+                        - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
+                            Id: 58aa8440-db94-4437-b91e-aee2c10b59d9
+                TransformComponent.Key:
+                    Position: {X: -2.38, Y: 0, Z: -7.59}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: a17f7b08-0abd-49a5-9014-bec26ca0e547
+        - !Scene
+            Name: Root
+            Components:
+                SceneComponent.Key:
+                    GraphicsCompositor: !SceneGraphicsCompositorLayers
+                        Cameras:
+                            -   Name: null
+                                Camera:
+                                    Entity: {Id: d296aa0e-cd27-4f65-936f-dfba810e1ef2}
+                                    Component: CameraComponent.Key
+                        Layers: []
+                        Master:
+                            Name: SceneGraphicsLayer
+                            Output: !MasterRenderFrameProvider {}
+                            Renderers:
+                                - !ClearRenderFrameRenderer
+                                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
+                                    Output: !CurrentRenderFrameProvider {}
+                                - !SceneCameraRenderer
+                                    Mode: !CameraRendererModeForward {}
+                                    Camera:
+                                        Index: 0
+                                    Output: !CurrentRenderFrameProvider {}
+                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
+                    EditorSettings:
+                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+                        SceneUnit: 1
+                        Camera: {}
+                        Mode: !SceneEditorGraphicsModeLDRSettings
+                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 0, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children:
+                        -   Entity: {Id: d296aa0e-cd27-4f65-936f-dfba810e1ef2}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: ef7d2057-b70a-4f12-af97-1ac2d8736797}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: ef10d3da-ba65-40fa-bbfc-28d4c2b97276}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: a17f7b08-0abd-49a5-9014-bec26ca0e547}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 492b70e8-7fe8-4891-8313-fc83f68ea561}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 9a3a924c-3e9a-4867-8670-08bbf1cfe213}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 33ffa674-1b2b-477c-be9c-f112ad4d7f25}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 17dfe0be-43e7-4fb6-83eb-e987a8b844e8}
+                            Component: TransformComponent.Key
+            Id: cdda7c96-36f9-4875-9618-b4fc33bf3788
+        -   Name: Camera
+            Components:
+                CameraComponent.Key:
+                    Projection: Perspective
+                ScriptComponent.Key:
+                    Scripts:
+                        - !Raycasting.RaycastingScript,%20Raycasting.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                            Id: 8341119c-188a-44c1-bf8c-4361e2b0e4fb
+                PhysicsComponent.Key:
+                    Elements: []
+                TransformComponent.Key:
+                    Position: {X: 1, Y: 3.53, Z: 1.14}
+                    Rotation: {W: 0.9921829, X: -0.112758614, Y: 0.05297385, Z: 0.00723811332}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: d296aa0e-cd27-4f65-936f-dfba810e1ef2
+        -   Name: cube1
+            Components:
+                ModelComponent.Key:
+                    Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
+                    Materials:
+                        - null
+                    DrawOrder: 0
+                    Parameters: {}
+                PhysicsComponent.Key:
+                    Elements:
+                        -   CanCollideWith: 0
+                            CollisionGroup: 0
+                            LinkedBoneName: null
+                            Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                            StepHeight: 0
+                            Type: DynamicRigidBody
+                ScriptComponent.Key:
+                    Scripts:
+                        - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
+                            Id: 3975b5f7-f065-4cd3-87b3-444762288d31
+                TransformComponent.Key:
+                    Position: {X: 3, Y: 0.015, Z: -10.19}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: ef10d3da-ba65-40fa-bbfc-28d4c2b97276
+        -   Name: Ambient light
+            Components:
+                LightComponent.Key:
+                    Type: !LightAmbient
+                        Color: !LightColorRgb
+                            Color: {R: 1, G: 1, B: 1}
+                    Intensity: 0.7
+                TransformComponent.Key:
+                    Position: {X: 0, Y: 200, Z: 0}
+                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
+                    Children: []
+            Id: ef7d2057-b70a-4f12-af97-1ac2d8736797

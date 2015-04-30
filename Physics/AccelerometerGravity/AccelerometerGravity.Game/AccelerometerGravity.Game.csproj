@@ -72,17 +72,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Effects\AccelerometerGravityEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>AccelerometerGravityEffectMain.pdxfx</DependentUpon>
-    </Compile>
-    <None Include="Effects\AccelerometerGravityEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>AccelerometerGravityEffectMain.cs</LastGenOutput>
-    </None>
     <Compile Include="AccelerometerGravityGame.cs" />
+    <Compile Include="BallScript.cs" />
+    <Compile Include="BounceScript.cs" />
+    <Compile Include="GravityScript.cs" />
+    <Compile Include="GuiScript.cs" />
+    <Compile Include="NoSleepScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

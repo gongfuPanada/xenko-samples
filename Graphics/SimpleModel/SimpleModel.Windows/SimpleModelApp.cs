@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace SimpleModel
 {
@@ -6,10 +7,8 @@ namespace SimpleModel
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SimpleModelGame())
-            {
+            using (var game = new Game())
                 game.Run();
-            }
         }
     }
 }

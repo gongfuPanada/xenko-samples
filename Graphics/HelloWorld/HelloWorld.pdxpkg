@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -19,7 +20,11 @@ Profiles:
             -   Path: HelloWorld.Game/Effects
                 RawImports: []
         OutputGroupDirectories: {}
-        Properties: {}
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: 460f337e-ff7e-4eb0-b36c-b753bb15fd54:Scene
         ProjectReferences:
             -   Id: acd0c122-4e0b-4587-a594-aaccce2474b6
                 Location: HelloWorld.Game/HelloWorld.Game.csproj
@@ -33,7 +38,6 @@ Profiles:
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
         ProjectReferences:
             -   Id: f7e8c525-7a32-436a-8962-5f3288060896
                 Location: HelloWorld.Windows/HelloWorld.Windows.csproj

@@ -1,11 +1,11 @@
 !TemplateSample
 Id: DD687347-3C53-4F6D-8436-ABA6D5822B99
-Name: Geometric Primitives Sample
+Name: Procedural Models Sample
 Scope: Session
-Description: Creates a sample project which describes how to create and draw geometric primitives
-FullDescription: This samples shows you how to create available geometric primitives (Plane, Sphere, Cube, GeoSphere, Cylinder, Torus, Teapot) and how to draw them manually.
+Description: Creates a sample project which show how to create and use procedural models
+FullDescription: This samples shows you how to create and use procedural models (Plane, Sphere, Cube, GeoSphere, Cylinder, Torus, Teapot, Capsule).
 Group: Samples/Graphics
 Icon: ../.pdxtpl/NewGraphics.png
-DefaultOutputName: GeometricPrimitives
+DefaultOutputName: ProceduralModels
 Screenshots:
     - .pdxtpl/screenshot_small.png

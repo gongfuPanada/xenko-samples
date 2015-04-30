@@ -1,0 +1,121 @@
+!Model
+Id: 19ec836d-2ea3-43fe-8f79-0f55cfc437be
+SerializedVersion: 2
+BuildOrder: 500
+Tags: []
+Source: ../../RawAssets/character/scene/character_00.FBX
+SourceHash: 1a0b83c9b02b333469043d7a7a964b16
+Materials:
+    -   Name: mc00
+        MaterialInstance:
+            Material: d24e15b3-d1aa-4241-97f3-db67ee4d0f7c:mc00
+    -   Name: ef00
+        MaterialInstance:
+            Material: 5be6fbb0-2264-46cd-9774-f397f616d07a:ef00_1
+    -   Name: mc01
+        MaterialInstance:
+            Material: a6c09800-6c38-46ef-8738-e35d1f5618b9:mc01
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: Root, Depth: 1, Preserve: false}
+    - {Name: part, Depth: 2, Preserve: false}
+    - {Name: jet_F_R_1, Depth: 3, Preserve: false}
+    - {Name: jet_F_R1_1, Depth: 4, Preserve: false}
+    - {Name: jet_F_R1_2, Depth: 5, Preserve: false}
+    - {Name: ef_B, Depth: 5, Preserve: false}
+    - {Name: ef00_R002, Depth: 6, Preserve: false}
+    - {Name: ef002, Depth: 7, Preserve: false}
+    - {Name: ef003, Depth: 8, Preserve: false}
+    - {Name: ef00_R003, Depth: 6, Preserve: false}
+    - {Name: ef004, Depth: 7, Preserve: false}
+    - {Name: ef005, Depth: 8, Preserve: false}
+    - {Name: jet_F_R_2, Depth: 4, Preserve: false}
+    - {Name: jet_F_L_1, Depth: 3, Preserve: false}
+    - {Name: jet_F_L1, Depth: 4, Preserve: false}
+    - {Name: jet_F_L002, Depth: 5, Preserve: false}
+    - {Name: ef_C, Depth: 5, Preserve: false}
+    - {Name: ef00_R004, Depth: 6, Preserve: false}
+    - {Name: ef006, Depth: 7, Preserve: false}
+    - {Name: ef009, Depth: 8, Preserve: false}
+    - {Name: ef00_R005, Depth: 6, Preserve: false}
+    - {Name: ef008, Depth: 7, Preserve: false}
+    - {Name: ef010, Depth: 8, Preserve: false}
+    - {Name: jet_F_L_2, Depth: 4, Preserve: false}
+    - {Name: Jet_B, Depth: 3, Preserve: false}
+    - {Name: Jet_B001, Depth: 4, Preserve: false}
+    - {Name: ef_A, Depth: 4, Preserve: false}
+    - {Name: ef00_R1, Depth: 5, Preserve: false}
+    - {Name: ef01_1, Depth: 6, Preserve: false}
+    - {Name: ef01_2, Depth: 7, Preserve: false}
+    - {Name: ef00_R0, Depth: 5, Preserve: false}
+    - {Name: ef00_1, Depth: 6, Preserve: false}
+    - {Name: ef00_2, Depth: 7, Preserve: false}
+    - {Name: engine, Depth: 3, Preserve: false}
+    - {Name: engine001, Depth: 4, Preserve: false}
+    - {Name: mc_body00, Depth: 3, Preserve: false}
+    - {Name: driver_body001, Depth: 3, Preserve: false}
+    - {Name: cloth_B_1, Depth: 3, Preserve: false}
+    - {Name: cloth_B_2, Depth: 4, Preserve: false}
+    - {Name: cloth_a_1, Depth: 3, Preserve: false}
+    - {Name: cloth_a_2, Depth: 4, Preserve: false}
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 2
+        BuildOrder: 500
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        Materials:
+            -   Name: mc00
+                MaterialInstance:
+                    Material: d24e15b3-d1aa-4241-97f3-db67ee4d0f7c:mc00
+            -   Name: ef00
+                MaterialInstance:
+                    Material: 5be6fbb0-2264-46cd-9774-f397f616d07a:ef00_1
+            -   Name: mc01
+                MaterialInstance:
+                    Material: a6c09800-6c38-46ef-8738-e35d1f5618b9:mc01
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: Root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: jet_F_R_1, Depth: 3, Preserve: false}
+            - {Name: jet_F_R1_1, Depth: 4, Preserve: false}
+            - {Name: jet_F_R1_2, Depth: 5, Preserve: false}
+            - {Name: ef_B, Depth: 5, Preserve: false}
+            - {Name: ef00_R002, Depth: 6, Preserve: false}
+            - {Name: ef002, Depth: 7, Preserve: false}
+            - {Name: ef003, Depth: 8, Preserve: false}
+            - {Name: ef00_R003, Depth: 6, Preserve: false}
+            - {Name: ef004, Depth: 7, Preserve: false}
+            - {Name: ef005, Depth: 8, Preserve: false}
+            - {Name: jet_F_R_2, Depth: 4, Preserve: false}
+            - {Name: jet_F_L_1, Depth: 3, Preserve: false}
+            - {Name: jet_F_L1, Depth: 4, Preserve: false}
+            - {Name: jet_F_L002, Depth: 5, Preserve: false}
+            - {Name: ef_C, Depth: 5, Preserve: false}
+            - {Name: ef00_R004, Depth: 6, Preserve: false}
+            - {Name: ef006, Depth: 7, Preserve: false}
+            - {Name: ef009, Depth: 8, Preserve: false}
+            - {Name: ef00_R005, Depth: 6, Preserve: false}
+            - {Name: ef008, Depth: 7, Preserve: false}
+            - {Name: ef010, Depth: 8, Preserve: false}
+            - {Name: jet_F_L_2, Depth: 4, Preserve: false}
+            - {Name: Jet_B, Depth: 3, Preserve: false}
+            - {Name: Jet_B001, Depth: 4, Preserve: false}
+            - {Name: ef_A, Depth: 4, Preserve: false}
+            - {Name: ef00_R1, Depth: 5, Preserve: false}
+            - {Name: ef01_1, Depth: 6, Preserve: false}
+            - {Name: ef01_2, Depth: 7, Preserve: false}
+            - {Name: ef00_R0, Depth: 5, Preserve: false}
+            - {Name: ef00_1, Depth: 6, Preserve: false}
+            - {Name: ef00_2, Depth: 7, Preserve: false}
+            - {Name: engine, Depth: 3, Preserve: false}
+            - {Name: engine001, Depth: 4, Preserve: false}
+            - {Name: mc_body00, Depth: 3, Preserve: false}
+            - {Name: driver_body001, Depth: 3, Preserve: false}
+            - {Name: cloth_B_1, Depth: 3, Preserve: false}
+            - {Name: cloth_B_2, Depth: 4, Preserve: false}
+            - {Name: cloth_a_1, Depth: 3, Preserve: false}
+            - {Name: cloth_a_2, Depth: 4, Preserve: false}

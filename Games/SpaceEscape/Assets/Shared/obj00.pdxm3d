@@ -1,0 +1,35 @@
+!Model
+Id: e19ec8c3-699e-4a5f-ad09-9f5e750b9b0d
+SerializedVersion: 2
+Tags: []
+Source: ../../RawAssets/model/BG/scene/obj00.FBX
+SourceHash: b67d92d3f1774d22af885fd1623c97c0
+Materials:
+    -   Name: obj00
+        MaterialInstance:
+            Material: 5f60b016-d447-417d-8c92-7b6bbe5cbb31:obj00 Material
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: Root, Depth: 1, Preserve: false}
+    - {Name: part, Depth: 2, Preserve: false}
+    - {Name: obj001, Depth: 3, Preserve: false}
+    - {Name: obj000, Depth: 3, Preserve: false}
+    - {Name: obj002, Depth: 3, Preserve: false}
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 2
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        Materials:
+            -   Name: obj00
+                MaterialInstance:
+                    Material: 5f60b016-d447-417d-8c92-7b6bbe5cbb31:obj00
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: Root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: obj001, Depth: 3, Preserve: false}
+            - {Name: obj000, Depth: 3, Preserve: false}
+            - {Name: obj002, Depth: 3, Preserve: false}

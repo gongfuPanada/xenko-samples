@@ -34,7 +34,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_11_0
+            GameSettingsAsset.DefaultGraphicsProfile: !GraphicsProfile Level_11_0
         ProjectReferences:
             -   Id: 150a8439-1abd-468c-a487-61c74b2df3c5
                 Location: DeferredLighting.Windows/DeferredLighting.Windows.csproj

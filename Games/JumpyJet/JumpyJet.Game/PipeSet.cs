@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.EntityModel;
 
 namespace JumpyJet
 {
@@ -11,72 +9,50 @@ namespace JumpyJet
     /// </summary>
     public class PipeSet
     {
-        public const float VerticalDistanceBetweenPipe = 230f;
+        public Entity Entity = new Entity("Pipe root entity");
 
-        public string Name { get; set; }
-        public Entity TopSpriteEntity { get; private set; }
-        public Entity BottomSpriteEntity { get; private set; }
+        private const float VerticalDistanceBetweenPipe = 230f;
 
-        public float ScrollSpeed { get; private set; }
-        public float ScrollPos { get; private set; }
-        public bool IsVisible { get; private set; }
-        public float PipeWidth { get; private set; }
-        public float PipeHeight { get; private set; }
-        public float HalfPipeWidth { get; private set; }
-        public bool IsPassedAgent { get; set; }
-        public bool ShouldReset { get; private set; }
+        private Entity topPipe;
+        private Entity bottomPipe;
 
-        private readonly TransformationComponent topTComp;
-        private readonly TransformationComponent bottomTComp;
+        private float scrollSpeed;
+        private float pipeWidth;
+        private float pipeHeight;
+        private float halfPipeWidth;
+
         private readonly Random random = new Random();
-        private RectangleF topPartCollider;
-        private RectangleF bodyPartCollider;
         private readonly float startScrollPos;
         private readonly float halfScrollWidth;
-        private Vector3 topPipePosition;
-        private Vector3 bottomPipePosition;
-        private readonly Vector3 topLeftOffset;
 
-        public PipeSet(Entity pipeEntity, Vector3 screenResolution, float scrollSpeed, float startScrollPos, string name)
+        private RectangleF pipeCollider;
+
+        public PipeSet(Entity referencePipeEntity, float scrollSpeed, float startScrollPos, float screenWidth)
         {
-            Name = name;
-
-            ScrollSpeed = scrollSpeed;
-            ScrollPos = (int)startScrollPos;
-            this.startScrollPos = ScrollPos;
-            halfScrollWidth = screenResolution.X / 2f;
+            this.scrollSpeed = scrollSpeed;
+            this.startScrollPos = startScrollPos;
+            halfScrollWidth = screenWidth / 2f;
 
             // Store Entity and create another one for two rendering:
             // top and bottom sprite of pipe.
-            // Note that: topSprite and bottomSprite entities share one pipeSpriteComp
-            var spriteComp = pipeEntity.Get<SpriteComponent>();
-            BottomSpriteEntity = new Entity();
-            bottomTComp = new TransformationComponent();
-            BottomSpriteEntity.Add(bottomTComp);
-            BottomSpriteEntity.Add(spriteComp);
+            var spriteComp = referencePipeEntity.Get<SpriteComponent>();
+            bottomPipe = referencePipeEntity.Clone();
+            topPipe = referencePipeEntity.Clone();
+            Entity.AddChild(bottomPipe);
+            Entity.AddChild(topPipe);
 
-            TopSpriteEntity = new Entity();
-            topTComp = new TransformationComponent();
-            TopSpriteEntity.Add(topTComp);
-            TopSpriteEntity.Add(spriteComp);
+            var textureRegion = spriteComp.SpriteProvider.GetSprite(0).Region;
+            pipeHeight = textureRegion.Height;
+            pipeWidth = textureRegion.Width;
+            halfPipeWidth = pipeWidth/2f;
 
-            var textureRegion = spriteComp.SpriteGroup.Images.First().Region;
-            PipeHeight = textureRegion.Height;
-            PipeWidth = textureRegion.Width;
-            HalfPipeWidth = PipeWidth/2f;
+            // Setup pipeCollider
+            pipeCollider = new RectangleF(0, 0, pipeWidth, pipeHeight);
 
-            // Setup collider
-            topPartCollider = new RectangleF(0, 0, PipeWidth, 95);
-            bodyPartCollider = new RectangleF(0, 0, PipeWidth, PipeHeight - 95);
-
-            // Setup initial position for top and bottom pipe.
-            topPipePosition = new Vector3(this.startScrollPos, - 568f, 0f);
-
-            // For top pipe, rotate a sprite by 180 degree 
-            topTComp.RotationEulerXYZ = new Vector3(0, 0, (float) Math.PI);
-            bottomPipePosition = new Vector3(this.startScrollPos, 312f, 0f);
-
-            topLeftOffset = new Vector3(new Vector2(screenResolution.X/2, screenResolution.Y/2), GameModule.PipeDepth);
+            // Place the top/bottom pipes relatively to the root.
+            topPipe.Transform.Position.Y = -(VerticalDistanceBetweenPipe + pipeHeight) * 0.5f;
+            bottomPipe.Transform.Position.Y = (VerticalDistanceBetweenPipe + pipeHeight) * 0.5f;
+            bottomPipe.Transform.Rotation = Quaternion.RotationZ(MathUtil.Pi);
 
             ResetPipe();
         }
@@ -88,93 +64,46 @@ namespace JumpyJet
 
         public void ResetPipe(float resetScrollPos)
         {
-            ScrollPos = resetScrollPos;
-            IsPassedAgent = false;
-            ShouldReset = false;
-            SetRandomHeight();
-            UpdateSpritePos();
+            // Set a random height to the pipe set.
+            Entity.Transform.Position = new Vector3(resetScrollPos, random.Next(-50, 225), 0);
         }
 
         public void Update(float elapsedTime)
         {
-            // A function that updates the scrolling state, and checks 
-            // if the content is visible or not.
-            if (ShouldReset)
-                return;
-
-            IsVisible = IsContentVisible();
-            if (!IsVisible)
-            {
-                ShouldReset = true;
-                return;
-            }
             // Update pos according to the speed
-            ScrollPos += (int)(elapsedTime * ScrollSpeed);
-            UpdateSpritePos();
+            Entity.Transform.Position.X += (int)(elapsedTime * scrollSpeed);
+        }
+
+        public RectangleF GetTopPipeCollider()
+        {
+            return GetCollider(topPipe);
+        }
+
+        public RectangleF GetBottomPipeCollider()
+        {
+            return GetCollider(bottomPipe);
+        }
+
+        private RectangleF GetCollider(Entity entity)
+        {
+            entity.Transform.UpdateWorldMatrix();
+            var position = entity.Transform.WorldMatrix.TranslationVector;
+
+            var collider = pipeCollider;
+            collider.X = position.X - collider.Width/2;
+            collider.Y = position.Y - collider.Height/2;
+
+            return collider;
         }
 
         /// <summary>
-        /// Check if both Top and Bottom pipes are collided with the agent or not.
+        /// Returns a value indicating the pipe has been passed or not
         /// </summary>
-        /// <param name="agent"></param>
-        /// <returns></returns>
-        public bool IsCollide(Agent agent)
+        /// <param name="positionX">The position along the X axis</param>
+        /// <returns><value>true</value> if the pipe set has been passed, <value>false</value> otherwise</returns>
+        public bool HasBeenPassed(float positionX)
         {
-            return IsCollideBottomPipe(agent, bottomPipePosition) || IsCollideTopPipe(agent, topPipePosition);
-        }
-
-        /// <summary>
-        /// Update position of two sprites to TransformationComponent
-        /// of both sprite for drawing.
-        /// </summary>
-        private void UpdateSpritePos()
-        {
-            // Update posX by scrolling position.
-            topPipePosition.X = ScrollPos;
-            bottomPipePosition.X = ScrollPos;
-
-            topTComp.Translation = topPipePosition + topLeftOffset;
-            bottomTComp.Translation = bottomPipePosition + topLeftOffset;
-        }
-
-        private bool IsCollideBottomPipe(Agent agent, Vector3 position)
-        {
-            // Check collision of the top pipe
-            topPartCollider.X = (int)position.X - topPartCollider.Width / 2;
-            topPartCollider.Y = (int)position.Y - topPartCollider.Height / 2 - bodyPartCollider.Height / 2;
-
-            if (topPartCollider.Intersects(agent.BodyCollider))
-                return true;
-
-            // Check body collider
-            bodyPartCollider.X = (int)position.X - bodyPartCollider.Width / 2;
-            bodyPartCollider.Y = (int)position.Y - bodyPartCollider.Height / 2;
-
-            if (bodyPartCollider.Intersects(agent.BodyCollider))
-                return true;
-
-            return false;
-        }
-
-        private bool IsCollideTopPipe(Agent agent, Vector3 position)
-        {
-            // check collision of the top pipe
-            topPartCollider.X = (int)position.X - topPartCollider.Width / 2;
-            topPartCollider.Y = (int)position.Y + (PipeHeight / 2 - topPartCollider.Height);
-
-            if (topPartCollider.Intersects(agent.HeadCollider))
-                return true;
-            if (topPartCollider.Intersects(agent.BodyCollider))
-                return true;
-
-            // check body collider
-            bodyPartCollider.X = (int)position.X - bodyPartCollider.Width / 2;
-            bodyPartCollider.Y = (int)position.Y - PipeHeight / 2;
-
-            if (bodyPartCollider.Intersects(agent.BodyCollider) || bodyPartCollider.Intersects(agent.HeadCollider))
-                return true;
-
-            return false;
+            return Entity.Transform.Position.X + halfPipeWidth < positionX;
         }
 
         /// <summary>
@@ -183,23 +112,9 @@ namespace JumpyJet
         ///  passes the most left side of the screen.
         /// </summary>
         /// <returns></returns>
-        private bool IsContentVisible()
+        public bool IsOutOfScreenLeft()
         {
-            return ScrollPos + HalfPipeWidth > -halfScrollWidth;
-        }
-
-        /// <summary>
-        /// Get random height from RandomHeight() and set it to Y component
-        /// of transformation for both sprites of pipe.
-        /// </summary>
-        private void SetRandomHeight()
-        {
-            // Random height of pipeset where the random value is limit
-            // between [-270, 20].
-            var posY = random.Next(-270, 20);
-
-            topPipePosition.Y = posY - (VerticalDistanceBetweenPipe + PipeHeight) * 0.5f;
-            bottomPipePosition.Y = posY + (VerticalDistanceBetweenPipe + PipeHeight) * 0.5f;
+            return Entity.Transform.Position.X + halfPipeWidth < -halfScrollWidth;
         }
     }
 }

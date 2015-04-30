@@ -1,4 +1,6 @@
 
+using SiliconStudio.Paradox.Engine;
+
 namespace SpriteEntity
 {
     class SpriteEntityApp
@@ -6,7 +8,7 @@ namespace SpriteEntity
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SpriteEntityGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

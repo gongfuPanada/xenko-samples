@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace AnimatedModel
 {
@@ -6,7 +7,7 @@ namespace AnimatedModel
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new AnimatedModelGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

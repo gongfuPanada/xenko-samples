@@ -1,0 +1,31 @@
+!Model
+Id: f16bfc07-e816-475d-a400-304b8042d6c7
+SerializedVersion: 2
+Tags: []
+Source: ../../RawAssets/model/BG/scene/bg_00.FBX
+SourceHash: d9cb8d7d0fc8f1ea2a519e602bbe2770
+Materials:
+    -   Name: BG00
+        MaterialInstance:
+            Material: e7bf2bb6-90d8-4c1e-a8bc-78c1c46c5359:BG00
+Nodes:
+    - {Name: RootNode, Depth: 0, Preserve: false}
+    - {Name: root, Depth: 1, Preserve: false}
+    - {Name: part, Depth: 2, Preserve: false}
+    - {Name: Plane001, Depth: 3, Preserve: false}
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 2
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        Materials:
+            -   Name: BG00
+                MaterialInstance:
+                    Material: e7bf2bb6-90d8-4c1e-a8bc-78c1c46c5359:BG00
+        Nodes:
+            - {Name: RootNode, Depth: 0, Preserve: false}
+            - {Name: root, Depth: 1, Preserve: false}
+            - {Name: part, Depth: 2, Preserve: false}
+            - {Name: Plane001, Depth: 3, Preserve: false}

@@ -1,0 +1,9 @@
+!ProceduralModelAsset
+Id: c0a0ac30-cb79-44a6-878b-f8a53948d844
+SerializedVersion: 1
+Tags: []
+Type: !CapsuleProceduralModel
+    Height: 0.4
+    Radius: 0.4
+    MaterialInstance:
+        Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

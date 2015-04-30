@@ -1,0 +1,14 @@
+!Texture
+Id: 5a803b2e-82a5-4531-b8fa-7bbd4968f9b8
+Tags: []
+Source: ../../RawAssets/model/character/Sourceimages/mc_00.jpg
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+PremultiplyAlpha: false
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

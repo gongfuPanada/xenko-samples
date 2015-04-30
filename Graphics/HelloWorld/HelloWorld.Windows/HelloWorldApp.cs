@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace HelloWorld
 {
@@ -6,7 +7,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new HelloWorldGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

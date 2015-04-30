@@ -82,6 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>SimpleTerrainEffectMain.pdxfx</DependentUpon>
     </Compile>
+    <Compile Include="TerrainScript.cs" />
     <None Include="Effects\Permutations.pdxfxlib" />
     <None Include="Effects\SimpleTerrainEffectMain.pdxfx">
       <Generator>ParadoxShaderKeyGenerator</Generator>

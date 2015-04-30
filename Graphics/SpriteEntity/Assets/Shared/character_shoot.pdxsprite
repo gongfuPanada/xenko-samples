@@ -1,46 +1,26 @@
 !SpriteGroup
-Id: c67a02b7-b729-45ff-ba9d-0de66871030f
+Id: 465ec41a-5b74-4e11-ab36-a63a01bc7097
 Tags: []
 Images:
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: shoot0
-        TextureRegion:
-            X: 206
-            Y: 4
-            Width: 99
-            Height: 128
+        TextureRegion: {X: 206, Y: 4, Width: 99, Height: 128}
         Center: {X: 0, Y: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: shoot1
-        TextureRegion:
-            X: 103
-            Y: 136
-            Width: 99
-            Height: 128
+        TextureRegion: {X: 103, Y: 136, Width: 99, Height: 128}
         Center: {X: 0, Y: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: shoot2
-        TextureRegion:
-            X: 103
-            Y: 4
-            Width: 99
-            Height: 128
+        TextureRegion: {X: 103, Y: 4, Width: 99, Height: 128}
         Center: {X: 0, Y: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: shoot3
-        TextureRegion:
-            X: 0
-            Y: 136
-            Width: 99
-            Height: 128
+        TextureRegion: {X: 0, Y: 136, Width: 99, Height: 128}
         Center: {X: 0, Y: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: shoot4
-        TextureRegion:
-            X: 0
-            Y: 4
-            Width: 99
-            Height: 128
+        TextureRegion: {X: 0, Y: 4, Width: 99, Height: 128}
         Center: {X: 0, Y: 0}
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: TrueColor
+Format: Color32Bits

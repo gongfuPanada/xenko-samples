@@ -8,7 +8,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha10
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -21,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+            GameSettingsAsset.BackBufferHeight: 1136
+            GameSettingsAsset.BackBufferWidth: 640
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: c90e49d7-b3d8-4b19-b771-71cf4460a83b:Scene
+            Paradox.DisplayOrientation: Portrait
         ProjectReferences:
             -   Id: 668e1483-e53b-44be-8cc8-944b4ea2ba0a
                 Location: SimpleDynamicTexture.Game/SimpleDynamicTexture.Game.csproj
@@ -34,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 48933185-ffb0-46e0-ac7c-e06bf4bff159
                 Location: SimpleDynamicTexture.Windows/SimpleDynamicTexture.Windows.csproj

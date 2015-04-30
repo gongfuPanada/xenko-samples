@@ -1,10 +1,8 @@
 !Texture
-Id: 52b32062-e889-4fce-8068-7fbc633626a5
+Id: f21cc317-81d3-41f1-b524-d12766abf594
 Tags: []
 Source: ../../RawAssets/round.png
-ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
-ColorKeyColor: {R: 0, G: 0, B: 0, A: 255}
-ColorKeyEnabled: false
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Alpha: Interpolated
 GenerateMipmaps: false
 ~Base:
@@ -12,4 +10,5 @@ GenerateMipmaps: false
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

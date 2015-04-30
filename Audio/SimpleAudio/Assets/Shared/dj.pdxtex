@@ -1,8 +1,7 @@
 !Texture
-Id: 73e3b9db-dc8b-4fbb-83ec-9a15d059c9b8
+Id: 2c702280-1481-4bd0-b87c-36640ed371ed
 Tags: []
 Source: ../../RawAssets/dj.png
-ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Alpha: Interpolated
 GenerateMipmaps: false
@@ -11,4 +10,5 @@ GenerateMipmaps: false
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

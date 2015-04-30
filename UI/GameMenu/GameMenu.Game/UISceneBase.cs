@@ -1,32 +1,46 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using SiliconStudio.Paradox;
+using SiliconStudio.Core;
+using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Games;
-using SiliconStudio.Paradox.UI;
 
 namespace GameMenu
 {
-    public abstract class UISceneBase : ScriptContext, IScript
+    public abstract class UISceneBase : AsyncScript
     {
         protected readonly List<object> LoadedAssets = new List<object>();
 
-        protected GameMenuGame UIGame;
+        protected Game UIGame;
+
+        protected bool IsRunning;
 
         protected bool SceneCreated;
-        
-        public UIElement RootElement { get; protected set; }
 
-        public bool IsRunning { get; set; }
-
-        protected UISceneBase(GameMenuGame uiGame)
-            : base(uiGame.Services)
+        public override void Start()
         {
-            UIGame = uiGame;
+            base.Start();
+
+            IsRunning = true;
+
+            UIGame = (Game)Services.GetServiceAs<IGame>();
+
+            AdjustVirtualResolution(this, EventArgs.Empty);
+            Game.Window.ClientSizeChanged += AdjustVirtualResolution;
+
+            CreateScene();
+        }
+
+        private void AdjustVirtualResolution(object sender, EventArgs e)
+        {
+            var backBufferSize = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+            Entity.Get<UIComponent>().VirtualResolution = new Vector3(backBufferSize, 1000);
         }
 
         protected void CreateScene()
         {
-            if(!SceneCreated)
+            if (!SceneCreated)
                 LoadScene();
 
             SceneCreated = true;
@@ -36,15 +50,13 @@ namespace GameMenu
         {
             LoadedAssets.Add(Asset.Load<T>(assetName));
 
-            return (T)LoadedAssets[LoadedAssets.Count-1];
+            return (T)LoadedAssets[LoadedAssets.Count - 1];
         }
 
         protected abstract void LoadScene();
-        
-        public async Task Execute()
-        {
-            IsRunning = true;
 
+        public override async Task Execute()
+        {
             while (IsRunning)
             {
                 await Script.NextFrame();
@@ -61,8 +73,9 @@ namespace GameMenu
         {
             base.Destroy();
 
+            IsRunning = false;
+
             SceneCreated = false;
-            RootElement = null;
 
             foreach (var asset in LoadedAssets)
                 Asset.Unload(asset);

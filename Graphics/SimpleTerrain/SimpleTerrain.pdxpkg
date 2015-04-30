@@ -35,7 +35,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            GameSettingsAsset.DefaultGraphicsProfile: !GraphicsProfile Level_9_1
         ProjectReferences:
             -   Id: 69fa1134-13a6-480b-afbd-5c450e08a174
                 Location: SimpleTerrain.Windows/SimpleTerrain.Windows.csproj

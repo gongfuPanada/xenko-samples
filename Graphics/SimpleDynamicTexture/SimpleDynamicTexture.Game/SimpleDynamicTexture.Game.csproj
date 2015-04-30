@@ -76,8 +76,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleDynamicTextureGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextureUpdateScript.cs" />
+    <Compile Include="UIScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />

@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace SimpleSprite
 {
@@ -6,7 +7,7 @@ namespace SimpleSprite
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SimpleSpriteGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

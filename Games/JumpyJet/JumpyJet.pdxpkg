@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -20,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+            GameSettingsAsset.BackBufferHeight: 1136
+            GameSettingsAsset.BackBufferWidth: 640
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: b07987b2-a262-45fb-9da6-ba05fc7aaf74:Scene
+            Paradox.DisplayOrientation: Portrait
         ProjectReferences:
             -   Id: cdb18123-f59f-4852-9777-ed9d217eb043
                 Location: JumpyJet.Game/JumpyJet.Game.csproj
@@ -33,8 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: dfecf85b-19e9-4266-a031-696edc5d5ebb
                 Location: JumpyJet.Windows/JumpyJet.Windows.csproj

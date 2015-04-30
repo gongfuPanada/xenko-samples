@@ -1,15 +1,11 @@
 !SpriteGroup
-Id: b2852097-bb33-4b91-8aab-04e27a40edd0
+Id: ca9993b7-1213-4037-8a77-333f3fa2e163
 Tags: []
 Images:
     -   Source: ../../RawAssets/tex3.jpg
         Name: parallax_background
-        TextureRegion:
-            X: 0
-            Y: 0
-            Width: 1735
-            Height: 1136
+        TextureRegion: {X: 0, Y: 0, Width: 1735, Height: 1136}
         Center: {X: 320, Y: 568}
         CenterFromMiddle: false
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: TrueColor
+Format: Color32Bits

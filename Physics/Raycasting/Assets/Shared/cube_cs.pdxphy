@@ -1,8 +1,8 @@
 !ColliderShapeAsset
-Id: cedd15e8-bb58-46bb-8360-70b7468b8781
+Id: 353d6001-19b0-4883-b810-fe25b88c19ab
 Tags: []
-Data:
-    ColliderShapes:
-        - !BoxColliderShapeDesc
-            LocalOffset: {X: 0, Y: 0, Z: 0}
-            HalfExtents: {X: 2, Y: 2, Z: 2}
+ColliderShapes:
+    - !BoxColliderShapeDesc
+        LocalOffset: {X: 0, Y: 0, Z: 0}
+        LocalRotation: {W: 1, X: 0, Y: 0, Z: 0}
+        HalfExtents: {X: 1, Y: 1, Z: 1}

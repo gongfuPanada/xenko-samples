@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace SimpleAudio
 {
@@ -6,7 +7,7 @@ namespace SimpleAudio
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SimpleAudioGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

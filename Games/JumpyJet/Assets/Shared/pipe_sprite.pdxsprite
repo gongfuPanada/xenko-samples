@@ -1,15 +1,11 @@
 !SpriteGroup
-Id: 219e5a5c-14bb-487e-b8ba-4031f548d9ea
+Id: 9921fe4b-efd4-40cd-acfd-9f795eeb4ab8
 Tags: []
 Images:
     -   Source: ../../RawAssets/tex1.png
         Name: pipe
-        TextureRegion:
-            X: 1924
-            Y: 0
-            Width: 117
-            Height: 655
+        TextureRegion: {X: 1924, Y: 0, Width: 117, Height: 655}
         Center: {X: 0, Y: 0}
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: TrueColor
+Format: Color32Bits
 Alpha: Explicit

@@ -1,0 +1,18 @@
+!MaterialAsset
+Id: 46859e92-96ad-4466-a0ed-a16f85780b32
+Tags: []
+Attributes:
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 7b9eb68b-ff60-42c5-be5a-bf760bec2f5c:texture
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialMetalnessMapFeature
+        MetalnessMap: !ComputeTextureScalar
+            Scale: {X: 1, Y: 1}
+            Offset: {X: 0, Y: 0}
+    Overrides:
+        UVScale: {X: 1, Y: 1}
+Layers: []
+Parameters: {}

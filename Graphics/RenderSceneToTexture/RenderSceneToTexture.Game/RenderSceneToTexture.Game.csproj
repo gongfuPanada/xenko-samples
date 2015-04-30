@@ -75,19 +75,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\RenderSceneToTextureEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>RenderSceneToTextureEffectMain.pdxfx</DependentUpon>
-    </Compile>
-    <None Include="Effects\Permutations.pdxfxlib" />
-    <None Include="Effects\RenderSceneToTextureEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>RenderSceneToTextureEffectMain.cs</LastGenOutput>
-    </None>
-    <Compile Include="RenderSceneToTextureGame.cs" />
+    <Compile Include="PlayAnimation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetSpriteSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />

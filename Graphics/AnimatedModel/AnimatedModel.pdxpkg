@@ -8,10 +8,11 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.0.0-alpha01
+            Version: 1.1.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
@@ -20,7 +21,11 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation Portrait
+            GameSettingsAsset.BackBufferHeight: 1136
+            GameSettingsAsset.BackBufferWidth: 640
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            GameSettingsAsset.DefaultScene: 1d1214c6-8844-4fae-8142-1f986349f8d3:Scene
+            Paradox.DisplayOrientation: Portrait
         ProjectReferences:
             -   Id: a07e6e07-5068-4e26-b8a5-051bec0d8f81
                 Location: AnimatedModel.Game/AnimatedModel.Game.csproj
@@ -34,7 +39,6 @@ Profiles:
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            Paradox.GraphicsProfile: !GraphicsProfile Level_9_1
         ProjectReferences:
             -   Id: bdbc48a7-1fe7-48ca-b634-b05e7c0e8db6
                 Location: AnimatedModel.Windows/AnimatedModel.Windows.csproj

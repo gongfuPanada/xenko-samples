@@ -75,10 +75,9 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameMenuGame.cs" />
-    <Compile Include="MainScene.cs" />
+    <Compile Include="MainScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SplashScene.cs" />
+    <Compile Include="SplashScript.cs" />
     <Compile Include="UISceneBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

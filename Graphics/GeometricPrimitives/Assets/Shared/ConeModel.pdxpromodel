@@ -1,0 +1,9 @@
+!ProceduralModelAsset
+Id: 6d09340c-0029-4aea-80f0-6333b96389fa
+SerializedVersion: 1
+Tags: []
+Type: !ConeProceduralModel
+    Height: 1.5
+    Radius: 0.5
+    MaterialInstance:
+        Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

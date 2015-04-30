@@ -1,0 +1,18 @@
+!SpriteFont
+Id: e69c3c0c-baca-4e05-9c03-a3f95cdeb5ed
+Tags: []
+Source: null
+FontName: Arial
+Size: 16
+Style: Regular
+IsDynamic: true
+DefaultCharacter: ' '
+CharacterSet: null
+CharacterRegions:
+    -   Start: ' '
+        End: "\x7F"
+AntiAlias: Grayscale
+NoPremultiply: false
+Spacing: 0
+LineSpacing: 0
+UseKerning: false

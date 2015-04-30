@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace SimpleDynamicTexture
 {
@@ -6,7 +7,7 @@ namespace SimpleDynamicTexture
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SimpleDynamicTextureGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace TouchInputs
 {
@@ -6,7 +7,7 @@ namespace TouchInputs
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new TouchInputsGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

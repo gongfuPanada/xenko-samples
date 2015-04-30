@@ -8,13 +8,12 @@
 
 using System;
 using SiliconStudio.Core;
-using SiliconStudio.Paradox.Effects;
+using SiliconStudio.Paradox.Rendering;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Shaders;
 using SiliconStudio.Core.Mathematics;
 using Buffer = SiliconStudio.Paradox.Graphics.Buffer;
 
-using SiliconStudio.Paradox.Effects.Data;
 namespace SpaceEscape.Effects
 {
     [DataContract]public partial class GameParameters : ShaderMixinParameters
@@ -27,36 +26,15 @@ namespace SpaceEscape.Effects
     {
         internal partial class SpaceEscapeEffectMain  : IShaderMixinBuilder
         {
-            public void Generate(ShaderMixinSourceTree mixin, ShaderMixinContext context)
+            public void Generate(ShaderMixinSource mixin, ShaderMixinContext context)
             {
-                context.Mixin(mixin, "ShaderBase");
-                context.Mixin(mixin, "TransformationWAndVP");
-                context.Mixin(mixin, "BRDFDiffuseBase");
-                context.Mixin(mixin, "BRDFSpecularBase");
-                context.Mixin(mixin, "AlbedoFlatShading");
-                if (context.GetParam(MaterialParameters.AlbedoDiffuse) != null)
-
-                    {
-                        var __subMixin = new ShaderMixinSourceTree() { Parent = mixin };
-                        context.PushComposition(mixin, "albedoDiffuse", __subMixin);
-                        context.Mixin(__subMixin, context.GetParam(MaterialParameters.AlbedoDiffuse));
-                        context.PopComposition();
-                    }
+                context.Mixin(mixin, "ParadoxForwardShadingEffect");
                 if (context.GetParam(GameParameters.EnableOnflyTextureUVChange))
                     context.Mixin(mixin, "TransformationTextureUV");
-                if (context.GetParam(MaterialParameters.HasSkinningPosition))
-                {
-                    mixin.Mixin.AddMacro("SkinningMaxBones", context.GetParam(MaterialParameters.SkinningMaxBones));
-                    context.Mixin(mixin, "TransformationSkinning");
-                }
                 if (context.GetParam(GameParameters.EnableBend))
-                {
                     context.Mixin(mixin, "TransformationBendWorld");
-                }
                 if (context.GetParam(GameParameters.EnableFog))
-                {
                     context.Mixin(mixin, "FogEffect");
-                }
             }
 
             [ModuleInitializer]
