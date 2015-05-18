@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 6d09340c-0029-4aea-80f0-6333b96389fa
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: !ConeProceduralModel
     Height: 1.5

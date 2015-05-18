@@ -1,8 +1,8 @@
 ﻿class TransformationBendWorld : TransformationBase, PositionStream4
 {
     // Adjusting Parameters
-    stage float DeformFactorX = -0.00001f;
-    stage float DeformFactorY = -0.000006f;
+    stage float DeformFactorX = -0.001f;
+    stage float DeformFactorY = -0.0006f;
 
     stage override void PreTransformPosition()
     {

@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: af6fc443-73d0-418c-b1d0-4a238b0c6668
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: !TorusProceduralModel
     Thickness: 0.33

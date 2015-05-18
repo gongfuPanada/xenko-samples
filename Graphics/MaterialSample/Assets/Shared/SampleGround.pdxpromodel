@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 20192b41-7766-4193-9f6b-c3b7d418d138
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: !CylinderProceduralModel
     Height: 0.02

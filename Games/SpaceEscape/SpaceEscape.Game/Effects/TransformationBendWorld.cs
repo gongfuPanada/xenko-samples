@@ -18,7 +18,7 @@ namespace SiliconStudio.Paradox.Rendering
 {
     public static partial class TransformationBendWorldKeys
     {
-        public static readonly ParameterKey<float> DeformFactorX = ParameterKeys.New<float>(-0.00001f);
-        public static readonly ParameterKey<float> DeformFactorY = ParameterKeys.New<float>(-0.000006f);
+        public static readonly ParameterKey<float> DeformFactorX = ParameterKeys.New<float>(-0.001f);
+        public static readonly ParameterKey<float> DeformFactorY = ParameterKeys.New<float>(-0.0006f);
     }
 }

@@ -8,11 +8,11 @@ class FogEffect : ShadingBase, TransformationBase, Camera
     // Varying FogFactor calculated from VS and passed to PS
     stage stream float FogFactor : FOG;
 
-    stage float fogNearPlaneZ = 8000.0f;//3500.0f;
-    stage float fogFarPlaneZ = 25000.0f;
+    stage float fogNearPlaneZ = 80.0f;//35.0f;
+    stage float fogFarPlaneZ = 250.0f;
 
     stage float fogNearPlaneY = 0.0f;
-    stage float fogFarPlaneY = 12000.0f;
+    stage float fogFarPlaneY = 120.0f;
         
     stage override void PostTransformPosition()
     {

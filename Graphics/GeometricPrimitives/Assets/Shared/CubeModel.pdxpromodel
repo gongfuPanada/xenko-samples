@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: !CubeProceduralModel
     MaterialInstance:

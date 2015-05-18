@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 1104c568-b3b0-4545-b682-31def5e6d4f2
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: !CylinderProceduralModel
     MaterialInstance:

@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Input;
 
 namespace MaterialSample
