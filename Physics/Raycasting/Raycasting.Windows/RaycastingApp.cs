@@ -6,7 +6,7 @@ namespace Raycasting
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new RaycastingGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

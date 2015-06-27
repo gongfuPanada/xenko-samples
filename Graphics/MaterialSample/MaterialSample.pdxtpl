@@ -7,6 +7,7 @@ FullDescription: This samples shows how to use different types of materials and 
 Group: Samples/Graphics
 Icon: .pdxtpl/icon.png
 DefaultOutputName: Material
+PatternName: MaterialSample
 Screenshots:
     - .pdxtpl/screenshot1_small.jpeg
     - .pdxtpl/screenshot2_small.jpeg

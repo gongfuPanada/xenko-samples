@@ -1,12 +1,12 @@
 
-namespace CharacterController
+namespace CharacterControllerSample
 {
-    class CharacterControllerApp
+    class CharacterControllerSampleApp
     {
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new CharacterControllerGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

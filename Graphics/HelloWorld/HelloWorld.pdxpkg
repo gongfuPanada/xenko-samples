@@ -25,6 +25,7 @@ Profiles:
             GameSettingsAsset.BackBufferWidth: 1280
             GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
             GameSettingsAsset.DefaultScene: 460f337e-ff7e-4eb0-b36c-b753bb15fd54:Scene
+            Paradox.DisplayOrientation: LandscapeRight            
         ProjectReferences:
             -   Id: acd0c122-4e0b-4587-a594-aaccce2474b6
                 Location: HelloWorld.Game/HelloWorld.Game.csproj

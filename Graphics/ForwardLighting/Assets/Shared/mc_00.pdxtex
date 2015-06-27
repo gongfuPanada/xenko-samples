@@ -1,7 +1,7 @@
 !Texture
 Id: aa658fe5-a6a4-4377-ab2d-56c1facf76f4
 Tags: []
-Source: ../../RawAssets/character/Sourceimages/mc_00.jpg
+Source: ../../RawAssets/character/Sourceimages/mc_00.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
@@ -9,6 +9,7 @@ PremultiplyAlpha: false
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
         PremultiplyAlpha: false

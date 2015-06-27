@@ -1,6 +1,8 @@
 !SceneAsset
 Id: 365136b9-adbe-4c9a-8eeb-563894b4bd08
 Tags: []
+Source: 
+SourceHash: 00000000000000000000000000000000
 Hierarchy:
     RootEntity: 89e18d78-e92b-4cae-acf5-e3ae7fd6eba9
     Entities:
@@ -62,3 +64,69 @@ Hierarchy:
                         -   Entity: {Id: 6a89de77-e3d6-40c4-9504-f75c5983d911}
                             Component: TransformComponent.Key
             Id: 89e18d78-e92b-4cae-acf5-e3ae7fd6eba9
+~Base:
+    Location: --import--
+    Asset: !SceneAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Hierarchy:
+            RootEntity: 89e18d78-e92b-4cae-acf5-e3ae7fd6eba9
+            Entities:
+                -   Name: Background
+                    Components:
+                        BackgroundComponent.Key:
+                            Texture: 464f4cc7-2978-4c47-ae31-6001c905c896:ParadoxBackground
+                        TransformComponent.Key:
+                            Position: {X: 0, Y: 0, Z: 0}
+                            Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                            Scale: {X: 1, Y: 1, Z: 1}
+                            Children: []
+                    Id: 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a
+                -   Name: Effect
+                    Components:
+                        ScriptComponent.Key:
+                            Scripts:
+                                - !CustomEffect.EffectScript,CustomEffect.Game
+                                    Id: 274a57bf-8017-4ffb-8b3d-04b2ba7cd9bb
+                        TransformComponent.Key:
+                            Position: {X: 0, Y: 0, Z: 0}
+                            Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                            Scale: {X: 1, Y: 1, Z: 1}
+                            Children: []
+                    Id: 6a89de77-e3d6-40c4-9504-f75c5983d911
+                - !Scene
+                    Name: Root
+                    Components:
+                        SceneComponent.Key:
+                            GraphicsCompositor: !SceneGraphicsCompositorLayers
+                                Cameras: []
+                                Layers: []
+                                Master:
+                                    Name: SceneGraphicsLayer
+                                    Output: !MasterRenderFrameProvider {}
+                                    Renderers:
+                                        - !ClearRenderFrameRenderer
+                                            Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
+                                            Output: !CurrentRenderFrameProvider {}
+                                        - !SceneCameraRenderer
+                                            Mode: !CameraRendererModeForward {}
+                                            Camera:
+                                                Index: 0
+                                            Output: !CurrentRenderFrameProvider {}
+                                            Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
+                            EditorSettings:
+                                GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+                                SceneUnit: 1
+                                Camera: {}
+                                Mode: !SceneEditorGraphicsModeLDRSettings
+                                    BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        TransformComponent.Key:
+                            Position: {X: 0, Y: 0, Z: 0}
+                            Rotation: {W: 1, X: 0, Y: 0, Z: 0}
+                            Scale: {X: 1, Y: 1, Z: 1}
+                            Children:
+                                -   Entity: {Id: 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a}
+                                    Component: TransformComponent.Key
+                                -   Entity: {Id: 6a89de77-e3d6-40c4-9504-f75c5983d911}
+                                    Component: TransformComponent.Key
+                    Id: 89e18d78-e92b-4cae-acf5-e3ae7fd6eba9

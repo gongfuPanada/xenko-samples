@@ -16,10 +16,16 @@ namespace ForwardLighting
         /// </summary>
         public Entity Stand;
 
+        /// <summary>
+        /// A reference to the camera
+        /// </summary>
+        public Entity Camera;
+
         public override async Task Execute()
         {
             var dragValue = 0f;
             var initialHeight = Entity.Transform.Position.Y;
+            var initialRotation = Entity.Transform.Rotation;
 
             while (Game.IsRunning)
             {
@@ -27,9 +33,9 @@ namespace ForwardLighting
                 await Script.NextFrame();
 
                 // rotate character
-                Entity.Transform.Rotation *= Quaternion.RotationAxis(Vector3.UnitY, (float)(0.005 * Math.PI));
-
                 var characterAnimationPeriod = 2 * Math.PI * (Game.UpdateTime.Total.TotalMilliseconds % 10000) / 10000;
+
+                Entity.Transform.Rotation = initialRotation * Quaternion.RotationAxis(Vector3.UnitY, (float)characterAnimationPeriod);
                 Entity.Transform.Position.Y = initialHeight + 0.1f * (float)Math.Sin(3 * characterAnimationPeriod);
 
                 // rotate camera
@@ -37,9 +43,9 @@ namespace ForwardLighting
                 if (Input.PointerEvents.Count > 0)
                     dragValue = Input.PointerEvents.Sum(x => x.DeltaPosition.X);
 
-                var cameraRotation = Quaternion.RotationY((float)(2 * Math.PI * dragValue));
-                Stand.Transform.Rotation *= cameraRotation;
-                Entity.Transform.Rotation *= cameraRotation;
+                var cameraRotation = Quaternion.RotationY((float)(2 * Math.PI * -dragValue));
+                Camera.Transform.Position = Vector3.Transform(Camera.Transform.Position, cameraRotation);
+                Camera.Transform.Rotation *= cameraRotation;
             }
         }
     }

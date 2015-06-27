@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
@@ -35,24 +36,18 @@ namespace MaterialSample
 
             CameraComponent.UseCustomViewMatrix = true;
             OnWindowSizeChanged(this, EventArgs.Empty);
+            
+            Input.ActivatedGestures.Add(new GestureConfigComposite());
+            Input.ActivatedGestures.Add(new GestureConfigDrag());
 
             while (!IsDisposed)
             {
-                // Capture/release mouse when the button is pressed/released
-                if (Input.IsMouseButtonPressed(MouseButton.Right))
-                {
-                    Input.LockMousePosition();
-                }
-                else if (Input.IsMouseButtonReleased(MouseButton.Right))
-                {
-                    Input.UnlockMousePosition();
-                }
-
                 // Update rotation according to mouse deltas
-                if (Input.IsMouseButtonDown(MouseButton.Right))
+                var dragEvent = (GestureEventDrag)Input.GestureEvents.FirstOrDefault(e => e.Type == GestureType.Drag);
+                if(dragEvent != null)
                 {
-                    yaw -= Input.MouseDelta.X * rotationSpeed;
-                    pitch -= Input.MouseDelta.Y * rotationSpeed;
+                    yaw += dragEvent.DeltaTranslation.X * rotationSpeed;
+                    pitch += dragEvent.DeltaTranslation.Y * rotationSpeed;
                 }
 
                 // Compute translation speed according to framerate and modifiers
@@ -82,6 +77,13 @@ namespace MaterialSample
                         position += -up * translationSpeed;
                     if (Input.IsKeyDown(Keys.Q))
                         position += up * translationSpeed;
+                }
+                var compositeEvent = (GestureEventComposite)Input.GestureEvents.FirstOrDefault(e=>e.Type == GestureType.Composite);
+                if (compositeEvent != null)
+                {
+                    position -= 2.5f * right * compositeEvent.DeltaTranslation.X;
+                    position += 2.5f * up * compositeEvent.DeltaTranslation.Y;
+                    position += forward * compositeEvent.DeltaScale;
                 }
 
                 // Update the camera view matrix 

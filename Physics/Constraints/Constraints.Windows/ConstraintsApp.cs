@@ -6,7 +6,7 @@ namespace Constraints
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new ConstraintsGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

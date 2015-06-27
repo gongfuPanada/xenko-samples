@@ -1,10 +1,8 @@
-using System.Threading.Tasks;
-using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Physics;
 
 namespace Constraints
 {
-    public class ConstraintsGame : Game
+    public class Game : SiliconStudio.Paradox.Engine.Game
     {
         protected override void Initialize()
         {

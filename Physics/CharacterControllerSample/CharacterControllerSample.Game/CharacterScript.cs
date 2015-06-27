@@ -9,7 +9,7 @@ using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.Physics;
 using SiliconStudio.Paradox.Rendering.Sprites;
 
-namespace CharacterController
+namespace CharacterControllerSample
 {
     /// <summary>
     /// This script will interface the Physics character controller of the entity to move the character around

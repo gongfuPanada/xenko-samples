@@ -1,9 +1,8 @@
-using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Physics;
 
-namespace AccelerometerGravity
+namespace CharacterControllerSample
 {
-    public class AccelerometerGravityGame : Game
+    public class Game : SiliconStudio.Paradox.Engine.Game
     {
         protected override void Initialize()
         {

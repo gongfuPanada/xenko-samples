@@ -180,14 +180,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycasting.Game", "Physics\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycasting.Windows", "Physics\Raycasting\Raycasting.Windows\Raycasting.Windows.csproj", "{50A6B1BA-A6AA-4995-8A52-1BFD62DC441C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CharacterController", "CharacterController", "{207C8460-0747-4FC7-B3C3-5E4F94EF0EE8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CharacterControllerSample", "CharacterControllerSample", "{207C8460-0747-4FC7-B3C3-5E4F94EF0EE8}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Physics/CharacterController/CharacterController.pdxpkg = Physics/CharacterController/CharacterController.pdxpkg
+		Physics/CharacterControllerSample/CharacterControllerSample.pdxpkg = Physics/CharacterControllerSample/CharacterControllerSample.pdxpkg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterController.Game", "Physics\CharacterController\CharacterController.Game\CharacterController.Game.csproj", "{6DA9DC17-E343-44A3-BB3B-023A48C5A64F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterControllerSample.Game", "Physics\CharacterControllerSample\CharacterControllerSample.Game\CharacterControllerSample.Game.csproj", "{6DA9DC17-E343-44A3-BB3B-023A48C5A64F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterController.Windows", "Physics\CharacterController\CharacterController.Windows\CharacterController.Windows.csproj", "{305476EE-EC8E-4791-A9B3-E629DCF59433}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterControllerSample.Windows", "Physics\CharacterControllerSample\CharacterControllerSample.Windows\CharacterControllerSample.Windows.csproj", "{305476EE-EC8E-4791-A9B3-E629DCF59433}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleTerrain", "SimpleTerrain", "{F9D0F9C1-374C-4BEB-889F-3FAFC3B492AF}"
 	ProjectSection(SiliconStudioPackage) = preProject

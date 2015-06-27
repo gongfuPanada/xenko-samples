@@ -3,11 +3,13 @@ Id: b13f7add-d3fd-4965-a268-dd27b54fd012
 Tags: []
 Source: ../../RawAssets/wave.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Alpha: Explicit
 GenerateMipmaps: false
 ~Base:
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

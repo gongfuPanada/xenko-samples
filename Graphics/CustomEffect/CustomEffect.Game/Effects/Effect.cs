@@ -7,7 +7,7 @@ using Buffer = SiliconStudio.Paradox.Graphics.Buffer;
 
 namespace SiliconStudio.Paradox.Rendering
 {
-    public static partial class CustomEffectKeys
+    public static partial class EffectKeys
     {
         public static readonly ParameterKey<Vector2> Center = ParameterKeys.New<Vector2>();
         public static readonly ParameterKey<float> Frequency = ParameterKeys.New<float>();

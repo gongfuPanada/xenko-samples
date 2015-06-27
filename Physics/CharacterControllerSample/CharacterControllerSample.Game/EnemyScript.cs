@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
 
-namespace CharacterController
+namespace CharacterControllerSample
 {
     /// <summary>
     /// This simple script will start the sprite idle animation

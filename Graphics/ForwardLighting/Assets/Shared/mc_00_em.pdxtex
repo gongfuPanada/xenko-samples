@@ -1,14 +1,12 @@
 !Texture
-Id: ef6cc6db-100d-484d-a32c-437a6179a264
+Id: f1325456-f87c-49da-a9ed-497f472f6012
 Tags: []
-Source: ../../RawAssets/character/Sourceimages/ef00.png
+Source: ../../RawAssets/character/Sourceimages/mc_00_em.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Alpha: Interpolated
 ~Base:
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
-        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-        PremultiplyAlpha: false

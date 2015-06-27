@@ -5,6 +5,7 @@ Tags: []
 Type: !CylinderProceduralModel
     Height: 0.1
     Diameter: 7.2
+    Tessellation: 64
     ScaleUV: 6
     MaterialInstance:
         Material: 03ad0abd-afc4-4b32-89ae-d6f2623014e2:TrainingFloorMaterial

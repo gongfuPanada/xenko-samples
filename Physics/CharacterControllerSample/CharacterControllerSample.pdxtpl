@@ -7,5 +7,6 @@ FullDescription: Creates a sample project which shows how to use physics system'
 Group: Samples/Physics
 Icon: ../.pdxtpl/NewPhysics.png
 DefaultOutputName: CharacterController
+PatternName: CharacterControllerSample
 Screenshots:
     - .pdxtpl/screenshot_small.jpg

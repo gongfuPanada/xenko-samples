@@ -2,7 +2,7 @@
 Id: 207c8460-0747-4fc7-b3c3-5e4f94ef0ee8
 Tags: []
 Meta:
-    Name: CharacterController
+    Name: CharacterControllerSample
     Version: 1.0.0.0
     Authors: []
     Owners: []
@@ -17,7 +17,7 @@ Profiles:
         AssetFolders:
             -   Path: Assets/Shared
                 RawImports: []
-            -   Path: CharacterController.Game/Effects
+            -   Path: CharacterControllerSample.Game/Effects
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
@@ -28,7 +28,7 @@ Profiles:
             Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: 6da9dc17-e343-44a3-bb3b-023a48c5a64f
-                Location: CharacterController.Game/CharacterController.Game.csproj
+                Location: CharacterControllerSample.Game/CharacterControllerSample.Game.csproj
                 Type: Library
     -   Name: Windows
         Platform: Windows
@@ -41,7 +41,7 @@ Profiles:
             Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 305476ee-ec8e-4791-a9b3-e629dcf59433
-                Location: CharacterController.Windows/CharacterController.Windows.csproj
+                Location: CharacterControllerSample.Windows/CharacterControllerSample.Windows.csproj
                 Type: Executable
 ExplicitFolders: []
 Bundles: []

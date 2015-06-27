@@ -65,7 +65,6 @@ namespace ForwardLighting
             // create the shadow buttons
             var buttonShadowDirectional0 = CreateShadowButton(buttonLightDirect0, DirectionalLight1);
             var buttonShadowDirectional1 = CreateShadowButton(buttonLightDirect1, DirectionalLight2);
-            var buttonShadowPoint = CreateShadowButton(buttonLightPoint, PointLight);
             var buttonShadowSpot = CreateShadowButton(buttonLightSpot, SpotLight);
             
             // create the UI stack panel
@@ -78,7 +77,7 @@ namespace ForwardLighting
                 {
                     buttonLightDirect0, buttonShadowDirectional0,
                     buttonLightDirect1, buttonShadowDirectional1,
-                    buttonLightPoint, buttonShadowPoint,
+                    buttonLightPoint,
                     buttonLightSpot, buttonShadowSpot
                 }
             };

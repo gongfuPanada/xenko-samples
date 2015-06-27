@@ -2,6 +2,9 @@
 Id: a02dc101-d058-4066-b905-66313fbfcb6c
 Tags: []
 Attributes:
+    MicroSurface: !MaterialGlossinessMapFeature
+        GlossinessMap: !ComputeFloat
+            Value: 0.2
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
             Texture: e32445c3-dded-432a-b5d0-46f18778b6a5:mc_01
@@ -12,7 +15,7 @@ Attributes:
         SpecularMap: !ComputeColor
             Value: {R: 0.9, G: 0.9, B: 0.9, A: 1}
         Intensity: !ComputeFloat
-            Value: 1
+            Value: 0.8
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}

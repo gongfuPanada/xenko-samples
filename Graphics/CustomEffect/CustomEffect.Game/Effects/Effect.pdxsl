@@ -1,4 +1,4 @@
-﻿class CustomEffect : SpriteBase
+﻿class Effect : SpriteBase
 {
     stage float2 Center;
     stage float Frequency;
