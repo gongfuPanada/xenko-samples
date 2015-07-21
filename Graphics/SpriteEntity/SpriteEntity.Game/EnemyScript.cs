@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
@@ -9,10 +8,11 @@ using SiliconStudio.Paradox.Rendering.Sprites;
 
 namespace SpriteEntity
 {
-    public class EnemyScript : AsyncScript
+    public class EnemyScript : SyncScript
     {
-
         public LogicScript Logic;
+
+        private const float enemyInitPositionY = 8;
 
         // enemy age
         private const float enemyTimeToLive = 2.4f;   // seconds
@@ -23,67 +23,68 @@ namespace SpriteEntity
         private const float floorPosiionY = 0f;
         private const float gameWidthX = 16f;       // from -8f to 8f
         private const float gameWidthHalfX = gameWidthX / 2f;
-        private float enemyInitPositionY;
         // enemy animation
         private const float enemyActiveFps = 2f;
         private const float enemyBlowupFps = 18f;
         private SpriteComponent enemySpriteComponent;
-        private SpriteGroup enemyNormalSprite;
-        private SpriteGroup enemyExplosionSprite;
+        private SpriteSheet enemyNormalSprite;
+        private SpriteSheet enemyExplosionSprite;
 
         // random
         private static int seed = Environment.TickCount;
         private static Random enemyRandomLocal = new Random(seed);
 
-
         private float elapsedTime;
 
         internal bool IsAlive { get; set; }
 
-        public override async Task Execute()
+        public override void Start()
         {
-
-            enemyNormalSprite = Asset.Load<SpriteGroup>("enemy_active");
-            enemyExplosionSprite = Asset.Load<SpriteGroup>("enemy_blowup");
+            enemyNormalSprite = Asset.Load<SpriteSheet>("enemy_active");
+            enemyExplosionSprite = Asset.Load<SpriteSheet>("enemy_blowup");
 
             // Register ourself to the logic to detect collision
             Logic.WatchEnemy(Entity);
 
-            enemyInitPositionY = Entity.Transform.Position.Y;
             enemySpriteComponent = Entity.Get<SpriteComponent>();
-            
-            reset();
 
-            while (Game.IsRunning)
-            {
-                await Script.NextFrame();
-
-                elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
-                enemyAge += elapsedTime;
-
-                // Wait for the appearing
-                if (enemyAge < 0f) continue;
-
-                if (enemyAge >= enemyTimeToLive)
-                {
-                    // Die
-                    reset();
-                    continue;
-                }
-
-                if (!IsAlive)
-                {
-                    // Let the explosion animation play
-                    continue;
-                }
-
-                // Moving
-                Entity.Transform.Position.Y -= enemyDownSpeed * elapsedTime;
-                if (Entity.Transform.Position.Y <= floorPosiionY) Entity.Transform.Position.Y = floorPosiionY;
-            }
+            Reset();
         }
 
-        private void reset()
+        public override void Cancel()
+        {
+            Asset.Unload(enemyNormalSprite);
+            Asset.Unload(enemyExplosionSprite);
+        }
+
+        public override void Update()
+        {
+            elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            enemyAge += elapsedTime;
+
+            // Wait for the appearing
+            if (enemyAge < 0f)
+                return;
+
+            if (enemyAge >= enemyTimeToLive)
+            {
+                // Die
+                Reset();
+                return;
+            }
+
+            if (!IsAlive)
+            {
+                // Let the explosion animation play
+                return;
+            }
+
+            // Moving
+            Entity.Transform.Position.Y -= enemyDownSpeed * elapsedTime;
+            if (Entity.Transform.Position.Y <= floorPosiionY) Entity.Transform.Position.Y = floorPosiionY;
+        }
+
+        private void Reset()
         {
             IsAlive = true;
             Entity.Transform.Position.Y = enemyInitPositionY;
@@ -94,21 +95,21 @@ namespace SpriteEntity
             // Waiting time
             enemyAge = enemyTimeToWait - (((float)(random.NextDouble())));
 
-            enemySpriteComponent.SpriteProvider = new SpriteFromSpriteGroup() { SpriteGroup = enemyNormalSprite };
+            enemySpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = enemyNormalSprite };
             SpriteAnimation.Play(enemySpriteComponent, 0, enemySpriteComponent.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, enemyActiveFps);
         }
 
         public void Explode()
         {
             IsAlive = false;
-            enemySpriteComponent.SpriteProvider = new SpriteFromSpriteGroup() { SpriteGroup = enemyExplosionSprite };
+            enemySpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = enemyExplosionSprite };
             SpriteAnimation.Play(enemySpriteComponent, 0, enemySpriteComponent.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, enemyBlowupFps);
             enemyAge = enemyTimeToLive - 0.3f;
         }
 
         public RectangleF GetBoundingBox()
         {
-            var result = enemyNormalSprite.Images.First().Region;
+            var result = enemyNormalSprite.Sprites.First().Region;
             result.Width *= LogicScript.ScreenScale;
             result.Height *= LogicScript.ScreenScale;
             return result;

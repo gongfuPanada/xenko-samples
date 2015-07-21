@@ -10,7 +10,7 @@ namespace Raycasting
     /// <summary>
     /// The script in charge of displaying the UI
     /// </summary>
-    public class GuiScript : Script
+    public class GuiScript : StartupScript
     {
         public override void Start()
         {

@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 7207a5b4-cbf4-4edc-a7fb-0dfa83e2414e
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: db80cd88-8da7-4947-8575-48e851f48fc2
@@ -12,8 +13,6 @@ Hierarchy:
                         - null
                         - null
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 AnimationComponent.Key:
                     Animations:
                         Active: ebbd2b1f-cbb4-4016-bcc8-2a7cc09c48c9:ma00_1
@@ -44,7 +43,7 @@ Hierarchy:
                             Color: {R: 1, G: 1, B: 1}
                     Intensity: 0.75
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: -10}
+                    Position: {X: 0, Y: 0, Z: -5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -65,7 +64,7 @@ Hierarchy:
                                 Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
                                 Id: df4146ae-23ba-40f7-8258-46b1fe1ae97d
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: 1}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -90,12 +89,13 @@ Hierarchy:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromTexture
                         Texture: a05dc255-f378-4167-b474-1562b18dfc90:shadow_00
+                        PixelsPerUnit: 33
                         Center: {X: 0, Y: 0}
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 TransformComponent.Key:
                     Position: {X: 0, Y: -1.2, Z: 0}
                     Rotation: {W: 0.707106769, X: 0.707106769, Y: 0, Z: 0}
-                    Scale: {X: 7, Y: 7, Z: 7}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 8e708cb6-dd94-4ca1-89f5-17d15dfda2ab
         -   Name: Background
@@ -105,7 +105,7 @@ Hierarchy:
                         - !SpaceEscape.Background.BackgroundScript,SpaceEscape.Game
                             Id: 96a90126-5b00-48ef-b725-ff6116d66cf5
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -1}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -116,7 +116,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 1, G: 1, B: 1}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Importance: High
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
@@ -164,19 +164,19 @@ Hierarchy:
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children:
+                        -   Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: f0bb69db-f15c-4a39-b3cd-d2941fdb99ce}
+                            Component: TransformComponent.Key
                         -   Entity: {Id: 2ff8aac2-706b-4d4e-b6c9-22e2f8f2c31f}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 9f899343-be76-409e-a38f-7aa8744b8179}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: f0bb69db-f15c-4a39-b3cd-d2941fdb99ce}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 23d023ae-08a0-4a2b-883b-c3a784e25e78}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 9a768522-351d-40ab-ad6b-9ecc90f3c111}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 3d1a3eb9-d296-4fd6-8f90-9f3f3efb058a}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
                             Component: TransformComponent.Key
             Id: db80cd88-8da7-4947-8575-48e851f48fc2
         -   Name: Camera

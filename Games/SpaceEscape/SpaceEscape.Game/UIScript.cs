@@ -16,7 +16,7 @@ namespace SpaceEscape
     /// This action provides the name of Button element that is clicked,
     ///  which is one of {StartButton, MenuBotton and RestartButton}
     /// </summary>
-    public class UIScript : Script
+    public class UIScript : StartupScript
     {
         internal Button StartButton { get; private set; }
         internal Button MenuButton { get; private set; }
@@ -28,8 +28,8 @@ namespace SpaceEscape
 
         private TextBlock distanceTextBlock;
         private SpriteFont spriteFont;
-        private UIImage buttonImage;
-        private UIImageGroup uiImages;
+        private Sprite buttonImage;
+        private SpriteSheet uiImages;
 
         /// <summary>
         /// Load resource and construct ui components
@@ -39,7 +39,7 @@ namespace SpaceEscape
             base.Start();
             
             // Load resources shared by different UI screens
-            uiImages = Asset.Load<UIImageGroup>("UIImages");
+            uiImages = Asset.Load<SpriteSheet>("UIImages");
             spriteFont = Asset.Load<SpriteFont>("Font");
             buttonImage = uiImages["button"];
 
@@ -47,8 +47,6 @@ namespace SpaceEscape
             CreateMainMenuUI();
             CreateGameUI();
             CreateGameOverUI();
-
-            StartMainMenuMode();
         }
 
         private void CreateMainMenuUI()

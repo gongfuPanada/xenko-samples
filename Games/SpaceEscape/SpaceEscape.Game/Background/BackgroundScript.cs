@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Rendering;
@@ -12,7 +11,7 @@ namespace SpaceEscape.Background
     /// <summary>
     /// BackgroundScript controls background section in the game.
     /// </summary>
-    public class BackgroundScript : AsyncScript
+    public class BackgroundScript : SyncScript
     {
         public event Action<float> DistanceUpdated;
 
@@ -30,6 +29,7 @@ namespace SpaceEscape.Background
         private Model skyplaneModel; // Cache to scroll its UV region.
         private Vector4 skyplaneUVRegion = new Vector4(0f, 0f, 1f, 1f);
         private bool isScrolling;
+        private Entity skyplaneEntity;
 
         private float RunningDistance
         {
@@ -44,13 +44,11 @@ namespace SpaceEscape.Background
 
         public override void Start()
         {
-            base.Start();
-
             RunningDistance = 0f;
 
             // Load SkyPlane
             skyplaneModel = Asset.Load<Model>("bg_00");
-            var skyplaneEntity = new Entity { new ModelComponent(skyplaneModel) };
+            skyplaneEntity = new Entity { new ModelComponent(skyplaneModel) };
 
             skyplaneEntity.Transform.Position= SkyPlanePosition;
             skyplaneEntity.Get<ModelComponent>().Parameters.Set(GameParameters.EnableBend, false);
@@ -64,52 +62,51 @@ namespace SpaceEscape.Background
             CreateStartLevelBlocks();
         }
 
-        /// <summary>
-        /// A script for updating levelBlocks in the game.
-        /// </summary>
-        public override async Task Execute()
+        public override void Cancel()
         {
-            while (Game.IsRunning)
+            Asset.Unload(skyplaneModel);
+            Entity.Transform.Children.Clear();
+            SceneSystem.SceneInstance.Scene.RemoveChild(skyplaneEntity);
+        }
+
+        public override void Update()
+        {
+            if (!isScrolling)
+                return;
+
+            var elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+            // Check if needed to remove the first block
+            var firstBlock = levelBlocks[0];
+            if (firstBlock.PositionZ + firstBlock.Length * 0.5f < RemoveBlockPosition)
             {
-                await Script.NextFrame();
-
-                if (!isScrolling)
-                    continue;
-
-                var elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
-
-                // Check if needed to remove the first block
-                var firstBlock = levelBlocks[0];
-                if (firstBlock.PositionZ + firstBlock.Length * 0.5f < RemoveBlockPosition)
-                {
-                    RemoveLevelBlock(firstBlock);
-                }
-
-                // Check if needed to add new levelblock
-                var lastBlock = levelBlocks[levelBlocks.Count - 1];
-                if (lastBlock.PositionZ - lastBlock.Length * 0.5f < AddBlockPosition)
-                {
-                    AddLevelBlock(levelFactory.RandomCreateLevelBlock());
-                }
-
-                // Move levelblocks
-                foreach (var levelBlock in levelBlocks)
-                {
-                    var moveDist = GameSpeed * elapsedTime;
-                    levelBlock.PositionZ -= moveDist;
-                    RunningDistance += moveDist / 100f;
-                }
-
-                if (skyplaneUVRegion.X < -1f)
-                    // Reset scrolling position of Skyplane's UV
-                    skyplaneUVRegion.X = 0f;
-
-                // Move Scroll position by an offset every frame.
-                skyplaneUVRegion.X -= 0.0005f;
-
-                // Update Parameters of the shader
-                skyplaneModel.Meshes[0].Parameters.Set(TransformationTextureUVKeys.TextureRegion, skyplaneUVRegion);
+                RemoveLevelBlock(firstBlock);
             }
+
+            // Check if needed to add new levelblock
+            var lastBlock = levelBlocks[levelBlocks.Count - 1];
+            if (lastBlock.PositionZ - lastBlock.Length * 0.5f < AddBlockPosition)
+            {
+                AddLevelBlock(levelFactory.RandomCreateLevelBlock());
+            }
+
+            // Move levelblocks
+            foreach (var levelBlock in levelBlocks)
+            {
+                var moveDist = GameSpeed * elapsedTime;
+                levelBlock.PositionZ -= moveDist;
+                RunningDistance += moveDist / 100f;
+            }
+
+            if (skyplaneUVRegion.X < -1f)
+                // Reset scrolling position of Skyplane's UV
+                skyplaneUVRegion.X = 0f;
+
+            // Move Scroll position by an offset every frame.
+            skyplaneUVRegion.X -= 0.0005f;
+
+            // Update Parameters of the shader
+            skyplaneModel.Meshes[0].Parameters.Set(TransformationTextureUVKeys.TextureRegion, skyplaneUVRegion);
         }
 
         public void Reset()

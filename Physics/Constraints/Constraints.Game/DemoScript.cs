@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
@@ -11,7 +10,7 @@ using SiliconStudio.Paradox.UI.Panels;
 
 namespace Constraints
 {
-    public class DemoScript : AsyncScript
+    public class DemoScript : StartupScript
     {
         private Simulation simulation;
 
@@ -26,6 +25,53 @@ namespace Constraints
         private RigidBody sphereRigidBody;
 
         private TextBlock constraintNameBlock;
+        
+        public override void Start()
+        {
+            simulation = Entity.Get<PhysicsComponent>().Simulation;
+            simulation.Gravity = new Vector3(0, -9, 0);
+
+            cubeRigidBody = cube.Get<PhysicsComponent>()[0].RigidBody;
+            cubeRigidBody.CanSleep = false;
+            sphereRigidBody = sphere.Get<PhysicsComponent>()[0].RigidBody;
+            sphereRigidBody.CanSleep = false;
+
+            // Create the UI
+            var font = Asset.Load<SpriteFont>("Font");
+            constraintNameBlock = new TextBlock
+            {
+                Font = font,
+                TextSize = 55,
+                TextColor = Color.White,
+            };
+            constraintNameBlock.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 0));
+            constraintNameBlock.SetCanvasRelativePosition(new Vector3(0.5f, 0.93f, 0));
+
+            Entity.Get<UIComponent>().RootElement = new Canvas
+            {
+                Children = 
+                { 
+                    constraintNameBlock, 
+                    CreateButton("Next Constraint", font, 1), 
+                    CreateButton("Last Constraint", font, -1) 
+                }
+            };
+
+            // Create and initialize constraint
+            constraintsList.Add(CreatePoint2PointConstraint);
+            constraintsList.Add(CreateHingeConstraint);
+            constraintsList.Add(CreateGearConstraint);
+            constraintsList.Add(CreateSliderConstraint);
+            constraintsList.Add(CreateConeTwistConstraint);
+            constraintsList.Add(CreateGeneric6DoFConstraint);
+
+            constraintsList[constraintIndex]();
+        }
+
+        public override void Cancel()
+        {
+            RemoveConstraint();
+        }
 
         void CreatePoint2PointConstraint()
         {
@@ -143,7 +189,7 @@ namespace Constraints
             sphereRigidBody.ApplyImpulse(new Vector3(0, 0, 18));
         }
 
-        private void ChangeConstraint(int offset)
+        private void RemoveConstraint()
         {
             //Remove and dispose the current constraint
             simulation.RemoveConstraint(currentConstraint);
@@ -161,6 +207,11 @@ namespace Constraints
 
             sphereRigidBody.AngularVelocity = Vector3.Zero;
             sphereRigidBody.LinearVelocity = Vector3.Zero;
+        }
+
+        private void ChangeConstraint(int offset)
+        {
+            RemoveConstraint();
 
             // calculate constraint index
             constraintIndex = (constraintIndex + offset + constraintsList.Count) % constraintsList.Count;
@@ -182,50 +233,6 @@ namespace Constraints
             button.SetCanvasRelativePosition(new Vector3(offset > 0 ? 0.97f : 0.03f, 0.93f, 0));
 
             return button;
-        }
-
-        public override Task Execute()
-        {
-            simulation = Entity.Get<PhysicsComponent>().Simulation;
-            simulation.Gravity = new Vector3(0, -9, 0);
-
-            cubeRigidBody = cube.Get<PhysicsComponent>()[0].RigidBody;
-            cubeRigidBody.CanSleep = false;
-            sphereRigidBody = sphere.Get<PhysicsComponent>()[0].RigidBody;
-            sphereRigidBody.CanSleep = false;
-
-            // Create the UI
-            var font = Asset.Load<SpriteFont>("Font");
-            constraintNameBlock = new TextBlock
-            {
-                Font = font,
-                TextSize = 55,
-                TextColor = Color.White,
-            };
-            constraintNameBlock.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 0));
-            constraintNameBlock.SetCanvasRelativePosition(new Vector3(0.5f, 0.93f, 0));
-
-            Entity.Get<UIComponent>().RootElement = new Canvas
-            {
-                Children = 
-                { 
-                    constraintNameBlock, 
-                    CreateButton("Next Constraint", font, 1), 
-                    CreateButton("Last Constraint", font, -1) 
-                }
-            };
-
-            // Create and initialize constraint
-            constraintsList.Add(CreatePoint2PointConstraint);
-            constraintsList.Add(CreateHingeConstraint);
-            constraintsList.Add(CreateGearConstraint);
-            constraintsList.Add(CreateSliderConstraint);
-            constraintsList.Add(CreateConeTwistConstraint);
-            constraintsList.Add(CreateGeneric6DoFConstraint);
-
-            constraintsList[constraintIndex]();
-
-            return Task.FromResult(0);
         }
     }
 }

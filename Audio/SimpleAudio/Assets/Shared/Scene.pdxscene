@@ -1,11 +1,12 @@
 !SceneAsset
 Id: 5f4a3789-b182-4b32-9088-acbf9e13edb5
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 0e18b0ad-a283-4c63-ad50-e6540f6d9f01
     Entities:
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -72,7 +73,7 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: e805d745-0992-4f74-87e0-6b87248791de:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -4}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -80,10 +81,10 @@ Hierarchy:
         -   Name: MainCamera
             Components:
                 CameraComponent.Key:
-                    Projection: Perspective
+                    Projection: Orthographic
                     FarClipPlane: 10
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 2.5}
+                    Position: {X: 0, Y: 0, Z: 7.72791433}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -96,9 +97,9 @@ Hierarchy:
                         Center: {X: 0, Y: 0}
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 TransformComponent.Key:
-                    Position: {X: 0.5, Y: 0, Z: 0}
+                    Position: {X: 2.5, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 0.3, Y: -0.3, Z: 1}
+                    Scale: {X: 1, Y: -1, Z: 1}
                     Children: []
             Id: c76eafe8-9bb0-4801-b112-6825735d4fff
         -   Name: LeftWaveSprite
@@ -109,9 +110,9 @@ Hierarchy:
                         Center: {X: 0, Y: 0}
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 TransformComponent.Key:
-                    Position: {X: -0.5, Y: 0, Z: 0}
+                    Position: {X: -2.5, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 0.3, Y: 0.3, Z: 1}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3
         -   Name: SoundScript
@@ -125,7 +126,7 @@ Hierarchy:
                             RightWave:
                                 Id: c76eafe8-9bb0-4801-b112-6825735d4fff
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: 4}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []

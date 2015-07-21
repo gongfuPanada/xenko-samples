@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: a1045c64-f998-428b-9741-84eb1de4f8ef
@@ -8,15 +9,15 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.BounceScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 3dc48e9f-e3b3-4e2f-8e04-2cbf497bc08b
                 TransformComponent.Key:
                     Position: {X: 8.89, Y: 0, Z: 0}
@@ -33,14 +34,14 @@ Hierarchy:
                     Elements: []
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.GravityScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.GravityScript,AccelerometerGravity.Game
                             Id: 340ae752-4f79-40d9-88cb-10048105c703
                         - !AccelerometerGravity.GuiScript,AccelerometerGravity.Game
                             Id: a6f55234-c9dd-446e-b1fe-838970897afc
                 UIComponent.Key:
                     VirtualResolution: {X: 1280, Y: 720, Z: 1000}
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 1}
+                    Position: {X: 0, Y: 0, Z: 3}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -49,15 +50,15 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.BounceScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: f9212e97-1743-43a1-a61b-97da13bf2aba
                 TransformComponent.Key:
                     Position: {X: 0, Y: 5, Z: 0}
@@ -69,15 +70,15 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.BounceScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 5e3ff17e-fb05-4d78-92d8-3374451f2f57
                 TransformComponent.Key:
                     Position: {X: -8.89, Y: 0, Z: 0}
@@ -89,15 +90,15 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.BounceScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 2014eb85-3594-4e1d-ab51-3e37201366d4
                 TransformComponent.Key:
                     Position: {X: 0, Y: -5, Z: 0}
@@ -106,7 +107,7 @@ Hierarchy:
                     Children: []
             Id: 4e795cc2-f6c6-4936-80db-bbfc789d9264
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -161,22 +162,22 @@ Hierarchy:
         -   Name: Ball2
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: DynamicRigidBody
                             Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: DynamicRigidBody
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.NoSleepScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.NoSleepScript,AccelerometerGravity.Game
                             Id: bccca136-49c9-46ba-a5df-b10a457c4663
-                        - !AccelerometerGravity.BounceScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 24a06fb8-8693-4532-96e3-bc980c7dc3a0
                         - !AccelerometerGravity.BallScript,AccelerometerGravity.Game
                             Id: 435a1ec7-46ef-4f8d-901e-63103ba65478
@@ -199,22 +200,22 @@ Hierarchy:
         -   Name: Ball1
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: DynamicRigidBody
                             Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: DynamicRigidBody
                 ScriptComponent.Key:
                     Scripts:
-                        - !AccelerometerGravity.NoSleepScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.NoSleepScript,AccelerometerGravity.Game
                             Id: e4a891e1-ff39-48cd-a585-fc226addf316
-                        - !AccelerometerGravity.BounceScript,%20AccelerometerGravity.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: d9766b20-5cd6-4d34-bfe1-74255743e366
                         - !AccelerometerGravity.BallScript,AccelerometerGravity.Game
                             Id: 5ebf5192-3802-424c-8527-6f2affb87e2d

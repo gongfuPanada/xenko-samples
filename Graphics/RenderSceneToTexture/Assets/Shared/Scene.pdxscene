@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 3b674a52-58f6-43cf-87bd-9edfe8778a79
@@ -21,7 +22,9 @@ Hierarchy:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromTexture
                         Texture: null
+                        PixelsPerUnit: 450
                         Center: {X: 0, Y: 0}
+                        CenterFromMiddle: false
                     SpriteType: Billboard
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 ScriptComponent.Key:
@@ -29,13 +32,13 @@ Hierarchy:
                         - !RenderSceneToTexture.SetSpriteSource,RenderSceneToTexture.Game
                             Id: c31d8e1f-53f2-456a-a026-55ebe9720de5
                 TransformComponent.Key:
-                    Position: {X: 0.549, Y: 2.03, Z: 0}
+                    Position: {X: 0.25, Y: 2.85, Z: -1}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 0.75, Y: 0.75, Z: 0.75}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 1c1ced43-f10b-4f46-93e7-9f75eb681c5e
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -97,11 +100,11 @@ Hierarchy:
                             Component: TransformComponent.Key
                         -   Entity: {Id: 14088c66-6d9b-4e26-a601-9784ff3ae859}
                             Component: TransformComponent.Key
-                        -   Entity: {Id: bb7065d2-498a-45d7-b4b1-0bb1a573cc69}
+                        -   Entity: {Id: f63efa01-c45a-4b81-ad59-e49391a813e4}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 1c1ced43-f10b-4f46-93e7-9f75eb681c5e}
                             Component: TransformComponent.Key
-                        -   Entity: {Id: f63efa01-c45a-4b81-ad59-e49391a813e4}
+                        -   Entity: {Id: bb7065d2-498a-45d7-b4b1-0bb1a573cc69}
                             Component: TransformComponent.Key
             Id: 3b674a52-58f6-43cf-87bd-9edfe8778a79
         -   Name: Ambient light
@@ -134,7 +137,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 1, G: 1, B: 1}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Importance: High
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
@@ -151,7 +154,7 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: b237783b-085e-40e5-b6b4-c41c2b98eb41:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -2}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -162,7 +165,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 1, G: 1, B: 1}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Importance: High
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
@@ -182,8 +185,6 @@ Hierarchy:
                         - null
                         - null
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 AnimationComponent.Key:
                     Animations:
                         Idle: 144a63cd-8847-447e-8b00-4c33204abfb9:he00_normal_idle

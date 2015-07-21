@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -11,7 +7,7 @@ using SiliconStudio.Paradox.Graphics;
 
 namespace SimpleSprite
 {
-    public class BallScript : AsyncScript
+    public class BallScript : SyncScript
     {
         private const int SphereSpace = 4;
         private const int SphereWidth = 150;
@@ -27,13 +23,14 @@ namespace SimpleSprite
         private Vector2 ballPosition;
         private Vector2 ballSpeed;
 
+        private SceneDelegateRenderer delegateRenderer;
 
-        public override async Task Execute()
+        public override void Start()
         {
             // create the ball sprite.
             var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
-            sphere = await Asset.LoadAsync<Texture>("sphere");
+            sphere = Asset.Load<Texture>("sphere");
 
             // Initialize ball's state related variables.
             resolution = new Vector2(virtualResolution.X, virtualResolution.Y);
@@ -44,35 +41,45 @@ namespace SimpleSprite
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
-            compositor.Master.Renderers.Add(new SceneDelegateRenderer(RenderSpheres));
+            compositor.Master.Renderers.Add(delegateRenderer = new SceneDelegateRenderer(RenderSpheres));
+        }
 
-            while (Game.IsRunning)
+        public override void Update()
+        {
+            ballPosition += ballSpeed * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+            if (ballPosition.X < ballHalfSize.X)
             {
-                await Script.NextFrame();
-            
-                ballPosition += ballSpeed * (float)Game.UpdateTime.Elapsed.TotalSeconds;
-
-                if (ballPosition.X < ballHalfSize.X)
-                {
-                    ballPosition.X = ballHalfSize.X + (ballHalfSize.X - ballPosition.X);
-                    ballSpeed.X = -ballSpeed.X;
-                }
-                if (ballPosition.X > resolution.X - ballHalfSize.X)
-                {
-                    ballPosition.X = 2 * (resolution.X - ballHalfSize.X) - ballPosition.X;
-                    ballSpeed.X = -ballSpeed.X;
-                }
-                if (ballPosition.Y < ballHalfSize.Y)
-                {
-                    ballPosition.Y = ballHalfSize.Y + (ballHalfSize.Y - ballPosition.Y);
-                    ballSpeed.Y = -ballSpeed.Y;
-                }
-                if (ballPosition.Y > resolution.Y - ballHalfSize.Y)
-                {
-                    ballPosition.Y = 2 * (resolution.Y - ballHalfSize.Y) - ballPosition.Y;
-                    ballSpeed.Y = -ballSpeed.Y;
-                }
+                ballPosition.X = ballHalfSize.X + (ballHalfSize.X - ballPosition.X);
+                ballSpeed.X = -ballSpeed.X;
             }
+            if (ballPosition.X > resolution.X - ballHalfSize.X)
+            {
+                ballPosition.X = 2 * (resolution.X - ballHalfSize.X) - ballPosition.X;
+                ballSpeed.X = -ballSpeed.X;
+            }
+            if (ballPosition.Y < ballHalfSize.Y)
+            {
+                ballPosition.Y = ballHalfSize.Y + (ballHalfSize.Y - ballPosition.Y);
+                ballSpeed.Y = -ballSpeed.Y;
+            }
+            if (ballPosition.Y > resolution.Y - ballHalfSize.Y)
+            {
+                ballPosition.Y = 2 * (resolution.Y - ballHalfSize.Y) - ballPosition.Y;
+                ballSpeed.Y = -ballSpeed.Y;
+            }
+        }
+
+        public override void Cancel()
+        {
+            // Remove the delegate renderer from the pipeline
+            var scene = SceneSystem.SceneInstance.Scene;
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
+            compositor.Master.Renderers.Remove(delegateRenderer);
+
+            // destroy graphic objects
+            spriteBatch.Dispose();
+            Asset.Unload(sphere);
         }
 
         private void RenderSpheres(RenderContext renderContext, RenderFrame frame)

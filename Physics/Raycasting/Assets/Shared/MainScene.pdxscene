@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 86fed268-baa8-4929-9eba-4d14cf3a0e68
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: cdda7c96-36f9-4875-9618-b4fc33bf3788
@@ -23,7 +24,7 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: d2ae7171-f414-4455-863c-cb002ee3b2bf:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -2}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -34,16 +35,14 @@ Hierarchy:
                     Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: DynamicRigidBody
                             Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: DynamicRigidBody
                 ScriptComponent.Key:
                     Scripts:
                         - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
@@ -58,12 +57,12 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: 1a7f15af-ac01-4464-adfe-7689bd50966e:ground_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 TransformComponent.Key:
                     Position: {X: 0, Y: -0.5, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -76,16 +75,14 @@ Hierarchy:
                     Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: DynamicRigidBody
                             Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: DynamicRigidBody
                 ScriptComponent.Key:
                     Scripts:
                         - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
@@ -97,7 +94,7 @@ Hierarchy:
                     Children: []
             Id: a17f7b08-0abd-49a5-9014-bec26ca0e547
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -154,7 +151,7 @@ Hierarchy:
                     Projection: Perspective
                 ScriptComponent.Key:
                     Scripts:
-                        - !Raycasting.RaycastingScript,%20Raycasting.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !Raycasting.RaycastingScript,Raycasting.Game
                             Id: 8341119c-188a-44c1-bf8c-4361e2b0e4fb
                 PhysicsComponent.Key:
                     Elements: []
@@ -170,16 +167,14 @@ Hierarchy:
                     Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: DynamicRigidBody
                             Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: DynamicRigidBody
                 ScriptComponent.Key:
                     Scripts:
                         - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game

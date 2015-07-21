@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Rendering.Sprites;
@@ -11,7 +9,7 @@ namespace JumpyJet
     /// <summary>
     /// The script in charge of creating and updating the pipes.
     /// </summary>
-    public class PipesScript : AsyncScript
+    public class PipesScript : SyncScript
     {
         private const int GapBetweenPipe = 400;
         private const int StartPipePosition = 400;
@@ -27,42 +25,40 @@ namespace JumpyJet
         
         public override void Start()
         {
-            base.Start();
-
             // Load assets
             var pipeEntity = new Entity("pipe") { new SpriteComponent
             {
-                SpriteProvider = new SpriteFromSpriteGroup { SpriteGroup = Asset.Load<SpriteGroup>("pipe_sprite") },
-                ExtrusionMethod = SpriteExtrusionMethod.UnitRectangle
+                SpriteProvider = new SpriteFromSheet { Sheet = Asset.Load<SpriteSheet>("pipe_sprite") },
+                IgnoreDepth = true
             } };
-            pipeEntity.Transform.Scale = new Vector3(117, 655, 1);
 
             // Create PipeSets
             CreatePipe(pipeEntity, StartPipePosition);
             CreatePipe(pipeEntity, StartPipePosition + GapBetweenPipe);
         }
 
-        public override async Task Execute()
+        public override void Update()
         {
-            while (Game.IsRunning)
+            if (!isScrolling)
+                return;
+
+            var elapsedTime = (float) Game.UpdateTime.Elapsed.TotalSeconds;
+
+            for (int i = 0; i < pipeSetList.Count; i++)
             {
-                await Script.NextFrame();
-
-                if (!isScrolling)
-                    continue;
-
-                var elapsedTime = (float) Game.UpdateTime.Elapsed.TotalSeconds;
-
-                for (int i = 0; i < pipeSetList.Count; i++)
-                {
-                    // update the position of the pipe
-                    pipeSetList[i].Update(elapsedTime);
+                // update the position of the pipe
+                pipeSetList[i].Update(elapsedTime);
                     
-                    // move the pipe to the end of screen if not visible anymore
-                    if (pipeSetList[i].IsOutOfScreenLeft())
-                        MovePipeToEnd(i, pipeSetList[i]);
-                }
+                // move the pipe to the end of screen if not visible anymore
+                if (pipeSetList[i].IsOutOfScreenLeft())
+                    MovePipeToEnd(i, pipeSetList[i]);
             }
+        }
+
+        public override void Cancel()
+        {
+            // remove all the children pipes.
+            Entity.Transform.Children.Clear();
         }
 
         /// <summary>

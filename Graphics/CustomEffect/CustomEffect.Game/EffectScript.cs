@@ -9,12 +9,13 @@ namespace CustomEffect
     /// <summary>
     /// The script in charge of rendering the custom effect
     /// </summary>
-    public class EffectScript : Script
+    public class EffectScript : StartupScript
     {
         private Effect customEffect;
         private PrimitiveQuad quad;
         private Texture paradoxTexture;
         private SamplerState samplingState;
+        private SceneDelegateRenderer renderer;
 
         public override void Start()
         {
@@ -37,7 +38,18 @@ namespace CustomEffect
             // Add Effect rendering to the end of the pipeline
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
-            compositor.Master.Renderers.Add(new SceneDelegateRenderer(RenderQuad));
+            renderer = new SceneDelegateRenderer(RenderQuad);
+            compositor.Master.Renderers.Add(renderer);
+        }
+
+        public override void Cancel()
+        {
+            // Cleanup when script is removed
+            var scene = SceneSystem.SceneInstance.Scene;
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
+            compositor.Master.Renderers.Remove(renderer);
+
+            base.Cancel();
         }
 
         private void RenderQuad(RenderContext renderContext, RenderFrame frame)

@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 41bc08b1-d7db-4466-8661-663be2db1dbf
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 4417aa97-0ceb-4053-8ad1-b5a5ab3484cd
@@ -10,11 +11,9 @@ Hierarchy:
                     Model: bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: eb299280-6731-4070-b2e6-c1a19cc6d12e
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
@@ -28,11 +27,9 @@ Hierarchy:
                     Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: f0383bea-d5a8-4c5f-8b29-eee0361fcf9d
                 TransformComponent.Key:
                     Position: {X: 2, Y: 0, Z: 0}
@@ -46,11 +43,9 @@ Hierarchy:
                     Model: c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: 18b6ac31-4ea6-457e-80db-0db5835068ee
                 TransformComponent.Key:
                     Position: {X: 8, Y: 0, Z: 0}
@@ -65,7 +60,7 @@ Hierarchy:
                     FarClipPlane: 100
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.CameraNavigationScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
                             Id: 59e4e024-706b-4875-8269-136020255fc8
                 TransformComponent.Key:
                     Position: {X: 0, Y: 1.5, Z: 4}
@@ -74,7 +69,7 @@ Hierarchy:
                     Children: []
             Id: 359ed8d5-5381-47fc-9448-6c3c724eb457
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -139,11 +134,9 @@ Hierarchy:
                     Model: af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: 18d6a3ed-dff5-40a5-abd1-8a0227ca10f3
                 TransformComponent.Key:
                     Position: {X: -6, Y: 0, Z: 0}
@@ -157,11 +150,9 @@ Hierarchy:
                     Model: 6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: a3c4af4c-a57d-416d-ad4d-ea62c3e29b16
                 TransformComponent.Key:
                     Position: {X: -2, Y: 0, Z: 0}
@@ -175,11 +166,9 @@ Hierarchy:
                     Model: 32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: 9ecb0fd8-b028-4646-ae4c-b54299e2d98f
                 TransformComponent.Key:
                     Position: {X: 4, Y: 0, Z: 0}
@@ -193,11 +182,9 @@ Hierarchy:
                     Model: 6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: f10ef5af-b6d3-4844-a931-56f7e11c62f2
                 TransformComponent.Key:
                     Position: {X: 6, Y: -0.75, Z: 0}
@@ -211,11 +198,9 @@ Hierarchy:
                     Model: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: 4b230ebc-3591-4f0e-b6e6-e5486f33ca14
                 TransformComponent.Key:
                     Position: {X: -8, Y: 0, Z: 0}
@@ -241,11 +226,9 @@ Hierarchy:
                     Model: 1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,%20GeometricPrimitives.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
                             Id: a8068f05-a902-4304-9e18-b6e500fba716
                 TransformComponent.Key:
                     Position: {X: -4, Y: 0, Z: 0}
@@ -258,7 +241,7 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -3}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []

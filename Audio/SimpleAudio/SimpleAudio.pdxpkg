@@ -8,7 +8,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.1.0-beta
+            Version: 1.2.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -38,7 +38,7 @@ Profiles:
                 RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 22223ce8-bd79-4ef4-abe7-7f4e5d45cd4c
                 Location: SimpleAudio.Windows/SimpleAudio.Windows.csproj

@@ -1,5 +1,6 @@
 !MaterialAsset
 Id: b6eb49ce-d457-4f80-97a0-bbf0e30a75d3
+SerializedVersion: 1
 Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
@@ -30,11 +31,11 @@ Attributes:
     Overrides:
         UVScale: {X: 1, Y: 1}
 Layers: []
-Parameters: {}
 ~Base:
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
         Attributes:
             Diffuse: !MaterialDiffuseMapFeature
@@ -55,4 +56,3 @@ Parameters: {}
             Overrides:
                 UVScale: {X: 1, Y: 1}
         Layers: []
-        Parameters: {}

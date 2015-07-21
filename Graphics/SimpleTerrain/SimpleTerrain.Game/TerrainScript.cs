@@ -21,7 +21,7 @@ namespace SimpleTerrain
     /// <summary>
     /// This script rotates around Oy the entity it is attached to.
     /// </summary>
-    public class TerrainScript : Script
+    public class TerrainScript : StartupScript
     {
         public Entity TerrainEntity;        // Manipulate the entity components: Transformation component
         public Entity UIEntity;

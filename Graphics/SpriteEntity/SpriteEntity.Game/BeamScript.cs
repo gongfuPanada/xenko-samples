@@ -1,14 +1,11 @@
 ﻿using System.Linq;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
 
-// ReSharper disable All
-
 namespace SpriteEntity
 {
-    public class BeamScript : AsyncScript
+    public class BeamScript : SyncScript
     {
         /// <summary>
         /// Direction of the beam along the X axis
@@ -26,7 +23,7 @@ namespace SpriteEntity
         // TODO centralize
         private const float minWidthX = -8f - 2f;
 
-        private SpriteGroup beamNormalSprite;
+        private SpriteSheet beamNormalSprite;
 
         public BeamScript()
         {
@@ -34,33 +31,28 @@ namespace SpriteEntity
             IsAlive = true;
         }
 
-        public override async Task Execute()
+        public override void Update()
         {
-            while (Game.IsRunning)
+            if (!IsAlive) 
+                return;
+
+            // Move
+            Entity.Transform.Position.X += DirectionX * beamSpeed * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+            // Entity went out the screen, mark it as dead
+            if ((Entity.Transform.Position.X <= minWidthX) || (Entity.Transform.Position.X >= maxWidthX))
             {
-                await Script.NextFrame();
-
-                if (!IsAlive) continue;
-
-                // Move
-                Entity.Transform.Position.X += DirectionX * beamSpeed * (float)Game.UpdateTime.Elapsed.TotalSeconds;
-
-                // Entity went out the screen, mark it as dead
-                if ((Entity.Transform.Position.X <= minWidthX) || (Entity.Transform.Position.X >= maxWidthX))
-                {
-                    IsAlive = false;
-                }
+                IsAlive = false;
             }
         }
 
         public RectangleF GetBoundingBox()
         {
-            if (beamNormalSprite == null) beamNormalSprite = Asset.Load<SpriteGroup>("bullet");
-            var result = beamNormalSprite.Images.First().Region;
+            if (beamNormalSprite == null) beamNormalSprite = Asset.Load<SpriteSheet>("bullet");
+            var result = beamNormalSprite.Sprites.First().Region;
             result.Width *= LogicScript.ScreenScale;
             result.Height *= LogicScript.ScreenScale;
             return result;
         }
-
     }
 }

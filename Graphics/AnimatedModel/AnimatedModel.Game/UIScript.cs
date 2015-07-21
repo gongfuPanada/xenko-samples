@@ -7,7 +7,7 @@ using SiliconStudio.Paradox.UI.Panels;
 
 namespace AnimatedModel
 {
-    public class UIScript : Script
+    public class UIScript : StartupScript
     {
         public Entity Knight;
 

@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: ab5dbac5-ae2f-42f5-b3fb-e64522c1547d
@@ -7,9 +8,8 @@ Hierarchy:
         -   Name: Beam
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:bullet
-                    ExtrusionMethod: UnitWidthSpriteRatio
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:bullet
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
@@ -23,29 +23,26 @@ Hierarchy:
                     Projection: Orthographic
                     NearClipPlane: 1
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 2, Z: 50}
+                    Position: {X: 0, Y: 2, Z: 2}
                     Rotation: {W: 0, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
         -   Name: Background
             Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromTexture
-                        Texture: b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
-                        Center: {X: 0, Y: 0}
-                    Color: {R: 255, G: 255, B: 255, A: 255}
+                BackgroundComponent.Key:
+                    Texture: b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 2, Z: -10}
+                    Position: {X: 1, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 10, Y: 10, Z: 1}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
         -   Name: Enemy02
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 3464e1d8-d90c-43f6-a3bc-bc068346a78c:enemy_active
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 3464e1d8-d90c-43f6-a3bc-bc068346a78c:enemy_active
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 ScriptComponent.Key:
                     Scripts:
@@ -63,8 +60,8 @@ Hierarchy:
         -   Name: Player
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 693e80f5-9c05-4b63-b723-a197eceadbc3:character_idle
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 693e80f5-9c05-4b63-b723-a197eceadbc3:character_idle
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 ScriptComponent.Key:
                     Scripts:
@@ -76,15 +73,14 @@ Hierarchy:
                 TransformComponent.Key:
                     Position: {X: -5, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 2, Y: 2, Z: 1}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
         -   Name: Sprite
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:bullet
-                    ExtrusionMethod: UnitWidthSpriteRatio
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:bullet
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
@@ -99,13 +95,13 @@ Hierarchy:
                         - !SpriteEntity.LogicScript,SpriteEntity.Game
                             Id: fac93c9b-4547-4468-9bde-beb247edca11
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: -1, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -130,7 +126,7 @@ Hierarchy:
                                     Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
                     EditorSettings:
                         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-                        SceneUnit: 10
+                        SceneUnit: 1
                         Camera: {}
                         Mode: !SceneEditorGraphicsModeLDRSettings
                             BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
@@ -140,8 +136,6 @@ Hierarchy:
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children:
                         -   Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d}
                             Component: TransformComponent.Key
@@ -154,6 +148,8 @@ Hierarchy:
                         -   Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                             Component: TransformComponent.Key
                         -   Entity: {Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f}
                             Component: TransformComponent.Key
             Id: ab5dbac5-ae2f-42f5-b3fb-e64522c1547d
         -   Name: GUI
@@ -173,8 +169,8 @@ Hierarchy:
         -   Name: Enemy00
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 3464e1d8-d90c-43f6-a3bc-bc068346a78c:enemy_active
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 3464e1d8-d90c-43f6-a3bc-bc068346a78c:enemy_active
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 ScriptComponent.Key:
                     Scripts:
@@ -192,8 +188,8 @@ Hierarchy:
         -   Name: Enemy01
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 3464e1d8-d90c-43f6-a3bc-bc068346a78c:enemy_active
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 3464e1d8-d90c-43f6-a3bc-bc068346a78c:enemy_active
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 ScriptComponent.Key:
                     Scripts:
@@ -211,9 +207,8 @@ Hierarchy:
         -   Name: beam
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:bullet
-                    ExtrusionMethod: UnitWidthSpriteRatio
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:bullet
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 ScriptComponent.Key:
                     Scripts:

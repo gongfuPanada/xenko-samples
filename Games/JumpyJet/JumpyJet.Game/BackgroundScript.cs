@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -11,7 +10,7 @@ namespace JumpyJet
     /// <summary>
     /// The script in charge of creating and updating the background.
     /// </summary>
-    public class BackgroundScript : AsyncScript
+    public class BackgroundScript : SyncScript
     {
         // Entities' depth
         private const int Pal0Depth = 0;
@@ -22,26 +21,30 @@ namespace JumpyJet
         private SpriteBatch spriteBatch;
 
         private readonly List<BackgroundSection> backgroundParallax = new List<BackgroundSection>();
+        private SpriteSheet pal0SpriteSheet;
+        private SpriteSheet pal1SpriteSheet;
+        private SpriteSheet pal2SpriteSheet;
+        private SpriteSheet pal3SpriteSheet;
+
+        private SceneDelegateRenderer delegateRenderer;
 
         public override void Start()
         {
-            base.Start();
-
             var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 20f);
 
             // Create Parallax Background
-            var pal0SpriteGroup = Asset.Load<SpriteGroup>("pal0_sprite");
-            var pal1SpriteGroup = Asset.Load<SpriteGroup>("pal1_sprite");
-            var pal2SpriteGroup = Asset.Load<SpriteGroup>("pal2_sprite");
-            backgroundParallax.Add(new BackgroundSection(pal0SpriteGroup.Images[0], virtualResolution, GameScript.GameSpeed / 4f, Pal0Depth));
-            backgroundParallax.Add(new BackgroundSection(pal1SpriteGroup.Images[0], virtualResolution, GameScript.GameSpeed / 3f, Pal1Depth));
-            backgroundParallax.Add(new BackgroundSection(pal2SpriteGroup.Images[0], virtualResolution, GameScript.GameSpeed / 1.5f, Pal2Depth));
+            pal0SpriteSheet = Asset.Load<SpriteSheet>("pal0_sprite");
+            pal1SpriteSheet = Asset.Load<SpriteSheet>("pal1_sprite");
+            pal2SpriteSheet = Asset.Load<SpriteSheet>("pal2_sprite");
+            backgroundParallax.Add(new BackgroundSection(pal0SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 4f, Pal0Depth));
+            backgroundParallax.Add(new BackgroundSection(pal1SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 3f, Pal1Depth));
+            backgroundParallax.Add(new BackgroundSection(pal2SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 1.5f, Pal2Depth));
 
             // For pal3Sprite: Ground, move it downward so that its bottom edge is at the bottom screen.
             var screenHeight = virtualResolution.Y;
-            var pal3SpriteGroup = Asset.Load<SpriteGroup>("pal3_sprite");
-            var pal3Height = pal3SpriteGroup.Images[0].Region.Height;
-            backgroundParallax.Add(new BackgroundSection(pal3SpriteGroup.Images[0], virtualResolution, GameScript.GameSpeed, Pal3Depth, Vector2.UnitY * (screenHeight - pal3Height) / 2));
+            pal3SpriteSheet = Asset.Load<SpriteSheet>("pal3_sprite");
+            var pal3Height = pal3SpriteSheet.Sprites[0].Region.Height;
+            backgroundParallax.Add(new BackgroundSection(pal3SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed, Pal3Depth, Vector2.UnitY * (screenHeight - pal3Height) / 2));
             
             // allocate the sprite batch in charge of drawing the backgrounds.
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
@@ -49,23 +52,32 @@ namespace JumpyJet
             // register the renderer in the pipeline
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
-            compositor.Master.Renderers.Insert(1, new SceneDelegateRenderer(DrawParallax));
+            compositor.Master.Renderers.Insert(1, delegateRenderer = new SceneDelegateRenderer(DrawParallax));
         }
 
-        public override async Task Execute()
+        public override void Update()
         {
-            while (Game.IsRunning)
-            {
-                var elapsedTime = (float) Game.UpdateTime.Elapsed.TotalSeconds;
+            var elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
-                // Update Parallax backgrounds
-                foreach (var parallax in backgroundParallax)
-                    parallax.Update(elapsedTime);
-
-                await Script.NextFrame();
-            }
+            // Update Parallax backgrounds
+            foreach (var parallax in backgroundParallax)
+                parallax.Update(elapsedTime);
         }
 
+        public override void Cancel()
+        {
+            // remove the delegate renderer from the pipeline
+            var scene = SceneSystem.SceneInstance.Scene;
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
+            compositor.Master.Renderers.Remove(delegateRenderer);
+
+            // free graphic objects
+            spriteBatch.Dispose();
+            Asset.Unload(pal0SpriteSheet);
+            Asset.Unload(pal1SpriteSheet);
+            Asset.Unload(pal2SpriteSheet);
+            Asset.Unload(pal3SpriteSheet);
+        }
 
         public void DrawParallax(RenderContext context, RenderFrame frame)
         {

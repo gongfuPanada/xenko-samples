@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
@@ -8,7 +7,7 @@ using SiliconStudio.Paradox.Games;
 
 namespace GameMenu
 {
-    public abstract class UISceneBase : AsyncScript
+    public abstract class UISceneBase : SyncScript
     {
         protected readonly List<object> LoadedAssets = new List<object>();
 
@@ -20,8 +19,6 @@ namespace GameMenu
 
         public override void Start()
         {
-            base.Start();
-
             IsRunning = true;
 
             UIGame = (Game)Services.GetServiceAs<IGame>();
@@ -30,6 +27,31 @@ namespace GameMenu
             Game.Window.ClientSizeChanged += AdjustVirtualResolution;
 
             CreateScene();
+        }
+
+        public override void Update()
+        {
+            UpdateScene();
+        }
+
+        protected virtual void UpdateScene()
+        {
+        }
+
+        public override void Cancel()
+        {
+            Game.Window.ClientSizeChanged -= AdjustVirtualResolution;
+
+            IsRunning = false;
+            SceneCreated = false;
+
+            foreach (var asset in LoadedAssets)
+            {
+                if(asset != null)
+                    Asset.Unload(asset);
+            }
+
+            LoadedAssets.Clear();
         }
 
         private void AdjustVirtualResolution(object sender, EventArgs e)
@@ -54,33 +76,5 @@ namespace GameMenu
         }
 
         protected abstract void LoadScene();
-
-        public override async Task Execute()
-        {
-            while (IsRunning)
-            {
-                await Script.NextFrame();
-
-                UpdateScene(Game.UpdateTime);
-            }
-        }
-
-        protected virtual void UpdateScene(GameTime time)
-        {
-        }
-
-        protected override void Destroy()
-        {
-            base.Destroy();
-
-            IsRunning = false;
-
-            SceneCreated = false;
-
-            foreach (var asset in LoadedAssets)
-                Asset.Unload(asset);
-
-            LoadedAssets.Clear();
-        }
     }
 }

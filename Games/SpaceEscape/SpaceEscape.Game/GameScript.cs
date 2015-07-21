@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using System;
 
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
@@ -10,7 +10,7 @@ namespace SpaceEscape
     /// <summary>
     /// GameScript manages all entities in the game: Camera, CharacterScript, BackgroundScript and Obstacles.
     /// </summary>
-    public class GameScript : AsyncScript
+    public class GameScript : SyncScript
     {
         /// <summary>
         /// The reference to the character script
@@ -26,11 +26,11 @@ namespace SpaceEscape
         /// The reference to the UI script
         /// </summary>
         public UIScript UIScript;
-        
+
+        private bool isFirstUpdate;
+
         public override void Start()
         {
-            base.Start();
-
             // Enable visual of mouse in the game
             Game.Window.IsMouseVisible = true;
 
@@ -38,10 +38,17 @@ namespace SpaceEscape
             Input.MultiTouchEnabled = false;
 
             // Update the distance displayed in the UI
-            BackgroundScript.DistanceUpdated += curDist => UIScript.SetDistance((int)curDist);
+            BackgroundScript.DistanceUpdated += SetDistanceInUI;
 
             // Adjust the color of fog effect.
             GraphicsDevice.Parameters.Set(FogEffectKeys.FogColor, Color.FromAbgr(0xFF7D02FF));
+
+            // set behavior of UI button
+            UIScript.StartButton.Click += StartGame;
+            UIScript.RetryButton.Click += StartGame;
+            UIScript.MenuButton.Click += GoToMenu;
+
+            isFirstUpdate = true;
         }
 
         /// <summary>
@@ -49,31 +56,42 @@ namespace SpaceEscape
         /// and detect if the CharacterScript falls to any hole.
         /// </summary>
         /// <returns></returns>
-        public override async Task Execute()
+        public override void Update()
         {
-            // set behavior of UI button
-            UIScript.StartButton.Click += (s, e) => StartGame();
-            UIScript.RetryButton.Click += (s, e) => StartGame();
-            UIScript.MenuButton.Click += (s, e) => GoToMenu();
-
-            while (Game.IsRunning)
+            if (isFirstUpdate)
             {
-                await Script.NextFrame();
-
-                if (CharacterScript.IsDead)
-                    continue;
-
-                float floorHeight;
-                var agentBoundingBox = CharacterScript.CalculateCurrentBoundingBox();
-
-                // Detect collision between agents and real-world obstacles.
-                if (BackgroundScript.DetectCollisions(ref agentBoundingBox))
-                    KillAgent(0);
-
-                // Detect if the CharacterScript falls into a hole
-                if (BackgroundScript.DetectHoles(ref CharacterScript.Entity.Transform.Position, out floorHeight))
-                    KillAgent(floorHeight);
+                KillAgent(0);
+                GoToMenu(this, EventArgs.Empty);
+                isFirstUpdate = false;
             }
+
+            if (CharacterScript.IsDead)
+                return;
+
+            float floorHeight;
+            var agentBoundingBox = CharacterScript.CalculateCurrentBoundingBox();
+
+            // Detect collision between agents and real-world obstacles.
+            if (BackgroundScript.DetectCollisions(ref agentBoundingBox))
+                KillAgent(0);
+
+            // Detect if the CharacterScript falls into a hole
+            if (BackgroundScript.DetectHoles(ref CharacterScript.Entity.Transform.Position, out floorHeight))
+                KillAgent(floorHeight);
+        }
+
+        public override void Cancel()
+        {
+            BackgroundScript.DistanceUpdated -= SetDistanceInUI;
+
+            UIScript.StartButton.Click -= StartGame;
+            UIScript.RetryButton.Click -= StartGame;
+            UIScript.MenuButton.Click -= GoToMenu;
+        }
+
+        private void SetDistanceInUI(float curDist)
+        {
+            UIScript.SetDistance((int)curDist);
         }
 
         /// <summary>
@@ -83,7 +101,7 @@ namespace SpaceEscape
         {
             CharacterScript.OnDied(height);
             UIScript.StartGameOverMode();
-            StartGameOverMode();
+            BackgroundScript.StopScrolling();
         }
 
         /// <summary>
@@ -98,7 +116,7 @@ namespace SpaceEscape
         /// <summary>
         /// Start playing
         /// </summary>
-        private void StartGame()
+        private void StartGame(object sender, EventArgs args)
         {
             ResetGame();
             UIScript.StartPlayMode();
@@ -109,18 +127,10 @@ namespace SpaceEscape
         /// <summary>
         /// Go to the menu screen
         /// </summary>
-        private void GoToMenu()
+        private void GoToMenu(object sender, EventArgs args)
         {
             UIScript.StartMainMenuMode();
             ResetGame();
-        }
-
-        /// <summary>
-        /// Set game state to game over
-        /// </summary>
-        private void StartGameOverMode()
-        {
-            BackgroundScript.StopScrolling();
         }
     }
 }

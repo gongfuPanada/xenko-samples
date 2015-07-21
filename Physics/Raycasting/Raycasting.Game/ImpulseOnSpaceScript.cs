@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.Engine;
@@ -8,21 +7,16 @@ namespace Raycasting
     /// <summary>
     /// Apply an impulse on the entity when pressing key 'Space'
     /// </summary>
-    public class ImpulseOnSpaceScript : AsyncScript
+    public class ImpulseOnSpaceScript : SyncScript
     {
-        public override async Task Execute()
+        public override void Update()
         {
-            var rigidBody = Entity.Get<PhysicsComponent>()[0].RigidBody;
-
-            while (Game.IsRunning)
+            if (Input.IsKeyDown(Keys.Space))
             {
-                if (Input.IsKeyDown(Keys.Space))
-                {
-                    rigidBody.Activate();
-                    rigidBody.ApplyImpulse(new Vector3(0, 1, 0));
-                }
+                var rigidBody = Entity.Get<PhysicsComponent>()[0].RigidBody;
 
-                await Script.NextFrame();
+                rigidBody.Activate();
+                rigidBody.ApplyImpulse(new Vector3(0, 1, 0));
             }
         }
     }

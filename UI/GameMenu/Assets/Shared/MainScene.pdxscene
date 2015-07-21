@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 9294c606-6173-4215-a8dc-0d5043d68333
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 5902cb0e-1de8-4080-a676-4ad701023f1c
@@ -20,7 +21,7 @@ Hierarchy:
                     Children: []
             Id: 50f9b452-2012-451b-95cd-57ff4f313e4b
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers

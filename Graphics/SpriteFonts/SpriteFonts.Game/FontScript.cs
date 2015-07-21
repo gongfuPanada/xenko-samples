@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -22,7 +21,7 @@ namespace SpriteFonts
     /// 6. Three alignment modes {Left, Center, Right}
     /// 7. Animated text
     /// </summary>
-    public class FontScript : Script
+    public class FontScript : SyncScript
     {
         // Time to display text groups where the first index corresponding to introduction text, and the rest corresponding to text groups
         private static readonly float[] TimeToDisplayTextGroups = { 3f /*Intro*/, 5f /*Static*/, 5f /*Dynamic*/, 4f /*Style*/, 5f /*Alias*/,
@@ -80,6 +79,8 @@ at full size and full measure";
 
         private Vector2 virtualResolution = new Vector2(1920, 1080);
 
+        private SceneDelegateRenderer delegateRenderer;
+
         /// <summary>
         /// Draw all text groups with SpriteBatch
         /// </summary>
@@ -114,15 +115,38 @@ at full size and full measure";
             screenRenderers.Add(DrawAlignmentCategory);
             screenRenderers.Add(DrawAnimationCategory);
 
-            // Add the background task to update the font parameters
-            Script.AddTask(UpdateAnimatedFontParameters);
-            Script.AddTask(UpdateInput);
-            Script.AddTask(UpdateCurrentScreenIndex);
-
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers) scene.Settings.GraphicsCompositor);
-            compositor.Master.Renderers.Add(new SceneDelegateRenderer(DrawFont));
+            compositor.Master.Renderers.Add(delegateRenderer = new SceneDelegateRenderer(DrawFont));
+        }
+
+        public override void Update()
+        {
+            UpdateAnimatedFontParameters();
+            UpdateInput();
+            UpdateCurrentScreenIndex();
+        }
+
+        public override void Cancel()
+        {
+            // Remove the delegate renderer from the pipeline
+            var scene = SceneSystem.SceneInstance.Scene;
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
+            compositor.Master.Renderers.Remove(delegateRenderer);
+
+            // Dispose graphic resource
+            spriteBatch.Dispose();
+            Asset.Unload(staticFont);
+            Asset.Unload(dynamicFont);
+            Asset.Unload(boldFont);
+            Asset.Unload(italicFont);
+            Asset.Unload(aliasedFont);
+            Asset.Unload(antialiasedFont);
+            Asset.Unload(clearTypeFont);
+            Asset.Unload(japaneseFont);
+            Asset.Unload(timesNewRoman);
+            Asset.Unload(headerFont);
         }
 
         #region Draw Methods
@@ -348,39 +372,28 @@ at full size and full measure";
         /// Input commands are for controlling: 1. Text group advancing, 2. Previous/Next text group selection.
         /// </summary>
         /// <returns></returns>
-        private async Task UpdateInput()
+        private void UpdateInput()
         {
-            while (Game.IsRunning)
+            // Toggle play/not play
+            if (Input.IsKeyPressed(Keys.Space) || Input.PointerEvents.Any(pointerEvent => pointerEvent.State == PointerState.Down))
             {
-                // Wait for next frame
-                await Script.NextFrame();
-
-                // Toggle play/not play
-                if (Input.IsKeyPressed(Keys.Space) || Input.PointerEvents.Any(pointerEvent => pointerEvent.State == PointerState.Down))
-                {
-                    isPlaying = !isPlaying;
-                }
-                else if (Input.IsKeyPressed(Keys.Left) || Input.IsKeyPressed(Keys.Right))
-                {
-                    currentTime = 0;
-                    currentScreenIndex = (currentScreenIndex + (Input.IsKeyPressed(Keys.Left) ? -1 : +1) + screenRenderers.Count) % screenRenderers.Count;
-                }
+                isPlaying = !isPlaying;
+            }
+            else if (Input.IsKeyPressed(Keys.Left) || Input.IsKeyPressed(Keys.Right))
+            {
+                currentTime = 0;
+                currentScreenIndex = (currentScreenIndex + (Input.IsKeyPressed(Keys.Left) ? -1 : +1) + screenRenderers.Count) % screenRenderers.Count;
             }
         }
 
-        private async Task UpdateCurrentScreenIndex()
+        private void UpdateCurrentScreenIndex()
         {
-            while (Game.IsRunning)
+            var upperBound = TimeToDisplayTextGroups[currentScreenIndex];
+
+            if (currentTime > upperBound)
             {
-                await Script.NextFrame();
-
-                var upperBound = TimeToDisplayTextGroups[currentScreenIndex];
-
-                if (currentTime > upperBound)
-                {
-                    currentTime = 0;
-                    currentScreenIndex = (currentScreenIndex + 1) % screenRenderers.Count;
-                }
+                currentTime = 0;
+                currentScreenIndex = (currentScreenIndex + 1) % screenRenderers.Count;
             }
         }
 
@@ -388,21 +401,15 @@ at full size and full measure";
         /// Update the main font parameters according to sample state.
         /// </summary>
         /// <returns></returns>
-        private async Task UpdateAnimatedFontParameters()
+        private void UpdateAnimatedFontParameters()
         {
-            while (Game.IsRunning)
-            {
-                // Wait for next frame
-                await Script.NextFrame();
+            if (!isPlaying)
+                return;
 
-                if (!isPlaying)
-                    continue;
-
-                animatedFontAlpha = GetVaryingValue(1.6f * currentTime);
-                animatedFontRotation = 2f * currentTime * (float)Math.PI;
-                animatedFontPosition = GetVirtualPosition(0.5f, 0.65f) + 160 * new Vector2(1.5f * (float)Math.Cos(1.5f * currentTime), (float)Math.Sin(1.5f * currentTime));
-                animatedFontScale = 0.9f + 0.2f * GetVaryingValue(2.5f * currentTime);
-            }
+            animatedFontAlpha = GetVaryingValue(1.6f * currentTime);
+            animatedFontRotation = 2f * currentTime * (float)Math.PI;
+            animatedFontPosition = GetVirtualPosition(0.5f, 0.65f) + 160 * new Vector2(1.5f * (float)Math.Cos(1.5f * currentTime), (float)Math.Sin(1.5f * currentTime));
+            animatedFontScale = 0.9f + 0.2f * GetVaryingValue(2.5f * currentTime);
         }
 
         /// <summary>

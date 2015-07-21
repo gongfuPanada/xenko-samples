@@ -7,7 +7,7 @@ namespace RenderSceneToTexture
     /// <summary>
     /// Set the source of the sprite component.
     /// </summary>
-    public class SetSpriteSource : Script
+    public class SetSpriteSource : StartupScript
     {
         public override void Start()
         {
@@ -15,7 +15,9 @@ namespace RenderSceneToTexture
 
             var spriteComponent = Entity.Get<SpriteComponent>();
             var spriteSource = Asset.Load<RenderFrame>("RenderFrame").RenderTargets[0];
-            spriteComponent.SpriteProvider = new SpriteFromTexture { Texture = spriteSource };
+			var spriteFromTexture = spriteComponent.SpriteProvider as SpriteFromTexture;
+			if(spriteFromTexture != null)
+				spriteFromTexture.Texture = spriteSource;
         }
     }
 }

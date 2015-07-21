@@ -13,7 +13,7 @@ namespace ForwardLighting
     /// <summary>
     /// The script in charge of display the UI
     /// </summary>
-    public class UIScript : Script
+    public class UIScript : StartupScript
     {
         /// <summary>
         /// The key to get the light component associated to button.
@@ -84,7 +84,15 @@ namespace ForwardLighting
 
             Entity.Get<UIComponent>().RootElement = stackPanel;
         }
-        
+
+        public override void Cancel()
+        {
+            // Cleanup when script is removed
+            Entity.Get<UIComponent>().RootElement = null;
+
+            base.Cancel();
+        }
+
         // Function in charge of toggling on/off the lights shadow maps
         private static void ToggleShadowMap(Object sender, RoutedEventArgs args)
         {

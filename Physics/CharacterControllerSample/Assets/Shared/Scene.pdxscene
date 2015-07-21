@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: d5e84a80-4837-43b8-bf9c-857fb5161886
@@ -8,12 +9,12 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 TransformComponent.Key:
                     Position: {X: 0, Y: -5, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -23,17 +24,17 @@ Hierarchy:
         -   Name: Enemy
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 4a17b086-10b4-4c11-b9ec-8baad5730240:enemy_active
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:enemy_active
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: StaticRigidBody
                             Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0
-                            Type: StaticRigidBody
                 ScriptComponent.Key:
                     Scripts:
                         - !CharacterControllerSample.EnemyScript,CharacterControllerSample.Game
@@ -69,17 +70,17 @@ Hierarchy:
         -   Name: Player
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 8c0a1b54-0f77-4ef6-8bb7-ca31c03c004e:player_idle
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 8c0a1b54-0f77-4ef6-8bb7-ca31c03c004e:player_idle
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   CanCollideWith: 0
-                            CollisionGroup: 0
-                            LinkedBoneName: null
+                        -   Type: CharacterController
                             Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
+                            CollisionGroup: 0
+                            CanCollideWith: 0
+                            LinkedBoneName: null
                             StepHeight: 0.1
-                            Type: CharacterController
                 ScriptComponent.Key:
                     Scripts:
                         - !CharacterControllerSample.CharacterScript,CharacterControllerSample.Game
@@ -87,11 +88,11 @@ Hierarchy:
                 TransformComponent.Key:
                     Position: {X: -4, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1.5, Y: 1.5, Z: 0}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 9a60a268-6c2d-44d9-bac2-a4c569a73ef0
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -118,7 +119,6 @@ Hierarchy:
                         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
                         SceneUnit: 1
                         Camera:
-                            Projection: Orthographic
                             OrthographicSize: 12
                             FarPlane: 100
                         Mode: !SceneEditorGraphicsModeLDRSettings

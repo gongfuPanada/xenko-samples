@@ -43,10 +43,8 @@ namespace JumpyJet
         /// </summary>
         public float PositionBack { get {  return Entity.Transform.Position.X - agentWidth / 2f;} }
 
-        public override void Start()
+        public void Start()
         {
-            base.Start();
-
             // Get texture region from the sprite
             var textureRegion = Entity.Get<SpriteComponent>().SpriteProvider.GetSprite(0).Region;
             agentWidth = textureRegion.Width;
@@ -100,6 +98,8 @@ namespace JumpyJet
         /// </summary>
         public override async Task Execute()
         {
+            Start();
+
             while (Game.IsRunning)
             {
                 await Script.NextFrame();

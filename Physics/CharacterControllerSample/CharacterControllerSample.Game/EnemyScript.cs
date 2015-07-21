@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
 
@@ -7,14 +6,12 @@ namespace CharacterControllerSample
     /// <summary>
     /// This simple script will start the sprite idle animation
     /// </summary>
-    public class EnemyScript : AsyncScript
+    public class EnemyScript : StartupScript
     {
-        public override Task Execute()
+        public override void Start()
         {
             var sprite = Entity.Get<SpriteComponent>();
             SpriteAnimation.Play(sprite, 0, sprite.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, 2);
-            
-            return Task.FromResult(0);
         }
     }
 }

@@ -33,9 +33,9 @@ namespace SpriteEntity
         private AgentAnimation currentAgentAnimation;
         private SpriteComponent agentSpriteComponent;
         private RectangleF agentSpriteRegion;
-        private SpriteGroup agentIdle;
-        private SpriteGroup agentRun;
-        private SpriteGroup agentShoot;
+        private SpriteSheet agentIdle;
+        private SpriteSheet agentRun;
+        private SpriteSheet agentShoot;
 
         // TODO centralize 
         private const float gameWidthX = 16f;       // from -8f to 8f
@@ -71,11 +71,11 @@ namespace SpriteEntity
 
         public override async Task Execute()
         {
-            agentIdle = Asset.Load<SpriteGroup>("character_idle");
-            agentRun = Asset.Load<SpriteGroup>("character_run");
-            agentShoot = Asset.Load<SpriteGroup>("character_shoot");
-            agentSpriteRegion = agentIdle.Images.First().Region;
-            var bulletSpriteGroup = Asset.Load<SpriteGroup>("bullet");
+            agentIdle = Asset.Load<SpriteSheet>("character_idle");
+            agentRun = Asset.Load<SpriteSheet>("character_run");
+            agentShoot = Asset.Load<SpriteSheet>("character_shoot");
+            agentSpriteRegion = agentIdle.Sprites.First().Region;
+            var bulletSpriteSheet = Asset.Load<SpriteSheet>("bullet");
 
             agentSpriteComponent = Entity.Get<SpriteComponent>();
 
@@ -105,9 +105,9 @@ namespace SpriteEntity
                 if (inputState == InputState.RunLeft || inputState == InputState.RunRight)
                 {
                     // Update Agent's position
-                    var dt = (float)Game.UpdateTime.Elapsed.TotalSeconds ;
+                    var dt = (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
-                    Entity.Transform.Position.X += ((inputState == InputState.RunRight) ? AgentMoveDistance : -AgentMoveDistance) * dt ;
+                    Entity.Transform.Position.X += ((inputState == InputState.RunRight) ? AgentMoveDistance : -AgentMoveDistance) * dt;
 
                     if (Entity.Transform.Position.X < -gameWidthHalfX)
                         Entity.Transform.Position.X = -gameWidthHalfX;
@@ -118,10 +118,10 @@ namespace SpriteEntity
                     isAgentFacingRight = inputState == InputState.RunRight;
 
                     // If agent face left, flip the sprite
-                    Entity.Transform.Scale.X = isAgentFacingRight ? 2f : -2f;
+                    Entity.Transform.Scale.X = isAgentFacingRight ? 1f : -1f;
 
                     // Update the sprite animation and state
-                    agentSpriteComponent.SpriteProvider = new SpriteFromSpriteGroup{SpriteGroup = agentRun};
+                    agentSpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = agentRun };
                     CurrentAgentAnimation = AgentAnimation.Run;
                 }
                 else if (inputState == InputState.Shoot)
@@ -139,27 +139,26 @@ namespace SpriteEntity
                     // Spawns a new bullet
                     var bullet = new Entity
                     {
-                        new SpriteComponent { SpriteProvider = new SpriteFromSpriteGroup { SpriteGroup = bulletSpriteGroup } },
+                        new SpriteComponent { SpriteProvider = new SpriteFromSheet { Sheet = bulletSpriteSheet } },
 
                         // Will make the beam move along a direction at each frame
                         new ScriptComponent { Scripts = { new BeamScript { DirectionX = isAgentFacingRight? 1f : -1f } } }
                     };
 
-                    bullet.Transform.Scale = new Vector3(0.1f, 0.1f, 1.0f); // TODO fix this
                     bullet.Transform.Position = (isAgentFacingRight)
                         ? Entity.Transform.Position + bulletOffset
                         : Entity.Transform.Position + (bulletOffset * new Vector3(-1, 1, 1));
 
                     SceneSystem.SceneInstance.Scene.AddChild(bullet);
                     Logic.WatchBullet(bullet);
-                    
+
                     // Start animation for shooting
-                    agentSpriteComponent.SpriteProvider = new SpriteFromSpriteGroup { SpriteGroup = agentShoot };
-                    CurrentAgentAnimation = AgentAnimation.Shoot; 
+                    agentSpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = agentShoot };
+                    CurrentAgentAnimation = AgentAnimation.Shoot;
                 }
                 else
                 {
-                    agentSpriteComponent.SpriteProvider = new SpriteFromSpriteGroup { SpriteGroup = agentIdle };
+                    agentSpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = agentIdle };
                     CurrentAgentAnimation = AgentAnimation.Idle;
                 }
             }
@@ -213,7 +212,7 @@ namespace SpriteEntity
 
             // Check if a pointer falls left or right of the screen, which would correspond to Run to the left or right respectively 
             return ((pointerState.Position.X) <= agentSpriteRegion.Center.X / resolution.X) ? InputState.RunLeft : InputState.RunRight;
- 
+
         }
 
         private float VirtualCoordToPixel(float virtualCoord)

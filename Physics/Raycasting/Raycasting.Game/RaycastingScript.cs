@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Input;
@@ -7,10 +6,24 @@ using SiliconStudio.Paradox.Physics;
 
 namespace Raycasting
 {
-    public class RaycastingScript : AsyncScript
+    public class RaycastingScript : SyncScript
     {
         private Simulation simulation;
         private CameraComponent camera;
+
+        public override void Start()
+        {
+            camera = Entity.Get<CameraComponent>();
+            simulation = Entity.Get<PhysicsComponent>().Simulation;
+        }
+
+        public override void Update()
+        {
+            foreach (var pointerEvent in Input.PointerEvents.Where(x => x.State == PointerState.Down))
+            {
+                Raycast(pointerEvent.Position);
+            }
+        }
 
         private void Raycast(Vector2 screenPos)
         {
@@ -39,24 +52,6 @@ namespace Raycasting
 
             rigidBody.Activate();
             rigidBody.ApplyImpulse(new Vector3(0, 5, 0));
-        }
-
-        public override async Task Execute()
-        {
-            simulation = Entity.Get<PhysicsComponent>().Simulation;
-            simulation.Gravity *= 1.0f; //1 unit = 1 m so we need to multiply default gravity.
-
-            camera = Entity.Get<CameraComponent>();
-
-            while (Game.IsRunning)
-            {
-                foreach (var pointerEvent in Input.PointerEvents.Where(x => x.State == PointerState.Down))
-                {
-                    Raycast(pointerEvent.Position);
-                }
-
-                await Script.NextFrame();
-            }
         }
     }
 }

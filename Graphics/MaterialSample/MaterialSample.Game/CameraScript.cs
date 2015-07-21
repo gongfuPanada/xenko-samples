@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Input;
@@ -46,8 +47,9 @@ namespace MaterialSample
                 var dragEvent = (GestureEventDrag)Input.GestureEvents.FirstOrDefault(e => e.Type == GestureType.Drag);
                 if(dragEvent != null)
                 {
-                    yaw += dragEvent.DeltaTranslation.X * rotationSpeed;
-                    pitch += dragEvent.DeltaTranslation.Y * rotationSpeed;
+                    var direction = Input.HasMouse? -1f: 1f;
+                    yaw += direction * dragEvent.DeltaTranslation.X * rotationSpeed;
+                    pitch += direction * dragEvent.DeltaTranslation.Y * rotationSpeed;
                 }
 
                 // Compute translation speed according to framerate and modifiers

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -10,7 +9,7 @@ using SiliconStudio.Paradox.Input;
 
 namespace TouchInputs
 {
-    public class TouchInputsScript : Script
+    public class TouchInputsScript : SyncScript
     {
         private const float TextSpaceY = 3;
         private const float TextSubSectionOffsetX = 15;
@@ -66,6 +65,8 @@ namespace TouchInputs
 
         private Vector2 virtualResolution = new Vector2(1920, 1080);
 
+        private SceneDelegateRenderer delegateRenderer;
+
         public override void Start()
         {
             // Load the fonts
@@ -83,19 +84,157 @@ namespace TouchInputs
             roundTextureSize = new Vector2(roundTexture.Width, roundTexture.Height);
 
             // activate the gesture recognitions
-            Input.ActivatedGestures.Add(new GestureConfigDrag());
-            Input.ActivatedGestures.Add(new GestureConfigFlick());
-            Input.ActivatedGestures.Add(new GestureConfigLongPress());
-            Input.ActivatedGestures.Add(new GestureConfigComposite());
-            Input.ActivatedGestures.Add(new GestureConfigTap());
-
-            // add a task to the task scheduler that will be executed asynchronously 
-            Script.AddTask(UpdateInputStates);
+            if (!IsLiveReloading) // Live Scripting: do it only on first launch
+            {
+                Input.ActivatedGestures.Add(new GestureConfigDrag());
+                Input.ActivatedGestures.Add(new GestureConfigFlick());
+                Input.ActivatedGestures.Add(new GestureConfigLongPress());
+                Input.ActivatedGestures.Add(new GestureConfigComposite());
+                Input.ActivatedGestures.Add(new GestureConfigTap());
+            }
 
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
-            compositor.Master.Renderers.Add(new SceneDelegateRenderer(Render));
+            compositor.Master.Renderers.Add(delegateRenderer = new SceneDelegateRenderer(Render));
+        }
+
+        public override void Cancel()
+        {
+            // remove the delegate renderer from the pipeline
+            var scene = SceneSystem.SceneInstance.Scene;
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
+            compositor.Master.Renderers.Remove(delegateRenderer);
+
+            // Unload graphic objects
+            spriteBatch.Dispose();
+            Asset.Unload(spriteFont11);
+            Asset.Unload(roundTexture);
+        }
+
+        public override void Update()
+        {
+            var currentTime = Game.DrawTime.Total;
+
+            keyDown = "";
+            keyEvents = "";
+            mouseButtonPressed = "";
+            mouseButtonDown = "";
+            mouseButtonReleased = "";
+            dragEvent = "";
+            flickEvent = "";
+            longPressEvent = "";
+            compositeEvent = "";
+            tapEvent = "";
+            gamePadText = "";
+
+            // Keyboard
+            if (Input.HasKeyboard)
+            {
+                foreach (var keyEvent in Input.KeyEvents)
+                    keyEvents += keyEvent + ", ";
+
+                foreach (var key in Input.KeyDown)
+                    keyDown += key + ", ";
+            }
+
+            // Mouse
+            if (Input.HasMouse)
+            {
+                mousePosition = Input.MousePosition;
+                for (int i = 0; i <= (int)MouseButton.Extended2; i++)
+                {
+                    var button = (MouseButton)i;
+                    if (Input.IsMouseButtonPressed(button))
+                        mouseButtonPressed += button + ", ";
+                    if (Input.IsMouseButtonDown(button))
+                        mouseButtonDown += button + ", ";
+                    if (Input.IsMouseButtonReleased(button))
+                        mouseButtonReleased += button + ", ";
+                }
+            }
+
+            // Pointers
+            if (Input.HasPointer)
+            {
+                foreach (var pointerEvent in Input.PointerEvents)
+                {
+                    switch (pointerEvent.State)
+                    {
+                        case PointerState.Down:
+                            pointerPressed.Enqueue(Tuple.Create(pointerEvent.Position, currentTime));
+                            break;
+                        case PointerState.Move:
+                            pointerMoved.Enqueue(Tuple.Create(pointerEvent.Position, currentTime));
+                            break;
+                        case PointerState.Up:
+                            pointerReleased.Enqueue(Tuple.Create(pointerEvent.Position, currentTime));
+                            break;
+                        case PointerState.Out:
+                        case PointerState.Cancel:
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
+
+                // remove too old pointer events
+                RemoveOldPointerEventInfo(pointerPressed);
+                RemoveOldPointerEventInfo(pointerMoved);
+                RemoveOldPointerEventInfo(pointerReleased);
+            }
+
+            // Gestures
+            foreach (var gestureEvent in Input.GestureEvents)
+            {
+                switch (gestureEvent.Type)
+                {
+                    case GestureType.Drag:
+                        var dragGestureEvent = (GestureEventDrag)gestureEvent;
+                        dragEvent = "Translation = " + dragGestureEvent.TotalTranslation;
+                        break;
+                    case GestureType.Flick:
+                        lastFlickEvent = Tuple.Create(gestureEvent, currentTime);
+                        break;
+                    case GestureType.LongPress:
+                        lastLongPressEvent = Tuple.Create(gestureEvent, currentTime);
+                        break;
+                    case GestureType.Composite:
+                        var compositeGestureEvent = (GestureEventComposite)gestureEvent;
+                        compositeEvent = "Rotation = " + compositeGestureEvent.TotalRotation + " - Scale = " + compositeGestureEvent.TotalScale + " - Translation = " + compositeGestureEvent.TotalTranslation;
+                        break;
+                    case GestureType.Tap:
+                        lastTapEvent = Tuple.Create(gestureEvent, currentTime);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
+
+            if (Input.HasGamePad)
+            {
+                for (int i = 0; i < Input.GamePadCount; i++)
+                {
+                    var gamePadState = Input.GetGamePad(i);
+                    gamePadText += "\n[" + i + "] " + gamePadState;
+                }
+            }
+
+            if (currentTime - lastFlickEvent.Item2 < displayGestureDuration && lastFlickEvent.Item1 != null)
+            {
+                var flickGestureEvent = (GestureEventFlick)lastFlickEvent.Item1;
+                flickEvent = " Start Position = " + flickGestureEvent.StartPosition + " - Speed = " + flickGestureEvent.AverageSpeed;
+            }
+            if (currentTime - lastLongPressEvent.Item2 < displayGestureDuration && lastLongPressEvent.Item1 != null)
+            {
+                var longPressGestureEvent = (GestureEventLongPress)lastLongPressEvent.Item1;
+                longPressEvent = " Position = " + longPressGestureEvent.Position;
+            }
+            if (currentTime - lastTapEvent.Item2 < displayGestureDuration && lastTapEvent.Item1 != null)
+            {
+                var tapGestureEvent = (GestureEventTap)lastTapEvent.Item1;
+                tapEvent = " Position = " + tapGestureEvent.TapPosition + " - number of taps = " + tapGestureEvent.NumberOfTaps;
+            }
         }
 
         private void Render(RenderContext context, RenderFrame frame)
@@ -146,136 +285,6 @@ namespace TouchInputs
             var pointerScreenPosition = new Vector2(position.X * screenSize.X, position.Y * screenSize.Y);
 
             spriteBatch.Draw(roundTexture, pointerScreenPosition, baseColor, 0, roundTextureSize / 2, scale * baseScale);
-        }
-
-        private async Task UpdateInputStates()
-        {
-            while (true)
-            {
-                await Script.NextFrame();
-
-                var currentTime = Game.DrawTime.Total;
-
-                keyDown = "";
-                keyEvents = "";
-                mouseButtonPressed = "";
-                mouseButtonDown = "";
-                mouseButtonReleased = "";
-                dragEvent = "";
-                flickEvent = "";
-                longPressEvent = "";
-                compositeEvent = "";
-                tapEvent = "";
-                gamePadText = "";
-
-                // Keyboard
-                if (Input.HasKeyboard)
-                {
-                    foreach (var keyEvent in Input.KeyEvents)
-                        keyEvents += keyEvent + ", ";
-
-                    foreach (var key in Input.KeyDown)
-                        keyDown += key + ", ";
-                }
-
-                // Mouse
-                if (Input.HasMouse)
-                {
-                    mousePosition = Input.MousePosition;
-                    for (int i = 0; i <= (int)MouseButton.Extended2; i++)
-                    {
-                        var button = (MouseButton)i;
-                        if (Input.IsMouseButtonPressed(button))
-                            mouseButtonPressed += button + ", ";
-                        if (Input.IsMouseButtonDown(button))
-                            mouseButtonDown += button + ", ";
-                        if (Input.IsMouseButtonReleased(button))
-                            mouseButtonReleased += button + ", ";
-                    }
-                }
-
-                // Pointers
-                if (Input.HasPointer)
-                {
-                    foreach (var pointerEvent in Input.PointerEvents)
-                    {
-                        switch (pointerEvent.State)
-                        {
-                            case PointerState.Down:
-                                pointerPressed.Enqueue(Tuple.Create(pointerEvent.Position, currentTime));
-                                break;
-                            case PointerState.Move:
-                                pointerMoved.Enqueue(Tuple.Create(pointerEvent.Position, currentTime));
-                                break;
-                            case PointerState.Up:
-                                pointerReleased.Enqueue(Tuple.Create(pointerEvent.Position, currentTime));
-                                break;
-                            case PointerState.Out:
-                            case PointerState.Cancel:
-                                break;
-                            default:
-                                throw new ArgumentOutOfRangeException();
-                        }
-                    }
-
-                    // remove too old pointer events
-                    RemoveOldPointerEventInfo(pointerPressed);
-                    RemoveOldPointerEventInfo(pointerMoved);
-                    RemoveOldPointerEventInfo(pointerReleased);
-                }
-
-                // Gestures
-                foreach (var gestureEvent in Input.GestureEvents)
-                {
-                    switch (gestureEvent.Type)
-                    {
-                        case GestureType.Drag:
-                            var dragGestureEvent = (GestureEventDrag)gestureEvent;
-                            dragEvent = "Translation = " + dragGestureEvent.TotalTranslation;
-                            break;
-                        case GestureType.Flick:
-                            lastFlickEvent = Tuple.Create(gestureEvent, currentTime);
-                            break;
-                        case GestureType.LongPress:
-                            lastLongPressEvent = Tuple.Create(gestureEvent, currentTime);
-                            break;
-                        case GestureType.Composite:
-                            var compositeGestureEvent = (GestureEventComposite)gestureEvent;
-                            compositeEvent = "Rotation = " + compositeGestureEvent.TotalRotation + " - Scale = " + compositeGestureEvent.TotalScale + " - Translation = " + compositeGestureEvent.TotalTranslation;
-                            break;
-                        case GestureType.Tap:
-                            lastTapEvent = Tuple.Create(gestureEvent, currentTime);
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
-                    }
-                }
-
-                if (Input.HasGamePad)
-                {
-                    for (int i = 0; i < Input.GamePadCount; i++)
-                    {
-                        var gamePadState = Input.GetGamePad(i);
-                        gamePadText += "\n[" + i + "] " + gamePadState;
-                    }
-                }
-
-                if (currentTime - lastFlickEvent.Item2 < displayGestureDuration && lastFlickEvent.Item1 != null)
-                {
-                    var flickGestureEvent = (GestureEventFlick)lastFlickEvent.Item1;
-                    flickEvent = " Start Position = " + flickGestureEvent.StartPosition + " - Speed = " + flickGestureEvent.AverageSpeed;
-                }
-                if (currentTime - lastLongPressEvent.Item2 < displayGestureDuration && lastLongPressEvent.Item1 != null)
-                {
-                    var longPressGestureEvent = (GestureEventLongPress)lastLongPressEvent.Item1;
-                    longPressEvent = " Position = " + longPressGestureEvent.Position;
-                }
-                if (currentTime - lastTapEvent.Item2 < displayGestureDuration && lastTapEvent.Item1 != null)
-                {
-                    var tapGestureEvent = (GestureEventTap)lastTapEvent.Item1;
-                    tapEvent = " Position = " + tapGestureEvent.TapPosition + " - number of taps = " + tapGestureEvent.NumberOfTaps;
-                }
-            }
         }
 
         /// <summary>

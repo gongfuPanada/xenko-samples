@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 286c3e80-cf3f-4804-ad57-2c617f116e4c
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 74543024-71fe-416e-933e-b868b47b3709
@@ -10,7 +11,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 1, G: 1, B: 1}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Importance: High
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
@@ -27,13 +28,13 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: 2b13c12a-4d48-4058-8a9d-349d3c40a693:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 6a93b905-f184-480a-b645-7d2627b97445
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -68,13 +69,13 @@ Hierarchy:
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children:
-                        -   Entity: {Id: f770fd9d-75a5-4846-b29e-9f10ae811c9f}
-                            Component: TransformComponent.Key
                         -   Entity: {Id: d968ed53-6c9e-449c-8488-d17f5f8b6f3e}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: a0cf3d39-63ba-4770-b9cb-4ce74d002f34}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 0d9fd13c-1ccf-4748-82b1-359bdc792644}
                             Component: TransformComponent.Key
-                        -   Entity: {Id: a0cf3d39-63ba-4770-b9cb-4ce74d002f34}
+                        -   Entity: {Id: f770fd9d-75a5-4846-b29e-9f10ae811c9f}
                             Component: TransformComponent.Key
                         -   Entity: {Id: 6a93b905-f184-480a-b645-7d2627b97445}
                             Component: TransformComponent.Key
@@ -109,11 +110,9 @@ Hierarchy:
                         - null
                         - null
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 ScriptComponent.Key:
                     Scripts:
-                        - !SimpleModel.RotateEntityScript,%20SimpleModel.Game,%20Version=1.0.0.0,%20Culture=neutral,%20PublicKeyToken=null
+                        - !SimpleModel.RotateEntityScript,SimpleModel.Game
                             Id: 9eeb736a-58ec-4af9-a61e-bf434a8b5ba2
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}

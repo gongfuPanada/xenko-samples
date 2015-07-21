@@ -1,38 +1,48 @@
-!SpriteGroup
+!SpriteSheet
 Id: ab5bcde0-5dba-4d88-b3f7-9480cb10d2ea
+SerializedVersion: 1
 Tags: []
-Images:
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
+Sprites:
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup0
         TextureRegion: {X: 770, Y: 230, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup1
         TextureRegion: {X: 824, Y: 4, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup2
         TextureRegion: {X: 721, Y: 136, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup3
         TextureRegion: {X: 616, Y: 268, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup4
         TextureRegion: {X: 462, Y: 268, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup5
         TextureRegion: {X: 308, Y: 268, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup6
         TextureRegion: {X: 154, Y: 268, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: blowup7
         TextureRegion: {X: 0, Y: 268, Width: 150, Height: 90}
         Center: {X: 0, Y: 0}
-ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: Color32Bits
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}

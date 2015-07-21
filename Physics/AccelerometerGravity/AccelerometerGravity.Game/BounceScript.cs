@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using SiliconStudio.Paradox.Engine;
 
 namespace AccelerometerGravity
@@ -6,9 +5,9 @@ namespace AccelerometerGravity
     /// <summary>
     /// This script will set the restitution of each rigidbody element to 1.0f to allow the entity to bounce
     /// </summary>
-    public class BounceScript : AsyncScript
+    public class BounceScript : StartupScript
     {
-        public override Task Execute()
+        public override void Start()
         {
             var component = Entity.Get<PhysicsComponent>();
             foreach (var physicsElement in component.Elements)
@@ -18,8 +17,6 @@ namespace AccelerometerGravity
                     physicsElement.RigidBody.Restitution = 1.0f;
                 }
             }
-
-            return Task.FromResult(0);
         }
     }
 }

@@ -17,10 +17,8 @@ namespace SimpleDynamicTexture
         private TextBlock textBlock;
 
         // Create the UI layout and content
-        public override void Start()
+        public void Start()
         {
-            base.Start();
-
             textBlock = new TextBlock
             {
                 Text = "Tap The Screen!",
@@ -36,6 +34,8 @@ namespace SimpleDynamicTexture
         // Progressively hide the UI after the user first click.
         public override async Task Execute()
         {
+            Start();
+
             var transparency = 1f;
             var hideMessage = false;
             while (Game.IsRunning && transparency > MathUtil.ZeroTolerance)

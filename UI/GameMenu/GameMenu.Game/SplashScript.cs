@@ -1,6 +1,5 @@
 ﻿using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Games;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.UI;
 using SiliconStudio.Paradox.UI.Controls;
@@ -16,7 +15,7 @@ namespace GameMenu
             Game.Window.AllowUserResizing = true;
 
             var arial = LoadAsset<SpriteFont>("WesternFont");
-            var uiImages = LoadAsset<UIImageGroup>("SplashScreenImages");
+            var uiImages = LoadAsset<SpriteSheet>("SplashScreenImages");
 
             // Create and initialize "Paradox Samples" Text
             var paradoxSampleTextBlock = new ContentDecorator
@@ -110,10 +109,8 @@ namespace GameMenu
             Entity.Get<UIComponent>().RootElement = new UniformGrid { Children = { background, grid } };
         }
 
-        protected override void UpdateScene(GameTime time)
+        protected override void UpdateScene()
         {
-            base.UpdateScene(time);
-
             if (Input.PointerEvents.Count > 0)
             {
                 // Next scene

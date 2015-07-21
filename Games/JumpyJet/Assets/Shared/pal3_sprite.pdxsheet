@@ -1,12 +1,15 @@
-!SpriteGroup
+!SpriteSheet
 Id: b500f8c6-9a2c-4a17-ba43-7048665c34cb
+SerializedVersion: 1
 Tags: []
-Images:
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
+Alpha: Explicit
+Sprites:
     -   Source: ../../RawAssets/tex1.png
         Name: floor
         TextureRegion: {X: 0, Y: 1140, Width: 1920, Height: 279}
         Center: {X: 320, Y: 139.5}
         CenterFromMiddle: false
-ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: Color32Bits
-Alpha: Explicit
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}

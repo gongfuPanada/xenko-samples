@@ -15,7 +15,7 @@ namespace CharacterControllerSample
     /// This script will interface the Physics character controller of the entity to move the character around
     /// Will also animate the sprite of the entity, between run and idle.
     /// </summary>
-    public class CharacterScript : AsyncScript
+    public class CharacterScript : SyncScript
     {
         [Flags]
         enum PlayerState
@@ -26,22 +26,29 @@ namespace CharacterControllerSample
         }
 
         private bool movingToTarget;
-        private SpriteGroup idleGroup;
-        private SpriteGroup runGroup;
+        private SpriteSheet idleGroup;
+        private SpriteSheet runGroup;
         private SpriteComponent playerSprite;
+
+        private const float speed = 0.05f;
+        private PlayerState oldState = PlayerState.Idle;
+        private Vector3 oldDirection = Vector3.Zero;
+        private Vector3 autoPilotTarget = Vector3.Zero;
+
+        private Character playerController;
 
         void PlayIdle()
         {
-            var provider = (SpriteFromSpriteGroup) playerSprite.SpriteProvider;
-            provider.SpriteGroup = idleGroup;
-            SpriteAnimation.Play(playerSprite, 0, provider.SpriteGroup.Images.Count - 1, AnimationRepeatMode.LoopInfinite, 7);
+            var provider = (SpriteFromSheet) playerSprite.SpriteProvider;
+            provider.Sheet = idleGroup;
+            SpriteAnimation.Play(playerSprite, 0, provider.Sheet.Sprites.Count - 1, AnimationRepeatMode.LoopInfinite, 7);
         }
 
         void PlayRun()
         {
-            var provider = (SpriteFromSpriteGroup)playerSprite.SpriteProvider;
-            provider.SpriteGroup = runGroup;
-            SpriteAnimation.Play(playerSprite, 0, provider.SpriteGroup.Images.Count - 1, AnimationRepeatMode.LoopInfinite, 12);
+            var provider = (SpriteFromSheet)playerSprite.SpriteProvider;
+            provider.Sheet = runGroup;
+            SpriteAnimation.Play(playerSprite, 0, provider.Sheet.Sprites.Count - 1, AnimationRepeatMode.LoopInfinite, 12);
         }
 
         void playerController_OnFirstContactBegin(object sender, CollisionArgs e)
@@ -53,14 +60,9 @@ namespace CharacterControllerSample
             }
         }
 
-        public override async Task Execute()
+        public override void Start()
         {
-            const float speed = 0.05f;
-            var oldState = PlayerState.Idle;
-            var oldDirection = Vector3.Zero;
-            var autoPilotTarget = Vector3.Zero;
-            
-            var playerController = Entity.Get<PhysicsComponent>().Elements[0].Character;
+            playerController = Entity.Get<PhysicsComponent>().Elements[0].Character;
 
             //Please remember that in the GameStudio element the parameter Step Height is extremely important, it not set properly it will cause the entity to snap fast to the ground
             playerController.JumpSpeed = 5.0f;
@@ -69,147 +71,153 @@ namespace CharacterControllerSample
 
             playerController.FirstContactStart += playerController_OnFirstContactBegin;
 
-            idleGroup = Asset.Load<SpriteGroup>("player_idle");
-            runGroup = Asset.Load<SpriteGroup>("player_run");
+            idleGroup = Asset.Load<SpriteSheet>("player_idle");
+            runGroup = Asset.Load<SpriteSheet>("player_run");
             playerSprite = Entity.Get<SpriteComponent>();
             PlayIdle();
+        }
 
-            while (Game.IsRunning)
+        public override void Cancel()
+        {
+            playerController.FirstContactStart -= playerController_OnFirstContactBegin;
+
+            // Unload graphic resources.
+            Asset.Unload(idleGroup);
+            Asset.Unload(runGroup);
+        }
+
+        public override void Update()
+        {
+            var playerState = PlayerState.Idle;
+            var playerDirection = Vector3.Zero;
+
+            // -- Keyboard Inputs
+
+            // Space bar = jump
+            if (Input.IsKeyDown(Keys.Space))
             {
-                // Wait next rendering frame
-                await Script.NextFrame();
+                playerState |= PlayerState.Jump;
+            }
 
-                var playerState = PlayerState.Idle;
-                var playerDirection = Vector3.Zero;
+            // Left - right = run
+            if (Input.IsKeyDown(Keys.Right))
+            {
+                movingToTarget = false;
+                playerState |= PlayerState.Run;
+                playerDirection = Vector3.UnitX * speed;
+            }
+            else if (Input.IsKeyDown(Keys.Left))
+            {
+                movingToTarget = false;
+                playerState |= PlayerState.Run;
+                playerDirection = -Vector3.UnitX * speed;
+            }
 
-                // -- Keyboard Inputs
+            // -- Pointer (mouse/touch)
+            foreach (var pointerEvent in Input.PointerEvents.Where(pointerEvent => pointerEvent.State == PointerState.Down))
+            {
+                if (!movingToTarget)
+                {
+                    var screenX = (pointerEvent.Position.X - 0.5f) * 2.0f;
+                    screenX *= 8.75f;
 
-                // Space bar = jump
-                if (Input.IsKeyDown(Keys.Space))
+                    autoPilotTarget = new Vector3(screenX, 0, 0);
+
+                    movingToTarget = true;
+                }
+                else
                 {
                     playerState |= PlayerState.Jump;
                 }
+            }
 
-                // Left - right = run
-                if (Input.IsKeyDown(Keys.Right))
+            // -- Logic
+
+            // are we autopiloting?
+            if (movingToTarget)
+            {
+                var direction = autoPilotTarget - Entity.Transform.Position;
+                direction.Y = 0;
+
+                //should we stop?
+                var length = direction.Length();
+                //stop when we are 5 pixels close
+                if (length < 0.05f && length > -0.05f)
                 {
                     movingToTarget = false;
-                    playerState |= PlayerState.Run;
-                    playerDirection = Vector3.UnitX * speed;
+
+                    playerDirection = Vector3.Zero;
+
+                    playerState = PlayerState.Idle;
                 }
-                else if (Input.IsKeyDown(Keys.Left))
+                else
                 {
-                    movingToTarget = false;
+                    direction.Normalize();
+
+                    playerDirection = (direction.X > 0 ? Vector3.UnitX : -Vector3.UnitX) * speed;
+
                     playerState |= PlayerState.Run;
-                    playerDirection = -Vector3.UnitX * speed;
                 }
+            }
 
-                // -- Pointer (mouse/touch)
-                foreach (var pointerEvent in Input.PointerEvents.Where(pointerEvent => pointerEvent.State == PointerState.Down))
+            // did we start jumping?
+            if (playerState.HasFlag(PlayerState.Jump) && !oldState.HasFlag(PlayerState.Jump))
+            {
+                playerController.Jump();
+            }
+
+            // did we just land?
+            if (oldState.HasFlag(PlayerState.Jump))
+            {
+                if (!playerController.IsGrounded)
                 {
-                    if (!movingToTarget)
-                    {
-                        var screenX = (pointerEvent.Position.X - 0.5f) * 2.0f;
-                        screenX *= 8.75f;
-
-                        autoPilotTarget = new Vector3(screenX, 0, 0);
-
-                        movingToTarget = true;
-                    }
-                    else
+                    //force set jump flag
+                    if (!playerState.HasFlag(PlayerState.Jump))
                     {
                         playerState |= PlayerState.Jump;
+                        // Mantain motion 
+                        playerDirection = oldDirection;
                     }
                 }
-
-                // -- Logic
-
-                // are we autopiloting?
-                if (movingToTarget)
+                else if (playerController.IsGrounded)
                 {
-                    var direction = autoPilotTarget - Entity.Transform.Position;
-                    direction.Y = 0;
-
-                    //should we stop?
-                    var length = direction.Length();
-                    //stop when we are 5 pixels close
-                    if (length < 0.05f && length > -0.05f)
+                    //force clear jump flag
+                    if (playerState.HasFlag(PlayerState.Jump))
                     {
-                        movingToTarget = false;
-
-                        playerDirection = Vector3.Zero;
-
-                        playerState = PlayerState.Idle;
-                    }
-                    else
-                    {
-                        direction.Normalize();
-
-                        playerDirection = (direction.X > 0 ? Vector3.UnitX : -Vector3.UnitX) * speed;
-
-                        playerState |= PlayerState.Run;
+                        playerState ^= PlayerState.Jump;
                     }
                 }
-
-                // did we start jumping?
-                if (playerState.HasFlag(PlayerState.Jump) && !oldState.HasFlag(PlayerState.Jump))
-                {
-                    playerController.Jump();
-                }
-
-                // did we just land?
-                if (oldState.HasFlag(PlayerState.Jump))
-                {
-                    if (!playerController.IsGrounded)
-                    {
-                        //force set jump flag
-                        if (!playerState.HasFlag(PlayerState.Jump))
-                        {
-                            playerState |= PlayerState.Jump;
-                            // Mantain motion 
-                            playerDirection = oldDirection;
-                        }
-                    }
-                    else if (playerController.IsGrounded)
-                    {
-                        //force clear jump flag
-                        if (playerState.HasFlag(PlayerState.Jump))
-                        {
-                            playerState ^= PlayerState.Jump;
-                        }
-                    }
-                }
-
-                // did we start running?
-                if (playerState.HasFlag(PlayerState.Run) && !oldState.HasFlag(PlayerState.Run))
-                {
-                    PlayRun();
-                }
-                // did we stop running?
-                else if (!playerState.HasFlag(PlayerState.Run) && oldState.HasFlag(PlayerState.Run))
-                {
-                    PlayIdle();
-                }
-
-                // movement logic
-                if (oldDirection != playerDirection)
-                {
-                    playerController.Move(playerDirection);
-
-                    if (playerState.HasFlag(PlayerState.Run))
-                    {
-                        if ((playerDirection.X > 0 && Entity.Transform.Scale.X < 0) ||
-                            (playerDirection.X < 0 && Entity.Transform.Scale.X > 0))
-                        {
-                            Entity.Transform.Scale.X *= -1.0f;
-                        }
-                    }
-                }
-
-                // Store current state for next frame
-                oldState = playerState;
-                oldDirection = playerDirection;
             }
+
+            // did we start running?
+            if (playerState.HasFlag(PlayerState.Run) && !oldState.HasFlag(PlayerState.Run))
+            {
+                PlayRun();
+            }
+            // did we stop running?
+            else if (!playerState.HasFlag(PlayerState.Run) && oldState.HasFlag(PlayerState.Run))
+            {
+                PlayIdle();
+            }
+
+            // movement logic
+            if (oldDirection != playerDirection)
+            {
+                playerController.Move(playerDirection);
+
+                if (playerState.HasFlag(PlayerState.Run))
+                {
+                    if ((playerDirection.X > 0 && Entity.Transform.Scale.X < 0) ||
+                        (playerDirection.X < 0 && Entity.Transform.Scale.X > 0))
+                    {
+                        Entity.Transform.Scale.X *= -1.0f;
+                    }
+                }
+            }
+
+            // Store current state for next frame
+            oldState = playerState;
+            oldDirection = playerDirection;
         }
     }
 }

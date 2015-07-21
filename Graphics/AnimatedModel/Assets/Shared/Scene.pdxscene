@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 1d1214c6-8844-4fae-8142-1f986349f8d3
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: d618f5c0-1ff1-433e-9b6a-aa51507401f5
@@ -12,8 +13,6 @@ Hierarchy:
                         - null
                         - null
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 AnimationComponent.Key:
                     Animations:
                         Idle: 0ec9050c-302e-4289-911f-94265cb7b60b:he00_normal_idle Animation
@@ -34,7 +33,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 1, G: 1, B: 1}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Importance: High
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
@@ -57,7 +56,7 @@ Hierarchy:
                             Knight:
                                 Id: 069945be-764a-4de9-88f4-458740f821ff
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: 1}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -79,13 +78,13 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: 51b041a7-2f3e-4327-aa2f-9ac598ddedb1:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -1}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: d13ce4bf-5e8e-4bdf-8415-42cfc8405415
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -121,12 +120,12 @@ Hierarchy:
                     Children:
                         -   Entity: {Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93}
                             Component: TransformComponent.Key
-                        -   Entity: {Id: 069945be-764a-4de9-88f4-458740f821ff}
-                            Component: TransformComponent.Key
                         -   Entity: {Id: 3aedbca9-d0a2-4833-a577-22f967ba13ee}
                             Component: TransformComponent.Key
-                        -   Entity: {Id: 565d619e-b205-4285-ba8e-65e1d349fbb2}
+                        -   Entity: {Id: 069945be-764a-4de9-88f4-458740f821ff}
                             Component: TransformComponent.Key
                         -   Entity: {Id: d13ce4bf-5e8e-4bdf-8415-42cfc8405415}
+                            Component: TransformComponent.Key
+                        -   Entity: {Id: 565d619e-b205-4285-ba8e-65e1d349fbb2}
                             Component: TransformComponent.Key
             Id: d618f5c0-1ff1-433e-9b6a-aa51507401f5

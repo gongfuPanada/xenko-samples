@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using SiliconStudio.Core.Mathematics;
+﻿using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
 using SiliconStudio.Paradox.Rendering.Composers;
@@ -13,7 +12,7 @@ namespace SimpleDynamicTexture
     /// This sample shows how to create and write data to a texture on CPU side, and then use it for rendering.
     /// A 16*16 texture is created and stretched to cover a screen. You could tap on the screen to lit/dim a pixel of the texture.
     /// </summary>
-    public class TextureUpdateScript : AsyncScript
+    public class TextureUpdateScript : SyncScript
     {
         /// <summary>
         /// The size of the texture.
@@ -70,8 +69,6 @@ namespace SimpleDynamicTexture
         // Complete the graphic pipeline, initialize texture data
         public override void Start()
         {
-            base.Start();
-
             // create the sprite batch used in our custom rendering function
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
@@ -94,34 +91,41 @@ namespace SimpleDynamicTexture
             renderTexture.SetData(textureData);
         }
 
-        // Updates input by polling to check for a tap event in order to lid or dim a target pixel, then update the new data to the texture
-        public override async Task Execute()
+        public override void Update()
         {
-            while (Game.IsRunning)
+            if (Input.PointerEvents.Count == 0) 
+                return;
+
+            var destinationRectangle = new RectangleF(0, 0, GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+
+            // Process pointer event
+            foreach (var pointerEvent in Input.PointerEvents)
             {
-                await Script.NextFrame();
+                var pixelPosition = pointerEvent.Position * new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
 
-                if (Input.PointerEvents.Count == 0) continue;
+                if (pointerEvent.State != PointerState.Down || !destinationRectangle.Contains(pixelPosition)) continue;
 
-                var destinationRectangle = new RectangleF(0, 0, GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+                var relativePosition = (pixelPosition - destinationRectangle.TopLeft);
 
-                // Process pointer event
-                foreach (var pointerEvent in Input.PointerEvents)
-                {
-                    var pixelPosition = pointerEvent.Position * new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+                var pixelX = (int)((relativePosition.X / destinationRectangle.Width) * RenderTextureSize);
+                var pixelY = (int)((relativePosition.Y / destinationRectangle.Height) * RenderTextureSize);
 
-                    if (pointerEvent.State != PointerState.Down || !destinationRectangle.Contains(pixelPosition)) continue;
-
-                    var relativePosition = (pixelPosition - destinationRectangle.TopLeft);
-
-                    var pixelX = (int)((relativePosition.X / destinationRectangle.Width) * RenderTextureSize);
-                    var pixelY = (int)((relativePosition.Y / destinationRectangle.Height) * RenderTextureSize);
-
-                    TogglePixel(pixelX, pixelY);
-                }
-
-                renderTexture.SetData(textureData);
+                TogglePixel(pixelX, pixelY);
             }
+
+            renderTexture.SetData(textureData);
+        }
+
+        public override void Cancel()
+        {
+            // Remove the custom renderer from the pipeline.
+            var scene = SceneSystem.SceneInstance.Scene;
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
+            compositor.Master.Renderers.RemoveAt(2);
+
+            // destroy graphic objects
+            spriteBatch.Dispose();
+            renderTexture.Dispose();
         }
 
         /// <summary>

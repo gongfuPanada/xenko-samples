@@ -32,18 +32,18 @@ namespace GameMenu
         private ModalElement shipSelectPopup; // Root of SpaceShip select popup
         private ModalElement welcomePopup; // Root of welcome popup
 
-        private UIImage popupWindowImage; // Window frame for popup which is shared between SpaceShip select and welcome popups
+        private Sprite popupWindowImage; // Window frame for popup which is shared between SpaceShip select and welcome popups
         private TextBlock nameTextBlock; // Name of the character
         private ImageElement currentShipImage; // Current SpaceShip of the character
         private int activeShipIndex;
 
-        private readonly List<UIImage> starUIImages = new List<UIImage>();
-        private readonly List<UIImage> borderStarImages = new List<UIImage>();
+        private readonly List<Sprite> starSprites = new List<Sprite>();
+        private readonly List<Sprite> borderStarImages = new List<Sprite>();
 
         // Life gauge
         private RectangleF gaugeBarRegion;
         private Grid lifeBarGrid;
-        private UIImage lifeBarGaugeImage;
+        private Sprite lifeBarGaugeImage;
 
         private TextBlock moneyCounter;
         private int Money
@@ -86,7 +86,7 @@ namespace GameMenu
             {
                 if (value > MaximumStar) return;
                 powerStatus = value;
-                powerStatusStar.Source = starUIImages[powerStatus];
+                powerStatusStar.Source = starSprites[powerStatus];
                 shipList[activeShipIndex].Power = powerStatus;
             }
             get { return powerStatus; }
@@ -99,7 +99,7 @@ namespace GameMenu
             {
                 if (value > MaximumStar) return;
                 controlStatus = value;
-                controlStatusStar.Source = starUIImages[controlStatus];
+                controlStatusStar.Source = starSprites[controlStatus];
                 shipList[activeShipIndex].Control = controlStatus;
             }
             get { return controlStatus; }
@@ -107,7 +107,7 @@ namespace GameMenu
 
         private readonly ImageElement speedStatusStar = new ImageElement();
         private SpriteFont westernFont;
-        private UIImageGroup mainScreneImages;
+        private SpriteSheet mainScreneImages;
 
         private int SpeedStatus
         {
@@ -115,7 +115,7 @@ namespace GameMenu
             {
                 if (value > MaximumStar) return;
                 speedStatus = value;
-                speedStatusStar.Source = starUIImages[speedStatus];
+                speedStatusStar.Source = starSprites[speedStatus];
                 shipList[activeShipIndex].Speed = speedStatus;
             }
             get { return speedStatus; }
@@ -129,15 +129,15 @@ namespace GameMenu
 
         protected override void LoadScene()
         {
-            mainScreneImages = LoadAsset<UIImageGroup>("MainSceneImages");
+            mainScreneImages = LoadAsset<SpriteSheet>("MainSceneImages");
             westernFont = LoadAsset<SpriteFont>("WesternFont");
             popupWindowImage = mainScreneImages["popup_window"];
 
             // Preload stars
-            starUIImages.Add(mainScreneImages["star0"]);
-            starUIImages.Add(mainScreneImages["star1"]);
-            starUIImages.Add(mainScreneImages["star2"]);
-            starUIImages.Add(mainScreneImages["star3"]);
+            starSprites.Add(mainScreneImages["star0"]);
+            starSprites.Add(mainScreneImages["star1"]);
+            starSprites.Add(mainScreneImages["star2"]);
+            starSprites.Add(mainScreneImages["star3"]);
             borderStarImages.Add(mainScreneImages["bstar0"]);
             borderStarImages.Add(mainScreneImages["bstar1"]);
             borderStarImages.Add(mainScreneImages["bstar2"]);
@@ -298,8 +298,8 @@ namespace GameMenu
             starGrid.SetGridColumn(2);
 
             // Ship image
-            var shipUIImage = mainScreneImages[spaceShip.Name];
-            var shipImageElement = new ImageElement { Source = shipUIImage };
+            var shipSprite = mainScreneImages[spaceShip.Name];
+            var shipImageElement = new ImageElement { Source = shipSprite };
             shipImageElement.SetGridColumn(4);
 
             // Create the horizontal grid with two blank stretchable columns and add the text blocks, the starts and the ship image
@@ -317,21 +317,21 @@ namespace GameMenu
             shipContent.Children.Add(shipImageElement);
 
             //
-            var shipSelectFrameUIImage = mainScreneImages["weapon_select_frame"];
+            var shipSelectFrameSprite = mainScreneImages["weapon_select_frame"];
 
             var shipButton = new Button
             {
                 Name = spaceShip.Name,
                 Content = shipContent,
-                PressedImage = shipSelectFrameUIImage,
-                NotPressedImage = shipSelectFrameUIImage,
-                MouseOverImage = shipSelectFrameUIImage,
+                PressedImage = shipSelectFrameSprite,
+                NotPressedImage = shipSelectFrameSprite,
+                MouseOverImage = shipSelectFrameSprite,
                 Padding = new Thickness(60, 20, 20, 20)
             };
 
             shipButton.Click += delegate
             {
-                currentShipImage.Source = shipUIImage;
+                currentShipImage.Source = shipSprite;
 
                 activeShipIndex = shipList.FindIndex(w => w.Name == spaceShip.Name);
 

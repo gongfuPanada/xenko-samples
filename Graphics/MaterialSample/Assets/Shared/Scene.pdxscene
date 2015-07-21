@@ -1,5 +1,6 @@
 !SceneAsset
 Id: c2262423-9422-4dd1-9fcb-ead76f9a93ba
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: fd758e9f-f4e1-4480-bd66-cdf5d49e3f39
@@ -10,8 +11,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -24,8 +23,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -38,8 +35,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -52,8 +47,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -66,8 +59,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -92,8 +83,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -130,8 +119,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -144,8 +131,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -158,8 +143,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -172,8 +155,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -186,8 +167,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -200,7 +179,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 0.7375, G: 0.735111535, B: 0.6499219}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Enabled: true
                             Filter: !LightShadowMapFilterTypePcf {}
                             Importance: High
@@ -231,8 +210,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -245,8 +222,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -271,8 +246,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -285,8 +258,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -299,8 +270,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -313,8 +282,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -339,8 +306,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -365,8 +330,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 10066c60-169a-4322-80b6-9e7a97027077:m_b_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -379,8 +342,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -405,8 +366,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -419,8 +378,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -433,8 +390,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -447,8 +402,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -473,8 +426,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -511,8 +462,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -525,8 +474,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -553,8 +500,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -591,8 +536,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -605,8 +548,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -619,8 +560,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -657,8 +596,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -671,8 +608,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -709,8 +644,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -723,8 +656,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -737,8 +668,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -763,8 +692,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -777,8 +704,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -806,8 +731,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -832,8 +755,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -858,8 +779,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -872,8 +791,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -886,8 +803,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -900,7 +815,7 @@ Hierarchy:
                     Type: !LightDirectional
                         Color: !LightColorRgb
                             Color: {R: 0.9, G: 0.9, B: 0.9}
-                        Shadow: !LightDirectionalShadowMap
+                        Shadow:
                             Enabled: true
                             Filter: !LightShadowMapFilterTypePcf {}
                             Importance: High
@@ -932,8 +847,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -958,8 +871,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -972,8 +883,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1010,8 +919,6 @@ Hierarchy:
                     Model: 20192b41-7766-4193-9f6b-c3b7d418d138:SampleGround
                     Materials:
                         - null
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: -1.5, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1024,8 +931,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1038,8 +943,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1052,8 +955,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1066,8 +967,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - 10066c60-169a-4322-80b6-9e7a97027077:m_b_2
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1092,8 +991,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1106,8 +1003,6 @@ Hierarchy:
                     Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                     Materials:
                         - a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1144,8 +1039,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
@@ -1153,7 +1046,7 @@ Hierarchy:
                     Children: []
             Id: fd57b289-b694-47e8-99a1-5e08ce2b1521
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -1327,8 +1220,6 @@ Hierarchy:
                     Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                     Materials:
                         - 22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
-                    DrawOrder: 0
-                    Parameters: {}
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0.5, Z: 1.5}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}

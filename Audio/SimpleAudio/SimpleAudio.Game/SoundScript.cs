@@ -22,18 +22,22 @@ namespace SimpleAudio
         /// </summary>
         public Entity RightWave;
 
-        public override void Start()
+        public void Start()
         {
-            base.Start();
             var music = Asset.Load<SoundMusic>("AmbientMusic");
 
             // start ambient music
-            music.IsLooped = true;
-            music.Play();
+            if (!IsLiveReloading)
+            {
+                music.IsLooped = true;
+                music.Play();
+            }
         }
 
         public override async Task Execute()
         {
+            Start();
+
             var fontColor = Color.Transparent;
             var effect = Asset.Load<SoundEffect>("SoundEffect");
             var originalPositionX = RightWave.Transform.Position.X;
@@ -56,8 +60,8 @@ namespace SimpleAudio
                 else
                 {
                     // moving wave position
-                    LeftWave.Transform.Position.X -= 0.01f;
-                    RightWave.Transform.Position.X += 0.01f;
+                    LeftWave.Transform.Position.X -= 0.025f;
+                    RightWave.Transform.Position.X += 0.025f;
 
                     // changing font transparency
                     fontColor = 0.93f * fontColor;

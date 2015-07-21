@@ -24,7 +24,6 @@ namespace GeometricPrimitives
 
         public override async Task Execute()
         {
-
             while (Game.IsRunning)
             {
                 var elapsedTime = (float)Game.UpdateTime.Elapsed.TotalSeconds;

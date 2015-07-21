@@ -1,12 +1,15 @@
-!SpriteGroup
+!SpriteSheet
 Id: ab0d8c0a-1e1a-4743-a06f-15941ccb6321
+SerializedVersion: 1
 Tags: []
-Images:
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
+Alpha: Explicit
+Sprites:
     -   Source: ../../RawAssets/tex1.png
         Name: parallax_gear_frame
         TextureRegion: {X: 0, Y: 0, Width: 1920, Height: 1136}
         Center: {X: 320, Y: 568}
         CenterFromMiddle: false
-ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: Color32Bits
-Alpha: Explicit
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}

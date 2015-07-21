@@ -1,5 +1,6 @@
 !SceneAsset
 Id: b07987b2-a262-45fb-9da6-ba05fc7aaf74
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 5de8c3c5-6c46-49ba-b42c-45bb2925a612
@@ -20,7 +21,7 @@ Hierarchy:
                     Children: []
             Id: 47550ad3-4887-4173-95e0-d98048465edd
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -45,8 +46,9 @@ Hierarchy:
                                     Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
                     EditorSettings:
                         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-                        SceneUnit: 100
+                        SceneUnit: 10
                         Camera:
+                            NearPlane: 1
                             FarPlane: 100000
                         Mode: !SceneEditorGraphicsModeLDRSettings
                             BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
@@ -55,6 +57,8 @@ Hierarchy:
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children:
+                        -   Entity: {Id: 47550ad3-4887-4173-95e0-d98048465edd}
+                            Component: TransformComponent.Key
                         -   Entity: {Id: 6ec17338-026d-4ad3-9615-4975281cf3ba}
                             Component: TransformComponent.Key
                         -   Entity: {Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb}
@@ -62,8 +66,6 @@ Hierarchy:
                         -   Entity: {Id: c2d8e639-281f-419d-b8cb-77d7ef14a7f7}
                             Component: TransformComponent.Key
                         -   Entity: {Id: d87ce433-90b0-4819-8f55-9d08330b581d}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 47550ad3-4887-4173-95e0-d98048465edd}
                             Component: TransformComponent.Key
                         -   Entity: {Id: c2306322-b9da-4756-8c50-0415142c6dd1}
                             Component: TransformComponent.Key
@@ -73,9 +75,10 @@ Hierarchy:
                 CameraComponent.Key:
                     Projection: Orthographic
                     OrthographicSize: 1136
+                    NearClipPlane: 1
                     AspectRatio: 0.56338
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 1000}
+                    Position: {X: 0, Y: 0, Z: 200}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
@@ -119,9 +122,10 @@ Hierarchy:
         -   Name: Character
             Components:
                 SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSpriteGroup
-                        SpriteGroup: 3ad37051-9134-4cea-b756-569c895c0420:agent_sprite
+                    SpriteProvider: !SpriteFromSheet
+                        Sheet: 3ad37051-9134-4cea-b756-569c895c0420:agent_sprite
                     Color: {R: 255, G: 255, B: 255, A: 255}
+                    IgnoreDepth: true
                 ScriptComponent.Key:
                     Scripts:
                         - !JumpyJet.CharacterScript,JumpyJet.Game
@@ -129,7 +133,7 @@ Hierarchy:
                 TransformComponent.Key:
                     Position: {X: 0, Y: 0, Z: 0}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 100, Y: 100, Z: 1}
+                    Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb
         -   Name: Pipes

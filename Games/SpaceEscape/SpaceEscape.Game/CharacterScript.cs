@@ -79,17 +79,11 @@ namespace SpaceEscape
         
         public bool IsDead { get { return State == AgentState.Die; } }
 
-        public override void Start()
+        public void Start()
         {
-            base.Start();
-
-            // Config Gesture for controlling the agent
-            Input.ActivatedGestures.Add(
-                new GestureConfigDrag(GestureShape.Free)
-                {
-                    MinimumDragDistance = 0.02f,
-                    RequiredNumberOfFingers = 1
-                });
+            // Configure Gestures for controlling the agent
+            if (!IsLiveReloading) // Live scripting: add the gesture only once (on first load).
+                Input.ActivatedGestures.Add(new GestureConfigDrag(GestureShape.Free) { MinimumDragDistance = 0.02f, RequiredNumberOfFingers = 1 });
 
             // Setup Normal pose BoundingBox with that of obtained by ModelComponent.
             boundingBoxes[BoundingBoxKeys.Normal] = Entity.Get<ModelComponent>().Model.BoundingBox;
@@ -106,6 +100,8 @@ namespace SpaceEscape
         /// <returns></returns>
         public async override Task Execute()
         {
+            Start();
+
             laneHeight = Entity.Transform.Position.Y;
 
             Reset();

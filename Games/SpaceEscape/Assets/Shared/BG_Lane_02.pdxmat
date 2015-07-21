@@ -1,5 +1,6 @@
 !MaterialAsset
 Id: 31b92ab0-3d24-4bc0-b1a6-550bb6ee42c9
+SerializedVersion: 1
 Tags: []
 Attributes:
     Diffuse: !MaterialDiffuseMapFeature
@@ -11,11 +12,11 @@ Attributes:
     Overrides:
         UVScale: {X: 1, Y: 1}
 Layers: []
-Parameters: {}
 ~Base:
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
         Attributes:
             Diffuse: !MaterialDiffuseMapFeature
@@ -36,4 +37,3 @@ Parameters: {}
             Overrides:
                 UVScale: {X: 1, Y: 1}
         Layers: []
-        Parameters: {}

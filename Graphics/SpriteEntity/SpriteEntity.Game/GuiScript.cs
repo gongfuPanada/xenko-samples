@@ -10,12 +10,10 @@ namespace SpriteEntity
     /// <summary>
     /// The GUI script
     /// </summary>
-    public class GuiScript : Script
+    public class GuiScript : StartupScript
     {
         public override void Start()
         {
-            base.Start();
-
             var font = Asset.Load<SpriteFont>("Font");
             var textBlock = new TextBlock
             {

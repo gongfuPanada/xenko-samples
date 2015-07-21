@@ -5,7 +5,7 @@ namespace RenderSceneToTexture
     /// <summary>
     /// Play the idle animation of the entity.
     /// </summary>
-    public class PlayAnimation : Script
+    public class PlayAnimation : StartupScript
     {
         public override void Start()
         {

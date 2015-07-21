@@ -1,5 +1,6 @@
 !SceneAsset
 Id: 2871eb8a-27ef-40c9-a40a-9026b53ab794
+SerializedVersion: 6
 Tags: []
 Hierarchy:
     RootEntity: 9ab6e906-956c-4bf6-bf75-55ea5c4e6916
@@ -9,13 +10,13 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: 175006e8-6351-4365-9778-73d54aa5ea9f:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
+                    Position: {X: 0, Y: 0, Z: -2}
                     Rotation: {W: 1, X: 0, Y: 0, Z: 0}
                     Scale: {X: 1, Y: 1, Z: 1}
                     Children: []
             Id: 88ed0ede-01dc-46e3-99fb-a4851554899e
         - !Scene
-            Name: Root
+            Name: Scene
             Components:
                 SceneComponent.Key:
                     GraphicsCompositor: !SceneGraphicsCompositorLayers

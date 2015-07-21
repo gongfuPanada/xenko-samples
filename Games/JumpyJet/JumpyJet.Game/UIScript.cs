@@ -16,7 +16,7 @@ namespace JumpyJet
     /// This action provides the name of Button element that is clicked,
     ///  which is one of {StartButton, MenuBotton and RestartButton}
     /// </summary>
-    public class UIScript : Script
+    public class UIScript : StartupScript
     {
         internal Button StartButton { get; private set; }
         internal Button MenuButton { get; private set; }
@@ -28,27 +28,23 @@ namespace JumpyJet
 
         private TextBlock scoreTextBlock;
         private SpriteFont spriteFont;
-        private UIImage buttonImage;
-        private UIImageGroup uiImages;
+        private Sprite buttonImage;
+        private SpriteSheet uiImages;
 
         /// <summary>
         /// Load resource and construct ui components
         /// </summary>
         public override void Start()
         {
-            base.Start();
-
             // Load resources shared by different UI screens
             spriteFont = Asset.Load<SpriteFont>("Font");
-            uiImages = Asset.Load<UIImageGroup>("UIImages");
+            uiImages = Asset.Load<SpriteSheet>("UIImages");
             buttonImage = uiImages["button"];
 
             // Load and create specific UI screens.
             CreateMainMenuUI();
             CreateGameUI();
             CreateGameOverUI();
-
-            StartMainMenuMode();
         }
 
         private void CreateMainMenuUI()

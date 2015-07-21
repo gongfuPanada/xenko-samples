@@ -10,7 +10,7 @@ namespace SimpleAudio
     /// <summary>
     /// The script in charge displaying the sample UI.
     /// </summary>
-    public class UITextScript : Script
+    public class UITextScript : StartupScript
     {
         /// <summary>
         /// The text to display on the screen.
