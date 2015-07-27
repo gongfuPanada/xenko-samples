@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: bd6edb02-4f2d-40e8-924f-04a76ee88c94
-SerializedVersion: 2
+SerializedVersion: 3
 Tags: []
 Type: !SphereProceduralModel
     UVScales: {X: 1, Y: 1}

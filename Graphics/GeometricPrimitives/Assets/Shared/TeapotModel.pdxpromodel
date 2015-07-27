@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0
-SerializedVersion: 2
+SerializedVersion: 3
 Tags: []
 Type: !TeapotProceduralModel
     MaterialInstance:

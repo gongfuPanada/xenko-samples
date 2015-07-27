@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 6383f6dd-32af-4660-921e-4258f9b06b4b
-SerializedVersion: 2
+SerializedVersion: 3
 Tags: []
 Type: !GeoSphereProceduralModel
     MaterialInstance:
