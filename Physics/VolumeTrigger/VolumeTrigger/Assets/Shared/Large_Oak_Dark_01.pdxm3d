@@ -1,0 +1,36 @@
+!Model
+Id: 3947d445-7bb2-4d10-b088-f78c83f5b9c0
+SerializedVersion: 2
+Tags: []
+Source: ../../../../../../../../../Downloads/3d-nature-pack/Models/Large_Oak_Dark_01.obj
+SourceHash: 3844e3f9ef7aeebc90aa1637efeb0ab4
+Materials:
+    -   Name: Wood
+        MaterialInstance:
+            Material: 4b07319e-fb80-44bc-ab7c-4ebe5094e605:Wood
+    -   Name: Leafs
+        MaterialInstance:
+            Material: 9ae60172-dcbd-4fb9-954d-da6d1a16e20e:Leafs_1
+Nodes:
+    - {Name: Large_Oak_Dark_01.obj, Depth: 0, Preserve: false}
+    - {Name: gMesh1Large_Oak_DarkModel, Depth: 1, Preserve: false}
+    - {Name: defaultobject, Depth: 1, Preserve: false}
+~Base:
+    Location: --import--
+    Asset: !Model
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 2
+        Tags: []
+        Source: 
+        ImporterId: 30243fc0-cec7-4433-977e-95dca29d846e
+        Materials:
+            -   Name: Wood
+                MaterialInstance:
+                    Material: 4b07319e-fb80-44bc-ab7c-4ebe5094e605:Wood
+            -   Name: Leafs
+                MaterialInstance:
+                    Material: 9ae60172-dcbd-4fb9-954d-da6d1a16e20e:Leafs_1
+        Nodes:
+            - {Name: Large_Oak_Dark_01.obj, Depth: 0, Preserve: false}
+            - {Name: gMesh1Large_Oak_DarkModel, Depth: 1, Preserve: false}
+            - {Name: defaultobject, Depth: 1, Preserve: false}

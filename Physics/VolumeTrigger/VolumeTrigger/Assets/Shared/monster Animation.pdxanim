@@ -1,0 +1,12 @@
+!Animation
+Id: f41c08e3-6a7f-4570-be72-76c8df9be0f5
+Tags: []
+Source: ../../../../../../../../../Downloads/monster.dae
+RepeatMode: LoopInfinite
+~Base:
+    Location: --import--
+    Asset: !Animation
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 30243fc0-cec7-4433-977e-95dca29d846e
+        RepeatMode: LoopInfinite

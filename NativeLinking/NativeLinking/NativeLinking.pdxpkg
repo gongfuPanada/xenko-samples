@@ -1,0 +1,46 @@
+!Package
+Id: 9d13a12c-92f1-46b3-b45a-a22d3a634b4b
+Tags: []
+Meta:
+    Name: NativeLinking
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: NativeLinking
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.3.0-beta
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: NativeLinking.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 0c67fde6-43e9-45fc-a109-41259d9ecec4
+                Location: NativeLinking.Game/NativeLinking.Game.csproj
+                Type: Library
+            -   Id: 940667e9-8a36-42c5-9149-9a31602310c7
+                Location: NativeLinking.MyLibrary/NativeLinking.MyLibrary.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 1c74860f-95dd-4f06-9182-59311b656b61
+                Location: NativeLinking.Windows/NativeLinking.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

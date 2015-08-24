@@ -1,0 +1,18 @@
+!ColliderShapeAsset
+Id: 6bce546c-6748-4ba2-ad8d-de437b43b2fd
+SerializedVersion: 2
+Tags: []
+ColliderShapes:
+    - !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: bd2f9c18-3386-4c8e-8151-c911ef1f7038:Grey_Cliff_Corner_Green_Top_01
+        SimpleWrap: true
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Depth: 10
+        PosSampling: 10
+        AngleSampling: 10
+        PosRefine: 5
+        AngleRefine: 5
+        Alpha: 0.01
+        Threshold: 0.01

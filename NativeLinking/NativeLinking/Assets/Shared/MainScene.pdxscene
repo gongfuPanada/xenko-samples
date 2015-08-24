@@ -1,0 +1,172 @@
+!SceneAsset
+Id: bc568778-69e4-4d4d-9416-1a61e119e5ae
+SerializedVersion: 12
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 4d67a47d-f05d-4b58-96ec-07e78b991a68
+        - 0d4b3636-1768-4842-a858-44d08e8e2b58
+        - 15b83e11-4092-46fd-80e0-3dacba4f4a51
+        - 7914e494-d4c3-402a-b19c-976936c0ada2
+        - e3b6955f-7655-426b-a439-3775a90a54d7
+    Entities:
+        -   Name: Ground
+            Components:
+                ModelComponent.Key:
+                    Model: b9af0cf6-3575-4e9d-858a-7377067e6b07:Ground
+                    Materials: []
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 0d4b3636-1768-4842-a858-44d08e8e2b58
+        -   Name: Camera
+            Components:
+                CameraComponent.Key:
+                    Projection: Perspective
+                TransformComponent.Key:
+                    Position: {X: -1.0, Y: 1.2, Z: 2.7}
+                    Rotation: {W: 0.981060266, X: -0.08583164, Y: -0.1729874, Z: -0.0151344351}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 15b83e11-4092-46fd-80e0-3dacba4f4a51
+        -   Name: Sphere
+            Components:
+                ModelComponent.Key:
+                    Model: f2ed8ea1-2219-4cbe-a396-4f02cb708d05:Sphere
+                    Materials:
+                        - null
+                ScriptComponent.Key:
+                    Scripts:
+                        - !NativeLinking.Test,NativeLinking.Game
+                            Id: 9d51b994-488d-4ade-b7ad-4a1040ece061
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 4d67a47d-f05d-4b58-96ec-07e78b991a68
+        -   Name: Directional light
+            Components:
+                LightComponent.Key:
+                    Type: !LightDirectional
+                        Color: !LightColorRgb
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
+                        Shadow:
+                            Enabled: true
+                            Filter: !LightShadowMapFilterTypePcf
+                                FilterSize: Filter5x5
+                            Size: Large
+                            DepthRange: {}
+                            PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                            BiasParameters: {}
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                    Rotation: {W: 0.7912401, X: -0.5540323, Y: 0.212012157, Z: 0.1484525}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 7914e494-d4c3-402a-b19c-976936c0ada2
+        -   Name: Skybox
+            Components:
+                SkyboxComponent.Key:
+                    Skybox: 8b0ba3cd-478f-4987-8d36-535c87099c41:Skybox
+                    Intensity: 3.0
+                LightComponent.Key:
+                    Type: !LightSkybox {}
+                    Intensity: 0.2
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: e3b6955f-7655-426b-a439-3775a90a54d7
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 15b83e11-4092-46fd-80e0-3dacba4f4a51}
+                        Component: CameraComponent.Key
+            Layers:
+                -   Name: SceneGraphicsLayer
+                    Output: !LocalRenderFrameProvider
+                        Descriptor:
+                            Format: HDR
+                    Renderers:
+                        - !ClearRenderFrameRenderer
+                            Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                            Output: !CurrentRenderFrameProvider {}
+                        - !SceneCameraRenderer
+                            Mode: !CameraRendererModeForward {}
+                            Camera:
+                                Index: 0
+                            Output: !CurrentRenderFrameProvider {}
+                            Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !SceneEffectRenderer
+                        Input: !ImageEffectRendererInput.LayerInput {}
+                        Effect: !PostProcessingEffects
+                            Camera:
+                                Index: 0
+                            DepthOfField:
+                                Enabled: false
+                                DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                            BrightFilter:
+                                Color: {R: 1.0, G: 1.0, B: 1.0}
+                            Bloom:
+                                Distortion: {X: 1.0, Y: 1.0}
+                                Afterimage:
+                                    Enabled: false
+                            LightStreak:
+                                Attenuation: 0.7
+                            LensFlare: {}
+                            ColorTransforms:
+                                Transforms:
+                                    - !ToneMap
+                                        Operator: !ToneMapHejlDawsonOperator {}
+                                        LuminanceLocalFactor: 0.0
+                                    - !FilmGrain
+                                        Enabled: false
+                                    - !Vignetting
+                                        Enabled: false
+                                        Color: {R: 0.0, G: 0.0, B: 0.0}
+                                GammaTransform: {}
+                            Antialiasing: !FXAAEffect {}
+                        Output: !CurrentRenderFrameProvider {}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Camera: {}
+            Mode: !SceneEditorGraphicsModeHDRSettings
+                BackgroundColor: {R: 0.0470588244, G: 0.0470588244, B: 0.0470588244}
+                PostProcessingEffects:
+                    Camera:
+                        Index: 0
+                    DepthOfField:
+                        Enabled: false
+                        DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                    BrightFilter:
+                        Color: {R: 1.0, G: 1.0, B: 1.0}
+                    Bloom:
+                        Distortion: {X: 1.0, Y: 1.0}
+                        Afterimage:
+                            Enabled: false
+                    LightStreak:
+                        Attenuation: 0.7
+                    LensFlare: {}
+                    ColorTransforms:
+                        Transforms:
+                            - !ToneMap
+                                Operator: !ToneMapHejlDawsonOperator {}
+                                LuminanceLocalFactor: 0.0
+                            - !FilmGrain
+                                Enabled: false
+                            - !Vignetting
+                                Enabled: false
+                                Color: {R: 0.0, G: 0.0, B: 0.0}
+                        GammaTransform: {}
+                    Antialiasing: !FXAAEffect {}

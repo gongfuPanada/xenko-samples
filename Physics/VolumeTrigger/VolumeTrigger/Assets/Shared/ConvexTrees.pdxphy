@@ -1,0 +1,18 @@
+!ColliderShapeAsset
+Id: 35abaadf-58c6-49c7-930e-e7606929142a
+SerializedVersion: 2
+Tags: []
+ColliderShapes:
+    - !ConvexHullColliderShapeDesc
+        ConvexHulls: null
+        ConvexHullsIndices: null
+        Model: 36bf3fb9-9501-4d67-9e5c-40448680b348:untitled
+        SimpleWrap: true
+        Scaling: {X: 1.0, Y: 1.0, Z: 1.0}
+        Depth: 10
+        PosSampling: 10
+        AngleSampling: 10
+        PosRefine: 5
+        AngleRefine: 5
+        Alpha: 0.01
+        Threshold: 0.01

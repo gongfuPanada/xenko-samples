@@ -1,0 +1,14 @@
+!Texture
+Id: 3c68dd19-fd6c-4dd9-ab01-9d266a84092d
+Tags: []
+Source: ../../../../../../../../../Downloads/monster.jpg
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+PremultiplyAlpha: false
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 30243fc0-cec7-4433-977e-95dca29d846e
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

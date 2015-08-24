@@ -1,0 +1,7 @@
+!ProceduralModelAsset
+Id: 9fab8da2-f2c8-4586-9435-20d8fad479e2
+SerializedVersion: 4
+Tags: []
+Type: !CapsuleProceduralModel
+    MaterialInstance:
+        Material: 941a637b-5e4f-4132-bb6c-0ab975e1ec4d:Green-ish
