@@ -1,5 +1,5 @@
 !ProceduralModelAsset
-Id: b9af0cf6-3575-4e9d-858a-7377067e6b07
+Id: 887876e9-698e-48a5-9a4a-1cea71a12efd
 SerializedVersion: 4
 Tags: []
 Type: !PlaneProceduralModel
@@ -9,4 +9,4 @@ Type: !PlaneProceduralModel
     Normal: UpY
     GenerateBackFace: false
     MaterialInstance:
-        Material: f7819935-eb9e-454a-880b-22ffcf5e180c:Ground Material
+        Material: 9d1a704d-c56a-4dfc-8985-e582b299cee2:Ground Material

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using NativeLinking.MyLibrary;
+using NativeLibraryWrapper.MyLibrary;
 using SiliconStudio.Paradox.Engine;
 
 namespace NativeLinking
@@ -8,8 +8,9 @@ namespace NativeLinking
     {
         public override Task Execute()
         {
-            var x = new Class1();
-            x.Method1();
+            var c = new Class1();
+            var x = c.Method1();
+            Entity.Transform.Position.Y -= x;
             return Task.FromResult(0);
         }
     }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62CC4549-7B5E-42C0-9090-815C8F60FD1E}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NativeLinking</RootNamespace>
+    <AssemblyName>NativeLinking</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <SiliconStudioPackageGuid>{c47b99cd-4798-4d85-b9b7-e720d9a229b7}</SiliconStudioPackageGuid>
+    <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\NativeLinking.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
+    <SiliconStudioProjectType>Executable</SiliconStudioProjectType>
+    <SiliconStudioPlatform>Android</SiliconStudioPlatform>
+    <SiliconStudioBuildProfile>Android</SiliconStudioBuildProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Android' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\Debug\</OutputPath>
+    <IntermediateOutputPath>obj\Android\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Android' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\Release\</OutputPath>
+    <IntermediateOutputPath>obj\Android\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Testing|Android' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\Testing\</OutputPath>
+    <IntermediateOutputPath>obj\Android\Testing\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|Android' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <OutputPath>..\Bin\Android\AppStore\</OutputPath>
+    <IntermediateOutputPath>obj\Android\AppStore\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NativeLinking.Game\NativeLinking.Game.csproj">
+      <Project>{a26a7df9-b469-4996-b5a5-324285394bb9}</Project>
+      <Name>NativeLinking.Game</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NativeLinkingActivity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />
+  <Import Project="$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets" Condition="Exists('$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets')" />
+  <Target Name="EnsureSiliconStudioParadoxInstalled" BeforeTargets="PrepareForBuild">
+    <Error Condition="'$(SiliconStudioParadoxDir)' == ''" Text="Paradox SDK was not found. Check Paradox is installed and the global env variable [SiliconStudioParadoxDir] is setup correctly" />
+    <Error Condition="!Exists('$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets')" Text="Invalid Paradox SDK installation. Target file [$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets] was not found." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

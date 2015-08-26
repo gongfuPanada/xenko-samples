@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{940667E9-8A36-42C5-9149-9A31602310C7}</ProjectGuid>
+    <ProjectGuid>{83947D07-A863-45B5-924E-A0E5C23AF277}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NativeLinking.MyLibrary</RootNamespace>

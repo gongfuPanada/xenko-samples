@@ -1,5 +1,6 @@
 !Package
-Id: 9d13a12c-92f1-46b3-b45a-a22d3a634b4b
+Id: c47b99cd-4798-4d85-b9b7-e720d9a229b7
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: NativeLinking
@@ -17,16 +18,14 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: NativeLinking.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: 0c67fde6-43e9-45fc-a109-41259d9ecec4
+            -   Id: a26a7df9-b469-4996-b5a5-324285394bb9
                 Location: NativeLinking.Game/NativeLinking.Game.csproj
                 Type: Library
-            -   Id: 940667e9-8a36-42c5-9149-9a31602310c7
+            -   Id: 83947d07-a863-45b5-924e-a0e5c23af277
                 Location: NativeLinking.MyLibrary/NativeLinking.MyLibrary.csproj
                 Type: Library
     -   Name: Windows
@@ -34,12 +33,55 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: 1c74860f-95dd-4f06-9182-59311b656b61
+            -   Id: 21f1b9b5-98dd-4b98-b8d9-eedba2009d28
                 Location: NativeLinking.Windows/NativeLinking.Windows.csproj
+                Type: Executable
+    -   Name: WindowsStore
+        Platform: WindowsStore
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/WindowsStore
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: fe6d5699-5c71-4702-9f3c-e2e4e48f0ca6
+                Location: NativeLinking.WindowsStore/NativeLinking.WindowsStore.csproj
+                Type: Executable
+    -   Name: WindowsPhone
+        Platform: WindowsPhone
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/WindowsPhone
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: c9fab13b-6834-412f-94ff-4d5976dbc938
+                Location: NativeLinking.WindowsPhone/NativeLinking.WindowsPhone.csproj
+                Type: Executable
+    -   Name: Android
+        Platform: Android
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Android
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 62cc4549-7b5e-42c0-9090-815c8f60fd1e
+                Location: NativeLinking.Android/NativeLinking.Android.csproj
+                Type: Executable
+    -   Name: iOS
+        Platform: iOS
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/iOS
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: af975649-d102-4256-bd58-46baeaba0518
+                Location: NativeLinking.iOS/NativeLinking.iOS.csproj
                 Type: Executable
 ExplicitFolders: []
 Bundles: []

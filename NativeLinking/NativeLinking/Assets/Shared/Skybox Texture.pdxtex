@@ -1,5 +1,6 @@
 !Texture
-Id: 84dfc84f-2652-4e32-91ff-d4efeadb1601
+Id: cd3f958d-3aa3-4176-a729-f148d3303c00
 Tags: []
-Source: ../../RawAssets/skybox_texture_hdr.dds
+Source: ../../RawAssets/skybox_texture_ldr.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits

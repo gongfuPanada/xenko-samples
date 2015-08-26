@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+
+  <Identity Name="a815fb1e-e47c-4d99-bc12-9030a66e955b"
+            Publisher="CN=MyCompany"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>NativeLinking</DisplayName>
+    <PublisherDisplayName>publisher</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="NativeLinking"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="NativeLinking.App">
+        <m2:VisualElements
+            DisplayName="NativeLinking"
+            Square150x150Logo="Assets\Logo.png"
+            Square30x30Logo="Assets\SmallLogo.png"
+            Description="NativeLinking"
+            ForegroundText="light"
+            BackgroundColor="#464646">
+            <m2:SplashScreen Image="Assets\SplashScreen.png" />
+            <m2:InitialRotationPreference>
+              <m2:Rotation Preference="landscape" />
+            </m2:InitialRotationPreference>
+        </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

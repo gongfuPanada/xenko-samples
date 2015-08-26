@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C74860F-95DD-4F06-9182-59311B656B61}</ProjectGuid>
+    <ProjectGuid>{21F1B9B5-98DD-4B98-B8D9-EEDBA2009D28}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NativeLinking</RootNamespace>
@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-    <SiliconStudioPackageGuid>{9d13a12c-92f1-46b3-b45a-a22d3a634b4b}</SiliconStudioPackageGuid>
+    <SiliconStudioPackageGuid>{c47b99cd-4798-4d85-b9b7-e720d9a229b7}</SiliconStudioPackageGuid>
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
@@ -32,7 +32,6 @@
     <IntermediateOutputPath>obj\Windows\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -66,12 +65,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NativeLinking.MyLibrary.Windows\NativeLinking.MyLibrary.Windows.csproj">
-      <Project>{ef27ac15-690a-41c4-bc1a-a0c9150ebc4f}</Project>
-      <Name>NativeLinking.MyLibrary.Windows</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NativeLinking.Game\NativeLinking.Game.csproj">
-      <Project>{0c67fde6-43e9-45fc-a109-41259d9ecec4}</Project>
+      <Project>{a26a7df9-b469-4996-b5a5-324285394bb9}</Project>
       <Name>NativeLinking.Game</Name>
       <Private>False</Private>
     </ProjectReference>
