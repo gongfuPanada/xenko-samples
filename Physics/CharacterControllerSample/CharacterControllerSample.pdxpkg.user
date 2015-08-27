@@ -2,13 +2,12 @@
 Settings:
     Package/Scene/ActiveStream: Color Base
     Package/Scene/CameraPreviewVisible: true
-    Package/Scene/CamPitchYaw: {X: -0.3064766, Y: -0.09547368}
-    Package/Scene/CamPosition: {X: -1.93191278, Y: 1.0277102, Z: 7.899012}
+    Package/Scene/CamPitchYaw: {X: -0.164694756, Y: -0.1316428}
+    Package/Scene/CamPosition: {X: -3.33646512, Y: 0.501300752, Z: 5.71768665}
     Package/Scene/ComponentGizmoSize: 0.667
     Package/Scene/FixedSizeGizmos: false
     Package/Scene/GridVisible: true
     Package/Scene/HiddenGizmos:
-        - Physics
         - Transform
     Package/Scene/RenderMode: SingleStream
     Package/Scene/RotationSnapActive: false
@@ -16,6 +15,6 @@ Settings:
     Package/Scene/ScaleSnapActive: false
     Package/Scene/ScaleSnapValue: 1.1
     Package/Scene/SelectionMaskVisible: true
-    Package/Scene/TransformationGizmoSize: 1
+    Package/Scene/TransformationGizmoSize: 1.0
     Package/Scene/TranslationSnapActive: false
-    Package/Scene/TranslationSnapValue: 1
+    Package/Scene/TranslationSnapValue: 1.0

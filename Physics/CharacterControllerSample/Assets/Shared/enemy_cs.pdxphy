@@ -1,8 +1,8 @@
 !ColliderShapeAsset
 Id: e3030570-16a5-4ee6-b77b-37b4f19d16c7
+SerializedVersion: 2
 Tags: []
 ColliderShapes:
     - !SphereColliderShapeDesc
         Is2D: true
-        LocalOffset: {X: 0, Y: 0, Z: 0}
-        Radius: 0.5
+        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}

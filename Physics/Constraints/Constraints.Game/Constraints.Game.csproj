@@ -75,7 +75,6 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
     <Compile Include="DemoScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

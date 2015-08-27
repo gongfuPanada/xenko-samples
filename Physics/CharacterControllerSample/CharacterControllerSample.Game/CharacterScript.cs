@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
@@ -8,6 +9,7 @@ using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.Physics;
 using SiliconStudio.Paradox.Rendering.Sprites;
+using Collision = SiliconStudio.Paradox.Physics.Collision;
 
 namespace CharacterControllerSample
 {
@@ -51,15 +53,6 @@ namespace CharacterControllerSample
             SpriteAnimation.Play(playerSprite, 0, provider.Sheet.Sprites.Count - 1, AnimationRepeatMode.LoopInfinite, 12);
         }
 
-        void playerController_OnFirstContactBegin(object sender, CollisionArgs e)
-        {
-            // Stop if we collide from sides
-            if (e.Contact.Normal.X < -0.5f || e.Contact.Normal.X > 0.5f)
-            {
-                movingToTarget = false;
-            }
-        }
-
         public override void Start()
         {
             playerController = Entity.Get<PhysicsComponent>().Elements[0].Character;
@@ -69,7 +62,19 @@ namespace CharacterControllerSample
             playerController.Gravity = -10.0f;
             playerController.FallSpeed = 10.0f;
 
-            playerController.FirstContactStart += playerController_OnFirstContactBegin;
+            playerController.ContactsAlwaysValid = true;
+            Script.AddTask(async () =>
+            {
+                while (Game.IsRunning)
+                {
+                    var collision = await playerController.NewCollision();
+                    // Stop if we collide from sides
+                    if (collision.Contacts[0].Normal.X < -0.5f || collision.Contacts[0].Normal.X > 0.5f)
+                    {
+                        movingToTarget = false;
+                    }
+                }
+            });
 
             idleGroup = Asset.Load<SpriteSheet>("player_idle");
             runGroup = Asset.Load<SpriteSheet>("player_run");
@@ -79,8 +84,6 @@ namespace CharacterControllerSample
 
         public override void Cancel()
         {
-            playerController.FirstContactStart -= playerController_OnFirstContactBegin;
-
             // Unload graphic resources.
             Asset.Unload(idleGroup);
             Asset.Unload(runGroup);

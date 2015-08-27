@@ -66,6 +66,20 @@ namespace Constraints
             constraintsList.Add(CreateGeneric6DoFConstraint);
 
             constraintsList[constraintIndex]();
+
+            //Add a script for the slider constraint, to apply an impulse on collision
+            cubeRigidBody.ContactsAlwaysValid = true;
+            Script.AddTask(async () =>
+            {
+                while (Game.IsRunning)
+                {
+                    var collision = await cubeRigidBody.NewCollision();
+                    if (!(currentConstraint is SliderConstraint)) continue;
+                    if (collision.ColliderA != sphereRigidBody && collision.ColliderB != sphereRigidBody) continue;
+                    sphereRigidBody.LinearVelocity = Vector3.Zero; //clear any existing velocity
+                    sphereRigidBody.ApplyImpulse(new Vector3(-25, 0, 0)); //fire impulse
+                }
+            });
         }
 
         public override void Cancel()
@@ -141,15 +155,6 @@ namespace Constraints
             //avoid strange movements
             slider.LowerAngularLimit = (float)-Math.PI / 3.0f;
             slider.UpperAngularLimit = (float)Math.PI / 3.0f;
-
-            //set an event that on collision will kick the impulse again
-            cubeRigidBody.FirstContactStart += (sender, args) =>
-            {
-                if (!(currentConstraint is SliderConstraint)) return;
-                if (args.Contact.ColliderA != sphereRigidBody && args.Contact.ColliderB != sphereRigidBody) return;
-                sphereRigidBody.LinearVelocity = Vector3.Zero; //clear any existing velocity
-                sphereRigidBody.ApplyImpulse(new Vector3(-25, 0, 0)); //fire impulse
-            };
 
             //applying this impulse will let the sphere reach the lower linear limit and afterwards will be dragged back towards the cube
             sphereRigidBody.ApplyImpulse(new Vector3(-25, 0, 0));

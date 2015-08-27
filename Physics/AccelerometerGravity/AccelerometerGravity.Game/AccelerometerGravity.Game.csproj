@@ -72,7 +72,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
     <Compile Include="BallScript.cs" />
     <Compile Include="BounceScript.cs" />
     <Compile Include="GravityScript.cs" />

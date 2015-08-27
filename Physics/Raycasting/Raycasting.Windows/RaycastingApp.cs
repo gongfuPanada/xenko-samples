@@ -1,4 +1,6 @@
 
+using SiliconStudio.Paradox.Engine;
+
 namespace Raycasting
 {
     class RaycastingApp
