@@ -42,3 +42,4 @@ libcore.a
 libbulletc.a
 *.CachedGlyphs
 *.CachedImage
+log
