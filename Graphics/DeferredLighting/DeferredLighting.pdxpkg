@@ -1,5 +1,6 @@
 !Package
 Id: c279588e-7ce5-49e7-85c5-e867be2993bc
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: DeferredLighting
@@ -12,15 +13,14 @@ Meta:
 LocalDependencies: []
 Profiles:
     -   Name: Shared
+        Platform: Shared
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: DeferredLighting.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+            Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: c4bb965e-6578-4361-b54d-00700010ba72
                 Location: DeferredLighting.Game/DeferredLighting.Game.csproj
@@ -30,11 +30,10 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            GameSettingsAsset.DefaultGraphicsProfile: !GraphicsProfile Level_11_0
+            GameSettingsAsset.DefaultGraphicsProfile: Level_11_0
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 150a8439-1abd-468c-a487-61c74b2df3c5
                 Location: DeferredLighting.Windows/DeferredLighting.Windows.csproj

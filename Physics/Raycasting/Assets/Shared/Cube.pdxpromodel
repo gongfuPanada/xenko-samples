@@ -1,8 +1,8 @@
 !ProceduralModelAsset
 Id: 226ee5dd-9c34-426a-8901-c217d0cd8a60
-SerializedVersion: 2
+SerializedVersion: 4
 Tags: []
 Type: !CubeProceduralModel
-    Size: {X: 2, Y: 2, Z: 2}
+    Size: {X: 2.0, Y: 2.0, Z: 2.0}
     MaterialInstance:
         Material: 2685fa72-22c3-4025-bd46-7d546f9f915b:Material

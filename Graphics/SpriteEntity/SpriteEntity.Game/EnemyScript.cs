@@ -27,8 +27,7 @@ namespace SpriteEntity
         private const float enemyActiveFps = 2f;
         private const float enemyBlowupFps = 18f;
         private SpriteComponent enemySpriteComponent;
-        private SpriteSheet enemyNormalSprite;
-        private SpriteSheet enemyExplosionSprite;
+        private SpriteSheet spriteSheet;
 
         // random
         private static int seed = Environment.TickCount;
@@ -40,8 +39,7 @@ namespace SpriteEntity
 
         public override void Start()
         {
-            enemyNormalSprite = Asset.Load<SpriteSheet>("enemy_active");
-            enemyExplosionSprite = Asset.Load<SpriteSheet>("enemy_blowup");
+            spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
 
             // Register ourself to the logic to detect collision
             Logic.WatchEnemy(Entity);
@@ -49,12 +47,6 @@ namespace SpriteEntity
             enemySpriteComponent = Entity.Get<SpriteComponent>();
 
             Reset();
-        }
-
-        public override void Cancel()
-        {
-            Asset.Unload(enemyNormalSprite);
-            Asset.Unload(enemyExplosionSprite);
         }
 
         public override void Update()
@@ -95,21 +87,21 @@ namespace SpriteEntity
             // Waiting time
             enemyAge = enemyTimeToWait - (((float)(random.NextDouble())));
 
-            enemySpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = enemyNormalSprite };
-            SpriteAnimation.Play(enemySpriteComponent, 0, enemySpriteComponent.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, enemyActiveFps);
+            enemySpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = spriteSheet };
+            SpriteAnimation.Play(enemySpriteComponent, spriteSheet.FindImageIndex("active0"), spriteSheet.FindImageIndex("active1"), AnimationRepeatMode.LoopInfinite, enemyActiveFps);
         }
 
         public void Explode()
         {
             IsAlive = false;
-            enemySpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = enemyExplosionSprite };
-            SpriteAnimation.Play(enemySpriteComponent, 0, enemySpriteComponent.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, enemyBlowupFps);
+            enemySpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = spriteSheet };
+            SpriteAnimation.Play(enemySpriteComponent, spriteSheet.FindImageIndex("blowup0"), spriteSheet.FindImageIndex("blowup7"), AnimationRepeatMode.LoopInfinite, enemyBlowupFps);
             enemyAge = enemyTimeToLive - 0.3f;
         }
 
         public RectangleF GetBoundingBox()
         {
-            var result = enemyNormalSprite.Sprites.First().Region;
+            var result = spriteSheet.Sprites.First().Region;
             result.Width *= LogicScript.ScreenScale;
             result.Height *= LogicScript.ScreenScale;
             return result;

@@ -1,7 +1,5 @@
 using System;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
@@ -9,7 +7,6 @@ using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.Physics;
 using SiliconStudio.Paradox.Rendering.Sprites;
-using Collision = SiliconStudio.Paradox.Physics.Collision;
 
 namespace CharacterControllerSample
 {
@@ -28,8 +25,6 @@ namespace CharacterControllerSample
         }
 
         private bool movingToTarget;
-        private SpriteSheet idleGroup;
-        private SpriteSheet runGroup;
         private SpriteComponent playerSprite;
 
         private const float speed = 0.05f;
@@ -41,16 +36,14 @@ namespace CharacterControllerSample
 
         void PlayIdle()
         {
-            var provider = (SpriteFromSheet) playerSprite.SpriteProvider;
-            provider.Sheet = idleGroup;
-            SpriteAnimation.Play(playerSprite, 0, provider.Sheet.Sprites.Count - 1, AnimationRepeatMode.LoopInfinite, 7);
+            var sheet = ((SpriteFromSheet) playerSprite.SpriteProvider).Sheet;
+            SpriteAnimation.Play(playerSprite, sheet.FindImageIndex("idle0"), sheet.FindImageIndex("idle4"), AnimationRepeatMode.LoopInfinite, 7);
         }
 
         void PlayRun()
         {
-            var provider = (SpriteFromSheet)playerSprite.SpriteProvider;
-            provider.Sheet = runGroup;
-            SpriteAnimation.Play(playerSprite, 0, provider.Sheet.Sprites.Count - 1, AnimationRepeatMode.LoopInfinite, 12);
+            var sheet = ((SpriteFromSheet)playerSprite.SpriteProvider).Sheet;
+            SpriteAnimation.Play(playerSprite, sheet.FindImageIndex("run0"), sheet.FindImageIndex("run4"), AnimationRepeatMode.LoopInfinite, 12);
         }
 
         public override void Start()
@@ -75,18 +68,9 @@ namespace CharacterControllerSample
                     }
                 }
             });
-
-            idleGroup = Asset.Load<SpriteSheet>("player_idle");
-            runGroup = Asset.Load<SpriteSheet>("player_run");
+            
             playerSprite = Entity.Get<SpriteComponent>();
             PlayIdle();
-        }
-
-        public override void Cancel()
-        {
-            // Unload graphic resources.
-            Asset.Unload(idleGroup);
-            Asset.Unload(runGroup);
         }
 
         public override void Update()

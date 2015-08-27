@@ -6,19 +6,24 @@ Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 Alpha: Explicit
+Packing:
+    AtlasMaximumSize: {X: 2048, Y: 2048}
 Sprites:
     -   Source: ../../RawAssets/tex1.png
         Name: button
         TextureRegion: {X: 0, Y: 1904, Width: 183, Height: 90}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 125, Y: 50, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 125.0, Y: 50.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/tex1.png
         Name: pdx_logo
         TextureRegion: {X: 0, Y: 1423, Width: 277, Height: 284}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/tex1.png
         Name: score_bg
         TextureRegion: {X: 0, Y: 1712, Width: 204, Height: 189}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

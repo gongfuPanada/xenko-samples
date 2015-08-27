@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
@@ -502,10 +503,10 @@ namespace GameMenu
 
             lifeBarGrid = new Grid();
             lifeBarGrid.Children.Add(lifebarGauge);
-            lifeBarGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Fixed, lifeBarCoverImage.Borders.X));
+            lifeBarGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Fixed, 128));
             lifeBarGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Star, 0));
             lifeBarGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Star, 100));
-            lifeBarGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Fixed, lifeBarCoverImage.Borders.Y));
+            lifeBarGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Fixed, 85));
             lifeBarGrid.RowDefinitions.Add(new StripDefinition());
             lifeBarGrid.LayerDefinitions.Add(new StripDefinition());
             lifeBarGrid.SetCanvasRelativePosition(new Vector3(0f, 0.185f, 0f));
@@ -531,7 +532,7 @@ namespace GameMenu
                 TextSize = 32,
                 HorizontalAlignment = HorizontalAlignment.Left
             };
-            lifeCounter.SetCanvasAbsolutePosition(new Vector3(lifeBarCoverImage.Borders.X, float.NaN, float.NaN));
+            lifeCounter.SetCanvasAbsolutePosition(new Vector3(128, float.NaN, float.NaN));
             lifeCounter.SetCanvasRelativePosition(new Vector3(float.NaN, 0.44f, 0f));
             lifeCounter.SetPanelZIndex(1);
             LifeStatus = 3;

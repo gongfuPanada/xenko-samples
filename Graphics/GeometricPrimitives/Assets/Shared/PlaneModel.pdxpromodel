@@ -1,11 +1,11 @@
 !ProceduralModelAsset
 Id: 32d3b7c9-36f8-4f54-a03e-55f45051ca20
-SerializedVersion: 3
+SerializedVersion: 4
 Tags: []
 Type: !PlaneProceduralModel
-    Size: {X: 1, Y: 1}
+    Size: {X: 1.0, Y: 1.0}
     Tessellation: {X: 1, Y: 1}
-    UVScales: {X: 1, Y: 1}
+    UVScales: {X: 1.0, Y: 1.0}
     Normal: UpY
     GenerateBackFace: true
     MaterialInstance:

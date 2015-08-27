@@ -1,8 +1,8 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 14.0.23107.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleSprite", "SimpleSprite", "{5C3B20C3-522A-4637-A7B2-661CAC6C7724}"
 	ProjectSection(SiliconStudioPackage) = preProject
 		Graphics/SimpleSprite/SimpleSprite.pdxpkg = Graphics/SimpleSprite/SimpleSprite.pdxpkg

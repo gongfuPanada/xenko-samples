@@ -1,9 +1,12 @@
 !SceneAsset
 Id: c90e49d7-b3d8-4b19-b771-71cf4460a83b
-SerializedVersion: 6
+SerializedVersion: 13
 Tags: []
 Hierarchy:
-    RootEntity: 98013d00-0bce-4cbd-bd49-54633a64950a
+    RootEntities:
+        - 3723d251-4a6e-4edb-9858-591bd4312d77
+        - 12878618-e212-49c0-a653-ee686cb3f863
+        - f9ccd718-d696-48f5-bbb9-846f8a531db5
     Entities:
         -   Name: UI
             Group: Group1
@@ -13,12 +16,12 @@ Hierarchy:
                         - !SimpleDynamicTexture.UIScript,SimpleDynamicTexture.Game
                             Id: 1d983363-de80-406c-8058-fa5c0bed6ce0
                 UIComponent.Key:
-                    VirtualResolution: {X: 640, Y: 1136, Z: 1000}
+                    VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
                     VirtualResolutionMode: FixedWidthFixedHeight
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 12878618-e212-49c0-a653-ee686cb3f863
         -   Name: MainScript
@@ -28,66 +31,51 @@ Hierarchy:
                         - !SimpleDynamicTexture.TextureUpdateScript,SimpleDynamicTexture.Game
                             Id: 50e271e0-83f5-4d14-a10a-d7a603ad9fca
                 TransformComponent.Key:
-                    Position: {X: -1, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: -1.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 3723d251-4a6e-4edb-9858-591bd4312d77
-        - !Scene
-            Name: Scene
-            Components:
-                SceneComponent.Key:
-                    GraphicsCompositor: !SceneGraphicsCompositorLayers
-                        Cameras:
-                            -   Name: null
-                                Camera: null
-                        Layers: []
-                        Master:
-                            Name: SceneGraphicsLayer
-                            Output: !MasterRenderFrameProvider {}
-                            Renderers:
-                                - !ClearRenderFrameRenderer
-                                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
-                                    Output: !CurrentRenderFrameProvider {}
-                                - !SceneCameraRenderer
-                                    Mode: !CameraRendererModeForward {}
-                                    Camera:
-                                        Index: 0
-                                    CullingMask: Group0
-                                    Output: !CurrentRenderFrameProvider {}
-                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
-                                - !SceneCameraRenderer
-                                    Mode: !CameraRendererModeForward {}
-                                    Camera:
-                                        Index: 0
-                                    CullingMask: Group1
-                                    Output: !CurrentRenderFrameProvider {}
-                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
-                    EditorSettings:
-                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-                        SceneUnit: 1
-                        Camera: {}
-                        Mode: !SceneEditorGraphicsModeLDRSettings
-                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
-                TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
-                    Children:
-                        -   Entity: {Id: 3723d251-4a6e-4edb-9858-591bd4312d77}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 12878618-e212-49c0-a653-ee686cb3f863}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: f9ccd718-d696-48f5-bbb9-846f8a531db5}
-                            Component: TransformComponent.Key
-            Id: 98013d00-0bce-4cbd-bd49-54633a64950a
         -   Name: Background
             Components:
                 BackgroundComponent.Key:
                     Texture: d83b8b93-533b-4ed9-b064-9308965a6745:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 1, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 1.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: f9ccd718-d696-48f5-bbb9-846f8a531db5
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera: null
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        CullingMask: Group0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        CullingMask: Group1
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Camera: {}
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

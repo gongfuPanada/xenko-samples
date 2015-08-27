@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: c0a0ac30-cb79-44a6-878b-f8a53948d844
-SerializedVersion: 3
+SerializedVersion: 4
 Tags: []
 Type: !CapsuleProceduralModel
     Length: 0.75

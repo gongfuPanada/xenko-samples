@@ -1,11 +1,11 @@
 !ProceduralModelAsset
 Id: 00f608bd-b4e5-4e50-94af-6d593671e035
-SerializedVersion: 2
+SerializedVersion: 4
 Tags: []
 Type: !CylinderProceduralModel
     Height: 0.1
-    Diameter: 7.2
+    Radius: 3.6
     Tessellation: 64
-    ScaleUV: 6
+    ScaleUV: 6.0
     MaterialInstance:
         Material: 03ad0abd-afc4-4b32-89ae-d6f2623014e2:TrainingFloorMaterial

@@ -1,0 +1,9 @@
+!GameSettingsAsset
+Id: 52680b2d-d2bd-4d57-87d2-00fcb1ce7880
+Tags: []
+BackBufferHeight: 1136
+BackBufferWidth: 640
+DefaultGraphicsProfile: Level_9_1
+DefaultScene: c90e49d7-b3d8-4b19-b771-71cf4460a83b:Scene
+DisplayOrientation: Portrait
+TextureQuality: Fast

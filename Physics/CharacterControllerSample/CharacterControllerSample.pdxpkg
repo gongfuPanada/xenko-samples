@@ -1,5 +1,6 @@
 !Package
 Id: 207c8460-0747-4fc7-b3c3-5e4f94ef0ee8
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: CharacterControllerSample
@@ -16,9 +17,7 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: CharacterControllerSample.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
@@ -30,7 +29,6 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: Direct3D11

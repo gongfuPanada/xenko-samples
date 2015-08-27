@@ -25,10 +25,11 @@ namespace JumpyJet
         
         public override void Start()
         {
-            // Load assets
+            // Load assets TODO: replace this by prefab when available.
             var pipeEntity = new Entity("pipe") { new SpriteComponent
             {
-                SpriteProvider = new SpriteFromSheet { Sheet = Asset.Load<SpriteSheet>("pipe_sprite") },
+                SpriteProvider = new SpriteFromSheet { Sheet = Asset.Load<SpriteSheet>("Sprites") },
+                CurrentFrame = 2,
                 IgnoreDepth = true
             } };
 

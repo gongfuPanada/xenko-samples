@@ -1,0 +1,39 @@
+!SpriteSheet
+Id: ca9993b7-1213-4037-8a77-333f3fa2e163
+SerializedVersion: 1
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
+Packing:
+    Enabled: false
+    AtlasMaximumSize: {X: 4096, Y: 2048}
+Sprites:
+    -   Source: ../../RawAssets/tex3.jpg
+        Name: parallax_background
+        TextureRegion: {X: 0, Y: 0, Width: 1735, Height: 1136}
+        Center: {X: 320.0, Y: 568.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/tex2.png
+        Name: parallax_gear
+        TextureRegion: {X: 0, Y: 0, Width: 1920, Height: 1136}
+        Center: {X: 320.0, Y: 568.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/tex1.png
+        Name: parallax_gear_frame
+        TextureRegion: {X: 0, Y: 0, Width: 1920, Height: 1136}
+        Center: {X: 320.0, Y: 568.0}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/tex1.png
+        Name: floor
+        TextureRegion: {X: 0, Y: 1140, Width: 1920, Height: 279}
+        Center: {X: 320.0, Y: 139.5}
+        CenterFromMiddle: false
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

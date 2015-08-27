@@ -1,9 +1,16 @@
 !SceneAsset
 Id: 7207a5b4-cbf4-4edc-a7fb-0dfa83e2414e
-SerializedVersion: 6
+SerializedVersion: 13
 Tags: []
 Hierarchy:
-    RootEntity: db80cd88-8da7-4947-8575-48e851f48fc2
+    RootEntities:
+        - 68cbade9-8efc-4123-8c6c-81bf6c38059b
+        - f0bb69db-f15c-4a39-b3cd-d2941fdb99ce
+        - 2ff8aac2-706b-4d4e-b6c9-22e2f8f2c31f
+        - 9f899343-be76-409e-a38f-7aa8744b8179
+        - 23d023ae-08a0-4a2b-883b-c3a784e25e78
+        - 9a768522-351d-40ab-ad6b-9ecc90f3c111
+        - 3d1a3eb9-d296-4fd6-8f90-9f3f3efb058a
     Entities:
         -   Name: Character
             Components:
@@ -28,9 +35,9 @@ Hierarchy:
                                 Component: SpriteComponent.Key
                             Id: d16da46d-e886-4870-a8a2-7ac30c0034ea
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 1.5, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children:
                         -   Entity: {Id: 8e708cb6-dd94-4ca1-89f5-17d15dfda2ab}
                             Component: TransformComponent.Key
@@ -40,12 +47,12 @@ Hierarchy:
                 LightComponent.Key:
                     Type: !LightAmbient
                         Color: !LightColorRgb
-                            Color: {R: 1, G: 1, B: 1}
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
                     Intensity: 0.75
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: -5}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: -5.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 2ff8aac2-706b-4d4e-b6c9-22e2f8f2c31f
         -   Name: GameScript
@@ -64,24 +71,24 @@ Hierarchy:
                                 Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
                                 Id: df4146ae-23ba-40f7-8258-46b1fe1ae97d
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 1}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: 1.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 3d1a3eb9-d296-4fd6-8f90-9f3f3efb058a
         -   Name: UI
             Components:
                 UIComponent.Key:
-                    VirtualResolution: {X: 640, Y: 1136, Z: 1000}
+                    VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
                     VirtualResolutionMode: FixedWidthFixedHeight
                 ScriptComponent.Key:
                     Scripts:
                         - !SpaceEscape.UIScript,SpaceEscape.Game
                             Id: df4146ae-23ba-40f7-8258-46b1fe1ae97d
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b
         -   Name: Sprite
@@ -89,13 +96,13 @@ Hierarchy:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromTexture
                         Texture: a05dc255-f378-4167-b474-1562b18dfc90:shadow_00
-                        PixelsPerUnit: 33
-                        Center: {X: 0, Y: 0}
+                        PixelsPerUnit: 33.0
+                        Center: {X: 0.0, Y: 0.0}
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 TransformComponent.Key:
-                    Position: {X: 0, Y: -1.2, Z: 0}
-                    Rotation: {W: 0.707106769, X: 0.707106769, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: -1.2, Z: 0.0}
+                    Rotation: {W: 0.707106769, X: 0.707106769, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 8e708cb6-dd94-4ca1-89f5-17d15dfda2ab
         -   Name: Background
@@ -105,9 +112,9 @@ Hierarchy:
                         - !SpaceEscape.Background.BackgroundScript,SpaceEscape.Game
                             Id: 96a90126-5b00-48ef-b725-ff6116d66cf5
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: -1}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: -1.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 9a768522-351d-40ab-ad6b-9ecc90f3c111
         -   Name: Directional light
@@ -115,81 +122,57 @@ Hierarchy:
                 LightComponent.Key:
                     Type: !LightDirectional
                         Color: !LightColorRgb
-                            Color: {R: 1, G: 1, B: 1}
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
                         Shadow:
-                            Importance: High
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                             BiasParameters: {}
                     Intensity: 0.4
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 5, Z: 0}
+                    Position: {X: 0.0, Y: 5.0, Z: 0.0}
                     Rotation: {W: 0.79383105, X: -0.429669142, Y: 0.37299636, Z: -0.214686662}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 9f899343-be76-409e-a38f-7aa8744b8179
-        - !Scene
-            Name: Root
-            Components:
-                SceneComponent.Key:
-                    GraphicsCompositor: !SceneGraphicsCompositorLayers
-                        Cameras:
-                            -   Name: null
-                                Camera:
-                                    Entity: {Id: f0bb69db-f15c-4a39-b3cd-d2941fdb99ce}
-                                    Component: CameraComponent.Key
-                        Layers: []
-                        Master:
-                            Name: SceneGraphicsLayer
-                            Output: !MasterRenderFrameProvider {}
-                            Renderers:
-                                - !ClearRenderFrameRenderer
-                                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
-                                    Output: !CurrentRenderFrameProvider {}
-                                - !SceneCameraRenderer
-                                    Mode: !CameraRendererModeForward
-                                        ModelEffect: SpaceEscapeEffectMain
-                                    Camera:
-                                        Index: 0
-                                    Output: !CurrentRenderFrameProvider {}
-                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
-                    EditorSettings:
-                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-                        SceneUnit: 1
-                        Camera: {}
-                        Mode: !SceneEditorGraphicsModeLDRSettings
-                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
-                TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
-                    Children:
-                        -   Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: f0bb69db-f15c-4a39-b3cd-d2941fdb99ce}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 2ff8aac2-706b-4d4e-b6c9-22e2f8f2c31f}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 9f899343-be76-409e-a38f-7aa8744b8179}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 23d023ae-08a0-4a2b-883b-c3a784e25e78}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 9a768522-351d-40ab-ad6b-9ecc90f3c111}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 3d1a3eb9-d296-4fd6-8f90-9f3f3efb058a}
-                            Component: TransformComponent.Key
-            Id: db80cd88-8da7-4947-8575-48e851f48fc2
         -   Name: Camera
             Components:
                 CameraComponent.Key:
                     Projection: Perspective
-                    VerticalFieldOfView: 72
-                    NearClipPlane: 1
-                    FarClipPlane: 340
+                    VerticalFieldOfView: 72.0
+                    NearClipPlane: 1.0
+                    FarClipPlane: 340.0
                     AspectRatio: 0.563
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 12, Z: -12}
+                    Position: {X: 0.0, Y: 12.0, Z: -12.0}
                     Rotation: {W: -7.52105933E-10, X: 7.875609E-08, Y: 0.9612617, Z: 0.2756374}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: f0bb69db-f15c-4a39-b3cd-d2941fdb99ce
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: f0bb69db-f15c-4a39-b3cd-d2941fdb99ce}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward
+                            ModelEffect: SpaceEscapeEffectMain
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Camera: {}
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

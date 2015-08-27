@@ -1,5 +1,6 @@
 !Package
 Id: 80373992-22a3-45ed-b0c4-ed5bbfc1bd12
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: AnimatedModel
@@ -8,7 +9,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.2.0-beta
+            Version: 1.3.0-alpha01
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -16,16 +17,9 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: AnimatedModel.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
-        Properties:
-            GameSettingsAsset.BackBufferHeight: 1136
-            GameSettingsAsset.BackBufferWidth: 640
-            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
-            GameSettingsAsset.DefaultScene: 1d1214c6-8844-4fae-8142-1f986349f8d3:Scene
-            Paradox.DisplayOrientation: Portrait
+        Properties: {}
         ProjectReferences:
             -   Id: a07e6e07-5068-4e26-b8a5-051bec0d8f81
                 Location: AnimatedModel.Game/AnimatedModel.Game.csproj
@@ -35,7 +29,6 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: Direct3D11

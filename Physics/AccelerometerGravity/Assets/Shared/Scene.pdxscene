@@ -1,35 +1,43 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: 6
+SerializedVersion: 13
 Tags: []
 Hierarchy:
-    RootEntity: a1045c64-f998-428b-9741-84eb1de4f8ef
+    RootEntities:
+        - 339ed07f-b58b-4d72-9d97-b7679f710573
+        - e7a10a2d-0ab4-4ef8-8a9f-1bfce8bc43ad
+        - b8081f8f-09fd-4209-9b9e-883d054493a5
+        - 4e795cc2-f6c6-4936-80db-bbfc789d9264
+        - 3d8e427f-90f5-4579-b8dd-1f0264f1b47c
+        - 480d509a-cd2b-48c6-812e-9d77df3c523c
+        - 2db78459-e067-47bc-bc99-7b52e75e3eb4
+        - cb93c888-7592-4e5c-8f57-448e510ef1ff
     Entities:
         -   Name: GroundRight
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: StaticRigidBody
-                            Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                        - !StaticRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0
+                            ColliderShapes:
+                                - !ColliderShapeAssetDesc
+                                    Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
                 ScriptComponent.Key:
                     Scripts:
                         - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 3dc48e9f-e3b3-4e2f-8e04-2cbf497bc08b
                 TransformComponent.Key:
-                    Position: {X: 8.89, Y: 0, Z: 0}
-                    Rotation: {W: 0.707106769, X: 0, Y: 0, Z: 0.707106769}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 8.89, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 0.707106769, X: 0.0, Y: 0.0, Z: 0.707106769}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 2db78459-e067-47bc-bc99-7b52e75e3eb4
         -   Name: Camera
             Components:
                 CameraComponent.Key:
                     Projection: Orthographic
-                    FarClipPlane: 10
+                    FarClipPlane: 10.0
                 PhysicsComponent.Key:
                     Elements: []
                 ScriptComponent.Key:
@@ -39,126 +47,73 @@ Hierarchy:
                         - !AccelerometerGravity.GuiScript,AccelerometerGravity.Game
                             Id: a6f55234-c9dd-446e-b1fe-838970897afc
                 UIComponent.Key:
-                    VirtualResolution: {X: 1280, Y: 720, Z: 1000}
+                    VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 3}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: 3.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 339ed07f-b58b-4d72-9d97-b7679f710573
         -   Name: GroundTop
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: StaticRigidBody
-                            Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                        - !StaticRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0
+                            ColliderShapes:
+                                - !ColliderShapeAssetDesc
+                                    Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
                 ScriptComponent.Key:
                     Scripts:
                         - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: f9212e97-1743-43a1-a61b-97da13bf2aba
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 5, Z: 0}
-                    Rotation: {W: -4.371139E-08, X: 0, Y: 0, Z: 1}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 5.0, Z: 0.0}
+                    Rotation: {W: -4.371139E-08, X: 0.0, Y: 0.0, Z: 1.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 3d8e427f-90f5-4579-b8dd-1f0264f1b47c
         -   Name: GroundLeft
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: StaticRigidBody
-                            Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                        - !StaticRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0
+                            ColliderShapes:
+                                - !ColliderShapeAssetDesc
+                                    Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
                 ScriptComponent.Key:
                     Scripts:
                         - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 5e3ff17e-fb05-4d78-92d8-3374451f2f57
                 TransformComponent.Key:
-                    Position: {X: -8.89, Y: 0, Z: 0}
-                    Rotation: {W: 0.707106769, X: 0, Y: 0, Z: -0.707106769}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: -8.89, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 0.707106769, X: 0.0, Y: 0.0, Z: -0.707106769}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 480d509a-cd2b-48c6-812e-9d77df3c523c
         -   Name: GroundBottom
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: StaticRigidBody
-                            Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
+                        - !StaticRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0
+                            ColliderShapes:
+                                - !ColliderShapeAssetDesc
+                                    Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
                 ScriptComponent.Key:
                     Scripts:
                         - !AccelerometerGravity.BounceScript,AccelerometerGravity.Game
                             Id: 2014eb85-3594-4e1d-ab51-3e37201366d4
                 TransformComponent.Key:
-                    Position: {X: 0, Y: -5, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: -5.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 4e795cc2-f6c6-4936-80db-bbfc789d9264
-        - !Scene
-            Name: Scene
-            Components:
-                SceneComponent.Key:
-                    GraphicsCompositor: !SceneGraphicsCompositorLayers
-                        Cameras:
-                            -   Name: null
-                                Camera:
-                                    Entity: {Id: 339ed07f-b58b-4d72-9d97-b7679f710573}
-                                    Component: CameraComponent.Key
-                        Layers: []
-                        Master:
-                            Name: SceneGraphicsLayer
-                            Output: !MasterRenderFrameProvider {}
-                            Renderers:
-                                - !ClearRenderFrameRenderer
-                                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1}
-                                    Output: !CurrentRenderFrameProvider {}
-                                - !SceneCameraRenderer
-                                    Mode: !CameraRendererModeForward {}
-                                    Camera:
-                                        Index: 0
-                                    Output: !CurrentRenderFrameProvider {}
-                                    Viewport: {X: 0, Y: 0, Width: 100, Height: 100}
-                    EditorSettings:
-                        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-                        SceneUnit: 1
-                        Camera:
-                            OrthographicSize: 1000
-                        Mode: !SceneEditorGraphicsModeLDRSettings
-                            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
-                TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
-                    Children:
-                        -   Entity: {Id: 339ed07f-b58b-4d72-9d97-b7679f710573}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: e7a10a2d-0ab4-4ef8-8a9f-1bfce8bc43ad}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: b8081f8f-09fd-4209-9b9e-883d054493a5}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 4e795cc2-f6c6-4936-80db-bbfc789d9264}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 3d8e427f-90f5-4579-b8dd-1f0264f1b47c}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 480d509a-cd2b-48c6-812e-9d77df3c523c}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: 2db78459-e067-47bc-bc99-7b52e75e3eb4}
-                            Component: TransformComponent.Key
-                        -   Entity: {Id: cb93c888-7592-4e5c-8f57-448e510ef1ff}
-                            Component: TransformComponent.Key
-            Id: a1045c64-f998-428b-9741-84eb1de4f8ef
         -   Name: Ball2
             Components:
                 SpriteComponent.Key:
@@ -167,12 +122,13 @@ Hierarchy:
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: DynamicRigidBody
-                            Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
+                        - !DynamicRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
                             LinkedBoneName: null
-                            StepHeight: 0
+                            ColliderShapes:
+                                - !ColliderShapeAssetDesc
+                                    Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
                 ScriptComponent.Key:
                     Scripts:
                         - !AccelerometerGravity.NoSleepScript,AccelerometerGravity.Game
@@ -182,9 +138,9 @@ Hierarchy:
                         - !AccelerometerGravity.BallScript,AccelerometerGravity.Game
                             Id: 435a1ec7-46ef-4f8d-901e-63103ba65478
                 TransformComponent.Key:
-                    Position: {X: -5, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 0}
+                    Position: {X: -5.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 0.0}
                     Children: []
             Id: b8081f8f-09fd-4209-9b9e-883d054493a5
         -   Name: Background
@@ -192,9 +148,9 @@ Hierarchy:
                 BackgroundComponent.Key:
                     Texture: 612ae0d5-a8e6-49eb-8751-0eb9b0a82ea7:ParadoxBackground
                 TransformComponent.Key:
-                    Position: {X: 0, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 1}
+                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: cb93c888-7592-4e5c-8f57-448e510ef1ff
         -   Name: Ball1
@@ -205,12 +161,13 @@ Hierarchy:
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: DynamicRigidBody
-                            Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
+                        - !DynamicRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
                             LinkedBoneName: null
-                            StepHeight: 0
+                            ColliderShapes:
+                                - !ColliderShapeAssetDesc
+                                    Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
                 ScriptComponent.Key:
                     Scripts:
                         - !AccelerometerGravity.NoSleepScript,AccelerometerGravity.Game
@@ -220,8 +177,36 @@ Hierarchy:
                         - !AccelerometerGravity.BallScript,AccelerometerGravity.Game
                             Id: 5ebf5192-3802-424c-8527-6f2affb87e2d
                 TransformComponent.Key:
-                    Position: {X: 5, Y: 0, Z: 0}
-                    Rotation: {W: 1, X: 0, Y: 0, Z: 0}
-                    Scale: {X: 1, Y: 1, Z: 0}
+                    Position: {X: 5.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 0.0}
                     Children: []
             Id: e7a10a2d-0ab4-4ef8-8a9f-1bfce8bc43ad
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 339ed07f-b58b-4d72-9d97-b7679f710573}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Camera:
+                OrthographicSize: 1000.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

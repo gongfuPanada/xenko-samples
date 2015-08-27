@@ -1,5 +1,6 @@
 !Package
 Id: 5c3b20c3-522a-4637-a7b2-661cac6c7724
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: SimpleSprite
@@ -8,7 +9,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.2.0-beta
+            Version: 1.3.0-alpha01
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -16,16 +17,9 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: SimpleSprite.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
-        Properties:
-            GameSettingsAsset.BackBufferHeight: 720
-            GameSettingsAsset.BackBufferWidth: 1280
-            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
-            GameSettingsAsset.DefaultScene: 2871eb8a-27ef-40c9-a40a-9026b53ab794:Scene
-            Paradox.DisplayOrientation: LandscapeRight
+        Properties: {}
         ProjectReferences:
             -   Id: 3236d26b-652b-4daa-a32f-2790bd955a96
                 Location: SimpleSprite.Game/SimpleSprite.Game.csproj
@@ -35,7 +29,6 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: Direct3D11

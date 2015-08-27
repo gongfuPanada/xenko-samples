@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using SiliconStudio.Core.Mathematics;
+﻿using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
 
@@ -23,7 +22,7 @@ namespace SpriteEntity
         // TODO centralize
         private const float minWidthX = -8f - 2f;
 
-        private SpriteSheet beamNormalSprite;
+        private Sprite beamNormalSprite;
 
         public BeamScript()
         {
@@ -48,11 +47,11 @@ namespace SpriteEntity
 
         public RectangleF GetBoundingBox()
         {
-            if (beamNormalSprite == null) beamNormalSprite = Asset.Load<SpriteSheet>("bullet");
-            var result = beamNormalSprite.Sprites.First().Region;
-            result.Width *= LogicScript.ScreenScale;
-            result.Height *= LogicScript.ScreenScale;
-            return result;
+            if (beamNormalSprite == null)
+                beamNormalSprite = Asset.Load<SpriteSheet>("SpriteSheet")["bullet"];
+
+            var size = beamNormalSprite.SizeInPixels * LogicScript.ScreenScale;
+            return new RectangleF(0, 0, size.X, size.Y);
         }
     }
 }

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: 10
+SerializedVersion: 13
 Tags: []
 Hierarchy:
     RootEntities:
@@ -14,11 +14,9 @@ Hierarchy:
             Components:
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: StaticRigidBody
+                        - !StaticRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0.0
                             ColliderShapes:
                                 - !ColliderShapeAssetDesc
                                     Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
@@ -32,15 +30,14 @@ Hierarchy:
             Components:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromSheet
-                        Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:enemy_active
+                        Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                    CurrentFrame: 0
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: StaticRigidBody
+                        - !StaticRigidbodyElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0.0
                             ColliderShapes:
                                 - !ColliderShapeAssetDesc
                                     Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
@@ -80,15 +77,14 @@ Hierarchy:
             Components:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromSheet
-                        Sheet: 8c0a1b54-0f77-4ef6-8bb7-ca31c03c004e:player_idle
+                        Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                    CurrentFrame: 2
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:
-                        -   Type: CharacterController
+                        - !CharacterElement
                             CollisionGroup: 0
                             CanCollideWith: 0
-                            LinkedBoneName: null
-                            StepHeight: 0.1
                             ColliderShapes:
                                 - !ColliderShapeAssetDesc
                                     Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs

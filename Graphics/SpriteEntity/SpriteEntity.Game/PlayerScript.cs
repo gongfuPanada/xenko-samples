@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
@@ -32,10 +33,7 @@ namespace SpriteEntity
 
         private AgentAnimation currentAgentAnimation;
         private SpriteComponent agentSpriteComponent;
-        private RectangleF agentSpriteRegion;
-        private SpriteSheet agentIdle;
-        private SpriteSheet agentRun;
-        private SpriteSheet agentShoot;
+        private SpriteSheet spriteSheet;
 
         // TODO centralize 
         private const float gameWidthX = 16f;       // from -8f to 8f
@@ -64,18 +62,34 @@ namespace SpriteEntity
                 if (currentAgentAnimation == value)
                     return;
 
+                string startFrame;
+                string endFrame;
                 currentAgentAnimation = value;
-                SpriteAnimation.Play(agentSpriteComponent, 0, agentSpriteComponent.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, AnimationFps[currentAgentAnimation]);
+
+                switch (currentAgentAnimation)
+                {
+                    case AgentAnimation.Run:
+                        startFrame = "run0";
+                        endFrame = "run4";
+                        break;
+                    case AgentAnimation.Idle:
+                        startFrame = "idle0";
+                        endFrame = "idle4"; 
+                        break;
+                    case AgentAnimation.Shoot:
+                        startFrame = "shoot0";
+                        endFrame = "shoot4";
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(value), value, null);
+                }
+                SpriteAnimation.Play(agentSpriteComponent, spriteSheet.FindImageIndex(startFrame), spriteSheet.FindImageIndex(endFrame), AnimationRepeatMode.LoopInfinite, AnimationFps[currentAgentAnimation]);
             }
         }
 
         public override async Task Execute()
         {
-            agentIdle = Asset.Load<SpriteSheet>("character_idle");
-            agentRun = Asset.Load<SpriteSheet>("character_run");
-            agentShoot = Asset.Load<SpriteSheet>("character_shoot");
-            agentSpriteRegion = agentIdle.Sprites.First().Region;
-            var bulletSpriteSheet = Asset.Load<SpriteSheet>("bullet");
+            spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
 
             agentSpriteComponent = Entity.Get<SpriteComponent>();
 
@@ -105,9 +119,9 @@ namespace SpriteEntity
                 if (inputState == InputState.RunLeft || inputState == InputState.RunRight)
                 {
                     // Update Agent's position
-                    var dt = (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    var dt = (float) Game.UpdateTime.Elapsed.TotalSeconds;
 
-                    Entity.Transform.Position.X += ((inputState == InputState.RunRight) ? AgentMoveDistance : -AgentMoveDistance) * dt;
+                    Entity.Transform.Position.X += ((inputState == InputState.RunRight) ? AgentMoveDistance : -AgentMoveDistance)*dt;
 
                     if (Entity.Transform.Position.X < -gameWidthHalfX)
                         Entity.Transform.Position.X = -gameWidthHalfX;
@@ -121,13 +135,12 @@ namespace SpriteEntity
                     Entity.Transform.Scale.X = isAgentFacingRight ? 1f : -1f;
 
                     // Update the sprite animation and state
-                    agentSpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = agentRun };
                     CurrentAgentAnimation = AgentAnimation.Run;
                 }
                 else if (inputState == InputState.Shoot)
                 {
                     // Update shootDelayCounter, and check whether it is time to create a new bullet
-                    shootDelayCounter -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                    shootDelayCounter -= (float) Game.UpdateTime.Elapsed.TotalSeconds;
 
                     if (shootDelayCounter > 0)
                         continue;
@@ -139,26 +152,22 @@ namespace SpriteEntity
                     // Spawns a new bullet
                     var bullet = new Entity
                     {
-                        new SpriteComponent { SpriteProvider = new SpriteFromSheet { Sheet = bulletSpriteSheet } },
+                        new SpriteComponent {SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet")},
 
                         // Will make the beam move along a direction at each frame
-                        new ScriptComponent { Scripts = { new BeamScript { DirectionX = isAgentFacingRight? 1f : -1f } } }
+                        new ScriptComponent {Scripts = {new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f}}}
                     };
 
-                    bullet.Transform.Position = (isAgentFacingRight)
-                        ? Entity.Transform.Position + bulletOffset
-                        : Entity.Transform.Position + (bulletOffset * new Vector3(-1, 1, 1));
+                    bullet.Transform.Position = (isAgentFacingRight) ? Entity.Transform.Position + bulletOffset : Entity.Transform.Position + (bulletOffset*new Vector3(-1, 1, 1));
 
-                    SceneSystem.SceneInstance.Scene.AddChild(bullet);
+                    SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
                     Logic.WatchBullet(bullet);
 
                     // Start animation for shooting
-                    agentSpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = agentShoot };
                     CurrentAgentAnimation = AgentAnimation.Shoot;
                 }
                 else
                 {
-                    agentSpriteComponent.SpriteProvider = new SpriteFromSheet { Sheet = agentIdle };
                     CurrentAgentAnimation = AgentAnimation.Idle;
                 }
             }
@@ -200,24 +209,26 @@ namespace SpriteEntity
 
             // Transform pointer's position from normorlize coordinate to virtual resolution coordinate
             var resolution = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
-            var virtualCoordinatePointerPosition = resolution * (pointerState.Position - new Vector2(0.0f));
+            var virtualCoordinatePointerPosition = resolution*pointerState.Position;
 
             // Get current position of the agent, since the origin of the sprite is at the center, region needs to be shifted to top-left
-            agentSpriteRegion.X = (int)VirtualCoordToPixel(Entity.Transform.Position.X) - agentSpriteRegion.Width / 2;
-            agentSpriteRegion.Y = (int)VirtualCoordToPixel(Entity.Transform.Position.Y) - agentSpriteRegion.Height / 2;
+            var agentSize = spriteSheet["idle0"].SizeInPixels;
+            var agentSpriteRegion = new RectangleF
+            {
+                X = (int) VirtualCoordToPixel(Entity.Transform.Position.X) - agentSize.X/2, Y = (int) VirtualCoordToPixel(Entity.Transform.Position.Y) - agentSize.Y/2, Width = agentSize.X, Height = agentSize.Y
+            };
 
             // Check if the touch position is in the x-axis region of the agent's sprite; if so, input is shoot
             if (agentSpriteRegion.Left <= virtualCoordinatePointerPosition.X && virtualCoordinatePointerPosition.X <= agentSpriteRegion.Right)
                 return InputState.Shoot;
 
             // Check if a pointer falls left or right of the screen, which would correspond to Run to the left or right respectively 
-            return ((pointerState.Position.X) <= agentSpriteRegion.Center.X / resolution.X) ? InputState.RunLeft : InputState.RunRight;
-
+            return ((pointerState.Position.X) <= agentSpriteRegion.Center.X/resolution.X) ? InputState.RunLeft : InputState.RunRight;
         }
 
         private float VirtualCoordToPixel(float virtualCoord)
         {
-            return (virtualCoord + (gameWidthHalfX)) / gameWidthX * GraphicsDevice.BackBuffer.Width;
+            return (virtualCoord + (gameWidthHalfX))/gameWidthX*GraphicsDevice.BackBuffer.Width;
         }
     }
 }

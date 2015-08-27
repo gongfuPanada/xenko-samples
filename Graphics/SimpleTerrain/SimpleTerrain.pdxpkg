@@ -1,5 +1,6 @@
 !Package
 Id: f9d0f9c1-374c-4beb-889f-3fafc3b492af
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: SimpleTerrain
@@ -16,12 +17,10 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: SimpleTerrain.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.DisplayOrientation: !DisplayOrientation LandscapeRight
+            Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: 7f24a73a-5e40-4d33-bd0a-344330bbba1d
                 Location: SimpleTerrain.Game/SimpleTerrain.Game.csproj
@@ -31,11 +30,10 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: !GraphicsPlatform Direct3D11
-            GameSettingsAsset.DefaultGraphicsProfile: !GraphicsProfile Level_9_1
+            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
+            Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 69fa1134-13a6-480b-afbd-5c450e08a174
                 Location: SimpleTerrain.Windows/SimpleTerrain.Windows.csproj

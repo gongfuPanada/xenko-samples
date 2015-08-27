@@ -4,184 +4,222 @@ SerializedVersion: 1
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing:
+    AtlasMaximumSize: {X: 2048, Y: 2048}
 Sprites:
     -   Source: ../../RawAssets/background.jpg
         Name: background_uiimage
         TextureRegion: {X: 0, Y: 0, Width: 640, Height: 1136}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: gold_icon
         TextureRegion: {X: 623, Y: 768, Width: 55, Height: 62}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: green_ship
         TextureRegion: {X: 1083, Y: 97, Width: 150, Height: 90}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: life_bar
         TextureRegion: {X: 441, Y: 984, Width: 421, Height: 25}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: lock_icon
         TextureRegion: {X: 1154, Y: 656, Width: 460, Height: 131}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 50, Y: 140, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 50.0, Y: 140.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: money_icon
         TextureRegion: {X: 868, Y: 976, Width: 53, Height: 47}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: popup_window
         TextureRegion: {X: 1, Y: 1, Width: 616, Height: 836}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 250, Y: 185, Z: 167, W: 167}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 250.0, Y: 185.0, Z: 167.0, W: 167.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: power
         TextureRegion: {X: 1792, Y: 114, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: red_ship
         TextureRegion: {X: 1083, Y: 1, Width: 150, Height: 90}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: scroll_background
         TextureRegion: {X: 623, Y: 1, Width: 454, Height: 477}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: small_display_element
         TextureRegion: {X: 1154, Y: 553, Width: 94, Height: 97}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 20, Y: 20, Z: 20, W: 20}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 20.0, Y: 20.0, Z: 20.0, W: 20.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: small_display_element_pressed
         TextureRegion: {X: 1620, Y: 599, Width: 94, Height: 97}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 20, Y: 20, Z: 20, W: 20}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 20.0, Y: 20.0, Z: 20.0, W: 20.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: speed
         TextureRegion: {X: 1792, Y: 1, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: star0
         TextureRegion: {X: 1245, Y: 793, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: star1
         TextureRegion: {X: 1751, Y: 566, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: star2
         TextureRegion: {X: 1762, Y: 453, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: star3
         TextureRegion: {X: 1762, Y: 340, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: tex_edit_activated_background
         TextureRegion: {X: 1293, Y: 190, Width: 463, Height: 130}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: tex_edit_inactivated_background
         TextureRegion: {X: 1293, Y: 326, Width: 463, Height: 130}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 70, Y: 70, Z: 13, W: 13}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 70.0, Y: 70.0, Z: 13.0, W: 13.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: touch_start_frame
         TextureRegion: {X: 1245, Y: 906, Width: 448, Height: 93}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: ui_text_bg
         TextureRegion: {X: 1154, Y: 426, Width: 125, Height: 121}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: weapon_select_frame
         TextureRegion: {X: 1285, Y: 462, Width: 460, Height: 131}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 60, Y: 50, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 60.0, Y: 50.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: yellow_ship
         TextureRegion: {X: 1636, Y: 774, Width: 150, Height: 90}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: blue_ship
         TextureRegion: {X: 1480, Y: 793, Width: 150, Height: 90}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: bstar0
         TextureRegion: {X: 221, Y: 984, Width: 104, Height: 33}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: bstar1
         TextureRegion: {X: 111, Y: 984, Width: 104, Height: 33}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: bstar2
         TextureRegion: {X: 331, Y: 984, Width: 104, Height: 33}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: bstar3
         TextureRegion: {X: 1, Y: 984, Width: 104, Height: 33}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: button0
         TextureRegion: {X: 1792, Y: 774, Width: 219, Height: 89}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 110, Y: 88, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 110.0, Y: 88.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: button1
         TextureRegion: {X: 1720, Y: 679, Width: 312, Height: 89}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 94, Y: 62, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 94.0, Y: 62.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: character
         TextureRegion: {X: 904, Y: 484, Width: 244, Height: 270}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: character_frame
         TextureRegion: {X: 1, Y: 843, Width: 640, Height: 135}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 128, Y: 85, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 128.0, Y: 85.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: control
         TextureRegion: {X: 1762, Y: 227, Width: 229, Height: 107}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: cyan_ship
         TextureRegion: {X: 1744, Y: 887, Width: 150, Height: 90}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: description_frame
         TextureRegion: {X: 1245, Y: 1, Width: 541, Height: 183}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 55, W: 55}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 55.0, W: 55.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: display_element
         TextureRegion: {X: 1083, Y: 227, Width: 204, Height: 193}
-        Center: {X: 0, Y: 0}
-        Borders: {X: 48, Y: 106, Z: 21, W: 25}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 48.0, Y: 106.0, Z: 21.0, W: 25.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

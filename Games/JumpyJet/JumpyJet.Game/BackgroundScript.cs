@@ -21,10 +21,7 @@ namespace JumpyJet
         private SpriteBatch spriteBatch;
 
         private readonly List<BackgroundSection> backgroundParallax = new List<BackgroundSection>();
-        private SpriteSheet pal0SpriteSheet;
-        private SpriteSheet pal1SpriteSheet;
-        private SpriteSheet pal2SpriteSheet;
-        private SpriteSheet pal3SpriteSheet;
+        private SpriteSheet parallaxesSheet;
 
         private SceneDelegateRenderer delegateRenderer;
 
@@ -33,18 +30,15 @@ namespace JumpyJet
             var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 20f);
 
             // Create Parallax Background
-            pal0SpriteSheet = Asset.Load<SpriteSheet>("pal0_sprite");
-            pal1SpriteSheet = Asset.Load<SpriteSheet>("pal1_sprite");
-            pal2SpriteSheet = Asset.Load<SpriteSheet>("pal2_sprite");
-            backgroundParallax.Add(new BackgroundSection(pal0SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 4f, Pal0Depth));
-            backgroundParallax.Add(new BackgroundSection(pal1SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 3f, Pal1Depth));
-            backgroundParallax.Add(new BackgroundSection(pal2SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 1.5f, Pal2Depth));
+            parallaxesSheet = Asset.Load<SpriteSheet>("ParallaxBackgrounds");
+            backgroundParallax.Add(new BackgroundSection(parallaxesSheet.Sprites[0], virtualResolution, GameScript.GameSpeed / 4f, Pal0Depth));
+            backgroundParallax.Add(new BackgroundSection(parallaxesSheet.Sprites[1], virtualResolution, GameScript.GameSpeed / 3f, Pal1Depth));
+            backgroundParallax.Add(new BackgroundSection(parallaxesSheet.Sprites[2], virtualResolution, GameScript.GameSpeed / 1.5f, Pal2Depth));
 
             // For pal3Sprite: Ground, move it downward so that its bottom edge is at the bottom screen.
             var screenHeight = virtualResolution.Y;
-            pal3SpriteSheet = Asset.Load<SpriteSheet>("pal3_sprite");
-            var pal3Height = pal3SpriteSheet.Sprites[0].Region.Height;
-            backgroundParallax.Add(new BackgroundSection(pal3SpriteSheet.Sprites[0], virtualResolution, GameScript.GameSpeed, Pal3Depth, Vector2.UnitY * (screenHeight - pal3Height) / 2));
+            var pal3Height = parallaxesSheet.Sprites[3].SizeInPixels.Y;
+            backgroundParallax.Add(new BackgroundSection(parallaxesSheet.Sprites[3], virtualResolution, GameScript.GameSpeed, Pal3Depth, Vector2.UnitY * (screenHeight - pal3Height) / 2));
             
             // allocate the sprite batch in charge of drawing the backgrounds.
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
@@ -73,10 +67,7 @@ namespace JumpyJet
 
             // free graphic objects
             spriteBatch.Dispose();
-            Asset.Unload(pal0SpriteSheet);
-            Asset.Unload(pal1SpriteSheet);
-            Asset.Unload(pal2SpriteSheet);
-            Asset.Unload(pal3SpriteSheet);
+            Asset.Unload(parallaxesSheet);
         }
 
         public void DrawParallax(RenderContext context, RenderFrame frame)

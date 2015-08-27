@@ -1,5 +1,6 @@
 !Package
 Id: 35e18fe9-55f3-4286-bb27-47f977ba160a
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: CustomEffect
@@ -8,7 +9,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.2.0-beta
+            Version: 1.3.0-alpha01
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -16,16 +17,9 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: CustomEffect.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
-        Properties:
-            GameSettingsAsset.BackBufferHeight: 720
-            GameSettingsAsset.BackBufferWidth: 1280
-            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
-            GameSettingsAsset.DefaultScene: 365136b9-adbe-4c9a-8eeb-563894b4bd08:Scene
-            Paradox.DisplayOrientation: LandscapeRight
+        Properties: {}
         ProjectReferences:
             -   Id: 9eadbab9-0afb-4d61-ac4b-6a691e26ec8f
                 Location: CustomEffect.Game/CustomEffect.Game.csproj
@@ -35,7 +29,6 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: Direct3D11

@@ -1,5 +1,6 @@
 !Package
 Id: 32bb115e-8773-42e2-9e63-77d495e70d98
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: GeometricPrimitives
@@ -8,7 +9,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.2.0-beta
+            Version: 1.3.0-alpha01
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -16,16 +17,9 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: GeometricPrimitives.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
-        Properties:
-            GameSettingsAsset.BackBufferHeight: 720
-            GameSettingsAsset.BackBufferWidth: 1280
-            GameSettingsAsset.DefaultGraphicsProfile: Level_9_1
-            GameSettingsAsset.DefaultScene: 41bc08b1-d7db-4466-8661-663be2db1dbf:Scene
-            Paradox.DisplayOrientation: LandscapeRight
+        Properties: {}
         ProjectReferences:
             -   Id: 2f90c609-e537-4a2b-9a28-8b6814ff8f41
                 Location: GeometricPrimitives.Game/GeometricPrimitives.Game.csproj
@@ -35,7 +29,6 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: Direct3D11

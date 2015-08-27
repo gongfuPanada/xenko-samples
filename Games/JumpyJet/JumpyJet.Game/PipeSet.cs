@@ -36,14 +36,14 @@ namespace JumpyJet
             // Store Entity and create another one for two rendering:
             // top and bottom sprite of pipe.
             var spriteComp = referencePipeEntity.Get<SpriteComponent>();
-            bottomPipe = referencePipeEntity.Clone();
+             bottomPipe = referencePipeEntity.Clone();
             topPipe = referencePipeEntity.Clone();
             Entity.AddChild(bottomPipe);
             Entity.AddChild(topPipe);
 
-            var textureRegion = spriteComp.SpriteProvider.GetSprite(0).Region;
-            pipeHeight = textureRegion.Height;
-            pipeWidth = textureRegion.Width;
+            var sprite = spriteComp.CurrentSprite;
+            pipeWidth = sprite.SizeInPixels.X;
+            pipeHeight = sprite.SizeInPixels.Y;
             halfPipeWidth = pipeWidth/2f;
 
             // Setup pipeCollider

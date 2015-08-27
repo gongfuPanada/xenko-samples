@@ -1,5 +1,6 @@
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
+using SiliconStudio.Paradox.Rendering.Sprites;
 
 namespace CharacterControllerSample
 {
@@ -10,8 +11,9 @@ namespace CharacterControllerSample
     {
         public override void Start()
         {
-            var sprite = Entity.Get<SpriteComponent>();
-            SpriteAnimation.Play(sprite, 0, sprite.SpriteProvider.SpritesCount - 1, AnimationRepeatMode.LoopInfinite, 2);
+            var spriteComponent = Entity.Get<SpriteComponent>();
+            var sheet = ((SpriteFromSheet)spriteComponent.SpriteProvider).Sheet;
+            SpriteAnimation.Play(spriteComponent, sheet.FindImageIndex("active0"), sheet.FindImageIndex("active1"), AnimationRepeatMode.LoopInfinite, 2);
         }
     }
 }

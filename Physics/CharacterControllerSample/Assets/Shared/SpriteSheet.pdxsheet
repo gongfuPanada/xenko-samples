@@ -1,0 +1,72 @@
+!SpriteSheet
+Id: 4a17b086-10b4-4c11-b9ec-8baad5730240
+SerializedVersion: 1
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
+Packing:
+    AtlasMaximumSize: {X: 2048, Y: 2048}
+Sprites:
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: active0
+        TextureRegion: {X: 924, Y: 182, Width: 80, Height: 80}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: active1
+        TextureRegion: {X: 875, Y: 98, Width: 80, Height: 80}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: idle0
+        TextureRegion: {X: 721, Y: 4, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: idle1
+        TextureRegion: {X: 618, Y: 136, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: idle2
+        TextureRegion: {X: 618, Y: 4, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: idle3
+        TextureRegion: {X: 515, Y: 136, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: idle4
+        TextureRegion: {X: 515, Y: 4, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: run0
+        TextureRegion: {X: 412, Y: 136, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: run1
+        TextureRegion: {X: 412, Y: 4, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: run2
+        TextureRegion: {X: 309, Y: 136, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: run3
+        TextureRegion: {X: 309, Y: 4, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+    -   Source: ../../RawAssets/SpriteEntity.png
+        Name: run4
+        TextureRegion: {X: 206, Y: 136, Width: 99, Height: 128}
+        Center: {X: 0, Y: 0}
+        Borders: {X: 0, Y: 0, Z: 0, W: 0}

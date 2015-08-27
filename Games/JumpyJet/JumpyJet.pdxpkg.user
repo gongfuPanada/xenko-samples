@@ -4,7 +4,7 @@ Settings:
     Package/Scene/CameraPreviewVisible: true
     Package/Scene/CamPitchYaw: {X: -0.5241136, Y: 0.263203382}
     Package/Scene/CamPosition: {X: 107.167694, Y: 235.642319, Z: 442.228058}
-    Package/Scene/ComponentGizmoSize: 4
+    Package/Scene/ComponentGizmoSize: 4.0
     Package/Scene/FixedSizeGizmos: false
     Package/Scene/GridVisible: true
     Package/Scene/HiddenGizmos:
@@ -16,6 +16,6 @@ Settings:
     Package/Scene/ScaleSnapActive: false
     Package/Scene/ScaleSnapValue: 1.1
     Package/Scene/SelectionMaskVisible: true
-    Package/Scene/TransformationGizmoSize: 1
+    Package/Scene/TransformationGizmoSize: 1.0
     Package/Scene/TranslationSnapActive: false
-    Package/Scene/TranslationSnapValue: 1
+    Package/Scene/TranslationSnapValue: 1.0

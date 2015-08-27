@@ -1,5 +1,6 @@
 !Package
 Id: b6816b45-5640-4b45-9164-d32f888a05da
+SerializedVersion: 1
 Tags: []
 Meta:
     Name: ForwardLighting
@@ -8,7 +9,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.2.0-beta
+            Version: 1.3.0-alpha01
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -16,16 +17,9 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-                RawImports: []
             -   Path: ForwardLighting.Game/Effects
-                RawImports: []
         OutputGroupDirectories: {}
-        Properties:
-            GameSettingsAsset.BackBufferHeight: 720
-            GameSettingsAsset.BackBufferWidth: 1280
-            GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
-            GameSettingsAsset.DefaultScene: 39ecd5b5-134a-4651-9ebe-118605b09d03:MainScene
-            Paradox.DisplayOrientation: LandscapeRight
+        Properties: {}
         ProjectReferences:
             -   Id: 69d33c9f-4bbf-4869-b800-07e7b2e48aae
                 Location: ForwardLighting.Game/ForwardLighting.Game.csproj
@@ -35,7 +29,6 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
-                RawImports: []
         OutputGroupDirectories: {}
         Properties:
             Paradox.GraphicsPlatform: Direct3D11
