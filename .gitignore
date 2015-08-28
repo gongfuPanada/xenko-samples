@@ -43,3 +43,4 @@ libbulletc.a
 *.CachedGlyphs
 *.CachedImage
 log
+routerlog.txt
