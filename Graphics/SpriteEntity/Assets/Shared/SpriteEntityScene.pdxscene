@@ -13,19 +13,6 @@ Hierarchy:
         - cf253c4b-ccf0-4a8a-85e6-0019307e4cac
         - 2a05c636-e91f-42e6-93ed-69415d19fe2f
     Entities:
-        -   Name: Beam
-            Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSheet
-                        Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    CurrentFrame: 0
-                    Color: {R: 255, G: 255, B: 255, A: 255}
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 0.5, Y: 0.5, Z: 1.0}
-                    Children: []
-            Id: 01d11366-dd3d-4217-9b8e-7a7eccaafec4
         -   Name: Camera
             Components:
                 CameraComponent.Key:
@@ -87,19 +74,6 @@ Hierarchy:
                     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
-        -   Name: Sprite
-            Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSheet
-                        Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    CurrentFrame: 0
-                    Color: {R: 255, G: 255, B: 255, A: 255}
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: a5b09148-479f-4e39-a9ba-41ee03381f03
         -   Name: Logic
             Components:
                 ScriptComponent.Key:
@@ -166,25 +140,6 @@ Hierarchy:
                     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                     Children: []
             Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
-        -   Name: beam
-            Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSheet
-                        Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    CurrentFrame: 0
-                    Color: {R: 255, G: 255, B: 255, A: 255}
-                ScriptComponent.Key:
-                    Scripts:
-                        - !SpriteEntity.BeamScript,SpriteEntity.Game
-                            DirectionX: 1.0
-                            Id: 4d0f7457-1836-4418-931c-261af658d5be
-                            IsAlive: true
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 1.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 0.5, Y: 0.5, Z: 0.5}
-                    Children: []
-            Id: eb4ddaaf-abb9-4b1a-8e90-7345701f7b7e
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:
