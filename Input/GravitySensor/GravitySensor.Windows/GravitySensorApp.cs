@@ -1,7 +1,7 @@
 
 using SiliconStudio.Paradox.Engine;
 
-namespace AccelerometerGravity
+namespace GravitySensor
 {
     class AccelerometerGravityApp
     {

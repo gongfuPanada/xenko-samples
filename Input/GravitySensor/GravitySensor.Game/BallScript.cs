@@ -1,7 +1,7 @@
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
 
-namespace AccelerometerGravity
+namespace GravitySensor
 {
     public class BallScript : StartupScript
     {

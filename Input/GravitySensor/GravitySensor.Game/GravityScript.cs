@@ -3,7 +3,7 @@ using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Physics;
 
-namespace AccelerometerGravity
+namespace GravitySensor
 {
     /// <summary>
     /// This script will handle keyboard inputs and set the scene gravity according to those inputs
@@ -16,12 +16,22 @@ namespace AccelerometerGravity
         {
             simulation = Entity.Get<PhysicsComponent>().Simulation;
             simulation.Gravity = new Vector3(0, 0, 0);
+
+            if (Input.Gravity.IsSupported) // enables the orientation sensor.
+                Input.Gravity.IsEnabled = true;
         }
 
         public override void Update()
         {
             // no keys down and default gravity
             var gravity = new Vector3(0, 0, 0);
+
+            // Get the gravity vector from the sensor
+            if (Input.Gravity.IsEnabled)
+            {
+                var originalVector = Input.Gravity.Vector;
+                gravity = new Vector3(originalVector.Z, originalVector.X, -originalVector.Y); // this rotation includes: (1) rotation of the scene (up = Z axis), (2) rotation of the display (Landscape)
+            }
 
             if (Input.IsKeyDown(Keys.Up))
             {
