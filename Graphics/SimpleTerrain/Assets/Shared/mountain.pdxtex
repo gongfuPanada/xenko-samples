@@ -1,5 +1,5 @@
 !Texture
-Id: fc398e5d-d38e-4ad8-96ea-147cf3c8495b
+Id: bf4dc32f-c97a-4bbe-97e7-0df231bc2a62
 Tags: []
 Source: ../../RawAssets/moutain.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -8,5 +8,6 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

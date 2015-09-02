@@ -1,20 +1,15 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
-using SiliconStudio.Paradox.Rendering.Materials;
 using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.UI;
 using SiliconStudio.Paradox.UI.Controls;
 using SiliconStudio.Paradox.UI.Panels;
-
 using Buffer = SiliconStudio.Paradox.Graphics.Buffer;
-
-
 
 namespace SimpleTerrain
 {
@@ -28,10 +23,6 @@ namespace SimpleTerrain
         public Entity CameraEntity;
         public Entity DirectionalLight0;
         public Entity DirectionalLight1;
-        public Entity PointLight;
-
-        // Cache loaded asset for later use and dispose
-        private readonly Dictionary<string, object> loadedAssets = new Dictionary<string, object>();
 
         // Terrain Parameters
         private const int MinTerrainSizePowerFactor = 2;
@@ -42,20 +33,14 @@ namespace SimpleTerrain
         private Buffer terrainIndexBuffer;  // Set Index Buffer on the fly
 
         // Fault formation algorithm Parameters
-        private int terrainSizePowerFactor                      = MaxTerrainSizePowerFactor;
-        private int iterationPowerFactor                        = 5;
-        private float filterHeightBandStrength                  = 0.7f;
-        private float terrainHeightScale                        = 200f;
-
-        // Light Parameters
-        private LightComponent[] directionalLight;
+        private int terrainSizePowerFactor = MaxTerrainSizePowerFactor;
+        private int iterationPowerFactor = 5;
+        private float filterHeightBandStrength = 0.7f;
+        private float terrainHeightScale = 200f;
 
         // Camera Parameters
-        private static readonly Vector3 CameraStartPosition     = new Vector3(0, 500, -100);
-        private static readonly Vector3 TargetPosition          = new Vector3(0, 0, 20);
-        //private Entity cameraEntity;
-        private Vector3 cameraRotation                          = Vector3.Zero;
-        private float zoomFactor                                = 0.3f;
+        private Vector3 cameraStartPosition;
+        private float zoomFactor = 1;
 
         // UI Parameters
         private ModalElement loadingModal;
@@ -63,15 +48,6 @@ namespace SimpleTerrain
 
         // Raster states (Wireframe / Normal) Parameters
         private bool renderWireFrame;
-        private static RasterizerState wireFrameRasterizerState;
-        private static RasterizerState defaultRasterizerState;
-
-
-
-        // Layer Texture
-        private static readonly ParameterKey<Texture>   DiffuseMap1 = ParameterKeys.New<Texture>( null, "Material.DiffuseMap.i1" );
-        private static readonly ParameterKey<Texture>   DiffuseMap2 = ParameterKeys.New<Texture>( null, "Material.DiffuseMap.i2" );
-
 
         #region Fault formation properties
         private int TerrainSizePowerFactor
@@ -124,26 +100,10 @@ namespace SimpleTerrain
         /// <returns></returns>
         public override void Start()
         {
-            //RenderPipelineLightingFactory.CreateDefaultForward(this, "SimpleTerrainEffectMain", Color.DarkBlue, false, true, "ParadoxBackground");
-
             CreateUI();
 
-            CreateCamera();
-
-            CreateLight();
-
-
-            float   radToDeg = (float)(180/Math.PI);
-            Matrix  camera_0= Matrix.LookAtLH( CameraStartPosition, TargetPosition, new Vector3(0, 1, 0) );
-            Matrix  camera= camera_0;
-            //camera.Invert();
-            Vector3 outrot;
-            Vector3 position;
-            camera.DecomposeXYZ( out outrot );
-            position= camera.TranslationVector;
-            var DX= outrot.X * radToDeg;
-            var DY= outrot.Y * radToDeg;
-            var DZ= outrot.Z * radToDeg;
+            cameraStartPosition = CameraEntity.Transform.Position;
+            UpdateCamera();
 
             var maxTerrainSize = (int)Math.Pow(2, MaxTerrainSizePowerFactor);
             var maxVerticesCount = maxTerrainSize * maxTerrainSize;
@@ -151,9 +111,6 @@ namespace SimpleTerrain
             CreateTerrainModelEntity(maxVerticesCount, maxIndicesCount);
 
             Script.AddTask(GenerateTerrain);
-
-            defaultRasterizerState = GraphicsDevice.Parameters.Get(Effect.RasterizerStateKey);
-            wireFrameRasterizerState = RasterizerState.New(GraphicsDevice, new RasterizerStateDescription(CullMode.None) { FillMode = FillMode.Wireframe });
 
             Script.AddTask(UpdateInput);
         }
@@ -163,8 +120,7 @@ namespace SimpleTerrain
         /// </summary>
         private void CreateUI()
         {
-            //var arial = LoadAsset<SpriteFont>("Arial");
-            var arial = LoadAsset<SpriteFont>("Font");
+            var arial = Asset.Load<SpriteFont>("Font");
 
             var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
 
@@ -372,13 +328,13 @@ namespace SimpleTerrain
 
             zoomFactorIncButton.Click += (s, e) =>
             {
-                zoomFactor -= 0.05f;
+                zoomFactor -= 0.1f;
                 UpdateCamera();
             };
 
             zoomFactorDecButton.Click += (s, e) =>
             {
-                zoomFactor += 0.05f;
+                zoomFactor += 0.1f;
                 UpdateCamera();
             };
 
@@ -403,10 +359,18 @@ namespace SimpleTerrain
 
             wireFrameToggleButton.Click += (s, e) =>
             {
-/* DELETE
-                RenderWireFrame = !RenderWireFrame;
-                ((TextBlock)wireFrameToggleButton.Content).Text = (RenderWireFrame) ? "Wire frame Off" : "Wire frame On";
-*/
+                renderWireFrame = !renderWireFrame;
+                ((TextBlock)wireFrameToggleButton.Content).Text = renderWireFrame ? "Wire frame Off" : "Wire frame On";
+
+                var modelComponent = TerrainEntity.Get<ModelComponent>();
+                if (renderWireFrame)
+                {
+                    modelComponent.Parameters.Set(Effect.RasterizerStateKey, GraphicsDevice.RasterizerStates.WireFrame);
+                }
+                else
+                {
+                    modelComponent.Parameters.Remove(Effect.RasterizerStateKey);
+                }
             };
 
             // Light toggle button
@@ -414,9 +378,12 @@ namespace SimpleTerrain
 
             lightToggleButton.Click += (s, e) =>
             {
-                directionalLight[0].Enabled = !directionalLight[0].Enabled;
-                directionalLight[1].Enabled = !directionalLight[1].Enabled;
-                ((TextBlock)lightToggleButton.Content).Text = (directionalLight[0].Enabled) ? "Directional Light Off" : "Directional Light On";
+                var ligh0 = DirectionalLight0.Get<LightComponent>();
+                var ligh1 = DirectionalLight1.Get<LightComponent>();
+
+                ligh0.Enabled = !ligh0.Enabled;
+                ligh1.Enabled = !ligh1.Enabled;
+                ((TextBlock)lightToggleButton.Content).Text = ligh0.Enabled ? "Directional Light Off" : "Directional Light On";
             };
 
             // Re-create terrain
@@ -450,83 +417,12 @@ namespace SimpleTerrain
 
             var buttonDescription = new StackPanel { Orientation = Orientation.Vertical, Children = {activeButton, descriptionCanvas }};
 
-            //UIComponent.RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } }; 
-            UIEntity.Add<UIComponent>( UIComponent.Key, new UIComponent { RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } }, VirtualResolution = virtualResolution } ); 
+            UIEntity.Add(UIComponent.Key, new UIComponent { RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } }, VirtualResolution = virtualResolution } ); 
         }
 
         private void UpdateCamera()
         {
-            var rotationQuat = Quaternion.RotationX(cameraRotation.X) * Quaternion.RotationY(cameraRotation.Y) * Quaternion.RotationZ(cameraRotation.Z);
-            CameraEntity.Transform.Position = Vector3.Transform(CameraStartPosition * zoomFactor, rotationQuat);
-        }
-
-
-        /// <summary>
-        /// Creates a target camera, and add it to the pipeline
-        /// </summary>
-        private void CreateCamera()
-        {
-            /* DELETE
-            var cameraComponent = new CameraComponent
-            {
-                NearPlane = 1f,
-                FarPlane = 5000,
-                TargetUp = Vector3.UnitZ,
-                Target = new Entity("CameraTarget"),
-                AspectRatio = (float)GraphicsDevice.BackBuffer.Width / GraphicsDevice.BackBuffer.Height,
-            };
-
-            // Create camera entity
-            cameraEntity = new Entity("Camera") { cameraComponent };
-
-            // Setup the camera for the rendering pipeline
-            Game.RenderSystem.Pipeline.SetCamera(cameraComponent);
-
-            cameraEntity.Transformation.Translation = CameraStartPosition;
-            cameraComponent.Target.Transformation.Translation = TargetPosition;
-
-            Game.Entities.Add(cameraEntity);
-            Game.Entities.Add(cameraComponent.Target);
-
-            */
-            UpdateCamera();
-        }
-
-        /// <summary>
-        /// Creates one point light source and two directional light sources which could be disabled with the UI
-        /// </summary>
-        private void CreateLight()
-        {
-            directionalLight = new LightComponent[2];
-            directionalLight[0] = DirectionalLight0.Get<LightComponent>();
-            directionalLight[0].Enabled = true;
-            directionalLight[1] = DirectionalLight1.Get<LightComponent>();
-            directionalLight[1].Enabled = true;
-
-            var pointLight = PointLight.Get(LightComponent.Key);
-            pointLight.Enabled = true;
-
-            /*
-            var PointLightEntity = CreatePointLight(Vector3.UnitY * 500f, new Color3(1, 1, 1), 0.2f);
-
-            // set the lights
-            var directLight0 = CreateDirectLight(new Vector3(-0.3f, -0.9f, 0), new Color3(1, 1, 1), 1.2f);
-            Game.Entities.Add(directLight0);
-
-            var directLight1 = CreateDirectLight(new Vector3(1f, -1, 0), new Color3(1, 1, 1), 0.3f);
-            Game.Entities.Add(directLight1);
-
-            directionalLight = new LightComponent[2];
-            directionalLight[0] = directLight0.Get<LightComponent>();
-            directionalLight[0].Enabled = true;
-
-            directionalLight[1] = directLight1.Get<LightComponent>();
-            directionalLight[1].Enabled = true;
-
-            Game.Entities.Add(PointLightEntity);
-            var pointLight = PointLightEntity.Get(LightComponent.Key);
-            pointLight.Enabled = true;
-            */
+            CameraEntity.Transform.Position = Vector3.Transform(cameraStartPosition * zoomFactor, CameraEntity.Transform.Rotation);
         }
 
         /// <summary>
@@ -554,26 +450,14 @@ namespace SimpleTerrain
                 IndexBuffer = new IndexBufferBinding(terrainIndexBuffer, true, indicesCount),
             };
 
-//            var effect1 = EffectSystem.LoadEffect("SimpleTerrainEffectMain").WaitForResult();
-//            var effect2 = EffectSystem.LoadEffect("VertexTextureTerrain");
-            var effectMaterial = LoadAsset<Material>("mt_rock");
+            // Load the material and set parameters
+            var effectMaterial = Asset.Load<Material>("TerrainMaterial");
+            effectMaterial.Parameters.Set(VertexTextureTerrainKeys.MeshTexture0, Asset.Load<Texture>("water"));
+            effectMaterial.Parameters.Set(VertexTextureTerrainKeys.MeshTexture1, Asset.Load<Texture>("grass"));
+            effectMaterial.Parameters.Set(VertexTextureTerrainKeys.MeshTexture2, Asset.Load<Texture>("mountain"));
 
-            Texture tex0= (Texture)effectMaterial.Parameters[ MaterialKeys.DiffuseMap ]; // rock
-            Texture tex1= (Texture)effectMaterial.Parameters[ DiffuseMap1 ];    // grass
-            Texture tex2= (Texture)effectMaterial.Parameters[ DiffuseMap2 ];    // water
-
-            effectMaterial.Parameters.Add( VertexTextureTerrainKeys.MeshTexture0, tex1 );
-            effectMaterial.Parameters.Add( VertexTextureTerrainKeys.MeshTexture1, tex0 );
-            effectMaterial.Parameters.Add( VertexTextureTerrainKeys.MeshTexture2, tex2 );
-
-            effectMaterial.Parameters.Add( MaterialKeys.DiffuseMap, tex1 );
-
-            //terrainMesh = new Mesh { Draw = meshDraw /*, Material = LoadAsset<Material>("TerrainMaterial")*/ };
             terrainMesh = new Mesh { Draw = meshDraw, MaterialIndex = 0 };
-
-            //terrainEntity = new Entity { { ModelComponent.Key, new ModelComponent { Model = new Model { terrainMesh } } } };
-            //TerrainEntity.Add<ModelComponent>( ModelComponent.Key, new ModelComponent { Model = new Model { terrainMesh } } );
-            TerrainEntity.Add<ModelComponent>( ModelComponent.Key, new ModelComponent { Model = new Model { terrainMesh, effectMaterial  } } );
+            TerrainEntity.GetOrCreate<ModelComponent>().Model = new Model { terrainMesh, effectMaterial  };
         }
 
         /// <summary>
@@ -624,7 +508,7 @@ namespace SimpleTerrain
 
                 //var height = heightMap[heightMap.DataSize/2];
                 var height = heightMap.GetScaledHeight(heightMap.Size/2, heightMap.Size/2);
-                TerrainEntity.Transform.Position.Y = -(height + 100);
+                TerrainEntity.Transform.Position.Y = -(height / 2);
             });
 
 //          Entity.Add(terrainEntity);
@@ -736,85 +620,6 @@ namespace SimpleTerrain
                 p2 = new Vector3(x + 1, heightMap.GetScaledHeight(x + 1, z), z);
             }
             return new Vector4(Vector3.Normalize(Vector3.Cross(p1 - currentP, p2 - currentP)), 1);
-        }
-
-        /// <summary>
-        /// Creates a point light entity
-        /// </summary>
-        /// <param name="position"></param>
-        /// <param name="color"></param>
-        /// <param name="intensity"></param>
-        /// <returns></returns>
-        /*
-        private static Entity CreatePointLight(Vector3 position, Color3 color, float intensity)
-        {
-            return new Entity 
-            { 
-                new LightComponent 
-                    {
-                        Type = LightType.Point, Color = color,
-                        Deferred = false,
-                        Enabled = true,
-                        Intensity = intensity,
-                        DecayStart = 1000,
-                        Layers = Game.RenderLayers.RenderLayerAll,
-                        ShadowMap = false
-                    }, 
-                new TransformationComponent { Translation = position } 
-            };
-        }
-        */
-
-        /// <summary>
-        /// Creates a directional light entity
-        /// </summary>
-        /// <param name="direction"></param>
-        /// <param name="color"></param>
-        /// <param name="intensity"></param>
-        /// <returns></returns>
-        /*
-        private static Entity CreateDirectLight(Vector3 direction, Color3 color, float intensity)
-        {
-            return new Entity
-            {
-                new LightComponent
-                {
-                    Type = LightType.Directional,
-                    Color = color,
-                    Deferred = false,
-                    Enabled = true,
-                    Intensity = intensity,
-                    LightDirection = direction,
-                    Layers = Game.RenderLayers.RenderLayerAll,
-                    ShadowMap = false,
-                    ShadowFarDistance = 3000,
-                    ShadowNearDistance = 10,
-                    ShadowMapMaxSize = 1024,
-                    ShadowMapMinSize = 512,
-                    ShadowMapCascadeCount = 4,
-                    ShadowMapFilterType = Game.ShadowMapFilterType.Variance,
-                    BleedingFactor = 0,
-                    MinVariance = 0
-                }
-            };
-        }
-        */
-
-        /// <summary>
-        /// Loads an Assets with Asset manager and cache it in a dictionary for later use and/or dispose
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        private T LoadAsset<T>(string path) where T : class
-        {
-            if (loadedAssets.ContainsKey(path))
-                return (T)loadedAssets[path];
-
-            var asset = Asset.Load<T>(path);
-            loadedAssets.Add(path, asset);
-
-            return asset;
         }
     }
 

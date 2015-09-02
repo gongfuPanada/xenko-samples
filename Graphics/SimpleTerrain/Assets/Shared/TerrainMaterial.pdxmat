@@ -1,0 +1,33 @@
+!MaterialAsset
+Id: 982ebcc3-acca-4232-acb5-cc7fa793af0d
+SerializedVersion: 1
+Tags: []
+Attributes:
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeShaderClassColor
+            MixinReference: VertexTextureTerrain
+            Generics: {}
+            CompositionNodes: {}
+            Members:
+                VertexTextureTerrain.MeshTexture0: !ComputeColorParameterTexture
+                    Texture:
+                        FallbackValue:
+                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Scale: {X: 1.0, Y: 1.0}
+                        Offset: {X: 0.0, Y: 0.0}
+                VertexTextureTerrain.MeshTexture1: !ComputeColorParameterTexture
+                    Texture:
+                        FallbackValue:
+                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Scale: {X: 1.0, Y: 1.0}
+                        Offset: {X: 0.0, Y: 0.0}
+                VertexTextureTerrain.MeshTexture2: !ComputeColorParameterTexture
+                    Texture:
+                        FallbackValue:
+                            Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Scale: {X: 1.0, Y: 1.0}
+                        Offset: {X: 0.0, Y: 0.0}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+Layers: []
