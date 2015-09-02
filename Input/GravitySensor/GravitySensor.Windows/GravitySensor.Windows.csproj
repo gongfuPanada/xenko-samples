@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -7,8 +7,8 @@
     <ProjectGuid>{62DEC7C9-C494-4F3B-8AA6-A58D61FB5E07}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AccelerometerGravity</RootNamespace>
-    <AssemblyName>AccelerometerGravity</AssemblyName>
+    <RootNamespace>GravitySensor</RootNamespace>
+    <AssemblyName>GravitySensor</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
@@ -17,7 +17,7 @@
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\AccelerometerGravity.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\GravitySensor.pdxpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Executable</SiliconStudioProjectType>
     <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
@@ -66,14 +66,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AccelerometerGravity.Game\AccelerometerGravity.Game.csproj">
+    <ProjectReference Include="..\GravitySensor.Game\GravitySensor.Game.csproj">
       <Project>{ec1eed7a-9f01-45ff-9bed-29ec8635b18a}</Project>
-      <Name>AccelerometerGravity.Game</Name>
+      <Name>GravitySensor.Game</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccelerometerGravityApp.cs" />
+    <Compile Include="GravitySensorApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,144 @@
+!SceneAsset
+Id: 941a9765-9ce2-4a8e-bb1b-4dfc8ea1d541
+SerializedVersion: 13
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 55f31111-98d0-4cd8-adc6-c78f31d72118
+        - da79f57e-8d85-4ad1-8483-d2c92b00daac
+        - 304a9025-1395-4946-a8f4-91ef67d8eeb3
+        - 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
+        - 65f83bea-3d79-4cf7-9577-0ac08abb70e2
+        - f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
+        - fdb15d9a-e967-4329-a5ea-4a04a5c7a8fb
+    Entities:
+        -   Name: Ambient light
+            Components:
+                LightComponent.Key:
+                    Type: !LightAmbient
+                        Color: !LightColorRgb
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
+                    Intensity: 0.2
+                TransformComponent.Key:
+                    Position: {X: -12.036787, Y: 105.242416, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 304a9025-1395-4946-a8f4-91ef67d8eeb3
+        -   Name: Camera
+            Components:
+                CameraComponent.Key:
+                    Projection: Perspective
+                    NearClipPlane: 1.0
+                    FarClipPlane: 5000.0
+                ScriptComponent.Key:
+                    Scripts:
+                        - !SimpleTerrain.TerrainScript,SimpleTerrain.Game
+                            CameraEntity:
+                                Id: 55f31111-98d0-4cd8-adc6-c78f31d72118
+                            DirectionalLight0:
+                                Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
+                            DirectionalLight1:
+                                Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
+                            Id: 9b5ab329-1dcc-48f8-a788-72def578df3c
+                            TerrainEntity:
+                                Id: da79f57e-8d85-4ad1-8483-d2c92b00daac
+                            UIEntity:
+                                Id: f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 19.2287521, Z: 550.4732}
+                    Rotation: {W: 0.999996245, X: -0.00277253427, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 55f31111-98d0-4cd8-adc6-c78f31d72118
+        -   Name: Directional light 1
+            Components:
+                LightComponent.Key:
+                    Type: !LightDirectional
+                        Color: !LightColorRgb
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
+                        Shadow:
+                            Size: Large
+                            DepthRange: {}
+                            PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                            BiasParameters: {}
+                    Intensity: 1.2
+                TransformComponent.Key:
+                    Position: {X: 99.40144, Y: 54.87144, Z: 0.0}
+                    Rotation: {W: 0.6036273, X: -0.368285179, Y: 0.6036273, Z: 0.368285179}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
+        -   Name: Directional light 2
+            Components:
+                LightComponent.Key:
+                    Type: !LightDirectional
+                        Color: !LightColorRgb
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
+                        Shadow:
+                            Size: Large
+                            DepthRange: {}
+                            PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                            BiasParameters: {}
+                    Intensity: 0.3
+                TransformComponent.Key:
+                    Position: {X: -138.883133, Y: 59.19326, Z: 0.0}
+                    Rotation: {W: 0.65328145, X: -0.270598054, Y: -0.65328145, Z: -0.270598054}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
+        -   Name: TerrainEntity
+            Components:
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: da79f57e-8d85-4ad1-8483-d2c92b00daac
+        -   Name: UI
+            Components:
+                UIComponent.Key:
+                    VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                TransformComponent.Key:
+                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
+        -   Name: Background
+            Components:
+                BackgroundComponent.Key:
+                    Texture: a940cc05-727b-43d9-8d48-51e13912adab:ParadoxBackground
+                TransformComponent.Key:
+                    Position: {X: 46.75504, Y: -55.8115234, Z: -4.160975}
+                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                    Children: []
+            Id: fdb15d9a-e967-4329-a5ea-4a04a5c7a8fb
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 55f31111-98d0-4cd8-adc6-c78f31d72118}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 100.0
+            Camera: {}
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

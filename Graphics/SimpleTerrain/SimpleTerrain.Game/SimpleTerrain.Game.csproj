@@ -76,18 +76,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\SimpleTerrainEffectMain.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>SimpleTerrainEffectMain.pdxfx</DependentUpon>
-    </Compile>
     <Compile Include="TerrainScript.cs" />
-    <None Include="Effects\Permutations.pdxfxlib" />
-    <None Include="Effects\SimpleTerrainEffectMain.pdxfx">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>SimpleTerrainEffectMain.cs</LastGenOutput>
-    </None>
     <Compile Include="Effects\VertexTextureTerrain.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,7 +84,6 @@
       <DependentUpon>VertexTextureTerrain.pdxsl</DependentUpon>
     </Compile>
     <Compile Include="HeightMapFactory.cs" />
-    <Compile Include="SimpleTerrainGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Effects\VertexTextureTerrain.pdxsl">
       <Generator>ParadoxShaderKeyGenerator</Generator>

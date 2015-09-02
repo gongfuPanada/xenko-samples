@@ -7,17 +7,20 @@ using SiliconStudio.Paradox.UI;
 using SiliconStudio.Paradox.UI.Controls;
 using SiliconStudio.Paradox.UI.Panels;
 
-namespace AccelerometerGravity
+namespace GravitySensor
 {
     public class GuiScript : AsyncScript
     {
         public override async Task Execute()
         {
+            if (Input.Gravity.IsSupported) // do not display any message when orientation sensor is available
+                return;
+
             var textBlock = new TextBlock
             {
-                Text = "Use arrows to play with gravity!", 
-                Font = Asset.Load<SpriteFont>("SpriteFont"), 
-                TextColor = Color.White, 
+                Text = "Use arrows to play with gravity!",
+                Font = Asset.Load<SpriteFont>("SpriteFont"),
+                TextColor = Color.White,
                 TextSize = 40
             };
             textBlock.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 0));
@@ -29,7 +32,8 @@ namespace AccelerometerGravity
                 await Script.NextFrame();
 
                 if (!Input.IsKeyPressed(Keys.Left) && !Input.IsKeyPressed(Keys.Right) && !Input.IsKeyPressed(Keys.Up) &&
-                    !Input.IsKeyPressed(Keys.Down)) continue;
+                    !Input.IsKeyPressed(Keys.Down))
+                    continue;
 
                 Entity.Get<UIComponent>().RootElement = null;
                 return;

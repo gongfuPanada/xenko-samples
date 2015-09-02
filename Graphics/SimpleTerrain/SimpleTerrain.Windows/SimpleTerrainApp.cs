@@ -1,3 +1,4 @@
+using SiliconStudio.Paradox.Engine;
 
 namespace SimpleTerrain
 {
@@ -6,7 +7,7 @@ namespace SimpleTerrain
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new SimpleTerrainGame())
+            using (var game = new Game())
             {
                 game.Run();
             }

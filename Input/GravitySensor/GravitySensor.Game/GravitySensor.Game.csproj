@@ -8,8 +8,8 @@
     <ProjectGuid>{EC1EED7A-9F01-45FF-9BED-29EC8635B18A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AccelerometerGravity</RootNamespace>
-    <AssemblyName>AccelerometerGravity.Game</AssemblyName>
+    <RootNamespace>GravitySensor</RootNamespace>
+    <AssemblyName>GravitySensor.Game</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -18,7 +18,7 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\AccelerometerGravity.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\GravitySensor.pdxpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Library</SiliconStudioProjectType>
   </PropertyGroup>

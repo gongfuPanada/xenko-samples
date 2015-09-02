@@ -1,9 +1,0 @@
-!EffectLibrary
-Id: 17e2a65c-79de-4a35-9d34-fc70e7ec201d
-BuildOrder: 1000
-Tags: []
-Permutations:
-    Keys:
-        Effect.Name: SimpleTerrainEffectMain
-        MaterialAsset.GenerateShader: true
-    Children: []

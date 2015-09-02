@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using SiliconStudio.Paradox.Engine;
 
-namespace AccelerometerGravity
+namespace GravitySensor
 {
     /// <summary>
     /// This script will make sure that all the physics elements of this entity will never be set to sleep status
