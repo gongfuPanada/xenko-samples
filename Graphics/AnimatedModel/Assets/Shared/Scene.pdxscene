@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 1d1214c6-8844-4fae-8142-1f986349f8d3
-SerializedVersion: 13
+SerializedVersion: 14
 Tags: []
 Hierarchy:
     RootEntities:
@@ -39,6 +39,7 @@ Hierarchy:
                         Color: !LightColorRgb
                             Color: {R: 1.0, G: 1.0, B: 1.0}
                         Shadow:
+                            Size: Large
                             DepthRange: {}
                             PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                             BiasParameters: {}

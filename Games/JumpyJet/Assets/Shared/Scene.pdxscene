@@ -1,6 +1,6 @@
 !SceneAsset
 Id: b07987b2-a262-45fb-9da6-ba05fc7aaf74
-SerializedVersion: 13
+SerializedVersion: 14
 Tags: []
 Hierarchy:
     RootEntities:
@@ -80,7 +80,6 @@ Hierarchy:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromSheet
                         Sheet: 3ad37051-9134-4cea-b756-569c895c0420:Sprites
-                    CurrentFrame: 0
                     Color: {R: 255, G: 255, B: 255, A: 255}
                     IgnoreDepth: true
                 ScriptComponent.Key:

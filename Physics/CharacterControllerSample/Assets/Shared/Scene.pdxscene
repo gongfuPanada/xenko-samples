@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: 13
+SerializedVersion: 14
 Tags: []
 Hierarchy:
     RootEntities:
@@ -31,7 +31,6 @@ Hierarchy:
                 SpriteComponent.Key:
                     SpriteProvider: !SpriteFromSheet
                         Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
-                    CurrentFrame: 0
                     Color: {R: 255, G: 255, B: 255, A: 255}
                 PhysicsComponent.Key:
                     Elements:

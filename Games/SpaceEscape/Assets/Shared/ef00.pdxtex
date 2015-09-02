@@ -1,5 +1,6 @@
 !Texture
 Id: 267eed8a-792b-4a8d-b496-d1c8261c50bb
+SerializedVersion: 1
 Tags: []
 Source: ../../RawAssets/model/character/Sourceimages/ef00.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -8,7 +9,9 @@ Alpha: Interpolated
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
         PremultiplyAlpha: false
