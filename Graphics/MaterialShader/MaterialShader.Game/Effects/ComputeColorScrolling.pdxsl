@@ -1,0 +1,10 @@
+class ComputeColorScrolling<float2 Speed> : ComputeColor, Texturing
+{
+    compose ComputeColor baseColor;
+
+    override float4 Compute()
+    {
+        streams.TexCoord = streams.TexCoord + Speed * Global.Time;
+        return baseColor.Compute();
+    }
+};
