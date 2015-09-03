@@ -33,6 +33,8 @@
     <IntermediateOutputPath>obj\Windows\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anim.cs" />
+    <Compile Include="NoSleep.cs" />
     <Compile Include="Player.cs">
       <SubType>Code</SubType>
     </Compile>

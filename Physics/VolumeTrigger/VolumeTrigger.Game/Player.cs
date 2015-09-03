@@ -20,6 +20,10 @@ namespace VolumeTrigger
         {
             character = Entity.Get<PhysicsComponent>()[0].Character;
             character.Gravity = -10.0f;
+            if (Entity.Get<PhysicsComponent>().Count > 1)
+            {
+                Entity.Get<PhysicsComponent>()[1].RigidBody.CanSleep = false;
+            }
         }
 
         public override void Update()
@@ -35,11 +39,11 @@ namespace VolumeTrigger
             }
             if (Input.IsKeyDown(Keys.S))
             {
-                move += Vector3.UnitZ * 0.25f;
+                move = Vector3.UnitZ * 0.25f;
             }
             if (Input.IsKeyDown(Keys.D))
             {
-                move += Vector3.UnitX;
+                move = Vector3.UnitX;
             }
 
             move *= speed;

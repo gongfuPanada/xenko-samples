@@ -19,4 +19,15 @@ namespace VolumeTrigger
             
         }
     }
+
+    /// <userdoc>
+    /// User doc testing...
+    /// </userdoc>
+    public class Testing : AsyncScript
+    {
+        public override Task Execute()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

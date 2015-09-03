@@ -1,0 +1,535 @@
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect.ShadowMapCaster
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Material.HasNormalMap: false
+    Material.HasSkinningPosition: false
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
+        Name: ShadowMapCaster
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect.ShadowMapCaster
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Material.HasNormalMap: false
+    Material.HasSkinningNormal: false
+    Material.HasSkinningPosition: true
+    Material.HasSkinningTangent: false
+    Material.SkinningBones: 26
+    Material.SkinningMaxBones: 56
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
+        Name: ShadowMapCaster
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect.ShadowMapCaster
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Material.HasNormalMap: false
+    Material.HasSkinningNormal: true
+    Material.HasSkinningPosition: true
+    Material.HasSkinningTangent: false
+    Material.SkinningBones: 20
+    Material.SkinningMaxBones: 56
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
+        Name: ShadowMapCaster
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 8
+                -   ClassName: ShadowMapReceiverDirectional
+                    GenericArguments:
+                        - 4
+                        - 8
+                        - false
+                        - true
+                        - false
+                -   ClassName: ShadowMapFilterPcf
+                    GenericArguments:
+                        - 3
+            Name: null
+    Lighting.EnvironmentLights: []
+    Material.HasNormalMap: false
+    Material.HasSkinningPosition: false
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+        Name: null
+    Material.PixelStageSurfaceFilter: null
+    Material.PixelStageSurfaceShaders: !ShaderMixinSource
+        Compositions:
+            layers: !ShaderArraySource
+                Values:
+                    - !ShaderMixinSource
+                        Compositions:
+                            diffuseMap: !ShaderClassSource
+                                ClassName: ComputeColorConstantColorLink
+                                GenericArguments:
+                                    - Material.DiffuseValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceDiffuse
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            surfaces: !ShaderArraySource
+                                Values:
+                                    - !ShaderClassSource
+                                        ClassName: MaterialSurfaceShadingDiffuseLambert
+                                        GenericArguments:
+                                            - false
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceLightingAndShading
+                        Name: null
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialSurfaceArray
+        Name: null
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 8
+                -   ClassName: ShadowMapReceiverDirectional
+                    GenericArguments:
+                        - 4
+                        - 8
+                        - false
+                        - true
+                        - false
+                -   ClassName: ShadowMapFilterPcf
+                    GenericArguments:
+                        - 3
+            Name: null
+    Lighting.EnvironmentLights: []
+    Material.HasNormalMap: false
+    Material.HasSkinningPosition: false
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+        Name: null
+    Material.PixelStageSurfaceFilter: null
+    Material.PixelStageSurfaceShaders: !ShaderMixinSource
+        Compositions:
+            layers: !ShaderArraySource
+                Values:
+                    - !ShaderMixinSource
+                        Compositions:
+                            diffuseMap: !ShaderClassSource
+                                ClassName: ComputeColorConstantColorLink
+                                GenericArguments:
+                                    - Material.DiffuseValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceDiffuse
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            computeColorSource: !ShaderClassSource
+                                ClassName: ComputeColorConstantColorLink
+                                GenericArguments:
+                                    - Material.SpecularValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceSetStreamFromComputeColor
+                                GenericArguments:
+                                    - matSpecular
+                                    - rgb
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            computeColorSource: !ShaderClassSource
+                                ClassName: ComputeColorConstantFloatLink
+                                GenericArguments:
+                                    - Material.SpecularIntensityValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceSetStreamFromComputeColor
+                                GenericArguments:
+                                    - matSpecularIntensity
+                                    - r
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            surfaces: !ShaderArraySource
+                                Values:
+                                    - !ShaderClassSource
+                                        ClassName: MaterialSurfaceShadingDiffuseLambert
+                                        GenericArguments:
+                                            - false
+                                    - !ShaderMixinSource
+                                        Compositions:
+                                            fresnelFunction: !ShaderClassSource
+                                                ClassName: MaterialSpecularMicrofacetFresnelSchlick
+                                            geometricShadowingFunction: !ShaderClassSource
+                                                ClassName: MaterialSpecularMicrofacetVisibilityImplicit
+                                            normalDistributionFunction: !ShaderClassSource
+                                                ClassName: MaterialSpecularMicrofacetNormalDistributionBlinnPhong
+                                        Macros: []
+                                        Mixins:
+                                            -   ClassName: MaterialSurfaceShadingSpecularMicrofacet
+                                        Name: null
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceLightingAndShading
+                        Name: null
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialSurfaceArray
+        Name: null
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 8
+                -   ClassName: ShadowMapReceiverDirectional
+                    GenericArguments:
+                        - 4
+                        - 8
+                        - false
+                        - true
+                        - false
+                -   ClassName: ShadowMapFilterPcf
+                    GenericArguments:
+                        - 3
+            Name: null
+    Lighting.EnvironmentLights: []
+    Material.HasNormalMap: false
+    Material.HasSkinningNormal: false
+    Material.HasSkinningPosition: true
+    Material.HasSkinningTangent: false
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+        Name: null
+    Material.PixelStageSurfaceFilter: null
+    Material.PixelStageSurfaceShaders: !ShaderMixinSource
+        Compositions:
+            layers: !ShaderArraySource
+                Values:
+                    - !ShaderMixinSource
+                        Compositions:
+                            diffuseMap: !ShaderClassSource
+                                ClassName: ComputeColorTextureScaledOffsetDynamicSampler
+                                GenericArguments:
+                                    - Material.DiffuseMap
+                                    - TEXCOORD0
+                                    - Material.Sampler.i0
+                                    - rgba
+                                    - Material.TextureScale
+                                    - Material.TextureOffset
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceDiffuse
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            computeColorSource: !ShaderClassSource
+                                ClassName: ComputeColorConstantColorLink
+                                GenericArguments:
+                                    - Material.SpecularValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceSetStreamFromComputeColor
+                                GenericArguments:
+                                    - matSpecular
+                                    - rgb
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            computeColorSource: !ShaderClassSource
+                                ClassName: ComputeColorConstantFloatLink
+                                GenericArguments:
+                                    - Material.SpecularIntensityValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceSetStreamFromComputeColor
+                                GenericArguments:
+                                    - matSpecularIntensity
+                                    - r
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            surfaces: !ShaderArraySource
+                                Values:
+                                    - !ShaderClassSource
+                                        ClassName: MaterialSurfaceShadingDiffuseLambert
+                                        GenericArguments:
+                                            - false
+                                    - !ShaderMixinSource
+                                        Compositions:
+                                            fresnelFunction: !ShaderClassSource
+                                                ClassName: MaterialSpecularMicrofacetFresnelSchlick
+                                            geometricShadowingFunction: !ShaderClassSource
+                                                ClassName: MaterialSpecularMicrofacetVisibilityImplicit
+                                            normalDistributionFunction: !ShaderClassSource
+                                                ClassName: MaterialSpecularMicrofacetNormalDistributionBlinnPhong
+                                        Macros: []
+                                        Mixins:
+                                            -   ClassName: MaterialSurfaceShadingSpecularMicrofacet
+                                        Name: null
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceLightingAndShading
+                        Name: null
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialSurfaceArray
+        Name: null
+    Material.SkinningBones: 26
+    Material.SkinningMaxBones: 56
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 8
+                -   ClassName: ShadowMapReceiverDirectional
+                    GenericArguments:
+                        - 4
+                        - 8
+                        - false
+                        - true
+                        - false
+                -   ClassName: ShadowMapFilterPcf
+                    GenericArguments:
+                        - 3
+            Name: null
+    Lighting.EnvironmentLights: []
+    Material.HasNormalMap: false
+    Material.HasSkinningNormal: true
+    Material.HasSkinningPosition: true
+    Material.HasSkinningTangent: false
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+        Name: null
+    Material.PixelStageSurfaceFilter: null
+    Material.PixelStageSurfaceShaders: !ShaderMixinSource
+        Compositions:
+            layers: !ShaderArraySource
+                Values:
+                    - !ShaderMixinSource
+                        Compositions:
+                            diffuseMap: !ShaderClassSource
+                                ClassName: ComputeColorTextureScaledOffsetDynamicSampler
+                                GenericArguments:
+                                    - Material.DiffuseMap
+                                    - TEXCOORD0
+                                    - Material.Sampler.i0
+                                    - rgba
+                                    - Material.TextureScale
+                                    - Material.TextureOffset
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceDiffuse
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            surfaces: !ShaderArraySource
+                                Values:
+                                    - !ShaderClassSource
+                                        ClassName: MaterialSurfaceShadingDiffuseLambert
+                                        GenericArguments:
+                                            - false
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceLightingAndShading
+                        Name: null
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialSurfaceArray
+        Name: null
+    Material.SkinningBones: 20
+    Material.SkinningMaxBones: 56
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+---
+!EffectCompileRequest
+EffectName: ParadoxForwardShadingEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 8
+                -   ClassName: ShadowMapReceiverDirectional
+                    GenericArguments:
+                        - 4
+                        - 8
+                        - false
+                        - true
+                        - false
+                -   ClassName: ShadowMapFilterPcf
+                    GenericArguments:
+                        - 3
+            Name: null
+    Lighting.EnvironmentLights: []
+    Material.HasNormalMap: false
+    Material.HasSkinningPosition: false
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+        Name: null
+    Material.PixelStageSurfaceFilter: null
+    Material.PixelStageSurfaceShaders: !ShaderMixinSource
+        Compositions:
+            layers: !ShaderArraySource
+                Values:
+                    - !ShaderMixinSource
+                        Compositions:
+                            diffuseMap: !ShaderClassSource
+                                ClassName: ComputeColorConstantColorLink
+                                GenericArguments:
+                                    - Material.DiffuseValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceDiffuse
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            computeColorSource: !ShaderClassSource
+                                ClassName: ComputeColorConstantFloatLink
+                                GenericArguments:
+                                    - Material.DiffuseSpecularAlphaBlendValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceSetStreamFromComputeColor
+                                GenericArguments:
+                                    - matDiffuseSpecularAlphaBlend
+                                    - r
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            computeColorSource: !ShaderClassSource
+                                ClassName: ComputeColorConstantColorLink
+                                GenericArguments:
+                                    - Material.AlphaBlendColorValue
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceSetStreamFromComputeColor
+                                GenericArguments:
+                                    - matAlphaBlendColor
+                                    - rgb
+                        Name: null
+                    - !ShaderMixinSource
+                        Compositions:
+                            surfaces: !ShaderArraySource
+                                Values:
+                                    - !ShaderClassSource
+                                        ClassName: MaterialSurfaceShadingDiffuseLambert
+                                        GenericArguments:
+                                            - false
+                        Macros: []
+                        Mixins:
+                            -   ClassName: MaterialSurfaceLightingAndShading
+                        Name: null
+                    - !ShaderClassSource
+                        ClassName: MaterialSurfaceDiffuseSpecularAlphaBlendColor
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialSurfaceArray
+        Name: null
+    Material.TessellationShader: null
+    Material.VertexStageSurfaceShaders: null
+    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+---
+!EffectCompileRequest
+EffectName: DepthMinMaxEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    DepthMinMax.IsFirstPassKey: true
+---
+!EffectCompileRequest
+EffectName: DepthMinMaxEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    DepthMinMax.IsFirstPassKey: false

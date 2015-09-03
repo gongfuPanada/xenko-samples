@@ -8,8 +8,17 @@ namespace VolumeTrigger
 {
     public class Trigger : AsyncScript
     {
+        /// <userdoc>
+        /// TriggeredEntity Userdoc
+        /// </userdoc>
         public Entity TriggeredEntity;
+        /// <userdoc>
+        /// TriggeredEntity TestBox
+        /// </userdoc>
         public Entity TestBox;
+        /// <userdoc>
+        /// StartLocation TestBox
+        /// </userdoc>
         public Vector3 StartLocation;
 
         public override async Task Execute()
