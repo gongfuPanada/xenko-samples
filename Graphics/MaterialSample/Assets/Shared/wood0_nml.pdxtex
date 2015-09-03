@@ -1,5 +1,6 @@
 !Texture
 Id: 5280f12b-5ab1-4796-b126-599ef03066f8
+SerializedVersion: 1
 Tags: []
 Source: ../../RawAssets/wood0_nml.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -9,6 +10,8 @@ PremultiplyAlpha: false
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
+        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
