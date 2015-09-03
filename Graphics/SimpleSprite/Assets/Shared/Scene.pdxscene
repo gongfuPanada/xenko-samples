@@ -1,34 +1,40 @@
 !SceneAsset
 Id: 2871eb8a-27ef-40c9-a40a-9026b53ab794
-SerializedVersion: 14
+SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
         - 88ed0ede-01dc-46e3-99fb-a4851554899e
         - cf39fbe2-0062-408e-954f-ea56b7b76b97
     Entities:
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: 175006e8-6351-4365-9778-73d54aa5ea9f:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: -2.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 88ed0ede-01dc-46e3-99fb-a4851554899e
-        -   Name: BallScript
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !SimpleSprite.BallScript,SimpleSprite.Game
-                            Id: 0d68d8c0-1856-496f-a985-c52da27b163a
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: cf39fbe2-0062-408e-954f-ea56b7b76b97
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 175006e8-6351-4365-9778-73d54aa5ea9f:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 88ed0ede-01dc-46e3-99fb-a4851554899e
+            Design:
+                Folder: null
+        -   Entity:
+                Name: BallScript
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SimpleSprite.BallScript,SimpleSprite.Game
+                                Id: 0d68d8c0-1856-496f-a985-c52da27b163a
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: cf39fbe2-0062-408e-954f-ea56b7b76b97
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras: []

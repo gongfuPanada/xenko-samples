@@ -1,34 +1,40 @@
 !SceneAsset
 Id: df7aa22c-6efc-4706-8c07-03a643513525
-SerializedVersion: 14
+SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
         - 6920534e-0a89-47c5-aeb1-a8e5f6ea9d46
         - a9fa980a-595d-4e48-9e6c-8373330be0a8
     Entities:
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: 0d3b74fb-92c4-4c11-bfc5-6a841c4e6df4:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: -2.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 6920534e-0a89-47c5-aeb1-a8e5f6ea9d46
-        -   Name: FontScript
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !SpriteFonts.FontScript,SpriteFonts.Game
-                            Id: 58f1d4b0-1c55-47b7-bb03-3d811d53d14c
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: a9fa980a-595d-4e48-9e6c-8373330be0a8
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 0d3b74fb-92c4-4c11-bfc5-6a841c4e6df4:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6920534e-0a89-47c5-aeb1-a8e5f6ea9d46
+            Design:
+                Folder: null
+        -   Entity:
+                Name: FontScript
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpriteFonts.FontScript,SpriteFonts.Game
+                                Id: 58f1d4b0-1c55-47b7-bb03-3d811d53d14c
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: a9fa980a-595d-4e48-9e6c-8373330be0a8
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:

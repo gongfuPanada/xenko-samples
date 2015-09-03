@@ -1,6 +1,6 @@
 !SceneAsset
 Id: b07987b2-a262-45fb-9da6-ba05fc7aaf74
-SerializedVersion: 14
+SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
@@ -11,99 +11,117 @@ Hierarchy:
         - d87ce433-90b0-4819-8f55-9d08330b581d
         - c2306322-b9da-4756-8c50-0415142c6dd1
     Entities:
-        -   Name: UI
-            Components:
-                UIComponent.Key:
-                    VirtualResolution: {X: 640.0, Y: 1136.0, Z: 20.0}
-                    VirtualResolutionMode: FixedWidthFixedHeight
-                ScriptComponent.Key:
-                    Scripts:
-                        - !JumpyJet.UIScript,JumpyJet.Game
-                            Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 47550ad3-4887-4173-95e0-d98048465edd
-        -   Name: Camera
-            Components:
-                CameraComponent.Key:
-                    Projection: Orthographic
-                    OrthographicSize: 1136.0
-                    NearClipPlane: 1.0
-                    AspectRatio: 0.56338
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 200.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 6ec17338-026d-4ad3-9615-4975281cf3ba
-        -   Name: Background
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !JumpyJet.BackgroundScript,JumpyJet.Game
-                            Id: c1d170c8-1a09-4d67-bc8e-f4c843b5fbcd
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: c2306322-b9da-4756-8c50-0415142c6dd1
-        -   Name: GameScript
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !JumpyJet.GameScript,JumpyJet.Game
-                            Background: !JumpyJet.BackgroundScript,JumpyJet.Game
-                                Entity: {Id: c2306322-b9da-4756-8c50-0415142c6dd1}
-                                Id: c1d170c8-1a09-4d67-bc8e-f4c843b5fbcd
-                            Character: !JumpyJet.CharacterScript,JumpyJet.Game
-                                Entity: {Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb}
-                                Id: 75708204-1bb2-4d09-93ae-75057e2a88b0
-                            Id: a48b5789-180f-4e2e-b061-6ac22108e376
-                            Pipes: !JumpyJet.PipesScript,JumpyJet.Game
-                                Entity: {Id: d87ce433-90b0-4819-8f55-9d08330b581d}
-                                Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
-                            UI: !JumpyJet.UIScript,JumpyJet.Game
-                                Entity: {Id: 47550ad3-4887-4173-95e0-d98048465edd}
+        -   Entity:
+                Name: UI
+                Components:
+                    UIComponent.Key:
+                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 20.0}
+                        VirtualResolutionMode: FixedWidthFixedHeight
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !JumpyJet.UIScript,JumpyJet.Game
                                 Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: c2d8e639-281f-419d-b8cb-77d7ef14a7f7
-        -   Name: Character
-            Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSheet
-                        Sheet: 3ad37051-9134-4cea-b756-569c895c0420:Sprites
-                    Color: {R: 255, G: 255, B: 255, A: 255}
-                    IgnoreDepth: true
-                ScriptComponent.Key:
-                    Scripts:
-                        - !JumpyJet.CharacterScript,JumpyJet.Game
-                            Id: 75708204-1bb2-4d09-93ae-75057e2a88b0
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb
-        -   Name: Pipes
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !JumpyJet.PipesScript,JumpyJet.Game
-                            Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: d87ce433-90b0-4819-8f55-9d08330b581d
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 47550ad3-4887-4173-95e0-d98048465edd
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Orthographic
+                        OrthographicSize: 1136.0
+                        NearClipPlane: 1.0
+                        AspectRatio: 0.56338
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 200.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6ec17338-026d-4ad3-9615-4975281cf3ba
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !JumpyJet.BackgroundScript,JumpyJet.Game
+                                Id: c1d170c8-1a09-4d67-bc8e-f4c843b5fbcd
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: c2306322-b9da-4756-8c50-0415142c6dd1
+            Design:
+                Folder: null
+        -   Entity:
+                Name: GameScript
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !JumpyJet.GameScript,JumpyJet.Game
+                                Background: !JumpyJet.BackgroundScript,JumpyJet.Game
+                                    Entity: {Id: c2306322-b9da-4756-8c50-0415142c6dd1}
+                                    Id: c1d170c8-1a09-4d67-bc8e-f4c843b5fbcd
+                                Character: !JumpyJet.CharacterScript,JumpyJet.Game
+                                    Entity: {Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb}
+                                    Id: 75708204-1bb2-4d09-93ae-75057e2a88b0
+                                Id: a48b5789-180f-4e2e-b061-6ac22108e376
+                                Pipes: !JumpyJet.PipesScript,JumpyJet.Game
+                                    Entity: {Id: d87ce433-90b0-4819-8f55-9d08330b581d}
+                                    Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
+                                UI: !JumpyJet.UIScript,JumpyJet.Game
+                                    Entity: {Id: 47550ad3-4887-4173-95e0-d98048465edd}
+                                    Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: c2d8e639-281f-419d-b8cb-77d7ef14a7f7
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Character
+                Components:
+                    SpriteComponent.Key:
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 3ad37051-9134-4cea-b756-569c895c0420:Sprites
+                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        IgnoreDepth: true
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !JumpyJet.CharacterScript,JumpyJet.Game
+                                Id: 75708204-1bb2-4d09-93ae-75057e2a88b0
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Pipes
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !JumpyJet.PipesScript,JumpyJet.Game
+                                Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: d87ce433-90b0-4819-8f55-9d08330b581d
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:

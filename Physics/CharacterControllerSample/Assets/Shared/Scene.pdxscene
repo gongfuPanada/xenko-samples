@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: 14
+SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
@@ -10,93 +10,108 @@ Hierarchy:
         - 178f557d-4b28-406a-a883-599a87f8bd67
         - 5f802772-8c57-4a8f-8284-d161bc6c6323
     Entities:
-        -   Name: Ground
-            Components:
-                PhysicsComponent.Key:
-                    Elements:
-                        - !StaticRigidbodyElement
-                            CollisionGroup: 0
-                            CanCollideWith: 0
-                            ColliderShapes:
-                                - !ColliderShapeAssetDesc
-                                    Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: -5.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 178f557d-4b28-406a-a883-599a87f8bd67
-        -   Name: Enemy
-            Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSheet
-                        Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
-                    Color: {R: 255, G: 255, B: 255, A: 255}
-                PhysicsComponent.Key:
-                    Elements:
-                        - !StaticRigidbodyElement
-                            CollisionGroup: 0
-                            CanCollideWith: 0
-                            ColliderShapes:
-                                - !ColliderShapeAssetDesc
-                                    Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
-                ScriptComponent.Key:
-                    Scripts:
-                        - !CharacterControllerSample.EnemyScript,CharacterControllerSample.Game
-                            Id: cf0aaa0c-5091-485a-b18d-50fec9ea3f2f
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: -4.6, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 2d5858c9-0df9-4c6c-a24d-65e699737666
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: bbb04728-fa87-4c1e-9e1c-f191031914eb:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 5f802772-8c57-4a8f-8284-d161bc6c6323
-        -   Name: Camera
-            Components:
-                CameraComponent.Key:
-                    Projection: Orthographic
-                    FarClipPlane: 10.0
-                    AspectRatio: 1.777
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 5.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2
-        -   Name: Player
-            Components:
-                SpriteComponent.Key:
-                    SpriteProvider: !SpriteFromSheet
-                        Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
-                    CurrentFrame: 2
-                    Color: {R: 255, G: 255, B: 255, A: 255}
-                PhysicsComponent.Key:
-                    Elements:
-                        - !CharacterElement
-                            CollisionGroup: 0
-                            CanCollideWith: 0
-                            ColliderShapes:
-                                - !ColliderShapeAssetDesc
-                                    Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
-                ScriptComponent.Key:
-                    Scripts:
-                        - !CharacterControllerSample.CharacterScript,CharacterControllerSample.Game
-                            Id: 85aa35f0-a9e3-4c55-9fd8-3f2eecdd6e9a
-                TransformComponent.Key:
-                    Position: {X: -4.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 9a60a268-6c2d-44d9-bac2-a4c569a73ef0
+        -   Entity:
+                Name: Ground
+                Components:
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !StaticRigidbodyElement
+                                CollisionGroup: 0
+                                CanCollideWith: 0
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: -5.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 178f557d-4b28-406a-a883-599a87f8bd67
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Enemy
+                Components:
+                    SpriteComponent.Key:
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                        Color: {R: 255, G: 255, B: 255, A: 255}
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !StaticRigidbodyElement
+                                CollisionGroup: 0
+                                CanCollideWith: 0
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !CharacterControllerSample.EnemyScript,CharacterControllerSample.Game
+                                Id: cf0aaa0c-5091-485a-b18d-50fec9ea3f2f
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: -4.6, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 2d5858c9-0df9-4c6c-a24d-65e699737666
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: bbb04728-fa87-4c1e-9e1c-f191031914eb:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 5f802772-8c57-4a8f-8284-d161bc6c6323
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Orthographic
+                        FarClipPlane: 10.0
+                        AspectRatio: 1.777
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 5.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Player
+                Components:
+                    SpriteComponent.Key:
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                        CurrentFrame: 2
+                        Color: {R: 255, G: 255, B: 255, A: 255}
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !CharacterElement
+                                CollisionGroup: 0
+                                CanCollideWith: 0
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !CharacterControllerSample.CharacterScript,CharacterControllerSample.Game
+                                Id: 85aa35f0-a9e3-4c55-9fd8-3f2eecdd6e9a
+                    TransformComponent.Key:
+                        Position: {X: -4.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 9a60a268-6c2d-44d9-bac2-a4c569a73ef0
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:

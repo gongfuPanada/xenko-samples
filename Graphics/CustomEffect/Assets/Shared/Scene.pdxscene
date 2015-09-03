@@ -1,34 +1,40 @@
 !SceneAsset
 Id: 365136b9-adbe-4c9a-8eeb-563894b4bd08
-SerializedVersion: 14
+SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
         - 6a89de77-e3d6-40c4-9504-f75c5983d911
         - 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a
     Entities:
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: 464f4cc7-2978-4c47-ae31-6001c905c896:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: -1.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a
-        -   Name: Effect
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !CustomEffect.EffectScript,CustomEffect.Game
-                            Id: 274a57bf-8017-4ffb-8b3d-04b2ba7cd9bb
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 6a89de77-e3d6-40c4-9504-f75c5983d911
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 464f4cc7-2978-4c47-ae31-6001c905c896:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -1.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Effect
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !CustomEffect.EffectScript,CustomEffect.Game
+                                Id: 274a57bf-8017-4ffb-8b3d-04b2ba7cd9bb
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6a89de77-e3d6-40c4-9504-f75c5983d911
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras: []
