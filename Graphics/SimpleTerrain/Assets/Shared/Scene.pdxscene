@@ -5,12 +5,9 @@ Tags: []
 Hierarchy:
     RootEntities:
         - 55f31111-98d0-4cd8-adc6-c78f31d72118
-        - da79f57e-8d85-4ad1-8483-d2c92b00daac
-        - 304a9025-1395-4946-a8f4-91ef67d8eeb3
-        - 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
-        - 65f83bea-3d79-4cf7-9577-0ac08abb70e2
         - f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
         - fdb15d9a-e967-4329-a5ea-4a04a5c7a8fb
+        - 62ddae8f-ca6d-422a-b4b1-114004bccc89
     Entities:
         -   Entity:
                 Name: Ambient light
@@ -35,23 +32,9 @@ Hierarchy:
                         Projection: Perspective
                         NearClipPlane: 1.0
                         FarClipPlane: 5000.0
-                    ScriptComponent.Key:
-                        Scripts:
-                            - !SimpleTerrain.TerrainScript,SimpleTerrain.Game
-                                CameraEntity:
-                                    Id: 55f31111-98d0-4cd8-adc6-c78f31d72118
-                                DirectionalLight0:
-                                    Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
-                                DirectionalLight1:
-                                    Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
-                                Id: 9b5ab329-1dcc-48f8-a788-72def578df3c
-                                TerrainEntity:
-                                    Id: da79f57e-8d85-4ad1-8483-d2c92b00daac
-                                UIEntity:
-                                    Id: f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
                     TransformComponent.Key:
-                        Position: {X: 0.0, Y: 19.2287521, Z: 550.4732}
-                        Rotation: {W: 0.999996245, X: -0.00277253427, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 20.0, Z: 550.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
                 Id: 55f31111-98d0-4cd8-adc6-c78f31d72118
@@ -76,6 +59,39 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
                 Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
+            Design:
+                Folder: null
+        -   Entity:
+                Name: World
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SimpleTerrain.TerrainScript,SimpleTerrain.Game
+                                CameraEntity:
+                                    Id: 55f31111-98d0-4cd8-adc6-c78f31d72118
+                                DirectionalLight0:
+                                    Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
+                                DirectionalLight1:
+                                    Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
+                                Id: 125e4907-364c-4f1e-a58b-ff87aff8a876
+                                TerrainEntity:
+                                    Id: da79f57e-8d85-4ad1-8483-d2c92b00daac
+                                UIEntity:
+                                    Id: f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            -   Entity: {Id: da79f57e-8d85-4ad1-8483-d2c92b00daac}
+                                Component: TransformComponent.Key
+                            -   Entity: {Id: 304a9025-1395-4946-a8f4-91ef67d8eeb3}
+                                Component: TransformComponent.Key
+                            -   Entity: {Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8}
+                                Component: TransformComponent.Key
+                            -   Entity: {Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2}
+                                Component: TransformComponent.Key
+                Id: 62ddae8f-ca6d-422a-b4b1-114004bccc89
             Design:
                 Folder: null
         -   Entity:

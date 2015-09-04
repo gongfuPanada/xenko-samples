@@ -467,7 +467,7 @@ namespace SimpleTerrain
         public async Task UpdateInput()
         {
             var rotY = 0f;
-            var rotX = (float)(Math.PI / 5f);
+            var rotX = MathUtil.Pi / 5f;
 
             while (Game.IsRunning)
             {
@@ -475,14 +475,14 @@ namespace SimpleTerrain
 
                 if (Input.PointerEvents.Count > 0)
                 {
-                    var sumDelta = (2 * (float)Math.PI) * Input.PointerEvents.Aggregate(Vector2.Zero, (current, pointerEvent) => current + pointerEvent.DeltaPosition);
-                    rotY += sumDelta.X;
-                    rotX -= sumDelta.Y;
+                    var sumDelta = MathUtil.Pi * Input.PointerEvents.Aggregate(Vector2.Zero, (current, pointerEvent) => current + pointerEvent.DeltaPosition);
+                    rotY += 1.5f * sumDelta.X;
+                    rotX += 0.75f * sumDelta.Y;
                 }
                 // Rotate the terrain
-                rotY += (float)(2 * Math.PI * (Game.UpdateTime.Elapsed.TotalMilliseconds % 20000) / 20000);
+                rotY += 0.25f * (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
-                TerrainEntity.Transform.Rotation = Quaternion.RotationAxis(Vector3.UnitY, rotY) * Quaternion.RotationAxis(Vector3.UnitX, rotX);
+                Entity.Transform.Rotation = Quaternion.RotationY(rotY) * Quaternion.RotationX(rotX); // rotate the whole world
             }
         }
 
@@ -497,21 +497,15 @@ namespace SimpleTerrain
             loadingModal.Visibility = Visibility.Visible;
             loadingTextBlock.Visibility = Visibility.Visible;
 
-//          Entity.Remove(terrainEntity);
-
             await Task.Run(() =>
             {
-                var heightMap = HeightMapFactory.CreateDataWithFaultFormation((int)Math.Pow(2, terrainSizePowerFactor),
+                var heightMap = HeightMap.GenerateFaultFormation((int)Math.Pow(2, terrainSizePowerFactor),
                     (int)Math.Pow(2, iterationPowerFactor), 0, 256, TerrainHeightScale, filterHeightBandStrength);
 
                 InitializeBuffersFromTerrain(heightMap);
 
-                //var height = heightMap[heightMap.DataSize/2];
-                var height = heightMap.GetScaledHeight(heightMap.Size/2, heightMap.Size/2);
-                TerrainEntity.Transform.Position.Y = -(height / 2);
+                TerrainEntity.Transform.Position = new Vector3(0, -heightMap.MedianHeight, 0);
             });
-
-//          Entity.Add(terrainEntity);
             
             // Dismiss loading modal and text
             loadingModal.Visibility = Visibility.Collapsed;
@@ -564,7 +558,7 @@ namespace SimpleTerrain
         }
 
         /// <summary>
-        /// Initializes Vertex buffer data by a given heightmap
+        /// Initializes Vertex buffer data by a given height map
         /// </summary>
         /// <param name="heightMap"></param>
         /// <param name="vertexBuffer"></param>
@@ -579,7 +573,7 @@ namespace SimpleTerrain
                 {
                     vb[iZ * heightMap.Size  + iX] = new VertexNormalTexture
                     {
-                        Position = new Vector4(iX - halfSize, heightMap.GetScaledHeight(iX, iZ), -iZ + halfSize, 1),
+                        Position = new Vector4(iX - halfSize, heightMap.GetHeight(iX, iZ), -iZ + halfSize, 1),
                         Normal = GetNormalVector(heightMap, iX, iZ),
                         TextureCoordinate = new Vector2((float)iX / heightMap.Size, (float)iZ / heightMap.Size)
                     };
@@ -595,29 +589,29 @@ namespace SimpleTerrain
         /// <returns></returns>
         private static Vector4 GetNormalVector(HeightMap heightMap, int x, int z)
         {
-            var currentP = new Vector3(x, heightMap.GetScaledHeight(x, z), z);
+            var currentP = new Vector3(x, heightMap.GetHeight(x, z), z);
             Vector3 p1;
             Vector3 p2;
 
             if (x == heightMap.Size - 1 && z == heightMap.Size - 1) // Bottom right pixel
             {
-                p1 = new Vector3(x, heightMap.GetScaledHeight(x, z - 1), z - 1);
-                p2 = new Vector3(x - 1, heightMap.GetScaledHeight(x - 1, z), z);
+                p1 = new Vector3(x, heightMap.GetHeight(x, z - 1), z - 1);
+                p2 = new Vector3(x - 1, heightMap.GetHeight(x - 1, z), z);
             }
             else if (x == heightMap.Size - 1) // Right border
             {
-                p1 = new Vector3(x - 1, heightMap.GetScaledHeight(x - 1, z), z);
-                p2 = new Vector3(x, heightMap.GetScaledHeight(x, z + 1), z + 1);
+                p1 = new Vector3(x - 1, heightMap.GetHeight(x - 1, z), z);
+                p2 = new Vector3(x, heightMap.GetHeight(x, z + 1), z + 1);
             }
             else if (z == heightMap.Size - 1) // Bottom border
             {
-                p1 = new Vector3(x + 1, heightMap.GetScaledHeight(x + 1, z), z);
-                p2 = new Vector3(x, heightMap.GetScaledHeight(x, z - 1), z - 1);
+                p1 = new Vector3(x + 1, heightMap.GetHeight(x + 1, z), z);
+                p2 = new Vector3(x, heightMap.GetHeight(x, z - 1), z - 1);
             }
             else // The rest of pixels
             {
-                p1 = new Vector3(x, heightMap.GetScaledHeight(x, z + 1), z + 1);
-                p2 = new Vector3(x + 1, heightMap.GetScaledHeight(x + 1, z), z);
+                p1 = new Vector3(x, heightMap.GetHeight(x, z + 1), z + 1);
+                p2 = new Vector3(x + 1, heightMap.GetHeight(x + 1, z), z);
             }
             return new Vector4(Vector3.Normalize(Vector3.Cross(p1 - currentP, p2 - currentP)), 1);
         }
