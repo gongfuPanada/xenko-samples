@@ -1,4 +1,5 @@
 ﻿using System;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -20,7 +21,11 @@ namespace SimpleSprite
 
         private Vector2 resolution;
         private Vector2 ballHalfSize;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private Vector2 ballPosition;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private Vector2 ballSpeed;
 
         private SceneDelegateRenderer delegateRenderer;
@@ -34,9 +39,12 @@ namespace SimpleSprite
 
             // Initialize ball's state related variables.
             resolution = new Vector2(virtualResolution.X, virtualResolution.Y);
-            ballHalfSize = new Vector2(SphereWidth / 2, SphereHeight / 2);
-            ballPosition = resolution / 2;
-            ballSpeed = new Vector2(600, -400);
+            ballHalfSize = new Vector2(SphereWidth / 2f, SphereHeight / 2f);
+            if (!IsLiveReloading)
+            {
+                ballPosition = resolution / 2;
+                ballSpeed = new Vector2(600, -400);
+            }
 
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
