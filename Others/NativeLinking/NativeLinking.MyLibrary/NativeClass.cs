@@ -1,12 +1,12 @@
 using System.Runtime.InteropServices;
 
-namespace NativeLibraryWrapper.MyLibrary
+namespace NativeLinking.MyLibrary
 {
-    public class Class1
+    public class NativeClass
     {
         private const string LibraryName = "NativeLibrary";
 
-        static Class1()
+        static NativeClass()
         {
             //This step is necessary under Windows Desktop platform to figure the arch
             SiliconStudio.Core.NativeLibrary.PreloadLibrary(LibraryName + ".dll");
