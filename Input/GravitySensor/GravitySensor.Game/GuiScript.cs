@@ -16,6 +16,9 @@ namespace GravitySensor
             if (Input.Gravity.IsSupported) // do not display any message when orientation sensor is available
                 return;
 
+            if (IsLiveReloading)
+                return;
+
             var textBlock = new TextBlock
             {
                 Text = "Use arrows to play with gravity!",
