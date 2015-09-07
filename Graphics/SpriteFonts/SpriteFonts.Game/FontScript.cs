@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -61,21 +62,32 @@ at full size and full measure";
         private SpriteFont japaneseFont;
         private SpriteFont timesNewRoman;
         private SpriteFont headerFont;
-
+        
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private Vector2 animatedFontPosition;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float animatedFontScale;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float animatedFontRotation;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float animatedFontAlpha;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private bool isPlaying = true;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private int currentScreenIndex;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private float currentTime;
 
         private readonly Vector2 headerPosition = new Vector2(0.5f, 0.25f);
         private readonly Vector2 contentPosition = new Vector2(0.5f, 0.4f);
 
         private readonly Color paradoxColor = new Color(0x583069);
-        private float currentTime;
 
         private Vector2 virtualResolution = new Vector2(1920, 1080);
 
@@ -114,10 +126,10 @@ at full size and full measure";
             screenRenderers.Add(DrawLanguageCategory);
             screenRenderers.Add(DrawAlignmentCategory);
             screenRenderers.Add(DrawAnimationCategory);
-
+            
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
-            var compositor = ((SceneGraphicsCompositorLayers) scene.Settings.GraphicsCompositor);
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
             compositor.Master.Renderers.Add(delegateRenderer = new SceneDelegateRenderer(DrawFont));
         }
 
