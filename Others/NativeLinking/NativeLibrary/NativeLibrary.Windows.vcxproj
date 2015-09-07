@@ -18,10 +18,14 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NativeLibrary.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7F1868C2-DCC7-4406-9C4F-398C34949E5D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>NativeLibraryWindows</RootNamespace>
+    <RootNamespace>NativeLibrary</RootNamespace>
+    <ProjectName>NativeLibrary.Windows</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -69,18 +73,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>NativeLibrary</TargetName>
+    <OutDir>$(SolutionDir)..\NativeLibs\Windows\x86\</OutDir>
+    <IntDir>obj\$(Configuration)\Windows</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>NativeLibrary</TargetName>
+    <IntDir>obj\$(Configuration)\Windows</IntDir>
+    <OutDir>$(SolutionDir)..\NativeLibs\Windows\x64\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>NativeLibrary</TargetName>
+    <OutDir>$(SolutionDir)..\NativeLibs\Windows\x86\</OutDir>
+    <IntDir>obj\$(Configuration)\Windows</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>NativeLibrary</TargetName>
+    <IntDir>obj\$(Configuration)\Windows</IntDir>
+    <OutDir>$(SolutionDir)..\NativeLibs\Windows\x64\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -142,9 +154,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\NativeLibrary.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

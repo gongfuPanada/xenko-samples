@@ -26,7 +26,7 @@ Profiles:
                 Location: NativeLinking.Game/NativeLinking.Game.csproj
                 Type: Library
             -   Id: 83947d07-a863-45b5-924e-a0e5c23af277
-                Location: NativeLinking.MyLibrary/NativeLinking.MyLibrary.csproj
+                Location: NativeLinking.MyLibrary/NativeLinking.LibraryWrapper.csproj
                 Type: Library
     -   Name: Windows
         Platform: Windows

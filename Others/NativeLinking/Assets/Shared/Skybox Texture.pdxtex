@@ -1,7 +1,0 @@
-!Texture
-Id: cd3f958d-3aa3-4176-a729-f148d3303c00
-SerializedVersion: 1
-Tags: []
-Source: ../../RawAssets/skybox_texture_ldr.dds
-ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: Color32Bits

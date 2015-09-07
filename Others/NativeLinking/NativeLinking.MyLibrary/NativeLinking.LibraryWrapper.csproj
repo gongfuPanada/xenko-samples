@@ -8,8 +8,8 @@
     <ProjectGuid>{83947D07-A863-45B5-924E-A0E5C23AF277}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NativeLinking.MyLibrary</RootNamespace>
-    <AssemblyName>NativeLinking.MyLibrary</AssemblyName>
+    <RootNamespace>NativeLinking.LibraryWrapper</RootNamespace>
+    <AssemblyName>NativeLinking.LibraryWrapper</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -365,9 +365,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Content Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NativeClass.cs" />
+    <Compile Include="MyAnimationEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
