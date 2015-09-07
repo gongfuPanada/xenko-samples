@@ -5,5 +5,5 @@ IF [%NDK_PATH%]==[] echo "Please set the variable 'ANDROID_NDK_PATH' to the inst
 
 call ndk-build clean
 call ndk-build
-xcopy "libs\*" "..\..\NativeLibs\Android\" /s /i /y /q
-echo "libs files have been copied to ../../NativeLibs/Android"
+xcopy "libs\*" "..\NativeLibs\Android\" /s /i /y /q
+echo "libs files have been copied to ../NativeLibs/Android"

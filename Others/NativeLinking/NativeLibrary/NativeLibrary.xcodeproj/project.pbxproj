@@ -7,21 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C46CBDD61B8D920400750D28 /* NativeLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46CBDD51B8D920400750D28 /* NativeLibrary.h */; };
-		C46CBDD81B8D920400750D28 /* NativeLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = C46CBDD71B8D920400750D28 /* NativeLibrary.m */; };
-		C46CBDDE1B8D920400750D28 /* libNativeLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C46CBDD21B8D920400750D28 /* libNativeLibrary.a */; };
-		C46CBDEF1B8D933900750D28 /* NativeLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C46CBDEE1B8D933900750D28 /* NativeLibrary.cpp */; };
+		C4E897951B9DA31B00B505B8 /* NativeLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4289A3A1B9DA16E00F4BD21 /* NativeLibrary.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C46CBDDF1B8D920400750D28 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C46CBDCA1B8D920400750D28 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C46CBDD11B8D920400750D28;
-			remoteInfo = NativeLibrary;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C46CBDD01B8D920400750D28 /* CopyFiles */ = {
@@ -30,19 +17,14 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				C46CBDD61B8D920400750D28 /* NativeLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C4289A3A1B9DA16E00F4BD21 /* NativeLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeLibrary.cpp; sourceTree = SOURCE_ROOT; };
 		C46CBDD21B8D920400750D28 /* libNativeLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNativeLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46CBDD51B8D920400750D28 /* NativeLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NativeLibrary.h; path = NativeLibrary/NativeLibrary.h; sourceTree = SOURCE_ROOT; };
-		C46CBDD71B8D920400750D28 /* NativeLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeLibrary.m; sourceTree = "<group>"; };
-		C46CBDDD1B8D920400750D28 /* NativeLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46CBDE31B8D920400750D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C46CBDEE1B8D933900750D28 /* NativeLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NativeLibrary.cpp; path = ../../NativeLibrary.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +35,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C46CBDDA1B8D920400750D28 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C46CBDDE1B8D920400750D28 /* libNativeLibrary.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				C46CBDD41B8D920400750D28 /* NativeLibrary */,
-				C46CBDE11B8D920400750D28 /* NativeLibraryTests */,
 				C46CBDD31B8D920400750D28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				C46CBDD21B8D920400750D28 /* libNativeLibrary.a */,
-				C46CBDDD1B8D920400750D28 /* NativeLibraryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,27 +57,9 @@
 		C46CBDD41B8D920400750D28 /* NativeLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				C46CBDEE1B8D933900750D28 /* NativeLibrary.cpp */,
-				C46CBDD51B8D920400750D28 /* NativeLibrary.h */,
-				C46CBDD71B8D920400750D28 /* NativeLibrary.m */,
+				C4289A3A1B9DA16E00F4BD21 /* NativeLibrary.cpp */,
 			);
 			path = NativeLibrary;
-			sourceTree = "<group>";
-		};
-		C46CBDE11B8D920400750D28 /* NativeLibraryTests */ = {
-			isa = PBXGroup;
-			children = (
-				C46CBDE21B8D920400750D28 /* Supporting Files */,
-			);
-			path = NativeLibraryTests;
-			sourceTree = "<group>";
-		};
-		C46CBDE21B8D920400750D28 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C46CBDE31B8D920400750D28 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,24 +82,6 @@
 			productReference = C46CBDD21B8D920400750D28 /* libNativeLibrary.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C46CBDDC1B8D920400750D28 /* NativeLibraryTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C46CBDE91B8D920400750D28 /* Build configuration list for PBXNativeTarget "NativeLibraryTests" */;
-			buildPhases = (
-				C46CBDD91B8D920400750D28 /* Sources */,
-				C46CBDDA1B8D920400750D28 /* Frameworks */,
-				C46CBDDB1B8D920400750D28 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C46CBDE01B8D920400750D28 /* PBXTargetDependency */,
-			);
-			name = NativeLibraryTests;
-			productName = NativeLibraryTests;
-			productReference = C46CBDDD1B8D920400750D28 /* NativeLibraryTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,9 +92,6 @@
 				ORGANIZATIONNAME = "Silicon Studio";
 				TargetAttributes = {
 					C46CBDD11B8D920400750D28 = {
-						CreatedOnToolsVersion = 6.3.2;
-					};
-					C46CBDDC1B8D920400750D28 = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
@@ -176,47 +109,20 @@
 			projectRoot = "";
 			targets = (
 				C46CBDD11B8D920400750D28 /* NativeLibrary */,
-				C46CBDDC1B8D920400750D28 /* NativeLibraryTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		C46CBDDB1B8D920400750D28 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C46CBDCE1B8D920400750D28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46CBDEF1B8D933900750D28 /* NativeLibrary.cpp in Sources */,
-				C46CBDD81B8D920400750D28 /* NativeLibrary.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46CBDD91B8D920400750D28 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C4E897951B9DA31B00B505B8 /* NativeLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C46CBDE01B8D920400750D28 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C46CBDD11B8D920400750D28 /* NativeLibrary */;
-			targetProxy = C46CBDDF1B8D920400750D28 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C46CBDE41B8D920400750D28 /* Debug */ = {
@@ -236,6 +142,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../NativeLibs/iOS/";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -278,6 +185,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../NativeLibs/iOS/";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -329,38 +237,6 @@
 			};
 			name = Release;
 		};
-		C46CBDEA1B8D920400750D28 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NativeLibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		C46CBDEB1B8D920400750D28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NativeLibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -378,15 +254,6 @@
 			buildConfigurations = (
 				C46CBDE71B8D920400750D28 /* Debug */,
 				C46CBDE81B8D920400750D28 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C46CBDE91B8D920400750D28 /* Build configuration list for PBXNativeTarget "NativeLibraryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C46CBDEA1B8D920400750D28 /* Debug */,
-				C46CBDEB1B8D920400750D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
