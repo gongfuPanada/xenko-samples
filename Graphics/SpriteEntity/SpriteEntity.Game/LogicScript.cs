@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
+using SiliconStudio.Core;
 using SiliconStudio.Paradox.Engine;
 
 namespace SpriteEntity
@@ -12,7 +12,10 @@ namespace SpriteEntity
     {
         public const float ScreenScale = 0.00625f;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private readonly List<Entity> bullets = new List<Entity>();
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private readonly List<Entity> enemies = new List<Entity>();
 
         public override void Update()
@@ -56,7 +59,7 @@ namespace SpriteEntity
                 if (!bulletScript.IsAlive)
                 {
                     // The bullet is dead, remove it
-                    SceneSystem.SceneInstance.Scene.RemoveChild(bullet);
+                    SceneSystem.SceneInstance.Scene.Entities.Remove(bullet);
                     bullets.Remove(bullet);
                 }
             }
@@ -64,9 +67,10 @@ namespace SpriteEntity
 
         public override void Cancel()
         {
-            foreach (var bullet in bullets)
+            if(!IsLiveReloading)
             {
-                SceneSystem.SceneInstance.Scene.RemoveChild(bullet);
+                foreach (var bullet in bullets)
+                    SceneSystem.SceneInstance.Scene.Entities.Remove(bullet);
             }
         }
 

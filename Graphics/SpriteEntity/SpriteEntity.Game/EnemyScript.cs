@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
@@ -33,20 +34,24 @@ namespace SpriteEntity
         private static int seed = Environment.TickCount;
         private static Random enemyRandomLocal = new Random(seed);
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float elapsedTime;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         internal bool IsAlive { get; set; }
 
         public override void Start()
         {
             spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
-
-            // Register ourself to the logic to detect collision
-            Logic.WatchEnemy(Entity);
-
             enemySpriteComponent = Entity.Get<SpriteComponent>();
+             
+            if (!IsLiveReloading)
+            {
+                // Register our-self to the logic to detect collision
+                Logic.WatchEnemy(Entity);
 
-            Reset();
+                Reset();
+            }
         }
 
         public override void Update()
