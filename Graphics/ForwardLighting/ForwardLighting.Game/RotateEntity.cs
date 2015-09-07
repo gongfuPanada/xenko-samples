@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 
@@ -21,11 +22,21 @@ namespace ForwardLighting
         /// </summary>
         public Entity Camera;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private float initialHeight;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private Quaternion initialRotation;
+
         public override async Task Execute()
         {
             var dragValue = 0f;
-            var initialHeight = Entity.Transform.Position.Y;
-            var initialRotation = Entity.Transform.Rotation;
+
+            if (!IsLiveReloading)
+            {
+                initialHeight = Entity.Transform.Position.Y;
+                initialRotation = Entity.Transform.Rotation;
+            }
 
             while (Game.IsRunning)
             {
@@ -33,10 +44,10 @@ namespace ForwardLighting
                 await Script.NextFrame();
 
                 // rotate character
-                var characterAnimationPeriod = 2 * Math.PI * (Game.UpdateTime.Total.TotalMilliseconds % 10000) / 10000;
+                var time = Game.UpdateTime.Total.TotalSeconds;
 
-                Entity.Transform.Rotation = initialRotation * Quaternion.RotationAxis(Vector3.UnitY, (float)characterAnimationPeriod);
-                Entity.Transform.Position.Y = initialHeight + 0.1f * (float)Math.Sin(3 * characterAnimationPeriod);
+                Entity.Transform.Rotation = initialRotation * Quaternion.RotationAxis(Vector3.UnitY, (float)time);
+                Entity.Transform.Position.Y = initialHeight + 0.1f * (float)Math.Sin(3 * time);
 
                 // rotate camera
                 dragValue = 0.95f * dragValue;
