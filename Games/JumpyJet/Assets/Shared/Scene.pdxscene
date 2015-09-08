@@ -4,12 +4,12 @@ SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
-        - 47550ad3-4887-4173-95e0-d98048465edd
         - 6ec17338-026d-4ad3-9615-4975281cf3ba
         - ca4ad047-2db2-4ab1-baca-d8c4e9a469bb
-        - c2d8e639-281f-419d-b8cb-77d7ef14a7f7
         - d87ce433-90b0-4819-8f55-9d08330b581d
         - c2306322-b9da-4756-8c50-0415142c6dd1
+        - c2d8e639-281f-419d-b8cb-77d7ef14a7f7
+        - 47550ad3-4887-4173-95e0-d98048465edd
     Entities:
         -   Entity:
                 Name: UI
@@ -76,6 +76,7 @@ Hierarchy:
                                 Pipes: !JumpyJet.PipesScript,JumpyJet.Game
                                     Entity: {Id: d87ce433-90b0-4819-8f55-9d08330b581d}
                                     Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
+                                Priority: 10
                                 UI: !JumpyJet.UIScript,JumpyJet.Game
                                     Entity: {Id: 47550ad3-4887-4173-95e0-d98048465edd}
                                     Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a

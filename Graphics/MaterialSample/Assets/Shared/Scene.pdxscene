@@ -252,8 +252,8 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !LightColorRgb
-                                Color: {R: 0.7375, G: 0.735111535, B: 0.6499219}
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.7375, G: 0.735111535, B: 0.6499219}
                             Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf {}
@@ -1044,8 +1044,8 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !LightColorRgb
-                                Color: {R: 0.9, G: 0.9, B: 0.9}
+                            Color: !ColorRgbProvider
+                                Value: {R: 0.9, G: 0.9, B: 0.9}
                             Shadow:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf {}
