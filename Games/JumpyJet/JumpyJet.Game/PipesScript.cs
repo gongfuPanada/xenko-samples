@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
@@ -34,8 +35,9 @@ namespace JumpyJet
             } };
 
             // Create PipeSets
-            CreatePipe(pipeEntity, StartPipePosition);
-            CreatePipe(pipeEntity, StartPipePosition + GapBetweenPipe);
+            var screenWidth = GraphicsDevice.Presenter.BackBuffer.Width;
+            for (int i = 0; i < (int)Math.Ceiling(screenWidth / (float)GapBetweenPipe); i++)
+                CreatePipe(pipeEntity, StartPipePosition + i * GapBetweenPipe);
         }
 
         public override void Update()

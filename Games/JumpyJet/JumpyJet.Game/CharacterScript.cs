@@ -72,6 +72,7 @@ namespace JumpyJet
             UpdateTransformation();
 
             velocity = StartVelocity;
+            isRunning = false;
 
             Entity.Get<SpriteComponent>().CurrentFrame = FallingSpriteFrameIndex;
         }
