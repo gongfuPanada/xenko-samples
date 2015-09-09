@@ -1,13 +1,12 @@
 !SpriteSheet
 Id: ca9993b7-1213-4037-8a77-333f3fa2e163
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 Packing:
     Enabled: false
-    AtlasMaximumSize: {X: 4096, Y: 2048}
 Sprites:
     -   Source: ../../RawAssets/tex3.jpg
         Name: parallax_background

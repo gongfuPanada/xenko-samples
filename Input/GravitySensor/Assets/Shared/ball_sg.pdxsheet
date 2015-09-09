@@ -1,20 +1,23 @@
 !SpriteSheet
 Id: 10c25364-4310-4db2-a7d1-868336f4570c
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
+Packing: {}
 Sprites:
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: active0
         TextureRegion: {X: 924, Y: 182, Width: 80, Height: 80}
-        PixelsPerUnit: 75
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        PixelsPerUnit: 75.0
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/SpriteEntity.png
         Name: active1
         TextureRegion: {X: 875, Y: 98, Width: 80, Height: 80}
-        PixelsPerUnit: 75
-        Center: {X: 0, Y: 0}
-        Borders: {X: 0, Y: 0, Z: 0, W: 0}
+        PixelsPerUnit: 75.0
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
