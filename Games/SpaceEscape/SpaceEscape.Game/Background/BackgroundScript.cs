@@ -153,7 +153,7 @@ namespace SpaceEscape.Background
                 var maxVec = objWorldPos + boundingBox.Maximum;
                 var testBB = new BoundingBox(minVec, maxVec);
 
-                if (Collision.BoxContainsBox(ref testBB, ref agentBB) != ContainmentType.Disjoint)
+                if (CollisionHelper.BoxContainsBox(ref testBB, ref agentBB) != ContainmentType.Disjoint)
                     return true;
             }
             return false;
