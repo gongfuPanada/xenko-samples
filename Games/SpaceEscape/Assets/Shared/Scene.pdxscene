@@ -4,13 +4,13 @@ SerializedVersion: 15
 Tags: []
 Hierarchy:
     RootEntities:
-        - 68cbade9-8efc-4123-8c6c-81bf6c38059b
         - f0bb69db-f15c-4a39-b3cd-d2941fdb99ce
         - 2ff8aac2-706b-4d4e-b6c9-22e2f8f2c31f
         - 9f899343-be76-409e-a38f-7aa8744b8179
         - 23d023ae-08a0-4a2b-883b-c3a784e25e78
         - 9a768522-351d-40ab-ad6b-9ecc90f3c111
         - 3d1a3eb9-d296-4fd6-8f90-9f3f3efb058a
+        - 68cbade9-8efc-4123-8c6c-81bf6c38059b
     Entities:
         -   Entity:
                 Name: Character
@@ -74,6 +74,7 @@ Hierarchy:
                                     Entity: {Id: 23d023ae-08a0-4a2b-883b-c3a784e25e78}
                                     Id: d16da46d-e886-4870-a8a2-7ac30c0034ea
                                 Id: ac2e228b-4d39-4e91-a172-de967e133b12
+                                Priority: 10
                                 UIScript: !SpaceEscape.UIScript,SpaceEscape.Game
                                     Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
                                     Id: df4146ae-23ba-40f7-8258-46b1fe1ae97d

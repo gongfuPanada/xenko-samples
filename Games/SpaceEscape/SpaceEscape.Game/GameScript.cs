@@ -27,8 +27,6 @@ namespace SpaceEscape
         /// </summary>
         public UIScript UIScript;
 
-        private bool isFirstUpdate;
-
         public override void Start()
         {
             // Enable visual of mouse in the game
@@ -45,10 +43,10 @@ namespace SpaceEscape
 
             // set behavior of UI button
             UIScript.StartButton.Click += StartGame;
-            UIScript.RetryButton.Click += StartGame;
+            UIScript.RetryButton.Click += RestartGame;
             UIScript.MenuButton.Click += GoToMenu;
-
-            isFirstUpdate = true;
+            
+            GoToMenu(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -58,13 +56,6 @@ namespace SpaceEscape
         /// <returns></returns>
         public override void Update()
         {
-            if (isFirstUpdate)
-            {
-                KillAgent(0);
-                GoToMenu(this, EventArgs.Empty);
-                isFirstUpdate = false;
-            }
-
             if (CharacterScript.IsDead)
                 return;
 
@@ -85,7 +76,7 @@ namespace SpaceEscape
             BackgroundScript.DistanceUpdated -= SetDistanceInUI;
 
             UIScript.StartButton.Click -= StartGame;
-            UIScript.RetryButton.Click -= StartGame;
+            UIScript.RetryButton.Click -= RestartGame;
             UIScript.MenuButton.Click -= GoToMenu;
         }
 
@@ -114,11 +105,19 @@ namespace SpaceEscape
         }
 
         /// <summary>
+        /// Restart playing
+        /// </summary>
+        private void RestartGame(object sender, EventArgs args)
+        {
+            ResetGame();
+            StartGame(sender, args);
+        }
+
+        /// <summary>
         /// Start playing
         /// </summary>
         private void StartGame(object sender, EventArgs args)
         {
-            ResetGame();
             UIScript.StartPlayMode();
             BackgroundScript.StartScrolling();
             CharacterScript.Activate();

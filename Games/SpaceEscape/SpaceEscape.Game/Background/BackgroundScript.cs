@@ -58,7 +58,7 @@ namespace SpaceEscape.Background
             levelFactory.LoadContent(Asset);
 
             // Add skyPlane with LevelBlocks to EntitySystem
-            SceneSystem.SceneInstance.Scene.AddChild(skyplaneEntity);
+            SceneSystem.SceneInstance.Scene.Entities.Add(skyplaneEntity);
             CreateStartLevelBlocks();
         }
 
@@ -66,7 +66,7 @@ namespace SpaceEscape.Background
         {
             Asset.Unload(skyplaneModel);
             Entity.Transform.Children.Clear();
-            SceneSystem.SceneInstance.Scene.RemoveChild(skyplaneEntity);
+            SceneSystem.SceneInstance.Scene.Entities.Remove(skyplaneEntity);
         }
 
         public override void Update()
@@ -112,6 +112,7 @@ namespace SpaceEscape.Background
         public void Reset()
         {
             RunningDistance = 0f;
+            isScrolling = false;
 
             for (var i = levelBlocks.Count - 1; i >= 0; i--)
             {
