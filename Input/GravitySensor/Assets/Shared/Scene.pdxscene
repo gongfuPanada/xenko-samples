@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -18,9 +18,10 @@ Hierarchy:
                 Components:
                     PhysicsComponent.Key:
                         Elements:
-                            - !StaticRigidbodyElement
+                            - !StaticColliderElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -49,6 +50,7 @@ Hierarchy:
                             - !GravitySensor.GravityScript,GravitySensor.Game
                                 Id: 340ae752-4f79-40d9-88cb-10048105c703
                             - !GravitySensor.GuiScript,GravitySensor.Game
+                                Font: e69c3c0c-baca-4e05-9c03-a3f95cdeb5ed:SpriteFont
                                 Id: a6f55234-c9dd-446e-b1fe-838970897afc
                     UIComponent.Key:
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
@@ -65,9 +67,10 @@ Hierarchy:
                 Components:
                     PhysicsComponent.Key:
                         Elements:
-                            - !StaticRigidbodyElement
+                            - !StaticColliderElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -88,9 +91,10 @@ Hierarchy:
                 Components:
                     PhysicsComponent.Key:
                         Elements:
-                            - !StaticRigidbodyElement
+                            - !StaticColliderElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -111,9 +115,10 @@ Hierarchy:
                 Components:
                     PhysicsComponent.Key:
                         Elements:
-                            - !StaticRigidbodyElement
+                            - !StaticColliderElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -138,10 +143,12 @@ Hierarchy:
                         Color: {R: 255, G: 255, B: 255, A: 255}
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
@@ -183,10 +190,12 @@ Hierarchy:
                         Color: {R: 255, G: 255, B: 255, A: 255}
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
@@ -230,7 +239,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera:
-                OrthographicSize: 1000.0
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

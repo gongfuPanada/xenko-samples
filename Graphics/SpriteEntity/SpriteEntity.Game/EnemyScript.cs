@@ -13,6 +13,8 @@ namespace SpriteEntity
     {
         public LogicScript Logic;
 
+        public SpriteSheet SpriteSheet;
+
         private const float enemyInitPositionY = 8;
 
         // enemy age
@@ -42,7 +44,7 @@ namespace SpriteEntity
 
         public override void Start()
         {
-            spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
+            spriteSheet = SpriteSheet;
             enemySpriteComponent = Entity.Get<SpriteComponent>();
              
             if (!IsLiveReloading)

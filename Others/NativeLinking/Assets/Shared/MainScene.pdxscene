@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 2ae86742-ad72-46d3-a6b6-4358ea99b7a6
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -27,7 +27,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                     TransformComponent.Key:
                         Position: {X: -2.0, Y: 2.0, Z: 0.0}
@@ -93,6 +93,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

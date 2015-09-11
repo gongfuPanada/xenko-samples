@@ -17,6 +17,8 @@ namespace Constraints
         public Entity cube;
         public Entity sphere;
 
+        public SpriteFont Font;
+
         private Constraint currentConstraint;
         private readonly List<Action> constraintsList = new List<Action>();
         private int constraintIndex;
@@ -37,10 +39,9 @@ namespace Constraints
             sphereRigidBody.CanSleep = false;
 
             // Create the UI
-            var font = Asset.Load<SpriteFont>("Font");
             constraintNameBlock = new TextBlock
             {
-                Font = font,
+                Font = Font,
                 TextSize = 55,
                 TextColor = Color.White,
             };
@@ -52,8 +53,8 @@ namespace Constraints
                 Children = 
                 { 
                     constraintNameBlock, 
-                    CreateButton("Next Constraint", font, 1), 
-                    CreateButton("Last Constraint", font, -1) 
+                    CreateButton("Next Constraint", Font, 1), 
+                    CreateButton("Last Constraint", Font, -1) 
                 }
             };
 

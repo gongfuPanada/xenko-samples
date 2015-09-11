@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 7207a5b4-cbf4-4edc-a7fb-0dfa83e2414e
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -50,7 +50,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.75
                     TransformComponent.Key:
@@ -67,6 +67,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpaceEscape.GameScript,SpaceEscape.Game
+                                Priority: 10
                                 BackgroundScript: !SpaceEscape.Background.BackgroundScript,SpaceEscape.Game
                                     Entity: {Id: 9a768522-351d-40ab-ad6b-9ecc90f3c111}
                                     Id: 96a90126-5b00-48ef-b725-ff6116d66cf5
@@ -74,7 +75,6 @@ Hierarchy:
                                     Entity: {Id: 23d023ae-08a0-4a2b-883b-c3a784e25e78}
                                     Id: d16da46d-e886-4870-a8a2-7ac30c0034ea
                                 Id: ac2e228b-4d39-4e91-a172-de967e133b12
-                                Priority: 10
                                 UIScript: !SpaceEscape.UIScript,SpaceEscape.Game
                                     Entity: {Id: 68cbade9-8efc-4123-8c6c-81bf6c38059b}
                                     Id: df4146ae-23ba-40f7-8258-46b1fe1ae97d
@@ -95,7 +95,9 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpaceEscape.UIScript,SpaceEscape.Game
+                                Font: aa317d9b-bbd3-4240-9ad6-11efad9c4d4d:Font
                                 Id: df4146ae-23ba-40f7-8258-46b1fe1ae97d
+                                UIImages: 2bb544ec-3316-404c-a73f-ec9302f7aa1c:UIImages
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -128,6 +130,8 @@ Hierarchy:
                         Scripts:
                             - !SpaceEscape.Background.BackgroundScript,SpaceEscape.Game
                                 Id: 96a90126-5b00-48ef-b725-ff6116d66cf5
+                                LevelBlocks: d5969c6e-1456-4aac-a656-598bf1e16c2d:LevelBlocks
+                                SkyplaneModel: f16bfc07-e816-475d-a400-304b8042d6c7:bg_00
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: -1.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -141,7 +145,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -199,6 +203,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

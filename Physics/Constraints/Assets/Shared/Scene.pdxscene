@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 45f5d521-b83c-4608-937d-64f93812fba7
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -34,10 +34,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
@@ -58,10 +60,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
@@ -78,7 +82,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -113,7 +117,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.25
                     TransformComponent.Key:
@@ -134,6 +138,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !Constraints.DemoScript,Constraints.Game
+                                Font: 62eec53a-f82a-460a-91c3-bf3c6ece95c2:Font
                                 Id: 46650e10-9713-4da4-a9e9-b9e50263ec16
                                 cube:
                                     Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
@@ -171,7 +176,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera:
-                FarPlane: 100.0
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

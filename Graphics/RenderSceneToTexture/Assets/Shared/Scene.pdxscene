@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -43,6 +43,7 @@ Hierarchy:
                         Scripts:
                             - !RenderSceneToTexture.SetSpriteSource,RenderSceneToTexture.Game
                                 Id: c31d8e1f-53f2-456a-a026-55ebe9720de5
+                                RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
                     TransformComponent.Key:
                         Position: {X: 0.25, Y: 2.85, Z: -1.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -56,7 +57,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.5
                     TransformComponent.Key:
@@ -86,7 +87,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -120,7 +121,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -202,6 +203,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

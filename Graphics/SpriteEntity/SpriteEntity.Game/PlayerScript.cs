@@ -14,6 +14,8 @@ namespace SpriteEntity
 {
     public class PlayerScript : AsyncScript
     {
+        public SpriteSheet SpriteSheet;
+
         private enum AgentAnimation
         {
             Run,
@@ -95,7 +97,7 @@ namespace SpriteEntity
 
         public override async Task Execute()
         {
-            spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
+            spriteSheet = SpriteSheet;
             agentSpriteComponent = Entity.Get<SpriteComponent>();
 
             // Calculate offset of the bullet from the Agent if he is facing left and right side // TODO improve this
@@ -162,7 +164,7 @@ namespace SpriteEntity
                         new SpriteComponent {SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet")},
 
                         // Will make the beam move along a direction at each frame
-                        new ScriptComponent {Scripts = {new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f}}}
+                        new ScriptComponent {Scripts = {new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f, SpriteSheet = SpriteSheet}}}
                     };
 
                     bullet.Transform.Position = (isAgentFacingRight) ? Entity.Transform.Position + bulletOffset : Entity.Transform.Position + (bulletOffset*new Vector3(-1, 1, 1));

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 1d1214c6-8844-4fae-8142-1f986349f8d3
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -40,7 +40,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -64,6 +64,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !AnimatedModel.UIScript,AnimatedModel.Game
+                                Font: dc5e460a-ac52-45b9-a69f-cc5a5a5f9cf7:Font
                                 Id: acf594de-a7ed-4d13-9359-b9809a1ee083
                                 Knight:
                                     Id: 069945be-764a-4de9-88f4-458740f821ff
@@ -127,6 +128,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

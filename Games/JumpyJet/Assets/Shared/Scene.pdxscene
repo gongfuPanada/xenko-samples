@@ -1,6 +1,6 @@
 !SceneAsset
 Id: b07987b2-a262-45fb-9da6-ba05fc7aaf74
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -20,7 +20,9 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !JumpyJet.UIScript,JumpyJet.Game
+                                Font: 88f98b62-b02c-4569-8eee-0a91365f95bd:Font
                                 Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a
+                                UIImages: 85da6663-b688-4a62-91f9-d8868f3a2d4f:UIImages
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -52,6 +54,7 @@ Hierarchy:
                         Scripts:
                             - !JumpyJet.BackgroundScript,JumpyJet.Game
                                 Id: c1d170c8-1a09-4d67-bc8e-f4c843b5fbcd
+                                ParallaxBackgrounds: ca9993b7-1213-4037-8a77-333f3fa2e163:ParallaxBackgrounds
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -66,6 +69,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !JumpyJet.GameScript,JumpyJet.Game
+                                Priority: 10
                                 Background: !JumpyJet.BackgroundScript,JumpyJet.Game
                                     Entity: {Id: c2306322-b9da-4756-8c50-0415142c6dd1}
                                     Id: c1d170c8-1a09-4d67-bc8e-f4c843b5fbcd
@@ -76,7 +80,6 @@ Hierarchy:
                                 Pipes: !JumpyJet.PipesScript,JumpyJet.Game
                                     Entity: {Id: d87ce433-90b0-4819-8f55-9d08330b581d}
                                     Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
-                                Priority: 10
                                 UI: !JumpyJet.UIScript,JumpyJet.Game
                                     Entity: {Id: 47550ad3-4887-4173-95e0-d98048465edd}
                                     Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a
@@ -115,6 +118,7 @@ Hierarchy:
                         Scripts:
                             - !JumpyJet.PipesScript,JumpyJet.Game
                                 Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
+                                Sprites: 3ad37051-9134-4cea-b756-569c895c0420:Sprites
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -147,8 +151,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 10.0
-            Camera:
-                NearPlane: 1.0
-                FarPlane: 100000.0
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

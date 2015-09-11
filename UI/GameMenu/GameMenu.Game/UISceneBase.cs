@@ -9,8 +9,6 @@ namespace GameMenu
 {
     public abstract class UISceneBase : SyncScript
     {
-        protected readonly List<object> LoadedAssets = new List<object>();
-
         protected Game UIGame;
 
         protected bool IsRunning;
@@ -44,14 +42,6 @@ namespace GameMenu
 
             IsRunning = false;
             SceneCreated = false;
-
-            foreach (var asset in LoadedAssets)
-            {
-                if(asset != null)
-                    Asset.Unload(asset);
-            }
-
-            LoadedAssets.Clear();
         }
 
         private void AdjustVirtualResolution(object sender, EventArgs e)
@@ -66,13 +56,6 @@ namespace GameMenu
                 LoadScene();
 
             SceneCreated = true;
-        }
-
-        protected T LoadAsset<T>(string assetName) where T : class
-        {
-            LoadedAssets.Add(Asset.Load<T>(assetName));
-
-            return (T)LoadedAssets[LoadedAssets.Count - 1];
         }
 
         protected abstract void LoadScene();

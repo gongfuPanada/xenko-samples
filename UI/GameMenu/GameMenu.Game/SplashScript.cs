@@ -9,21 +9,21 @@ namespace GameMenu
 {
     public class SplashScript : UISceneBase
     {
+        public SpriteFont WesternFont;
+        public SpriteSheet SplashScreenImages;
+
         protected override void LoadScene()
         {
             // Allow user to resize the window with the mouse.
             Game.Window.AllowUserResizing = true;
 
-            var arial = LoadAsset<SpriteFont>("WesternFont");
-            var uiImages = LoadAsset<SpriteSheet>("SplashScreenImages");
-
             // Create and initialize "Paradox Samples" Text
             var paradoxSampleTextBlock = new ContentDecorator
             {
-                BackgroundImage = uiImages["paradox_sample_text_bg"],
+                BackgroundImage = SplashScreenImages["paradox_sample_text_bg"],
                 Content = new TextBlock
                 {
-                    Font = arial,
+                    Font = WesternFont,
                     TextSize = 60,
                     Text = "Paradox Samples",
                     TextColor = Color.White,
@@ -37,10 +37,10 @@ namespace GameMenu
             // Create and initialize "UI" Text
             var uiTextBlock = new ContentDecorator
             {
-                BackgroundImage = uiImages["ui_text_bg"],
+                BackgroundImage = SplashScreenImages["ui_text_bg"],
                 Content = new TextBlock
                 {
-                    Font = arial,
+                    Font = WesternFont,
                     TextSize = 60,
                     Text = "UI",
                     TextColor = Color.White,
@@ -55,7 +55,7 @@ namespace GameMenu
             // Create and initialize Paradox Logo
             var paradoxLogoImageElement = new ImageElement
             {
-                Source = uiImages["Logo"],
+                Source = SplashScreenImages["Logo"],
                 HorizontalAlignment = HorizontalAlignment.Center
             };
 
@@ -65,10 +65,10 @@ namespace GameMenu
             // Create and initialize "Touch Screen to Start"
             var touchStartLabel = new ContentDecorator
             {
-                BackgroundImage = uiImages["touch_start_frame"],
+                BackgroundImage = SplashScreenImages["touch_start_frame"],
                 Content = new TextBlock
                 {
-                    Font = arial,
+                    Font = WesternFont,
                     TextSize = 42,
                     Text = "Touch Screen to Start",
                     TextColor = Color.White
@@ -103,7 +103,7 @@ namespace GameMenu
             grid.Children.Add(touchStartLabel);
 
             // Add the background
-            var background = new ImageElement { Source = uiImages["background_uiimage"], StretchType = StretchType.Fill };
+            var background = new ImageElement { Source = SplashScreenImages["background_uiimage"], StretchType = StretchType.Fill };
             background.SetPanelZIndex(-1);
 
             Entity.Get<UIComponent>().RootElement = new UniformGrid { Children = { background, grid } };

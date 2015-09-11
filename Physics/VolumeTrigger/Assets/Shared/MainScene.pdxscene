@@ -1,6 +1,6 @@
 !SceneAsset
 Id: a5a4f13e-6366-43de-b071-a87c1dfff115
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -36,6 +36,7 @@ Hierarchy:
                             - !CharacterElement
                                 CollisionGroup: CharacterFilter
                                 CanCollideWith: DefaultFilter, SensorTrigger
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !CapsuleColliderShapeDesc
                                         LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -63,10 +64,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !KinematicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: DefaultFilter, CharacterFilter
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
                                 ColliderShapes:
                                     - !SphereColliderShapeDesc
                                         Is2D: false
@@ -88,10 +91,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: SensorTrigger
                                 CanCollideWith: DefaultFilter
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !BoxColliderShapeDesc
                                         Is2D: false
@@ -111,7 +116,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Enabled: true
@@ -150,7 +155,7 @@ Hierarchy:
                             - !TriggerElement
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: KinematicFilter, SensorTrigger, CharacterFilter
-                                LinkedBoneName: null
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !BoxColliderShapeDesc
                                         Is2D: false
@@ -177,6 +182,7 @@ Hierarchy:
                             - !StaticColliderElement
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: DefaultFilter, SensorTrigger, CharacterFilter
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !StaticPlaneColliderShapeDesc
                                         Normal: {X: 0.0, Y: 1.0, Z: 0.0}
@@ -213,7 +219,6 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeHDRSettings
                 BackgroundColor: {R: 0.480495, G: 0.480495, B: 0.480495}
                 PostProcessingEffects:

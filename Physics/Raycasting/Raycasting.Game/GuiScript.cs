@@ -12,6 +12,8 @@ namespace Raycasting
     /// </summary>
     public class GuiScript : StartupScript
     {
+        public SpriteFont Font;
+
         public override void Start()
         {
             base.Start();
@@ -19,7 +21,7 @@ namespace Raycasting
             var textBlock = new TextBlock
             {
                 Text = "Shoot the cubes!",
-                Font = Asset.Load<SpriteFont>("Font"),
+                Font = Font,
                 TextColor = Color.White,
                 TextSize = 60
             };

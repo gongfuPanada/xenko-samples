@@ -16,8 +16,9 @@ namespace SimpleSprite
         private const int SphereCountPerRow = 6;
         private const int SphereTotalCount = 32;
 
+        public Texture Sphere;
+
         private SpriteBatch spriteBatch;
-        private Texture sphere;
 
         private Vector2 resolution;
         private Vector2 ballHalfSize;
@@ -35,7 +36,6 @@ namespace SimpleSprite
             // create the ball sprite.
             var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
-            sphere = Asset.Load<Texture>("sphere");
 
             // Initialize ball's state related variables.
             resolution = new Vector2(virtualResolution.X, virtualResolution.Y);
@@ -87,7 +87,6 @@ namespace SimpleSprite
 
             // destroy graphic objects
             spriteBatch.Dispose();
-            Asset.Unload(sphere);
         }
 
         private void RenderSpheres(RenderContext renderContext, RenderFrame frame)
@@ -98,7 +97,7 @@ namespace SimpleSprite
             var time = (float)Game.DrawTime.Total.TotalSeconds;
             var rotation = time * (float)Math.PI * 0.5f;
             var sourceRectangle = GetSphereAnimation(1.25f * time);
-            spriteBatch.Draw(sphere, ballPosition, sourceRectangle, Color.White, rotation, ballHalfSize);
+            spriteBatch.Draw(Sphere, ballPosition, sourceRectangle, Color.White, rotation, ballHalfSize);
 
             spriteBatch.End();
         }

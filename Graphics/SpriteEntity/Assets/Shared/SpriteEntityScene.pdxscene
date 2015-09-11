@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -55,6 +55,7 @@ Hierarchy:
                                 Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
                                     Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
+                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
                         Position: {X: 8.0, Y: 8.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -78,6 +79,7 @@ Hierarchy:
                                 Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
                                     Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
+                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
                         Position: {X: -5.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -107,6 +109,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteEntity.GuiScript,SpriteEntity.Game
+                                Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
                                 Id: 4e10f211-05ae-4774-88d2-805d318a618e
                     UIComponent.Key:
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
@@ -133,6 +136,7 @@ Hierarchy:
                                 Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
                                     Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
+                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
                         Position: {X: -8.0, Y: 8.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -156,6 +160,7 @@ Hierarchy:
                                 Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
                                     Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
+                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 8.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -188,6 +193,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

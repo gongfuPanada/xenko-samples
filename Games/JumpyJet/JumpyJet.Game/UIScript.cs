@@ -22,14 +22,15 @@ namespace JumpyJet
         internal Button MenuButton { get; private set; }
         internal Button RetryButton { get; private set; }
 
+        public SpriteFont Font;
+        public SpriteSheet UIImages;
+
         private ModalElement mainMenuRoot;
         private Canvas gameRoot;
         private ModalElement gameOverRoot;
 
         private TextBlock scoreTextBlock;
-        private SpriteFont spriteFont;
         private Sprite buttonImage;
-        private SpriteSheet uiImages;
 
         /// <summary>
         /// Load resource and construct ui components
@@ -37,9 +38,7 @@ namespace JumpyJet
         public override void Start()
         {
             // Load resources shared by different UI screens
-            spriteFont = Asset.Load<SpriteFont>("Font");
-            uiImages = Asset.Load<SpriteSheet>("UIImages");
-            buttonImage = uiImages["button"];
+            buttonImage = UIImages["button"];
 
             // Load and create specific UI screens.
             CreateMainMenuUI();
@@ -49,7 +48,7 @@ namespace JumpyJet
 
         private void CreateMainMenuUI()
         {
-            var paradoxLogo = new ImageElement { Source = uiImages["pdx_logo"] };
+            var paradoxLogo = new ImageElement { Source = UIImages["pdx_logo"] };
 
             paradoxLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
             paradoxLogo.SetCanvasRelativeSize(new Vector3(0.5f, 0.5f, 1f));
@@ -57,7 +56,7 @@ namespace JumpyJet
 
             StartButton = new Button
             {
-                Content = new TextBlock {Font = spriteFont, Text = "Touch to Start", TextColor = Color.Black, 
+                Content = new TextBlock {Font = Font, Text = "Touch to Start", TextColor = Color.Black, 
                     HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center},
                 NotPressedImage = buttonImage,
                 PressedImage = buttonImage,
@@ -85,14 +84,14 @@ namespace JumpyJet
         {
             scoreTextBlock = new TextBlock
             {
-                Font = spriteFont, TextColor = Color.Black, VerticalAlignment = VerticalAlignment.Center
+                Font = Font, TextColor = Color.Black, VerticalAlignment = VerticalAlignment.Center
             };
             scoreTextBlock.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
             scoreTextBlock.SetCanvasRelativePosition(new Vector3(0.2f, 0.05f, 0f));
 
             var scoreBoard = new ContentDecorator
             {
-                BackgroundImage = uiImages["score_bg"],
+                BackgroundImage = UIImages["score_bg"],
                 Content = scoreTextBlock,
                 Padding = new Thickness(60, 31, 25, 35),
                 MinimumWidth = 190f // Set the minimum width of score button so that it wont modify when the content (text) changes, and less than minimum.
@@ -106,7 +105,7 @@ namespace JumpyJet
         {
             MenuButton = new Button
             {
-                Content = new TextBlock { Font = spriteFont, Text = "Menu", TextColor = Color.Black, 
+                Content = new TextBlock { Font = Font, Text = "Menu", TextColor = Color.Black, 
                     HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center},
                 PressedImage = buttonImage,
                 NotPressedImage = buttonImage,
@@ -120,7 +119,7 @@ namespace JumpyJet
 
             RetryButton = new Button
             {
-                Content = new TextBlock { Font = spriteFont, Text = "Retry", TextColor = Color.Black, 
+                Content = new TextBlock { Font = Font, Text = "Retry", TextColor = Color.Black, 
                     HorizontalAlignment = HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center},
                 Padding = new Thickness(74, 30, 25, 30),
                 MinimumWidth = 190f,

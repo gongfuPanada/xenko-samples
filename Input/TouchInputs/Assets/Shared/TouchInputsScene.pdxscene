@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 8da52091-f3ce-45a3-8f1b-01fbf1a19f42
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -26,7 +26,9 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !TouchInputs.TouchInputsScript,TouchInputs.Game
+                                Font: 25d9be11-4750-4d09-b58f-0628bf0c74e1:Font
                                 Id: 38a398b7-285d-4063-a950-7d21a21321cf
+                                RoundTexture: f21cc317-81d3-41f1-b524-d12766abf594:round
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -55,6 +57,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

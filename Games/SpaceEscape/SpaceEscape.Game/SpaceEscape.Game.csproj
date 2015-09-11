@@ -72,6 +72,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Background\BackgroundInfo.cs" />
+    <Compile Include="Background\LevelGenerator.cs" />
+    <Compile Include="Background\ObstacleInfo.cs" />
     <Compile Include="Effects\FogEffect.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,7 +107,6 @@
     <Compile Include="GameScript.cs" />
     <Compile Include="Background\BackgroundScript.cs" />
     <Compile Include="Background\Section.cs" />
-    <Compile Include="Background\SectionsFactory.cs" />
     <Compile Include="UIScript.cs" />
   </ItemGroup>
   <ItemGroup>

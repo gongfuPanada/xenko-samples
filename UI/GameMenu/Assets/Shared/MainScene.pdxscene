@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 9294c606-6173-4215-a8dc-0d5043d68333
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -16,6 +16,9 @@ Hierarchy:
                         Scripts:
                             - !GameMenu.MainScript,GameMenu.Game
                                 Id: 22b8232d-2333-4478-8565-0a003fa813fe
+                                JapaneseFont: cb333065-ba29-41a4-b07c-eeb5d39b5cc6:JapaneseFont
+                                MainSceneImages: dba38b73-6f43-40ba-a4da-8e711695c7e8:MainSceneImages
+                                WesternFont: 6a45aa77-17aa-4fde-9acd-9452744e14ca:WesternFont
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -41,6 +44,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

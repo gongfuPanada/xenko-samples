@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 5f4a3789-b182-4b32-9088-acbf9e13edb5
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -98,6 +98,8 @@ Hierarchy:
                                     Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3
                                 RightWave:
                                     Id: c76eafe8-9bb0-4801-b112-6825735d4fff
+                                SoundEffect: 5c8a7de1-f572-41c6-a564-f300f42d7245:SoundEffect
+                                SoundMusic: 8005b476-6375-4984-ae01-4ed70428924e:AmbientMusic
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -114,6 +116,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SimpleAudio.UITextScript,SimpleAudio.Game
+                                Font: 61f4751d-2878-4118-b212-ac554de05399:Font
                                 Id: 5cbe8100-1454-44a8-84bd-7860b2290374
                                 UIText: Tap on the screen!
                     TransformComponent.Key:
@@ -148,6 +151,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

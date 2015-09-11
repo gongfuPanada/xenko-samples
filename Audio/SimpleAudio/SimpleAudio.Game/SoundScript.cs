@@ -23,6 +23,9 @@ namespace SimpleAudio
         /// </summary>
         public Entity RightWave;
 
+        public SoundMusic SoundMusic;
+        public SoundEffect SoundEffect;
+
         [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float originalPositionX;
 
@@ -31,14 +34,11 @@ namespace SimpleAudio
 
         public override async Task Execute()
         {
-            var soundMusic = Asset.Load<SoundMusic>("AmbientMusic");
-            var soundEffect = Asset.Load<SoundEffect>("SoundEffect");
-
             if (!IsLiveReloading)
             {
                 // start ambient music
-                soundMusic.IsLooped = true;
-                soundMusic.Play();
+                SoundMusic.IsLooped = true;
+                SoundMusic.Play();
 
                 fontColor = Color.Transparent;
                 originalPositionX = RightWave.Transform.Position.X;
@@ -56,8 +56,8 @@ namespace SimpleAudio
                     fontColor = Color.White;
 
                     // play the sound effect on each touch on the screen
-                    soundEffect.Stop();
-                    soundEffect.Play();
+                    SoundEffect.Stop();
+                    SoundEffect.Play();
                 }
                 else
                 {

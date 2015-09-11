@@ -20,6 +20,10 @@ namespace GameMenu
             "red_ship", "green_ship", "blue_ship", "blue_ship", "yellow_ship", "yellow_ship", "cyan_ship"
         };
 
+        public SpriteFont WesternFont;
+        public SpriteSheet MainSceneImages;
+        public SpriteFont JapaneseFont;
+
         private readonly List<SpaceShip> shipList = new List<SpaceShip>();
         private int money = 30;
         private int bonus = 30;
@@ -106,8 +110,6 @@ namespace GameMenu
         }
 
         private readonly ImageElement speedStatusStar = new ImageElement();
-        private SpriteFont westernFont;
-        private SpriteSheet mainScreneImages;
 
         private int SpeedStatus
         {
@@ -129,19 +131,17 @@ namespace GameMenu
 
         protected override void LoadScene()
         {
-            mainScreneImages = LoadAsset<SpriteSheet>("MainSceneImages");
-            westernFont = LoadAsset<SpriteFont>("WesternFont");
-            popupWindowImage = mainScreneImages["popup_window"];
+            popupWindowImage = MainSceneImages["popup_window"];
 
             // Preload stars
-            starSprites.Add(mainScreneImages["star0"]);
-            starSprites.Add(mainScreneImages["star1"]);
-            starSprites.Add(mainScreneImages["star2"]);
-            starSprites.Add(mainScreneImages["star3"]);
-            borderStarImages.Add(mainScreneImages["bstar0"]);
-            borderStarImages.Add(mainScreneImages["bstar1"]);
-            borderStarImages.Add(mainScreneImages["bstar2"]);
-            borderStarImages.Add(mainScreneImages["bstar3"]);
+            starSprites.Add(MainSceneImages["star0"]);
+            starSprites.Add(MainSceneImages["star1"]);
+            starSprites.Add(MainSceneImages["star2"]);
+            starSprites.Add(MainSceneImages["star3"]);
+            borderStarImages.Add(MainSceneImages["bstar0"]);
+            borderStarImages.Add(MainSceneImages["bstar1"]);
+            borderStarImages.Add(MainSceneImages["bstar2"]);
+            borderStarImages.Add(MainSceneImages["bstar3"]);
 
             // Create space ships
             var random = new Random();
@@ -162,7 +162,7 @@ namespace GameMenu
             CreateShipSelectionPopup();
 
             // Create the background
-            var background = new ImageElement { Source = mainScreneImages["background_uiimage"], StretchType = StretchType.Fill };
+            var background = new ImageElement { Source = MainSceneImages["background_uiimage"], StretchType = StretchType.Fill };
             background.SetPanelZIndex(-1);
 
             // Overlay pop-ups and the main screen
@@ -202,7 +202,7 @@ namespace GameMenu
             // Create "Please select your SpaceShip" text
             var pleaseSelectText = new TextBlock
             {
-                Font = westernFont,
+                Font = WesternFont,
                 TextSize = 48,
                 TextColor = Color.White,
                 Text = "Please select your ship",
@@ -238,7 +238,7 @@ namespace GameMenu
                 ScrollBarColor = Color.Orange
             };
 
-            var scrollViewerBackgroundImage = mainScreneImages["scroll_background"];
+            var scrollViewerBackgroundImage = MainSceneImages["scroll_background"];
             var scrollViewerDecorator = new ContentDecorator { BackgroundImage = scrollViewerBackgroundImage, Content = contentScrollView, };
             scrollViewerDecorator.SetGridRow(2);
 
@@ -298,7 +298,7 @@ namespace GameMenu
             starGrid.SetGridColumn(2);
 
             // Ship image
-            var shipSprite = mainScreneImages[spaceShip.Name];
+            var shipSprite = MainSceneImages[spaceShip.Name];
             var shipImageElement = new ImageElement { Source = shipSprite };
             shipImageElement.SetGridColumn(4);
 
@@ -317,7 +317,7 @@ namespace GameMenu
             shipContent.Children.Add(shipImageElement);
 
             //
-            var shipSelectFrameSprite = mainScreneImages["weapon_select_frame"];
+            var shipSelectFrameSprite = MainSceneImages["weapon_select_frame"];
 
             var shipButton = new Button
             {
@@ -350,7 +350,7 @@ namespace GameMenu
 
             if (spaceShip.IsLocked)
             {
-                var lockIconImage = mainScreneImages["lock_icon"];
+                var lockIconImage = MainSceneImages["lock_icon"];
                 var lockIconElement = new ImageElement { Source = lockIconImage, StretchType = StretchType.Fill, };
                 lockIconElement.SetPanelZIndex(1);
                 buttonGrid.Children.Add(lockIconElement);
@@ -364,7 +364,7 @@ namespace GameMenu
             var textBlock = new TextBlock
             {
                 TextSize = 19,
-                Font = westernFont,
+                Font = WesternFont,
                 Text = statusName,
                 TextColor = Color.Black,
                 HorizontalAlignment = HorizontalAlignment.Left,
@@ -388,7 +388,7 @@ namespace GameMenu
             // Create welcome text
             var welcomeText = new TextBlock
             {
-                Font = westernFont,
+                Font = WesternFont,
                 TextSize = 42,
                 TextColor = Color.White,
                 Text = "Welcome to paradox UI sample.\n" + "Please name your character",
@@ -401,15 +401,15 @@ namespace GameMenu
             // Create Edit text
             var nameEditText = new EditText(Services)
             {
-                Font = westernFont,
+                Font = WesternFont,
                 TextSize = 32,
                 TextColor = Color.White,
                 Text = DefaultName,
                 MaxLength = 15,
                 TextAlignment = TextAlignment.Center,
-                ActiveImage = mainScreneImages["tex_edit_activated_background"],
-                InactiveImage = mainScreneImages["tex_edit_inactivated_background"],
-                MouseOverImage = mainScreneImages["tex_edit_inactivated_background"],
+                ActiveImage = MainSceneImages["tex_edit_activated_background"],
+                InactiveImage = MainSceneImages["tex_edit_inactivated_background"],
+                MouseOverImage = MainSceneImages["tex_edit_inactivated_background"],
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 MinimumWidth = 340,
@@ -488,8 +488,8 @@ namespace GameMenu
         private UIElement CreateMainScreneTopBar()
         {
             // Create Life bar
-            lifeBarGaugeImage = mainScreneImages["life_bar"];
-            var lifeBarCoverImage = mainScreneImages["character_frame"];
+            lifeBarGaugeImage = MainSceneImages["life_bar"];
+            var lifeBarCoverImage = MainSceneImages["character_frame"];
             gaugeBarRegion = lifeBarGaugeImage.Region;
 
             var lifebarGauge = new ImageElement
@@ -527,7 +527,7 @@ namespace GameMenu
             {
                 Text = CreateLifeCountText(),
                 TextColor = Color.Gold,
-                Font = westernFont,
+                Font = WesternFont,
                 TextSize = 32,
                 HorizontalAlignment = HorizontalAlignment.Left
             };
@@ -539,7 +539,7 @@ namespace GameMenu
             // Bonus items
             var bonusIcon = new ImageElement
             {
-                Source = mainScreneImages["gold_icon"],
+                Source = MainSceneImages["gold_icon"],
                 Name = "bonus Icon",
                 VerticalAlignment = VerticalAlignment.Center
             };
@@ -548,7 +548,7 @@ namespace GameMenu
                 Text = CreateBonusCountText(),
                 TextColor = Color.White,
                 TextSize = 27,
-                Font = westernFont,
+                Font = WesternFont,
                 VerticalAlignment = VerticalAlignment.Center,
                 Margin = new Thickness(10, 0, 0, 0)
             };
@@ -556,7 +556,7 @@ namespace GameMenu
             // Money 
             var moneyIcon = new ImageElement
             {
-                Source = mainScreneImages["money_icon"],
+                Source = MainSceneImages["money_icon"],
                 Name = "money Icon",
                 Margin = new Thickness(20, 0, 0, 0),
                 VerticalAlignment = VerticalAlignment.Center
@@ -566,7 +566,7 @@ namespace GameMenu
                 Text = CreateMoneyCountText(),
                 TextColor = Color.White,
                 TextSize = 27,
-                Font = westernFont,
+                Font = WesternFont,
                 VerticalAlignment = VerticalAlignment.Center,
                 Margin = new Thickness(10, 0, 0, 0)
             };
@@ -603,7 +603,7 @@ namespace GameMenu
 
         private Button CreateTextButton(string text)
         {
-            var buttonImage = mainScreneImages["button0"];
+            var buttonImage = MainSceneImages["button0"];
 
             return new Button
             {
@@ -612,7 +612,7 @@ namespace GameMenu
                 MouseOverImage = buttonImage,
                 Content = new TextBlock
                 {
-                    Font = westernFont,
+                    Font = WesternFont,
                     TextColor = Color.White,
                     Text = text,
                 },
@@ -628,7 +628,7 @@ namespace GameMenu
             // Create Name label
             nameTextBlock = new TextBlock
             {
-                Font = westernFont,
+                Font = WesternFont,
                 TextSize = 52,
                 TextColor = Color.LightGreen,
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -637,7 +637,7 @@ namespace GameMenu
             };
             var nameLabel = new ContentDecorator
             {
-                BackgroundImage = mainScreneImages["tex_edit_inactivated_background"],
+                BackgroundImage = MainSceneImages["tex_edit_inactivated_background"],
                 Content = nameTextBlock,
                 Padding = new Thickness(20, 15, 20, 20),
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -649,7 +649,7 @@ namespace GameMenu
             var characterImage = new ImageElement
             {
                 Name = "HeroImage",
-                Source = mainScreneImages["character"],
+                Source = MainSceneImages["character"],
                 HorizontalAlignment = HorizontalAlignment.Center,
             };
             characterImage.SetGridRow(2);
@@ -657,11 +657,11 @@ namespace GameMenu
             // Create Explanation TextBlock
             var explanationLabel = new ContentDecorator
             {
-                BackgroundImage = mainScreneImages["description_frame"],
+                BackgroundImage = MainSceneImages["description_frame"],
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Content = new TextBlock
                 {
-                    Font = LoadAsset<SpriteFont>("JapaneseFont"),
+                    Font = JapaneseFont,
                     TextSize = 34,
                     TextColor = Color.White,
                     Text = "Pictogram-based alphabets are easily supported.\n日本語も簡単に入れることが出来ます。",
@@ -717,7 +717,7 @@ namespace GameMenu
             var item = new ContentDecorator
             {
                 Content = content,
-                BackgroundImage = mainScreneImages[imageName],
+                BackgroundImage = MainSceneImages[imageName],
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             item.SetGridRow(rowIndex);
@@ -743,7 +743,7 @@ namespace GameMenu
             statusPanel.SetGridColumn(1);
 
             // SpaceShip Button
-            currentShipImage = new ImageElement { Source = mainScreneImages[shipList[activeShipIndex].Name], };
+            currentShipImage = new ImageElement { Source = MainSceneImages[shipList[activeShipIndex].Name], };
             currentShipImage.SetGridRow(1);
 
             var shipImageSpacerGrid = new Grid { HorizontalAlignment = HorizontalAlignment.Center };
@@ -754,7 +754,7 @@ namespace GameMenu
             shipImageSpacerGrid.ColumnDefinitions.Add(new StripDefinition());
             shipImageSpacerGrid.LayerDefinitions.Add(new StripDefinition());
 
-            var shipButtonDesign = mainScreneImages["display_element"];
+            var shipButtonDesign = MainSceneImages["display_element"];
             var currentShipButton = new Button
             {
                 NotPressedImage = shipButtonDesign,
@@ -815,14 +815,14 @@ namespace GameMenu
         {
             var button = new Button
             {
-                NotPressedImage = mainScreneImages["small_display_element"],
-                MouseOverImage = mainScreneImages["small_display_element"],
-                PressedImage = mainScreneImages["small_display_element_pressed"],
+                NotPressedImage = MainSceneImages["small_display_element"],
+                MouseOverImage = MainSceneImages["small_display_element"],
+                PressedImage = MainSceneImages["small_display_element_pressed"],
                 MinimumWidth = 80,
                 Name = text,
                 Content = new TextBlock
                 {
-                    Font = westernFont,
+                    Font = WesternFont,
                     TextColor = Color.Black,
                     Text = text,
                     TextSize = 54,

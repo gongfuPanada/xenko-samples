@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c90e49d7-b3d8-4b19-b771-71cf4460a83b
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -15,6 +15,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SimpleDynamicTexture.UIScript,SimpleDynamicTexture.Game
+                                Font: 742bb234-8f43-4702-b9bb-396b663b4a2c:Font
                                 Id: 1d983363-de80-406c-8058-fa5c0bed6ce0
                     UIComponent.Key:
                         VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
@@ -85,6 +86,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

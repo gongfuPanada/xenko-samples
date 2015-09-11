@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 941a9765-9ce2-4a8e-bb1b-4dfc8ea1d541
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -14,7 +14,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.2
                     TransformComponent.Key:
@@ -45,7 +45,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -73,11 +73,16 @@ Hierarchy:
                                     Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
                                 DirectionalLight1:
                                     Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
+                                Font: e9497ed3-30e1-4692-9a33-b737ff5dea2f:Font
+                                GrassTexture: 22c955d4-cd3f-4461-bb81-2260fbb58a12:grass
                                 Id: 125e4907-364c-4f1e-a58b-ff87aff8a876
+                                MountainTexture: bf4dc32f-c97a-4bbe-97e7-0df231bc2a62:mountain
                                 TerrainEntity:
                                     Id: da79f57e-8d85-4ad1-8483-d2c92b00daac
+                                TerrainMaterial: 982ebcc3-acca-4232-acb5-cc7fa793af0d:TerrainMaterial
                                 UIEntity:
                                     Id: f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
+                                WaterTexture: 091fda79-9023-4ef4-a55c-8bb3f7718e27:water
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -99,7 +104,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -176,6 +181,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 100.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 86fed268-baa8-4929-9eba-4d14cf3a0e68
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -21,6 +21,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !Raycasting.GuiScript,Raycasting.Game
+                                Font: null
                                 Id: c780a5dd-7fbf-44b0-99b7-8a048d3b2557
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -52,10 +53,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
@@ -76,9 +79,10 @@ Hierarchy:
                 Components:
                     PhysicsComponent.Key:
                         Elements:
-                            - !StaticRigidbodyElement
+                            - !StaticColliderElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
+                                ProcessCollisions: true
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1a7f15af-ac01-4464-adfe-7689bd50966e:ground_cs
@@ -99,10 +103,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
@@ -146,10 +152,12 @@ Hierarchy:
                             - null
                     PhysicsComponent.Key:
                         Elements:
-                            - !DynamicRigidbodyElement
+                            - !RigidbodyElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
-                                LinkedBoneName: null
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
@@ -170,7 +178,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.7
                     TransformComponent.Key:
@@ -205,6 +213,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

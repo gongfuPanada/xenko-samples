@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 365136b9-adbe-4c9a-8eeb-563894b4bd08
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -27,6 +27,7 @@ Hierarchy:
                         Scripts:
                             - !CustomEffect.EffectScript,CustomEffect.Game
                                 Id: 274a57bf-8017-4ffb-8b3d-04b2ba7cd9bb
+                                Logo: cbf696d1-ec12-4cb6-9518-b4a9b51dfaf6:LogoParadox
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -55,6 +56,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

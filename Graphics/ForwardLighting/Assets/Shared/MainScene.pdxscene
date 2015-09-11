@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 39ecd5b5-134a-4651-9ebe-118605b09d03
-SerializedVersion: 15
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -43,7 +43,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -102,6 +102,7 @@ Hierarchy:
                                 DirectionalLight2:
                                     Entity: {Id: 129299d6-35ae-48b3-a51a-e8cf44493c2c}
                                     Component: LightComponent.Key
+                                Font: a7b3ff14-423f-4466-b27e-871d0d7ac7da:Font
                                 Id: b131d117-2569-46b0-b469-fd883dc837b8
                                 PointLight:
                                     Entity: {Id: 92384700-0ee6-42e3-a038-e4ed7a11b0ab}
@@ -122,7 +123,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightPoint
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Radius: 6.0
                             Shadow:
@@ -142,7 +143,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -178,7 +179,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightSpot
-                            Color: !ColorRgbProvider
+                            Color: !LightColorRgb
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Range: 9.0
                             AngleOuter: 40.0
@@ -246,6 +247,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

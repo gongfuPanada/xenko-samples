@@ -9,7 +9,8 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Paradox
-            Version: 1.3.0-alpha01
+            Version: 1.3.0-alpha02
+            RootAssets: []
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -39,3 +40,5 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
+RootAssets:
+    - 9294c606-6173-4215-a8dc-0d5043d68333:MainScene

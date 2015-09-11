@@ -15,6 +15,8 @@ namespace JumpyJet
         private const int GapBetweenPipe = 400;
         private const int StartPipePosition = 400;
 
+        public SpriteSheet Sprites;
+
         private readonly List<PipeSet> pipeSetList = new List<PipeSet>();
 
         /// <summary>
@@ -29,7 +31,7 @@ namespace JumpyJet
             // Load assets TODO: replace this by prefab when available.
             var pipeEntity = new Entity("pipe") { new SpriteComponent
             {
-                SpriteProvider = new SpriteFromSheet { Sheet = Asset.Load<SpriteSheet>("Sprites") },
+                SpriteProvider = new SpriteFromSheet { Sheet = Sprites },
                 CurrentFrame = 2,
                 IgnoreDepth = true
             } };
