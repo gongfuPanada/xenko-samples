@@ -3,20 +3,55 @@ Id: 46859e92-96ad-4466-a0ed-a16f85780b32
 SerializedVersion: 1
 Tags: []
 Attributes:
-    Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeShaderClassColor
-            MixinReference: ComputeColorScrolling
+    Displacement: !MaterialDisplacementMapFeature
+        DisplacementMap: !ComputeShaderClassScalar
+            MixinReference: ComputeColorWave
             Generics:
-                Speed: !ComputeColorParameterFloat2
-                    Value: {X: 0.1, Y: 0.1}
-            CompositionNodes:
-                baseColor: !ComputeTextureColor
-                    Texture: 7b9eb68b-ff60-42c5-be5a-bf760bec2f5c:texture
-                    FallbackValue:
-                        Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    Scale: {X: 1.0, Y: 1.0}
-                    Offset: {X: 0.0, Y: 0.0}
+                Frequency: !ComputeColorParameterFloat
+                    Value: 5.0
+                Amplitude: !ComputeColorParameterFloat
+                    Value: 0.01
+                Speed: !ComputeColorParameterFloat
+                    Value: -0.03
+            CompositionNodes: {}
+        Intensity: !ComputeFloat
+            Value: 1.0
+        ScaleAndBias: false
+        Stage: Vertex
+    Surface: !MaterialNormalMapFeature
+        NormalMap: !ComputeShaderClassColor
+            MixinReference: ComputeColorWaveNormal
+            Generics:
+                Frequency: !ComputeColorParameterFloat
+                    Value: 5.0
+                Amplitude: !ComputeColorParameterFloat
+                    Value: 0.1
+                Speed: !ComputeColorParameterFloat
+                    Value: -0.03
+            CompositionNodes: {}
+    MicroSurface: !MaterialGlossinessMapFeature
+        GlossinessMap: !ComputeFloat
+            Value: 0.735426
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeTextureColor
+            Texture: 73a678b3-1b69-437f-a447-29d9b473864c:water
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    Specular: !MaterialSpecularMapFeature
+        SpecularMap: !ComputeTextureColor
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+        Intensity: !ComputeFloat
+            Value: 0.067265
+    SpecularModel: !MaterialSpecularMicrofacetModelFeature
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []

@@ -2,7 +2,11 @@
 Id: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582
 SerializedVersion: 4
 Tags: []
-Type: !CubeProceduralModel
-    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+Type: !PlaneProceduralModel
+    Size: {X: 1.0, Y: 1.0}
+    Tessellation: {X: 32, Y: 32}
+    UVScales: {X: 1.0, Y: 1.0}
+    Normal: UpY
+    GenerateBackFace: false
     MaterialInstance:
         Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

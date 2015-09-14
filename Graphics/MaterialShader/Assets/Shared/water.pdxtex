@@ -1,12 +1,14 @@
 !Texture
-Id: 7b9eb68b-ff60-42c5-be5a-bf760bec2f5c
+Id: 73a678b3-1b69-437f-a447-29d9b473864c
+SerializedVersion: 1
 Tags: []
-Source: ../../RawAssets/texture.jpg
+Source: ../../RawAssets/water.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

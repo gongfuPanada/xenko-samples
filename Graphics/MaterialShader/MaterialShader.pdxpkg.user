@@ -1,10 +1,15 @@
 !SettingsFile
 Settings:
     Package/Scene/ActiveStream: Color Base
+    Package/Scene/Camera/FarClipPlane: 1000.0
+    Package/Scene/Camera/NearClipPlane: 0.1
+    Package/Scene/Camera/OrthographicSize: 10.0
+    Package/Scene/Camera/Projection: Perspective
+    Package/Scene/Camera/VerticalFieldOfView: 45.0
     Package/Scene/CameraPreviewVisible: true
-    Package/Scene/CamPitchYaw: {X: -0.175639242, Y: 0.905239463}
-    Package/Scene/CamPosition: {X: 3.81536222, Y: 1.249446, Z: 3.58163261}
-    Package/Scene/ComponentGizmoSize: 1.5
+    Package/Scene/CamPitchYaw: {X: -0.3439326, Y: 0.347787142}
+    Package/Scene/CamPosition: {X: 0.8599158, Y: 0.9761807, Z: 2.19603586}
+    Package/Scene/ComponentGizmoSize: 0.5
     Package/Scene/FixedSizeGizmos: false
     Package/Scene/GridVisible: true
     Package/Scene/HiddenGizmos:
