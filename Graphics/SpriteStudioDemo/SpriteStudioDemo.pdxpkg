@@ -3,7 +3,7 @@ Id: 48195305-1f56-44a9-be69-7fa0597a50dc
 SerializedVersion: 1
 Tags: []
 Meta:
-    Name: SpriteEntity
+    Name: SpriteStudioDemo
     Version: 1.0.0.0
     Authors: []
     Owners: []
@@ -18,7 +18,7 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Shared
-            -   Path: SpriteEntity.Game/Effects
+            -   Path: SpriteStudioDemo.Game/Effects
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
