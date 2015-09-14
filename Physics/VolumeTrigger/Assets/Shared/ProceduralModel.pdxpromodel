@@ -5,4 +5,4 @@ Tags: []
 Type: !CubeProceduralModel
     Size: {X: 1.0, Y: 1.0, Z: 1.0}
     MaterialInstance:
-        Material: 7a67379b-40e1-4c7b-82a3-52b5e5a36345:Material
+        Material: 7a67379b-40e1-4c7b-82a3-52b5e5a36345:CubeMat

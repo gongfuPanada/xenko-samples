@@ -7,9 +7,17 @@ Hierarchy:
         - f230b77a-bd6f-40d2-9e98-dbba399c378e
         - 4946b032-53e8-4029-b72c-4396af3b286d
         - b0299af4-0f94-47f0-8d94-e87d157024c5
-        - ac49496b-7acd-4932-b129-f4910d826193
         - cfe82ef3-b615-435c-a9b6-15793dca565d
         - 6fbecf2d-872c-440c-b482-07802dcefdbb
+        - 6cb6634d-02fb-4005-b1b5-93655cc96c8f
+        - 6872b105-2611-4f68-9fd9-911a2b44540c
+        - d4b8ee23-dbf6-4006-b1f1-0fff89140908
+        - 36854d9a-097d-4692-975b-da5ab28e02ab
+        - ece9393e-ca16-4534-a822-1209cbde9fa1
+        - 48d3dd4c-15e6-4eca-89eb-b2384adf4aac
+        - 77929a6c-9e28-4ac7-baba-3a78fd0caf11
+        - a70d3a17-db6f-45d3-b8db-19646807cb2b
+        - 74a297f1-8303-498c-bbf1-d15fee087e11
     Entities:
         -   Entity:
                 Name: Camera
@@ -17,11 +25,75 @@ Hierarchy:
                     CameraComponent.Key:
                         Projection: Perspective
                     TransformComponent.Key:
-                        Position: {X: -2.91726849E-07, Y: 6.42956066, Z: 1.71420014}
-                        Rotation: {W: 0.8735308, X: -0.486768842, Y: 1.24023583E-08, Z: 6.911128E-09}
+                        Position: {X: -2.91726849E-07, Y: 1.35450363, Z: 2.69693661}
+                        Rotation: {W: 0.989579, X: -0.143991053, Y: 9.130449E-09, Z: 1.08727676E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
                 Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (2) (2) (2)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: 5b18ea94-e6b7-4053-b462-207bb673e10a
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 733d9c31-45ed-48fc-a1c7-7fdb09f63f5f
+                    TransformComponent.Key:
+                        Position: {X: 0.800165355, Y: 1.57532632, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 36854d9a-097d-4692-975b-da5ab28e02ab
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (2) (2) (2) (3)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: ea512d16-dca6-43c1-82b5-6bc76be0a547
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 19703ce7-30ad-482c-9397-b2b4b3400d7e
+                    TransformComponent.Key:
+                        Position: {X: 0.800165355, Y: 3.67496681, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 48d3dd4c-15e6-4eca-89eb-b2384adf4aac
             Design:
                 Folder: null
         -   Entity:
@@ -46,13 +118,77 @@ Hierarchy:
                             - !VolumeTrigger.Player,VolumeTrigger.Game
                                 Id: 29b4149c-5839-45a4-9ee8-2d2581c5555b
                     TransformComponent.Key:
-                        Position: {X: -1.4066571, Y: 1.463115, Z: 0.295679569}
+                        Position: {X: 0.0, Y: 1.463115, Z: 0.295679569}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.7841593, Y: 1.7841593, Z: 1.7841593}
                         Children:
                             -   Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
                                 Component: TransformComponent.Key
                 Id: 4946b032-53e8-4029-b72c-4396af3b286d
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (2)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: e02089f6-57ae-4b50-aee0-7872be604c11
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 4907b03b-4ed8-452b-aa81-9c78c3aa78ae
+                    TransformComponent.Key:
+                        Position: {X: 0.1581409, Y: 0.509163, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6872b105-2611-4f68-9fd9-911a2b44540c
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 182c31c2-4f40-4e83-862b-ad3ea6dcd4d4
+                    TransformComponent.Key:
+                        Position: {X: -1.0, Y: 0.509163, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6cb6634d-02fb-4005-b1b5-93655cc96c8f
             Design:
                 Folder: null
         -   Entity:
@@ -74,8 +210,14 @@ Hierarchy:
                                     - !SphereColliderShapeDesc
                                         Is2D: false
                                         LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: b65bc8a4-795e-4679-ac12-5062f07f8507
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: eefd835d-79f6-4a6e-91c0-8f70c5168d9f
                     TransformComponent.Key:
-                        Position: {X: -0.9338299, Y: 3.848303, Z: -8.915528}
+                        Position: {X: 0.0, Y: 8.0, Z: -11.0}
                         Rotation: {W: 0.918539345, X: 0.0, Y: 0.0, Z: 0.3953296}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -83,7 +225,7 @@ Hierarchy:
             Design:
                 Folder: null
         -   Entity:
-                Name: TestBox
+                Name: ProceduralModel (2) (2) (2) (3)
                 Components:
                     ModelComponent.Key:
                         Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
@@ -92,23 +234,90 @@ Hierarchy:
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
-                                CollisionGroup: SensorTrigger
-                                CanCollideWith: DefaultFilter
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
                                 ProcessCollisions: true
                                 NodeName: null
-                                IsKinematic: false
+                                IsKinematic: true
                                 ColliderShapes:
-                                    - !BoxColliderShapeDesc
-                                        Is2D: false
-                                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                        LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: bf2f15e1-0a12-42b5-b444-1b66b886f401
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 0c46a417-eedd-4d1b-a452-b7657cb1e38e
                     TransformComponent.Key:
-                        Position: {X: -2.760604, Y: 3.59645224, Z: -7.90128946}
+                        Position: {X: 1.26292193, Y: 2.60880327, Z: -11.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: ac49496b-7acd-4932-b129-f4910d826193
+                Id: 74a297f1-8303-498c-bbf1-d15fee087e11
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (2) (2) (2) (2) (2)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: ad208ba4-9018-4c92-920a-9bf09caf91d3
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 846c2db0-f76c-49f6-bb70-94bfb9283234
+                    TransformComponent.Key:
+                        Position: {X: -0.580595553, Y: 3.67496681, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 77929a6c-9e28-4ac7-baba-3a78fd0caf11
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (3)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: 5fde7579-87f1-4d8a-b68b-c6a25dc0fd35
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: fc7ee02c-366b-4926-a550-3c157102f95b
+                    TransformComponent.Key:
+                        Position: {X: -1.0, Y: 2.60880327, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: a70d3a17-db6f-45d3-b8db-19646807cb2b
             Design:
                 Folder: null
         -   Entity:
@@ -125,7 +334,6 @@ Hierarchy:
                                 DepthRange: {}
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 BiasParameters: {}
-                        Intensity: 4.0
                     TransformComponent.Key:
                         Position: {X: -0.5946913, Y: 1.40200758, Z: -2.42663574}
                         Rotation: {W: 0.742511451, X: -0.569751441, Y: 0.1918805, Z: -0.2953674}
@@ -140,16 +348,11 @@ Hierarchy:
                     ModelComponent.Key:
                         Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
-                            - f84ecda4-e4cc-4ad2-89ec-12ef6401b7d0:Material (2)
+                            - cf9193b2-993a-4329-b6de-983ae136628a:TriggerMat
                     ScriptComponent.Key:
                         Scripts:
                             - !VolumeTrigger.Trigger,VolumeTrigger.Game
                                 Id: cee46d5d-507b-4060-9f85-b53ba7134ac7
-                                StartLocation: {X: -1.449, Y: 3.304, Z: -8.916}
-                                TestBox:
-                                    Id: ac49496b-7acd-4932-b129-f4910d826193
-                                TriggeredEntity:
-                                    Id: 6fbecf2d-872c-440c-b482-07802dcefdbb
                     PhysicsComponent.Key:
                         Elements:
                             - !TriggerElement
@@ -163,11 +366,75 @@ Hierarchy:
                                         LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                         LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                     TransformComponent.Key:
-                        Position: {X: -1.5028646, Y: 1.92906213, Z: -8.50859451}
+                        Position: {X: 0.0, Y: 0.7304367, Z: -6.187798}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 7.190572, Y: 0.434939742, Z: 4.181841}
+                        Scale: {X: 7.190572, Y: 2.02149439, Z: 4.181841}
                         Children: []
                 Id: cfe82ef3-b615-435c-a9b6-15793dca565d
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (2) (2)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: a2dce602-6c33-4a2f-9838-95f1f979420d
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 695b7ead-31ef-4ada-a4b6-b679bd832d56
+                    TransformComponent.Key:
+                        Position: {X: 1.4899472, Y: 0.509163, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: d4b8ee23-dbf6-4006-b1f1-0fff89140908
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ProceduralModel (2) (2) (2) (2) (2)
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
+                                Id: ecad701c-3b92-4496-915e-5c04f9ec03b1
+                            - !VolumeTrigger.NoSleep,VolumeTrigger.Game
+                                Id: 49dfe1ba-3d6c-4786-bf9c-b2600812b873
+                    TransformComponent.Key:
+                        Position: {X: -0.580595553, Y: 1.57532632, Z: -11.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: ece9393e-ca16-4534-a822-1209cbde9fa1
             Design:
                 Folder: null
         -   Entity:

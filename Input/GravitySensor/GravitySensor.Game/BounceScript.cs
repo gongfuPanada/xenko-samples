@@ -12,10 +12,7 @@ namespace GravitySensor
             var component = Entity.Get<PhysicsComponent>();
             foreach (var physicsElement in component.Elements)
             {
-                if (physicsElement.RigidBody != null)
-                {
-                    physicsElement.RigidBody.Restitution = 0.9f;
-                }
+                physicsElement.Collider.Restitution = 0.9f;
             }
         }
     }

@@ -1,15 +1,15 @@
 !MaterialAsset
-Id: f84ecda4-e4cc-4ad2-89ec-12ef6401b7d0
+Id: cf9193b2-993a-4329-b6de-983ae136628a
 SerializedVersion: 1
 Tags: []
 Attributes:
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeColor
-            Value: {R: 0.9764706, G: 0.8980392, B: 0.698039234, A: 0.5019608}
+            Value: {R: 0.98, G: 0.9, B: 0.7, A: 1.0}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Transparency: !MaterialTransparencyBlendFeature
         Alpha: !ComputeFloat
-            Value: 1.0
+            Value: 0.23
         Tint: !ComputeColor
             Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
     Overrides:

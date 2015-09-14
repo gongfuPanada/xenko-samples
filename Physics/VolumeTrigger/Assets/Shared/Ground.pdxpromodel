@@ -9,4 +9,4 @@ Type: !PlaneProceduralModel
     Normal: UpY
     GenerateBackFace: false
     MaterialInstance:
-        Material: dc68ab17-3d45-4d34-8cf5-b387e422d352:Red-ish
+        Material: dc68ab17-3d45-4d34-8cf5-b387e422d352:GroundMat
