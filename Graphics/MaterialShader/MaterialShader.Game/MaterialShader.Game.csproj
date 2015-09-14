@@ -73,10 +73,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <None Include="Effects\ComputeColorScrolling.pdxsl">
-      <Generator>ParadoxShaderKeyGenerator</Generator>
-      <LastGenOutput>ComputeColorScrolling.cs</LastGenOutput>
-    </None>
     <None Include="Effects\ComputeColorWave.pdxsl">
       <Generator>ParadoxShaderKeyGenerator</Generator>
       <LastGenOutput>ComputeColorWave.cs</LastGenOutput>
@@ -87,12 +83,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effects\ComputeColorScrolling.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>ComputeColorScrolling.pdxsl</DependentUpon>
-    </Compile>
     <Compile Include="Effects\ComputeColorWave.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
