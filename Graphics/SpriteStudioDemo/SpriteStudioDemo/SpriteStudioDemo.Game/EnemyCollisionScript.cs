@@ -12,7 +12,7 @@ namespace SpriteStudioDemo
         public override async Task Execute()
         {
             var rigidbodyElement = Entity.Get<PhysicsComponent>()[0];
-            var enemyScript = (EnemyScript)Entity.Get<ScriptComponent>().Scripts.Where(x => x.Name == "EnemyScript").First();
+            var enemyScript = (EnemyScript)Entity.Get<ScriptComponent>().Scripts.First(x => x.Name == "EnemyScript");
 
             while (Game.IsRunning)
             {

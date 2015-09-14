@@ -1,3 +1,4 @@
+using System;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
@@ -91,10 +92,6 @@ namespace SpriteStudioDemo
                 if (inputState == InputState.None)
                     inputState = GetPointerInputState();
 
-                // Reset the shoot delay, if state changes
-                if (inputState != InputState.Shoot && CurrentAgentAnimation == AgentAnimation.Shoot)
-                    shootDelayCounter = 0;
-
                 if (inputState == InputState.RunLeft || inputState == InputState.RunRight)
                 {
                     // Update Agent's position
@@ -122,15 +119,6 @@ namespace SpriteStudioDemo
                 }
                 else if (inputState == InputState.Shoot)
                 {
-                    // Update shootDelayCounter, and check whether it is time to create a new bullet
-                    shootDelayCounter -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
-
-                    if (shootDelayCounter > 0)
-                        continue;
-
-                    // Reset shoot delay
-                    shootDelayCounter = AgentShootDelay;
-
                     var rb = new RigidbodyElement { CanCollideWith = CollisionFilterGroupFlags.CustomFilter1, CollisionGroup = CollisionFilterGroups.DefaultFilter };
                     rb.ColliderShapes.Add(new ColliderShapeAssetDesc { Shape = bulletCS });
 
@@ -158,6 +146,9 @@ namespace SpriteStudioDemo
                     {
                         playingAnimation = animComponent.Play("Attack");
                     }
+
+                    await playingAnimation.Ended();
+                    playingAnimation = null;
                 }
                 else
                 {

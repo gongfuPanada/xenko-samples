@@ -3,11 +3,12 @@ Id: db8f665a-8233-4a75-944e-e0d24b5fd294
 Tags: []
 Source: ../../RawAssets/character_template_3head_attack3.ssax
 SourceHash: 41e8c7c9830aa530249e0493eafab8cf
-RepeatMode: LoopInfinite
+RepeatMode: PlayOnce
 ~Base:
     Location: --import--
     Asset: !SpriteStudioAnimationAsset
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
         RepeatMode: LoopInfinite
