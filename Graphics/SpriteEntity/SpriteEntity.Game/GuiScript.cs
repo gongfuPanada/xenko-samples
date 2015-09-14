@@ -12,12 +12,13 @@ namespace SpriteEntity
     /// </summary>
     public class GuiScript : StartupScript
     {
+        public SpriteFont Font;
+
         public override void Start()
         {
-            var font = Asset.Load<SpriteFont>("Font");
             var textBlock = new TextBlock
             {
-                Font = font,
+                Font = Font,
                 TextSize = 18,
                 TextColor = Color.Gold,
                 Text = "Shoot : Touch in a vertical section where the Agent resides\n" +

@@ -1,0 +1,230 @@
+!SceneAsset
+Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
+SerializedVersion: 18
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 0b04edaf-f330-4ae1-9d93-517d967fbe95
+        - 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
+        - d295a972-b9cf-48e5-a4ff-767eb25cddef
+        - d4867e32-71f8-4d81-a742-2d99ef6e5060
+        - 590ac468-5d53-43d9-81a6-2d43c1c06bc5
+        - cf253c4b-ccf0-4a8a-85e6-0019307e4cac
+        - 2a05c636-e91f-42e6-93ed-69415d19fe2f
+        - 629bf924-6828-46d6-a813-63d56a0f95b9
+    Entities:
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Orthographic
+                        NearClipPlane: 1.0
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 2.0, Z: 2.0}
+                        Rotation: {W: 0.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 4b0f48d8-839e-4c71-8ca5-fc72e88cb68a:Bkg
+                    TransformComponent.Key:
+                        Position: {X: 1.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Enemy02
+                Components:
+                    SpriteStudioComponent.Key:
+                        Sheet: 2774af57-f02b-47f1-891c-4da6641456a6:character_template_2head_wait_sheet
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
+                                Id: 9a7ae650-cecf-4c0f-bd0d-9c840e9dffe2
+                            - !SpriteStudioDemo.EnemyCollisionScript,SpriteStudioDemo.Game
+                                Id: 0d506cac-e36c-4530-a0d9-46e43e55d505
+                    AnimationComponent.Key:
+                        Animations:
+                            Dead: 5e1ca0db-ff04-4796-a549-82ac2d8679bd:character_template_2head_dead_anim
+                            Wait: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259:character_template_2head_wait_anim
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: CustomFilter1
+                                CanCollideWith: DefaultFilter
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
+                    TransformComponent.Key:
+                        Position: {X: 8.0, Y: 8.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: []
+                Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ground
+                Components:
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !StaticColliderElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: CustomFilter1
+                                ProcessCollisions: true
+                                ColliderShapes:
+                                    - !StaticPlaneColliderShapeDesc
+                                        Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                        Offset: 0.0
+                    TransformComponent.Key:
+                        Position: {X: -1.25711727, Y: -1.0, Z: 7.02876854}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 629bf924-6828-46d6-a813-63d56a0f95b9
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Player
+                Components:
+                    SpriteStudioComponent.Key:
+                        Sheet: cccab13c-4f51-4684-a840-9a7539c1ca25:character_template_3head_attack3_sheet
+                    AnimationComponent.Key:
+                        Animations:
+                            Attack: db8f665a-8233-4a75-944e-e0d24b5fd294:character_template_3head_attack3_anim
+                            Run: 591a3ef2-3949-4091-b9dd-7579a4813cc4:character_template_3head_run_anim
+                            Stance: 5c996ac6-8ee4-466f-a53f-4010c0239e5a:character_template_3head_wait_anim
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpriteStudioDemo.PlayerScript,SpriteStudioDemo.Game
+                                Id: 018ca6a8-c34d-4b93-9901-3c685336a2f0
+                    TransformComponent.Key:
+                        Position: {X: -6.616724, Y: -1.06623185, Z: 0.0}
+                        Rotation: {W: -4.371139E-08, X: 0.0, Y: -1.0, Z: 0.0}
+                        Scale: {X: 0.450682253, Y: 0.450682253, Z: 0.450682253}
+                        Children: []
+                Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
+            Design:
+                Folder: null
+        -   Entity:
+                Name: GUI
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpriteStudioDemo.GuiScript,SpriteStudioDemo.Game
+                                Id: c21d3a58-43c4-4b22-99a1-d932a8b9c338
+                    UIComponent.Key:
+                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Enemy00
+                Components:
+                    SpriteStudioComponent.Key:
+                        Sheet: 2774af57-f02b-47f1-891c-4da6641456a6:character_template_2head_wait_sheet
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
+                                Id: 9f65e4cf-6b91-4031-b923-bcaf2c20a868
+                            - !SpriteStudioDemo.EnemyCollisionScript,SpriteStudioDemo.Game
+                                Id: 21c959ad-c789-44b4-948b-1d4021f6aa50
+                    AnimationComponent.Key:
+                        Animations:
+                            Dead: 5e1ca0db-ff04-4796-a549-82ac2d8679bd:character_template_2head_dead_anim
+                            Wait: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259:character_template_2head_wait_anim
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: CustomFilter1
+                                CanCollideWith: DefaultFilter
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
+                    TransformComponent.Key:
+                        Position: {X: -8.0, Y: 8.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: []
+                Id: d295a972-b9cf-48e5-a4ff-767eb25cddef
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Enemy01
+                Components:
+                    SpriteStudioComponent.Key:
+                        Sheet: 2774af57-f02b-47f1-891c-4da6641456a6:character_template_2head_wait_sheet
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
+                                Id: a0969d82-476f-4aaa-82f2-7eff15b86395
+                            - !SpriteStudioDemo.EnemyCollisionScript,SpriteStudioDemo.Game
+                                Id: 707b3fd5-c622-44c5-9141-511dd24417e1
+                    AnimationComponent.Key:
+                        Animations:
+                            Dead: 5e1ca0db-ff04-4796-a549-82ac2d8679bd:character_template_2head_dead_anim
+                            Wait: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259:character_template_2head_wait_anim
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: CustomFilter1
+                                CanCollideWith: DefaultFilter
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 8.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: []
+                Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

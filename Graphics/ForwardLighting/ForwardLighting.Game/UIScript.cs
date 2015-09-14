@@ -28,7 +28,7 @@ namespace ForwardLighting
         /// <summary>
         /// The font used by the UI
         /// </summary>
-        private SpriteFont font;
+        public SpriteFont Font;
 
         /// <summary>
         /// A reference to the first directional light
@@ -53,8 +53,6 @@ namespace ForwardLighting
         public override void Start()
         {
             base.Start();
-
-            font = Asset.Load<SpriteFont>("Font");
 
             // create the light buttons 
             var buttonLightDirect0 = CreateLightButton(DirectionalLight1);
@@ -138,7 +136,7 @@ namespace ForwardLighting
                 Margin = Thickness.UniformRectangle(5),
                 Content = new TextBlock
                 {
-                    Font = font, 
+                    Font = Font, 
                     TextAlignment = TextAlignment.Right,
                     Text = GetButtonTextOnOffLight(component), 
                 },
@@ -160,7 +158,7 @@ namespace ForwardLighting
                 CanBeHitByUser = component.Enabled,
                 Content = new TextBlock
                 {
-                    Font = font,
+                    Font = Font,
                     TextAlignment = TextAlignment.Right,
                     Text = GetButtonTextOnOffShadow(component),
                 },

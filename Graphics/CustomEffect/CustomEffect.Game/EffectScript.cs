@@ -13,15 +13,15 @@ namespace CustomEffect
     {
         private Effect customEffect;
         private PrimitiveQuad quad;
-        private Texture paradoxTexture;
         private SamplerState samplingState;
         private SceneDelegateRenderer renderer;
+
+        public Texture Logo;
 
         public override void Start()
         {
             base.Start();
             
-            paradoxTexture = Asset.Load<Texture>("LogoParadox");
             customEffect = EffectSystem.LoadEffect("Effect").WaitForResult();
             quad = new PrimitiveQuad(GraphicsDevice, customEffect);
 
@@ -56,7 +56,7 @@ namespace CustomEffect
         {
             GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.NonPremultiplied);
             quad.Parameters.Set(EffectKeys.Phase, -3 * (float)Game.UpdateTime.Total.TotalSeconds);
-            quad.Draw(paradoxTexture, samplingState, Color.White);
+            quad.Draw(Logo, samplingState, Color.White);
         }
     }
 }

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 41bc08b1-d7db-4466-8661-663be2db1dbf
-SerializedVersion: 13
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -17,187 +17,223 @@ Hierarchy:
         - 1ef38a02-50b8-486a-a331-12d5ae5f500d
         - d62e02cb-f3fc-43ae-b6aa-07eccae98182
     Entities:
-        -   Name: SphereModel
-            Components:
-                ModelComponent.Key:
-                    Model: bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: eb299280-6731-4070-b2e6-c1a19cc6d12e
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 1066a3c5-dc72-4ca6-b58d-066dd7a658d0
-        -   Name: CubeModel
-            Components:
-                ModelComponent.Key:
-                    Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: f0383bea-d5a8-4c5f-8b29-eee0361fcf9d
-                TransformComponent.Key:
-                    Position: {X: 2.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 1c51f7e5-429e-412a-9e44-c32dbb737e1a
-        -   Name: CapsuleModel
-            Components:
-                ModelComponent.Key:
-                    Model: c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: 18b6ac31-4ea6-457e-80db-0db5835068ee
-                TransformComponent.Key:
-                    Position: {X: 8.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 1ef38a02-50b8-486a-a331-12d5ae5f500d
-        -   Name: Camera
-            Components:
-                CameraComponent.Key:
-                    Projection: Perspective
-                    FarClipPlane: 100.0
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
-                            Id: 59e4e024-706b-4875-8269-136020255fc8
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 1.5, Z: 4.0}
-                    Rotation: {W: 0.9848077, X: -0.173648179, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 359ed8d5-5381-47fc-9448-6c3c724eb457
-        -   Name: TorusModel
-            Components:
-                ModelComponent.Key:
-                    Model: af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: 18d6a3ed-dff5-40a5-abd1-8a0227ca10f3
-                TransformComponent.Key:
-                    Position: {X: -6.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 4e09cad0-435c-4c15-ab32-f97f95fc9ffe
-        -   Name: GeoSphereModel
-            Components:
-                ModelComponent.Key:
-                    Model: 6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: a3c4af4c-a57d-416d-ad4d-ea62c3e29b16
-                TransformComponent.Key:
-                    Position: {X: -2.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 9a2dbd16-9a89-4754-abb6-ec73aa2811f8
-        -   Name: PlaneModel
-            Components:
-                ModelComponent.Key:
-                    Model: 32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: 9ecb0fd8-b028-4646-ae4c-b54299e2d98f
-                TransformComponent.Key:
-                    Position: {X: 4.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 9baef9fd-763c-4414-a47e-d6fd9958b69c
-        -   Name: ConeModel
-            Components:
-                ModelComponent.Key:
-                    Model: 6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: f10ef5af-b6d3-4844-a931-56f7e11c62f2
-                TransformComponent.Key:
-                    Position: {X: 6.0, Y: -0.75, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: bd7fb0b4-dd92-419b-96da-6490444278e2
-        -   Name: TeapotModel
-            Components:
-                ModelComponent.Key:
-                    Model: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: 4b230ebc-3591-4f0e-b6e6-e5486f33ca14
-                TransformComponent.Key:
-                    Position: {X: -8.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: ccbde703-076b-4d86-b3ff-f0a00e49a6a3
-        -   Name: Ambient light
-            Components:
-                LightComponent.Key:
-                    Type: !LightAmbient
-                        Color: !LightColorRgb
-                            Color: {R: 1.0, G: 1.0, B: 1.0}
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 300.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: cec0dc3f-1d45-44b4-bb75-03b03c7b690a
-        -   Name: CylingerModel
-            Components:
-                ModelComponent.Key:
-                    Model: 1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
-                    Materials:
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                            Id: a8068f05-a902-4304-9e18-b6e500fba716
-                TransformComponent.Key:
-                    Position: {X: -4.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: d27b3742-0a08-4807-abe9-c2f2a7f35a35
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: -3.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: d62e02cb-f3fc-43ae-b6aa-07eccae98182
+        -   Entity:
+                Name: SphereModel
+                Components:
+                    ModelComponent.Key:
+                        Model: bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: eb299280-6731-4070-b2e6-c1a19cc6d12e
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 1066a3c5-dc72-4ca6-b58d-066dd7a658d0
+            Design:
+                Folder: null
+        -   Entity:
+                Name: CubeModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: f0383bea-d5a8-4c5f-8b29-eee0361fcf9d
+                    TransformComponent.Key:
+                        Position: {X: 2.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 1c51f7e5-429e-412a-9e44-c32dbb737e1a
+            Design:
+                Folder: null
+        -   Entity:
+                Name: CapsuleModel
+                Components:
+                    ModelComponent.Key:
+                        Model: c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: 18b6ac31-4ea6-457e-80db-0db5835068ee
+                    TransformComponent.Key:
+                        Position: {X: 8.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 1ef38a02-50b8-486a-a331-12d5ae5f500d
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                        FarClipPlane: 100.0
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
+                                Id: 59e4e024-706b-4875-8269-136020255fc8
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 1.5, Z: 4.0}
+                        Rotation: {W: 0.9848077, X: -0.173648179, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 359ed8d5-5381-47fc-9448-6c3c724eb457
+            Design:
+                Folder: null
+        -   Entity:
+                Name: TorusModel
+                Components:
+                    ModelComponent.Key:
+                        Model: af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: 18d6a3ed-dff5-40a5-abd1-8a0227ca10f3
+                    TransformComponent.Key:
+                        Position: {X: -6.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 4e09cad0-435c-4c15-ab32-f97f95fc9ffe
+            Design:
+                Folder: null
+        -   Entity:
+                Name: GeoSphereModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: a3c4af4c-a57d-416d-ad4d-ea62c3e29b16
+                    TransformComponent.Key:
+                        Position: {X: -2.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 9a2dbd16-9a89-4754-abb6-ec73aa2811f8
+            Design:
+                Folder: null
+        -   Entity:
+                Name: PlaneModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: 9ecb0fd8-b028-4646-ae4c-b54299e2d98f
+                    TransformComponent.Key:
+                        Position: {X: 4.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 9baef9fd-763c-4414-a47e-d6fd9958b69c
+            Design:
+                Folder: null
+        -   Entity:
+                Name: ConeModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: f10ef5af-b6d3-4844-a931-56f7e11c62f2
+                    TransformComponent.Key:
+                        Position: {X: 6.0, Y: -0.75, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: bd7fb0b4-dd92-419b-96da-6490444278e2
+            Design:
+                Folder: null
+        -   Entity:
+                Name: TeapotModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: 4b230ebc-3591-4f0e-b6e6-e5486f33ca14
+                    TransformComponent.Key:
+                        Position: {X: -8.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: ccbde703-076b-4d86-b3ff-f0a00e49a6a3
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ambient light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightAmbient
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 300.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: cec0dc3f-1d45-44b4-bb75-03b03c7b690a
+            Design:
+                Folder: null
+        -   Entity:
+                Name: CylingerModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                                Id: a8068f05-a902-4304-9e18-b6e500fba716
+                    TransformComponent.Key:
+                        Position: {X: -4.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: d27b3742-0a08-4807-abe9-c2f2a7f35a35
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -3.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: d62e02cb-f3fc-43ae-b6aa-07eccae98182
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:
@@ -222,6 +258,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

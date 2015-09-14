@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Audio;
 using SiliconStudio.Paradox.Engine;
@@ -22,26 +23,27 @@ namespace SimpleAudio
         /// </summary>
         public Entity RightWave;
 
-        public void Start()
-        {
-            var music = Asset.Load<SoundMusic>("AmbientMusic");
+        public SoundMusic SoundMusic;
+        public SoundEffect SoundEffect;
 
-            // start ambient music
-            if (!IsLiveReloading)
-            {
-                music.IsLooped = true;
-                music.Play();
-            }
-        }
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private float originalPositionX;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private Color fontColor;
 
         public override async Task Execute()
         {
-            Start();
+            if (!IsLiveReloading)
+            {
+                // start ambient music
+                SoundMusic.IsLooped = true;
+                SoundMusic.Play();
 
-            var fontColor = Color.Transparent;
-            var effect = Asset.Load<SoundEffect>("SoundEffect");
-            var originalPositionX = RightWave.Transform.Position.X;
-            
+                fontColor = Color.Transparent;
+                originalPositionX = RightWave.Transform.Position.X;
+            }
+
             while (Game.IsRunning)
             {
                 if (Input.PointerEvents.Any(item => item.State == PointerState.Down)) // New click
@@ -54,8 +56,8 @@ namespace SimpleAudio
                     fontColor = Color.White;
 
                     // play the sound effect on each touch on the screen
-                    effect.Stop();
-                    effect.Play();
+                    SoundEffect.Stop();
+                    SoundEffect.Play();
                 }
                 else
                 {

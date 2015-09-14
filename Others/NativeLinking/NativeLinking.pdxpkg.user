@@ -1,0 +1,18 @@
+!SettingsFile
+Settings:
+    Package/Scene/ActiveStream: Color Base
+    Package/Scene/CameraPreviewVisible: true
+    Package/Scene/CamPitchYaw: {X: -0.09811739, Y: 0.522579849}
+    Package/Scene/CamPosition: {X: 2.946403, Y: 1.02603388, Z: 6.6613965}
+    Package/Scene/ComponentGizmoSize: 1.0
+    Package/Scene/FixedSizeGizmos: false
+    Package/Scene/GridVisible: true
+    Package/Scene/RenderMode: Lighting
+    Package/Scene/RotationSnapActive: false
+    Package/Scene/RotationSnapValue: 22.5
+    Package/Scene/ScaleSnapActive: false
+    Package/Scene/ScaleSnapValue: 1.1
+    Package/Scene/SelectionMaskVisible: true
+    Package/Scene/TransformationGizmoSize: 1.0
+    Package/Scene/TranslationSnapActive: false
+    Package/Scene/TranslationSnapValue: 1.0

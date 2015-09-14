@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 45f5d521-b83c-4608-937d-64f93812fba7
-SerializedVersion: 13
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -12,119 +12,146 @@ Hierarchy:
         - 13bffda7-d5fb-4941-8858-ce0284ec6fa2
         - fffa40f6-69e7-46fb-909a-77b26bddb3a2
     Entities:
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: d46cb653-bbdb-4b7b-9449-37beb6774cfd:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 1.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 13bffda7-d5fb-4941-8858-ce0284ec6fa2
-        -   Name: sphere
-            Components:
-                ModelComponent.Key:
-                    Model: bbff2b2d-985f-4986-9c34-f08cdeff8669:Sphere
-                    Materials:
-                        - null
-                PhysicsComponent.Key:
-                    Elements:
-                        - !DynamicRigidbodyElement
-                            CollisionGroup: 0
-                            CanCollideWith: 0
-                            LinkedBoneName: null
-                            ColliderShapes:
-                                - !ColliderShapeAssetDesc
-                                    Shape: 7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
-                TransformComponent.Key:
-                    Position: {X: -2.0, Y: 0.0, Z: -9.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
-        -   Name: cube
-            Components:
-                ModelComponent.Key:
-                    Model: 140faeee-f1b9-4f29-91a2-14b11ae22718:Cube
-                    Materials:
-                        - null
-                PhysicsComponent.Key:
-                    Elements:
-                        - !DynamicRigidbodyElement
-                            CollisionGroup: 0
-                            CanCollideWith: 0
-                            LinkedBoneName: null
-                            ColliderShapes:
-                                - !ColliderShapeAssetDesc
-                                    Shape: f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
-                TransformComponent.Key:
-                    Position: {X: 2.0, Y: 0.0, Z: -9.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
-        -   Name: Directional light
-            Components:
-                LightComponent.Key:
-                    Type: !LightDirectional
-                        Color: !LightColorRgb
-                            Color: {R: 1.0, G: 1.0, B: 1.0}
-                        Shadow:
-                            DepthRange: {}
-                            PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                            BiasParameters: {}
-                    Intensity: 0.75
-                TransformComponent.Key:
-                    Position: {X: -2.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 0.86, X: -0.42, Y: -0.22, Z: -0.17}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: a47eeb82-2121-4fd6-b28a-8ec906ba83e1
-        -   Name: Camera
-            Components:
-                CameraComponent.Key:
-                    Projection: Perspective
-                    FarClipPlane: 100.0
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: -1.25, Z: 3.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: b7690cff-f2ad-4f33-ae7e-26573f84dd7f
-        -   Name: Ambient light
-            Components:
-                LightComponent.Key:
-                    Type: !LightAmbient
-                        Color: !LightColorRgb
-                            Color: {R: 1.0, G: 1.0, B: 1.0}
-                    Intensity: 0.25
-                TransformComponent.Key:
-                    Position: {X: -1.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: e6289325-fb51-4913-84a6-96f4faa42f40
-        -   Name: Logic
-            Components:
-                UIComponent.Key:
-                    VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
-                PhysicsComponent.Key:
-                    Elements: []
-                ScriptComponent.Key:
-                    Scripts:
-                        - !Constraints.DemoScript,Constraints.Game
-                            Id: 46650e10-9713-4da4-a9e9-b9e50263ec16
-                            cube:
-                                Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
-                            sphere:
-                                Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: fffa40f6-69e7-46fb-909a-77b26bddb3a2
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: d46cb653-bbdb-4b7b-9449-37beb6774cfd:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 1.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 13bffda7-d5fb-4941-8858-ce0284ec6fa2
+            Design:
+                Folder: null
+        -   Entity:
+                Name: sphere
+                Components:
+                    ModelComponent.Key:
+                        Model: bbff2b2d-985f-4986-9c34-f08cdeff8669:Sphere
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: 0
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: 7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
+                    TransformComponent.Key:
+                        Position: {X: -2.0, Y: 0.0, Z: -9.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
+            Design:
+                Folder: null
+        -   Entity:
+                Name: cube
+                Components:
+                    ModelComponent.Key:
+                        Model: 140faeee-f1b9-4f29-91a2-14b11ae22718:Cube
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: 0
+                                CanCollideWith: 0
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
+                                ColliderShapes:
+                                    - !ColliderShapeAssetDesc
+                                        Shape: f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
+                    TransformComponent.Key:
+                        Position: {X: 2.0, Y: 0.0, Z: -9.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.75
+                    TransformComponent.Key:
+                        Position: {X: -2.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 0.86, X: -0.42, Y: -0.22, Z: -0.17}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: a47eeb82-2121-4fd6-b28a-8ec906ba83e1
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                        FarClipPlane: 100.0
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: -1.25, Z: 3.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: b7690cff-f2ad-4f33-ae7e-26573f84dd7f
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ambient light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightAmbient
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                        Intensity: 0.25
+                    TransformComponent.Key:
+                        Position: {X: -1.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: e6289325-fb51-4913-84a6-96f4faa42f40
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Logic
+                Components:
+                    UIComponent.Key:
+                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                    PhysicsComponent.Key:
+                        Elements: []
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !Constraints.DemoScript,Constraints.Game
+                                Font: 62eec53a-f82a-460a-91c3-bf3c6ece95c2:Font
+                                Id: 46650e10-9713-4da4-a9e9-b9e50263ec16
+                                cube:
+                                    Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
+                                sphere:
+                                    Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: fffa40f6-69e7-46fb-909a-77b26bddb3a2
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:
@@ -149,7 +176,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera:
-                FarPlane: 100.0
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

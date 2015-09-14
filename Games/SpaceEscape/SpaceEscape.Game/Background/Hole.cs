@@ -1,3 +1,4 @@
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 
 namespace SpaceEscape.Background
@@ -5,6 +6,7 @@ namespace SpaceEscape.Background
     /// <summary>
     /// This class contains information needed to describe a hole in the background.
     /// </summary>
+    [DataContract("BackgroundElement")]
     public class Hole
     {
         /// <summary>

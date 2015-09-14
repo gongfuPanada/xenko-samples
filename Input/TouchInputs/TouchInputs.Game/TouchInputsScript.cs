@@ -15,10 +15,11 @@ namespace TouchInputs
         private const float TextSubSectionOffsetX = 15;
         private const string KeyboardSessionString = "Keyboard :";
 
-        private SpriteBatch spriteBatch;
-        private SpriteFont spriteFont11;
+        public SpriteFont Font;
+        public Texture RoundTexture;
 
-        private Texture roundTexture;
+        private SpriteBatch spriteBatch;
+
         private Vector2 roundTextureSize;
 
         private readonly Color fontColor = Color.WhiteSmoke;
@@ -69,19 +70,13 @@ namespace TouchInputs
 
         public override void Start()
         {
-            // Load the fonts
-            spriteFont11 = Asset.Load<SpriteFont>("Font");
-
-            // load the round texture 
-            roundTexture = Asset.Load<Texture>("round");
-
             // create the SpriteBatch used to render them
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = new Vector3(virtualResolution, 1000) };
 
             // initialize parameters
-            textHeight = spriteFont11.MeasureString(KeyboardSessionString).Y;
+            textHeight = Font.MeasureString(KeyboardSessionString).Y;
             screenSize = new Vector2(virtualResolution.X, virtualResolution.Y);
-            roundTextureSize = new Vector2(roundTexture.Width, roundTexture.Height);
+            roundTextureSize = new Vector2(RoundTexture.Width, RoundTexture.Height);
 
             // activate the gesture recognitions
             if (!IsLiveReloading) // Live Scripting: do it only on first launch
@@ -108,8 +103,6 @@ namespace TouchInputs
 
             // Unload graphic objects
             spriteBatch.Dispose();
-            Asset.Unload(spriteFont11);
-            Asset.Unload(roundTexture);
         }
 
         public override void Update()
@@ -243,19 +236,19 @@ namespace TouchInputs
             spriteBatch.Begin(depthStencilState:context.GraphicsDevice.DepthStencilStates.None);
             
             // render the keyboard key states
-            spriteBatch.DrawString(spriteFont11, KeyboardSessionString, textLeftTopCorner, fontColor);
-            spriteBatch.DrawString(spriteFont11, "Key pressed/released: " + keyEvents, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 1 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Key down: " + keyDown, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 2 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, KeyboardSessionString, textLeftTopCorner, fontColor);
+            spriteBatch.DrawString(Font, "Key pressed/released: " + keyEvents, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 1 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Key down: " + keyDown, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 2 * (textHeight + TextSpaceY)), fontColor);
 
             // render the mouse key states
-            spriteBatch.DrawString(spriteFont11, "Mouse :", textLeftTopCorner + new Vector2(0, 4 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Mouse position: " + mousePosition, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 5 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Mouse button pressed: " + mouseButtonPressed, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 6 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Mouse button down: " + mouseButtonDown, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 7 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Mouse button released: " + mouseButtonReleased, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 8 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Mouse :", textLeftTopCorner + new Vector2(0, 4 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Mouse position: " + mousePosition, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 5 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Mouse button pressed: " + mouseButtonPressed, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 6 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Mouse button down: " + mouseButtonDown, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 7 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Mouse button released: " + mouseButtonReleased, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 8 * (textHeight + TextSpaceY)), fontColor);
 
             var mouseScreenPosition = new Vector2(mousePosition.X * screenSize.X, mousePosition.Y * screenSize.Y);
-            spriteBatch.Draw(roundTexture, mouseScreenPosition, mouseColor, 0, roundTextureSize / 2, 0.1f);
+            spriteBatch.Draw(RoundTexture, mouseScreenPosition, mouseColor, 0, roundTextureSize / 2, 0.1f);
 
             // render the pointer states
             foreach (var tuple in pointerPressed)
@@ -266,14 +259,14 @@ namespace TouchInputs
                 DrawPointers(tuple, 2f, Color.Red);
 
             // render the gesture states
-            spriteBatch.DrawString(spriteFont11, "Gestures :", textLeftTopCorner + new Vector2(0, 10 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Drag: " + dragEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 11 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Flick: " + flickEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 12 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "LongPress: " + longPressEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 13 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Composite: " + compositeEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 14 * (textHeight + TextSpaceY)), fontColor);
-            spriteBatch.DrawString(spriteFont11, "Tap: " + tapEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 15 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Gestures :", textLeftTopCorner + new Vector2(0, 10 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Drag: " + dragEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 11 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Flick: " + flickEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 12 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "LongPress: " + longPressEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 13 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Composite: " + compositeEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 14 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "Tap: " + tapEvent, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 15 * (textHeight + TextSpaceY)), fontColor);
 
-            spriteBatch.DrawString(spriteFont11, "GamePads: " + gamePadText, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 17 * (textHeight + TextSpaceY)), fontColor);
+            spriteBatch.DrawString(Font, "GamePads: " + gamePadText, textLeftTopCorner + new Vector2(TextSubSectionOffsetX, 17 * (textHeight + TextSpaceY)), fontColor);
             spriteBatch.End();
         }
         private void DrawPointers(Tuple<Vector2, TimeSpan> tuple, float baseScale, Color baseColor)
@@ -284,7 +277,7 @@ namespace TouchInputs
             var scale = (float)(0.2f * (1f - duration.TotalSeconds / displayPointerDuration.TotalSeconds));
             var pointerScreenPosition = new Vector2(position.X * screenSize.X, position.Y * screenSize.Y);
 
-            spriteBatch.Draw(roundTexture, pointerScreenPosition, baseColor, 0, roundTextureSize / 2, scale * baseScale);
+            spriteBatch.Draw(RoundTexture, pointerScreenPosition, baseColor, 0, roundTextureSize / 2, scale * baseScale);
         }
 
         /// <summary>

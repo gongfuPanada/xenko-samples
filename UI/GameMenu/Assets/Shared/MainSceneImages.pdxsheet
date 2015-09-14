@@ -1,11 +1,10 @@
 !SpriteSheet
 Id: dba38b73-6f43-40ba-a4da-8e711695c7e8
-SerializedVersion: 1
+SerializedVersion: 2
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Packing:
-    AtlasMaximumSize: {X: 2048, Y: 2048}
+Packing: {}
 Sprites:
     -   Source: ../../RawAssets/background.jpg
         Name: background_uiimage

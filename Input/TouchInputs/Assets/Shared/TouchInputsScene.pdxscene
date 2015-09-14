@@ -1,34 +1,42 @@
 !SceneAsset
 Id: 8da52091-f3ce-45a3-8f1b-01fbf1a19f42
-SerializedVersion: 13
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
         - 818ea3cc-e643-45c6-bff5-bd54c2730c76
         - 95d80bd6-50e5-4984-92ae-7b8eeec651a6
     Entities:
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: c70d3cb5-77d2-4400-a715-382d092a2e19:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: -2.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 818ea3cc-e643-45c6-bff5-bd54c2730c76
-        -   Name: FontUI
-            Components:
-                ScriptComponent.Key:
-                    Scripts:
-                        - !TouchInputs.TouchInputsScript,TouchInputs.Game
-                            Id: 38a398b7-285d-4063-a950-7d21a21321cf
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 95d80bd6-50e5-4984-92ae-7b8eeec651a6
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: c70d3cb5-77d2-4400-a715-382d092a2e19:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 818ea3cc-e643-45c6-bff5-bd54c2730c76
+            Design:
+                Folder: null
+        -   Entity:
+                Name: FontUI
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !TouchInputs.TouchInputsScript,TouchInputs.Game
+                                Font: 25d9be11-4750-4d09-b58f-0628bf0c74e1:Font
+                                Id: 38a398b7-285d-4063-a950-7d21a21321cf
+                                RoundTexture: f21cc317-81d3-41f1-b524-d12766abf594:round
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 95d80bd6-50e5-4984-92ae-7b8eeec651a6
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras: []
@@ -49,6 +57,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera: {}
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

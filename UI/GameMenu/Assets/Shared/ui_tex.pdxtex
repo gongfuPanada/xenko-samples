@@ -1,5 +1,6 @@
 !Texture
 Id: 69203a0e-e7be-414a-9d76-6b80ea08b9e0
+SerializedVersion: 1
 Tags: []
 Source: ../../RawAssets/ui_tex.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -7,6 +8,8 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
+        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

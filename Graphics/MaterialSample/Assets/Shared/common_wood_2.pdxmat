@@ -1,45 +1,55 @@
 !MaterialAsset
 Id: 9c2c0285-4edb-4f28-8610-583f3b25463b
+SerializedVersion: 1
 Tags: []
 Attributes:
     Surface: !MaterialNormalMapFeature
         NormalMap: !ComputeTextureColor
             Texture: 8ce75290-5004-4352-8cf0-ae3f6b3db283:wood2_nml
-            Scale: {X: 1, Y: 1}
-            Offset: {X: 0, Y: 0}
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeTextureScalar
             Texture: 4f915b91-61d1-44aa-8654-8da61ed17951:wood2_gls
-            Scale: {X: 1, Y: 1}
-            Offset: {X: 0, Y: 0}
+            FallbackValue:
+                Value: 1.0
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
             Texture: bb6b2340-4ccc-4f08-a286-f76da9795fd4:wood2_dif
-            Scale: {X: 1, Y: 1}
-            Offset: {X: 0, Y: 0}
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
-            Value: 0
+            Value: 0.0
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
         NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
     Occlusion: !MaterialOcclusionMapFeature
         AmbientOcclusionMap: !ComputeTextureScalar
-            Scale: {X: 1, Y: 1}
-            Offset: {X: 0, Y: 0}
+            FallbackValue:
+                Value: 1.0
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
         DirectLightingFactor: !ComputeFloat
-            Value: 0
+            Value: 0.0
         CavityMap: !ComputeTextureScalar
             Texture: 86c76f8b-2e80-40df-b1ff-40d02d064943:wood2_cav
-            Scale: {X: 1, Y: 1}
-            Offset: {X: 0, Y: 0}
+            FallbackValue:
+                Value: 1.0
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
         DiffuseCavity: !ComputeFloat
-            Value: 1
+            Value: 1.0
         SpecularCavity: !ComputeFloat
-            Value: 1
+            Value: 1.0
     Overrides:
-        UVScale: {X: 1, Y: 1}
+        UVScale: {X: 1.0, Y: 1.0}
 Layers: []
-Parameters: {}

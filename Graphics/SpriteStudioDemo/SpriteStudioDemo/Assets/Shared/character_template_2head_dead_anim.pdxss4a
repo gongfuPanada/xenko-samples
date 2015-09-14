@@ -1,0 +1,14 @@
+!SpriteStudioAnimationAsset
+Id: 5e1ca0db-ff04-4796-a549-82ac2d8679bd
+Tags: []
+Source: ../../RawAssets/character_template_2head_dead.ssax
+SourceHash: 71ff69017fe09981745b80e715402601
+RepeatMode: PlayOnce
+~Base:
+    Location: --import--
+    Asset: !SpriteStudioAnimationAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        Source: 
+        ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
+        RepeatMode: LoopInfinite

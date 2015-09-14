@@ -21,12 +21,12 @@ namespace SpaceEscape.Background
         /// <summary>
         /// Gets the list collidable obstacles of the level block
         /// </summary>
-        public List<Obstacle> CollidableObstacles{ get; private set; }
+        public List<Obstacle> CollidableObstacles { get; private set; }
 
         /// <summary>
         /// Gets the list of holes of the level block
         /// </summary>
-        public List<Hole> Holes{ get; private set; }
+        public List<Hole> Holes { get; private set; }
 
         /// <summary>
         /// Create a new empty level block.

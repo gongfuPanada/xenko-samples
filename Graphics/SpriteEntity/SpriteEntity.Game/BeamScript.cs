@@ -16,6 +16,8 @@ namespace SpriteEntity
         /// </summary>
         public bool IsAlive { get; set; }
 
+        public SpriteSheet SpriteSheet;
+
         private const float beamSpeed = 14f;
         private const float maxWidthX = 8f + 2f;
 
@@ -48,7 +50,7 @@ namespace SpriteEntity
         public RectangleF GetBoundingBox()
         {
             if (beamNormalSprite == null)
-                beamNormalSprite = Asset.Load<SpriteSheet>("SpriteSheet")["bullet"];
+                beamNormalSprite = SpriteSheet["bullet"];
 
             var size = beamNormalSprite.SizeInPixels * LogicScript.ScreenScale;
             return new RectangleF(0, 0, size.X, size.Y);

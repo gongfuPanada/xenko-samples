@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
@@ -13,7 +14,7 @@ namespace SpriteEntity
 {
     public class PlayerScript : AsyncScript
     {
-        public LogicScript Logic;
+        public SpriteSheet SpriteSheet;
 
         private enum AgentAnimation
         {
@@ -31,25 +32,32 @@ namespace SpriteEntity
             Shoot,
         }
 
-        private AgentAnimation currentAgentAnimation;
-        private SpriteComponent agentSpriteComponent;
-        private SpriteSheet spriteSheet;
-
         // TODO centralize 
         private const float gameWidthX = 16f;       // from -8f to 8f
         private const float gameWidthHalfX = gameWidthX / 2f;
 
+        private const int AgentMoveDistance = 10;       // virtual resolution unit/second
+        private const float AgentShootDelay = 0.3f;     // second
+
+        private static readonly Dictionary<AgentAnimation, int> AnimationFps = new Dictionary<AgentAnimation, int> { { AgentAnimation.Run, 12 }, { AgentAnimation.Idle, 7 }, { AgentAnimation.Shoot, 15 } };
+
+        public LogicScript Logic;
+
+        private SpriteComponent agentSpriteComponent;
+        private SpriteSheet spriteSheet;
+
         // Touch input state
         private PointerEvent pointerState;
         private bool isPointerDown; // Cache state if a user is current touching the screen.
+        
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private bool isAgentFacingRight;
 
-        private static readonly Dictionary<AgentAnimation, int> AnimationFps = new Dictionary<AgentAnimation, int>
-        {
-            {AgentAnimation.Run, 12}, {AgentAnimation.Idle, 7}, {AgentAnimation.Shoot, 15}
-        };
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private float shootDelayCounter;
 
-        private const int AgentMoveDistance = 10;       // virtual resolution unit/second
-        private const float AgentShootDelay = 0.3f;     // second
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private AgentAnimation currentAgentAnimation;
 
         private AgentAnimation CurrentAgentAnimation
         {
@@ -89,19 +97,20 @@ namespace SpriteEntity
 
         public override async Task Execute()
         {
-            spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
-
+            spriteSheet = SpriteSheet;
             agentSpriteComponent = Entity.Get<SpriteComponent>();
 
-            // Calculate offset of the bullet from the Agent if he is facing left and right side
-            // TODO fix this
-            var bulletOffset = new Vector3(1f, 0.2f, 0f); //new Vector3(agentSpriteRegion.Width * 0.5f, -14f, 0);
+            // Calculate offset of the bullet from the Agent if he is facing left and right side // TODO improve this
+            var bulletOffset = new Vector3(1f, 0.2f, 0f);
 
             // Initialize game entities
-            CurrentAgentAnimation = AgentAnimation.Idle;
-
-            var isAgentFacingRight = true;
-            var shootDelayCounter = 0f;
+            if(!IsLiveReloading)
+            {
+                shootDelayCounter = 0f;
+                isAgentFacingRight = true;
+                currentAgentAnimation = AgentAnimation.Idle;
+            }
+            CurrentAgentAnimation = currentAgentAnimation;
 
             while (Game.IsRunning)
             {
@@ -155,7 +164,7 @@ namespace SpriteEntity
                         new SpriteComponent {SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet")},
 
                         // Will make the beam move along a direction at each frame
-                        new ScriptComponent {Scripts = {new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f}}}
+                        new ScriptComponent {Scripts = {new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f, SpriteSheet = SpriteSheet}}}
                     };
 
                     bullet.Transform.Position = (isAgentFacingRight) ? Entity.Transform.Position + bulletOffset : Entity.Transform.Position + (bulletOffset*new Vector3(-1, 1, 1));

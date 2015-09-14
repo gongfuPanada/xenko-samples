@@ -1,0 +1,11 @@
+!SpriteStudioSheetAsset
+Id: 2774af57-f02b-47f1-891c-4da6641456a6
+Tags: []
+Source: ../../RawAssets/character_template_2head_wait.ssax
+SourceHash: 7de09cb1f9da02808618bc95a4bd78a3
+~Base:
+    Location: --import--
+    Asset: !SpriteStudioSheetAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806

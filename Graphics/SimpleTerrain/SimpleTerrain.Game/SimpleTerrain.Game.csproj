@@ -83,7 +83,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>VertexTextureTerrain.pdxsl</DependentUpon>
     </Compile>
-    <Compile Include="HeightMapFactory.cs" />
+    <Compile Include="HeightMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Effects\VertexTextureTerrain.pdxsl">
       <Generator>ParadoxShaderKeyGenerator</Generator>

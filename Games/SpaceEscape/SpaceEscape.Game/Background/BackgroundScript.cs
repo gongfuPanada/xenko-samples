@@ -5,6 +5,7 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Rendering;
 using SiliconStudio.Paradox.Engine;
 using SpaceEscape.Effects;
+using System.Linq;
 
 namespace SpaceEscape.Background
 {
@@ -20,13 +21,15 @@ namespace SpaceEscape.Background
         private const float AddBlockPosition = 280f;
         private const int NumberOfStartBlock = 5;
 
-        private static readonly Random Random = new Random();
+        public Scene LevelBlocks;
+        public Model SkyplaneModel; // Cache to scroll its UV region.
+
+        internal static readonly Random Random = new Random();
         private readonly List<Section> levelBlocks = new List<Section>();
-        private readonly SectionsFactory levelFactory = new SectionsFactory(Random);
+        private LevelGenerator levelGenerator;
         private float runningDistance; // Store how far the player progressed in m.
 
         private static readonly Vector3 SkyPlanePosition = new Vector3(0, -10f, 340f);
-        private Model skyplaneModel; // Cache to scroll its UV region.
         private Vector4 skyplaneUVRegion = new Vector4(0f, 0f, 1f, 1f);
         private bool isScrolling;
         private Entity skyplaneEntity;
@@ -44,29 +47,27 @@ namespace SpaceEscape.Background
 
         public override void Start()
         {
+            var levelBlockEntity = LevelBlocks.Entities.First(x => x.Name == "LevelBlocks");
+            levelGenerator = levelBlockEntity.Get(ScriptComponent.Key).Scripts.OfType<LevelGenerator>().First();
+
             RunningDistance = 0f;
 
             // Load SkyPlane
-            skyplaneModel = Asset.Load<Model>("bg_00");
-            skyplaneEntity = new Entity { new ModelComponent(skyplaneModel) };
+            skyplaneEntity = new Entity { new ModelComponent(SkyplaneModel) };
 
             skyplaneEntity.Transform.Position= SkyPlanePosition;
             skyplaneEntity.Get<ModelComponent>().Parameters.Set(GameParameters.EnableBend, false);
-            skyplaneModel.Meshes[0].Parameters.Set(GameParameters.EnableOnflyTextureUVChange, true);
-
-            // Load Section and Obstacle models.
-            levelFactory.LoadContent(Asset);
+            SkyplaneModel.Meshes[0].Parameters.Set(GameParameters.EnableOnflyTextureUVChange, true);
 
             // Add skyPlane with LevelBlocks to EntitySystem
-            SceneSystem.SceneInstance.Scene.AddChild(skyplaneEntity);
+            SceneSystem.SceneInstance.Scene.Entities.Add(skyplaneEntity);
             CreateStartLevelBlocks();
         }
 
         public override void Cancel()
         {
-            Asset.Unload(skyplaneModel);
             Entity.Transform.Children.Clear();
-            SceneSystem.SceneInstance.Scene.RemoveChild(skyplaneEntity);
+            SceneSystem.SceneInstance.Scene.Entities.Remove(skyplaneEntity);
         }
 
         public override void Update()
@@ -87,7 +88,7 @@ namespace SpaceEscape.Background
             var lastBlock = levelBlocks[levelBlocks.Count - 1];
             if (lastBlock.PositionZ - lastBlock.Length * 0.5f < AddBlockPosition)
             {
-                AddLevelBlock(levelFactory.RandomCreateLevelBlock());
+                AddLevelBlock(levelGenerator.RandomCreateLevelBlock());
             }
 
             // Move levelblocks
@@ -106,12 +107,13 @@ namespace SpaceEscape.Background
             skyplaneUVRegion.X -= 0.0005f;
 
             // Update Parameters of the shader
-            skyplaneModel.Meshes[0].Parameters.Set(TransformationTextureUVKeys.TextureRegion, skyplaneUVRegion);
+            SkyplaneModel.Meshes[0].Parameters.Set(TransformationTextureUVKeys.TextureRegion, skyplaneUVRegion);
         }
 
         public void Reset()
         {
             RunningDistance = 0f;
+            isScrolling = false;
 
             for (var i = levelBlocks.Count - 1; i >= 0; i--)
             {
@@ -152,7 +154,7 @@ namespace SpaceEscape.Background
                 var maxVec = objWorldPos + boundingBox.Maximum;
                 var testBB = new BoundingBox(minVec, maxVec);
 
-                if (Collision.BoxContainsBox(ref testBB, ref agentBB) != ContainmentType.Disjoint)
+                if (CollisionHelper.BoxContainsBox(ref testBB, ref agentBB) != ContainmentType.Disjoint)
                     return true;
             }
             return false;
@@ -204,10 +206,10 @@ namespace SpaceEscape.Background
 
         private void CreateStartLevelBlocks()
         {
-            AddLevelBlock(levelFactory.CreateSafeLevelBlock());
+            AddLevelBlock(levelGenerator.CreateSafeLevelBlock());
 
             for (var i = 0; i < NumberOfStartBlock; i++)
-                AddLevelBlock(levelFactory.RandomCreateLevelBlock());
+                AddLevelBlock(levelGenerator.RandomCreateLevelBlock());
         }
 
         private void AddLevelBlock(Section newSection)

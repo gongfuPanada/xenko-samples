@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Graphics;
@@ -14,6 +15,8 @@ namespace JumpyJet
         private const int GapBetweenPipe = 400;
         private const int StartPipePosition = 400;
 
+        public SpriteSheet Sprites;
+
         private readonly List<PipeSet> pipeSetList = new List<PipeSet>();
 
         /// <summary>
@@ -28,14 +31,15 @@ namespace JumpyJet
             // Load assets TODO: replace this by prefab when available.
             var pipeEntity = new Entity("pipe") { new SpriteComponent
             {
-                SpriteProvider = new SpriteFromSheet { Sheet = Asset.Load<SpriteSheet>("Sprites") },
+                SpriteProvider = new SpriteFromSheet { Sheet = Sprites },
                 CurrentFrame = 2,
                 IgnoreDepth = true
             } };
 
             // Create PipeSets
-            CreatePipe(pipeEntity, StartPipePosition);
-            CreatePipe(pipeEntity, StartPipePosition + GapBetweenPipe);
+            var screenWidth = GraphicsDevice.Presenter.BackBuffer.Width;
+            for (int i = 0; i < (int)Math.Ceiling(screenWidth / (float)GapBetweenPipe); i++)
+                CreatePipe(pipeEntity, StartPipePosition + i * GapBetweenPipe);
         }
 
         public override void Update()

@@ -1,4 +1,5 @@
 ﻿using System;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -15,12 +16,17 @@ namespace SimpleSprite
         private const int SphereCountPerRow = 6;
         private const int SphereTotalCount = 32;
 
+        public Texture Sphere;
+
         private SpriteBatch spriteBatch;
-        private Texture sphere;
 
         private Vector2 resolution;
         private Vector2 ballHalfSize;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private Vector2 ballPosition;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private Vector2 ballSpeed;
 
         private SceneDelegateRenderer delegateRenderer;
@@ -30,13 +36,15 @@ namespace SimpleSprite
             // create the ball sprite.
             var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
-            sphere = Asset.Load<Texture>("sphere");
 
             // Initialize ball's state related variables.
             resolution = new Vector2(virtualResolution.X, virtualResolution.Y);
-            ballHalfSize = new Vector2(SphereWidth / 2, SphereHeight / 2);
-            ballPosition = resolution / 2;
-            ballSpeed = new Vector2(600, -400);
+            ballHalfSize = new Vector2(SphereWidth / 2f, SphereHeight / 2f);
+            if (!IsLiveReloading)
+            {
+                ballPosition = resolution / 2;
+                ballSpeed = new Vector2(600, -400);
+            }
 
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
@@ -79,7 +87,6 @@ namespace SimpleSprite
 
             // destroy graphic objects
             spriteBatch.Dispose();
-            Asset.Unload(sphere);
         }
 
         private void RenderSpheres(RenderContext renderContext, RenderFrame frame)
@@ -90,7 +97,7 @@ namespace SimpleSprite
             var time = (float)Game.DrawTime.Total.TotalSeconds;
             var rotation = time * (float)Math.PI * 0.5f;
             var sourceRectangle = GetSphereAnimation(1.25f * time);
-            spriteBatch.Draw(sphere, ballPosition, sourceRectangle, Color.White, rotation, ballHalfSize);
+            spriteBatch.Draw(Sphere, ballPosition, sourceRectangle, Color.White, rotation, ballHalfSize);
 
             spriteBatch.End();
         }

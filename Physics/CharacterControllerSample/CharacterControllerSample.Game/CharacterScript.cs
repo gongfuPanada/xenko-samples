@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Animations;
 using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
 using SiliconStudio.Paradox.Input;
 using SiliconStudio.Paradox.Physics;
 using SiliconStudio.Paradox.Rendering.Sprites;
@@ -24,15 +24,22 @@ namespace CharacterControllerSample
             Jump = 0x2
         }
 
-        private bool movingToTarget;
-        private SpriteComponent playerSprite;
-
-        private const float speed = 0.05f;
-        private PlayerState oldState = PlayerState.Idle;
-        private Vector3 oldDirection = Vector3.Zero;
-        private Vector3 autoPilotTarget = Vector3.Zero;
+        private const float speed = 0.075f;
 
         private Character playerController;
+        private SpriteComponent playerSprite;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private bool movingToTarget;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private PlayerState oldState = PlayerState.Idle;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private Vector3 oldDirection = Vector3.Zero;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private Vector3 autoPilotTarget = Vector3.Zero;
 
         void PlayIdle()
         {
@@ -48,29 +55,31 @@ namespace CharacterControllerSample
 
         public override void Start()
         {
+            playerSprite = Entity.Get<SpriteComponent>();
             playerController = Entity.Get<PhysicsComponent>().Elements[0].Character;
 
             //Please remember that in the GameStudio element the parameter Step Height is extremely important, it not set properly it will cause the entity to snap fast to the ground
             playerController.JumpSpeed = 5.0f;
             playerController.Gravity = -10.0f;
             playerController.FallSpeed = 10.0f;
-
             playerController.ContactsAlwaysValid = true;
-            Script.AddTask(async () =>
+
+            if(!IsLiveReloading)
             {
-                while (Game.IsRunning)
+                Script.AddTask(async () =>
                 {
-                    var collision = await playerController.NewCollision();
-                    // Stop if we collide from sides
-                    if (collision.Contacts[0].Normal.X < -0.5f || collision.Contacts[0].Normal.X > 0.5f)
+                    while (Game.IsRunning)
                     {
-                        movingToTarget = false;
+                        var collision = await playerController.NewCollision();
+                        // Stop if we collide from sides
+                        if (collision.Contacts[0].Normal.X < -0.5f || collision.Contacts[0].Normal.X > 0.5f)
+                        {
+                            movingToTarget = false;
+                        }
                     }
-                }
-            });
-            
-            playerSprite = Entity.Get<SpriteComponent>();
-            PlayIdle();
+                });
+                PlayIdle();
+            }
         }
 
         public override void Update()
@@ -128,8 +137,7 @@ namespace CharacterControllerSample
 
                 //should we stop?
                 var length = direction.Length();
-                //stop when we are 5 pixels close
-                if (length < 0.05f && length > -0.05f)
+                if (length < speed)
                 {
                     movingToTarget = false;
 

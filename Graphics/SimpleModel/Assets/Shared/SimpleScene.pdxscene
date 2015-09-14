@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 286c3e80-cf3f-4804-ad57-2c617f116e4c
-SerializedVersion: 13
+SerializedVersion: 18
 Tags: []
 Hierarchy:
     RootEntities:
@@ -10,73 +10,89 @@ Hierarchy:
         - f770fd9d-75a5-4846-b29e-9f10ae811c9f
         - 6a93b905-f184-480a-b645-7d2627b97445
     Entities:
-        -   Name: Directional light
-            Components:
-                LightComponent.Key:
-                    Type: !LightDirectional
-                        Color: !LightColorRgb
-                            Color: {R: 1.0, G: 1.0, B: 1.0}
-                        Shadow:
-                            DepthRange: {}
-                            PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                            BiasParameters: {}
-                    Intensity: 0.1
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 2.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 0d9fd13c-1ccf-4748-82b1-359bdc792644
-        -   Name: Background
-            Components:
-                BackgroundComponent.Key:
-                    Texture: 2b13c12a-4d48-4058-8a9d-349d3c40a693:ParadoxBackground
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: -5.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: 6a93b905-f184-480a-b645-7d2627b97445
-        -   Name: Ambient light
-            Components:
-                LightComponent.Key:
-                    Type: !LightAmbient
-                        Color: !LightColorRgb
-                            Color: {R: 1.0, G: 1.0, B: 1.0}
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 4.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: a0cf3d39-63ba-4770-b9cb-4ce74d002f34
-        -   Name: Camera
-            Components:
-                CameraComponent.Key:
-                    Projection: Perspective
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 1.7, Z: 6.0}
-                    Rotation: {W: 0.9961947, X: -0.08715574, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: d968ed53-6c9e-449c-8488-d17f5f8b6f3e
-        -   Name: character_00 Model
-            Components:
-                ModelComponent.Key:
-                    Model: 19ec836d-2ea3-43fe-8f79-0f55cfc437be:character_00 Model
-                    Materials:
-                        - null
-                        - null
-                        - null
-                ScriptComponent.Key:
-                    Scripts:
-                        - !SimpleModel.RotateEntityScript,SimpleModel.Game
-                            Id: 9eeb736a-58ec-4af9-a61e-bf434a8b5ba2
-                TransformComponent.Key:
-                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                    Children: []
-            Id: f770fd9d-75a5-4846-b29e-9f10ae811c9f
+        -   Entity:
+                Name: Directional light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.1
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 0d9fd13c-1ccf-4748-82b1-359bdc792644
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 2b13c12a-4d48-4058-8a9d-349d3c40a693:ParadoxBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -5.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6a93b905-f184-480a-b645-7d2627b97445
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ambient light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightAmbient
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 4.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: a0cf3d39-63ba-4770-b9cb-4ce74d002f34
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 1.7, Z: 6.0}
+                        Rotation: {W: 0.9961947, X: -0.08715574, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: d968ed53-6c9e-449c-8488-d17f5f8b6f3e
+            Design:
+                Folder: null
+        -   Entity:
+                Name: character_00 Model
+                Components:
+                    ModelComponent.Key:
+                        Model: 19ec836d-2ea3-43fe-8f79-0f55cfc437be:character_00 Model
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SimpleModel.RotateEntityScript,SimpleModel.Game
+                                Id: 9eeb736a-58ec-4af9-a61e-bf434a8b5ba2
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: f770fd9d-75a5-4846-b29e-9f10ae811c9f
+            Design:
+                Folder: null
     SceneSettings:
         GraphicsCompositor: !SceneGraphicsCompositorLayers
             Cameras:
@@ -101,7 +117,5 @@ Hierarchy:
         EditorSettings:
             GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
             SceneUnit: 1.0
-            Camera:
-                FarPlane: 20000.0
             Mode: !SceneEditorGraphicsModeLDRSettings
                 BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

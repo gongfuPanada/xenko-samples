@@ -5,9 +5,9 @@ namespace SpaceEscape
     /// <summary>
     /// Plays the idle animation of the entity if any
     /// </summary>
-    public class PlayIdleAnimationScript : StartupScript
+    public class PlayAnimationScript : StartupScript
     {
-        public const string AnimationName = "Idle";
+        public string AnimationName;
 
         public override void Start()
         {

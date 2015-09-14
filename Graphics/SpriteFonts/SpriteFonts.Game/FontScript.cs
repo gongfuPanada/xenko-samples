@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Paradox.Engine;
 using SiliconStudio.Paradox.Rendering;
@@ -51,31 +52,42 @@ at full size and full measure";
         private Vector2 screenSize;
         private SpriteBatch spriteBatch;
 
-        private SpriteFont staticFont;
-        private SpriteFont dynamicFont;
-        private SpriteFont boldFont;
-        private SpriteFont italicFont;
-        private SpriteFont aliasedFont;
-        private SpriteFont antialiasedFont;
-        private SpriteFont clearTypeFont;
-        private SpriteFont japaneseFont;
-        private SpriteFont timesNewRoman;
-        private SpriteFont headerFont;
-
+        public SpriteFont StaticFont;
+        public SpriteFont DynamicFont;
+        public SpriteFont BoldFont;
+        public SpriteFont ItalicFont;
+        public SpriteFont AliasedFont;
+        public SpriteFont AntialiasedFont;
+        public SpriteFont ClearTypeFont;
+        public SpriteFont JapaneseFont;
+        public SpriteFont TimesNewRoman;
+        public SpriteFont HeaderFont;
+        
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private Vector2 animatedFontPosition;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float animatedFontScale;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float animatedFontRotation;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private float animatedFontAlpha;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private bool isPlaying = true;
 
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
         private int currentScreenIndex;
+
+        [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
+        private float currentTime;
 
         private readonly Vector2 headerPosition = new Vector2(0.5f, 0.25f);
         private readonly Vector2 contentPosition = new Vector2(0.5f, 0.4f);
 
         private readonly Color paradoxColor = new Color(0x583069);
-        private float currentTime;
 
         private Vector2 virtualResolution = new Vector2(1920, 1080);
 
@@ -92,20 +104,6 @@ at full size and full measure";
             centerVirtualPosition = new Vector2(virtualResolution.X * 0.5f, virtualResolution.Y * 0.5f);
             screenSize = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
 
-            // Load fonts
-            staticFont = Asset.Load<SpriteFont>("StaticFont");
-            dynamicFont = Asset.Load<SpriteFont>("DynamicFont");
-            boldFont = Asset.Load<SpriteFont>("BoldFont");
-            italicFont = Asset.Load<SpriteFont>("ItalicFont");
-
-            aliasedFont = Asset.Load<SpriteFont>("AliasedFont");
-            antialiasedFont = Asset.Load<SpriteFont>("AntialiasedFont");
-            clearTypeFont = Asset.Load<SpriteFont>("ClearTypeFont");
-
-            japaneseFont = Asset.Load<SpriteFont>("JapaneseFont");
-            timesNewRoman = Asset.Load<SpriteFont>("TimesNewRoman");
-            headerFont = Asset.Load<SpriteFont>("HeaderFont");
-
             screenRenderers.Add(DrawIntroductionCategory);
             screenRenderers.Add(DrawStaticCategory);
             screenRenderers.Add(DrawDynamicCategory);
@@ -114,10 +112,10 @@ at full size and full measure";
             screenRenderers.Add(DrawLanguageCategory);
             screenRenderers.Add(DrawAlignmentCategory);
             screenRenderers.Add(DrawAnimationCategory);
-
+            
             // Add Graphics Layer
             var scene = SceneSystem.SceneInstance.Scene;
-            var compositor = ((SceneGraphicsCompositorLayers) scene.Settings.GraphicsCompositor);
+            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
             compositor.Master.Renderers.Add(delegateRenderer = new SceneDelegateRenderer(DrawFont));
         }
 
@@ -137,16 +135,6 @@ at full size and full measure";
 
             // Dispose graphic resource
             spriteBatch.Dispose();
-            Asset.Unload(staticFont);
-            Asset.Unload(dynamicFont);
-            Asset.Unload(boldFont);
-            Asset.Unload(italicFont);
-            Asset.Unload(aliasedFont);
-            Asset.Unload(antialiasedFont);
-            Asset.Unload(clearTypeFont);
-            Asset.Unload(japaneseFont);
-            Asset.Unload(timesNewRoman);
-            Asset.Unload(headerFont);
         }
 
         #region Draw Methods
@@ -168,18 +156,18 @@ at full size and full measure";
             var position = GetVirtualPosition(headerPosition);
 
             // Find the X position offset for the first part of text
-            position -= spriteBatch.MeasureString(headerFont, headerPart1 + headerPart2 + headerPart3, headerSize, screenSize) * 0.5f;
+            position -= spriteBatch.MeasureString(HeaderFont, headerPart1 + headerPart2 + headerPart3, headerSize, screenSize) * 0.5f;
 
             // Draw each part separately because we need to have a different color in the 2nd part
-            spriteBatch.DrawString(headerFont, headerPart1, headerSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(HeaderFont, headerPart1, headerSize, position, Color.White * GetInterpolatedAlpha());
 
-            position.X += spriteBatch.MeasureString(headerFont, headerPart1, headerSize, screenSize).X;
+            position.X += spriteBatch.MeasureString(HeaderFont, headerPart1, headerSize, screenSize).X;
 
-            spriteBatch.DrawString(headerFont, headerPart2, headerSize, position, paradoxColor * GetInterpolatedAlpha());
+            spriteBatch.DrawString(HeaderFont, headerPart2, headerSize, position, paradoxColor * GetInterpolatedAlpha());
 
-            position.X += spriteBatch.MeasureString(headerFont, headerPart2, headerSize, screenSize).X;
+            position.X += spriteBatch.MeasureString(HeaderFont, headerPart2, headerSize, screenSize).X;
 
-            spriteBatch.DrawString(headerFont, headerPart3, headerSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(HeaderFont, headerPart3, headerSize, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -197,18 +185,18 @@ at full size and full measure";
             var position = GetVirtualPosition(0.5f, 0.5f);
 
             // Find the X position offset for the first part of text
-            position -= spriteBatch.MeasureString(dynamicFont, textPart1 + textPart2 + textPart3, textSize, screenSize) * 0.5f;
+            position -= spriteBatch.MeasureString(DynamicFont, textPart1 + textPart2 + textPart3, textSize, screenSize) * 0.5f;
 
             // Draw each part separately because we need to have a different color in the 2nd part
-            spriteBatch.DrawString(dynamicFont, textPart1, textSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, textPart1, textSize, position, Color.White * GetInterpolatedAlpha());
 
-            position.X += spriteBatch.MeasureString(dynamicFont, textPart1, textSize, screenSize).X;
+            position.X += spriteBatch.MeasureString(DynamicFont, textPart1, textSize, screenSize).X;
 
-            spriteBatch.DrawString(dynamicFont, textPart2, textSize, position, paradoxColor * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, textPart2, textSize, position, paradoxColor * GetInterpolatedAlpha());
 
-            position.X += spriteBatch.MeasureString(dynamicFont, textPart2, textSize, screenSize).X;
+            position.X += spriteBatch.MeasureString(DynamicFont, textPart2, textSize, screenSize).X;
 
-            spriteBatch.DrawString(dynamicFont, textPart3, textSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, textPart3, textSize, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -226,9 +214,9 @@ at full size and full measure";
                        "Cannot adjust their size to the virtual resolution\n" +
                        "Cannot modify their size at run-time";
 
-            position.X -= spriteBatch.MeasureString(staticFont, text, screenSize).X / 2;
+            position.X -= spriteBatch.MeasureString(StaticFont, text, screenSize).X / 2;
 
-            spriteBatch.DrawString(staticFont, text, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(StaticFont, text, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -244,16 +232,16 @@ at full size and full measure";
                        "Can adjust their size to the virtual resolution\n";
 
             var position = GetVirtualPosition(contentPosition);
-            var firstTextSize = spriteBatch.MeasureString(dynamicFont, text, DynamicFontContentSize, screenSize);
+            var firstTextSize = spriteBatch.MeasureString(DynamicFont, text, DynamicFontContentSize, screenSize);
 
             position.X -= firstTextSize.X / 2;
 
-            spriteBatch.DrawString(dynamicFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
 
             text = "Can modify their size at execution time";
 
             position.Y += firstTextSize.Y;
-            spriteBatch.DrawString(dynamicFont, text, 80, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, text, 80, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -267,17 +255,17 @@ at full size and full measure";
             var position = GetVirtualPosition(contentPosition);
 
             var text = "None - This is a sample sentence.";
-            var firstTextSize = spriteBatch.MeasureString(dynamicFont, text, DynamicFontContentSize, screenSize);
+            var firstTextSize = spriteBatch.MeasureString(DynamicFont, text, DynamicFontContentSize, screenSize);
             position.X -= firstTextSize.X / 2;
-            spriteBatch.DrawString(dynamicFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
 
             text = "Italic - This is a sample sentence.";
             position.Y += firstTextSize.Y;
-            spriteBatch.DrawString(italicFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(ItalicFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
 
             text = "Bold - This is a sample sentence.";
-            position.Y += spriteBatch.MeasureString(italicFont, text, DynamicFontContentSize, screenSize).Y;
-            spriteBatch.DrawString(boldFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
+            position.Y += spriteBatch.MeasureString(ItalicFont, text, DynamicFontContentSize, screenSize).Y;
+            spriteBatch.DrawString(BoldFont, text, DynamicFontContentSize, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -291,17 +279,17 @@ at full size and full measure";
             var position = GetVirtualPosition(contentPosition);
 
             var text = "Aliased - This is a sample sentence.";
-            var firstTextSize = spriteBatch.MeasureString(aliasedFont, text, DynamicFontContentSize, screenSize);
+            var firstTextSize = spriteBatch.MeasureString(AliasedFont, text, DynamicFontContentSize, screenSize);
             position.X -= firstTextSize.X / 2;
-            spriteBatch.DrawString(aliasedFont, text, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(AliasedFont, text, position, Color.White * GetInterpolatedAlpha());
 
             position.Y += firstTextSize.Y;
             text = "Anti-aliased - This is a sample sentence.";
-            spriteBatch.DrawString(antialiasedFont, text, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(AntialiasedFont, text, position, Color.White * GetInterpolatedAlpha());
 
-            position.Y += spriteBatch.MeasureString(antialiasedFont, text, screenSize).Y;
+            position.Y += spriteBatch.MeasureString(AntialiasedFont, text, screenSize).Y;
             text = "Clear-type - This is a sample sentence.";
-            spriteBatch.DrawString(clearTypeFont, text, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(ClearTypeFont, text, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -317,8 +305,8 @@ at full size and full measure";
             var position = GetVirtualPosition(contentPosition);
             var text = "Japanese dynamic sprite font\nあいうえおかきくけこ   天竜の\nアイウエオカキクケコ   幅八町の\n一二三四五六七八九十   梅雨濁り";
 
-            position.X -= spriteBatch.MeasureString(japaneseFont, text, DynamicFontContentSize + sizeIncreament, screenSize).X / 2;
-            spriteBatch.DrawString(japaneseFont, text, DynamicFontContentSize + sizeIncreament, position, Color.White * GetInterpolatedAlpha());
+            position.X -= spriteBatch.MeasureString(JapaneseFont, text, DynamicFontContentSize + sizeIncreament, screenSize).X / 2;
+            spriteBatch.DrawString(JapaneseFont, text, DynamicFontContentSize + sizeIncreament, position, Color.White * GetInterpolatedAlpha());
         }
 
         /// <summary>
@@ -337,17 +325,17 @@ at full size and full measure";
 
             var textSize = 28;
 
-            spriteBatch.DrawString(timesNewRoman, text, textSize, position, Color.White * GetInterpolatedAlpha());
+            spriteBatch.DrawString(TimesNewRoman, text, textSize, position, Color.White * GetInterpolatedAlpha());
 
-            position.X = centerVirtualPosition.X - 0.5f * spriteBatch.MeasureString(timesNewRoman, text, textSize, screenSize).X;
+            position.X = centerVirtualPosition.X - 0.5f * spriteBatch.MeasureString(TimesNewRoman, text, textSize, screenSize).X;
             text = "CENTERED TEXT\n" + RefenceText;
 
-            spriteBatch.DrawString(timesNewRoman, text, textSize, position, Color.White * GetInterpolatedAlpha(), TextAlignment.Center);
+            spriteBatch.DrawString(TimesNewRoman, text, textSize, position, Color.White * GetInterpolatedAlpha(), TextAlignment.Center);
 
-            position.X = virtualResolution.X - spriteBatch.MeasureString(timesNewRoman, text, textSize, screenSize).X - virtualResolution.X * 0.03f;
+            position.X = virtualResolution.X - spriteBatch.MeasureString(TimesNewRoman, text, textSize, screenSize).X - virtualResolution.X * 0.03f;
             text = "RIGHT-ALIGNED TEXT\n" + RefenceText;
 
-            spriteBatch.DrawString(timesNewRoman, text, textSize, position, Color.White * GetInterpolatedAlpha(), TextAlignment.Right);
+            spriteBatch.DrawString(TimesNewRoman, text, textSize, position, Color.White * GetInterpolatedAlpha(), TextAlignment.Right);
         }
 
         /// <summary>
@@ -361,8 +349,8 @@ at full size and full measure";
             // Draw content
             var text = "Paradox Engine";
 
-            spriteBatch.DrawString(dynamicFont, text, DynamicFontContentSize, animatedFontPosition, animatedFontAlpha * Color.White * GetInterpolatedAlpha(), animatedFontRotation,
-                0.5f * spriteBatch.MeasureString(dynamicFont, text, DynamicFontContentSize, screenSize), animatedFontScale * Vector2.One, SpriteEffects.None, 0f, TextAlignment.Left);
+            spriteBatch.DrawString(DynamicFont, text, DynamicFontContentSize, animatedFontPosition, animatedFontAlpha * Color.White * GetInterpolatedAlpha(), animatedFontRotation,
+                0.5f * spriteBatch.MeasureString(DynamicFont, text, DynamicFontContentSize, screenSize), animatedFontScale * Vector2.One, SpriteEffects.None, 0f, TextAlignment.Left);
         }
 
         #endregion Draw methods

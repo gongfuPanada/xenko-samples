@@ -17,12 +17,13 @@ namespace SimpleAudio
         /// </summary>
         public string UIText = "Tap on the screen!";
 
+        public SpriteFont Font;
+
         public override void Start()
         {
             base.Start();
 
-            var font = Asset.Load<SpriteFont>("Font");
-            var textBlock = new TextBlock { TextColor = Color.White, Font = font, Text = UIText };
+            var textBlock = new TextBlock { TextColor = Color.White, Font = Font, Text = UIText };
             textBlock.SetCanvasPinOrigin(new Vector3(1, 0, 0));
             textBlock.SetCanvasRelativePosition(new Vector3(0.63f, 0.8f, 0f));
 

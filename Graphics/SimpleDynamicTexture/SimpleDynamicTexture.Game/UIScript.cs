@@ -16,13 +16,15 @@ namespace SimpleDynamicTexture
     {
         private TextBlock textBlock;
 
+        public SpriteFont Font;
+
         // Create the UI layout and content
         public void Start()
         {
             textBlock = new TextBlock
             {
                 Text = "Tap The Screen!",
-                Font = Asset.Load<SpriteFont>("Font"),
+                Font = Font,
                 TextAlignment = TextAlignment.Center,
             };
             textBlock.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 0f));

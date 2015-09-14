@@ -11,15 +11,20 @@ namespace GravitySensor
 {
     public class GuiScript : AsyncScript
     {
+        public SpriteFont Font;
+
         public override async Task Execute()
         {
             if (Input.Gravity.IsSupported) // do not display any message when orientation sensor is available
                 return;
 
+            if (IsLiveReloading)
+                return;
+
             var textBlock = new TextBlock
             {
                 Text = "Use arrows to play with gravity!",
-                Font = Asset.Load<SpriteFont>("SpriteFont"),
+                Font = Font,
                 TextColor = Color.White,
                 TextSize = 40
             };

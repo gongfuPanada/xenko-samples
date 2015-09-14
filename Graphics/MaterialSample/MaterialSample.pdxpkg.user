@@ -16,6 +16,6 @@ Settings:
     Package/Scene/ScaleSnapActive: false
     Package/Scene/ScaleSnapValue: 1.1
     Package/Scene/SelectionMaskVisible: true
-    Package/Scene/TransformationGizmoSize: 1
+    Package/Scene/TransformationGizmoSize: 1.0
     Package/Scene/TranslationSnapActive: false
-    Package/Scene/TranslationSnapValue: 1
+    Package/Scene/TranslationSnapValue: 1.0

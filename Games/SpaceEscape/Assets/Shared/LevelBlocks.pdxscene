@@ -1,0 +1,271 @@
+!SceneAsset
+Id: d5969c6e-1456-4aac-a656-598bf1e16c2d
+SerializedVersion: 18
+Tags: []
+Hierarchy:
+    RootEntities:
+        - be0f7749-0809-4e50-931b-13570ea885ca
+        - 732ee867-c723-4583-9f6a-b071c59a7fab
+        - d594e60f-c93c-4ae2-add6-8f2fa6b7c170
+        - 375a70a7-8bd1-42c8-ba80-db8ccd698c28
+        - 4af9a192-21ff-4f1b-9c09-e7d80dae4e0a
+        - 1a63d9fd-0265-4837-8996-8c8f1cd0c17c
+        - 8ec3b5fc-a576-4cb1-89ae-1dea02261dfe
+        - cedaf0e3-3c28-49ef-b60f-05b755b85cdc
+        - 422d91bc-cfe1-439e-a2d1-631886e95537
+        - e322652e-175e-4563-9135-82ddef7c8973
+    Entities:
+        -   Entity:
+                Name: Background_b02
+                Components:
+                    ModelComponent.Key:
+                        Model: c8901469-88c0-43e1-bffe-f1fe2dc02aea:bg_b02
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.BackgroundInfo,SpaceEscape.Game
+                                Holes:
+                                    -   Area: {X: -7.5, Y: 15.0, Width: 5.0, Height: 30.0}
+                                        Height: -2.0
+                                Id: 72bd4045-52b6-49fc-af82-c4ac79ccf1f0
+                                MaxNbObstacles: 1
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -90.96857}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 1a63d9fd-0265-4837-8996-8c8f1cd0c17c
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background_b00
+                Components:
+                    ModelComponent.Key:
+                        Model: 82360e61-196c-4c07-9fae-af7ee4f265a1:bg_b00
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.BackgroundInfo,SpaceEscape.Game
+                                Holes: []
+                                Id: a92c0b2d-b588-4964-b6b9-6d997ba46c75
+                                MaxNbObstacles: 1
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 79.82038}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 375a70a7-8bd1-42c8-ba80-db8ccd698c28
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Obstacle1
+                Components:
+                    ModelComponent.Key:
+                        Model: e19ec8c3-699e-4a5f-ad09-9f5e750b9b0d:obj00
+                        Materials:
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.ObstacleInfo,SpaceEscape.Game
+                                Id: 788f0e96-0f68-4b47-822f-a746b2ea27a9
+                                UseSubMeshBoundingBoxes: true
+                    TransformComponent.Key:
+                        Position: {X: 76.0982742, Y: 0.0, Z: 54.5350227}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 422d91bc-cfe1-439e-a2d1-631886e95537
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background_b01
+                Components:
+                    ModelComponent.Key:
+                        Model: f0088b04-5990-4dd4-9824-77fcf8a8a62c:bg_b01
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.BackgroundInfo,SpaceEscape.Game
+                                Holes:
+                                    -   Area: {X: -2.5, Y: 15.0, Width: 5.0, Height: 30.0}
+                                        Height: -2.0
+                                Id: 28f68842-71c4-4197-93fe-d2f2b8ef29fb
+                                MaxNbObstacles: 1
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 4af9a192-21ff-4f1b-9c09-e7d80dae4e0a
+            Design:
+                Folder: null
+        -   Entity:
+                Name: LevelBlocks
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.LevelGenerator,SpaceEscape.Game
+                                Background_a00:
+                                    Id: d594e60f-c93c-4ae2-add6-8f2fa6b7c170
+                                Background_b00:
+                                    Id: 375a70a7-8bd1-42c8-ba80-db8ccd698c28
+                                Background_b01:
+                                    Id: 4af9a192-21ff-4f1b-9c09-e7d80dae4e0a
+                                Background_b02:
+                                    Id: 1a63d9fd-0265-4837-8996-8c8f1cd0c17c
+                                Background_b03:
+                                    Id: 8ec3b5fc-a576-4cb1-89ae-1dea02261dfe
+                                Background_b04:
+                                    Id: cedaf0e3-3c28-49ef-b60f-05b755b85cdc
+                                Id: 83207100-992d-45ac-b9d2-dd8f664b2baa
+                                Obstacle1:
+                                    Id: 422d91bc-cfe1-439e-a2d1-631886e95537
+                                Obstacle2:
+                                    Id: e322652e-175e-4563-9135-82ddef7c8973
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 732ee867-c723-4583-9f6a-b071c59a7fab
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background_b03
+                Components:
+                    ModelComponent.Key:
+                        Model: a966e37f-0bb7-4a02-9630-d871321a615d:bg_b03
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.BackgroundInfo,SpaceEscape.Game
+                                Holes:
+                                    -   Area: {X: -7.5, Y: 15.0, Width: 5.0, Height: 30.0}
+                                        Height: -2.0
+                                    -   Area: {X: 2.5, Y: 15.0, Width: 5.0, Height: 30.0}
+                                        Height: -2.0
+                                Id: 04142da1-4c10-4ff5-a399-f616448b3c16
+                                MaxNbObstacles: 0
+                    TransformComponent.Key:
+                        Position: {X: 67.15388, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 8ec3b5fc-a576-4cb1-89ae-1dea02261dfe
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ambient light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightAmbient
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 39.9356346, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: be0f7749-0809-4e50-931b-13570ea885ca
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background_b04
+                Components:
+                    ModelComponent.Key:
+                        Model: b731fd7d-df09-4059-9cc5-57ba50d0f3f6:bg_b04
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.BackgroundInfo,SpaceEscape.Game
+                                Holes:
+                                    -   Area: {X: -7.5, Y: 15.0, Width: 10.0, Height: 30.0}
+                                        Height: -2.0
+                                Id: b3856632-90bd-4634-8e27-5a06033a8660
+                                MaxNbObstacles: 0
+                    TransformComponent.Key:
+                        Position: {X: 65.3026352, Y: 0.0, Z: -83.52101}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: cedaf0e3-3c28-49ef-b60f-05b755b85cdc
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background_a00
+                Components:
+                    ModelComponent.Key:
+                        Model: 3047da8a-bf85-4cdd-99ef-89c2b19c3c04:bg_a00
+                        Materials:
+                            - null
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.Background.BackgroundInfo,SpaceEscape.Game
+                                Holes: []
+                                Id: 0a8aa0d0-18f8-4718-bb41-026c96e89fad
+                                MaxNbObstacles: 3
+                    TransformComponent.Key:
+                        Position: {X: -68.65997, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: d594e60f-c93c-4ae2-add6-8f2fa6b7c170
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Obstacle2
+                Components:
+                    ModelComponent.Key:
+                        Model: f81db4ee-5929-42c9-9008-2cd624296caa:obj01
+                        Materials:
+                            - null
+                    AnimationComponent.Key:
+                        Animations:
+                            Idle: 8949a37d-83d4-4f0d-911d-bb15b79fe7b2:obj01_Anim
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !SpaceEscape.PlayAnimationScript,SpaceEscape.Game
+                                AnimationName: Idle
+                                Id: 10fa92f2-b3f4-49ce-9936-8d96538f7ed2
+                            - !SpaceEscape.Background.ObstacleInfo,SpaceEscape.Game
+                                Id: 723f54fc-e5b5-4160-8b16-0fc828c88af3
+                                UseSubMeshBoundingBoxes: false
+                    TransformComponent.Key:
+                        Position: {X: 48.7573853, Y: 0.0, Z: 54.5350227}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: e322652e-175e-4563-9135-82ddef7c8973
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras: []
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers: []
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

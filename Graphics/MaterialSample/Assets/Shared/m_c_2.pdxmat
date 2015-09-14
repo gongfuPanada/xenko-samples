@@ -1,5 +1,6 @@
 !MaterialAsset
 Id: d9e839cc-ae37-4198-b5a6-9ff9baae6fdb
+SerializedVersion: 1
 Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
@@ -7,39 +8,38 @@ Attributes:
             Value: 0.65
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeColor
-            Value: {R: 0.7490196, G: 0.227450982, B: 0.13333334, A: 1}
+            Value: {R: 0.7490196, G: 0.227450982, B: 0.13333334, A: 1.0}
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
-            Value: 0
+            Value: 0.0
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
         NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
     Overrides:
-        UVScale: {X: 1, Y: 1}
+        UVScale: {X: 1.0, Y: 1.0}
 Layers: []
-Parameters: {}
 ~Base:
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
         Tags: []
         Attributes:
             Diffuse: !MaterialDiffuseMapFeature
                 DiffuseMap: !ComputeColor
-                    Value: {R: 0.9450981, G: 0.733333349, B: 0.156862751, A: 1}
+                    Value: {R: 0.9450981, G: 0.733333349, B: 0.156862751, A: 1.0}
             DiffuseModel: !MaterialDiffuseLambertModelFeature {}
             Specular: !MaterialSpecularMapFeature
                 SpecularMap: !ComputeColor
-                    Value: {R: 0.9, G: 0.9, B: 0.9, A: 1}
+                    Value: {R: 0.9, G: 0.9, B: 0.9, A: 1.0}
                 Intensity: !ComputeFloat
-                    Value: 1
+                    Value: 1.0
             SpecularModel: !MaterialSpecularMicrofacetModelFeature
                 Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
                 Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
                 NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
             Overrides:
-                UVScale: {X: 1, Y: 1}
+                UVScale: {X: 1.0, Y: 1.0}
         Layers: []
-        Parameters: {}

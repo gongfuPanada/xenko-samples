@@ -11,6 +11,8 @@ namespace AnimatedModel
     {
         public Entity Knight;
 
+        public SpriteFont Font;
+
         public override void Start()
         {
             base.Start();
@@ -33,14 +35,12 @@ namespace AnimatedModel
         /// </summary>
         private Button CreateButton(string animationName)
         {
-            var font = Asset.Load<SpriteFont>("Font");
-
             var idleButton = new Button
             {
                 Content = new TextBlock
                 {
                     Text = "Play " + animationName,
-                    Font = font,
+                    Font = Font,
                 },
                 Padding = new Thickness(10, 10, 10, 10),
                 Margin = new Thickness(0, 0, 0, 10),

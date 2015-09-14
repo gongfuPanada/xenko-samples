@@ -1,0 +1,10 @@
+!ColliderShapeAsset
+Id: 77a32831-fdf3-41b4-9443-751500fcbc10
+SerializedVersion: 2
+Tags: []
+ColliderShapes:
+    - !BoxColliderShapeDesc
+        Is2D: true
+        Size: {X: 1.5, Y: 2.0, Z: 1.0}
+        LocalOffset: {X: 0.0, Y: 1.2, Z: 0.0}
+        LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}

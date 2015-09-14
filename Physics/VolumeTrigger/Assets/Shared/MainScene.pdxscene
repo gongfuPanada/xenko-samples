@@ -1,0 +1,251 @@
+!SceneAsset
+Id: a5a4f13e-6366-43de-b071-a87c1dfff115
+SerializedVersion: 18
+Tags: []
+Hierarchy:
+    RootEntities:
+        - f230b77a-bd6f-40d2-9e98-dbba399c378e
+        - 4946b032-53e8-4029-b72c-4396af3b286d
+        - b0299af4-0f94-47f0-8d94-e87d157024c5
+        - ac49496b-7acd-4932-b129-f4910d826193
+        - cfe82ef3-b615-435c-a9b6-15793dca565d
+        - 6fbecf2d-872c-440c-b482-07802dcefdbb
+    Entities:
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                    TransformComponent.Key:
+                        Position: {X: -2.91726849E-07, Y: 6.42956066, Z: 1.71420014}
+                        Rotation: {W: 0.8735308, X: -0.486768842, Y: 1.24023583E-08, Z: 6.911128E-09}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Player
+                Components:
+                    ModelComponent.Key:
+                        Model: 9fab8da2-f2c8-4586-9435-20d8fad479e2:Player
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !CharacterElement
+                                CollisionGroup: CharacterFilter
+                                CanCollideWith: DefaultFilter, SensorTrigger
+                                ProcessCollisions: true
+                                ColliderShapes:
+                                    - !CapsuleColliderShapeDesc
+                                        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                        LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.Player,VolumeTrigger.Game
+                                Id: 29b4149c-5839-45a4-9ee8-2d2581c5555b
+                    TransformComponent.Key:
+                        Position: {X: -1.4066571, Y: 1.463115, Z: 0.295679569}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.7841593, Y: 1.7841593, Z: 1.7841593}
+                        Children:
+                            -   Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
+                                Component: TransformComponent.Key
+                Id: 4946b032-53e8-4029-b72c-4396af3b286d
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ball
+                Components:
+                    ModelComponent.Key:
+                        Model: ad7e799e-d4fa-4bc2-8e00-49bf70e31434:Ball
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: DefaultFilter, CharacterFilter
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: true
+                                ColliderShapes:
+                                    - !SphereColliderShapeDesc
+                                        Is2D: false
+                                        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    TransformComponent.Key:
+                        Position: {X: -0.9338299, Y: 3.848303, Z: -8.915528}
+                        Rotation: {W: 0.918539345, X: 0.0, Y: 0.0, Z: 0.3953296}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6fbecf2d-872c-440c-b482-07802dcefdbb
+            Design:
+                Folder: null
+        -   Entity:
+                Name: TestBox
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !RigidbodyElement
+                                CollisionGroup: SensorTrigger
+                                CanCollideWith: DefaultFilter
+                                ProcessCollisions: true
+                                NodeName: null
+                                IsKinematic: false
+                                ColliderShapes:
+                                    - !BoxColliderShapeDesc
+                                        Is2D: false
+                                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                        LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    TransformComponent.Key:
+                        Position: {X: -2.760604, Y: 3.59645224, Z: -7.90128946}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
+                        Children: []
+                Id: ac49496b-7acd-4932-b129-f4910d826193
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf {}
+                                Size: XLarge
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 4.0
+                    TransformComponent.Key:
+                        Position: {X: -0.5946913, Y: 1.40200758, Z: -2.42663574}
+                        Rotation: {W: 0.742511451, X: -0.569751441, Y: 0.1918805, Z: -0.2953674}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: b0299af4-0f94-47f0-8d94-e87d157024c5
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Trigger
+                Components:
+                    ModelComponent.Key:
+                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Materials:
+                            - f84ecda4-e4cc-4ad2-89ec-12ef6401b7d0:Material (2)
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !VolumeTrigger.Trigger,VolumeTrigger.Game
+                                Id: cee46d5d-507b-4060-9f85-b53ba7134ac7
+                                StartLocation: {X: -1.449, Y: 3.304, Z: -8.916}
+                                TestBox:
+                                    Id: ac49496b-7acd-4932-b129-f4910d826193
+                                TriggeredEntity:
+                                    Id: 6fbecf2d-872c-440c-b482-07802dcefdbb
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !TriggerElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: KinematicFilter, SensorTrigger, CharacterFilter
+                                ProcessCollisions: true
+                                ColliderShapes:
+                                    - !BoxColliderShapeDesc
+                                        Is2D: false
+                                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                        LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                        LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                    TransformComponent.Key:
+                        Position: {X: -1.5028646, Y: 1.92906213, Z: -8.50859451}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 7.190572, Y: 0.434939742, Z: 4.181841}
+                        Children: []
+                Id: cfe82ef3-b615-435c-a9b6-15793dca565d
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ground
+                Components:
+                    ModelComponent.Key:
+                        Model: 6993a85b-a9ab-4c74-89d3-5643c2d48cba:Ground
+                        Materials:
+                            - null
+                    PhysicsComponent.Key:
+                        Elements:
+                            - !StaticColliderElement
+                                CollisionGroup: DefaultFilter
+                                CanCollideWith: DefaultFilter, SensorTrigger, CharacterFilter
+                                ProcessCollisions: true
+                                ColliderShapes:
+                                    - !StaticPlaneColliderShapeDesc
+                                        Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                        Offset: 0.0
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: f230b77a-bd6f-40d2-9e98-dbba399c378e
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.2790703, G: 0.3313535, B: 0.425249964, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeHDRSettings
+                BackgroundColor: {R: 0.480495, G: 0.480495, B: 0.480495}
+                PostProcessingEffects:
+                    Camera:
+                        Index: 0
+                    DepthOfField:
+                        Enabled: false
+                        DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                    BrightFilter:
+                        Color: {R: 1.0, G: 1.0, B: 1.0}
+                    Bloom:
+                        Enabled: false
+                        Distortion: {X: 1.0, Y: 1.0}
+                        Afterimage:
+                            Enabled: false
+                    LightStreak:
+                        Enabled: false
+                        Attenuation: 0.7
+                    LensFlare:
+                        Enabled: false
+                    ColorTransforms:
+                        Transforms:
+                            - !ToneMap
+                                Operator: !ToneMapHejlDawsonOperator {}
+                            - !FilmGrain
+                                Enabled: false
+                            - !Vignetting
+                                Enabled: false
+                                Color: {R: 0.0, G: 0.0, B: 0.0}
+                    Antialiasing: !FXAAEffect {}
