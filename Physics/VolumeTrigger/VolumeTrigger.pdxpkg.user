@@ -7,8 +7,8 @@ Settings:
     Package/Scene/Camera/Projection: Perspective
     Package/Scene/Camera/VerticalFieldOfView: 45.0
     Package/Scene/CameraPreviewVisible: true
-    Package/Scene/CamPitchYaw: {X: -0.56147337, Y: -0.00276362244}
-    Package/Scene/CamPosition: {X: 0.3791452, Y: 11.2409449, Z: 1.19180632}
+    Package/Scene/CamPitchYaw: {X: -1.22647119, Y: 1.30752325}
+    Package/Scene/CamPosition: {X: 6.983843, Y: 17.3496189, Z: -10.04977}
     Package/Scene/ComponentGizmoSize: 1.0
     Package/Scene/FixedSizeGizmos: false
     Package/Scene/GridVisible: true

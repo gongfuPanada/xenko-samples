@@ -13,7 +13,7 @@ namespace VolumeTrigger
 {
     public class Player : SyncScript
     {
-        private const float speed = 0.5f;
+        private const float speed = 0.25f;
         private Character character;
 
         public override void Start()
@@ -26,24 +26,44 @@ namespace VolumeTrigger
             }
         }
 
+        private Vector3 pointerVector;
+
         public override void Update()
         {
             var move = new Vector3();
-            if (Input.IsKeyDown(Keys.W))
+
+            if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
             {
-                move -= Vector3.UnitZ;
+                move = -Vector3.UnitX;
             }
-            if (Input.IsKeyDown(Keys.A))
-            {
-                move -= Vector3.UnitX;
-            }
-            if (Input.IsKeyDown(Keys.S))
-            {
-                move = Vector3.UnitZ * 0.25f;
-            }
-            if (Input.IsKeyDown(Keys.D))
+            if (Input.IsKeyDown(Keys.D) || Input.IsKeyDown(Keys.Right))
             {
                 move = Vector3.UnitX;
+            }
+
+            if (Input.PointerEvents.Any())
+            {
+                var last = Input.PointerEvents.Last();
+                if (last != null && last.State == PointerState.Down)
+                {
+                    if (last.Position.X < 0.5)
+                    {
+                        pointerVector = -Vector3.UnitX;
+                    }
+                    else
+                    {
+                        pointerVector = Vector3.UnitX;
+                    }
+                }
+                else if (last != null && last.State == PointerState.Up)
+                {
+                    pointerVector = Vector3.Zero;
+                }
+            }
+
+            if (pointerVector != Vector3.Zero)
+            {
+                move = pointerVector;
             }
 
             move *= speed;

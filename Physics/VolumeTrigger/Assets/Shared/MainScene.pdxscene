@@ -25,7 +25,7 @@ Hierarchy:
                     CameraComponent.Key:
                         Projection: Perspective
                     TransformComponent.Key:
-                        Position: {X: -2.91726849E-07, Y: 1.35450363, Z: 2.69693661}
+                        Position: {X: -2.91726849E-07, Y: 1.35450363, Z: 3.681111}
                         Rotation: {W: 0.989579, X: -0.143991053, Y: 9.130449E-09, Z: 1.08727676E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -118,7 +118,7 @@ Hierarchy:
                             - !VolumeTrigger.Player,VolumeTrigger.Game
                                 Id: 29b4149c-5839-45a4-9ee8-2d2581c5555b
                     TransformComponent.Key:
-                        Position: {X: 0.0, Y: 1.463115, Z: 0.295679569}
+                        Position: {X: -6.003331, Y: 1.463115, Z: -6.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.7841593, Y: 1.7841593, Z: 1.7841593}
                         Children:
@@ -366,7 +366,7 @@ Hierarchy:
                                         LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                         LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                     TransformComponent.Key:
-                        Position: {X: 0.0, Y: 0.7304367, Z: -6.187798}
+                        Position: {X: 0.0, Y: 0.7304367, Z: -6.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 7.190572, Y: 2.02149439, Z: 4.181841}
                         Children: []
