@@ -1,0 +1,11 @@
+!SpriteStudioSheetAsset
+Id: cccab13c-4f51-4684-a840-9a7539c1ca25
+Tags: []
+Source: ../../RawAssets/character_template_3head_attack3.ssax
+SourceHash: 41e8c7c9830aa530249e0493eafab8cf
+~Base:
+    Location: --import--
+    Asset: !SpriteStudioSheetAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806

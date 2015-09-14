@@ -1,0 +1,13 @@
+!SpriteStudioAnimationAsset
+Id: 591a3ef2-3949-4091-b9dd-7579a4813cc4
+Tags: []
+Source: ../../RawAssets/character_template_3head_run.ssax
+SourceHash: e9fb62c0d0b6539f057875710ef7bc7c
+RepeatMode: LoopInfinite
+~Base:
+    Location: --import--
+    Asset: !SpriteStudioAnimationAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
+        RepeatMode: LoopInfinite

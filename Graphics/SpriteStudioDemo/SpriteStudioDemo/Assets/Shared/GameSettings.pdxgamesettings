@@ -1,0 +1,9 @@
+!GameSettingsAsset
+Id: 0c348282-d28d-4932-9472-0416d131c04d
+Tags: []
+DefaultScene: d23da80d-8ef3-4400-9f16-190a9c6bd3b3:SpriteEntityScene
+BackBufferWidth: 1280
+BackBufferHeight: 720
+DefaultGraphicsProfile: Level_9_1
+DisplayOrientation: LandscapeRight
+TextureQuality: Fast
