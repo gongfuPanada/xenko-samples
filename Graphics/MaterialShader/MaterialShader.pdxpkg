@@ -40,12 +40,4 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets:
-    - 1fb9dd96-60a5-4cf7-8f88-9f19ae9a79cd:ParadoxBackground
-    - 37cec762-997c-4784-8eb3-f316edf2e1f5:MaterialShader.Game/Effects/ComputeColorWaveNormal
-    - 464c09a2-9713-4e16-a777-68a70ac4b762:Material
-    - 60df9819-97fa-4b70-84a8-3aa97b522349:MaterialShader.Game/Properties/AssemblyInfo
-    - 877bd450-9cd3-48ce-b612-97e7545a5e1f:Scene
-    - cf4307e5-6777-45f0-9e86-df1eab4aadfd:MaterialShader.Game/Effects/ComputeColorWave
-    - cf86f347-318b-4943-a63b-69e56fa56c09:water
-    - fc976b30-8fd5-4b7c-bb45-c1acc1e3f508:PlaneModel
+RootAssets: []
