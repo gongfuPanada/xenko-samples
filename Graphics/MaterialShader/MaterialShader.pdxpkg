@@ -1,5 +1,5 @@
 !Package
-Id: 29b9ffc0-cd74-404b-99eb-d2943d1d133d
+Id: 49e75772-2004-4975-a2ca-fac7fcb12e70
 SerializedVersion: 1
 Tags: []
 Meta:
@@ -22,7 +22,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: cbdaf756-3f4a-4cac-975d-a76a2b196a01
+            -   Id: b77b0b3f-c7fc-401e-a289-73be6aebb49e
                 Location: MaterialShader.Game/MaterialShader.Game.csproj
                 Type: Library
     -   Name: Windows
@@ -34,18 +34,18 @@ Profiles:
         Properties:
             Paradox.GraphicsPlatform: Direct3D11
         ProjectReferences:
-            -   Id: 0bd87b72-191d-4f53-abf7-a1b3b8a092ae
+            -   Id: f4f74eb3-d2b6-405b-b483-1835e81a3a40
                 Location: MaterialShader.Windows/MaterialShader.Windows.csproj
                 Type: Executable
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
 RootAssets:
-    - 41bc08b1-d7db-4466-8661-663be2db1dbf:Scene
-    - 46859e92-96ad-4466-a0ed-a16f85780b32:Material
-    - 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
-    - 73a678b3-1b69-437f-a447-29d9b473864c:water
-    - ecd4cd88-9e09-3b62-d661-f625919eb226:MaterialShader.Game/Properties/AssemblyInfo
-    - f48790de-bd5a-4f83-a71b-a6a559dcb698:ParadoxBackground
-    - f5523f55-7acd-05dc-6a2d-b49a42f195cc:MaterialShader.Game/Effects/ComputeColorWave
-    - fabe58ea-64df-41db-0d44-18a007c596c6:MaterialShader.Game/Effects/ComputeColorWaveNormal
+    - 1fb9dd96-60a5-4cf7-8f88-9f19ae9a79cd:ParadoxBackground
+    - 37cec762-997c-4784-8eb3-f316edf2e1f5:MaterialShader.Game/Effects/ComputeColorWaveNormal
+    - 464c09a2-9713-4e16-a777-68a70ac4b762:Material
+    - 60df9819-97fa-4b70-84a8-3aa97b522349:MaterialShader.Game/Properties/AssemblyInfo
+    - 877bd450-9cd3-48ce-b612-97e7545a5e1f:Scene
+    - cf4307e5-6777-45f0-9e86-df1eab4aadfd:MaterialShader.Game/Effects/ComputeColorWave
+    - cf86f347-318b-4943-a63b-69e56fa56c09:water
+    - fc976b30-8fd5-4b7c-bb45-c1acc1e3f508:PlaneModel

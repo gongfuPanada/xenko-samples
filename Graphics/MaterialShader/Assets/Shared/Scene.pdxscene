@@ -1,5 +1,5 @@
 !SceneAsset
-Id: 41bc08b1-d7db-4466-8661-663be2db1dbf
+Id: 877bd450-9cd3-48ce-b612-97e7545a5e1f
 SerializedVersion: 18
 Tags: []
 Hierarchy:
@@ -10,10 +10,10 @@ Hierarchy:
         - d62e02cb-f3fc-43ae-b6aa-07eccae98182
     Entities:
         -   Entity:
-                Name: SphereModel
+                Name: Plane
                 Components:
                     ModelComponent.Key:
-                        Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
+                        Model: fc976b30-8fd5-4b7c-bb45-c1acc1e3f508:PlaneModel
                         Materials:
                             - null
                     TransformComponent.Key:
@@ -62,7 +62,7 @@ Hierarchy:
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
-                        Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:ParadoxBackground
+                        Texture: 1fb9dd96-60a5-4cf7-8f88-9f19ae9a79cd:ParadoxBackground
                     TransformComponent.Key:
                         Position: {X: 0.588626, Y: 0.161487773, Z: -1.1080513}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}

@@ -40,10 +40,4 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets:
-    - 4b0f48d8-839e-4c71-8ca5-fc72e88cb68a:Bkg
-    - 58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
-    - 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
-    - 7946c040-eeda-424d-a2f5-3ede14470c1a:Bullet_CS
-    - d23da80d-8ef3-4400-9f16-190a9c6bd3b3:SpriteEntityScene
-    - fba79776-e90e-42eb-ac60-a137b2e7378d:SpriteSheet
+RootAssets: []

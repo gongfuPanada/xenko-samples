@@ -44,21 +44,6 @@ UsedParameters:
                         Name: null
                     - !ShaderMixinSource
                         Compositions:
-                            metalnessMap: !ShaderClassSource
-                                ClassName: ComputeColorTextureScaledOffsetDynamicSampler
-                                GenericArguments:
-                                    - Material.MetalnessMap
-                                    - TEXCOORD0
-                                    - Material.Sampler.i0
-                                    - r
-                                    - Material.TextureScale.i1
-                                    - Material.TextureOffset.i1
-                        Macros: []
-                        Mixins:
-                            -   ClassName: MaterialSurfaceMetalness
-                        Name: null
-                    - !ShaderMixinSource
-                        Compositions:
                             surfaces: !ShaderArraySource
                                 Values:
                                     - !ShaderClassSource
