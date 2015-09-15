@@ -1,7 +1,7 @@
 !GameSettingsAsset
 Id: 87d42653-0603-4da6-be26-7ea6544f959f
 Tags: []
-DefaultScene: 41bc08b1-d7db-4466-8661-663be2db1dbf:Scene
+DefaultScene: 877bd450-9cd3-48ce-b612-97e7545a5e1f:Scene
 BackBufferWidth: 1280
 BackBufferHeight: 720
 DefaultGraphicsProfile: Level_10_0
