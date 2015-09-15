@@ -59,10 +59,14 @@ namespace SpriteStudioDemo
         private AgentAnimation currentAgentAnimation;
 
         private AgentAnimation CurrentAgentAnimation { get; set; }
+		
+		public SpriteSheet BulletSheet { get; set; }
+		
+		public PhysicsColliderShape BulletColliderShape { get; set; }
 
         public override async Task Execute()
         {
-            spriteSheet = Asset.Load<SpriteSheet>("SpriteSheet");
+            spriteSheet = BulletSheet;
             agentSpriteComponent = Entity.Get<SpriteComponent>();
             var animComponent = Entity.Get<AnimationComponent>();
             PlayingAnimation playingAnimation = null;
@@ -81,7 +85,7 @@ namespace SpriteStudioDemo
 
             var normalScaleX = Entity.Transform.Scale.X;
 
-            var bulletCS = Asset.Load<PhysicsColliderShape>("Bullet_CS");
+            var bulletCS = BulletColliderShape;
 
             while (Game.IsRunning)
             {

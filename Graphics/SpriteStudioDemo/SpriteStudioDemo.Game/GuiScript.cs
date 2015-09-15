@@ -12,9 +12,11 @@ namespace SpriteStudioDemo
     /// </summary>
     public class GuiScript : StartupScript
     {
+		public SpriteFont Font { get; set; }
+		
         public override void Start()
         {
-            var font = Asset.Load<SpriteFont>("Font");
+            var font = Font;
             var textBlock = new TextBlock
             {
                 Font = font,

@@ -108,6 +108,8 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.PlayerScript,SpriteStudioDemo.Game
+                                BulletColliderShape: 7946c040-eeda-424d-a2f5-3ede14470c1a:Bullet_CS
+                                BulletSheet: fba79776-e90e-42eb-ac60-a137b2e7378d:SpriteSheet
                                 Id: 018ca6a8-c34d-4b93-9901-3c685336a2f0
                     TransformComponent.Key:
                         Position: {X: -6.616724, Y: -1.06623185, Z: 0.0}
@@ -123,6 +125,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.GuiScript,SpriteStudioDemo.Game
+                                Font: 58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
                                 Id: c21d3a58-43c4-4b22-99a1-d932a8b9c338
                     UIComponent.Key:
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
