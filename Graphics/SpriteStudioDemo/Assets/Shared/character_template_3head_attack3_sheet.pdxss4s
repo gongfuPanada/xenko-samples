@@ -2,7 +2,7 @@
 Id: cccab13c-4f51-4684-a840-9a7539c1ca25
 Tags: []
 Source: ../../RawAssets/character_template_3head_attack3.ssax
-SourceHash: 41e8c7c9830aa530249e0493eafab8cf
+SourceHash: de4bf3e37f1bb889db531ab6730d006c
 ~Base:
     Location: --import--
     Asset: !SpriteStudioSheetAsset

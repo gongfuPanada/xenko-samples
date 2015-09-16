@@ -2,7 +2,7 @@
 Id: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259
 Tags: []
 Source: ../../RawAssets/character_template_2head_wait.ssax
-SourceHash: 7de09cb1f9da02808618bc95a4bd78a3
+SourceHash: dc49725b29b53e60b747cc4959dd96b9
 RepeatMode: LoopInfinite
 ~Base:
     Location: --import--
