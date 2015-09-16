@@ -19,6 +19,15 @@ namespace SiliconStudio.Paradox.Rendering
     public static partial class VertexTextureTerrainKeys
     {
         public static readonly ParameterKey<SamplerState> MeshTextureSampler = ParameterKeys.New<SamplerState>();
+        public static readonly ParameterKey<float> MinimumHeight0 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> OptimalHeight0 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> MaximumHeight0 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> MinimumHeight1 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> OptimalHeight1 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> MaximumHeight1 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> MinimumHeight2 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> OptimalHeight2 = ParameterKeys.New<float>();
+        public static readonly ParameterKey<float> MaximumHeight2 = ParameterKeys.New<float>();
         public static readonly ParameterKey<Texture> MeshTexture0 = ParameterKeys.New<Texture>();
         public static readonly ParameterKey<Texture> MeshTexture1 = ParameterKeys.New<Texture>();
         public static readonly ParameterKey<Texture> MeshTexture2 = ParameterKeys.New<Texture>();

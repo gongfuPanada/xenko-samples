@@ -7,21 +7,17 @@
 		AddressV = Wrap;
 	};
 
-    struct TerrainRegion
-    {
-        float MinimumHeight;
-        float OptimalHeight;
-        float MaximumHeight;    
-    };
+    stage float MinimumHeight0;
+    stage float OptimalHeight0;
+    stage float MaximumHeight0; 
 
-	[Link("TerrainRegion.TerrainRegion0")]
-    stage TerrainRegion RegionTerrain0;
+    stage float MinimumHeight1;
+    stage float OptimalHeight1;
+    stage float MaximumHeight1;
 
-	[Link("TerrainRegion.TerrainRegion1")]
-    stage TerrainRegion RegionTerrain1;
-
-	[Link("TerrainRegion.TerrainRegion2")]
-    stage TerrainRegion RegionTerrain2;
+    stage float MinimumHeight2;
+    stage float OptimalHeight2;
+    stage float MaximumHeight2;
 
     stage stream float Texture0InfluenceFactor;
     stage stream float Texture1InfluenceFactor;
@@ -33,22 +29,23 @@
 
     stage stream float2 TexCoord : TEXCOORD0;
 
-	float CalculateInfluenceFactor(float height, TerrainRegion terrainRegion)
+	float CalculateInfluenceFactor(float height, float minimumHeight, float optimalHeight, float maximumHeight)
     {
-	    if( height < terrainRegion.MinimumHeight || height > terrainRegion.MaximumHeight ) return 0.0f;
+	    if (height < minimumHeight || height > maximumHeight)
+            return 0.0f;
 
-		return (height > terrainRegion.OptimalHeight) 
-		  ? 1.0f - (height - terrainRegion.OptimalHeight)/(terrainRegion.MaximumHeight - terrainRegion.OptimalHeight)
-		  : (height - terrainRegion.MinimumHeight)/(terrainRegion.OptimalHeight - terrainRegion.MinimumHeight);
+		return (height > optimalHeight) 
+		  ? 1.0f - (height - optimalHeight)/(maximumHeight - optimalHeight)
+		  : (height - minimumHeight)/(optimalHeight - minimumHeight);
     }
 
     stage override void PreTransformPosition()
     {
         base.PreTransformPosition();
 
-		streams.Texture0InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, RegionTerrain0);
-        streams.Texture1InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, RegionTerrain1);
-        streams.Texture2InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, RegionTerrain2);
+		streams.Texture0InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, MinimumHeight0, OptimalHeight0, MaximumHeight0);
+        streams.Texture1InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, MinimumHeight1, OptimalHeight1, MaximumHeight1);
+        streams.Texture2InfluenceFactor = CalculateInfluenceFactor(streams.Position.y, MinimumHeight2, OptimalHeight2, MaximumHeight2);
     }
 
     override float4 Compute()

@@ -492,6 +492,19 @@ namespace SimpleTerrain
             TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MeshTexture1, GrassTexture);
             TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MeshTexture2, MountainTexture);
 
+            // Set up material regions
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MinimumHeight0, -10);
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.OptimalHeight0, 40);
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MaximumHeight0, 70);
+
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MinimumHeight1, 60);
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.OptimalHeight1, 80);
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MaximumHeight1, 90);
+
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MinimumHeight2, 85);
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.OptimalHeight2, 95);
+            TerrainMaterial.Parameters.Set(VertexTextureTerrainKeys.MaximumHeight2, 125);
+
             terrainMesh = new Mesh { Draw = meshDraw, MaterialIndex = 0 };
             TerrainEntity.GetOrCreate<ModelComponent>().Model = new Model { terrainMesh, TerrainMaterial };
         }
@@ -679,22 +692,6 @@ namespace SimpleTerrain
         /// Gets or sets a texture coordinate of a vertex
         /// </summary>
         public Vector2 TextureCoordinate;
-    }
-
-    public static class TerrainRegionKeys
-    {
-        [StructLayout(LayoutKind.Sequential, Pack = 4)]
-        public struct TerrainRegion
-        {
-            public float MinimumHeight;
-            public float OptimalHeight;
-            public float MaximumHeight;
-            public float Padding;
-        }
-
-        public static readonly ParameterKey<TerrainRegion> TerrainRegion0 = ParameterKeys.New(new TerrainRegion { MinimumHeight = -10, OptimalHeight = 40, MaximumHeight = 70 });
-        public static readonly ParameterKey<TerrainRegion> TerrainRegion1 = ParameterKeys.New(new TerrainRegion { MinimumHeight = 60, OptimalHeight = 80, MaximumHeight = 90 });
-        public static readonly ParameterKey<TerrainRegion> TerrainRegion2 = ParameterKeys.New(new TerrainRegion { MinimumHeight = 85, OptimalHeight = 95, MaximumHeight = 125 });
     }
 }
 
