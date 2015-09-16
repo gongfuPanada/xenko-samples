@@ -33,7 +33,7 @@ namespace SimpleTerrain
 
         // Terrain Parameters
         private const int MinTerrainSizePowerFactor = 2;
-        private const int MaxTerrainSizePowerFactor = 9;
+        private const int MaxTerrainSizePowerFactor = 8;
 
         private Mesh terrainMesh;           // Update a number of element to draw
         private Buffer terrainVertexBuffer; // Set Vertex Buffer on the fly
@@ -42,8 +42,8 @@ namespace SimpleTerrain
         // Fault formation algorithm Parameters
         private int terrainSizePowerFactor = MaxTerrainSizePowerFactor;
         private int iterationPowerFactor = 5;
-        private float filterHeightBandStrength = 0.7f;
-        private float terrainHeightScale = 200f;
+        private float filterHeightBandStrength = 0.5f;
+        private float terrainHeightScale = 100f;
 
         // Camera Parameters
         private Vector3 cameraStartPosition;
@@ -150,16 +150,23 @@ namespace SimpleTerrain
             parametersGrid.ColumnDefinitions.Add(new StripDefinition(StripType.Fixed, 30));
 
             // Terrain Size
-            var terrainSizeText = new TextBlock { Font = Font, Text = "" + (int)Math.Pow(2, terrainSizePowerFactor), TextAlignment = TextAlignment.Center, 
-                VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center, MinimumWidth = 60};
+            var terrainSizeText = new TextBlock
+            {
+                Font = Font,
+                Text = "" + (int)Math.Pow(2, terrainSizePowerFactor),
+                TextAlignment = TextAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                MinimumWidth = 60
+            };
             terrainSizeText.SetGridRow(0);
             terrainSizeText.SetGridColumn(1);
 
-            var terrainSizeIncButton = new Button { Content = new TextBlock { Text = "+", Font = Font, TextAlignment = TextAlignment.Center} };
+            var terrainSizeIncButton = new Button { Content = new TextBlock { Text = "+", Font = Font, TextAlignment = TextAlignment.Center } };
             terrainSizeIncButton.SetGridRow(0);
             terrainSizeIncButton.SetGridColumn(3);
-            
-            var terrainSizeDecButton = new Button { Content = new TextBlock { Text = "-", Font = Font, TextAlignment = TextAlignment.Center} };
+
+            var terrainSizeDecButton = new Button { Content = new TextBlock { Text = "-", Font = Font, TextAlignment = TextAlignment.Center } };
             terrainSizeDecButton.SetGridRow(0);
             terrainSizeDecButton.SetGridColumn(2);
 
@@ -177,7 +184,9 @@ namespace SimpleTerrain
 
             var terrainSizeDescription = new TextBlock
             {
-                Font = Font, Text = "Terrain Size:", TextAlignment = TextAlignment.Center,
+                Font = Font,
+                Text = "Terrain Size:",
+                TextAlignment = TextAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Left
             };
@@ -191,8 +200,14 @@ namespace SimpleTerrain
             parametersGrid.Children.Add(terrainSizeIncButton);
 
             // Iteration
-            var iterationText = new TextBlock { Font = Font, Text = "" + (int)Math.Pow(2, IterationPowerFactor), TextAlignment = TextAlignment.Center, 
-                VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center};
+            var iterationText = new TextBlock
+            {
+                Font = Font,
+                Text = "" + (int)Math.Pow(2, IterationPowerFactor),
+                TextAlignment = TextAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
 
             iterationText.SetGridRow(1);
             iterationText.SetGridColumn(1);
@@ -201,7 +216,7 @@ namespace SimpleTerrain
             iterationIncButton.SetGridRow(1);
             iterationIncButton.SetGridColumn(3);
 
-            var iterationDecButton = new Button { Content = new TextBlock { Text = "-", Font = Font, TextAlignment = TextAlignment.Center} };
+            var iterationDecButton = new Button { Content = new TextBlock { Text = "-", Font = Font, TextAlignment = TextAlignment.Center } };
             iterationDecButton.SetGridRow(1);
             iterationDecButton.SetGridColumn(2);
 
@@ -235,8 +250,14 @@ namespace SimpleTerrain
             parametersGrid.Children.Add(iterationIncButton);
 
             // Filter Intensity
-            var filterIntensityText = new TextBlock { Font = Font, Text = "" + FilterHeightBandStrength, TextAlignment = TextAlignment.Center, 
-                VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center};
+            var filterIntensityText = new TextBlock
+            {
+                Font = Font,
+                Text = "" + FilterHeightBandStrength,
+                TextAlignment = TextAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
 
             filterIntensityText.SetGridRow(2);
             filterIntensityText.SetGridColumn(1);
@@ -279,8 +300,14 @@ namespace SimpleTerrain
             parametersGrid.Children.Add(filterIncButton);
 
             // Height Scale
-            var heightScaleText = new TextBlock { Font = Font, Text = "" + TerrainHeightScale, TextAlignment = TextAlignment.Center, 
-                VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center};
+            var heightScaleText = new TextBlock
+            {
+                Font = Font,
+                Text = "" + TerrainHeightScale,
+                TextAlignment = TextAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
 
             heightScaleText.SetGridRow(3);
             heightScaleText.SetGridColumn(1);
@@ -400,7 +427,7 @@ namespace SimpleTerrain
             {
                 Children =
                 {
-                    new TextBlock { Font = Font, Text = "Fault formation parameters", TextSize = 19}, 
+                    new TextBlock { Font = Font, Text = "Fault formation parameters", TextSize = 19},
                     parametersGrid,
                     wireFrameToggleButton,
                     lightToggleButton,
@@ -408,21 +435,26 @@ namespace SimpleTerrain
                 }
             };
 
-            var activeButton = new Button { Content = new TextBlock{ Text = "Description Off", Font = Font }, 
-                Padding = new Thickness(10,10,10,10), Margin = new Thickness(0,0,0,20), HorizontalAlignment = HorizontalAlignment.Left};
+            var activeButton = new Button
+            {
+                Content = new TextBlock { Text = "Description Off", Font = Font },
+                Padding = new Thickness(10, 10, 10, 10),
+                Margin = new Thickness(0, 0, 0, 20),
+                HorizontalAlignment = HorizontalAlignment.Left
+            };
 
             var isDescriptionOn = true;
 
             activeButton.Click += (s, e) =>
-                {
-                    isDescriptionOn = !isDescriptionOn;
-                    ((TextBlock)activeButton.Content).Text = isDescriptionOn ? "Description Off" : "Description On";
-                    descriptionCanvas.Visibility = isDescriptionOn ? Visibility.Visible : Visibility.Collapsed;
-                };
+            {
+                isDescriptionOn = !isDescriptionOn;
+                ((TextBlock)activeButton.Content).Text = isDescriptionOn ? "Description Off" : "Description On";
+                descriptionCanvas.Visibility = isDescriptionOn ? Visibility.Visible : Visibility.Collapsed;
+            };
 
-            var buttonDescription = new StackPanel { Orientation = Orientation.Vertical, Children = {activeButton, descriptionCanvas }};
+            var buttonDescription = new StackPanel { Orientation = Orientation.Vertical, Children = { activeButton, descriptionCanvas } };
 
-            UIEntity.Add(UIComponent.Key, new UIComponent { RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } }, VirtualResolution = virtualResolution } ); 
+            UIEntity.Add(UIComponent.Key, new UIComponent { RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } }, VirtualResolution = virtualResolution });
         }
 
         private void UpdateCamera()
@@ -441,7 +473,7 @@ namespace SimpleTerrain
             // Compute sizes
             var vertexDeclaration = VertexNormalTexture.VertexDeclaration;
             var vertexBufferSize = verticesCount * vertexDeclaration.CalculateSize();
-            var indexBufferSize = indicesCount * sizeof(int);
+            var indexBufferSize = indicesCount * sizeof(short);
 
             // Create Vertex and Index buffers
             terrainVertexBuffer = Buffer.Vertex.New(GraphicsDevice, vertexBufferSize, GraphicsResourceUsage.Dynamic);
@@ -452,7 +484,7 @@ namespace SimpleTerrain
             {
                 PrimitiveType = PrimitiveType.TriangleStrip,
                 VertexBuffers = new[] { new VertexBufferBinding(terrainVertexBuffer, vertexDeclaration, verticesCount) },
-                IndexBuffer = new IndexBufferBinding(terrainIndexBuffer, true, indicesCount),
+                IndexBuffer = new IndexBufferBinding(terrainIndexBuffer, false, indicesCount),
             };
 
             // Load the material and set parameters
@@ -544,20 +576,20 @@ namespace SimpleTerrain
         /// <returns></returns>
         private static unsafe int SetIndexDataForTerrain(int size, IntPtr indexBuffer)
         {
-            var ib = (int*)indexBuffer;
+            var ib = (short*)indexBuffer;
             var currentIndex = 0;
 
             for (var iZ = 0; iZ < size - 1; ++iZ)
             {
                 for (var iX = 0; iX < size; ++iX)
                 {
-                    ib[currentIndex++] = size * iZ + iX;
-                    ib[currentIndex++] = size * (iZ + 1) + iX;
+                    ib[currentIndex++] = (short)(size * iZ + iX);
+                    ib[currentIndex++] = (short)(size * (iZ + 1) + iX);
                 }
 
                 ib[currentIndex] = ib[currentIndex - 1];
                 ++currentIndex;
-                ib[currentIndex++] = size * (iZ + 1);
+                ib[currentIndex++] = (short)(size * (iZ + 1));
             }
             return currentIndex - 1;
         }
@@ -576,7 +608,7 @@ namespace SimpleTerrain
             for (var iZ = 0; iZ < heightMap.Size; ++iZ)
                 for (var iX = 0; iX < heightMap.Size; ++iX)
                 {
-                    vb[iZ * heightMap.Size  + iX] = new VertexNormalTexture
+                    vb[iZ * heightMap.Size + iX] = new VertexNormalTexture
                     {
                         Position = new Vector4(iX - halfSize, heightMap.GetHeight(iX, iZ), -iZ + halfSize, 1),
                         Normal = GetNormalVector(heightMap, iX, iZ),
@@ -630,7 +662,7 @@ namespace SimpleTerrain
         /// <summary>
         /// Gets a declaration of Vertex attribute which consists of Position::Vector4, Normal::Vector4, TextureCoordinate::Vector2
         /// </summary>
-        public static readonly VertexDeclaration VertexDeclaration = new VertexDeclaration(VertexElement.Position<Vector4>(), 
+        public static readonly VertexDeclaration VertexDeclaration = new VertexDeclaration(VertexElement.Position<Vector4>(),
             VertexElement.Normal<Vector4>(), VertexElement.TextureCoordinate<Vector2>());
 
         /// <summary>
@@ -660,9 +692,9 @@ namespace SimpleTerrain
             public float Padding;
         }
 
-        public static readonly ParameterKey<TerrainRegion> TerrainRegion0 = ParameterKeys.New(new TerrainRegion { MinimumHeight = -20f, OptimalHeight = 80f, MaximumHeight = 135f });
-        public static readonly ParameterKey<TerrainRegion> TerrainRegion1 = ParameterKeys.New(new TerrainRegion { MinimumHeight = 120f, OptimalHeight = 160f, MaximumHeight = 180f });
-        public static readonly ParameterKey<TerrainRegion> TerrainRegion2 = ParameterKeys.New(new TerrainRegion { MinimumHeight = 170f, OptimalHeight = 190f, MaximumHeight = 250f });
+        public static readonly ParameterKey<TerrainRegion> TerrainRegion0 = ParameterKeys.New(new TerrainRegion { MinimumHeight = -10, OptimalHeight = 40, MaximumHeight = 70 });
+        public static readonly ParameterKey<TerrainRegion> TerrainRegion1 = ParameterKeys.New(new TerrainRegion { MinimumHeight = 60, OptimalHeight = 80, MaximumHeight = 90 });
+        public static readonly ParameterKey<TerrainRegion> TerrainRegion2 = ParameterKeys.New(new TerrainRegion { MinimumHeight = 85, OptimalHeight = 95, MaximumHeight = 125 });
     }
 }
 
