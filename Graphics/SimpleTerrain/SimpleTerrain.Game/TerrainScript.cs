@@ -117,7 +117,7 @@ namespace SimpleTerrain
             var maxIndicesCount = 2 * maxTerrainSize * maxTerrainSize; // each index appear on average twice since the mesh is rendered as triangle strips
             CreateTerrainModelEntity(maxVerticesCount, maxIndicesCount);
 
-            Script.AddTask(GenerateTerrain);
+            GenerateTerrain();
 
             Script.AddTask(UpdateInput);
         }
@@ -394,7 +394,7 @@ namespace SimpleTerrain
             // Re-create terrain
             var reCreateTerrainButton = new Button { Content = new TextBlock { Text = "Recreate terrain", Font = Font }, HorizontalAlignment = HorizontalAlignment.Left };
 
-            reCreateTerrainButton.Click += async (s, e) => await GenerateTerrain();
+            reCreateTerrainButton.Click += (s, e) => GenerateTerrain();
 
             var descriptionCanvas = new StackPanel
             {
@@ -492,28 +492,29 @@ namespace SimpleTerrain
 
         /// <summary>
         /// Generates new terrain and initializes it in vertex and index buffer asynchronously.
-        /// Note that, this method does not block the main thread.
         /// </summary>
         /// <returns></returns>
-        private async Task GenerateTerrain()
+        private void GenerateTerrain()
         {
-            // Show loading modal and text
-            loadingModal.Visibility = Visibility.Visible;
-            loadingTextBlock.Visibility = Visibility.Visible;
-
-            await Task.Run(() =>
+            Script.AddTask(async () =>
             {
-                var heightMap = HeightMap.GenerateFaultFormation((int)Math.Pow(2, terrainSizePowerFactor),
-                    (int)Math.Pow(2, iterationPowerFactor), 0, 256, TerrainHeightScale, filterHeightBandStrength);
+                // Show loading modal and text
+                loadingModal.Visibility = Visibility.Visible;
+                loadingTextBlock.Visibility = Visibility.Visible;
+
+                var heightMap = await Task.Run(() =>
+                {
+                    return HeightMap.GenerateFaultFormation((int)Math.Pow(2, terrainSizePowerFactor),
+                        (int)Math.Pow(2, iterationPowerFactor), 0, 256, TerrainHeightScale, filterHeightBandStrength);
+                });
 
                 InitializeBuffersFromTerrain(heightMap);
-
                 TerrainEntity.Transform.Position = new Vector3(0, -heightMap.MedianHeight, 0);
+
+                // Dismiss loading modal and text
+                loadingModal.Visibility = Visibility.Collapsed;
+                loadingTextBlock.Visibility = Visibility.Collapsed;
             });
-            
-            // Dismiss loading modal and text
-            loadingModal.Visibility = Visibility.Collapsed;
-            loadingTextBlock.Visibility = Visibility.Collapsed;
         }
 
         /// <summary>
