@@ -5,7 +5,7 @@ Scope: Session
 Description: Creates a sample project which shows how to use Sprite Studio integration
 FullDescription: This sample shows how to use Sprite Studio assets and animations in a 2D simple game
 Group: Samples/Graphics
-Icon: ../.pdxtpl/NewGraphics.png
+Icon: .pdxtpl/Icon.png
 DefaultOutputName: SpriteStudioDemo
 Screenshots:
     - .pdxtpl/screenshot1_small.jpg
