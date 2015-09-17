@@ -5,7 +5,7 @@ Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeFloat
-            Value: 0.4
+            Value: 0.2
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
             Texture: e32445c3-dded-432a-b5d0-46f18778b6a5:mc_01
@@ -18,7 +18,7 @@ Attributes:
         SpecularMap: !ComputeColor
             Value: {R: 0.9, G: 0.9, B: 0.9, A: 1.0}
         Intensity: !ComputeFloat
-            Value: 0.8
+            Value: 0.02
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
