@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SpriteStudioDemo
+namespace SpriteStudioDemo9
 {
     public class PlayerScript : AsyncScript
     {
@@ -87,6 +87,8 @@ namespace SpriteStudioDemo
 
             var bulletCS = BulletColliderShape;
 
+            Task animTask = null;
+
             while (Game.IsRunning)
             {
                 await Script.NextFrame();
@@ -123,6 +125,11 @@ namespace SpriteStudioDemo
                 }
                 else if (inputState == InputState.Shoot)
                 {
+                    if(animTask != null && !animTask.IsCompleted) continue;
+                    if (animTask != null && animTask.IsCompleted) playingAnimation = null;
+
+                    animTask = null;
+
                     var rb = new RigidbodyElement { CanCollideWith = CollisionFilterGroupFlags.CustomFilter1, CollisionGroup = CollisionFilterGroups.DefaultFilter };
                     rb.ColliderShapes.Add(new ColliderShapeAssetDesc { Shape = bulletCS });
 
@@ -149,10 +156,8 @@ namespace SpriteStudioDemo
                     if (playingAnimation == null || playingAnimation.Name != "Attack")
                     {
                         playingAnimation = animComponent.Play("Attack");
+                        animTask = playingAnimation.Ended();
                     }
-
-                    await playingAnimation.Ended();
-                    playingAnimation = null;
                 }
                 else
                 {
@@ -197,28 +202,25 @@ namespace SpriteStudioDemo
 
             // If a user does not touch the screen, there is not input
             if (!isPointerDown)
+			{
                 return InputState.None;
-
+			}
+			
             // Transform pointer's position from normorlize coordinate to virtual resolution coordinate
             var resolution = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
-            var virtualCoordinatePointerPosition = resolution * pointerState.Position;
+            var virtualCoordinatePointerPositionA = resolution.X * (pointerState.Position.X + 0.05f);
+            var virtualCoordinatePointerPositionB = resolution.X * (pointerState.Position.X - 0.05f);
 
-            // Get current position of the agent, since the origin of the sprite is at the center, region needs to be shifted to top-left
-            var agentSize = spriteSheet["idle0"].SizeInPixels;
-            var agentSpriteRegion = new RectangleF
-            {
-                X = (int)VirtualCoordToPixel(Entity.Transform.Position.X) - agentSize.X / 2,
-                Y = (int)VirtualCoordToPixel(Entity.Transform.Position.Y) - agentSize.Y / 2,
-                Width = agentSize.X,
-                Height = agentSize.Y
-            };
+            var virtualX = VirtualCoordToPixel(Entity.Transform.Position.X);
 
             // Check if the touch position is in the x-axis region of the agent's sprite; if so, input is shoot
-            if (agentSpriteRegion.Left <= virtualCoordinatePointerPosition.X && virtualCoordinatePointerPosition.X <= agentSpriteRegion.Right)
+            if (virtualX <= virtualCoordinatePointerPositionA && virtualCoordinatePointerPositionB <= virtualX)
+			{
                 return InputState.Shoot;
-
+			}
+			
             // Check if a pointer falls left or right of the screen, which would correspond to Run to the left or right respectively
-            return ((pointerState.Position.X) <= agentSpriteRegion.Center.X / resolution.X) ? InputState.RunLeft : InputState.RunRight;
+            return ((pointerState.Position.X) <= virtualX / resolution.X) ? InputState.RunLeft : InputState.RunRight;
         }
 
         private float VirtualCoordToPixel(float virtualCoord)
