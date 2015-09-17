@@ -8,6 +8,6 @@ FullDescription: |
    It renders a scene twice with different camera setup: 1. Render from behind a knight 2. Render from front of a knight and render the texture from the first step on the top right corner of the screen.
 Group: Samples/Graphics
 DefaultOutputName: RenderSceneToTexture
-Icon: ../.pdxtpl/NewGraphics.png
+Icon: .pdxtpl/Icon.png
 Screenshots:
     - .pdxtpl/screenshot0_small.jpg

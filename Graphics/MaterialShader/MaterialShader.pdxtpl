@@ -5,7 +5,7 @@ Scope: Session
 Description: Creates a sample project which shows how to use materials with custom shaders
 FullDescription: This sample shows how to create and use a custom shader to animate colors and attributes of materials.
 Group: Samples/Graphics
-Icon: ../.pdxtpl/NewGraphics.png
+Icon: .pdxtpl/Icon.png
 DefaultOutputName: MaterialShader
 Screenshots:
     - .pdxtpl/screenshot_small.png
