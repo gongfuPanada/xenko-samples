@@ -10,7 +10,7 @@ Meta:
     RootNamespace: MaterialSample
     Dependencies:
         -   Name: Paradox
-            Version: 1.3.0-alpha02
+            Version: 1.3.0-beta
             RootAssets: []
 LocalDependencies: []
 Profiles:
