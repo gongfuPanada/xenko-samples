@@ -44,20 +44,26 @@ namespace VolumeTrigger
             if (Input.PointerEvents.Any())
             {
                 var last = Input.PointerEvents.Last();
-                if (last != null && last.State == PointerState.Down)
+                if (last != null)
                 {
-                    if (last.Position.X < 0.5)
+                    switch (last.State)
                     {
-                        pointerVector = -Vector3.UnitX;
+                        case PointerState.Down:
+                            if (last.Position.X < 0.5)
+                            {
+                                pointerVector = -Vector3.UnitX;
+                            }
+                            else
+                            {
+                                pointerVector = Vector3.UnitX;
+                            }
+                            break;
+                        case PointerState.Up:
+                        case PointerState.Out:
+                        case PointerState.Cancel:
+                            pointerVector = Vector3.Zero;
+                            break;
                     }
-                    else
-                    {
-                        pointerVector = Vector3.UnitX;
-                    }
-                }
-                else if (last != null && last.State == PointerState.Up)
-                {
-                    pointerVector = Vector3.Zero;
                 }
             }
 
