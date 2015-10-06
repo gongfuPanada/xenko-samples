@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
-SerializedVersion: 18
+SerializedVersion: 19
 Tags: []
 Hierarchy:
     RootEntities:
@@ -47,7 +47,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteEntity.EnemyScript,SpriteEntity.Game
@@ -71,7 +71,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 1
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteEntity.PlayerScript,SpriteEntity.Game
@@ -128,7 +128,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteEntity.EnemyScript,SpriteEntity.Game
@@ -152,7 +152,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteEntity.EnemyScript,SpriteEntity.Game

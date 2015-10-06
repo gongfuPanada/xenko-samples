@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 7207a5b4-cbf4-4edc-a7fb-0dfa83e2414e
-SerializedVersion: 18
+SerializedVersion: 19
 Tags: []
 Hierarchy:
     RootEntities:
@@ -114,7 +114,7 @@ Hierarchy:
                             Texture: a05dc255-f378-4167-b474-1562b18dfc90:shadow_00
                             PixelsPerUnit: 33.0
                             Center: {X: 0.0, Y: 0.0}
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: -1.2, Z: 0.0}
                         Rotation: {W: 0.707106769, X: 0.707106769, Y: 0.0, Z: 0.0}

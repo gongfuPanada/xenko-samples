@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: 18
+SerializedVersion: 19
 Tags: []
 Hierarchy:
     RootEntities:
@@ -19,6 +19,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
@@ -36,13 +41,18 @@ Hierarchy:
                     SpriteComponent.Key:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     PhysicsComponent.Key:
                         Elements:
                             - !StaticColliderElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
@@ -93,13 +103,22 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
                         CurrentFrame: 2
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     PhysicsComponent.Key:
                         Elements:
                             - !CharacterElement
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
+                                FallSpeed: 10.0
+                                MaxSlope: 0.0
+                                JumpSpeed: 5.0
+                                Gravity: -10.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs

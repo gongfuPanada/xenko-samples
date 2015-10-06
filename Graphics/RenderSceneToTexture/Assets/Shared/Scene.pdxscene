@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
-SerializedVersion: 18
+SerializedVersion: 19
 Tags: []
 Hierarchy:
     RootEntities:
@@ -38,7 +38,7 @@ Hierarchy:
                             Center: {X: 0.0, Y: 0.0}
                             CenterFromMiddle: false
                         SpriteType: Billboard
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
                         Scripts:
                             - !RenderSceneToTexture.SetSpriteSource,RenderSceneToTexture.Game

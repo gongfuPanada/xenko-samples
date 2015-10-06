@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 5f4a3789-b182-4b32-9088-acbf9e13edb5
-SerializedVersion: 18
+SerializedVersion: 19
 Tags: []
 Hierarchy:
     RootEntities:
@@ -19,7 +19,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromTexture
                             Texture: 2c702280-1481-4bd0-b87c-36640ed371ed:dj
                             Center: {X: 0.0, Y: 0.0}
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -62,7 +62,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromTexture
                             Texture: b13f7add-d3fd-4965-a268-dd27b54fd012:wave
                             Center: {X: 0.0, Y: 0.0}
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     TransformComponent.Key:
                         Position: {X: 2.5, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
@@ -78,7 +78,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromTexture
                             Texture: b13f7add-d3fd-4965-a268-dd27b54fd012:wave
                             Center: {X: 0.0, Y: 0.0}
-                        Color: {R: 255, G: 255, B: 255, A: 255}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     TransformComponent.Key:
                         Position: {X: -2.5, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
