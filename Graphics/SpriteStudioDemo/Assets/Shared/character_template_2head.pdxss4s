@@ -1,0 +1,37 @@
+!SpriteStudioSheetAsset
+Id: 66252acc-b501-49d1-ae02-751acb24218d
+Tags: []
+Source: ../../RawAssets/character_template_2head.ssae
+SourceHash: e2e3451d70d749c8f26329c15d8c40f1
+NodeNames:
+    - root
+    - body
+    - head
+    - hair
+    - leg_l
+    - leg_r
+    - arm_l
+    - object3
+    - arm_r
+    - object1
+    - object2
+    - shadow
+~Base:
+    Location: --import--
+    Asset: !SpriteStudioSheetAsset
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
+        NodeNames:
+            - root
+            - body
+            - head
+            - hair
+            - leg_l
+            - leg_r
+            - arm_l
+            - object3
+            - arm_r
+            - object1
+            - object2
+            - shadow

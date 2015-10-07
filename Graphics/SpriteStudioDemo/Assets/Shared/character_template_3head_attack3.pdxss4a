@@ -1,9 +1,10 @@
 !SpriteStudioAnimationAsset
-Id: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259
+Id: b51fcf01-af9b-4680-acd3-5451686bc8d6
 Tags: []
-Source: ../../RawAssets/character_template_2head_wait.ssax
-SourceHash: dc49725b29b53e60b747cc4959dd96b9
-RepeatMode: LoopInfinite
+Source: ../../RawAssets/character_template_3head.ssae
+SourceHash: fb449f0159666dc1d4c7d9d8db8f0dfb
+RepeatMode: PlayOnce
+AnimationName: attack3
 ~Base:
     Location: --import--
     Asset: !SpriteStudioAnimationAsset
@@ -11,3 +12,4 @@ RepeatMode: LoopInfinite
         Tags: []
         ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
         RepeatMode: LoopInfinite
+        AnimationName: attack3

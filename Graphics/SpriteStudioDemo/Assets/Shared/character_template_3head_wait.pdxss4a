@@ -1,9 +1,10 @@
 !SpriteStudioAnimationAsset
-Id: 5e1ca0db-ff04-4796-a549-82ac2d8679bd
+Id: 3441961f-79d6-41c3-a4c1-184f7c94bd69
 Tags: []
-Source: ../../RawAssets/character_template_2head_dead.ssax
-SourceHash: a2cbe7b3d1ddb0664cd972daaaa7cb60
-RepeatMode: PlayOnce
+Source: ../../RawAssets/character_template_3head.ssae
+SourceHash: fb449f0159666dc1d4c7d9d8db8f0dfb
+RepeatMode: LoopInfinite
+AnimationName: wait
 ~Base:
     Location: --import--
     Asset: !SpriteStudioAnimationAsset
@@ -11,3 +12,4 @@ RepeatMode: PlayOnce
         Tags: []
         ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
         RepeatMode: LoopInfinite
+        AnimationName: wait

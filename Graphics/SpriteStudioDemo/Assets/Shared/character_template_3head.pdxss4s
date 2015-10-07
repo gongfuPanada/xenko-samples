@@ -1,8 +1,8 @@
 !SpriteStudioSheetAsset
-Id: 2774af57-f02b-47f1-891c-4da6641456a6
+Id: dbb69ad7-51ca-4101-bd3b-c85ad5535833
 Tags: []
-Source: ../../RawAssets/character_template_2head_wait.ssax
-SourceHash: dc49725b29b53e60b747cc4959dd96b9
+Source: ../../RawAssets/character_template_3head.ssae
+SourceHash: fb449f0159666dc1d4c7d9d8db8f0dfb
 ~Base:
     Location: --import--
     Asset: !SpriteStudioSheetAsset

@@ -44,7 +44,7 @@ Hierarchy:
                 Name: Enemy02
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: 2774af57-f02b-47f1-891c-4da6641456a6:character_template_2head_wait_sheet
+                        Sheet: 66252acc-b501-49d1-ae02-751acb24218d:character_template_2head
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
@@ -53,8 +53,8 @@ Hierarchy:
                                 Id: 0d506cac-e36c-4530-a0d9-46e43e55d505
                     AnimationComponent.Key:
                         Animations:
-                            Dead: 5e1ca0db-ff04-4796-a549-82ac2d8679bd:character_template_2head_dead_anim
-                            Wait: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259:character_template_2head_wait_anim
+                            Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
+                            Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
@@ -114,12 +114,12 @@ Hierarchy:
                 Name: Player
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: cccab13c-4f51-4684-a840-9a7539c1ca25:character_template_3head_attack3_sheet
+                        Sheet: dbb69ad7-51ca-4101-bd3b-c85ad5535833:character_template_3head
                     AnimationComponent.Key:
                         Animations:
-                            Attack: db8f665a-8233-4a75-944e-e0d24b5fd294:character_template_3head_attack3_anim
-                            Run: 591a3ef2-3949-4091-b9dd-7579a4813cc4:character_template_3head_run_anim
-                            Stance: 5c996ac6-8ee4-466f-a53f-4010c0239e5a:character_template_3head_wait_anim
+                            Attack: b51fcf01-af9b-4680-acd3-5451686bc8d6:character_template_3head_attack3
+                            Run: 1a2d4f41-394b-4b61-9ebe-2f7bb92cc8cf:character_template_3head_run
+                            Stance: 3441961f-79d6-41c3-a4c1-184f7c94bd69:character_template_3head_wait
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.PlayerScript,SpriteStudioDemo.Game
@@ -156,7 +156,7 @@ Hierarchy:
                 Name: Enemy00
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: 2774af57-f02b-47f1-891c-4da6641456a6:character_template_2head_wait_sheet
+                        Sheet: 66252acc-b501-49d1-ae02-751acb24218d:character_template_2head
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
@@ -165,8 +165,8 @@ Hierarchy:
                                 Id: 21c959ad-c789-44b4-948b-1d4021f6aa50
                     AnimationComponent.Key:
                         Animations:
-                            Dead: 5e1ca0db-ff04-4796-a549-82ac2d8679bd:character_template_2head_dead_anim
-                            Wait: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259:character_template_2head_wait_anim
+                            Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
+                            Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
@@ -200,7 +200,7 @@ Hierarchy:
                 Name: Enemy01
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: 2774af57-f02b-47f1-891c-4da6641456a6:character_template_2head_wait_sheet
+                        Sheet: 66252acc-b501-49d1-ae02-751acb24218d:character_template_2head
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
@@ -209,8 +209,8 @@ Hierarchy:
                                 Id: 707b3fd5-c622-44c5-9141-511dd24417e1
                     AnimationComponent.Key:
                         Animations:
-                            Dead: 5e1ca0db-ff04-4796-a549-82ac2d8679bd:character_template_2head_dead_anim
-                            Wait: 254c2ea6-3f8d-435e-8b6a-2260c9bf4259:character_template_2head_wait_anim
+                            Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
+                            Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
