@@ -38,8 +38,18 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: false
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
@@ -64,8 +74,18 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: false
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs

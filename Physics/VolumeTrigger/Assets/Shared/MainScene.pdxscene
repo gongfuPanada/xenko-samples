@@ -45,8 +45,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -77,8 +87,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -109,6 +129,15 @@ Hierarchy:
                                 CollisionGroup: CharacterFilter
                                 CanCollideWith: DefaultFilter, SensorTrigger
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
+                                FallSpeed: 10.0
+                                MaxSlope: 0.0
+                                JumpSpeed: 5.0
+                                Gravity: -10.0
                                 ColliderShapes:
                                     - !CapsuleColliderShapeDesc
                                         LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
@@ -140,8 +169,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -172,8 +211,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -204,8 +253,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: DefaultFilter, CharacterFilter
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !SphereColliderShapeDesc
                                         Is2D: false
@@ -237,8 +296,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -269,8 +338,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -301,8 +380,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -359,6 +448,11 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: KinematicFilter, SensorTrigger, CharacterFilter
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !BoxColliderShapeDesc
                                         Is2D: false
@@ -386,8 +480,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -418,8 +522,18 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
@@ -450,6 +564,11 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: DefaultFilter, SensorTrigger, CharacterFilter
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !StaticPlaneColliderShapeDesc
                                         Normal: {X: 0.0, Y: 1.0, Z: 0.0}
