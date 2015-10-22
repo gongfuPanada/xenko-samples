@@ -18,7 +18,7 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\CustomEffect.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\CustomEffect.xkpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Library</SiliconStudioProjectType>
   </PropertyGroup>
@@ -75,7 +75,7 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <None Include="Effects\Effect.pdxsl">
+    <None Include="Effects\Effect.xksl">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>Effect.cs</LastGenOutput>
     </None>
@@ -84,7 +84,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Effect.pdxsl</DependentUpon>
+      <DependentUpon>Effect.xksl</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,7 +1,7 @@
 struct PS_STREAMS 
 {
 
-    #line 11 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Graphics/Shaders/ShaderBaseStream.pdxsl"
+    #line 11 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Graphics/Shaders/ShaderBaseStream.xksl"
     float4 ColorTarget_id1;
 
     #line 12
@@ -25,25 +25,25 @@ struct PS_OUTPUT
 struct VS_STREAMS 
 {
 
-    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.pdxsl"
+    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.xksl"
     float4 Position_id18;
 
-    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalStream.pdxsl"
+    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalStream.xksl"
     float3 meshNormal_id14;
 
-    #line 12 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.pdxsl"
+    #line 12 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.xksl"
     float4 PositionWS_id19;
 
-    #line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionHStream4.pdxsl"
+    #line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionHStream4.xksl"
     float4 PositionH_id21;
 
-    #line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.pdxsl"
+    #line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.xksl"
     float DepthVS_id20;
 
-    #line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalStream.pdxsl"
+    #line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalStream.xksl"
     float3 normalWS_id16;
 
-    #line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Graphics/Shaders/ShaderBaseStream.pdxsl"
+    #line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Graphics/Shaders/ShaderBaseStream.xksl"
     float4 ShadingPosition_id0;
 };
 struct VS_OUTPUT 
@@ -55,16 +55,16 @@ struct VS_OUTPUT
 struct VS_INPUT 
 {
 
-    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.pdxsl"
+    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/PositionStream4.xksl"
     float4 Position_id18 : POSITION;
 
-    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalStream.pdxsl"
+    #line 9 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalStream.xksl"
     float3 meshNormal_id14 : NORMAL;
 };
 cbuffer PerFrame 
 {
 
-    #line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Shaders/Transformation.pdxsl"
+    #line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Shaders/Transformation.xksl"
     float4x4 ViewProjection_id26;
 };
 cbuffer PerObject 
@@ -79,7 +79,7 @@ cbuffer PerObject
 cbuffer Globals 
 {
 
-    #line 11 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Utils/ModelComponentPickingShader.pdxsl"
+    #line 11 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Utils/ModelComponentPickingShader.xksl"
     float4 ModelComponentId_id37;
 
     #line 14
@@ -89,7 +89,7 @@ cbuffer Globals
     float4 MaterialId_id39;
 };
 
-#line 18 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.pdxsl"
+#line 18 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.xksl"
 void PostTransformPosition_id6()
 {
 }
@@ -99,7 +99,7 @@ void PreTransformPosition_id4()
 {
 }
 
-#line 14 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationWAndVP.pdxsl"
+#line 14 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationWAndVP.xksl"
 void PostTransformPosition_id14(inout VS_STREAMS streams)
 {
 
@@ -116,12 +116,12 @@ void PostTransformPosition_id14(inout VS_STREAMS streams)
     streams.DepthVS_id20 = streams.ShadingPosition_id0.w;
 }
 
-#line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.pdxsl"
+#line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.xksl"
 void TransformPosition_id5()
 {
 }
 
-#line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationWAndVP.pdxsl"
+#line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationWAndVP.xksl"
 void PreTransformPosition_id13(inout VS_STREAMS streams)
 {
 
@@ -132,7 +132,7 @@ void PreTransformPosition_id13(inout VS_STREAMS streams)
     streams.PositionWS_id19 = mul(streams.Position_id18, World_id30);
 }
 
-#line 20 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.pdxsl"
+#line 20 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.xksl"
 void BaseTransformVS_id7(inout VS_STREAMS streams)
 {
 
@@ -146,12 +146,12 @@ void BaseTransformVS_id7(inout VS_STREAMS streams)
     PostTransformPosition_id14(streams);
 }
 
-#line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Graphics/Shaders/ShaderBase.pdxsl"
+#line 15 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Graphics/Shaders/ShaderBase.xksl"
 void VSMain_id0()
 {
 }
 
-#line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalFromMesh.pdxsl"
+#line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalFromMesh.xksl"
 void GenerateNormal_VS_id18(inout VS_STREAMS streams)
 {
 
@@ -159,7 +159,7 @@ void GenerateNormal_VS_id18(inout VS_STREAMS streams)
     streams.normalWS_id16 = mul(streams.meshNormal_id14, (float3x3)WorldInverseTranspose_id31);
 }
 
-#line 27 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.pdxsl"
+#line 27 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Transformation/TransformationBase.xksl"
 void VSMain_id8(inout VS_STREAMS streams)
 {
 
@@ -170,7 +170,7 @@ void VSMain_id8(inout VS_STREAMS streams)
     BaseTransformVS_id7(streams);
 }
 
-#line 19 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Utils/ModelComponentPickingShader.pdxsl"
+#line 19 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Utils/ModelComponentPickingShader.xksl"
 PS_OUTPUT PSMain(VS_OUTPUT __input__)
 {
     PS_STREAMS streams = (PS_STREAMS)0;
@@ -190,7 +190,7 @@ PS_OUTPUT PSMain(VS_OUTPUT __input__)
     return __output__;
 }
 
-#line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalBase.pdxsl"
+#line 8 "C:/Dev/Xenko/sources/engine/SiliconStudio.Xenko.Engine/Rendering/Core/NormalBase.xksl"
 VS_OUTPUT VSMain(VS_INPUT __input__)
 {
     VS_STREAMS streams = (VS_STREAMS)0;

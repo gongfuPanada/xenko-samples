@@ -18,7 +18,7 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\SpaceEscape.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\SpaceEscape.xkpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Library</SiliconStudioProjectType>
   </PropertyGroup>
@@ -79,25 +79,25 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>FogEffect.pdxsl</DependentUpon>
+      <DependentUpon>FogEffect.xksl</DependentUpon>
     </Compile>
     <Compile Include="Effects\SpaceEscapeEffectMain.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>SpaceEscapeEffectMain.pdxfx</DependentUpon>
+      <DependentUpon>SpaceEscapeEffectMain.xkfx</DependentUpon>
     </Compile>
     <Compile Include="Effects\TransformationBendWorld.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>TransformationBendWorld.pdxsl</DependentUpon>
+      <DependentUpon>TransformationBendWorld.xksl</DependentUpon>
     </Compile>
     <Compile Include="Effects\TransformationTextureUV.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>TransformationTextureUV.pdxsl</DependentUpon>
+      <DependentUpon>TransformationTextureUV.xksl</DependentUpon>
     </Compile>
     <Compile Include="Background\Obstacle.cs" />
     <Compile Include="Background\Hole.cs" />
@@ -110,19 +110,19 @@
     <Compile Include="UIScript.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Effects\FogEffect.pdxsl">
+    <None Include="Effects\FogEffect.xksl">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>FogEffect.cs</LastGenOutput>
     </None>
-    <None Include="Effects\SpaceEscapeEffectMain.pdxfx">
+    <None Include="Effects\SpaceEscapeEffectMain.xkfx">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>SpaceEscapeEffectMain.cs</LastGenOutput>
     </None>
-    <None Include="Effects\TransformationBendWorld.pdxsl">
+    <None Include="Effects\TransformationBendWorld.xksl">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>TransformationBendWorld.cs</LastGenOutput>
     </None>
-    <None Include="Effects\TransformationTextureUV.pdxsl">
+    <None Include="Effects\TransformationTextureUV.xksl">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>TransformationTextureUV.cs</LastGenOutput>
     </None>

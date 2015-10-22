@@ -7,8 +7,8 @@ FullDescription: |
    This sample displays the below knight and the user can select its current animation by pressing on buttons.
    It shows you how to load a model into the screen and animate it with cross-fading.
 Group: Samples/Graphics
-Icon: .pdxtpl/Icon.png
+Icon: .xktpl/Icon.png
 DefaultOutputName: AnimatedModel
 Screenshots:
-    - .pdxtpl/screenshot1_small.jpg
-    - .pdxtpl/screenshot2_small.jpg
+    - .xktpl/screenshot1_small.jpg
+    - .xktpl/screenshot2_small.jpg

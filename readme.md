@@ -9,19 +9,19 @@
 	- `Graphics` : All graphics samples (display 3d models, sprites, text...etc.)
 	- `Input` : All input samples (touch, mouse, gamepad...etc.)
 	- `UI` : All UI samples
-	- `XenkoSamples.sln` : A top level `XenkoSamples.sln` referencing all Game Packages (pdxpkg)
+	- `XenkoSamples.sln` : A top level `XenkoSamples.sln` referencing all Game Packages (xkpkg)
 - Inside a category, we store a package in its own directory. For example `SimpleAudio` in `Audio`
 	- Audio
 		- `SimpleAudio`
-			- `.pdxtpl` : Directory containing icons/screenshots used to display the template in the UI
-			- `Assets` : contains assets (.pdx files)
+			- `.xktpl` : Directory containing icons/screenshots used to display the template in the UI
+			- `Assets` : contains assets (.xk files)
 			- `RawAssets` : contains raw assets (.jpg, .fbx ... files)
 			- `SimpleAudio.Android` : Android executable
 			- `SimpleAudio.Game` : Common Game code
 			- `SimpleAudio.iOS` : iOS executable
 			- `SimpleAudio.Windows` : Windows Desktop executable
-			- `SimpleAudio.pdxpkg` : Package description
-			- `SimpleAudio.pdxtpl` : Package Template description
+			- `SimpleAudio.xkpkg` : Package description
+			- `SimpleAudio.xktpl` : Package Template description
 
 
 

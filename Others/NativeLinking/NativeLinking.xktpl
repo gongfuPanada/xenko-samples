@@ -7,8 +7,8 @@ FullDescription: |
    This sample shows how to use external native libraries with multiple platforms support.
    If the Sphere disappears from the screen, the native library code actually moved it.
 Group: Samples/Others
-Icon: ../.pdxtpl/NewOthers.png
+Icon: ../.xktpl/NewOthers.png
 DefaultOutputName: NativeLinking
 Screenshots:
-    - .pdxtpl/screenshot1_small.jpg
-    - .pdxtpl/screenshot2_small.jpg
+    - .xktpl/screenshot1_small.jpg
+    - .xktpl/screenshot2_small.jpg

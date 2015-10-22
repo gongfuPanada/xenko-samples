@@ -8,6 +8,6 @@ FullDescription: |
    A 16*16 texture is created and stretched to cover a screen. You could tap on the screen to lit/dim a pixel of the texture.
 Group: Samples/Graphics
 DefaultOutputName: SimpleDynamicTexture
-Icon: .pdxtpl/Icon.png
+Icon: .xktpl/Icon.png
 Screenshots:
-    - .pdxtpl/screenshot0_small.jpg
+    - .xktpl/screenshot0_small.jpg

@@ -7,8 +7,8 @@ FullDescription: |
    This is a simple 3D runner game where you have to guide the hero vessel through pipes and holes to reach the exit.
    This sample shows you how to load models into a scene, animate them, create a simple game UI, create a basic 3D rendering pipeline and create custom effects such as UV scrolling, fog, world bending.
 Group: Samples/Games
-Icon: .pdxtpl/icon.png
+Icon: .xktpl/icon.png
 DefaultOutputName: SpaceEscape
 Screenshots:
-    - .pdxtpl/screenshot0_small.png
-    - .pdxtpl/screenshot1_small.png
+    - .xktpl/screenshot0_small.png
+    - .xktpl/screenshot1_small.png

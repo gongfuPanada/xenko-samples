@@ -5,7 +5,7 @@ Scope: Session
 Description: Creates a sample project which shows how to include a static model into a scene
 FullDescription: This sample shows you how to load a static entity into the scene, create a simple rendering pipeline and set the camera.
 Group: Samples/Graphics
-Icon: .pdxtpl/Icon.png
+Icon: .xktpl/Icon.png
 DefaultOutputName: SimpleModel
 Screenshots:
-    - .pdxtpl/screenshot_small.jpg
+    - .xktpl/screenshot_small.jpg

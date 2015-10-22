@@ -5,8 +5,8 @@ Scope: Session
 Description: Creates a sample project which shows how to use the SpriteFonts in a game
 FullDescription: This sample shows you respective properties of dynamic and static SpriteFonts, how to draw, rotate, scale and align text using the SpriteBatch class.
 Group: Samples/Graphics
-Icon: .pdxtpl/Icon.png
+Icon: .xktpl/Icon.png
 DefaultOutputName: SpriteFonts
 Screenshots:
-    - .pdxtpl/screenshot1_small.jpg
-    - .pdxtpl/screenshot2_small.jpg
+    - .xktpl/screenshot1_small.jpg
+    - .xktpl/screenshot2_small.jpg

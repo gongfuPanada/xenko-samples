@@ -48,7 +48,7 @@ namespace JumpyJet
 
         private void CreateMainMenuUI()
         {
-            var xenkoLogo = new ImageElement { Source = UIImages["pdx_logo"] };
+            var xenkoLogo = new ImageElement { Source = UIImages["xk_logo"] };
 
             xenkoLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
             xenkoLogo.SetCanvasRelativeSize(new Vector3(0.5f, 0.5f, 1f));

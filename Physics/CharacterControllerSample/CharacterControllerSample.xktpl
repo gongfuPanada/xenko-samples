@@ -5,8 +5,8 @@ Scope: Session
 Description: Creates a sample project which shows how to use physics system's character controller feature.
 FullDescription: Creates a sample project which shows how to use physics system's character controller feature.
 Group: Samples/Physics
-Icon: ../.pdxtpl/NewPhysics.png
+Icon: ../.xktpl/NewPhysics.png
 DefaultOutputName: CharacterController
 PatternName: CharacterControllerSample
 Screenshots:
-    - .pdxtpl/screenshot_small.jpg
+    - .xktpl/screenshot_small.jpg

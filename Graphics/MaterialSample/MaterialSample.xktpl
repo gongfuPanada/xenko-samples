@@ -5,9 +5,9 @@ Scope: Session
 Description: Creates an scene with a set of different materials
 FullDescription: This samples shows how to use different types of materials and how to blend them together.
 Group: Samples/Graphics
-Icon: .pdxtpl/icon.png
+Icon: .xktpl/icon.png
 DefaultOutputName: Material
 PatternName: MaterialSample
 Screenshots:
-    - .pdxtpl/screenshot1_small.jpeg
-    - .pdxtpl/screenshot2_small.jpeg
+    - .xktpl/screenshot1_small.jpeg
+    - .xktpl/screenshot2_small.jpeg

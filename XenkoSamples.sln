@@ -4,7 +4,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 14.0.23107.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleSprite", "SimpleSprite", "{5C3B20C3-522A-4637-A7B2-661CAC6C7724}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SimpleSprite/SimpleSprite.pdxpkg = Graphics/SimpleSprite/SimpleSprite.pdxpkg
+		Graphics/SimpleSprite/SimpleSprite.xkpkg = Graphics/SimpleSprite/SimpleSprite.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSprite.Game", "Graphics\SimpleSprite\SimpleSprite.Game\SimpleSprite.Game.csproj", "{3236D26B-652B-4DAA-A32F-2790BD955A96}"
@@ -13,14 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSprite.Windows", "Gra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpaceEscape", "SpaceEscape", "{3665E984-37E5-4B32-B351-D4254F5E6D94}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Games/SpaceEscape/SpaceEscape.pdxpkg = Games/SpaceEscape/SpaceEscape.pdxpkg
+		Games/SpaceEscape/SpaceEscape.xkpkg = Games/SpaceEscape/SpaceEscape.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceEscape.Game", "Games\SpaceEscape\SpaceEscape.Game\SpaceEscape.Game.csproj", "{8573B1CB-C5A4-47A0-9B8E-092466E1CD0F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleAudio", "SimpleAudio", "{8427AB2B-9E4B-42B1-AE0A-CC590BEC6880}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Audio/SimpleAudio/SimpleAudio.pdxpkg = Audio/SimpleAudio/SimpleAudio.pdxpkg
+		Audio/SimpleAudio/SimpleAudio.xkpkg = Audio/SimpleAudio/SimpleAudio.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceEscape.Windows", "Games\SpaceEscape\SpaceEscape.Windows\SpaceEscape.Windows.csproj", "{C9B0B66A-5A11-4866-AD75-718C80EC383A}"
@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAudio.Windows", "Audi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomEffect", "CustomEffect", "{35E18FE9-55F3-4286-BB27-47F977BA160A}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/CustomEffect/CustomEffect.pdxpkg = Graphics/CustomEffect/CustomEffect.pdxpkg
+		Graphics/CustomEffect/CustomEffect.xkpkg = Graphics/CustomEffect/CustomEffect.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEffect.Game", "Graphics\CustomEffect\CustomEffect.Game\CustomEffect.Game.csproj", "{9EADBAB9-0AFB-4D61-AC4B-6A691E26EC8F}"
@@ -40,7 +40,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEffect.Windows", "Gra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWorld", "HelloWorld", "{4A02919D-C2FB-4541-BBCE-02A878B1D10A}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/HelloWorld/HelloWorld.pdxpkg = Graphics/HelloWorld/HelloWorld.pdxpkg
+		Graphics/HelloWorld/HelloWorld.xkpkg = Graphics/HelloWorld/HelloWorld.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Game", "Graphics\HelloWorld\HelloWorld.Game\HelloWorld.Game.csproj", "{ACD0C122-4E0B-4587-A594-AACCCE2474B6}"
@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Windows", "Graph
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleModel", "SimpleModel", "{8F259D3B-5C10-4E31-8370-5B42F0AE54DF}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SimpleModel/SimpleModel.pdxpkg = Graphics/SimpleModel/SimpleModel.pdxpkg
+		Graphics/SimpleModel/SimpleModel.xkpkg = Graphics/SimpleModel/SimpleModel.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleModel.Game", "Graphics\SimpleModel\SimpleModel.Game\SimpleModel.Game.csproj", "{928E9F79-B937-4133-B6EF-2A107ADC5946}"
@@ -58,7 +58,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleModel.Windows", "Grap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameMenu", "GameMenu", "{D381BE88-451F-4701-A0E5-64992D2BF627}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		UI/GameMenu/GameMenu.pdxpkg = UI/GameMenu/GameMenu.pdxpkg
+		UI/GameMenu/GameMenu.xkpkg = UI/GameMenu/GameMenu.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMenu.Game", "UI\GameMenu\GameMenu.Game\GameMenu.Game.csproj", "{8B89A998-A276-4376-A831-8C9F87042D88}"
@@ -70,7 +70,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMenu.Windows", "UI\Game
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeometricPrimitives", "GeometricPrimitives", "{32BB115E-8773-42E2-9E63-77D495E70D98}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/GeometricPrimitives/GeometricPrimitives.pdxpkg = Graphics/GeometricPrimitives/GeometricPrimitives.pdxpkg
+		Graphics/GeometricPrimitives/GeometricPrimitives.xkpkg = Graphics/GeometricPrimitives/GeometricPrimitives.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricPrimitives.Game", "Graphics\GeometricPrimitives\GeometricPrimitives.Game\GeometricPrimitives.Game.csproj", "{2F90C609-E537-4A2B-9A28-8B6814FF8F41}"
@@ -79,7 +79,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricPrimitives.Windows
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AnimatedModel", "AnimatedModel", "{80373992-22A3-45ED-B0C4-ED5BBFC1BD12}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/AnimatedModel/AnimatedModel.pdxpkg = Graphics/AnimatedModel/AnimatedModel.pdxpkg
+		Graphics/AnimatedModel/AnimatedModel.xkpkg = Graphics/AnimatedModel/AnimatedModel.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedModel.Game", "Graphics\AnimatedModel\AnimatedModel.Game\AnimatedModel.Game.csproj", "{A07E6E07-5068-4E26-B8A5-051BEC0D8F81}"
@@ -88,7 +88,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedModel.Windows", "Gr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JumpyJet", "JumpyJet", "{E0F7780A-6563-47AD-A81C-ADFDCCD9F26C}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Games/JumpyJet/JumpyJet.pdxpkg = Games/JumpyJet/JumpyJet.pdxpkg
+		Games/JumpyJet/JumpyJet.xkpkg = Games/JumpyJet/JumpyJet.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpyJet.Game", "Games\JumpyJet\JumpyJet.Game\JumpyJet.Game.csproj", "{CDB18123-F59F-4852-9777-ED9D217EB043}"
@@ -97,7 +97,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpyJet.Windows", "Games\J
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TouchInputs", "TouchInputs", "{141F872B-DBD5-426F-89C7-64FA6DB0B77F}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Input/TouchInputs/TouchInputs.pdxpkg = Input/TouchInputs/TouchInputs.pdxpkg
+		Input/TouchInputs/TouchInputs.xkpkg = Input/TouchInputs/TouchInputs.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchInputs.Game", "Input\TouchInputs\TouchInputs.Game\TouchInputs.Game.csproj", "{34E90514-FD40-4FB2-815E-77A0E2455EF1}"
@@ -106,7 +106,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TouchInputs.Windows", "Inpu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpriteFonts", "SpriteFonts", "{C148408B-43BC-465C-825A-D74B122377EF}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SpriteFonts/SpriteFonts.pdxpkg = Graphics/SpriteFonts/SpriteFonts.pdxpkg
+		Graphics/SpriteFonts/SpriteFonts.xkpkg = Graphics/SpriteFonts/SpriteFonts.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteFonts.Game", "Graphics\SpriteFonts\SpriteFonts.Game\SpriteFonts.Game.csproj", "{A38806F0-3B25-4AAF-9EC3-476BBCDCAF52}"
@@ -133,39 +133,39 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredLighting.Game", "Gr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForwardLighting", "ForwardLighting", "{B6816B45-5640-4B45-9164-D32F888A05DA}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/ForwardLighting/ForwardLighting.pdxpkg = Graphics/ForwardLighting/ForwardLighting.pdxpkg
+		Graphics/ForwardLighting/ForwardLighting.xkpkg = Graphics/ForwardLighting/ForwardLighting.xkpkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeferredLighting", "DeferredLighting", "{C279588E-7CE5-49E7-85C5-E867BE2993BC}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/DeferredLighting/DeferredLighting.pdxpkg = Graphics/DeferredLighting/DeferredLighting.pdxpkg
+		Graphics/DeferredLighting/DeferredLighting.xkpkg = Graphics/DeferredLighting/DeferredLighting.xkpkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GravitySensor", "GravitySensor", "{69972EAE-E2A4-4A4F-9059-59063DBB633C}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Input/GravitySensor/GravitySensor.pdxpkg = Input/GravitySensor/GravitySensor.pdxpkg
+		Input/GravitySensor/GravitySensor.xkpkg = Input/GravitySensor/GravitySensor.xkpkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MaterialSample", "MaterialSample", "{D333B61B-4F5A-4775-AA06-B0C4F387A3D7}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/MaterialSample/MaterialSample.pdxpkg = Graphics/MaterialSample/MaterialSample.pdxpkg
+		Graphics/MaterialSample/MaterialSample.xkpkg = Graphics/MaterialSample/MaterialSample.xkpkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeLinking", "NativeLinking", "{C47B99CD-4798-4D85-B9B7-E720D9A229B7}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Others/NativeLinking/NativeLinking.pdxpkg = Others/NativeLinking/NativeLinking.pdxpkg
+		Others/NativeLinking/NativeLinking.xkpkg = Others/NativeLinking/NativeLinking.xkpkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VolumeTrigger", "VolumeTrigger", "{D47DDA8E-2C4E-4551-BE08-78A3E7D873AE}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Physics/VolumeTrigger/VolumeTrigger.pdxpkg = Physics/VolumeTrigger/VolumeTrigger.pdxpkg
+		Physics/VolumeTrigger/VolumeTrigger.xkpkg = Physics/VolumeTrigger/VolumeTrigger.xkpkg
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Physics", "Physics", "{ED0924FF-2147-4C47-9DE6-37A549629A9D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpriteEntity", "SpriteEntity", "{3C734625-3973-4009-B5FF-FE75CB2B6FC6}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SpriteEntity/SpriteEntity.pdxpkg = Graphics/SpriteEntity/SpriteEntity.pdxpkg
+		Graphics/SpriteEntity/SpriteEntity.xkpkg = Graphics/SpriteEntity/SpriteEntity.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteEntity.Game", "Graphics\SpriteEntity\SpriteEntity.Game\SpriteEntity.Game.csproj", "{CCC7EBBE-C387-4E4D-9BF1-76A5306F7766}"
@@ -174,7 +174,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteEntity.Windows", "Gra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Constraints", "Constraints", "{5C3ACE5D-F60D-4138-8EC8-EB8BC7D9F5BD}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Physics/Constraints/Constraints.pdxpkg = Physics/Constraints/Constraints.pdxpkg
+		Physics/Constraints/Constraints.xkpkg = Physics/Constraints/Constraints.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constraints.Game", "Physics\Constraints\Constraints.Game\Constraints.Game.csproj", "{95CFD515-3747-41CE-893E-B7E279BE5F2D}"
@@ -183,7 +183,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constraints.Windows", "Phys
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Raycasting", "Raycasting", "{FAC9264A-5D57-4E33-AD8E-572A2B7DEF47}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Physics/Raycasting/Raycasting.pdxpkg = Physics/Raycasting/Raycasting.pdxpkg
+		Physics/Raycasting/Raycasting.xkpkg = Physics/Raycasting/Raycasting.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycasting.Game", "Physics\Raycasting\Raycasting.Game\Raycasting.Game.csproj", "{29E62C29-A90D-44BE-B800-B6376236F5B1}"
@@ -192,7 +192,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raycasting.Windows", "Physi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CharacterControllerSample", "CharacterControllerSample", "{207C8460-0747-4FC7-B3C3-5E4F94EF0EE8}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Physics/CharacterControllerSample/CharacterControllerSample.pdxpkg = Physics/CharacterControllerSample/CharacterControllerSample.pdxpkg
+		Physics/CharacterControllerSample/CharacterControllerSample.xkpkg = Physics/CharacterControllerSample/CharacterControllerSample.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterControllerSample.Game", "Physics\CharacterControllerSample\CharacterControllerSample.Game\CharacterControllerSample.Game.csproj", "{6DA9DC17-E343-44A3-BB3B-023A48C5A64F}"
@@ -201,7 +201,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterControllerSample.W
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleTerrain", "SimpleTerrain", "{F9D0F9C1-374C-4BEB-889F-3FAFC3B492AF}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SimpleTerrain/SimpleTerrain.pdxpkg = Graphics/SimpleTerrain/SimpleTerrain.pdxpkg
+		Graphics/SimpleTerrain/SimpleTerrain.xkpkg = Graphics/SimpleTerrain/SimpleTerrain.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTerrain.Windows", "Graphics\SimpleTerrain\SimpleTerrain.Windows\SimpleTerrain.Windows.csproj", "{69FA1134-13A6-480B-AFBD-5C450E08A174}"
@@ -210,7 +210,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTerrain.Game", "Graph
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleDynamicTexture", "SimpleDynamicTexture", "{23F2FC76-C8E1-42F8-9857-C6F4F3F34F68}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SimpleDynamicTexture/SimpleDynamicTexture.pdxpkg = Graphics/SimpleDynamicTexture/SimpleDynamicTexture.pdxpkg
+		Graphics/SimpleDynamicTexture/SimpleDynamicTexture.xkpkg = Graphics/SimpleDynamicTexture/SimpleDynamicTexture.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDynamicTexture.Windows", "Graphics\SimpleDynamicTexture\SimpleDynamicTexture.Windows\SimpleDynamicTexture.Windows.csproj", "{48933185-FFB0-46E0-AC7C-E06BF4BFF159}"
@@ -219,7 +219,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDynamicTexture.Game",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RenderSceneToTexture", "RenderSceneToTexture", "{4A6F4180-CD26-4934-85B7-C4A0B9D45318}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/RenderSceneToTexture/RenderSceneToTexture.pdxpkg = Graphics/RenderSceneToTexture/RenderSceneToTexture.pdxpkg
+		Graphics/RenderSceneToTexture/RenderSceneToTexture.xkpkg = Graphics/RenderSceneToTexture/RenderSceneToTexture.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderSceneToTexture.Windows", "Graphics\RenderSceneToTexture\RenderSceneToTexture.Windows\RenderSceneToTexture.Windows.csproj", "{C05EF9C0-C3C5-45B2-8885-072228E80992}"
@@ -254,7 +254,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialShader.Windows", "G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpriteStudioDemo", "SpriteStudioDemo", "{48195305-1F56-44A9-BE69-7FA0597A50DC}"
 	ProjectSection(SiliconStudioPackage) = preProject
-		Graphics/SpriteStudioDemo/SpriteStudioDemo.pdxpkg = Graphics/SpriteStudioDemo/SpriteStudioDemo.pdxpkg
+		Graphics/SpriteStudioDemo/SpriteStudioDemo.xkpkg = Graphics/SpriteStudioDemo/SpriteStudioDemo.xkpkg
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteStudioDemo.Windows", "Graphics\SpriteStudioDemo\SpriteStudioDemo.Windows\SpriteStudioDemo.Windows.csproj", "{BDE88C50-CF68-46AE-93F8-39509AD90176}"

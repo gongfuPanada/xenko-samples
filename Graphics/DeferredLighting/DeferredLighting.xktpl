@@ -5,7 +5,7 @@ Scope: Session
 Description: Creates a sample project which describes how the deferred lighting works in Xenko
 FullDescription: This samples shows you how to create a deferred rendering pipeline and how to set lights in Xenko.
 Group: Samples/Graphics
-Icon: ../.pdxtpl/NewGraphics.png
+Icon: ../.xktpl/NewGraphics.png
 DefaultOutputName: DeferredLighting
 Screenshots:
-    - .pdxtpl/screenshot_small.jpg
+    - .xktpl/screenshot_small.jpg

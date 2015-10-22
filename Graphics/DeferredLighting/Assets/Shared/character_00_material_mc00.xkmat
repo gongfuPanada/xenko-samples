@@ -8,7 +8,7 @@ Material:
             TextureReference: 01d7fbf9-8a45-4713-90d0-2f6998a13551:character_00_mc_00
             Scale: {X: 1, Y: 1}
             Offset: {X: 0, Y: 0}
-        pdx_diffuseOpaque: !MaterialBinaryNode
+        xk_diffuseOpaque: !MaterialBinaryNode
             Operand: Opaque
             LeftChild: !MaterialReferenceNode
                 Name: mc_00
@@ -29,7 +29,7 @@ Material:
             Key: Material.SpecularPower
             IsReducible: false
     ColorNodes:
-        MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+        MaterialParameters.AlbedoDiffuse: xk_diffuseOpaque
         MaterialParameters.AlbedoSpecular: specular
         MaterialParameters.SpecularIntensityMap: specularIntensity
         MaterialParameters.SpecularPowerMap: specularPower
@@ -48,13 +48,13 @@ Material:
                     TextureReference: 01d7fbf9-8a45-4713-90d0-2f6998a13551:character_00_mc_00
                     Scale: {X: 1, Y: 1}
                     Offset: {X: 0, Y: 0}
-                pdx_diffuseOpaque: !MaterialBinaryNode
+                xk_diffuseOpaque: !MaterialBinaryNode
                     Operand: Opaque
                     LeftChild: !MaterialReferenceNode
                         Name: mc_00
                     RightChild: null
             ColorNodes:
-                MaterialParameters.AlbedoDiffuse: pdx_diffuseOpaque
+                MaterialParameters.AlbedoDiffuse: xk_diffuseOpaque
             Parameters:
                 Capacity: 4
                 ~Items:

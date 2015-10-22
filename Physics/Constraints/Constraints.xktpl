@@ -5,7 +5,7 @@ Scope: Session
 Description: Creates a sample project which shows how to use physics system's constraints.
 FullDescription: Creates a sample project which shows how to use physics system's constraints.
 Group: Samples/Physics
-Icon: ../.pdxtpl/NewPhysics.png
+Icon: ../.xktpl/NewPhysics.png
 DefaultOutputName: Constraints
 Screenshots:
-    - .pdxtpl/screenshot_small.png
+    - .xktpl/screenshot_small.png

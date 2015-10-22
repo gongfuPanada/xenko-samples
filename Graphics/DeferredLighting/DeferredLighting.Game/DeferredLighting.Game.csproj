@@ -18,7 +18,7 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\DeferredLighting.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\DeferredLighting.xkpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Library</SiliconStudioProjectType>
   </PropertyGroup>
@@ -76,15 +76,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>DeferredLightingEffectMain.pdxfx</DependentUpon>
+      <DependentUpon>DeferredLightingEffectMain.xkfx</DependentUpon>
     </Compile>
-    <None Include="Effects\DeferredLightingEffectMain.pdxfx">
+    <None Include="Effects\DeferredLightingEffectMain.xkfx">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>DeferredLightingEffectMain.cs</LastGenOutput>
     </None>
     <Compile Include="DeferredLightingGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Effects\Permutations.pdxfxlib" />
+    <None Include="Effects\Permutations.xkfxlib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />

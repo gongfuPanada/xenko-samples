@@ -8,7 +8,7 @@ FullDescription: |
   The sound music is played in loop in background. 
   The sound effect is played at each tap on the screen.
 Group: Samples/Audio
-Icon: ../.pdxtpl/NewAudio.png
+Icon: ../.xktpl/NewAudio.png
 DefaultOutputName: SimpleAudio
 Screenshots:
-    - .pdxtpl/screenshot_small.jpg
+    - .xktpl/screenshot_small.jpg

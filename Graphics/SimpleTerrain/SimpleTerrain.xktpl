@@ -9,6 +9,6 @@ FullDescription: |
    Each time a terrain is re/created, data in both vertex and index buffers change accordingly.
 Group: Samples/Graphics
 DefaultOutputName: SimpleTerrain
-Icon: .pdxtpl/Icon.png
+Icon: .xktpl/Icon.png
 Screenshots:
-    - .pdxtpl/screenshot0_small.jpg
+    - .xktpl/screenshot0_small.jpg

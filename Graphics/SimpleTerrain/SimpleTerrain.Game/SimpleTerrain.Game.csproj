@@ -19,7 +19,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\SimpleTerrain.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\SimpleTerrain.xkpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Library</SiliconStudioProjectType>
   </PropertyGroup>
@@ -81,11 +81,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>VertexTextureTerrain.pdxsl</DependentUpon>
+      <DependentUpon>VertexTextureTerrain.xksl</DependentUpon>
     </Compile>
     <Compile Include="HeightMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Effects\VertexTextureTerrain.pdxsl">
+    <None Include="Effects\VertexTextureTerrain.xksl">
       <Generator>XenkoShaderKeyGenerator</Generator>
       <LastGenOutput>VertexTextureTerrain.cs</LastGenOutput>
     </None>
