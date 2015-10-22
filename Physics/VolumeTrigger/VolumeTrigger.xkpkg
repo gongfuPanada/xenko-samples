@@ -9,7 +9,7 @@ Meta:
     Owners: []
     RootNamespace: VolumeTrigger
     Dependencies:
-        -   Name: Paradox
+        -   Name: Xenko
             Version: 1.3.0-beta
 LocalDependencies: []
 Profiles:

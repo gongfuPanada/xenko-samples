@@ -1,8 +1,8 @@
 using System.Linq;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Input;
-using SiliconStudio.Paradox.Physics;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Input;
+using SiliconStudio.Xenko.Physics;
 
 namespace Raycasting
 {

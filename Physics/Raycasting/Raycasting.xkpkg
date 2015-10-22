@@ -8,7 +8,7 @@ Meta:
     Authors: []
     Owners: []
     Dependencies:
-        -   Name: Paradox
+        -   Name: Xenko
             Version: 1.3.0-beta
             RootAssets: []
 LocalDependencies: []
@@ -32,7 +32,7 @@ Profiles:
             -   Path: Assets/Windows
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: Direct3D11
+            Xenko.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: 50a6b1ba-a6aa-4995-8a52-1bfd62dc441c
                 Location: Raycasting.Windows/Raycasting.Windows.csproj

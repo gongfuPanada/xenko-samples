@@ -1,6 +1,6 @@
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect.ShadowMapCaster
+EffectName: XenkoForwardShadingEffect.ShadowMapCaster
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -9,11 +9,11 @@ UsedParameters:
     Material.HasSkinningPosition: false
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
+    XenkoEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
         Name: ShadowMapCaster
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect.ShadowMapCaster
+EffectName: XenkoForwardShadingEffect.ShadowMapCaster
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -22,7 +22,7 @@ UsedParameters:
     Material.HasSkinningPosition: false
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
+    XenkoEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
         Name: ShadowMapCaster
 ---
 !EffectCompileRequest
@@ -37,7 +37,7 @@ UsedParameters:
             - Skybox.CubeMap
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -179,10 +179,10 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -389,10 +389,10 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -549,10 +549,10 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -738,10 +738,10 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -850,10 +850,10 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -977,10 +977,10 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -1141,7 +1141,7 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
 EffectName: DepthMinMaxEffect

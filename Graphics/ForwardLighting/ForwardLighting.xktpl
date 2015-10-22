@@ -2,8 +2,8 @@
 Id: 9a8fb9d9-e614-4316-87ae-d8446ebad50e
 Name: Forward Lighting Sample
 Scope: Session
-Description: Creates a sample project which describes how the forward lighting works in Paradox
-FullDescription: This samples shows you how to create a forward rendering pipeline and how to set lights in Paradox.
+Description: Creates a sample project which describes how the forward lighting works in Xenko
+FullDescription: This samples shows you how to create a forward rendering pipeline and how to set lights in Xenko.
 Group: Samples/Graphics
 Icon: .pdxtpl/Icon.png
 DefaultOutputName: ForwardLighting

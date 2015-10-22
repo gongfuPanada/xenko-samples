@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Physics;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 using System.Threading.Tasks;
 
 namespace VolumeTrigger

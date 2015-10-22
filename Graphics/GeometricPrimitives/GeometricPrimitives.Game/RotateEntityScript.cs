@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
+using SiliconStudio.Xenko.Engine;
 
 namespace GeometricPrimitives
 {

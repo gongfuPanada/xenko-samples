@@ -1,5 +1,5 @@
-using SiliconStudio.Paradox.Animations;
-using SiliconStudio.Paradox.Engine;
+using SiliconStudio.Xenko.Animations;
+using SiliconStudio.Xenko.Engine;
 
 namespace GravitySensor
 {

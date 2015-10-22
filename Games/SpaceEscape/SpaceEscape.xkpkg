@@ -8,7 +8,7 @@ Meta:
     Authors: []
     Owners: []
     Dependencies:
-        -   Name: Paradox
+        -   Name: Xenko
             Version: 1.3.0-beta
             RootAssets: []
 LocalDependencies: []
@@ -32,7 +32,7 @@ Profiles:
             -   Path: Assets/Windows
         OutputGroupDirectories: {}
         Properties:
-            Paradox.GraphicsPlatform: Direct3D11
+            Xenko.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: c9b0b66a-5a11-4866-ad75-718c80ec383a
                 Location: SpaceEscape.Windows/SpaceEscape.Windows.csproj

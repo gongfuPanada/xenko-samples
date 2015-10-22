@@ -1,9 +1,9 @@
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Physics;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 using System;
 using System.Threading.Tasks;
-using SiliconStudio.Paradox.Animations;
+using SiliconStudio.Xenko.Animations;
 using System.Diagnostics;
 
 namespace SpriteStudioDemo

@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Core.Threading;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Physics;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 
 namespace VolumeTrigger
 {

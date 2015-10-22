@@ -35,7 +35,7 @@ Hierarchy:
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
-                        Texture: d2ae7171-f414-4455-863c-cb002ee3b2bf:ParadoxBackground
+                        Texture: d2ae7171-f414-4455-863c-cb002ee3b2bf:XenkoBackground
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}

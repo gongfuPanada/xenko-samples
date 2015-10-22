@@ -1,8 +1,8 @@
 ﻿using System;
 
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Rendering;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering;
 using SpaceEscape.Background;
 
 namespace SpaceEscape

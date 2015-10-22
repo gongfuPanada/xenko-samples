@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Rendering;
-using SiliconStudio.Paradox.Engine;
+using SiliconStudio.Xenko.Rendering;
+using SiliconStudio.Xenko.Engine;
 using SpaceEscape.Effects;
 using System.Linq;
 

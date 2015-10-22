@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Rendering;
-using SiliconStudio.Paradox.Extensions;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.UI;
-using SiliconStudio.Paradox.UI.Controls;
-using SiliconStudio.Paradox.UI.Events;
-using SiliconStudio.Paradox.UI.Panels;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering;
+using SiliconStudio.Xenko.Extensions;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.UI;
+using SiliconStudio.Xenko.UI.Controls;
+using SiliconStudio.Xenko.UI.Events;
+using SiliconStudio.Xenko.UI.Panels;
 
 namespace DeferredLighting
 {
@@ -112,7 +112,7 @@ namespace DeferredLighting
         private void CreatePipeline()
         {
             // Setup the default rendering pipeline
-            RenderPipelineLightingFactory.CreateDefaultDeferred(this, "DeferredLightingEffectMain", "DeferredLightingPrepassEffect", Color.DarkBlue, true, true, "ParadoxBackground");
+            RenderPipelineLightingFactory.CreateDefaultDeferred(this, "DeferredLightingEffectMain", "DeferredLightingPrepassEffect", Color.DarkBlue, true, true, "XenkoBackground");
         }
 
         private void CreateUI()

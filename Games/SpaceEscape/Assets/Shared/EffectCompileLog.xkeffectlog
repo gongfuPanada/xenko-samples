@@ -74,7 +74,7 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
 EffectName: SpaceEscapeEffectMain
@@ -166,7 +166,7 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
 EffectName: SpaceEscapeEffectMain
@@ -243,4 +243,4 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null

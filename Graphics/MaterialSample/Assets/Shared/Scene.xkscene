@@ -925,7 +925,7 @@ Hierarchy:
                     SkyboxComponent.Key:
                         Skybox: d6ac5a30-abd7-4043-b09b-098c178504b1:Skybox
                     BackgroundComponent.Key:
-                        Texture: 355b7e54-fa45-44fc-818d-9fc46b8c0fbb:ParadoxBackground
+                        Texture: 355b7e54-fa45-44fc-818d-9fc46b8c0fbb:XenkoBackground
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}

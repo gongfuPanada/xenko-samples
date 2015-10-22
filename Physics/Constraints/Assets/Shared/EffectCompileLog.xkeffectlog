@@ -1,6 +1,6 @@
 ---
 !EffectCompileRequest
-EffectName: ParadoxForwardShadingEffect
+EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
@@ -71,4 +71,4 @@ UsedParameters:
         Name: null
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
-    ParadoxEffectBase.ExtensionPostVertexStageShader: null
+    XenkoEffectBase.ExtensionPostVertexStageShader: null

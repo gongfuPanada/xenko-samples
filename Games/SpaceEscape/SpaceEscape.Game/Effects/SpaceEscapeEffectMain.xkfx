@@ -12,7 +12,7 @@ namespace SpaceEscape.Effects
     {
         using params GameParameters;
         
-        mixin ParadoxForwardShadingEffect;
+        mixin XenkoForwardShadingEffect;
 
         if(GameParameters.EnableOnflyTextureUVChange)
             mixin TransformationTextureUV;

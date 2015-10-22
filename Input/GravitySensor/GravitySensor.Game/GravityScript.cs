@@ -1,7 +1,7 @@
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Input;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Physics;
+using SiliconStudio.Xenko.Input;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 
 namespace GravitySensor
 {

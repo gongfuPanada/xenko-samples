@@ -1,10 +1,10 @@
 ﻿using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.UI;
-using SiliconStudio.Paradox.UI.Controls;
-using SiliconStudio.Paradox.UI.Panels;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.UI;
+using SiliconStudio.Xenko.UI.Controls;
+using SiliconStudio.Xenko.UI.Panels;
 
 namespace JumpyJet
 {
@@ -48,11 +48,11 @@ namespace JumpyJet
 
         private void CreateMainMenuUI()
         {
-            var paradoxLogo = new ImageElement { Source = UIImages["pdx_logo"] };
+            var xenkoLogo = new ImageElement { Source = UIImages["pdx_logo"] };
 
-            paradoxLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
-            paradoxLogo.SetCanvasRelativeSize(new Vector3(0.5f, 0.5f, 1f));
-            paradoxLogo.SetCanvasRelativePosition(new Vector3(0.5f, 0.3f, 1f));
+            xenkoLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
+            xenkoLogo.SetCanvasRelativeSize(new Vector3(0.5f, 0.5f, 1f));
+            xenkoLogo.SetCanvasRelativePosition(new Vector3(0.5f, 0.3f, 1f));
 
             StartButton = new Button
             {
@@ -69,7 +69,7 @@ namespace JumpyJet
             StartButton.SetCanvasRelativePosition(new Vector3(0.5f, 0.7f, 0f));
 
             var mainMenuCanvas = new Canvas();
-            mainMenuCanvas.Children.Add(paradoxLogo);
+            mainMenuCanvas.Children.Add(xenkoLogo);
             mainMenuCanvas.Children.Add(StartButton);
 
             mainMenuRoot = new ModalElement

@@ -1,9 +1,9 @@
 ﻿using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Rendering;
-using SiliconStudio.Paradox.Rendering.Composers;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.Input;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering;
+using SiliconStudio.Xenko.Rendering.Composers;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.Input;
 
 namespace SimpleDynamicTexture
 {
@@ -44,7 +44,7 @@ namespace SimpleDynamicTexture
         /// <summary>
         /// Lit color
         /// </summary>
-        private static readonly ColorBGRA ParadoxColor = Color.MediumPurple;
+        private static readonly ColorBGRA XenkoColor = Color.MediumPurple;
 
         /// <summary>
         /// Dim color
@@ -136,7 +136,7 @@ namespace SimpleDynamicTexture
         private void TogglePixel(int x, int y)
         {
             var index = RenderTextureSize * y + x;
-            textureData[index] = (textureData[index] != ParadoxColor) ? ParadoxColor : TransparentColor;
+            textureData[index] = (textureData[index] != XenkoColor) ? XenkoColor : TransparentColor;
         }
 
 

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Rendering;
-using SiliconStudio.Paradox.Rendering.Composers;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.Input;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering;
+using SiliconStudio.Xenko.Rendering.Composers;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.Input;
 
 namespace SpriteFonts
 {
@@ -87,7 +87,7 @@ at full size and full measure";
         private readonly Vector2 headerPosition = new Vector2(0.5f, 0.25f);
         private readonly Vector2 contentPosition = new Vector2(0.5f, 0.4f);
 
-        private readonly Color paradoxColor = new Color(0xFF9E4884);
+        private readonly Color xenkoColor = new Color(0xFF9E4884);
 
         private Vector2 virtualResolution = new Vector2(1920, 1080);
 
@@ -163,7 +163,7 @@ at full size and full measure";
 
             position.X += spriteBatch.MeasureString(HeaderFont, headerPart1, headerSize, screenSize).X;
 
-            spriteBatch.DrawString(HeaderFont, headerPart2, headerSize, position, paradoxColor * GetInterpolatedAlpha());
+            spriteBatch.DrawString(HeaderFont, headerPart2, headerSize, position, xenkoColor * GetInterpolatedAlpha());
 
             position.X += spriteBatch.MeasureString(HeaderFont, headerPart2, headerSize, screenSize).X;
 
@@ -172,7 +172,7 @@ at full size and full measure";
 
         /// <summary>
         /// Draw "Introduction" text group.
-        /// Render Paradox SpriteFont sample introduction page.
+        /// Render Xenko SpriteFont sample introduction page.
         /// </summary>
         private void DrawIntroductionCategory()
         {
@@ -192,7 +192,7 @@ at full size and full measure";
 
             position.X += spriteBatch.MeasureString(DynamicFont, textPart1, textSize, screenSize).X;
 
-            spriteBatch.DrawString(DynamicFont, textPart2, textSize, position, paradoxColor * GetInterpolatedAlpha());
+            spriteBatch.DrawString(DynamicFont, textPart2, textSize, position, xenkoColor * GetInterpolatedAlpha());
 
             position.X += spriteBatch.MeasureString(DynamicFont, textPart2, textSize, screenSize).X;
 
@@ -347,7 +347,7 @@ at full size and full measure";
             DrawHeader("Easily ", "animate", " your texts!");
 
             // Draw content
-            var text = "Paradox Engine";
+            var text = "Xenko Engine";
 
             spriteBatch.DrawString(DynamicFont, text, DynamicFontContentSize, animatedFontPosition, animatedFontAlpha * Color.White * GetInterpolatedAlpha(), animatedFontRotation,
                 0.5f * spriteBatch.MeasureString(DynamicFont, text, DynamicFontContentSize, screenSize), animatedFontScale * Vector2.One, SpriteEffects.None, 0f, TextAlignment.Left);
