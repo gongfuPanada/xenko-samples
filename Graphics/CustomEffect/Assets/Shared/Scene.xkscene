@@ -1,0 +1,60 @@
+!SceneAsset
+Id: 365136b9-adbe-4c9a-8eeb-563894b4bd08
+SerializedVersion: 19
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 6a89de77-e3d6-40c4-9504-f75c5983d911
+        - 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a
+    Entities:
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 464f4cc7-2978-4c47-ae31-6001c905c896:XenkoBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -1.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 39779b9e-9eaa-4aa2-8cd9-3f3d3a0afd7a
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Effect
+                Components:
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !CustomEffect.EffectScript,CustomEffect.Game
+                                Id: 274a57bf-8017-4ffb-8b3d-04b2ba7cd9bb
+                                Logo: cbf696d1-ec12-4cb6-9518-b4a9b51dfaf6:LogoXenko
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 6a89de77-e3d6-40c4-9504-f75c5983d911
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras: []
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

@@ -1,9 +1,9 @@
 ﻿using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.UI;
-using SiliconStudio.Paradox.UI.Controls;
-using SiliconStudio.Paradox.UI.Panels;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.UI;
+using SiliconStudio.Xenko.UI.Controls;
+using SiliconStudio.Xenko.UI.Panels;
 
 namespace GameMenu
 {
@@ -17,22 +17,22 @@ namespace GameMenu
             // Allow user to resize the window with the mouse.
             Game.Window.AllowUserResizing = true;
 
-            // Create and initialize "Paradox Samples" Text
-            var paradoxSampleTextBlock = new ContentDecorator
+            // Create and initialize "Xenko Samples" Text
+            var xenkoSampleTextBlock = new ContentDecorator
             {
-                BackgroundImage = SplashScreenImages["paradox_sample_text_bg"],
+                BackgroundImage = SplashScreenImages["xenko_sample_text_bg"],
                 Content = new TextBlock
                 {
                     Font = WesternFont,
                     TextSize = 60,
-                    Text = "Paradox Samples",
+                    Text = "Xenko Samples",
                     TextColor = Color.White,
                 },
                 Padding = new Thickness(35, 15, 35, 25),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
 
-            paradoxSampleTextBlock.SetPanelZIndex(1);
+            xenkoSampleTextBlock.SetPanelZIndex(1);
 
             // Create and initialize "UI" Text
             var uiTextBlock = new ContentDecorator
@@ -52,15 +52,15 @@ namespace GameMenu
             uiTextBlock.SetPanelZIndex(1);
             uiTextBlock.SetGridRow(1);
 
-            // Create and initialize Paradox Logo
-            var paradoxLogoImageElement = new ImageElement
+            // Create and initialize Xenko Logo
+            var xenkoLogoImageElement = new ImageElement
             {
                 Source = SplashScreenImages["Logo"],
                 HorizontalAlignment = HorizontalAlignment.Center
             };
 
-            paradoxLogoImageElement.SetPanelZIndex(1);
-            paradoxLogoImageElement.SetGridRow(3);
+            xenkoLogoImageElement.SetPanelZIndex(1);
+            xenkoLogoImageElement.SetGridRow(3);
 
             // Create and initialize "Touch Screen to Start"
             var touchStartLabel = new ContentDecorator
@@ -97,9 +97,9 @@ namespace GameMenu
             grid.ColumnDefinitions.Add(new StripDefinition());
             grid.LayerDefinitions.Add(new StripDefinition());
 
-            grid.Children.Add(paradoxSampleTextBlock);
+            grid.Children.Add(xenkoSampleTextBlock);
             grid.Children.Add(uiTextBlock);
-            grid.Children.Add(paradoxLogoImageElement);
+            grid.Children.Add(xenkoLogoImageElement);
             grid.Children.Add(touchStartLabel);
 
             // Add the background

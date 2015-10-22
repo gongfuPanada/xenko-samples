@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.UI;
-using SiliconStudio.Paradox.UI.Controls;
-using SiliconStudio.Paradox.UI.Panels;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.UI;
+using SiliconStudio.Xenko.UI.Controls;
+using SiliconStudio.Xenko.UI.Panels;
 
 namespace GameMenu
 {
@@ -391,7 +391,7 @@ namespace GameMenu
                 Font = WesternFont,
                 TextSize = 42,
                 TextColor = Color.White,
-                Text = "Welcome to paradox UI sample.\n" + "Please name your character",
+                Text = "Welcome to xenko UI sample.\n" + "Please name your character",
                 TextAlignment = TextAlignment.Center,
                 WrapText = true,
                 Margin = new Thickness(20, 0, 20, 0),

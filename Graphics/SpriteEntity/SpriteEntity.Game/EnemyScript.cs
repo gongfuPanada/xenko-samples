@@ -2,10 +2,10 @@
 using System.Linq;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Animations;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.Rendering.Sprites;
+using SiliconStudio.Xenko.Animations;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace SpriteEntity
 {

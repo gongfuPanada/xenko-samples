@@ -1,5 +1,5 @@
 ﻿using NativeLinking.LibraryWrapper;
-using SiliconStudio.Paradox.Engine;
+using SiliconStudio.Xenko.Engine;
 
 namespace NativeLinking
 {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Animations;
-using SiliconStudio.Paradox.Input;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Animations;
+using SiliconStudio.Xenko.Input;
 
 namespace SpaceEscape
 {

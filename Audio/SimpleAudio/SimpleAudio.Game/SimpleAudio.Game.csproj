@@ -18,7 +18,7 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\SimpleAudio.pdxpkg</SiliconStudioCurrentPackagePath>
+    <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\SimpleAudio.xkpkg</SiliconStudioCurrentPackagePath>
     <SiliconStudioPackageProps>$([System.IO.Path]::ChangeExtension('$(SiliconStudioCurrentPackagePath)', '.props'))</SiliconStudioPackageProps>
     <SiliconStudioProjectType>Library</SiliconStudioProjectType>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <Optimize>false</Optimize>
     <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
     <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
-    <SiliconStudioParadoxGraphicsApi>Direct3D11</SiliconStudioParadoxGraphicsApi>
+    <SiliconStudioXenkoGraphicsApi>Direct3D11</SiliconStudioXenkoGraphicsApi>
     <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Windows-Direct3D11\Debug\</OutputPath>
     <IntermediateOutputPath>obj\Windows\Debug\</IntermediateOutputPath>
@@ -40,7 +40,7 @@
     <Optimize>true</Optimize>
     <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
     <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
-    <SiliconStudioParadoxGraphicsApi>Direct3D11</SiliconStudioParadoxGraphicsApi>
+    <SiliconStudioXenkoGraphicsApi>Direct3D11</SiliconStudioXenkoGraphicsApi>
     <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Windows-Direct3D11\Release\</OutputPath>
     <IntermediateOutputPath>obj\Windows\Release\</IntermediateOutputPath>
@@ -52,7 +52,7 @@
     <Optimize>true</Optimize>
     <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
     <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
-    <SiliconStudioParadoxGraphicsApi>Direct3D11</SiliconStudioParadoxGraphicsApi>
+    <SiliconStudioXenkoGraphicsApi>Direct3D11</SiliconStudioXenkoGraphicsApi>
     <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Windows-Direct3D11\AppStore\</OutputPath>
     <IntermediateOutputPath>obj\Windows\AppStore\</IntermediateOutputPath>
@@ -64,7 +64,7 @@
     <Optimize>true</Optimize>
     <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_WINDOWS;SILICONSTUDIO_PLATFORM_WINDOWS_DESKTOP</DefineConstants>
     <SiliconStudioPlatform>Windows</SiliconStudioPlatform>
-    <SiliconStudioParadoxGraphicsApi>Direct3D11</SiliconStudioParadoxGraphicsApi>
+    <SiliconStudioXenkoGraphicsApi>Direct3D11</SiliconStudioXenkoGraphicsApi>
     <SiliconStudioBuildProfile>Windows</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Windows-Direct3D11\Testing\</OutputPath>
     <IntermediateOutputPath>obj\Windows\Testing\</IntermediateOutputPath>
@@ -81,10 +81,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />
-  <Import Project="$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets" Condition="Exists('$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets')" />
-  <Target Name="EnsureSiliconStudioParadoxInstalled" BeforeTargets="PrepareForBuild">
-    <Error Condition="'$(SiliconStudioParadoxDir)' == ''" Text="Paradox SDK was not found. Check Paradox is installed and the global env variable [SiliconStudioParadoxDir] is setup correctly" />
-    <Error Condition="!Exists('$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets')" Text="Invalid Paradox SDK installation. Target file [$(SiliconStudioParadoxDir)\Targets\SiliconStudio.Common.targets] was not found." />
+  <Import Project="$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets" Condition="Exists('$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets')" />
+  <Target Name="EnsureSiliconStudioXenkoInstalled" BeforeTargets="PrepareForBuild">
+    <Error Condition="'$(SiliconStudioXenkoDir)' == ''" Text="Xenko SDK was not found. Check Xenko is installed and the global env variable [SiliconStudioXenkoDir] is setup correctly" />
+    <Error Condition="!Exists('$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets')" Text="Invalid Xenko SDK installation. Target file [$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets] was not found." />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
     Other similar extension points exist, see Microsoft.Common.targets.

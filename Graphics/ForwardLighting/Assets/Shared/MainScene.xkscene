@@ -1,0 +1,251 @@
+!SceneAsset
+Id: 39ecd5b5-134a-4651-9ebe-118605b09d03
+SerializedVersion: 19
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 3f496e95-7123-467f-a2de-5e1de5fea9a1
+        - a12a7947-ecd5-4f18-9f82-156445fb3b91
+        - 129299d6-35ae-48b3-a51a-e8cf44493c2c
+        - 92384700-0ee6-42e3-a038-e4ed7a11b0ab
+        - c1600b84-98b6-40a2-a494-6a16f287b297
+        - d8a19b9d-f21d-47d9-90e8-8ce1de293c14
+        - 06886ea3-30de-4548-b1b3-06e228f20f64
+        - e6ea117f-3b31-4016-8cd5-e23b23ab896f
+        - 8756e782-4478-47de-bce8-f42f5c5ffa38
+    Entities:
+        -   Entity:
+                Name: character_00
+                Components:
+                    ModelComponent.Key:
+                        Model: 94cb0ec2-52f7-4dcc-94cd-cd983f1409bb:character_00
+                        Materials:
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !ForwardLighting.RotateEntity,ForwardLighting.Game
+                                Camera:
+                                    Id: 3f496e95-7123-467f-a2de-5e1de5fea9a1
+                                Id: 5aacc87d-e421-47ee-b174-82110b7c59c0
+                                Stand:
+                                    Id: d8a19b9d-f21d-47d9-90e8-8ce1de293c14
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 06886ea3-30de-4548-b1b3-06e228f20f64
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional 2
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.6
+                    TransformComponent.Key:
+                        Position: {X: 3.0, Y: 3.0, Z: 0.0}
+                        Rotation: {W: 0.853553355, X: -0.3535534, Y: 0.3535534, Z: 0.14644663}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 129299d6-35ae-48b3-a51a-e8cf44493c2c
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                        VerticalFieldOfView: 36.0
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.4, Z: 7.5}
+                        Rotation: {W: 0.999390841, X: -0.0348994955, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 3f496e95-7123-467f-a2de-5e1de5fea9a1
+            Design:
+                Folder: null
+        -   Entity:
+                Name: BorderModel
+                Components:
+                    ModelComponent.Key:
+                        Model: c1ca91c4-0af6-45f6-afb4-320e01fcd413:BorderModel
+                        Materials:
+                            - null
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: -1.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 75fe0682-8cfe-4480-b179-a9d861feb658
+            Design:
+                Folder: null
+        -   Entity:
+                Name: UI
+                Components:
+                    UIComponent.Key:
+                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !ForwardLighting.UIScript,ForwardLighting.Game
+                                DirectionalLight1:
+                                    Entity: {Id: a12a7947-ecd5-4f18-9f82-156445fb3b91}
+                                    Component: LightComponent.Key
+                                DirectionalLight2:
+                                    Entity: {Id: 129299d6-35ae-48b3-a51a-e8cf44493c2c}
+                                    Component: LightComponent.Key
+                                Font: a7b3ff14-423f-4466-b27e-871d0d7ac7da:Font
+                                Id: b131d117-2569-46b0-b469-fd883dc837b8
+                                PointLight:
+                                    Entity: {Id: 92384700-0ee6-42e3-a038-e4ed7a11b0ab}
+                                    Component: LightComponent.Key
+                                SpotLight:
+                                    Entity: {Id: c1600b84-98b6-40a2-a494-6a16f287b297}
+                                    Component: LightComponent.Key
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 8756e782-4478-47de-bce8-f42f5c5ffa38
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Point light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightPoint
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Radius: 6.0
+                            Shadow:
+                                Size: XSmall
+                                BiasParameters: {}
+                        Intensity: 0.5
+                    TransformComponent.Key:
+                        Position: {X: 1.0, Y: -0.2, Z: 1.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 92384700-0ee6-42e3-a038-e4ed7a11b0ab
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional 1
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.4
+                    TransformComponent.Key:
+                        Position: {X: -3.0, Y: 3.0, Z: 0.0}
+                        Rotation: {W: 0.853553355, X: -0.3535534, Y: -0.3535534, Z: -0.14644663}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: a12a7947-ecd5-4f18-9f82-156445fb3b91
+            Design:
+                Folder: null
+        -   Entity:
+                Name: FloorModel
+                Components:
+                    ModelComponent.Key:
+                        Model: 00f608bd-b4e5-4e50-94af-6d593671e035:FloorModel
+                        Materials:
+                            - null
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: -1.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: bc48b15c-65fc-42ce-8657-4866f517b202
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Spot light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightSpot
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Range: 9.0
+                            AngleOuter: 40.0
+                            Shadow:
+                                Size: Small
+                                BiasParameters: {}
+                        Intensity: 30.0
+                    TransformComponent.Key:
+                        Position: {X: -5.0, Y: 5.5, Z: 0.0}
+                        Rotation: {W: 0.6125686, X: -0.35370186, Y: -0.612145662, Z: -0.353457719}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: c1600b84-98b6-40a2-a494-6a16f287b297
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Stand
+                Components:
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            -   Entity: {Id: bc48b15c-65fc-42ce-8657-4866f517b202}
+                                Component: TransformComponent.Key
+                            -   Entity: {Id: 75fe0682-8cfe-4480-b179-a9d861feb658}
+                                Component: TransformComponent.Key
+                Id: d8a19b9d-f21d-47d9-90e8-8ce1de293c14
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: 082a7591-1735-45ab-a1c4-02fdcb6f9d15:XenkoBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -5.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: e6ea117f-3b31-4016-8cd5-e23b23ab896f
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 3f496e95-7123-467f-a2de-5e1de5fea9a1}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

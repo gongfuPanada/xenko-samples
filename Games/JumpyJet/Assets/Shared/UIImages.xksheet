@@ -1,0 +1,28 @@
+!SpriteSheet
+Id: 85da6663-b688-4a62-91f9-d8868f3a2d4f
+SerializedVersion: 2
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Format: Color32Bits
+Alpha: Explicit
+Packing: {}
+Sprites:
+    -   Source: ../../RawAssets/tex1.png
+        Name: button
+        TextureRegion: {X: 0, Y: 1904, Width: 183, Height: 90}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 125.0, Y: 50.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/tex1.png
+        Name: xk_logo
+        TextureRegion: {X: 0, Y: 1423, Width: 277, Height: 284}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    -   Source: ../../RawAssets/tex1.png
+        Name: score_bg
+        TextureRegion: {X: 0, Y: 1712, Width: 204, Height: 189}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

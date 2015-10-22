@@ -1,6 +1,6 @@
-using SiliconStudio.Paradox.Animations;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Rendering.Sprites;
+using SiliconStudio.Xenko.Animations;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace CharacterControllerSample
 {

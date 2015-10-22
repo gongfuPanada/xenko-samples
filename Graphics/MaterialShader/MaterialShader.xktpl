@@ -1,0 +1,11 @@
+!TemplateSample
+Id: DD687347-3C53-4F6D-8436-ABA6D5822B99
+Name: Custom Material Shader
+Scope: Session
+Description: Creates a sample project which shows how to use materials with custom shaders
+FullDescription: This sample shows how to create and use a custom shader to animate colors and attributes of materials.
+Group: Samples/Graphics
+Icon: .xktpl/Icon.png
+DefaultOutputName: MaterialShader
+Screenshots:
+    - .xktpl/screenshot_small.png

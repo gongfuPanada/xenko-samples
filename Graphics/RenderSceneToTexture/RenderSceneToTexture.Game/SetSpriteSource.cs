@@ -1,6 +1,6 @@
-﻿using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Rendering;
-using SiliconStudio.Paradox.Rendering.Sprites;
+﻿using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering;
+using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace RenderSceneToTexture
 {

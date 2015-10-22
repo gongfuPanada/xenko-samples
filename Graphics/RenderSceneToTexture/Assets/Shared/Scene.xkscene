@@ -1,0 +1,207 @@
+!SceneAsset
+Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
+SerializedVersion: 19
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 883e544b-9579-48c0-b731-9b8de2d287e4
+        - aa9f45b3-a8f2-4b7c-8723-446504667459
+        - dbc67230-cb46-4563-8193-084016acd341
+        - 94061a3c-bbe5-4ad6-b55c-5905873264e1
+        - 14088c66-6d9b-4e26-a601-9784ff3ae859
+        - f63efa01-c45a-4b81-ad59-e49391a813e4
+        - 1c1ced43-f10b-4f46-93e7-9f75eb681c5e
+        - bb7065d2-498a-45d7-b4b1-0bb1a573cc69
+    Entities:
+        -   Entity:
+                Name: Camera back
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                        AspectRatio: 0.56
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.879, Z: -3.69}
+                        Rotation: {W: -4.371139E-08, X: 0.0, Y: 1.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 14088c66-6d9b-4e26-a601-9784ff3ae859
+            Design:
+                Folder: null
+        -   Entity:
+                Name: knightBack
+                Group: Group1
+                Components:
+                    SpriteComponent.Key:
+                        SpriteProvider: !SpriteFromTexture
+                            Texture: null
+                            PixelsPerUnit: 450.0
+                            Center: {X: 0.0, Y: 0.0}
+                            CenterFromMiddle: false
+                        SpriteType: Billboard
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !RenderSceneToTexture.SetSpriteSource,RenderSceneToTexture.Game
+                                Id: c31d8e1f-53f2-456a-a026-55ebe9720de5
+                                RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
+                    TransformComponent.Key:
+                        Position: {X: 0.25, Y: 2.85, Z: -1.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 1c1ced43-f10b-4f46-93e7-9f75eb681c5e
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ambient light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightAmbient
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                        Intensity: 0.5
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 5.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 883e544b-9579-48c0-b731-9b8de2d287e4
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Camera front
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                        AspectRatio: 0.56
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 1.15, Z: 3.08}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 94061a3c-bbe5-4ad6-b55c-5905873264e1
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional light front
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.8
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 5.0}
+                        Rotation: {W: 0.963630438, X: 0.267238379, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: aa9f45b3-a8f2-4b7c-8723-446504667459
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Background
+                Components:
+                    BackgroundComponent.Key:
+                        Texture: b237783b-085e-40e5-b6b4-c41c2b98eb41:XenkoBackground
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: bb7065d2-498a-45d7-b4b1-0bb1a573cc69
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional light back
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !LightColorRgb
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.8
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: -5.0}
+                        Rotation: {W: -0.178963482, X: -0.9838557, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: dbc67230-cb46-4563-8193-084016acd341
+            Design:
+                Folder: null
+        -   Entity:
+                Name: knight
+                Components:
+                    ModelComponent.Key:
+                        Model: 9e7f08db-ca99-4171-b503-6ea0f8e5114d:knight
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    AnimationComponent.Key:
+                        Animations:
+                            Idle: 144a63cd-8847-447e-8b00-4c33204abfb9:he00_normal_idle
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !RenderSceneToTexture.PlayAnimation,RenderSceneToTexture.Game
+                                Id: e67ed2c3-6fab-4b93-bfea-3fceab01a27c
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: f63efa01-c45a-4b81-ad59-e49391a813e4
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 94061a3c-bbe5-4ad6-b55c-5905873264e1}
+                        Component: CameraComponent.Key
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 14088c66-6d9b-4e26-a601-9784ff3ae859}
+                        Component: CameraComponent.Key
+            Layers:
+                -   Name: SceneGraphicsLayer
+                    Output: !SharedRenderFrameProvider
+                        RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
+                    Renderers:
+                        - !ClearRenderFrameRenderer
+                            Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                            Output: !CurrentRenderFrameProvider {}
+                        - !SceneCameraRenderer
+                            Mode: !CameraRendererModeForward {}
+                            Camera:
+                                Index: 1
+                            CullingMask: Group0
+                            Output: !CurrentRenderFrameProvider {}
+                            Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

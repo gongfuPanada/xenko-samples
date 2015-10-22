@@ -1,6 +1,6 @@
 ﻿using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
 
 namespace SpriteEntity
 {

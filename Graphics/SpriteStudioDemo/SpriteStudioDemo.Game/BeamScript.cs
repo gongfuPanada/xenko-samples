@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Physics;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 
 namespace SpriteStudioDemo
 {

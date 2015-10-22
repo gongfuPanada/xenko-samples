@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Audio;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Input;
+using SiliconStudio.Xenko.Audio;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Input;
 
 namespace SimpleAudio
 {

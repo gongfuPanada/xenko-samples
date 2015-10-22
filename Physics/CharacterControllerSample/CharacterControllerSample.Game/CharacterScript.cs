@@ -2,11 +2,11 @@ using System;
 using System.Linq;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Animations;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Input;
-using SiliconStudio.Paradox.Physics;
-using SiliconStudio.Paradox.Rendering.Sprites;
+using SiliconStudio.Xenko.Animations;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Input;
+using SiliconStudio.Xenko.Physics;
+using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace CharacterControllerSample
 {

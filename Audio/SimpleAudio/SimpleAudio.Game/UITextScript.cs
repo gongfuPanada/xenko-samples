@@ -1,9 +1,9 @@
 ﻿using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Engine;
-using SiliconStudio.Paradox.Graphics;
-using SiliconStudio.Paradox.UI;
-using SiliconStudio.Paradox.UI.Controls;
-using SiliconStudio.Paradox.UI.Panels;
+using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.UI;
+using SiliconStudio.Xenko.UI.Controls;
+using SiliconStudio.Xenko.UI.Panels;
 
 namespace SimpleAudio
 {

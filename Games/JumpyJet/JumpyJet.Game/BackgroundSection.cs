@@ -1,5 +1,5 @@
 ﻿using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Paradox.Graphics;
+using SiliconStudio.Xenko.Graphics;
 
 namespace JumpyJet
 {

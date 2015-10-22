@@ -1,2 +1,2 @@
-set SiliconStudioParadoxDir=%~dp0\..\
-ParadoxSamples.sln
+set SiliconStudioXenkoDir=%~dp0\..\
+XenkoSamples.sln
