@@ -1,6 +1,6 @@
 !Model
 Id: b731fd7d-df09-4059-9cc5-57ba50d0f3f6
-SerializedVersion: 2
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/model/BG/scene/bg_b04.FBX
 SourceHash: 1116241d080b60c869b5b2469816063a
@@ -26,8 +26,9 @@ Nodes:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 2
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
             -   Name: BG_wall01

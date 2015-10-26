@@ -1,6 +1,6 @@
 !Texture
 Id: ef63ed35-498e-4578-a7c0-1fc3ac274e99
-SerializedVersion: 1
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/stone1_cav.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -8,7 +8,7 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 1
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
         Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558

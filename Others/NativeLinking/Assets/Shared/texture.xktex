@@ -1,6 +1,6 @@
 !Texture
 Id: 28b81d8a-a685-44ea-b521-2352cf51b8ac
-SerializedVersion: 1
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/texture.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -9,7 +9,7 @@ Format: Color32Bits
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 1
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
         Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558

@@ -1,6 +1,6 @@
 !Model
 Id: 94cb0ec2-52f7-4dcc-94cd-cd983f1409bb
-SerializedVersion: 2
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/character/scene/character_00.FBX
 SourceHash: 3f0d9203392fe14f680c7bd0ffa916bf
@@ -52,7 +52,7 @@ Nodes:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 2
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595

@@ -1,6 +1,6 @@
 !Model
 Id: 7f052b2a-84c2-4f8a-932c-c073b2de47de
-SerializedVersion: 2
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/knight/knight.fbx
 SourceHash: af4ac6da9a62b02bd84f4a8147dd38a7
@@ -91,8 +91,9 @@ Nodes:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 2
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
             -   Name: c100_chr_ch00_Knight_KINGHT_iron

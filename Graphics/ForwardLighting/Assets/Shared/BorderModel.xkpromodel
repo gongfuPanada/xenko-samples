@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: c1ca91c4-0af6-45f6-afb4-320e01fcd413
-SerializedVersion: 5
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Type: !TorusProceduralModel
     Radius: 3.6

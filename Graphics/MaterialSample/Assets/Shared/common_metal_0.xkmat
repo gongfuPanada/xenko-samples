@@ -1,6 +1,6 @@
 !MaterialAsset
 Id: ff6c9ae4-9c05-4380-b11b-77df9f28ed5c
-SerializedVersion: 1
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Attributes:
     Surface: !MaterialNormalMapFeature

@@ -1,6 +1,6 @@
 !Package
 Id: c279588e-7ce5-49e7-85c5-e867be2993bc
-SerializedVersion: 1
+SerializedVersion: {Assets: 0.0.2}
 Tags: []
 Meta:
     Name: DeferredLighting
@@ -10,6 +10,7 @@ Meta:
     Dependencies:
         -   Name: Xenko
             Version: 1.0.0-alpha01
+            RootAssets: []
 LocalDependencies: []
 Profiles:
     -   Name: Shared
@@ -41,3 +42,4 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
+RootAssets: []
