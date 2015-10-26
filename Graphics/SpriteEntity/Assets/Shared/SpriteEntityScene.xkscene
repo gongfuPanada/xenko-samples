@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
-SerializedVersion: 18
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Hierarchy:
     RootEntities:

@@ -1,6 +1,6 @@
 !MaterialAsset
 Id: 53c56a2a-42dc-4c0a-ad12-36060dc9aa76
-SerializedVersion: 1
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
@@ -24,7 +24,7 @@ Layers: []
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 1
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
         Attributes:
             Diffuse: !MaterialDiffuseMapFeature

@@ -1,6 +1,6 @@
 !Model
 Id: 19ec836d-2ea3-43fe-8f79-0f55cfc437be
-SerializedVersion: 2
+SerializedVersion: {Xenko: 1.4.0-beta}
 BuildOrder: 500
 Tags: []
 Source: ../../RawAssets/character/scene/character_00.FBX
@@ -62,9 +62,10 @@ Nodes:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 2
+        SerializedVersion: {Xenko: 1.4.0-beta}
         BuildOrder: 500
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
             -   Name: mc00

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: 18
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -22,6 +22,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -71,6 +76,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -95,6 +105,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -119,6 +134,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
@@ -147,8 +167,18 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: false
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
@@ -194,8 +224,18 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: false
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs

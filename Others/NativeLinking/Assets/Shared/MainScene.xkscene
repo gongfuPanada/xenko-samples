@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 2ae86742-ad72-46d3-a6b6-4358ea99b7a6
-SerializedVersion: 18
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -27,7 +27,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightAmbient
-                            Color: !LightColorRgb
+                            Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                     TransformComponent.Key:
                         Position: {X: -2.0, Y: 2.0, Z: 0.0}

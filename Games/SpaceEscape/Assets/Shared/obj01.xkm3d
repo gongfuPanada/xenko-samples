@@ -1,6 +1,6 @@
 !Model
 Id: f81db4ee-5929-42c9-9008-2cd624296caa
-SerializedVersion: 2
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/model/BG/scene/obj01.FBX
 SourceHash: 9207feb70ceb80973a90773b634d213e
@@ -21,8 +21,9 @@ Nodes:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 2
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
             -   Name: obj_02

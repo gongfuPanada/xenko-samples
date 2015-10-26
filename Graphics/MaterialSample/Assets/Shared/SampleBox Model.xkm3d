@@ -1,6 +1,6 @@
 !Model
 Id: a7e0bdca-e552-44ce-a072-880ed908bfee
-SerializedVersion: 2
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/SampleBox.FBX
 SourceHash: b5f389bd04fd3ea2cf5333d4c74d12d3
@@ -15,8 +15,9 @@ Nodes:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: 2
+        SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
             -   Name: m_a_0

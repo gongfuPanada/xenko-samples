@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: 18
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -19,6 +19,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
@@ -43,6 +48,11 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
@@ -100,6 +110,15 @@ Hierarchy:
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
+                                FallSpeed: 10.0
+                                MaxSlope: 0.0
+                                JumpSpeed: 5.0
+                                Gravity: -10.0
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs

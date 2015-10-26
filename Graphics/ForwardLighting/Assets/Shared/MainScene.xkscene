@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 39ecd5b5-134a-4651-9ebe-118605b09d03
-SerializedVersion: 18
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -43,7 +43,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !LightColorRgb
+                            Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -123,7 +123,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightPoint
-                            Color: !LightColorRgb
+                            Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Radius: 6.0
                             Shadow:
@@ -143,7 +143,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightDirectional
-                            Color: !LightColorRgb
+                            Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Shadow:
                                 Size: Large
@@ -179,7 +179,7 @@ Hierarchy:
                 Components:
                     LightComponent.Key:
                         Type: !LightSpot
-                            Color: !LightColorRgb
+                            Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                             Range: 9.0
                             AngleOuter: 40.0

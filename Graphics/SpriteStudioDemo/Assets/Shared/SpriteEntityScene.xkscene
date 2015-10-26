@@ -1,6 +1,6 @@
 !SceneAsset
 Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
-SerializedVersion: 18
+SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -61,8 +61,18 @@ Hierarchy:
                                 CollisionGroup: CustomFilter1
                                 CanCollideWith: DefaultFilter
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
@@ -83,6 +93,11 @@ Hierarchy:
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: CustomFilter1
                                 ProcessCollisions: true
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 ColliderShapes:
                                     - !StaticPlaneColliderShapeDesc
                                         Normal: {X: 0.0, Y: 1.0, Z: 0.0}
@@ -158,8 +173,18 @@ Hierarchy:
                                 CollisionGroup: CustomFilter1
                                 CanCollideWith: DefaultFilter
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
@@ -192,8 +217,18 @@ Hierarchy:
                                 CollisionGroup: CustomFilter1
                                 CanCollideWith: DefaultFilter
                                 ProcessCollisions: true
-                                NodeName: null
+                                Enabled: true
+                                CanSleep: true
+                                Restitution: 0.0
+                                Friction: 0.5
+                                RollingFriction: 0.0
                                 IsKinematic: true
+                                Mass: 1.0
+                                LinearDamping: 0.0
+                                AngularDamping: 0.0
+                                OverrideGravity: false
+                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                                NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
                                         Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
