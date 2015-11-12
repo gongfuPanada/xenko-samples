@@ -44,7 +44,7 @@ namespace JumpyJetTest
             {
                 Platform = (int)PlatformType.Windows,
                 Tester = true,
-                Cmd = "..\\..\\samples\\Games\\JumpyJet\\Bin\\Windows-Direct3D11\\Debug\\JumpyJet.exe"
+                Cmd = "%SiliconStudioXenkoDir%\\samples\\Games\\JumpyJet\\Bin\\Windows-Direct3D11\\Debug\\JumpyJet.exe"
             }).Wait();
 
             if (!ev.WaitOne(10000))
