@@ -23,7 +23,7 @@ namespace JumpyJetTest
 
             var socketContext = RouterClient.RequestServer(url).Result;
 
-            var success = true;
+            var success = false;
             var message = "";
             var ev = new AutoResetEvent(false);
 
@@ -57,7 +57,7 @@ namespace JumpyJetTest
                 throw new Exception("Failed: " + message);
             }
 
-            Console.WriteLine("Game started.");
+            Console.WriteLine("Game started. (message: " + message + ")");
 
             return socket;
         }
