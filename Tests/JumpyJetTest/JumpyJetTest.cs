@@ -87,7 +87,9 @@ namespace JumpyJetTest
             socket.Send(new KeySimulationRequest { Down = false, Key = Keys.Space }).Wait();
             Task.Delay(500).Wait();
 
-            socket.Send(new ScreenshotRequest {Filename = "C:\\Users\\giovanni.petrantoni\\Desktop\\screenshot.png"}).Wait();
+            var xenkoDir = Environment.GetEnvironmentVariable("SiliconStudioXenkoDir");
+
+            socket.Send(new ScreenshotRequest {Filename = xenkoDir + "screenshots\\JumpyJet.png" }).Wait();
             Task.Delay(500).Wait();
 
             socket.Send(new TestEndedRequest()).Wait();
