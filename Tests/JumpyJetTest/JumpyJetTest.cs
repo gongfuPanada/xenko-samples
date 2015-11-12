@@ -89,7 +89,7 @@ namespace JumpyJetTest
 
             var xenkoDir = Environment.GetEnvironmentVariable("SiliconStudioXenkoDir");
 
-            socket.Send(new ScreenshotRequest {Filename = xenkoDir + "screenshots\\JumpyJet.png" }).Wait();
+            socket.Send(new ScreenshotRequest {Filename = xenkoDir + "\\screenshots\\JumpyJet.png" }).Wait();
             Task.Delay(500).Wait();
 
             socket.Send(new TestEndedRequest()).Wait();
