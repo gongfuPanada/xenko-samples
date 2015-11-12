@@ -17,9 +17,7 @@ namespace JumpyJetTest
     [TestFixture]
     public class JumpyJetTest
     {
-        private SocketMessageLayer socket;
-
-        public void StartGame()
+        public SocketMessageLayer StartGame()
         {
             var url = $"/service/{XenkoVersion.CurrentAsText}/SiliconStudio.Xenko.SamplesTestServer.exe";
 
@@ -29,7 +27,7 @@ namespace JumpyJetTest
             var message = "";
             var ev = new AutoResetEvent(false);
 
-            socket = new SocketMessageLayer(socketContext, false);
+            var socket = new SocketMessageLayer(socketContext, false);
 
             socket.AddPacketHandler<StatusMessageRequest>(request =>
             {
@@ -58,12 +56,16 @@ namespace JumpyJetTest
             {
                 throw new Exception("Failed: " + message);
             }
+
+            Console.WriteLine("Game started.");
+
+            return socket;
         }
 
         [Test]
         public void TestLaunch()
         {
-            StartGame();
+            var socket = StartGame();
 
             Task.Delay(2000).Wait();
 
@@ -73,23 +75,28 @@ namespace JumpyJetTest
         [Test]
         public void TestInputs()
         {
-            StartGame();
+            var socket = StartGame();           
 
             Task.Delay(2000).Wait();
 
             socket.Send(new TapSimulationRequest { Down = true, Coords = new Vector2(0.5f, 0.7f) }).Wait();
+            Console.WriteLine("TapSimulationRequest Down.");
             Task.Delay(500).Wait();
             socket.Send(new TapSimulationRequest { Down = false, Coords = new Vector2(0.5f, 0.7f) }).Wait();
+            Console.WriteLine("TapSimulationRequest Up.");
             Task.Delay(500).Wait();
 
             socket.Send(new KeySimulationRequest {Down = true, Key = Keys.Space}).Wait();
+            Console.WriteLine("KeySimulationRequest Down.");
             Task.Delay(500).Wait();
             socket.Send(new KeySimulationRequest { Down = false, Key = Keys.Space }).Wait();
+            Console.WriteLine("KeySimulationRequest Up.");
             Task.Delay(500).Wait();
 
             var xenkoDir = Environment.GetEnvironmentVariable("SiliconStudioXenkoDir");
 
             socket.Send(new ScreenshotRequest {Filename = xenkoDir + "\\screenshots\\JumpyJet.png" }).Wait();
+            Console.WriteLine("ScreenshotRequest.");
             Task.Delay(500).Wait();
 
             socket.Send(new TestEndedRequest()).Wait();
