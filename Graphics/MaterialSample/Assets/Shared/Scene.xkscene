@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c2262423-9422-4dd1-9fcb-ead76f9a93ba
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -38,6 +38,7 @@ Hierarchy:
         - e41fff2c-665d-4c9a-b641-9b99e02a79b0
     Entities:
         -   Entity:
+                Id: 0a60c97d-bb16-4dcf-a147-f986f1d043ed
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -49,10 +50,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 0a60c97d-bb16-4dcf-a147-f986f1d043ed
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 0b25e0dc-5e21-40ec-9f9d-1102b4613c4a
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -64,10 +64,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 0b25e0dc-5e21-40ec-9f9d-1102b4613c4a
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 0c90be28-e0fd-40a5-83e3-f8ea75a40a3b
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -79,10 +78,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 0c90be28-e0fd-40a5-83e3-f8ea75a40a3b
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 10e90041-bf77-47fe-836b-42813cb9400f
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -94,10 +92,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 10e90041-bf77-47fe-836b-42813cb9400f
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 147c3547-06ad-41a1-b0fb-ccf983b3c97a
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -109,10 +106,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 147c3547-06ad-41a1-b0fb-ccf983b3c97a
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 190d9bbc-c577-4741-90ca-059043c3e5ec
                 Name: Emissive Sample
                 Components:
                     TransformComponent.Key:
@@ -124,10 +120,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: ece16954-9211-4fa2-a645-f644bbc6e829}
                                 Component: TransformComponent.Key
-                Id: 190d9bbc-c577-4741-90ca-059043c3e5ec
             Design:
                 Folder: Various
         -   Entity:
+                Id: 1bdeb0b9-7fef-4f96-ad85-dc7a51cf11c6
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -139,10 +135,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 1bdeb0b9-7fef-4f96-ad85-dc7a51cf11c6
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 1cac84ce-0c9d-4508-bf75-22888a3d07c7
                 Name: Gold_Metalness1.0 Glossness0.7
                 Components:
                     TransformComponent.Key:
@@ -154,10 +149,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 3c0146f0-961e-4c12-bf52-9d507ac32770}
                                 Component: TransformComponent.Key
-                Id: 1cac84ce-0c9d-4508-bf75-22888a3d07c7
             Design:
                 Folder: Golds
         -   Entity:
+                Id: 1f3c7de6-a1d2-499f-994c-e46c09358737
                 Name: Stone Sample
                 Components:
                     TransformComponent.Key:
@@ -169,10 +164,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 27bb72d3-a76a-407e-8cae-75241f0d3ffc}
                                 Component: TransformComponent.Key
-                Id: 1f3c7de6-a1d2-499f-994c-e46c09358737
             Design:
                 Folder: Various
         -   Entity:
+                Id: 22766b13-2f3e-4308-aff1-8c5542eef33f
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -184,10 +179,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 22766b13-2f3e-4308-aff1-8c5542eef33f
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 27bb72d3-a76a-407e-8cae-75241f0d3ffc
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -199,10 +193,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 27bb72d3-a76a-407e-8cae-75241f0d3ffc
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 2a5d7361-7ad5-4142-8b2b-8a72bbcc66fc
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -214,10 +207,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 2a5d7361-7ad5-4142-8b2b-8a72bbcc66fc
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 2d582ddd-6559-4212-8632-3988f1afe02d
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -229,10 +221,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 2d582ddd-6559-4212-8632-3988f1afe02d
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 2df1dd40-c381-4340-a996-071817dfc53e
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -244,10 +235,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 2df1dd40-c381-4340-a996-071817dfc53e
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 2f8235e3-c991-4682-876b-dcb547009f43
                 Name: Directional light
                 Components:
                     LightComponent.Key:
@@ -266,10 +256,9 @@ Hierarchy:
                         Rotation: {W: 0.5045669, X: -0.148005635, Y: 0.8162018, Z: 0.239418119}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 2f8235e3-c991-4682-876b-dcb547009f43
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 3224d228-673d-46c9-a809-99a888f492fe
                 Name: Silver_Metalness1.0 Glossness0.6
                 Components:
                     TransformComponent.Key:
@@ -281,10 +270,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 69e6db7d-2e3f-46b2-a10d-409360ad4065}
                                 Component: TransformComponent.Key
-                Id: 3224d228-673d-46c9-a809-99a888f492fe
             Design:
                 Folder: Silvers
         -   Entity:
+                Id: 32353827-e0b0-482e-a2e6-4d44cdb015b1
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -296,10 +285,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 32353827-e0b0-482e-a2e6-4d44cdb015b1
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 32c93004-9343-4fa8-8aed-ffe5a1310172
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -311,10 +299,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 32c93004-9343-4fa8-8aed-ffe5a1310172
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 3b7c2fc3-8605-4aad-b8b4-bd920b9bb946
                 Name: Silver_Metalness1.0 Glossness1.0
                 Components:
                     TransformComponent.Key:
@@ -326,10 +313,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 432ce6f1-45eb-4518-8067-090f0354d337}
                                 Component: TransformComponent.Key
-                Id: 3b7c2fc3-8605-4aad-b8b4-bd920b9bb946
             Design:
                 Folder: Silvers
         -   Entity:
+                Id: 3c0146f0-961e-4c12-bf52-9d507ac32770
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -341,10 +328,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 3c0146f0-961e-4c12-bf52-9d507ac32770
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 3c4bfa2d-562f-40cc-9a84-320743baa72e
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -356,10 +342,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 3c4bfa2d-562f-40cc-9a84-320743baa72e
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 4163da3c-46cc-41d3-839f-ef0ea4e373c4
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -371,10 +356,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 4163da3c-46cc-41d3-839f-ef0ea4e373c4
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 432ce6f1-45eb-4518-8067-090f0354d337
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -386,10 +370,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 432ce6f1-45eb-4518-8067-090f0354d337
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 47b03fbf-99ff-40da-8877-3a07100afa7f
                 Name: Silver_Metalness1.0 Glossness0.85
                 Components:
                     TransformComponent.Key:
@@ -401,10 +384,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 8131c62a-4adb-4622-ac57-10a818a7c8ee}
                                 Component: TransformComponent.Key
-                Id: 47b03fbf-99ff-40da-8877-3a07100afa7f
             Design:
                 Folder: Silvers
         -   Entity:
+                Id: 49aa15f6-c60b-44cb-8fa8-994e3911fe40
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -416,10 +399,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 49aa15f6-c60b-44cb-8fa8-994e3911fe40
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 523ece28-8059-420e-88ec-aadf1f4de965
                 Name: Plastic_Metalness0.0 Glossness1.0
                 Components:
                     TransformComponent.Key:
@@ -431,10 +413,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 49aa15f6-c60b-44cb-8fa8-994e3911fe40}
                                 Component: TransformComponent.Key
-                Id: 523ece28-8059-420e-88ec-aadf1f4de965
             Design:
                 Folder: Plastics
         -   Entity:
+                Id: 59400c0f-d441-4f8c-84d3-7230e692b1e3
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -446,10 +428,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 59400c0f-d441-4f8c-84d3-7230e692b1e3
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 5f383352-ab4a-40c0-85b6-16d769643320
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -461,10 +442,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 5f383352-ab4a-40c0-85b6-16d769643320
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 60cd8919-2eba-4f17-b2bb-19424bc75ca8
                 Name: Gold_Metalness1.0 Glossness1.0
                 Components:
                     TransformComponent.Key:
@@ -476,10 +456,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: feb1d6cc-15dc-44ff-b4a6-8409cd1e17e8}
                                 Component: TransformComponent.Key
-                Id: 60cd8919-2eba-4f17-b2bb-19424bc75ca8
             Design:
                 Folder: Golds
         -   Entity:
+                Id: 631ff957-92d6-4b0d-9b48-f0d5e0b1c060
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -491,10 +471,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 631ff957-92d6-4b0d-9b48-f0d5e0b1c060
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 66adb3f4-e80f-493f-a029-5e734cc4846c
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -506,10 +485,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 66adb3f4-e80f-493f-a029-5e734cc4846c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 69e6db7d-2e3f-46b2-a10d-409360ad4065
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -521,10 +499,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 69e6db7d-2e3f-46b2-a10d-409360ad4065
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 71051f26-b313-461e-b7e4-478581c83b45
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -536,10 +513,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 71051f26-b313-461e-b7e4-478581c83b45
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 718bca7c-ec07-4dc3-a14b-4227f6437589
                 Name: Fine Wood Sample
                 Components:
                     TransformComponent.Key:
@@ -551,10 +527,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 9df9367f-cbc3-4ced-8ebe-3bc420ebae0b}
                                 Component: TransformComponent.Key
-                Id: 718bca7c-ec07-4dc3-a14b-4227f6437589
             Design:
                 Folder: Various
         -   Entity:
+                Id: 742eec73-3b46-4ccb-94c0-ece98501534d
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -566,10 +542,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 742eec73-3b46-4ccb-94c0-ece98501534d
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 74c9a343-17d3-404c-a550-13d8ac79ce20
                 Name: Layerd 0.25
                 Components:
                     TransformComponent.Key:
@@ -581,10 +556,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: b223dcf9-2cda-4105-bc36-632940805fc7}
                                 Component: TransformComponent.Key
-                Id: 74c9a343-17d3-404c-a550-13d8ac79ce20
             Design:
                 Folder: Layered
         -   Entity:
+                Id: 75c30555-1ac5-4aef-9c57-4e82f4620cbd
                 Name: Layerd 1.0
                 Components:
                     TransformComponent.Key:
@@ -596,10 +571,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: f3d37e1f-9b76-4bd1-9be3-0ef5f9b9eaae}
                                 Component: TransformComponent.Key
-                Id: 75c30555-1ac5-4aef-9c57-4e82f4620cbd
             Design:
                 Folder: Layered
         -   Entity:
+                Id: 764439a0-5d45-4015-ba5d-c7bff33dad73
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -611,10 +586,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 764439a0-5d45-4015-ba5d-c7bff33dad73
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 7970cd55-5c5b-47ef-b952-51ed30239c0a
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -626,10 +600,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 7970cd55-5c5b-47ef-b952-51ed30239c0a
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e
                 Name: Camera
                 Components:
                     CameraComponent.Key:
@@ -643,10 +616,9 @@ Hierarchy:
                         Rotation: {W: 0.9878749, X: -0.155251831, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 8131c62a-4adb-4622-ac57-10a818a7c8ee
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -658,10 +630,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 8131c62a-4adb-4622-ac57-10a818a7c8ee
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 8303aa1e-eac3-4eb5-b72e-296dae64ae48
                 Name: Plastic_Metalness0.0 Glossness0.7
                 Components:
                     TransformComponent.Key:
@@ -673,10 +644,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 8d390636-fce4-4337-99ed-c5635fd0d711}
                                 Component: TransformComponent.Key
-                Id: 8303aa1e-eac3-4eb5-b72e-296dae64ae48
             Design:
                 Folder: Plastics
         -   Entity:
+                Id: 84c62dff-0315-4a40-b3e1-74fb41362c4b
                 Name: Gold_Metalness1.0 Glossness0.6
                 Components:
                     TransformComponent.Key:
@@ -688,10 +659,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: e9673629-befe-4565-8f50-bd1c25b3e72a}
                                 Component: TransformComponent.Key
-                Id: 84c62dff-0315-4a40-b3e1-74fb41362c4b
             Design:
                 Folder: Golds
         -   Entity:
+                Id: 89be6108-3616-4679-a9a1-18012f9dbd9c
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -703,10 +674,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 89be6108-3616-4679-a9a1-18012f9dbd9c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 8d390636-fce4-4337-99ed-c5635fd0d711
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -718,10 +688,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 8d390636-fce4-4337-99ed-c5635fd0d711
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 8f89b6a1-18ef-4121-abbd-fb9e2823d9da
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -733,10 +702,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 8f89b6a1-18ef-4121-abbd-fb9e2823d9da
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 8fa64e28-8ee6-45f4-9546-9f0374069848
                 Name: Plastic_Metalness0.0 Glossness0.6
                 Components:
                     TransformComponent.Key:
@@ -748,10 +716,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 631ff957-92d6-4b0d-9b48-f0d5e0b1c060}
                                 Component: TransformComponent.Key
-                Id: 8fa64e28-8ee6-45f4-9546-9f0374069848
             Design:
                 Folder: Plastics
         -   Entity:
+                Id: 96b72222-d5d1-4cb0-ad41-dcd66f9d2c79
                 Name: Brick Sample
                 Components:
                     TransformComponent.Key:
@@ -763,10 +731,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 742eec73-3b46-4ccb-94c0-ece98501534d}
                                 Component: TransformComponent.Key
-                Id: 96b72222-d5d1-4cb0-ad41-dcd66f9d2c79
             Design:
                 Folder: Various
         -   Entity:
+                Id: 9df9367f-cbc3-4ced-8ebe-3bc420ebae0b
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -778,10 +746,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 9df9367f-cbc3-4ced-8ebe-3bc420ebae0b
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: ab17a4f1-2a07-4fcd-a3aa-ac8687dceb80
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -793,10 +760,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: ab17a4f1-2a07-4fcd-a3aa-ac8687dceb80
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: ae343e4f-12b6-48ec-a125-f1aee5ce8521
                 Name: Transparency Sample
                 Components:
                     TransformComponent.Key:
@@ -808,10 +774,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: e4d8617d-b619-4f0b-89b3-494eff286b8c}
                                 Component: TransformComponent.Key
-                Id: ae343e4f-12b6-48ec-a125-f1aee5ce8521
             Design:
                 Folder: Various
         -   Entity:
+                Id: af420c47-3435-4242-9dc7-bb16d1407053
                 Name: Gold_Metalness1.0 Glossness0.85
                 Components:
                     TransformComponent.Key:
@@ -823,10 +789,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 89be6108-3616-4679-a9a1-18012f9dbd9c}
                                 Component: TransformComponent.Key
-                Id: af420c47-3435-4242-9dc7-bb16d1407053
             Design:
                 Folder: Golds
         -   Entity:
+                Id: b1da1c7c-de86-47a8-a856-3b553510cdf8
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -838,10 +804,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: b1da1c7c-de86-47a8-a856-3b553510cdf8
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: b223dcf9-2cda-4105-bc36-632940805fc7
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -853,10 +818,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: b223dcf9-2cda-4105-bc36-632940805fc7
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: b51ad02e-9a7a-4f39-bd8d-a4f5b7cffd71
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -868,10 +832,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: b51ad02e-9a7a-4f39-bd8d-a4f5b7cffd71
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: b7212b22-f0fa-433e-b2d4-4b5a4bd9732b
                 Name: Wood Sample
                 Components:
                     TransformComponent.Key:
@@ -883,10 +846,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: df3be1c2-a0ec-4ade-b1c6-449b1e1e06e2}
                                 Component: TransformComponent.Key
-                Id: b7212b22-f0fa-433e-b2d4-4b5a4bd9732b
             Design:
                 Folder: Various
         -   Entity:
+                Id: b7a27c61-02d1-4809-8ed1-ba3b5d5517f8
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -898,10 +861,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: b7a27c61-02d1-4809-8ed1-ba3b5d5517f8
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: bceafa8f-dfb7-4567-b524-1e06d5f7c36c
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -913,10 +875,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: bceafa8f-dfb7-4567-b524-1e06d5f7c36c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c2966b22-9241-4d35-b053-de1ae3f41dc5
                 Name: skybox
                 Components:
                     LightComponent.Key:
@@ -931,10 +892,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: c2966b22-9241-4d35-b053-de1ae3f41dc5
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c4272145-3143-4cd6-a973-297257db7f15
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -946,10 +906,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: c4272145-3143-4cd6-a973-297257db7f15
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c481ec15-4e0b-4529-b351-7bbe42285fd9
                 Name: Block Sample
                 Components:
                     TransformComponent.Key:
@@ -961,10 +920,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: bceafa8f-dfb7-4567-b524-1e06d5f7c36c}
                                 Component: TransformComponent.Key
-                Id: c481ec15-4e0b-4529-b351-7bbe42285fd9
             Design:
                 Folder: Various
         -   Entity:
+                Id: c7176a61-cf0e-4a9c-96c2-e26504acedc5
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -976,10 +935,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: c7176a61-cf0e-4a9c-96c2-e26504acedc5
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c8ecbcd1-6bdd-418b-8371-0eab3c4399ae
                 Name: Layerd 0.75
                 Components:
                     TransformComponent.Key:
@@ -991,10 +949,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 0b25e0dc-5e21-40ec-9f9d-1102b4613c4a}
                                 Component: TransformComponent.Key
-                Id: c8ecbcd1-6bdd-418b-8371-0eab3c4399ae
             Design:
                 Folder: Layered
         -   Entity:
+                Id: caf5da96-9710-41b4-9826-b44c4072bf75
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -1006,10 +964,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: caf5da96-9710-41b4-9826-b44c4072bf75
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: cb43ee92-1080-4502-ac04-c722b14bdc81
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -1021,10 +978,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: cb43ee92-1080-4502-ac04-c722b14bdc81
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: cb87f048-923c-430b-9f62-e8f27cc75b7e
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -1036,10 +992,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: cb87f048-923c-430b-9f62-e8f27cc75b7e
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: cba5515e-e9ff-4ec9-be5e-a86e76f9737c
                 Name: Directional light
                 Components:
                     LightComponent.Key:
@@ -1059,10 +1014,9 @@ Hierarchy:
                         Rotation: {W: 0.8855735, X: -0.259767056, Y: -0.369503438, Z: -0.108387187}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: cba5515e-e9ff-4ec9-be5e-a86e76f9737c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d42af138-6f94-4d15-90b1-927d47d0b065
                 Name: Plastic_Metalness0.0 Glossness0.5
                 Components:
                     TransformComponent.Key:
@@ -1074,10 +1028,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: b51ad02e-9a7a-4f39-bd8d-a4f5b7cffd71}
                                 Component: TransformComponent.Key
-                Id: d42af138-6f94-4d15-90b1-927d47d0b065
             Design:
                 Folder: Plastics
         -   Entity:
+                Id: d4957deb-4bd4-497a-86c3-b6a15615182a
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -1089,10 +1043,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: d4957deb-4bd4-497a-86c3-b6a15615182a
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d56d2a8a-5d85-4c83-bcf5-e3876cc23c92
                 Name: Rusty Metal Sample
                 Components:
                     TransformComponent.Key:
@@ -1104,10 +1057,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 2d582ddd-6559-4212-8632-3988f1afe02d}
                                 Component: TransformComponent.Key
-                Id: d56d2a8a-5d85-4c83-bcf5-e3876cc23c92
             Design:
                 Folder: Various
         -   Entity:
+                Id: df3be1c2-a0ec-4ade-b1c6-449b1e1e06e2
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1119,10 +1072,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: df3be1c2-a0ec-4ade-b1c6-449b1e1e06e2
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: dfa3de16-8fc4-44a2-9aa2-a1883ee33365
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1134,10 +1086,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: dfa3de16-8fc4-44a2-9aa2-a1883ee33365
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: e1ee3746-530f-4704-8692-c05d2762acfb
                 Name: Silver_Metalness1.0 Glossness0.7
                 Components:
                     TransformComponent.Key:
@@ -1149,10 +1100,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 59400c0f-d441-4f8c-84d3-7230e692b1e3}
                                 Component: TransformComponent.Key
-                Id: e1ee3746-530f-4704-8692-c05d2762acfb
             Design:
                 Folder: Silvers
         -   Entity:
+                Id: e4069496-855e-4ead-8d99-f7b0b9581990
                 Name: Marble Sample
                 Components:
                     TransformComponent.Key:
@@ -1164,10 +1115,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: fd57b289-b694-47e8-99a1-5e08ce2b1521}
                                 Component: TransformComponent.Key
-                Id: e4069496-855e-4ead-8d99-f7b0b9581990
             Design:
                 Folder: Various
         -   Entity:
+                Id: e41fff2c-665d-4c9a-b641-9b99e02a79b0
                 Name: ground
                 Components:
                     ModelComponent.Key:
@@ -1179,10 +1130,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: e41fff2c-665d-4c9a-b641-9b99e02a79b0
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: e4d8617d-b619-4f0b-89b3-494eff286b8c
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1194,10 +1144,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: e4d8617d-b619-4f0b-89b3-494eff286b8c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: e9673629-befe-4565-8f50-bd1c25b3e72a
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1209,10 +1158,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: e9673629-befe-4565-8f50-bd1c25b3e72a
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: ece16954-9211-4fa2-a645-f644bbc6e829
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1224,10 +1172,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: ece16954-9211-4fa2-a645-f644bbc6e829
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: efb6f02f-819d-4667-a2c1-a3d7ccb31190
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -1239,10 +1186,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: efb6f02f-819d-4667-a2c1-a3d7ccb31190
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: f0c16e2d-71a3-403e-91d6-d12c1fd88f62
                 Name: Old Wood Sample
                 Components:
                     TransformComponent.Key:
@@ -1254,10 +1200,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: c7176a61-cf0e-4a9c-96c2-e26504acedc5}
                                 Component: TransformComponent.Key
-                Id: f0c16e2d-71a3-403e-91d6-d12c1fd88f62
             Design:
                 Folder: Various
         -   Entity:
+                Id: f3d37e1f-9b76-4bd1-9be3-0ef5f9b9eaae
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1269,10 +1215,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: f3d37e1f-9b76-4bd1-9be3-0ef5f9b9eaae
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: f5738400-85e6-4d43-b9e7-4c80282b37ae
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
@@ -1284,10 +1229,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: f5738400-85e6-4d43-b9e7-4c80282b37ae
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: fa7f9c6f-9209-4837-aa08-b9add4173248
                 Name: Layerd 0.0
                 Components:
                     TransformComponent.Key:
@@ -1299,10 +1243,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: dfa3de16-8fc4-44a2-9aa2-a1883ee33365}
                                 Component: TransformComponent.Key
-                Id: fa7f9c6f-9209-4837-aa08-b9add4173248
             Design:
                 Folder: Layered
         -   Entity:
+                Id: fac41a16-2d33-491b-9b7e-9f1f27f8c9db
                 Name: Layerd 0.5
                 Components:
                     TransformComponent.Key:
@@ -1314,10 +1258,10 @@ Hierarchy:
                                 Component: TransformComponent.Key
                             -   Entity: {Id: 147c3547-06ad-41a1-b0fb-ccf983b3c97a}
                                 Component: TransformComponent.Key
-                Id: fac41a16-2d33-491b-9b7e-9f1f27f8c9db
             Design:
                 Folder: Layered
         -   Entity:
+                Id: fd57b289-b694-47e8-99a1-5e08ce2b1521
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1329,10 +1273,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: fd57b289-b694-47e8-99a1-5e08ce2b1521
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: feb1d6cc-15dc-44ff-b4a6-8409cd1e17e8
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
@@ -1344,97 +1287,95 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: feb1d6cc-15dc-44ff-b4a6-8409cd1e17e8
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
-                    Camera:
-                        Entity: {Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e}
-                        Component: CameraComponent.Key
-            Layers:
-                -   Name: SceneGraphicsLayer
-                    Output: !LocalRenderFrameProvider
-                        Descriptor:
-                            Format: HDR
-                    Renderers:
-                        - !ClearRenderFrameRenderer
-                            Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                            Output: !CurrentRenderFrameProvider {}
-                        - !SceneCameraRenderer
-                            Mode: !CameraRendererModeForward {}
-                            Camera:
-                                Index: 0
-                            Output: !CurrentRenderFrameProvider {}
-                            Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e}
+                    Component: CameraComponent.Key
+        Layers:
+            -   Name: SceneGraphicsLayer
+                Output: !LocalRenderFrameProvider
+                    Descriptor:
+                        Format: HDR
                 Renderers:
-                    - !SceneEffectRenderer
-                        Input: !ImageEffectRendererInput.LayerInput {}
-                        Effect: !PostProcessingEffects
-                            Camera:
-                                Index: 0
-                            DepthOfField:
-                                Enabled: false
-                                DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
-                            BrightFilter:
-                                Color: {R: 1.0, G: 1.0, B: 1.0}
-                            Bloom:
-                                SigmaRatio: 4.0
-                                Distortion: {X: 1.0, Y: 1.0}
-                                Afterimage:
-                                    Enabled: false
-                            LightStreak:
-                                Enabled: false
-                                Attenuation: 0.7
-                            LensFlare: {}
-                            ColorTransforms:
-                                Transforms:
-                                    - !ToneMap
-                                        Operator: !ToneMapU2FilmicOperator {}
-                                    - !FilmGrain
-                                        Amount: 0.1
-                                        GrainSize: 2.0
-                            Antialiasing: !FXAAEffect {}
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
                         Output: !CurrentRenderFrameProvider {}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeHDRSettings
-                BackgroundColor: {R: 0.480495, G: 0.480495, B: 0.480495}
-                PostProcessingEffects:
-                    Camera:
-                        Index: 0
-                    DepthOfField:
-                        Enabled: false
-                        DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
-                    BrightFilter:
-                        Enabled: false
-                        Color: {R: 1.0, G: 1.0, B: 1.0}
-                    Bloom:
-                        SigmaRatio: 4.0
-                        Distortion: {X: 1.0, Y: 1.0}
-                        Afterimage:
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !SceneEffectRenderer
+                    Input: !ImageEffectRendererInput.LayerInput {}
+                    Effect: !PostProcessingEffects
+                        Camera:
+                            Index: 0
+                        DepthOfField:
                             Enabled: false
-                    LightStreak:
-                        Enabled: false
-                        StreakCount: 6
-                        Attenuation: 0.64
-                        Phase: 63.7
-                    LensFlare:
-                        Enabled: false
-                    ColorTransforms:
-                        Transforms:
-                            - !ToneMap
-                                Operator: !ToneMapU2FilmicOperator {}
-                            - !FilmGrain
-                                Amount: 0.101613
-                                GrainSize: 2.087096
-                            - !Vignetting
+                            DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                        BrightFilter:
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
+                        Bloom:
+                            SigmaRatio: 4.0
+                            Distortion: {X: 1.0, Y: 1.0}
+                            Afterimage:
                                 Enabled: false
-                                Color: {R: 0.0, G: 0.0, B: 0.0}
-                    Antialiasing: !FXAAEffect {}
+                        LightStreak:
+                            Enabled: false
+                            Attenuation: 0.7
+                        LensFlare: {}
+                        ColorTransforms:
+                            Transforms:
+                                - !ToneMap
+                                    Operator: !ToneMapU2FilmicOperator {}
+                                - !FilmGrain
+                                    Amount: 0.1
+                                    GrainSize: 2.0
+                        Antialiasing: !FXAAEffect {}
+                    Output: !CurrentRenderFrameProvider {}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeHDRSettings
+            BackgroundColor: {R: 0.480495, G: 0.480495, B: 0.480495}
+            PostProcessingEffects:
+                Camera:
+                    Index: 0
+                DepthOfField:
+                    Enabled: false
+                    DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                BrightFilter:
+                    Enabled: false
+                    Color: {R: 1.0, G: 1.0, B: 1.0}
+                Bloom:
+                    SigmaRatio: 4.0
+                    Distortion: {X: 1.0, Y: 1.0}
+                    Afterimage:
+                        Enabled: false
+                LightStreak:
+                    Enabled: false
+                    StreakCount: 6
+                    Attenuation: 0.64
+                    Phase: 63.7
+                LensFlare:
+                    Enabled: false
+                ColorTransforms:
+                    Transforms:
+                        - !ToneMap
+                            Operator: !ToneMapU2FilmicOperator {}
+                        - !FilmGrain
+                            Amount: 0.101613
+                            GrainSize: 2.087096
+                        - !Vignetting
+                            Enabled: false
+                            Color: {R: 0.0, G: 0.0, B: 0.0}
+                Antialiasing: !FXAAEffect {}

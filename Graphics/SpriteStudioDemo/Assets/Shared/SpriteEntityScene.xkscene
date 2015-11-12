@@ -1,6 +1,6 @@
 !SceneAsset
 Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -14,6 +14,7 @@ Hierarchy:
         - 629bf924-6828-46d6-a813-63d56a0f95b9
     Entities:
         -   Entity:
+                Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
                 Name: Camera
                 Components:
                     CameraComponent.Key:
@@ -24,10 +25,9 @@ Hierarchy:
                         Rotation: {W: 0.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
@@ -37,10 +37,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
                 Name: Enemy02
                 Components:
                     SpriteStudioComponent.Key:
@@ -55,6 +54,7 @@ Hierarchy:
                         Animations:
                             Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
                             Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
+                        PlayingAnimations: []
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
@@ -66,6 +66,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -81,10 +82,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: []
-                Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 629bf924-6828-46d6-a813-63d56a0f95b9
                 Name: Ground
                 Components:
                     PhysicsComponent.Key:
@@ -98,6 +98,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 ColliderShapes:
                                     - !StaticPlaneColliderShapeDesc
                                         Normal: {X: 0.0, Y: 1.0, Z: 0.0}
@@ -107,10 +108,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 629bf924-6828-46d6-a813-63d56a0f95b9
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
                 Name: Player
                 Components:
                     SpriteStudioComponent.Key:
@@ -120,28 +120,28 @@ Hierarchy:
                             Attack: b51fcf01-af9b-4680-acd3-5451686bc8d6:character_template_3head_attack3
                             Run: 1a2d4f41-394b-4b61-9ebe-2f7bb92cc8cf:character_template_3head_run
                             Stance: 3441961f-79d6-41c3-a4c1-184f7c94bd69:character_template_3head_wait
+                        PlayingAnimations: []
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.PlayerScript,SpriteStudioDemo.Game
+                                Id: 018ca6a8-c34d-4b93-9901-3c685336a2f0
                                 BulletColliderShape: 7946c040-eeda-424d-a2f5-3ede14470c1a:Bullet_CS
                                 BulletSheet: fba79776-e90e-42eb-ac60-a137b2e7378d:SpriteSheet
-                                Id: 018ca6a8-c34d-4b93-9901-3c685336a2f0
                     TransformComponent.Key:
                         Position: {X: -6.616724, Y: -1.06623185, Z: 0.0}
                         Rotation: {W: -4.371139E-08, X: 0.0, Y: -1.0, Z: 0.0}
                         Scale: {X: 0.450682253, Y: 0.450682253, Z: 0.450682253}
                         Children: []
-                Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
                 Name: GUI
                 Components:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.GuiScript,SpriteStudioDemo.Game
-                                Font: 58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
                                 Id: c21d3a58-43c4-4b22-99a1-d932a8b9c338
+                                Font: 58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
                     UIComponent.Key:
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                     TransformComponent.Key:
@@ -149,10 +149,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d295a972-b9cf-48e5-a4ff-767eb25cddef
                 Name: Enemy00
                 Components:
                     SpriteStudioComponent.Key:
@@ -167,6 +166,7 @@ Hierarchy:
                         Animations:
                             Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
                             Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
+                        PlayingAnimations: []
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
@@ -178,6 +178,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -193,10 +194,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: []
-                Id: d295a972-b9cf-48e5-a4ff-767eb25cddef
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
                 Name: Enemy01
                 Components:
                     SpriteStudioComponent.Key:
@@ -211,6 +211,7 @@ Hierarchy:
                         Animations:
                             Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
                             Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
+                        PlayingAnimations: []
                     PhysicsComponent.Key:
                         Elements:
                             - !RigidbodyElement
@@ -222,6 +223,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -237,32 +239,30 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: []
-                Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
+                    Component: CameraComponent.Key
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
                     Camera:
-                        Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
-                        Component: CameraComponent.Key
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

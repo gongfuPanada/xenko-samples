@@ -1,6 +1,6 @@
 !SceneAsset
 Id: df7aa22c-6efc-4706-8c07-03a643513525
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -8,6 +8,7 @@ Hierarchy:
         - a9fa980a-595d-4e48-9e6c-8373330be0a8
     Entities:
         -   Entity:
+                Id: 6920534e-0a89-47c5-aeb1-a8e5f6ea9d46
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
@@ -17,22 +18,21 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 6920534e-0a89-47c5-aeb1-a8e5f6ea9d46
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: a9fa980a-595d-4e48-9e6c-8373330be0a8
                 Name: FontScript
                 Components:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteFonts.FontScript,SpriteFonts.Game
+                                Id: 58f1d4b0-1c55-47b7-bb03-3d811d53d14c
                                 AliasedFont: 5376e512-4179-43b6-9d7c-75b0a1ea6f9c:AliasedFont
                                 AntialiasedFont: 5b5f75d3-4f7f-4325-b957-fd50161e104c:AntialiasedFont
                                 BoldFont: 4f741cf1-f3b2-4eda-837b-e29f8597c47d:BoldFont
                                 ClearTypeFont: bdc10dde-cc94-45e6-88ee-bd5fe156f982:ClearTypeFont
                                 DynamicFont: cbbbd736-43d0-490e-b3e4-28207140d6cc:DynamicFont
                                 HeaderFont: 8a069364-f63d-4a4b-a26e-a95998344ba2:HeaderFont
-                                Id: 58f1d4b0-1c55-47b7-bb03-3d811d53d14c
                                 ItalicFont: 5fad01ad-2649-4de9-8a81-b117e320a2ef:ItalicFont
                                 JapaneseFont: 76871742-df92-4a25-804d-e0f4f9301c19:JapaneseFont
                                 StaticFont: b6582bd2-276e-4b0e-a0f1-8682e271ab59:StaticFont
@@ -42,30 +42,28 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: a9fa980a-595d-4e48-9e6c-8373330be0a8
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
-                    Camera: null
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera: null
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
+                    Camera:
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

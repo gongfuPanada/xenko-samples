@@ -1,6 +1,6 @@
 !SceneAsset
 Id: b07987b2-a262-45fb-9da6-ba05fc7aaf74
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -12,6 +12,7 @@ Hierarchy:
         - 47550ad3-4887-4173-95e0-d98048465edd
     Entities:
         -   Entity:
+                Id: 47550ad3-4887-4173-95e0-d98048465edd
                 Name: UI
                 Components:
                     UIComponent.Key:
@@ -20,18 +21,17 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !JumpyJet.UIScript,JumpyJet.Game
-                                Font: 88f98b62-b02c-4569-8eee-0a91365f95bd:Font
                                 Id: 00fd07e9-f2a1-4bc1-84bb-467e84daeb4a
+                                Font: 88f98b62-b02c-4569-8eee-0a91365f95bd:Font
                                 UIImages: 85da6663-b688-4a62-91f9-d8868f3a2d4f:UIImages
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 47550ad3-4887-4173-95e0-d98048465edd
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 6ec17338-026d-4ad3-9615-4975281cf3ba
                 Name: Camera
                 Components:
                     CameraComponent.Key:
@@ -44,10 +44,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 6ec17338-026d-4ad3-9615-4975281cf3ba
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c2306322-b9da-4756-8c50-0415142c6dd1
                 Name: Background
                 Components:
                     ScriptComponent.Key:
@@ -60,15 +59,15 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: c2306322-b9da-4756-8c50-0415142c6dd1
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c2d8e639-281f-419d-b8cb-77d7ef14a7f7
                 Name: GameScript
                 Components:
                     ScriptComponent.Key:
                         Scripts:
                             - !JumpyJet.GameScript,JumpyJet.Game
+                                Id: a48b5789-180f-4e2e-b061-6ac22108e376
                                 Priority: 10
                                 Background: !JumpyJet.BackgroundScript,JumpyJet.Game
                                     Entity: {Id: c2306322-b9da-4756-8c50-0415142c6dd1}
@@ -76,7 +75,6 @@ Hierarchy:
                                 Character: !JumpyJet.CharacterScript,JumpyJet.Game
                                     Entity: {Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb}
                                     Id: 75708204-1bb2-4d09-93ae-75057e2a88b0
-                                Id: a48b5789-180f-4e2e-b061-6ac22108e376
                                 Pipes: !JumpyJet.PipesScript,JumpyJet.Game
                                     Entity: {Id: d87ce433-90b0-4819-8f55-9d08330b581d}
                                     Id: 71cd41a9-093c-4595-8f02-918f1c0258bd
@@ -88,10 +86,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: c2d8e639-281f-419d-b8cb-77d7ef14a7f7
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb
                 Name: Character
                 Components:
                     SpriteComponent.Key:
@@ -108,10 +105,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: ca4ad047-2db2-4ab1-baca-d8c4e9a469bb
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d87ce433-90b0-4819-8f55-9d08330b581d
                 Name: Pipes
                 Components:
                     ScriptComponent.Key:
@@ -124,32 +120,30 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: d87ce433-90b0-4819-8f55-9d08330b581d
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 6ec17338-026d-4ad3-9615-4975281cf3ba}
+                    Component: CameraComponent.Key
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
                     Camera:
-                        Entity: {Id: 6ec17338-026d-4ad3-9615-4975281cf3ba}
-                        Component: CameraComponent.Key
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 10.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 10.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

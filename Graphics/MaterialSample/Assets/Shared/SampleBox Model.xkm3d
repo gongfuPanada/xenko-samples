@@ -1,6 +1,6 @@
 !Model
 Id: a7e0bdca-e552-44ce-a072-880ed908bfee
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/SampleBox.FBX
 SourceHash: b5f389bd04fd3ea2cf5333d4c74d12d3
@@ -8,14 +8,12 @@ Materials:
     -   Name: m_a_0
         MaterialInstance:
             Material: 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
-Nodes:
-    - {Name: RootNode, Depth: 0, Preserve: false}
-    - {Name: Box00, Depth: 1, Preserve: false}
+Skeleton: f620c909-b768-4346-b768-d021ab7ad1a8:SampleBox Model Skeleton
 ~Base:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
         Tags: []
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
@@ -23,6 +21,4 @@ Nodes:
             -   Name: m_a_0
                 MaterialInstance:
                     Material: df7da395-5832-43b5-b92b-870c1ef6e052:m_a_0_1
-        Nodes:
-            - {Name: RootNode, Depth: 0, Preserve: false}
-            - {Name: Box00, Depth: 1, Preserve: false}
+        Skeleton: null

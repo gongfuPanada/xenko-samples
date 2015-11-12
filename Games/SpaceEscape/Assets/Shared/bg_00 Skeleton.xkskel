@@ -1,0 +1,11 @@
+!Skeleton
+Id: 94d2e20b-fdfc-4022-9278-3ace83e5bbf3
+Tags: []
+Source: ../../RawAssets/model/BG/scene/bg_00.FBX
+SourceHash: d9cb8d7d0fc8f1ea2a519e602bbe2770
+ScaleImport: 0.0
+Nodes:
+    - {Name: RootNode, Depth: 0}
+    - {Name: root, Depth: 1}
+    - {Name: part, Depth: 2}
+    - {Name: Plane001, Depth: 3}

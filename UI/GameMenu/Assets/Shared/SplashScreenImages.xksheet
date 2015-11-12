@@ -1,6 +1,6 @@
 !SpriteSheet
 Id: ba4ff50b-212b-47c5-af90-6672a8019b04
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -16,7 +16,7 @@ Sprites:
         Name: xenko_sample_text_bg
         TextureRegion: {X: 647, Y: 837, Width: 592, Height: 133}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 178.0, Y: 178.0, Z: 13.0, W: 13.0}
+        Borders: {X: 178.0, Y: 13.0, Z: 178.0, W: 13.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: ui_text_bg

@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 6d09340c-0029-4aea-80f0-6333b96389fa
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: !ConeProceduralModel
     Height: 1.5

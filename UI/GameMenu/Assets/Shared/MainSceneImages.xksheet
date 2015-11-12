@@ -1,6 +1,6 @@
 !SpriteSheet
 Id: dba38b73-6f43-40ba-a4da-8e711695c7e8
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -34,7 +34,7 @@ Sprites:
         Name: lock_icon
         TextureRegion: {X: 1154, Y: 656, Width: 460, Height: 131}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 50.0, Y: 140.0, Z: 0.0, W: 0.0}
+        Borders: {X: 50.0, Y: 0.0, Z: 140.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: money_icon
@@ -46,7 +46,7 @@ Sprites:
         Name: popup_window
         TextureRegion: {X: 1, Y: 1, Width: 616, Height: 836}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 250.0, Y: 185.0, Z: 167.0, W: 167.0}
+        Borders: {X: 250.0, Y: 167.0, Z: 185.0, W: 167.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: power
@@ -118,7 +118,7 @@ Sprites:
         Name: tex_edit_inactivated_background
         TextureRegion: {X: 1293, Y: 326, Width: 463, Height: 130}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 70.0, Y: 70.0, Z: 13.0, W: 13.0}
+        Borders: {X: 70.0, Y: 13.0, Z: 70.0, W: 13.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: touch_start_frame
@@ -136,7 +136,7 @@ Sprites:
         Name: weapon_select_frame
         TextureRegion: {X: 1285, Y: 462, Width: 460, Height: 131}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 60.0, Y: 50.0, Z: 0.0, W: 0.0}
+        Borders: {X: 60.0, Y: 0.0, Z: 50.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: yellow_ship
@@ -178,13 +178,13 @@ Sprites:
         Name: button0
         TextureRegion: {X: 1792, Y: 774, Width: 219, Height: 89}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 110.0, Y: 88.0, Z: 0.0, W: 0.0}
+        Borders: {X: 110.0, Y: 0.0, Z: 88.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: button1
         TextureRegion: {X: 1720, Y: 679, Width: 312, Height: 89}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 94.0, Y: 62.0, Z: 0.0, W: 0.0}
+        Borders: {X: 94.0, Y: 0.0, Z: 62.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: character
@@ -196,7 +196,7 @@ Sprites:
         Name: character_frame
         TextureRegion: {X: 1, Y: 843, Width: 640, Height: 135}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 128.0, Y: 85.0, Z: 0.0, W: 0.0}
+        Borders: {X: 128.0, Y: 0.0, Z: 85.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: control
@@ -214,11 +214,11 @@ Sprites:
         Name: description_frame
         TextureRegion: {X: 1245, Y: 1, Width: 541, Height: 183}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 0.0, Y: 0.0, Z: 55.0, W: 55.0}
+        Borders: {X: 0.0, Y: 55.0, Z: 0.0, W: 55.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_tex.png
         Name: display_element
         TextureRegion: {X: 1083, Y: 227, Width: 204, Height: 193}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 48.0, Y: 106.0, Z: 21.0, W: 25.0}
+        Borders: {X: 48.0, Y: 21.0, Z: 106.0, W: 25.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}

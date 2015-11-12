@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -14,6 +14,7 @@ Hierarchy:
         - 2a05c636-e91f-42e6-93ed-69415d19fe2f
     Entities:
         -   Entity:
+                Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
                 Name: Camera
                 Components:
                     CameraComponent.Key:
@@ -24,10 +25,9 @@ Hierarchy:
                         Rotation: {W: 0.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
@@ -37,10 +37,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
                 Name: Enemy02
                 Components:
                     SpriteComponent.Key:
@@ -61,10 +60,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
                 Name: Player
                 Components:
                     SpriteComponent.Key:
@@ -85,10 +83,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c
                 Name: Logic
                 Components:
                     ScriptComponent.Key:
@@ -100,17 +97,16 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
                 Name: GUI
                 Components:
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteEntity.GuiScript,SpriteEntity.Game
-                                Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
                                 Id: 4e10f211-05ae-4774-88d2-805d318a618e
+                                Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
                     UIComponent.Key:
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                     TransformComponent.Key:
@@ -118,10 +114,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d295a972-b9cf-48e5-a4ff-767eb25cddef
                 Name: Enemy00
                 Components:
                     SpriteComponent.Key:
@@ -142,10 +137,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: d295a972-b9cf-48e5-a4ff-767eb25cddef
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
                 Name: Enemy01
                 Components:
                     SpriteComponent.Key:
@@ -166,32 +160,30 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
+                    Component: CameraComponent.Key
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
                     Camera:
-                        Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
-                        Component: CameraComponent.Key
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

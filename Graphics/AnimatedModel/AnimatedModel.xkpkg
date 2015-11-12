@@ -9,7 +9,7 @@ Meta:
     Owners: []
     Dependencies:
         -   Name: Xenko
-            Version: 1.4.0-beta
+            Version: 1.5.0-alpha02
             RootAssets: []
 LocalDependencies: []
 Profiles:

@@ -1,0 +1,15 @@
+!Skeleton
+Id: 9308887f-54ac-4b52-b52b-78f2075df74a
+Tags: []
+Source: ../../RawAssets/model/BG/scene/obj01.FBX
+SourceHash: 9207feb70ceb80973a90773b634d213e
+ScaleImport: 0.0
+Nodes:
+    - {Name: RootNode, Depth: 0}
+    - {Name: root, Depth: 1}
+    - {Name: part, Depth: 2}
+    - {Name: obj01_A, Depth: 3}
+    - {Name: obj01_01, Depth: 4}
+    - {Name: obj01_B, Depth: 3}
+    - {Name: obj01_02, Depth: 4}
+    - {Name: obj01_00, Depth: 3}
