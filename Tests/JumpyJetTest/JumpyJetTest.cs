@@ -40,11 +40,13 @@ namespace JumpyJetTest
 
             Task.Run(() => socket.MessageLoop());
 
+            var xenkoDir = Environment.GetEnvironmentVariable("SiliconStudioXenkoDir");
+
             socket.Send(new TestRegistrationRequest
             {
                 Platform = (int)PlatformType.Windows,
                 Tester = true,
-                Cmd = "%SiliconStudioXenkoDir%\\samples\\Games\\JumpyJet\\Bin\\Windows-Direct3D11\\Debug\\JumpyJet.exe"
+                Cmd = xenkoDir + "\\samples\\Games\\JumpyJet\\Bin\\Windows-Direct3D11\\Debug\\JumpyJet.exe"
             }).Wait();
 
             if (!ev.WaitOne(10000))
