@@ -36,6 +36,11 @@ namespace JumpyJetTest
                 ev.Set();
             });
 
+            socket.AddPacketHandler<LogRequest>(request =>
+            {
+                Console.WriteLine(request.Message);
+            });
+
             Task.Run(() => socket.MessageLoop());
 
             var xenkoDir = Environment.GetEnvironmentVariable("SiliconStudioXenkoDir");
