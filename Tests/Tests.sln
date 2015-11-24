@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpyJetTest", "JumpyJetTest\JumpyJetTest.csproj", "{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpyJetTest", "Games\JumpyJetTest\JumpyJetTest.csproj", "{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceEscapeTest", "Games\SpaceEscapeTest\SpaceEscapeTest.csproj", "{6472BB34-98F2-4FB1-902F-B51D47EEC674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{2FB9AD6D-8A77-43F3-B747-4161C448D02D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphics", "Graphics", "{94B0C3BB-557A-4688-849F-2665694D5EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedModelTest", "Graphics\AnimatedModelTest\AnimatedModelTest.csproj", "{27F1FDAD-96E3-48A4-B1A0-7E12D3D3AB2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEffectTest", "Graphics\CustomEffectTest\CustomEffectTest.csproj", "{085E311F-AD67-414C-B45F-7EA9F5838664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForwardLightingTest", "Graphics\ForwardLightingTest\ForwardLightingTest.csproj", "{6CAC749D-8181-44C0-BEE3-1A63844FDA97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +27,31 @@ Global
 		{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6472BB34-98F2-4FB1-902F-B51D47EEC674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6472BB34-98F2-4FB1-902F-B51D47EEC674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6472BB34-98F2-4FB1-902F-B51D47EEC674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6472BB34-98F2-4FB1-902F-B51D47EEC674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F1FDAD-96E3-48A4-B1A0-7E12D3D3AB2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F1FDAD-96E3-48A4-B1A0-7E12D3D3AB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F1FDAD-96E3-48A4-B1A0-7E12D3D3AB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F1FDAD-96E3-48A4-B1A0-7E12D3D3AB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{085E311F-AD67-414C-B45F-7EA9F5838664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085E311F-AD67-414C-B45F-7EA9F5838664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085E311F-AD67-414C-B45F-7EA9F5838664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085E311F-AD67-414C-B45F-7EA9F5838664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CAC749D-8181-44C0-BEE3-1A63844FDA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAC749D-8181-44C0-BEE3-1A63844FDA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAC749D-8181-44C0-BEE3-1A63844FDA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAC749D-8181-44C0-BEE3-1A63844FDA97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D} = {2FB9AD6D-8A77-43F3-B747-4161C448D02D}
+		{6472BB34-98F2-4FB1-902F-B51D47EEC674} = {2FB9AD6D-8A77-43F3-B747-4161C448D02D}
+		{27F1FDAD-96E3-48A4-B1A0-7E12D3D3AB2F} = {94B0C3BB-557A-4688-849F-2665694D5EE3}
+		{085E311F-AD67-414C-B45F-7EA9F5838664} = {94B0C3BB-557A-4688-849F-2665694D5EE3}
+		{6CAC749D-8181-44C0-BEE3-1A63844FDA97} = {94B0C3BB-557A-4688-849F-2665694D5EE3}
 	EndGlobalSection
 EndGlobal
