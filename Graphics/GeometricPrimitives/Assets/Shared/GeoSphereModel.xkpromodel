@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 6383f6dd-32af-4660-921e-4258f9b06b4b
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: !GeoSphereProceduralModel
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}

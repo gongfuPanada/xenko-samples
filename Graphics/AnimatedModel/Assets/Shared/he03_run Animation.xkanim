@@ -1,12 +1,21 @@
 !Animation
 Id: 6dc385f9-d6ff-4933-8fb8-1f481477aeb2
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/knight/he03_run.fbx
 RepeatMode: LoopInfinite
+Skeleton: 218816f5-b393-4b12-adaf-e0e12817d892:knight Skeleton
+RootMotion: false
+PreviewModel: 7f052b2a-84c2-4f8a-932c-c073b2de47de:knight
 ~Base:
     Location: --import--
     Asset: !Animation
         Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
         Tags: []
+        Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         RepeatMode: LoopInfinite
+        Skeleton: null
+        RootMotion: false
+        PreviewModel: null

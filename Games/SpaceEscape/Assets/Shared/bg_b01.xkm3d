@@ -1,6 +1,6 @@
 !Model
 Id: f0088b04-5990-4dd4-9824-77fcf8a8a62c
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/model/BG/scene/bg_b01.FBX
 SourceHash: 3a70ca7aaf9185ee36623b575c7d025d
@@ -14,19 +14,12 @@ Materials:
     -   Name: bg_wall02
         MaterialInstance:
             Material: ef070a60-83e2-4bd7-a95f-6599de22a8fa:BG_wall02_1
-Nodes:
-    - {Name: RootNode, Depth: 0, Preserve: false}
-    - {Name: root, Depth: 1, Preserve: false}
-    - {Name: part, Depth: 2, Preserve: false}
-    - {Name: bg_a_wall01, Depth: 3, Preserve: false}
-    - {Name: bg_a_wall00, Depth: 3, Preserve: false}
-    - {Name: tube_00, Depth: 3, Preserve: false}
-    - {Name: bg_a_wall03, Depth: 3, Preserve: false}
+Skeleton: f5bc1afc-cf4d-4b1a-ae9a-2a424c63da15:bg_b01 Skeleton
 ~Base:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
         Tags: []
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
@@ -40,11 +33,4 @@ Nodes:
             -   Name: bg_wall02
                 MaterialInstance:
                     Material: 3541b682-4fae-4d37-872f-744a906a2e08:bg_wall02_1
-        Nodes:
-            - {Name: RootNode, Depth: 0, Preserve: false}
-            - {Name: root, Depth: 1, Preserve: false}
-            - {Name: part, Depth: 2, Preserve: false}
-            - {Name: bg_a_wall01, Depth: 3, Preserve: false}
-            - {Name: bg_a_wall00, Depth: 3, Preserve: false}
-            - {Name: tube_00, Depth: 3, Preserve: false}
-            - {Name: bg_a_wall03, Depth: 3, Preserve: false}
+        Skeleton: null

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: a5a4f13e-6366-43de-b071-a87c1dfff115
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -20,6 +20,7 @@ Hierarchy:
         - 74a297f1-8303-498c-bbf1-d15fee087e11
     Entities:
         -   Entity:
+                Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e
                 Name: Camera
                 Components:
                     CameraComponent.Key:
@@ -29,10 +30,9 @@ Hierarchy:
                         Rotation: {W: 0.989579, X: -0.143991053, Y: 9.130449E-09, Z: 1.08727676E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 36854d9a-097d-4692-975b-da5ab28e02ab
                 Name: ProceduralModel (2) (2) (2) (2)
                 Components:
                     ModelComponent.Key:
@@ -50,6 +50,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -71,10 +72,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 36854d9a-097d-4692-975b-da5ab28e02ab
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 48d3dd4c-15e6-4eca-89eb-b2384adf4aac
                 Name: ProceduralModel (2) (2) (2) (2) (3)
                 Components:
                     ModelComponent.Key:
@@ -92,6 +92,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -113,10 +114,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 48d3dd4c-15e6-4eca-89eb-b2384adf4aac
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 4946b032-53e8-4029-b72c-4396af3b286d
                 Name: Player
                 Components:
                     ModelComponent.Key:
@@ -153,10 +153,9 @@ Hierarchy:
                         Children:
                             -   Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
                                 Component: TransformComponent.Key
-                Id: 4946b032-53e8-4029-b72c-4396af3b286d
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 6872b105-2611-4f68-9fd9-911a2b44540c
                 Name: ProceduralModel (2) (2)
                 Components:
                     ModelComponent.Key:
@@ -174,6 +173,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -195,10 +195,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 6872b105-2611-4f68-9fd9-911a2b44540c
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 6cb6634d-02fb-4005-b1b5-93655cc96c8f
                 Name: ProceduralModel (2)
                 Components:
                     ModelComponent.Key:
@@ -216,6 +215,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -237,10 +237,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 6cb6634d-02fb-4005-b1b5-93655cc96c8f
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 6fbecf2d-872c-440c-b482-07802dcefdbb
                 Name: Ball
                 Components:
                     ModelComponent.Key:
@@ -258,6 +257,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -280,10 +280,9 @@ Hierarchy:
                         Rotation: {W: 0.918539345, X: 0.0, Y: 0.0, Z: 0.3953296}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 6fbecf2d-872c-440c-b482-07802dcefdbb
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 74a297f1-8303-498c-bbf1-d15fee087e11
                 Name: ProceduralModel (2) (2) (2) (3)
                 Components:
                     ModelComponent.Key:
@@ -301,6 +300,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -322,10 +322,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 74a297f1-8303-498c-bbf1-d15fee087e11
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 77929a6c-9e28-4ac7-baba-3a78fd0caf11
                 Name: ProceduralModel (2) (2) (2) (2) (2) (2)
                 Components:
                     ModelComponent.Key:
@@ -343,6 +342,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -364,10 +364,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 77929a6c-9e28-4ac7-baba-3a78fd0caf11
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: a70d3a17-db6f-45d3-b8db-19646807cb2b
                 Name: ProceduralModel (2) (3)
                 Components:
                     ModelComponent.Key:
@@ -385,6 +384,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -406,10 +406,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: a70d3a17-db6f-45d3-b8db-19646807cb2b
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: b0299af4-0f94-47f0-8d94-e87d157024c5
                 Name: Directional light
                 Components:
                     LightComponent.Key:
@@ -428,10 +427,9 @@ Hierarchy:
                         Rotation: {W: 0.742511451, X: -0.569751441, Y: 0.1918805, Z: -0.2953674}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: b0299af4-0f94-47f0-8d94-e87d157024c5
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: cfe82ef3-b615-435c-a9b6-15793dca565d
                 Name: Trigger
                 Components:
                     ModelComponent.Key:
@@ -444,7 +442,7 @@ Hierarchy:
                                 Id: cee46d5d-507b-4060-9f85-b53ba7134ac7
                     PhysicsComponent.Key:
                         Elements:
-                            - !TriggerElement
+                            - !StaticColliderElement
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: KinematicFilter, SensorTrigger, CharacterFilter
                                 ProcessCollisions: true
@@ -453,6 +451,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: true
                                 ColliderShapes:
                                     - !BoxColliderShapeDesc
                                         Is2D: false
@@ -464,10 +463,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 7.190572, Y: 2.02149439, Z: 4.181841}
                         Children: []
-                Id: cfe82ef3-b615-435c-a9b6-15793dca565d
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d4b8ee23-dbf6-4006-b1f1-0fff89140908
                 Name: ProceduralModel (2) (2) (2)
                 Components:
                     ModelComponent.Key:
@@ -485,6 +483,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -506,10 +505,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: d4b8ee23-dbf6-4006-b1f1-0fff89140908
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: ece9393e-ca16-4534-a822-1209cbde9fa1
                 Name: ProceduralModel (2) (2) (2) (2) (2)
                 Components:
                     ModelComponent.Key:
@@ -527,6 +525,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 IsKinematic: true
                                 Mass: 1.0
                                 LinearDamping: 0.0
@@ -548,10 +547,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: ece9393e-ca16-4534-a822-1209cbde9fa1
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: f230b77a-bd6f-40d2-9e98-dbba399c378e
                 Name: Ground
                 Components:
                     ModelComponent.Key:
@@ -569,6 +567,7 @@ Hierarchy:
                                 Restitution: 0.0
                                 Friction: 0.5
                                 RollingFriction: 0.0
+                                IsTrigger: false
                                 ColliderShapes:
                                     - !StaticPlaneColliderShapeDesc
                                         Normal: {X: 0.0, Y: 1.0, Z: 0.0}
@@ -578,33 +577,31 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: f230b77a-bd6f-40d2-9e98-dbba399c378e
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
+                    Component: CameraComponent.Key
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.2790703, G: 0.3313535, B: 0.425249964, A: 1.0}
+                    ColorSpace: Linear
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
                     Camera:
-                        Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
-                        Component: CameraComponent.Key
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.2790703, G: 0.3313535, B: 0.425249964, A: 1.0}
-                        ColorSpace: Linear
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

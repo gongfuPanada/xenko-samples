@@ -1,6 +1,6 @@
 !SpriteSheet
 Id: 2bb544ec-3316-404c-a73f-ec9302f7aa1c
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: Sprite2D
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
@@ -12,7 +12,7 @@ Sprites:
         Name: button
         TextureRegion: {X: 278, Y: 0, Width: 219, Height: 89}
         Center: {X: 0.0, Y: 0.0}
-        Borders: {X: 125.0, Y: 50.0, Z: 0.0, W: 0.0}
+        Borders: {X: 125.0, Y: 0.0, Z: 50.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_texture/space_escape_ui.png
         Name: xk_logo

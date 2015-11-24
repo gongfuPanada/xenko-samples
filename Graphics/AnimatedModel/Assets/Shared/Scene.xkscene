@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 1d1214c6-8844-4fae-8142-1f986349f8d3
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -11,6 +11,7 @@ Hierarchy:
         - 565d619e-b205-4285-ba8e-65e1d349fbb2
     Entities:
         -   Entity:
+                Id: 069945be-764a-4de9-88f4-458740f821ff
                 Name: knight
                 Components:
                     ModelComponent.Key:
@@ -23,6 +24,7 @@ Hierarchy:
                         Animations:
                             Idle: 0ec9050c-302e-4289-911f-94265cb7b60b:he00_normal_idle Animation
                             Run: 6dc385f9-d6ff-4933-8fb8-1f481477aeb2:he03_run Animation
+                        PlayingAnimations: []
                     ScriptComponent.Key:
                         Scripts:
                             - !AnimatedModel.RotateEntity,AnimatedModel.Game
@@ -32,10 +34,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 069945be-764a-4de9-88f4-458740f821ff
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 3aedbca9-d0a2-4833-a577-22f967ba13ee
                 Name: Ambient light
                 Components:
                     LightComponent.Key:
@@ -52,10 +53,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 3aedbca9-d0a2-4833-a577-22f967ba13ee
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 565d619e-b205-4285-ba8e-65e1d349fbb2
                 Name: UI
                 Components:
                     UIComponent.Key:
@@ -64,8 +64,8 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !AnimatedModel.UIScript,AnimatedModel.Game
-                                Font: dc5e460a-ac52-45b9-a69f-cc5a5a5f9cf7:Font
                                 Id: acf594de-a7ed-4d13-9359-b9809a1ee083
+                                Font: dc5e460a-ac52-45b9-a69f-cc5a5a5f9cf7:Font
                                 Knight:
                                     Id: 069945be-764a-4de9-88f4-458740f821ff
                     TransformComponent.Key:
@@ -73,10 +73,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 565d619e-b205-4285-ba8e-65e1d349fbb2
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93
                 Name: Camera
                 Components:
                     CameraComponent.Key:
@@ -88,10 +87,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: d13ce4bf-5e8e-4bdf-8415-42cfc8405415
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
@@ -101,32 +99,30 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: d13ce4bf-5e8e-4bdf-8415-42cfc8405415
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93}
+                    Component: CameraComponent.Key
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
                     Camera:
-                        Entity: {Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93}
-                        Component: CameraComponent.Key
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

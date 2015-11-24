@@ -1,6 +1,6 @@
 !Model
 Id: 94cb0ec2-52f7-4dcc-94cd-cd983f1409bb
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/character/scene/character_00.FBX
 SourceHash: 3f0d9203392fe14f680c7bd0ffa916bf
@@ -11,48 +11,12 @@ Materials:
     -   Name: mc01
         MaterialInstance:
             Material: a02dc101-d058-4066-b905-66313fbfcb6c:mc01
-Nodes:
-    - {Name: RootNode, Depth: 0, Preserve: false}
-    - {Name: Root, Depth: 1, Preserve: false}
-    - {Name: part, Depth: 2, Preserve: false}
-    - {Name: jet_F_R_1, Depth: 3, Preserve: false}
-    - {Name: jet_F_R1_1, Depth: 4, Preserve: false}
-    - {Name: jet_F_R1_2, Depth: 5, Preserve: false}
-    - {Name: ef_B, Depth: 5, Preserve: false}
-    - {Name: ef00_R002, Depth: 6, Preserve: false}
-    - {Name: ef002, Depth: 7, Preserve: false}
-    - {Name: ef00_R003, Depth: 6, Preserve: false}
-    - {Name: ef004, Depth: 7, Preserve: false}
-    - {Name: jet_F_R_2, Depth: 4, Preserve: false}
-    - {Name: jet_F_L_1, Depth: 3, Preserve: false}
-    - {Name: jet_F_L1, Depth: 4, Preserve: false}
-    - {Name: jet_F_L002, Depth: 5, Preserve: false}
-    - {Name: ef_C, Depth: 5, Preserve: false}
-    - {Name: ef00_R004, Depth: 6, Preserve: false}
-    - {Name: ef006, Depth: 7, Preserve: false}
-    - {Name: ef00_R005, Depth: 6, Preserve: false}
-    - {Name: ef008, Depth: 7, Preserve: false}
-    - {Name: jet_F_L_2, Depth: 4, Preserve: false}
-    - {Name: Jet_B, Depth: 3, Preserve: false}
-    - {Name: Jet_B001, Depth: 4, Preserve: false}
-    - {Name: ef_A, Depth: 4, Preserve: false}
-    - {Name: ef00_R1, Depth: 5, Preserve: false}
-    - {Name: ef01, Depth: 6, Preserve: false}
-    - {Name: ef00_R0, Depth: 5, Preserve: false}
-    - {Name: ef00, Depth: 6, Preserve: false}
-    - {Name: engine, Depth: 3, Preserve: false}
-    - {Name: engine001, Depth: 4, Preserve: false}
-    - {Name: mc_body00, Depth: 3, Preserve: false}
-    - {Name: driver_body001, Depth: 3, Preserve: false}
-    - {Name: cloth_B_1, Depth: 3, Preserve: false}
-    - {Name: cloth_B_2, Depth: 4, Preserve: false}
-    - {Name: cloth_a_1, Depth: 3, Preserve: false}
-    - {Name: cloth_a_2, Depth: 4, Preserve: false}
+Skeleton: 5a0b8867-686b-4c95-ac6f-0cb57de2f986:character_00 Skeleton
 ~Base:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
         Tags: []
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
@@ -63,40 +27,4 @@ Nodes:
             -   Name: mc01
                 MaterialInstance:
                     Material: a02dc101-d058-4066-b905-66313fbfcb6c:mc01
-        Nodes:
-            - {Name: RootNode, Depth: 0, Preserve: false}
-            - {Name: Root, Depth: 1, Preserve: false}
-            - {Name: part, Depth: 2, Preserve: false}
-            - {Name: jet_F_R_1, Depth: 3, Preserve: false}
-            - {Name: jet_F_R1_1, Depth: 4, Preserve: false}
-            - {Name: jet_F_R1_2, Depth: 5, Preserve: false}
-            - {Name: ef_B, Depth: 5, Preserve: false}
-            - {Name: ef00_R002, Depth: 6, Preserve: false}
-            - {Name: ef002, Depth: 7, Preserve: false}
-            - {Name: ef00_R003, Depth: 6, Preserve: false}
-            - {Name: ef004, Depth: 7, Preserve: false}
-            - {Name: jet_F_R_2, Depth: 4, Preserve: false}
-            - {Name: jet_F_L_1, Depth: 3, Preserve: false}
-            - {Name: jet_F_L1, Depth: 4, Preserve: false}
-            - {Name: jet_F_L002, Depth: 5, Preserve: false}
-            - {Name: ef_C, Depth: 5, Preserve: false}
-            - {Name: ef00_R004, Depth: 6, Preserve: false}
-            - {Name: ef006, Depth: 7, Preserve: false}
-            - {Name: ef00_R005, Depth: 6, Preserve: false}
-            - {Name: ef008, Depth: 7, Preserve: false}
-            - {Name: jet_F_L_2, Depth: 4, Preserve: false}
-            - {Name: Jet_B, Depth: 3, Preserve: false}
-            - {Name: Jet_B001, Depth: 4, Preserve: false}
-            - {Name: ef_A, Depth: 4, Preserve: false}
-            - {Name: ef00_R1, Depth: 5, Preserve: false}
-            - {Name: ef01, Depth: 6, Preserve: false}
-            - {Name: ef00_R0, Depth: 5, Preserve: false}
-            - {Name: ef00, Depth: 6, Preserve: false}
-            - {Name: engine, Depth: 3, Preserve: false}
-            - {Name: engine001, Depth: 4, Preserve: false}
-            - {Name: mc_body00, Depth: 3, Preserve: false}
-            - {Name: driver_body001, Depth: 3, Preserve: false}
-            - {Name: cloth_B_1, Depth: 3, Preserve: false}
-            - {Name: cloth_B_2, Depth: 4, Preserve: false}
-            - {Name: cloth_a_1, Depth: 3, Preserve: false}
-            - {Name: cloth_a_2, Depth: 4, Preserve: false}
+        Skeleton: null

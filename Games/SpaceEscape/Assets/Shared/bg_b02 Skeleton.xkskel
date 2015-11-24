@@ -1,0 +1,14 @@
+!Skeleton
+Id: 6bde9e43-1439-4192-9c81-5f917d426a71
+Tags: []
+Source: ../../RawAssets/model/BG/scene/bg_b02.FBX
+SourceHash: 016b55359c43f8a7f0c4045acae84a13
+ScaleImport: 0.0
+Nodes:
+    - {Name: RootNode, Depth: 0}
+    - {Name: root, Depth: 1}
+    - {Name: part, Depth: 2}
+    - {Name: bg_a_wall01, Depth: 3}
+    - {Name: bg_a_wall00, Depth: 3}
+    - {Name: tube_00, Depth: 3}
+    - {Name: bg_a_wall03, Depth: 3}

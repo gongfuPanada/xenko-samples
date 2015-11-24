@@ -1,6 +1,6 @@
 !Model
 Id: f81db4ee-5929-42c9-9008-2cd624296caa
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/model/BG/scene/obj01.FBX
 SourceHash: 9207feb70ceb80973a90773b634d213e
@@ -8,20 +8,12 @@ Materials:
     -   Name: obj_02
         MaterialInstance:
             Material: 272ee411-55f4-4c4f-8894-21dbcc1ffcf3:obj_01_1
-Nodes:
-    - {Name: RootNode, Depth: 0, Preserve: false}
-    - {Name: root, Depth: 1, Preserve: false}
-    - {Name: part, Depth: 2, Preserve: false}
-    - {Name: obj01_A, Depth: 3}
-    - {Name: obj01_01, Depth: 4, Preserve: false}
-    - {Name: obj01_B, Depth: 3}
-    - {Name: obj01_02, Depth: 4, Preserve: false}
-    - {Name: obj01_00, Depth: 3, Preserve: false}
+Skeleton: 9308887f-54ac-4b52-b52b-78f2075df74a:obj01 Skeleton
 ~Base:
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
         Tags: []
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
@@ -29,12 +21,4 @@ Nodes:
             -   Name: obj_02
                 MaterialInstance:
                     Material: 272ee411-55f4-4c4f-8894-21dbcc1ffcf3:obj_01_1
-        Nodes:
-            - {Name: RootNode, Depth: 0, Preserve: false}
-            - {Name: root, Depth: 1, Preserve: false}
-            - {Name: part, Depth: 2, Preserve: false}
-            - {Name: obj01_A, Depth: 3}
-            - {Name: obj01_01, Depth: 4, Preserve: false}
-            - {Name: obj01_B, Depth: 3}
-            - {Name: obj01_02, Depth: 4, Preserve: false}
-            - {Name: obj01_00, Depth: 3, Preserve: false}
+        Skeleton: null

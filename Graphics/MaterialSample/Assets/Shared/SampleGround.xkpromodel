@@ -1,6 +1,6 @@
 !ProceduralModelAsset
 Id: 20192b41-7766-4193-9f6b-c3b7d418d138
-SerializedVersion: {Xenko: 1.4.0-beta}
+SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: !CylinderProceduralModel
     Height: 0.02

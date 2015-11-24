@@ -1,0 +1,9 @@
+!Skeleton
+Id: f620c909-b768-4346-b768-d021ab7ad1a8
+Tags: []
+Source: ../../RawAssets/SampleBox.FBX
+SourceHash: b5f389bd04fd3ea2cf5333d4c74d12d3
+ScaleImport: 0.0
+Nodes:
+    - {Name: RootNode, Depth: 0}
+    - {Name: Box00, Depth: 1}

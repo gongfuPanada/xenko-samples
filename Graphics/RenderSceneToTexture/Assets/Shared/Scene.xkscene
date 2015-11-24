@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -14,6 +14,7 @@ Hierarchy:
         - bb7065d2-498a-45d7-b4b1-0bb1a573cc69
     Entities:
         -   Entity:
+                Id: 14088c66-6d9b-4e26-a601-9784ff3ae859
                 Name: Camera back
                 Components:
                     CameraComponent.Key:
@@ -24,10 +25,9 @@ Hierarchy:
                         Rotation: {W: -4.371139E-08, X: 0.0, Y: 1.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 14088c66-6d9b-4e26-a601-9784ff3ae859
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 1c1ced43-f10b-4f46-93e7-9f75eb681c5e
                 Name: knightBack
                 Group: Group1
                 Components:
@@ -49,10 +49,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 1c1ced43-f10b-4f46-93e7-9f75eb681c5e
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 883e544b-9579-48c0-b731-9b8de2d287e4
                 Name: Ambient light
                 Components:
                     LightComponent.Key:
@@ -65,10 +64,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 883e544b-9579-48c0-b731-9b8de2d287e4
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 94061a3c-bbe5-4ad6-b55c-5905873264e1
                 Name: Camera front
                 Components:
                     CameraComponent.Key:
@@ -79,10 +77,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 94061a3c-bbe5-4ad6-b55c-5905873264e1
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: aa9f45b3-a8f2-4b7c-8723-446504667459
                 Name: Directional light front
                 Components:
                     LightComponent.Key:
@@ -100,10 +97,9 @@ Hierarchy:
                         Rotation: {W: 0.963630438, X: 0.267238379, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: aa9f45b3-a8f2-4b7c-8723-446504667459
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: bb7065d2-498a-45d7-b4b1-0bb1a573cc69
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
@@ -113,10 +109,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: bb7065d2-498a-45d7-b4b1-0bb1a573cc69
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: dbc67230-cb46-4563-8193-084016acd341
                 Name: Directional light back
                 Components:
                     LightComponent.Key:
@@ -134,10 +129,9 @@ Hierarchy:
                         Rotation: {W: -0.178963482, X: -0.9838557, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: dbc67230-cb46-4563-8193-084016acd341
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: f63efa01-c45a-4b81-ad59-e49391a813e4
                 Name: knight
                 Components:
                     ModelComponent.Key:
@@ -149,6 +143,7 @@ Hierarchy:
                     AnimationComponent.Key:
                         Animations:
                             Idle: 144a63cd-8847-447e-8b00-4c33204abfb9:he00_normal_idle
+                        PlayingAnimations: []
                     ScriptComponent.Key:
                         Scripts:
                             - !RenderSceneToTexture.PlayAnimation,RenderSceneToTexture.Game
@@ -158,38 +153,22 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: f63efa01-c45a-4b81-ad59-e49391a813e4
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
-                    Camera:
-                        Entity: {Id: 94061a3c-bbe5-4ad6-b55c-5905873264e1}
-                        Component: CameraComponent.Key
-                -   Name: null
-                    Camera:
-                        Entity: {Id: 14088c66-6d9b-4e26-a601-9784ff3ae859}
-                        Component: CameraComponent.Key
-            Layers:
-                -   Name: SceneGraphicsLayer
-                    Output: !SharedRenderFrameProvider
-                        RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
-                    Renderers:
-                        - !ClearRenderFrameRenderer
-                            Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                            Output: !CurrentRenderFrameProvider {}
-                        - !SceneCameraRenderer
-                            Mode: !CameraRendererModeForward {}
-                            Camera:
-                                Index: 1
-                            CullingMask: Group0
-                            Output: !CurrentRenderFrameProvider {}
-                            Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 94061a3c-bbe5-4ad6-b55c-5905873264e1}
+                    Component: CameraComponent.Key
+            -   Name: null
+                Camera:
+                    Entity: {Id: 14088c66-6d9b-4e26-a601-9784ff3ae859}
+                    Component: CameraComponent.Key
+        Layers:
+            -   Name: SceneGraphicsLayer
+                Output: !SharedRenderFrameProvider
+                    RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
                 Renderers:
                     - !ClearRenderFrameRenderer
                         Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
@@ -197,11 +176,25 @@ Hierarchy:
                     - !SceneCameraRenderer
                         Mode: !CameraRendererModeForward {}
                         Camera:
-                            Index: 0
+                            Index: 1
+                        CullingMask: Group0
                         Output: !CurrentRenderFrameProvider {}
                         Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
+                    Camera:
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

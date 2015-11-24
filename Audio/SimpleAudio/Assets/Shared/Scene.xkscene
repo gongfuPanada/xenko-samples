@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 5f4a3789-b182-4b32-9088-acbf9e13edb5
-SerializedVersion: 19
+SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
     RootEntities:
@@ -13,6 +13,7 @@ Hierarchy:
         - ea66315a-6e99-498e-b3b7-b20eff3d7a04
     Entities:
         -   Entity:
+                Id: 417ebdb3-c892-47ab-b8b0-079d12e1ead1
                 Name: DJ Sprite
                 Components:
                     SpriteComponent.Key:
@@ -25,10 +26,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 417ebdb3-c892-47ab-b8b0-079d12e1ead1
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 969256bc-2fe4-4874-9af8-a87db2d1bd85
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
@@ -38,10 +38,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 969256bc-2fe4-4874-9af8-a87db2d1bd85
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: 970d3c33-9819-4206-a101-d81f9259477f
                 Name: MainCamera
                 Components:
                     CameraComponent.Key:
@@ -52,10 +51,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: 970d3c33-9819-4206-a101-d81f9259477f
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: c76eafe8-9bb0-4801-b112-6825735d4fff
                 Name: RightWaveSprite
                 Components:
                     SpriteComponent.Key:
@@ -68,10 +66,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: -1.0, Z: 1.0}
                         Children: []
-                Id: c76eafe8-9bb0-4801-b112-6825735d4fff
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3
                 Name: LeftWaveSprite
                 Components:
                     SpriteComponent.Key:
@@ -84,10 +81,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: dbc86d56-ad97-4d5d-8631-7fc664f3dfa3
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: dececd10-b6ea-46fa-8129-c8683f4a6974
                 Name: SoundScript
                 Components:
                     ScriptComponent.Key:
@@ -105,10 +101,9 @@ Hierarchy:
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: dececd10-b6ea-46fa-8129-c8683f4a6974
-            Design:
-                Folder: null
+            Design: {}
         -   Entity:
+                Id: ea66315a-6e99-498e-b3b7-b20eff3d7a04
                 Name: UIText
                 Components:
                     UIComponent.Key:
@@ -116,40 +111,38 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !SimpleAudio.UITextScript,SimpleAudio.Game
-                                Font: 61f4751d-2878-4118-b212-ac554de05399:Font
                                 Id: 5cbe8100-1454-44a8-84bd-7860b2290374
+                                Font: 61f4751d-2878-4118-b212-ac554de05399:Font
                                 UIText: Tap on the screen!
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
-                Id: ea66315a-6e99-498e-b3b7-b20eff3d7a04
-            Design:
-                Folder: null
-    SceneSettings:
-        GraphicsCompositor: !SceneGraphicsCompositorLayers
-            Cameras:
-                -   Name: null
+            Design: {}
+SceneSettings:
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        Cameras:
+            -   Name: null
+                Camera:
+                    Entity: {Id: 970d3c33-9819-4206-a101-d81f9259477f}
+                    Component: CameraComponent.Key
+        Layers: []
+        Master:
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !ClearRenderFrameRenderer
+                    Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                    Output: !CurrentRenderFrameProvider {}
+                - !SceneCameraRenderer
+                    Mode: !CameraRendererModeForward {}
                     Camera:
-                        Entity: {Id: 970d3c33-9819-4206-a101-d81f9259477f}
-                        Component: CameraComponent.Key
-            Layers: []
-            Master:
-                Name: SceneGraphicsLayer
-                Output: !MasterRenderFrameProvider {}
-                Renderers:
-                    - !ClearRenderFrameRenderer
-                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
-                        Output: !CurrentRenderFrameProvider {}
-                    - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
-                        Camera:
-                            Index: 0
-                        Output: !CurrentRenderFrameProvider {}
-                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-        EditorSettings:
-            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-            SceneUnit: 1.0
-            Mode: !SceneEditorGraphicsModeLDRSettings
-                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+                        Index: 0
+                    Output: !CurrentRenderFrameProvider {}
+                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+    EditorSettings:
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeLDRSettings
+            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
