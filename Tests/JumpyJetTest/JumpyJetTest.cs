@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
@@ -16,7 +17,7 @@ namespace JumpyJetTest
         {
             using (var game = new GameTest(Path, PlatformType.Windows))
             {
-                game.Wait(2000);
+                game.Wait(TimeSpan.FromMilliseconds(2000));
             }
         }
 
@@ -25,13 +26,13 @@ namespace JumpyJetTest
         {
             using (var game = new GameTest(Path, PlatformType.Windows))
             {
-                game.Wait(2000);
-                game.Tap(new Vector2(0.5f, 0.7f), 500);
-                game.Wait(500);
-                game.KeyPress(Keys.Space, 500);
-                game.Wait(500);
+                game.Wait(TimeSpan.FromMilliseconds(2000));
+                game.Tap(new Vector2(0.5f, 0.7f), TimeSpan.FromMilliseconds(500));
+                game.Wait(TimeSpan.FromMilliseconds(500));
+                game.KeyPress(Keys.Space, TimeSpan.FromMilliseconds(500));
+                game.Wait(TimeSpan.FromMilliseconds(500));
                 game.TakeScreenshot();
-                game.Wait(500);
+                game.Wait(TimeSpan.FromMilliseconds(500));
             }
         }
     }
