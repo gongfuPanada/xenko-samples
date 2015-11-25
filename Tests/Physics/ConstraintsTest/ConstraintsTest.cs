@@ -51,6 +51,8 @@ namespace ConstraintsTest
                 game.Tap(new Vector2(0.83f, 0.93f), TimeSpan.FromMilliseconds(200));
                 game.Wait(TimeSpan.FromMilliseconds(1000));
                 game.TakeScreenshot();
+
+                game.Wait(TimeSpan.FromMilliseconds(1000));
             }
         }
     }

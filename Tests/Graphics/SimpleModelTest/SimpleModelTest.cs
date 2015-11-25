@@ -4,12 +4,12 @@ using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Testing;
 
-namespace SimpleSpriteTest
+namespace SimpleModelTest
 {
     [TestFixture]
-    public class SimpleSpriteTest
+    public class SimpleModelTest
     {
-        private const string Path = "samples\\Graphics\\SimpleSprite\\Bin\\Windows-Direct3D11\\Debug\\SimpleSprite.exe";
+        private const string Path = "samples\\Graphics\\SimpleModel\\Bin\\Windows-Direct3D11\\Debug\\SimpleModel.exe";
 
         [Test]
         public void TestLaunch()

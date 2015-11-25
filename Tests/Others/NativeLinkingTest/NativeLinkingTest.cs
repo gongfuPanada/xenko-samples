@@ -30,7 +30,7 @@ namespace NativeLinkingTest
 
                 game.TakeScreenshot();
 
-                game.Wait(TimeSpan.FromMilliseconds(500));
+                game.Wait(TimeSpan.FromMilliseconds(20000));
             }
         }
     }
