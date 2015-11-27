@@ -8,7 +8,7 @@ Materials:
     -   Name: BG00
         MaterialInstance:
             Material: e7bf2bb6-90d8-4c1e-a8bc-78c1c46c5359:BG00
-Skeleton: 94d2e20b-fdfc-4022-9278-3ace83e5bbf3:bg_00 Skeleton
+Skeleton: null
 ~Base:
     Location: --import--
     Asset: !Model

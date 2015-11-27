@@ -4,9 +4,9 @@ SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/model/character/scene/ma00_0.FBX
 RepeatMode: LoopInfinite
-Skeleton: null
+Skeleton: bfe057df-2fd1-402a-97bc-bd16edee241a:character_00 Skeleton
 RootMotion: false
-PreviewModel: null
+PreviewModel: 920f4445-c00d-474f-b8c0-33b385d58b8f:character_00
 ~Base:
     Location: --import--
     Asset: !Animation

@@ -15,7 +15,7 @@ Materials:
     -   Name: mc01
         MaterialInstance:
             Material: a6c09800-6c38-46ef-8738-e35d1f5618b9:mc01
-Skeleton: 49fac42e-50ae-4a2e-be91-54d322e81371:character_00 Model Skeleton
+Skeleton: null
 ~Base:
     Location: --import--
     Asset: !Model
