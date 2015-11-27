@@ -10,7 +10,6 @@ namespace SimpleSprite
 {
     public class BallScript : SyncScript
     {
-        private const int SphereSpace = 4;
         private const int SphereWidth = 150;
         private const int SphereHeight = 150;
         private const int SphereCountPerRow = 6;
@@ -113,7 +112,7 @@ namespace SimpleSprite
 
             var sphereX = sphereIndex % SphereCountPerRow;
             var sphereY = sphereIndex / SphereCountPerRow;
-            return new Rectangle(sphereX * (SphereWidth + SphereSpace), sphereY * (SphereHeight + SphereSpace), SphereWidth, SphereHeight);
+            return new Rectangle(sphereX * SphereWidth, sphereY * SphereHeight, SphereWidth, SphereHeight);
         }
     }
 }
