@@ -1,6 +1,11 @@
 !SettingsFile
 Settings:
     Package/Scene/ActiveStream: Color Base
+    Package/Scene/Camera/FarClipPlane: 1000.0
+    Package/Scene/Camera/NearClipPlane: 0.1
+    Package/Scene/Camera/OrthographicSize: 10.0
+    Package/Scene/Camera/Projection: Perspective
+    Package/Scene/Camera/VerticalFieldOfView: 45.0
     Package/Scene/CameraPreviewVisible: true
     Package/Scene/CamPitchYaw: {X: -0.319520831, Y: 0.7620027}
     Package/Scene/CamPosition: {X: 4.40436363, Y: 2.12884569, Z: 4.41033745}
