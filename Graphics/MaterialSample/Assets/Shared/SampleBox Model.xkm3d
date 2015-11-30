@@ -8,7 +8,7 @@ Materials:
     -   Name: m_a_0
         MaterialInstance:
             Material: 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
-Skeleton: f620c909-b768-4346-b768-d021ab7ad1a8:SampleBox Model Skeleton
+Skeleton: null
 ~Base:
     Location: --import--
     Asset: !Model

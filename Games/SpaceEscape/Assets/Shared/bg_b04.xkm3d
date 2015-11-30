@@ -14,7 +14,7 @@ Materials:
     -   Name: bg_wall02
         MaterialInstance:
             Material: ef070a60-83e2-4bd7-a95f-6599de22a8fa:BG_wall02_1
-Skeleton: ce42386a-22d6-49a9-b4ae-e81cf1e1c36d:bg_b04 Skeleton
+Skeleton: null
 ~Base:
     Location: --import--
     Asset: !Model

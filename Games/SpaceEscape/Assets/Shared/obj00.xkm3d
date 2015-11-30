@@ -8,7 +8,7 @@ Materials:
     -   Name: obj00
         MaterialInstance:
             Material: 5f60b016-d447-417d-8c92-7b6bbe5cbb31:obj00 Material
-Skeleton: 619f81c3-a71f-4bab-a31a-f71ab5ade4cb:obj00 Skeleton
+Skeleton: null
 ~Base:
     Location: --import--
     Asset: !Model
