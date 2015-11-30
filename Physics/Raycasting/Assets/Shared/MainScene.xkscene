@@ -21,7 +21,7 @@ Hierarchy:
                     ScriptComponent.Key:
                         Scripts:
                             - !Raycasting.GuiScript,Raycasting.Game
-                                Font: null
+                                Font: 1aae175d-f34a-472e-b951-65e34f93c8e3:Font
                                 Id: c780a5dd-7fbf-44b0-99b7-8a048d3b2557
                     TransformComponent.Key:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
