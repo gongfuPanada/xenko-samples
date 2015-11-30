@@ -10,13 +10,13 @@ Packing: {}
 Sprites:
     -   Source: ../../RawAssets/ui_texture/space_escape_ui.png
         Name: button
-        TextureRegion: {X: 278, Y: 0, Width: 219, Height: 89}
+        TextureRegion: {X: 598, Y: 344, Width: 217, Height: 87}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 125.0, Y: 50.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   Source: ../../RawAssets/ui_texture/space_escape_ui.png
         Name: xk_logo
-        TextureRegion: {X: 0, Y: 0, Width: 274, Height: 283}
+        TextureRegion: {X: 17, Y: 37, Width: 531, Height: 228}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}

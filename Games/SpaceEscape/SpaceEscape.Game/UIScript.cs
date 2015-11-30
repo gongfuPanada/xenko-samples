@@ -53,7 +53,7 @@ namespace SpaceEscape
             var xenkoLogo = new ImageElement { Source = UIImages["xk_logo"] };
 
             xenkoLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
-            xenkoLogo.SetCanvasRelativeSize(new Vector3(0.5f, 0.5f, 1f));
+            xenkoLogo.SetCanvasRelativeSize(new Vector3(0.8f, 0.5f, 1f));
             xenkoLogo.SetCanvasRelativePosition(new Vector3(0.5f, 0.3f, 1f));
 
             StartButton = new Button
@@ -68,7 +68,7 @@ namespace SpaceEscape
             };
 
             StartButton.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
-            StartButton.SetCanvasRelativePosition(new Vector3(0.5f, 0.7f, 0f));
+            StartButton.SetCanvasRelativePosition(new Vector3(0.5f, 0.8f, 0f));
 
             var mainMenuCanvas = new Canvas();
             mainMenuCanvas.Children.Add(xenkoLogo);
