@@ -91,7 +91,7 @@ namespace GameMenu
             grid.RowDefinitions.Add(new StripDefinition(StripType.Auto));
             grid.RowDefinitions.Add(new StripDefinition(StripType.Auto));
             grid.RowDefinitions.Add(new StripDefinition(StripType.Star, 2));
-            grid.RowDefinitions.Add(new StripDefinition(StripType.Star, 5));
+            grid.RowDefinitions.Add(new StripDefinition(StripType.Star, 2f));
             grid.RowDefinitions.Add(new StripDefinition(StripType.Star, 2));
             grid.RowDefinitions.Add(new StripDefinition(StripType.Auto));
             grid.ColumnDefinitions.Add(new StripDefinition());

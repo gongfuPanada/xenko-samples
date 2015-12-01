@@ -2,7 +2,7 @@
 Id: ba4ff50b-212b-47c5-af90-6672a8019b04
 SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
-Type: Sprite2D
+Type: UI
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Packing: {}
 Sprites:
@@ -24,9 +24,9 @@ Sprites:
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
-    -   Source: ../../RawAssets/ui_tex.png
+    -   Source: ../../RawAssets/title.png
         Name: Logo
-        TextureRegion: {X: 623, Y: 484, Width: 275, Height: 283}
+        TextureRegion: {X: 9, Y: 14, Width: 531, Height: 228}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}

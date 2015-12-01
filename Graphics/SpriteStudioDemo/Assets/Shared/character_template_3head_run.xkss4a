@@ -1,8 +1,8 @@
 !SpriteStudioAnimationAsset
-Id: 1a2d4f41-394b-4b61-9ebe-2f7bb92cc8cf
+Id: 0450fe8b-c834-4ab2-856b-19704944755c
 Tags: []
 Source: ../../RawAssets/character_template_3head.ssae
-SourceHash: fb449f0159666dc1d4c7d9d8db8f0dfb
+SourceHash: 59c2c164cb9719b29d02cf9a8254b204
 RepeatMode: LoopInfinite
 AnimationName: run
 ~Base:

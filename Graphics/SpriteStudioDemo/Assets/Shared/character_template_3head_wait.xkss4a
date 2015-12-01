@@ -1,8 +1,8 @@
 !SpriteStudioAnimationAsset
-Id: 3441961f-79d6-41c3-a4c1-184f7c94bd69
+Id: ee0096d9-18f6-410a-ab68-d88a7c7ce9fc
 Tags: []
 Source: ../../RawAssets/character_template_3head.ssae
-SourceHash: fb449f0159666dc1d4c7d9d8db8f0dfb
+SourceHash: 59c2c164cb9719b29d02cf9a8254b204
 RepeatMode: LoopInfinite
 AnimationName: wait
 ~Base:

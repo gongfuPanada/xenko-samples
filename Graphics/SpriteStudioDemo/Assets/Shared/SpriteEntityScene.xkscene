@@ -43,7 +43,7 @@ Hierarchy:
                 Name: Enemy02
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: 66252acc-b501-49d1-ae02-751acb24218d:character_template_2head
+                        Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
@@ -52,8 +52,8 @@ Hierarchy:
                                 Id: 0d506cac-e36c-4530-a0d9-46e43e55d505
                     AnimationComponent.Key:
                         Animations:
-                            Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
-                            Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
+                            Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
+                            Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     PhysicsComponent.Key:
                         Elements:
@@ -114,12 +114,12 @@ Hierarchy:
                 Name: Player
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: dbb69ad7-51ca-4101-bd3b-c85ad5535833:character_template_3head
+                        Sheet: ed4d6771-9481-4867-b85a-9d04280baba5:character_template_3head
                     AnimationComponent.Key:
                         Animations:
-                            Attack: b51fcf01-af9b-4680-acd3-5451686bc8d6:character_template_3head_attack3
-                            Run: 1a2d4f41-394b-4b61-9ebe-2f7bb92cc8cf:character_template_3head_run
-                            Stance: 3441961f-79d6-41c3-a4c1-184f7c94bd69:character_template_3head_wait
+                            Attack: 230575a8-df6b-4de2-ae9f-93bfcb02d538:character_template_3head_attack3
+                            Run: 0450fe8b-c834-4ab2-856b-19704944755c:character_template_3head_run
+                            Stance: ee0096d9-18f6-410a-ab68-d88a7c7ce9fc:character_template_3head_wait
                         PlayingAnimations: []
                     ScriptComponent.Key:
                         Scripts:
@@ -155,7 +155,7 @@ Hierarchy:
                 Name: Enemy00
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: 66252acc-b501-49d1-ae02-751acb24218d:character_template_2head
+                        Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
@@ -164,8 +164,8 @@ Hierarchy:
                                 Id: 21c959ad-c789-44b4-948b-1d4021f6aa50
                     AnimationComponent.Key:
                         Animations:
-                            Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
-                            Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
+                            Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
+                            Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     PhysicsComponent.Key:
                         Elements:
@@ -200,7 +200,7 @@ Hierarchy:
                 Name: Enemy01
                 Components:
                     SpriteStudioComponent.Key:
-                        Sheet: 66252acc-b501-49d1-ae02-751acb24218d:character_template_2head
+                        Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
                     ScriptComponent.Key:
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
@@ -209,8 +209,8 @@ Hierarchy:
                                 Id: 707b3fd5-c622-44c5-9141-511dd24417e1
                     AnimationComponent.Key:
                         Animations:
-                            Dead: 40869ef9-7c21-490a-9bba-fbef8f803d50:character_template_2head_dead
-                            Wait: 86ea4e63-5345-43be-adfd-9c9c22099f06:character_template_2head_wait
+                            Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
+                            Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     PhysicsComponent.Key:
                         Elements:

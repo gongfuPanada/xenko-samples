@@ -51,7 +51,7 @@ namespace JumpyJet
             var xenkoLogo = new ImageElement { Source = UIImages["xk_logo"] };
 
             xenkoLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
-            xenkoLogo.SetCanvasRelativeSize(new Vector3(0.5f, 0.5f, 1f));
+            xenkoLogo.SetCanvasRelativeSize(new Vector3(0.75f, 0.5f, 1f));
             xenkoLogo.SetCanvasRelativePosition(new Vector3(0.5f, 0.3f, 1f));
 
             StartButton = new Button

@@ -87,7 +87,7 @@ at full size and full measure";
         private readonly Vector2 headerPosition = new Vector2(0.5f, 0.25f);
         private readonly Vector2 contentPosition = new Vector2(0.5f, 0.4f);
 
-        private readonly Color xenkoColor = new Color(0xFF9E4884);
+        private readonly Color xenkoColor = new Color(0xFF3008da);
 
         private Vector2 virtualResolution = new Vector2(1920, 1080);
 

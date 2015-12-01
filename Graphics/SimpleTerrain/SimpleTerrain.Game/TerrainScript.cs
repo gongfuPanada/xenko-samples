@@ -454,7 +454,9 @@ namespace SimpleTerrain
 
             var buttonDescription = new StackPanel { Orientation = Orientation.Vertical, Children = { activeButton, descriptionCanvas } };
 
-            UIEntity.Add(UIComponent.Key, new UIComponent { RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } }, VirtualResolution = virtualResolution });
+            var uiComponent = UIEntity.Get<UIComponent>();
+            uiComponent.RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } };
+            uiComponent.VirtualResolution = virtualResolution;
         }
 
         private void UpdateCamera()
