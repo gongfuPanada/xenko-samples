@@ -44,7 +44,7 @@ namespace SimpleDynamicTexture
         /// <summary>
         /// Lit color
         /// </summary>
-        private static readonly ColorBGRA XenkoColor = Color.MediumPurple;
+        private static readonly ColorBGRA XenkoColor = new ColorBGRA(0xffda0830);
 
         /// <summary>
         /// Dim color
@@ -78,7 +78,7 @@ namespace SimpleDynamicTexture
             compositor.Master.Renderers.Insert(2, new SceneDelegateRenderer(RenderTexture));
             
             // Create and initialize the dynamic texture
-            renderTexture = Texture.New2D(GraphicsDevice, RenderTextureSize, RenderTextureSize, 1, PixelFormat.B8G8R8A8_UNorm, usage: GraphicsResourceUsage.Dynamic);
+            renderTexture = Texture.New2D(GraphicsDevice, RenderTextureSize, RenderTextureSize, 1, PixelFormat.B8G8R8A8_UNorm_SRgb, usage: GraphicsResourceUsage.Dynamic);
 
             // Setup initial data in "SymmetricDefaultShape" to the texture
             for (var i = 0; i < SymmetricDefaultShape.Length; i += 2)

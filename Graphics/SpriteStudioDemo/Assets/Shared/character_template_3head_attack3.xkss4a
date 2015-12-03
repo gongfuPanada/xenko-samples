@@ -1,9 +1,9 @@
 !SpriteStudioAnimationAsset
-Id: b51fcf01-af9b-4680-acd3-5451686bc8d6
+Id: 230575a8-df6b-4de2-ae9f-93bfcb02d538
 Tags: []
 Source: ../../RawAssets/character_template_3head.ssae
-SourceHash: fb449f0159666dc1d4c7d9d8db8f0dfb
-RepeatMode: PlayOnce
+SourceHash: 59c2c164cb9719b29d02cf9a8254b204
+RepeatMode: LoopInfinite
 AnimationName: attack3
 ~Base:
     Location: --import--

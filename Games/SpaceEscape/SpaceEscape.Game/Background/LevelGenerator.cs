@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SiliconStudio.Core;
+﻿using System.Linq;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Rendering;
 
 namespace SpaceEscape.Background
 {
@@ -41,16 +35,12 @@ namespace SpaceEscape.Background
                 case 5: backgroundEntity = Background_b04; break;
             }
 
-            // Clone it
-            backgroundEntity = backgroundEntity.Clone();
-
             return CreateLevelBlock(backgroundEntity.Clone());
         }
 
         public Section CreateSafeLevelBlock()
         {
-            var safeBackground = Background_a00.Clone();
-            return CreateLevelBlock(Background_a00.Clone());
+            return CreateLevelBlock(Background_a00.Clone(), 0);
         }
 
         /// <summary>
@@ -80,8 +70,9 @@ namespace SpaceEscape.Background
         /// Factory method to create Section from a given BackgroundEntity
         /// </summary>
         /// <param name="backgroundEnt"></param>
+        /// <param name="maxObstacleOverride">The maximum number of obstacle in the block level</param>
         /// <returns></returns>
-        private Section CreateLevelBlock(Entity backgroundEnt)
+        private Section CreateLevelBlock(Entity backgroundEnt, int? maxObstacleOverride = null)
         {
             // Reset position
             backgroundEnt.Transform.Position = Vector3.Zero;
@@ -91,7 +82,7 @@ namespace SpaceEscape.Background
             levelBlock.AddBackgroundEntity(backgroundEnt).AddHoleRange(backgroundInfo.Holes);
 
             var len = levelBlock.Length;
-            RandomAddObstacles(levelBlock, len, backgroundInfo.MaxNbObstacles);
+            RandomAddObstacles(levelBlock, len, maxObstacleOverride ?? backgroundInfo.MaxNbObstacles);
 
             return levelBlock;
         }

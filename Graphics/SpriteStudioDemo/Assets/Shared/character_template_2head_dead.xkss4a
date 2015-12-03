@@ -1,8 +1,8 @@
 !SpriteStudioAnimationAsset
-Id: 40869ef9-7c21-490a-9bba-fbef8f803d50
+Id: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5
 Tags: []
 Source: ../../RawAssets/character_template_2head.ssae
-SourceHash: e2e3451d70d749c8f26329c15d8c40f1
+SourceHash: 7bbed142c2c2aca394cccf062b9891b2
 RepeatMode: PlayOnce
 AnimationName: dead
 ~Base:
@@ -10,6 +10,7 @@ AnimationName: dead
     Asset: !SpriteStudioAnimationAsset
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
         RepeatMode: LoopInfinite
         AnimationName: dead
