@@ -33,8 +33,10 @@ namespace SpaceEscapeTest
             using (var game = new GameTest(Path, TestPlatform))
             {
                 game.Wait(TimeSpan.FromMilliseconds(2000));
-                game.Tap(new Vector2(0.5f, 0.7f), TimeSpan.FromMilliseconds(500));
-                game.Wait(TimeSpan.FromMilliseconds(500));
+                //X:0.496875 Y:0.8010563
+                game.Tap(new Vector2(0.496875f, 0.8010563f), TimeSpan.FromMilliseconds(250));
+                game.Wait(TimeSpan.FromMilliseconds(1000));
+                game.TakeScreenshot();
                 game.KeyPress(Keys.Space, TimeSpan.FromMilliseconds(500));
                 game.Wait(TimeSpan.FromMilliseconds(500));
                 game.TakeScreenshot();
