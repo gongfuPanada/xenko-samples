@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define TEST_ANDROID
+
+using System;
 using NUnit.Framework;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
@@ -33,7 +35,7 @@ namespace SpaceEscapeTest
             using (var game = new GameTest(Path, TestPlatform))
             {
                 game.Wait(TimeSpan.FromMilliseconds(2000));
-                //X:0.496875 Y:0.8010563
+                game.TakeScreenshot();
                 game.Tap(new Vector2(0.496875f, 0.8010563f), TimeSpan.FromMilliseconds(250));
                 game.Wait(TimeSpan.FromMilliseconds(1000));
                 game.TakeScreenshot();
