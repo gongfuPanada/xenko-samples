@@ -12,10 +12,16 @@ namespace SpaceEscapeTest
     {
         private const string Path = "samples\\Games\\SpaceEscape\\Bin\\Windows-Direct3D11\\Debug\\SpaceEscape.exe";
 
+#if TEST_ANDROID
+        private const PlatformType TestPlatform = PlatformType.Android;
+#else
+        private const PlatformType TestPlatform = PlatformType.Windows;
+#endif
+
         [Test]
         public void TestLaunch()
         {
-            using (var game = new GameTest(Path, PlatformType.Windows))
+            using (var game = new GameTest(Path, TestPlatform))
             {
                 game.Wait(TimeSpan.FromMilliseconds(2000));
             }
@@ -24,7 +30,7 @@ namespace SpaceEscapeTest
         [Test]
         public void TestInputs()
         {
-            using (var game = new GameTest(Path, PlatformType.Windows))
+            using (var game = new GameTest(Path, TestPlatform))
             {
                 game.Wait(TimeSpan.FromMilliseconds(2000));
                 game.Tap(new Vector2(0.5f, 0.7f), TimeSpan.FromMilliseconds(500));
