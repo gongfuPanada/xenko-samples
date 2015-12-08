@@ -1,6 +1,4 @@
-﻿#define TEST_ANDROID
-
-using System;
+﻿using System;
 using NUnit.Framework;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
