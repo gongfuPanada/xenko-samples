@@ -56,7 +56,7 @@ namespace GameMenuTest
                 game.Wait(TimeSpan.FromMilliseconds(250));
                 game.TakeScreenshot();
 
-                game.Wait(TimeSpan.FromMilliseconds(500));
+                game.Wait(TimeSpan.FromMilliseconds(2000));
             }
         }
     }
