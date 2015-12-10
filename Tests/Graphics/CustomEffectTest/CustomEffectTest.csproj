@@ -55,8 +55,8 @@
     <Reference Include="SiliconStudio.Xenko.Input">
       <HintPath>$(SiliconStudioXenkoDir)\Bin\Windows-Direct3D11\SiliconStudio.Xenko.Input.dll</HintPath>
     </Reference>
-    <Reference Include="SiliconStudio.Xenko.Testing">
-      <HintPath>$(SiliconStudioXenkoDir)\Bin\Windows-Direct3D11\SiliconStudio.Xenko.Testing.dll</HintPath>
+    <Reference Include="SiliconStudio.Xenko.Games.Testing">
+      <HintPath>$(SiliconStudioXenkoDir)\Bin\Windows-Direct3D11\SiliconStudio.Xenko.Games.Testing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

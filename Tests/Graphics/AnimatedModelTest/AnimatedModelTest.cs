@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Testing;
+using SiliconStudio.Xenko.Games.Testing;
 
 namespace AnimatedModelTest
 {
@@ -20,7 +20,7 @@ namespace AnimatedModelTest
         [Test]
         public void TestLaunch()
         {
-            using (var game = new GameTest(Path, TestPlatform))
+            using (var game = new GameTestingClient(Path, TestPlatform))
             {
                 game.Wait(TimeSpan.FromMilliseconds(2000));
             }
@@ -29,7 +29,7 @@ namespace AnimatedModelTest
         [Test]
         public void TestInputs()
         {
-            using (var game = new GameTest(Path, TestPlatform))
+            using (var game = new GameTestingClient(Path, TestPlatform))
             {
                 game.Wait(TimeSpan.FromMilliseconds(2000));
 
