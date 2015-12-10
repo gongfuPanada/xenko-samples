@@ -44,12 +44,12 @@ namespace SimpleDynamicTexture
         /// <summary>
         /// Lit color
         /// </summary>
-        private static readonly ColorBGRA XenkoColor = new ColorBGRA(0xffda0830);
+        private static readonly Color XenkoColor = new Color(0xff3008da);
 
         /// <summary>
         /// Dim color
         /// </summary>
-        private static readonly ColorBGRA TransparentColor = Color.Transparent;
+        private static readonly Color TransparentColor = Color.Transparent;
 
         /// <summary>
         /// A sprite batch that is used to draw a texture
@@ -64,7 +64,7 @@ namespace SimpleDynamicTexture
         /// <summary>
         /// The data of the texture.
         /// </summary>
-        private readonly ColorBGRA[] textureData = new ColorBGRA[RenderTextureSize * RenderTextureSize];
+        private readonly Color[] textureData = new Color[RenderTextureSize * RenderTextureSize];
 
         // Complete the graphic pipeline, initialize texture data
         public override void Start()
@@ -78,7 +78,7 @@ namespace SimpleDynamicTexture
             compositor.Master.Renderers.Insert(2, new SceneDelegateRenderer(RenderTexture));
             
             // Create and initialize the dynamic texture
-            renderTexture = Texture.New2D(GraphicsDevice, RenderTextureSize, RenderTextureSize, 1, PixelFormat.B8G8R8A8_UNorm_SRgb, usage: GraphicsResourceUsage.Dynamic);
+            renderTexture = Texture.New2D(GraphicsDevice, RenderTextureSize, RenderTextureSize, 1, PixelFormat.R8G8B8A8_UNorm_SRgb, usage: GraphicsResourceUsage.Dynamic);
 
             // Setup initial data in "SymmetricDefaultShape" to the texture
             for (var i = 0; i < SymmetricDefaultShape.Length; i += 2)
