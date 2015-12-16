@@ -12,6 +12,8 @@ namespace SimpleModelTest
 
 #if TEST_ANDROID
         private const PlatformType TestPlatform = PlatformType.Android;
+#elif TEST_IOS
+        private const PlatformType TestPlatform = PlatformType.iOS;
 #else
         private const PlatformType TestPlatform = PlatformType.Windows;
 #endif

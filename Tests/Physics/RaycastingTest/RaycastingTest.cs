@@ -2,7 +2,6 @@
 using NUnit.Framework;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Games.Testing;
 
 namespace RaycastingTest
@@ -14,6 +13,8 @@ namespace RaycastingTest
 
 #if TEST_ANDROID
         private const PlatformType TestPlatform = PlatformType.Android;
+#elif TEST_IOS
+        private const PlatformType TestPlatform = PlatformType.iOS;
 #else
         private const PlatformType TestPlatform = PlatformType.Windows;
 #endif
