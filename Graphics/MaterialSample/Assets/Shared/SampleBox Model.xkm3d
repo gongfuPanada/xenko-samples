@@ -5,11 +5,14 @@ Tags: []
 Source: ../../RawAssets/SampleBox.FBX
 SourceHash: b5f389bd04fd3ea2cf5333d4c74d12d3
 Materials:
-    -   Name: m_a_0
+    -   ~Id: 5f57f6dc-372b-4ae4-8b06-5375a2187c83
+        Name: m_a_0
         MaterialInstance:
+            ~Id: c6ab42e4-6573-4082-8c91-8875a1e5ab2c
             Material: 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
 Skeleton: null
 ~Base:
+    ~Id: 8fbfc93a-8ecd-4a4d-898d-f927c2396633
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
@@ -18,7 +21,9 @@ Skeleton: null
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
-            -   Name: m_a_0
+            -   ~Id: f7b5a85d-4684-402f-af0b-a41bd8fad450
+                Name: m_a_0
                 MaterialInstance:
+                    ~Id: 2a5083fe-f135-422f-a39b-617e6737b772
                     Material: df7da395-5832-43b5-b92b-870c1ef6e052:m_a_0_1
         Skeleton: null

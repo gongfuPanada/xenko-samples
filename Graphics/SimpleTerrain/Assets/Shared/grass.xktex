@@ -5,6 +5,7 @@ Tags: []
 Source: ../../RawAssets/grass.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
+    ~Id: c4538a85-7e45-40ac-a8af-0863a80772ea
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

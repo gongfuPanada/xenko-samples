@@ -15,6 +15,7 @@ Attributes:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
 ~Base:
+    ~Id: bb35ce83-6170-40ea-a71d-0381ca2974eb
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
@@ -35,9 +36,12 @@ Layers: []
                 Intensity: !ComputeFloat
                     Value: 1.0
             SpecularModel: !MaterialSpecularMicrofacetModelFeature
-                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
-                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
+                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
+                    ~Id: cca0d657-a23c-4108-863c-9dea93a4c4d3
+                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit
+                    ~Id: 4b189060-625d-4c8b-8eec-bedd4fb8f926
+                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong
+                    ~Id: 0befd536-e9d4-4ec9-8863-12d7425ce569
             Overrides:
                 UVScale: {X: 1.0, Y: 1.0}
         Layers: []

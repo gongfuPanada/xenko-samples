@@ -5,6 +5,7 @@ Tags: []
 Source: ../../RawAssets/texture.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
+    ~Id: db8f2c4e-1045-4414-8ff8-6224621e364e
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

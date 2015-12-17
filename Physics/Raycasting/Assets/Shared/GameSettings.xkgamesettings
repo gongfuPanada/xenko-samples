@@ -1,9 +1,9 @@
 !GameSettingsAsset
 Id: d3733b7d-ede9-4dd7-8d84-66d9d204099b
 Tags: []
-BackBufferHeight: 720
-BackBufferWidth: 1280
-DefaultGraphicsProfile: Level_9_1
 DefaultScene: 86fed268-baa8-4929-9eba-4d14cf3a0e68:MainScene
+BackBufferWidth: 1280
+BackBufferHeight: 720
+DefaultGraphicsProfile: Level_9_1
 DisplayOrientation: LandscapeRight
 TextureQuality: Fast

@@ -8,6 +8,7 @@ Skeleton: 802a04d1-b193-449d-adeb-63bace2e5408:knight Skeleton
 RootMotion: false
 PreviewModel: 9e7f08db-ca99-4171-b503-6ea0f8e5114d:knight
 ~Base:
+    ~Id: d4846b16-2fdf-43d4-8419-c10d4137bde5
     Location: --import--
     Asset: !Animation
         Id: 00000000-0000-0000-0000-000000000000

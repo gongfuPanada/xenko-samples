@@ -6,6 +6,7 @@ Source: ../../RawAssets/Bkg.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 ~Base:
+    ~Id: bae42005-ebe3-4e28-b582-30b28f3f2428
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

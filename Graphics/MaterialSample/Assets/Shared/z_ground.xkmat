@@ -26,9 +26,12 @@ Attributes:
             Scale: {X: 5.0, Y: 5.0}
             Offset: {X: 0.0, Y: 0.0}
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
-        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
-        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
+            ~Id: 6a3c09ef-3cfd-4535-8d62-e4727d3777ad
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX
+            ~Id: 2d315466-fad3-4280-b39e-7da5a5483fb8
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX
+            ~Id: 71b5faf8-226b-41e5-b434-c2e351317fc2
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []

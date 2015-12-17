@@ -7,4 +7,5 @@ Type: !CapsuleProceduralModel
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
+        ~Id: 656271b7-7025-48ed-b518-4573237f4bbe
         Material: 941a637b-5e4f-4132-bb6c-0ab975e1ec4d:ControllerMat

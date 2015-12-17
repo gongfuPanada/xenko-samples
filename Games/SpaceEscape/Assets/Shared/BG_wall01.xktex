@@ -6,6 +6,7 @@ Source: ../../RawAssets/model/BG/sourceimages/BG_wall01.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: 2fda26b9-a69a-4b03-9ce0-4e6317389f32
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

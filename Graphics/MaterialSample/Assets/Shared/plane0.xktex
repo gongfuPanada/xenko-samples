@@ -6,6 +6,7 @@ Source: ../../RawAssets/plane0.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: 2669de58-839f-4ff9-bd67-5bb3a2d70e6c
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

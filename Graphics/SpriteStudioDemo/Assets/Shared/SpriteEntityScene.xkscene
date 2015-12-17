@@ -3,6 +3,7 @@ Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
+    ~Id: 75c8a95e-8fbd-43ce-b53f-81e2c64d261e
     RootEntities:
         - 0b04edaf-f330-4ae1-9d93-517d967fbe95
         - 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
@@ -18,9 +19,11 @@ Hierarchy:
                 Name: Camera
                 Components:
                     CameraComponent.Key:
+                        ~Id: 9be240a7-a303-4cc1-9aa1-0eb9365669ec
                         Projection: Orthographic
                         NearClipPlane: 1.0
                     TransformComponent.Key:
+                        ~Id: c07d4880-733b-4686-b54d-816aef3d3357
                         Position: {X: 0.0, Y: 2.0, Z: 2.0}
                         Rotation: {W: 0.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -31,8 +34,10 @@ Hierarchy:
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
+                        ~Id: 4eaeffe8-d225-4327-89df-6813f39119d2
                         Texture: 4b0f48d8-839e-4c71-8ca5-fc72e88cb68a:Bkg
                     TransformComponent.Key:
+                        ~Id: 6df53acd-0ad5-4f01-bc45-dd38893fa828
                         Position: {X: 1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -43,21 +48,26 @@ Hierarchy:
                 Name: Enemy02
                 Components:
                     SpriteStudioComponent.Key:
+                        ~Id: eb83b7ab-0e47-4a53-93b4-543cb811b527
                         Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
                     ScriptComponent.Key:
+                        ~Id: f98150eb-597e-406a-9055-23b9596dc846
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
                                 Id: 9a7ae650-cecf-4c0f-bd0d-9c840e9dffe2
                             - !SpriteStudioDemo.EnemyCollisionScript,SpriteStudioDemo.Game
                                 Id: 0d506cac-e36c-4530-a0d9-46e43e55d505
                     AnimationComponent.Key:
+                        ~Id: 61d7e562-b1e2-4f07-b6cf-f5ef728d282a
                         Animations:
                             Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
                             Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     PhysicsComponent.Key:
+                        ~Id: 46a6f913-ea8a-4ec7-bd31-fe69425ca76f
                         Elements:
                             - !RigidbodyElement
+                                ~Id: 84294d6f-a035-4bf9-be38-dcd7035a5810
                                 CollisionGroup: CustomFilter1
                                 CanCollideWith: DefaultFilter
                                 ProcessCollisions: true
@@ -76,8 +86,10 @@ Hierarchy:
                                 NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: 2ee384a5-482a-4d81-9aac-c83de353e0c2
                                         Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
                     TransformComponent.Key:
+                        ~Id: 52f49cbb-cc19-4629-b093-9b766a5cd10b
                         Position: {X: 8.0, Y: 8.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
@@ -88,8 +100,10 @@ Hierarchy:
                 Name: Ground
                 Components:
                     PhysicsComponent.Key:
+                        ~Id: b86f4c3c-43f5-4c78-bca1-1cb3ec3d0a98
                         Elements:
                             - !StaticColliderElement
+                                ~Id: 4a1368df-990a-4d63-ab49-3a444fd68fab
                                 CollisionGroup: DefaultFilter
                                 CanCollideWith: CustomFilter1
                                 ProcessCollisions: true
@@ -101,9 +115,11 @@ Hierarchy:
                                 IsTrigger: false
                                 ColliderShapes:
                                     - !StaticPlaneColliderShapeDesc
+                                        ~Id: 3ef3775f-e489-4937-badb-27f5ad3ef379
                                         Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                         Offset: 0.0
                     TransformComponent.Key:
+                        ~Id: 3234e418-6f30-4776-b7f2-af6f9e73d225
                         Position: {X: -1.25711727, Y: -1.0, Z: 7.02876854}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -114,20 +130,24 @@ Hierarchy:
                 Name: Player
                 Components:
                     SpriteStudioComponent.Key:
+                        ~Id: a7c40e4a-4f39-4723-bd72-990ea2aadc40
                         Sheet: ed4d6771-9481-4867-b85a-9d04280baba5:character_template_3head
                     AnimationComponent.Key:
+                        ~Id: e5054314-d214-40c7-9a08-890d5ba014f9
                         Animations:
                             Attack: 230575a8-df6b-4de2-ae9f-93bfcb02d538:character_template_3head_attack3
                             Run: 0450fe8b-c834-4ab2-856b-19704944755c:character_template_3head_run
                             Stance: ee0096d9-18f6-410a-ab68-d88a7c7ce9fc:character_template_3head_wait
                         PlayingAnimations: []
                     ScriptComponent.Key:
+                        ~Id: d4c51c45-b38b-4dc7-903a-b37a7aa0cf6d
                         Scripts:
                             - !SpriteStudioDemo.PlayerScript,SpriteStudioDemo.Game
                                 Id: 018ca6a8-c34d-4b93-9901-3c685336a2f0
                                 BulletColliderShape: 7946c040-eeda-424d-a2f5-3ede14470c1a:Bullet_CS
                                 BulletSheet: fba79776-e90e-42eb-ac60-a137b2e7378d:SpriteSheet
                     TransformComponent.Key:
+                        ~Id: 04f74371-5ad6-41d0-be8a-984db178ce5e
                         Position: {X: -6.616724, Y: -1.06623185, Z: 0.0}
                         Rotation: {W: -4.371139E-08, X: 0.0, Y: -1.0, Z: 0.0}
                         Scale: {X: 0.450682253, Y: 0.450682253, Z: 0.450682253}
@@ -138,13 +158,16 @@ Hierarchy:
                 Name: GUI
                 Components:
                     ScriptComponent.Key:
+                        ~Id: 27072b6e-4e9f-40cb-8e49-ca3bf7db98f0
                         Scripts:
                             - !SpriteStudioDemo.GuiScript,SpriteStudioDemo.Game
                                 Id: c21d3a58-43c4-4b22-99a1-d932a8b9c338
                                 Font: 58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
                     UIComponent.Key:
+                        ~Id: c0d2276e-0d39-43f9-9df8-cee475719561
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                     TransformComponent.Key:
+                        ~Id: db13a295-f1f7-4bbf-a0b0-c17fa73967b3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -155,21 +178,26 @@ Hierarchy:
                 Name: Enemy00
                 Components:
                     SpriteStudioComponent.Key:
+                        ~Id: ffb3726f-f3ca-4106-b754-902470aa29bb
                         Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
                     ScriptComponent.Key:
+                        ~Id: f6fd4376-5c97-4ef2-bcef-bb52faa4595e
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
                                 Id: 9f65e4cf-6b91-4031-b923-bcaf2c20a868
                             - !SpriteStudioDemo.EnemyCollisionScript,SpriteStudioDemo.Game
                                 Id: 21c959ad-c789-44b4-948b-1d4021f6aa50
                     AnimationComponent.Key:
+                        ~Id: ac8bfd48-9918-40f2-b3c6-124cc93870df
                         Animations:
                             Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
                             Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     PhysicsComponent.Key:
+                        ~Id: 28922d50-76ad-4031-a0ea-b13778f30a4d
                         Elements:
                             - !RigidbodyElement
+                                ~Id: ad6c2a2c-6b7f-4883-9119-24943a9348e5
                                 CollisionGroup: CustomFilter1
                                 CanCollideWith: DefaultFilter
                                 ProcessCollisions: true
@@ -188,8 +216,10 @@ Hierarchy:
                                 NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: 9b855dde-5612-4476-894c-1e13eddd2fd6
                                         Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
                     TransformComponent.Key:
+                        ~Id: f7cc8118-5dd3-4c25-9dc3-288826278f52
                         Position: {X: -8.0, Y: 8.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
@@ -200,21 +230,26 @@ Hierarchy:
                 Name: Enemy01
                 Components:
                     SpriteStudioComponent.Key:
+                        ~Id: 6c1ae6d5-980c-4d1b-bbd6-a21986cd4b61
                         Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
                     ScriptComponent.Key:
+                        ~Id: 7f8543a5-17d1-4ace-8381-b5a918d2f3cf
                         Scripts:
                             - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
                                 Id: a0969d82-476f-4aaa-82f2-7eff15b86395
                             - !SpriteStudioDemo.EnemyCollisionScript,SpriteStudioDemo.Game
                                 Id: 707b3fd5-c622-44c5-9141-511dd24417e1
                     AnimationComponent.Key:
+                        ~Id: 4a9121b4-7fe4-4a1c-80dc-c5bd05c02c7b
                         Animations:
                             Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
                             Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     PhysicsComponent.Key:
+                        ~Id: 475b5a8b-b9c6-4ce9-8257-f805a2e36682
                         Elements:
                             - !RigidbodyElement
+                                ~Id: 209be0ce-9316-46d2-8605-97e95c780d44
                                 CollisionGroup: CustomFilter1
                                 CanCollideWith: DefaultFilter
                                 ProcessCollisions: true
@@ -233,36 +268,47 @@ Hierarchy:
                                 NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: b4ac5cf5-d2ed-4391-88df-83e8a79e0c84
                                         Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
                     TransformComponent.Key:
+                        ~Id: 40b67b78-7528-4b2d-ba67-632d439aaad6
                         Position: {X: 0.0, Y: 8.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: []
             Design: {}
 SceneSettings:
+    ~Id: f3526002-9bc4-4ab4-819f-af3429bca2b6
     GraphicsCompositor: !SceneGraphicsCompositorLayers
+        ~Id: 72d58eb3-79c3-4dd0-9035-5abc3979366f
         Cameras:
-            -   Name: null
+            -   ~Id: cac01c54-fb79-4378-9083-b407b8bfd861
+                Name: null
                 Camera:
                     Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
                     Component: CameraComponent.Key
         Layers: []
         Master:
+            ~Id: ab3c2b60-408a-423c-be52-b3fc6d9f2ef3
             Name: SceneGraphicsLayer
             Output: !MasterRenderFrameProvider {}
             Renderers:
                 - !ClearRenderFrameRenderer
+                    ~Id: 6b70a535-4a7a-44a3-8105-9405817c7391
                     Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
                     Output: !CurrentRenderFrameProvider {}
                 - !SceneCameraRenderer
-                    Mode: !CameraRendererModeForward {}
+                    ~Id: 45d6da5f-6f04-422d-90b2-d898b5aa7d06
+                    Mode: !CameraRendererModeForward
+                        ~Id: 0604e99b-284e-4f86-a8f0-9d8faf78d345
                     Camera:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
     EditorSettings:
+        ~Id: 9be983f9-ace1-453a-8b8c-e46494e423e2
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
         SceneUnit: 1.0
         Mode: !SceneEditorGraphicsModeLDRSettings
+            ~Id: d744b44b-641d-4e5d-9c06-57a30880b7a9
             BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

@@ -5,6 +5,7 @@ Tags: []
 Source: ../../RawAssets/stone1_cav.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
+    ~Id: 527f8a15-df41-461d-a221-89e75eae7c17
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

@@ -22,10 +22,12 @@ NodeNames:
     - leg_r
     - shadow
 ~Base:
+    ~Id: 752d3268-ab8e-434a-a139-6268e6b3c200
     Location: --import--
     Asset: !SpriteStudioSheetAsset
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
         NodeNames:
             - root

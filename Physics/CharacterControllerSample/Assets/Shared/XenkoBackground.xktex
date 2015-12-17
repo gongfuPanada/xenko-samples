@@ -7,6 +7,7 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 GenerateMipmaps: false
 ~Base:
+    ~Id: c61039a8-5034-491f-a4c6-fdefb90e9caf
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

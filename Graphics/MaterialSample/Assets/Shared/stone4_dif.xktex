@@ -6,6 +6,7 @@ Source: ../../RawAssets/stone4_dif.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: dcd4db4f-4f2a-4950-b73d-46732b7953e6
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

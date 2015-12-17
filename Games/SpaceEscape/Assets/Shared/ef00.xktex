@@ -6,6 +6,7 @@ Source: ../../RawAssets/model/character/Sourceimages/ef00.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Alpha: Interpolated
 ~Base:
+    ~Id: 9853e3ee-711f-4c27-b16b-5b29809e0083
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

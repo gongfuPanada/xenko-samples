@@ -3,6 +3,7 @@ Id: c2262423-9422-4dd1-9fcb-ead76f9a93ba
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
+    ~Id: bad0d8a1-15a6-4d40-af0c-8cef471c06ce
     RootEntities:
         - c481ec15-4e0b-4529-b351-7bbe42285fd9
         - 96b72222-d5d1-4cb0-ad41-dcd66f9d2c79
@@ -42,10 +43,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 7b7059ad-0b0f-459f-abd0-2f990fa1365d
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
                     TransformComponent.Key:
+                        ~Id: 2db4c726-641d-48cc-8ca6-a21909a9739a
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -56,10 +59,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 14b54624-259a-4922-809e-a34cb5584879
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
                     TransformComponent.Key:
+                        ~Id: 05562ff2-daa3-4313-8f39-614303279cb0
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -70,10 +75,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 81fad0c1-440a-4ae2-97dc-a3dbbae6d539
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
                     TransformComponent.Key:
+                        ~Id: 3037de6c-37c9-45da-82b7-005d3f367ff8
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -84,10 +91,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 39c4637c-cae4-42a3-87b1-33feff19454f
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
                     TransformComponent.Key:
+                        ~Id: 11ec845e-2714-4c1d-abed-be8ac01521a4
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -98,10 +107,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 84551f0e-678a-43c3-8390-1568d496ea61
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
                     TransformComponent.Key:
+                        ~Id: e4aa28e9-9946-4ac7-b156-d8793964ab27
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -112,6 +123,7 @@ Hierarchy:
                 Name: Emissive Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: e6be490f-2569-46b3-8bfd-b16586572a77
                         Position: {X: 3.0, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -127,10 +139,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 730b4183-2312-43bc-bfd8-7ab238790354
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
                     TransformComponent.Key:
+                        ~Id: fc1c20c3-1990-405c-810b-28accb1160cf
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -141,6 +155,7 @@ Hierarchy:
                 Name: Gold_Metalness1.0 Glossness0.7
                 Components:
                     TransformComponent.Key:
+                        ~Id: 94e63114-b4aa-4bc6-8a95-814c33b84e88
                         Position: {X: -5.5, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -156,6 +171,7 @@ Hierarchy:
                 Name: Stone Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: 14cafd06-037d-4cca-a585-8384bf7d6f41
                         Position: {X: 1.5, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -171,10 +187,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: a62a0dad-3c39-47d1-ae23-9be51592f220
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
                     TransformComponent.Key:
+                        ~Id: e8bf5690-1395-4106-8d5d-084d53cf961e
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -185,10 +203,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: a828637f-721d-40bf-9a38-68497f33d323
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
                     TransformComponent.Key:
+                        ~Id: 0a258d22-b1f6-410d-94f8-16f67a8afc43
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -199,10 +219,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: ed21cb11-cfa0-442c-90b9-ba92aaa513a6
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
                     TransformComponent.Key:
+                        ~Id: 348b9492-b14e-463a-b13c-54e085ed54ce
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -213,10 +235,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 665e2dd6-40fa-4fb8-a55e-84eb05541f68
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
                     TransformComponent.Key:
+                        ~Id: 0d448c0a-d590-4b96-b58f-c22ce6e0a38e
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -227,10 +251,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: f609aae5-e9c1-4102-a98a-305f856d4697
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
                     TransformComponent.Key:
+                        ~Id: bf01c56f-1078-4c4d-b960-542a7a16036d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -241,17 +267,26 @@ Hierarchy:
                 Name: Directional light
                 Components:
                     LightComponent.Key:
+                        ~Id: c554f0af-6262-45a2-9fc0-f578a15fe5eb
                         Type: !LightDirectional
+                            ~Id: 87a65943-f44e-4cc1-a344-b5dd4a8a4e58
                             Color: !ColorRgbProvider
+                                ~Id: 0fae5d38-a83b-4606-a9e2-10ec1b08bb33
                                 Value: {R: 0.7375, G: 0.735111535, B: 0.6499219}
                             Shadow:
+                                ~Id: bca9c6aa-398a-4f6b-b108-415e50d6a04b
                                 Enabled: true
-                                Filter: !LightShadowMapFilterTypePcf {}
+                                Filter: !LightShadowMapFilterTypePcf
+                                    ~Id: d45b8868-e4d1-4cb8-9257-c57812708933
                                 Size: Large
-                                DepthRange: {}
-                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                                BiasParameters: {}
+                                DepthRange:
+                                    ~Id: d037e04b-bc66-4166-a81b-4c487e231c6f
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic
+                                    ~Id: 2a484892-8837-41c5-b29a-01f46a652573
+                                BiasParameters:
+                                    ~Id: e74b3b2c-936b-46ab-a2a7-ad212f3cbea8
                     TransformComponent.Key:
+                        ~Id: e1b0644f-e058-4fd2-b83c-c4226c32eb4a
                         Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {W: 0.5045669, X: -0.148005635, Y: 0.8162018, Z: 0.239418119}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -262,6 +297,7 @@ Hierarchy:
                 Name: Silver_Metalness1.0 Glossness0.6
                 Components:
                     TransformComponent.Key:
+                        ~Id: d8b0c997-6645-484d-bde4-beab404c4d5b
                         Position: {X: -4.0, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -277,10 +313,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: a7f7c1d6-33bc-4a22-9274-e681e4a11efb
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
                     TransformComponent.Key:
+                        ~Id: b997f09a-eaa1-48c1-afe9-26eedda082f6
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -291,10 +329,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 846fa4b3-f5c1-4ff3-8ca8-b620a4b6c36c
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
                     TransformComponent.Key:
+                        ~Id: 44180f0e-3f27-4496-bda5-736e0bf32b8d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -305,6 +345,7 @@ Hierarchy:
                 Name: Silver_Metalness1.0 Glossness1.0
                 Components:
                     TransformComponent.Key:
+                        ~Id: 36989b1a-f004-4128-8aa0-1bfb4c9484dd
                         Position: {X: -8.5, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -320,10 +361,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 73a8b6f1-1ca8-45e4-ab5f-b97d137f7ffe
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
                     TransformComponent.Key:
+                        ~Id: 64bf53af-df9a-42fe-962a-972e78f56389
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -334,10 +377,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 3b81d66a-286b-44d4-8cce-e9e088e4fb73
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
                     TransformComponent.Key:
+                        ~Id: 97df343c-74bd-49c8-9ca4-19999f0e21d8
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -348,10 +393,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 0e8138a9-9aef-4efb-9ebe-d588207ded75
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
                     TransformComponent.Key:
+                        ~Id: 3c165373-d66d-41d0-9c61-df486e3f53e1
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -362,10 +409,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 39e24e48-b2eb-4428-a22a-71a843940d33
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
                     TransformComponent.Key:
+                        ~Id: 8db8870c-625c-4a0f-8888-462e0a9fec3f
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -376,6 +425,7 @@ Hierarchy:
                 Name: Silver_Metalness1.0 Glossness0.85
                 Components:
                     TransformComponent.Key:
+                        ~Id: c86b1140-2f1f-4a34-bdb0-e35b99cc8e10
                         Position: {X: -7.0, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -391,10 +441,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 70d28ca7-3a34-4ab3-a844-9c1b25218622
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
                     TransformComponent.Key:
+                        ~Id: 4cbda35c-4f65-4d13-9cc4-8af7e37eb92a
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -405,6 +457,7 @@ Hierarchy:
                 Name: Plastic_Metalness0.0 Glossness1.0
                 Components:
                     TransformComponent.Key:
+                        ~Id: b4ca8a8d-21b9-4d60-9ad1-0f6e71320a88
                         Position: {X: -8.5, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -420,10 +473,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 1ccbc6ac-15a8-4aa5-96ea-f09c346af066
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 10066c60-169a-4322-80b6-9e7a97027077:m_b_2
                     TransformComponent.Key:
+                        ~Id: 44b0a5e3-c25d-4571-95d0-9eb920556abe
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -434,10 +489,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 55f07af3-0529-44d8-a6d4-236fc862560a
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
                     TransformComponent.Key:
+                        ~Id: 703685a2-f910-45d8-bba3-8dd090d02ed0
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -448,6 +505,7 @@ Hierarchy:
                 Name: Gold_Metalness1.0 Glossness1.0
                 Components:
                     TransformComponent.Key:
+                        ~Id: af989d0b-9665-4b83-926b-3a0c482a8af7
                         Position: {X: -8.5, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -463,10 +521,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 51d1bbae-c455-4cd6-837f-0d8c1986bd05
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
                     TransformComponent.Key:
+                        ~Id: f348069f-e1fc-4425-8b78-50249b3e4489
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -477,10 +537,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: d8228cf0-8f94-49e7-9e7b-e0fd75dfafc5
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
                     TransformComponent.Key:
+                        ~Id: 8a769679-8cca-4a9d-914f-a0493cbde5b5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -491,10 +553,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 1a29f9d4-dc53-4fed-bd87-7ba040a9346e
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
                     TransformComponent.Key:
+                        ~Id: 37f72658-4e54-4aed-8f2e-2a072a378172
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -505,10 +569,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 6ca1b773-85de-4a23-bfae-e84d113109ef
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
                     TransformComponent.Key:
+                        ~Id: 7f5ff1ec-4abb-473d-b7dd-1011b2534e8e
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -519,6 +585,7 @@ Hierarchy:
                 Name: Fine Wood Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: 58e6defb-5a80-42b0-b256-7da022995394
                         Position: {X: 0.0, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -534,10 +601,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: a3531fdb-7b50-4c6e-9684-993b7027698f
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
                     TransformComponent.Key:
+                        ~Id: 8ac5584d-8804-42ef-aa17-8721efa5b965
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -548,6 +617,7 @@ Hierarchy:
                 Name: Layerd 0.25
                 Components:
                     TransformComponent.Key:
+                        ~Id: 1a8f9ad1-cbaf-4d08-8445-2cda9eeda427
                         Position: {X: 0.0, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -563,6 +633,7 @@ Hierarchy:
                 Name: Layerd 1.0
                 Components:
                     TransformComponent.Key:
+                        ~Id: 1b012628-0589-4c0d-83ab-9b46aab968db
                         Position: {X: 4.5, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -578,10 +649,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 2c0d16ad-742d-453a-b560-ab5ae9b5cfc1
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
                     TransformComponent.Key:
+                        ~Id: e978ca13-9db5-4e01-b91d-3c1c15ec3114
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -592,10 +665,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: c2974e09-cb07-4b6e-b758-11b5bf43cad1
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
                     TransformComponent.Key:
+                        ~Id: 21296b78-f3c6-4670-95ab-bfb52896df84
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -606,12 +681,15 @@ Hierarchy:
                 Name: Camera
                 Components:
                     CameraComponent.Key:
+                        ~Id: 65ed2634-031b-4918-b563-5cc7b0659770
                         Projection: Perspective
                     ScriptComponent.Key:
+                        ~Id: 1d6aebfd-ae90-4972-a437-d23f502a20b5
                         Scripts:
                             - !MaterialSample.CameraScript,MaterialSample.Game
                                 Id: a75c8e7a-25b2-4141-b207-0296e62f9b02
                     TransformComponent.Key:
+                        ~Id: 4cb20cf2-9443-409e-baf4-00fd7296ba90
                         Position: {X: -0.6924338, Y: 1.373112, Z: 6.50999832}
                         Rotation: {W: 0.9878749, X: -0.155251831, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -622,10 +700,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: db6699e5-7326-454f-add6-fdcdba2f3bfd
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
                     TransformComponent.Key:
+                        ~Id: ce5c8a8d-7f92-4006-a146-2771507fd15c
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -636,6 +716,7 @@ Hierarchy:
                 Name: Plastic_Metalness0.0 Glossness0.7
                 Components:
                     TransformComponent.Key:
+                        ~Id: 54cd4c52-3bf0-4492-8c52-a04203e574d5
                         Position: {X: -7.0, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -651,6 +732,7 @@ Hierarchy:
                 Name: Gold_Metalness1.0 Glossness0.6
                 Components:
                     TransformComponent.Key:
+                        ~Id: af4c8fcd-1aae-4d7d-81f0-eaf5fcd20a37
                         Position: {X: -4.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -666,10 +748,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 7851bf01-1726-480b-bc88-74ecbb5f7a3d
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
                     TransformComponent.Key:
+                        ~Id: dbe7faba-95d0-49ec-bacb-0a7d5c1c10e6
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -680,10 +764,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: a3c876de-8d1d-430a-a518-d54e70549e4f
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
                     TransformComponent.Key:
+                        ~Id: 69e5f271-b11c-402b-9f81-96ad17bfd1c3
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -694,10 +780,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 70dbc365-0bf0-4a2e-9e5f-27fa23389fab
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
                     TransformComponent.Key:
+                        ~Id: 19fccef0-0a6c-4c28-81eb-f64aa5ebb6f9
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -708,6 +796,7 @@ Hierarchy:
                 Name: Plastic_Metalness0.0 Glossness0.6
                 Components:
                     TransformComponent.Key:
+                        ~Id: 5b822e4d-ff39-45d7-a921-08d4bf67e3e9
                         Position: {X: -5.5, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -723,6 +812,7 @@ Hierarchy:
                 Name: Brick Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: 620d5a6e-d30a-43e6-b233-452edc3ae44f
                         Position: {X: 0.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -738,10 +828,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 2ca1f55a-71d4-47db-8d30-69c57cd4fe44
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
                     TransformComponent.Key:
+                        ~Id: b692f61b-3d28-4775-a332-79946b89c854
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -752,10 +844,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 4d7b2627-49f9-4269-972d-21691c3c41d6
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
                     TransformComponent.Key:
+                        ~Id: 4b573f70-852f-4a93-afc9-508ec1fe1e9a
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -766,6 +860,7 @@ Hierarchy:
                 Name: Transparency Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: a6b76862-c803-4a64-bb4b-6324176c7c72
                         Position: {X: 4.5, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -781,6 +876,7 @@ Hierarchy:
                 Name: Gold_Metalness1.0 Glossness0.85
                 Components:
                     TransformComponent.Key:
+                        ~Id: 4922f36f-d88b-4de8-bb78-f6b217a8c67f
                         Position: {X: -7.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -796,10 +892,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 17cbeda6-3623-450e-b124-5ae5053bc758
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
                     TransformComponent.Key:
+                        ~Id: 6e609713-6df6-4f1d-a94f-c9049bc0f960
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -810,10 +908,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 4d85514c-fecb-4f94-9f17-7209148ed61a
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
                     TransformComponent.Key:
+                        ~Id: 702a3aaf-f993-4d88-9fb2-baee83db3088
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -824,10 +924,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 3d3a65b5-0ba2-4b37-ba3a-225d8811d239
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
                     TransformComponent.Key:
+                        ~Id: 1cb25edd-a53e-4552-ad81-77daeef23fb3
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -838,6 +940,7 @@ Hierarchy:
                 Name: Wood Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: e1a41958-ee9b-43ec-8da5-840af655ae2e
                         Position: {X: 1.5, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -853,10 +956,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 669501f9-276d-447b-86bd-d1ebcb9f217d
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
                     TransformComponent.Key:
+                        ~Id: 3589726b-2e30-4157-a55c-a99cfcc3bd26
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -867,10 +972,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 052c4ec5-e7f7-416a-8c2a-6922ca0b21a1
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
                     TransformComponent.Key:
+                        ~Id: bd160140-ca2c-46fb-97e1-81caeb138828
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -881,13 +988,18 @@ Hierarchy:
                 Name: skybox
                 Components:
                     LightComponent.Key:
-                        Type: !LightSkybox {}
+                        ~Id: c08137ec-eee5-4287-878b-2c7301147796
+                        Type: !LightSkybox
+                            ~Id: c19b0a68-9c76-4836-9743-8550e38c7c11
                         Intensity: 16.0
                     SkyboxComponent.Key:
+                        ~Id: bd1c6dc8-dabe-46ff-84c0-b24243c10875
                         Skybox: d6ac5a30-abd7-4043-b09b-098c178504b1:Skybox
                     BackgroundComponent.Key:
+                        ~Id: 85a6b1f7-f8c7-4321-ad3e-7cd2885b0a51
                         Texture: 355b7e54-fa45-44fc-818d-9fc46b8c0fbb:XenkoBackground
                     TransformComponent.Key:
+                        ~Id: 44d266a1-25e7-457f-81cb-86c4281f404b
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -898,10 +1010,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: c0030f30-bf84-4051-9b3b-7d47becb86f0
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
                     TransformComponent.Key:
+                        ~Id: e4eedf64-3727-470b-9e76-f86405c2c1b5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -912,6 +1026,7 @@ Hierarchy:
                 Name: Block Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: d73f2243-517a-41ba-a5ba-98635f3d48f8
                         Position: {X: -1.5, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -927,10 +1042,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 6c527113-dc48-4746-8b5c-a5e837bbe212
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
                     TransformComponent.Key:
+                        ~Id: c4cbf328-346a-4baf-b041-911f5e86000f
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -941,6 +1058,7 @@ Hierarchy:
                 Name: Layerd 0.75
                 Components:
                     TransformComponent.Key:
+                        ~Id: 638ae3b0-b25c-464d-b1a2-3063da81dcbf
                         Position: {X: 3.0, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -956,10 +1074,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: ac1876bb-c09c-47a1-b00d-6c3d892f7b90
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
                     TransformComponent.Key:
+                        ~Id: 1f7e87f9-495f-4ded-a565-1bd9a92ce237
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -970,10 +1090,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 25eafe68-13bb-4215-b85e-e93aa8b07c79
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
                     TransformComponent.Key:
+                        ~Id: 268ce803-2700-4bb8-9a0a-7b681139ef37
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -984,10 +1106,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 29533aee-7a07-4958-b298-2c84ec842951
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
                     TransformComponent.Key:
+                        ~Id: cc942d27-3be6-45d5-bd7d-65c5781a75f1
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -998,18 +1122,27 @@ Hierarchy:
                 Name: Directional light
                 Components:
                     LightComponent.Key:
+                        ~Id: 34856d9e-b1b8-4f28-90dd-d641c960bc6c
                         Type: !LightDirectional
+                            ~Id: 9bab4477-0cd5-428f-8e99-4e9935631138
                             Color: !ColorRgbProvider
+                                ~Id: f2f76ec9-0fda-419a-8760-151376259de4
                                 Value: {R: 0.9, G: 0.9, B: 0.9}
                             Shadow:
+                                ~Id: 13aac5a0-31ce-4c75-b90b-25fd6d74d9e4
                                 Enabled: true
-                                Filter: !LightShadowMapFilterTypePcf {}
+                                Filter: !LightShadowMapFilterTypePcf
+                                    ~Id: 2ece0726-42ff-4137-b921-02749d84ff2c
                                 Size: Large
-                                DepthRange: {}
-                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                                BiasParameters: {}
+                                DepthRange:
+                                    ~Id: fb0b6dfc-f76d-4429-8ad2-3a64fb805ed6
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic
+                                    ~Id: a7eff2ed-5429-4acd-b8a1-ee57d418d288
+                                BiasParameters:
+                                    ~Id: d24a478d-8da3-4c0c-9fb2-855d552cdd92
                         Intensity: 3.0
                     TransformComponent.Key:
+                        ~Id: 14098e6e-0bf2-4f57-b165-261c92cddbf1
                         Position: {X: 0.0, Y: 1.5, Z: 0.0}
                         Rotation: {W: 0.8855735, X: -0.259767056, Y: -0.369503438, Z: -0.108387187}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1020,6 +1153,7 @@ Hierarchy:
                 Name: Plastic_Metalness0.0 Glossness0.5
                 Components:
                     TransformComponent.Key:
+                        ~Id: fdfeb613-8ae4-4668-8113-dfc2c67053e9
                         Position: {X: -4.0, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1035,10 +1169,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: af086037-375a-4f5f-abbb-245cda544d65
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
                     TransformComponent.Key:
+                        ~Id: f6ab2085-a380-4c58-b75c-3fde380ceb00
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1049,6 +1185,7 @@ Hierarchy:
                 Name: Rusty Metal Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: c5907db2-0b8f-4db1-a88a-f471c0dfc640
                         Position: {X: 4.5, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1064,10 +1201,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 0106a9ea-e868-4a1f-b407-9bd20e637169
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
                     TransformComponent.Key:
+                        ~Id: 3ee31ac5-5e39-4c2a-a5cd-84b25ea80421
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1078,10 +1217,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 011117b3-51b4-4d91-a020-f0ef4cfc3dd7
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
                     TransformComponent.Key:
+                        ~Id: d668e9ba-48af-48ea-886a-8d5ca7ca18e3
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1092,6 +1233,7 @@ Hierarchy:
                 Name: Silver_Metalness1.0 Glossness0.7
                 Components:
                     TransformComponent.Key:
+                        ~Id: 72bd2e81-76dc-426f-b2e5-abed7a3eba90
                         Position: {X: -5.5, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1107,6 +1249,7 @@ Hierarchy:
                 Name: Marble Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: dd238fb1-9a88-4fac-9698-d225d01a7ab5
                         Position: {X: 3.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1122,10 +1265,12 @@ Hierarchy:
                 Name: ground
                 Components:
                     ModelComponent.Key:
+                        ~Id: ccec203d-3e50-42d7-ad4c-c6a662d785f3
                         Model: 20192b41-7766-4193-9f6b-c3b7d418d138:SampleGround
                         Materials:
                             - null
                     TransformComponent.Key:
+                        ~Id: 71de773d-7bbc-4500-9f94-4ebe591ba18c
                         Position: {X: -1.5, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1136,10 +1281,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: dad8e031-2862-4160-8043-c8f40b295901
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
                     TransformComponent.Key:
+                        ~Id: 9477f653-9002-4a71-ae69-2925cfea64f9
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1150,10 +1297,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 78f32c4b-f374-479a-8184-99c7fcc88ef3
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
                     TransformComponent.Key:
+                        ~Id: bf0591a6-6f04-4b31-a82a-5fef22be2e1b
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1164,10 +1313,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: b91c151d-578b-4e93-be02-a75bbe7c96c3
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
                     TransformComponent.Key:
+                        ~Id: 6cd099c8-8826-4fa5-850e-50a448379a99
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1178,10 +1329,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: dc5a7ab0-7bf8-46d8-88ed-deb3d271292b
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - 10066c60-169a-4322-80b6-9e7a97027077:m_b_2
                     TransformComponent.Key:
+                        ~Id: e43907ab-722c-4231-bcb6-5dcdb444b830
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1192,6 +1345,7 @@ Hierarchy:
                 Name: Old Wood Sample
                 Components:
                     TransformComponent.Key:
+                        ~Id: dd51a260-23fe-44e3-bef9-f1d93c406e10
                         Position: {X: -1.5, Y: 0.0, Z: -0.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1207,10 +1361,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: a0be35b4-9fcf-4552-9cb6-8ab0abf2dff2
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
                     TransformComponent.Key:
+                        ~Id: 6edae3f3-81bd-4796-ab1e-a79647afb633
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1221,10 +1377,12 @@ Hierarchy:
                 Name: SampleBox Model
                 Components:
                     ModelComponent.Key:
+                        ~Id: 8abff520-9fb1-4e67-afe3-05fafe90c6fb
                         Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
                             - a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
                     TransformComponent.Key:
+                        ~Id: ab838e01-c59d-4449-a41c-7e07f58f1a44
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1235,6 +1393,7 @@ Hierarchy:
                 Name: Layerd 0.0
                 Components:
                     TransformComponent.Key:
+                        ~Id: 473cd515-c57c-4b20-b8d4-5735dce5a176
                         Position: {X: -1.5, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1250,6 +1409,7 @@ Hierarchy:
                 Name: Layerd 0.5
                 Components:
                     TransformComponent.Key:
+                        ~Id: 622aff68-7f87-4f32-8c35-5cf37d184232
                         Position: {X: 1.5, Y: 0.0, Z: -4.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1265,10 +1425,12 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: 88f00e38-dca7-4c5b-859d-41fcc68cffb1
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
                     TransformComponent.Key:
+                        ~Id: 3225857b-2b36-4f82-b55e-bf7e481a0b66
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -1279,103 +1441,141 @@ Hierarchy:
                 Name: ProceduralModel
                 Components:
                     ModelComponent.Key:
+                        ~Id: ddb138b4-e0c7-4024-8171-794d196ce0d0
                         Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
                             - 22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
                     TransformComponent.Key:
+                        ~Id: 3d93083e-c6ee-413c-b45d-26beb31885b3
                         Position: {X: 0.0, Y: 0.5, Z: 1.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
             Design: {}
 SceneSettings:
+    ~Id: d31d1016-50fc-4ff8-9b2f-121a0d00cdbe
     GraphicsCompositor: !SceneGraphicsCompositorLayers
+        ~Id: a69daaab-6514-4794-bf92-1bad51dc72e5
         Cameras:
-            -   Name: null
+            -   ~Id: c525ebb8-4004-487e-8bdc-9d3af9cd7903
+                Name: null
                 Camera:
                     Entity: {Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e}
                     Component: CameraComponent.Key
         Layers:
-            -   Name: SceneGraphicsLayer
+            -   ~Id: 2978b6b3-7757-48f5-a2cd-7c912a2e7cca
+                Name: SceneGraphicsLayer
                 Output: !LocalRenderFrameProvider
                     Descriptor:
                         Format: HDR
                 Renderers:
                     - !ClearRenderFrameRenderer
+                        ~Id: a683905e-70d5-4d7a-bddd-8794a3eddcb3
                         Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
                         Output: !CurrentRenderFrameProvider {}
                     - !SceneCameraRenderer
-                        Mode: !CameraRendererModeForward {}
+                        ~Id: 1028a995-e71a-43a8-bc58-8db190ce9f34
+                        Mode: !CameraRendererModeForward
+                            ~Id: c4868f99-9ef0-463f-babc-00ad61c3a1f4
                         Camera:
                             Index: 0
                         Output: !CurrentRenderFrameProvider {}
                         Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
         Master:
+            ~Id: 66708f54-01aa-46eb-bca6-327b8718c1ca
             Name: SceneGraphicsLayer
             Output: !MasterRenderFrameProvider {}
             Renderers:
                 - !SceneEffectRenderer
+                    ~Id: b6b3b946-cc21-46ce-b434-838adf827553
                     Input: !ImageEffectRendererInput.LayerInput {}
                     Effect: !PostProcessingEffects
+                        ~Id: c362b2fb-e48b-4e2c-bcfd-353abba90e06
                         Camera:
                             Index: 0
                         DepthOfField:
+                            ~Id: 0e785956-91e4-4d0e-8c77-a915f45b77b7
                             Enabled: false
                             DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
                         BrightFilter:
+                            ~Id: 608d48bc-3bac-4bc1-b1f9-ab81dd41226c
                             Color: {R: 1.0, G: 1.0, B: 1.0}
                         Bloom:
+                            ~Id: 35195599-cb20-4e72-b150-de194be7d7e8
                             SigmaRatio: 4.0
                             Distortion: {X: 1.0, Y: 1.0}
                             Afterimage:
+                                ~Id: d4a5b0b4-c394-464b-a584-014236fc57b4
                                 Enabled: false
                         LightStreak:
+                            ~Id: 3ac718ed-636e-424d-a5c2-d4eee46f768a
                             Enabled: false
                             Attenuation: 0.7
-                        LensFlare: {}
+                        LensFlare:
+                            ~Id: 0ae48e96-70cb-46c4-90a2-24514bd59d07
                         ColorTransforms:
+                            ~Id: 8c64cb30-b9e3-4b14-a388-93aa866e8e2f
                             Transforms:
                                 - !ToneMap
-                                    Operator: !ToneMapU2FilmicOperator {}
+                                    ~Id: ceaadb01-d85e-45ea-bf02-30de440dc192
+                                    Operator: !ToneMapU2FilmicOperator
+                                        ~Id: 7942920c-23f9-46fd-b906-b0defa7df65a
                                 - !FilmGrain
+                                    ~Id: 71f28cd7-a888-457a-9ae2-36a1f53e0f37
                                     Amount: 0.1
                                     GrainSize: 2.0
-                        Antialiasing: !FXAAEffect {}
+                        Antialiasing: !FXAAEffect
+                            ~Id: e942e700-157e-44eb-9c9e-d7e9caabe6e8
                     Output: !CurrentRenderFrameProvider {}
     EditorSettings:
+        ~Id: cb8d48e7-f18d-40bf-ae28-99c2fe804835
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
         SceneUnit: 1.0
         Mode: !SceneEditorGraphicsModeHDRSettings
-            BackgroundColor: {R: 0.480495, G: 0.480495, B: 0.480495}
+            ~Id: f307cc54-e58a-4c00-8262-e44022b391ea
+            BackgroundColor: {R: 0.470588237, G: 0.470588237, B: 0.470588237}
             PostProcessingEffects:
+                ~Id: 2794b6ad-09da-4f87-a93c-27c4b3b86856
                 Camera:
                     Index: 0
                 DepthOfField:
+                    ~Id: 7f832281-9776-45db-a877-361e50db1996
                     Enabled: false
                     DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
                 BrightFilter:
+                    ~Id: 19014290-0631-461d-a7da-257d282d4879
                     Enabled: false
                     Color: {R: 1.0, G: 1.0, B: 1.0}
                 Bloom:
+                    ~Id: 1e052e91-3f87-47f3-b501-2ec857931cec
                     SigmaRatio: 4.0
                     Distortion: {X: 1.0, Y: 1.0}
                     Afterimage:
+                        ~Id: 3b4226bc-2adb-426e-9f9b-6dbbc4292e58
                         Enabled: false
                 LightStreak:
+                    ~Id: dc619e02-4542-4e66-a724-31880bf01681
                     Enabled: false
                     StreakCount: 6
                     Attenuation: 0.64
                     Phase: 63.7
                 LensFlare:
+                    ~Id: 38a72940-3089-4737-a0fe-363e5d281667
                     Enabled: false
                 ColorTransforms:
+                    ~Id: 042d7e22-ec82-439b-9221-b1f5bf5815d5
                     Transforms:
                         - !ToneMap
-                            Operator: !ToneMapU2FilmicOperator {}
+                            ~Id: 396116c4-2365-4f5e-a7ac-5ce339fa446a
+                            Operator: !ToneMapU2FilmicOperator
+                                ~Id: 7c7cb54d-d43c-41f6-a48d-a950521ee727
                         - !FilmGrain
+                            ~Id: 853b5cc8-0727-47bd-9b4c-fd786e643ec0
                             Amount: 0.101613
                             GrainSize: 2.087096
                         - !Vignetting
+                            ~Id: bb698e97-27c7-4ae8-bb87-7408bcbf4b6e
                             Enabled: false
                             Color: {R: 0.0, G: 0.0, B: 0.0}
-                Antialiasing: !FXAAEffect {}
+                Antialiasing: !FXAAEffect
+                    ~Id: aac82bbf-9080-4b53-bb25-10f68be3cafb

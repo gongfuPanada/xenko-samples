@@ -6,6 +6,7 @@ Source: ../../RawAssets/character/Sourceimages/mc_00.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: d125b97b-35ad-4a98-868b-c0dc9e2eb272
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

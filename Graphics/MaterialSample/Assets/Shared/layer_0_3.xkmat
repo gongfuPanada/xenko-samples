@@ -14,18 +14,23 @@ Attributes:
         MetalnessMap: !ComputeFloat
             Value: 1.0
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
-        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
-        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
+            ~Id: 08599367-72b4-4582-a533-9f0060e2f72d
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX
+            ~Id: 23d14a0c-0de8-45bb-94a7-95b7daf382a3
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX
+            ~Id: 67a14fb8-468e-48ff-a523-363cdc36c0ed
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers:
-    -   Material: 7077ac99-7723-4886-bbba-98cc56ef43bb:Material
+    -   ~Id: edb75237-feea-42f1-9620-d1ce55bce9d3
+        Material: 7077ac99-7723-4886-bbba-98cc56ef43bb:Material
         BlendMap: !ComputeFloat
             Value: 0.82
         Overrides:
             UVScale: {X: 1.0, Y: 1.0}
 ~Base:
+    ~Id: cc5e0d83-4b15-441d-a3bf-5c4f82974dab
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
@@ -42,9 +47,12 @@ Layers:
                 Intensity: !ComputeFloat
                     Value: 1.0
             SpecularModel: !MaterialSpecularMicrofacetModelFeature
-                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
-                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
+                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
+                    ~Id: 2904cb7a-2870-4151-9fc9-f06609b2cab0
+                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit
+                    ~Id: da2087ea-d2fc-46e5-b11b-73f84511e3b9
+                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong
+                    ~Id: c67f666b-66d1-4528-ad68-c537b15b7b95
             Overrides:
                 UVScale: {X: 1.0, Y: 1.0}
         Layers: []

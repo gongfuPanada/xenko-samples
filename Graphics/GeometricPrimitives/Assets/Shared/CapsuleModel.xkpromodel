@@ -8,4 +8,5 @@ Type: !CapsuleProceduralModel
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
+        ~Id: 8f6b7179-0540-4103-8640-3f08838290c9
         Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

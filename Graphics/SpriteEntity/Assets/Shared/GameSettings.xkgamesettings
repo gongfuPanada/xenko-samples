@@ -1,9 +1,9 @@
 !GameSettingsAsset
 Id: 0c2b2f92-9733-4277-94aa-122d07ea4d2f
 Tags: []
-BackBufferHeight: 720
-BackBufferWidth: 1280
-DefaultGraphicsProfile: Level_9_1
 DefaultScene: 20ae0cfb-f718-46e8-802c-718c98d77137:SpriteEntityScene
+BackBufferWidth: 1280
+BackBufferHeight: 720
+DefaultGraphicsProfile: Level_9_1
 DisplayOrientation: LandscapeRight
 TextureQuality: Fast

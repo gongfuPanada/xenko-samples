@@ -8,6 +8,7 @@ Skeleton: bfe057df-2fd1-402a-97bc-bd16edee241a:character_00 Skeleton
 RootMotion: false
 PreviewModel: 920f4445-c00d-474f-b8c0-33b385d58b8f:character_00
 ~Base:
+    ~Id: 928e58a0-40c3-4107-88dd-e3f793787eec
     Location: --import--
     Asset: !Animation
         Id: 00000000-0000-0000-0000-000000000000

@@ -3,6 +3,7 @@ Id: df7aa22c-6efc-4706-8c07-03a643513525
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
+    ~Id: 3bc38f17-36ec-4f1c-9dce-6989bae259f5
     RootEntities:
         - 6920534e-0a89-47c5-aeb1-a8e5f6ea9d46
         - a9fa980a-595d-4e48-9e6c-8373330be0a8
@@ -12,8 +13,10 @@ Hierarchy:
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
+                        ~Id: 3ec2f6e4-6cca-4379-9271-fd1567483dff
                         Texture: 0d3b74fb-92c4-4c11-bfc5-6a841c4e6df4:XenkoBackground
                     TransformComponent.Key:
+                        ~Id: 4c03914e-c0f7-4be6-bcb1-ccd00c2d08fa
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -24,6 +27,7 @@ Hierarchy:
                 Name: FontScript
                 Components:
                     ScriptComponent.Key:
+                        ~Id: 348827d1-888f-4639-8537-952a420d9e5a
                         Scripts:
                             - !SpriteFonts.FontScript,SpriteFonts.Game
                                 Id: 58f1d4b0-1c55-47b7-bb03-3d811d53d14c
@@ -38,32 +42,42 @@ Hierarchy:
                                 StaticFont: b6582bd2-276e-4b0e-a0f1-8682e271ab59:StaticFont
                                 TimesNewRoman: 022190f7-e5e1-4709-97c2-c02470ebb312:TimesNewRoman
                     TransformComponent.Key:
+                        ~Id: f2056e0b-783a-48f9-80b7-b5d1aebaf3ec
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
             Design: {}
 SceneSettings:
+    ~Id: 6f3f6cee-4381-4c17-be7f-12c56a2a2b55
     GraphicsCompositor: !SceneGraphicsCompositorLayers
+        ~Id: 5d785e75-3c23-4fae-821c-57b45ebfac3c
         Cameras:
-            -   Name: null
+            -   ~Id: a9deddc2-5091-4ba0-bb9e-ff150de07285
+                Name: null
                 Camera: null
         Layers: []
         Master:
+            ~Id: b9cb8b3e-1e5d-49f8-a709-43af6dc12abc
             Name: SceneGraphicsLayer
             Output: !MasterRenderFrameProvider {}
             Renderers:
                 - !ClearRenderFrameRenderer
+                    ~Id: 533f0f97-7c8b-48af-b05f-9d57c091ee1b
                     Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
                     Output: !CurrentRenderFrameProvider {}
                 - !SceneCameraRenderer
-                    Mode: !CameraRendererModeForward {}
+                    ~Id: 7eb8eff7-4dac-44f9-824d-9728547aea72
+                    Mode: !CameraRendererModeForward
+                        ~Id: 0629d0f4-9eeb-4763-ba3e-42106b9508fb
                     Camera:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
     EditorSettings:
+        ~Id: 368c55fc-a8c1-4d7f-a6d8-ac937a2a8340
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
         SceneUnit: 1.0
         Mode: !SceneEditorGraphicsModeLDRSettings
+            ~Id: f4409982-6f58-4f08-b713-ab207a0e719e
             BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

@@ -7,6 +7,7 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 Alpha: Explicit
 ~Base:
+    ~Id: b1fdf752-9468-496b-b6f8-75e110b309ea
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
