@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpyJetTest", "Games\JumpyJetTest\JumpyJetTest.csproj", "{92F6B41C-B1D6-41A4-A65F-8E5C5BD8F04D}"
 EndProject
@@ -64,6 +64,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{1AE5D19C-DFC3-46CB-AADD-E0814B208A3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMenuTest", "UI\GameMenuTest\GameMenuTest.csproj", "{D92F4000-A64D-45C9-8508-2B0237EAACD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAnimationTest", "Others\CustomAnimationTest\CustomAnimationTest.csproj", "{A0AED9E9-B795-4143-834C-2F9D83AABEE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{D92F4000-A64D-45C9-8508-2B0237EAACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D92F4000-A64D-45C9-8508-2B0237EAACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D92F4000-A64D-45C9-8508-2B0237EAACD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AED9E9-B795-4143-834C-2F9D83AABEE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AED9E9-B795-4143-834C-2F9D83AABEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AED9E9-B795-4143-834C-2F9D83AABEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AED9E9-B795-4143-834C-2F9D83AABEE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -201,5 +207,6 @@ Global
 		{A2BD1582-DF38-451F-B979-0CB805C4FD43} = {6B8A91F9-4830-4084-929B-3D421C3D1C21}
 		{737E033D-BC58-4250-8B8E-306094A5ECD2} = {6B8A91F9-4830-4084-929B-3D421C3D1C21}
 		{D92F4000-A64D-45C9-8508-2B0237EAACD6} = {1AE5D19C-DFC3-46CB-AADD-E0814B208A3A}
+		{A0AED9E9-B795-4143-834C-2F9D83AABEE5} = {D70CE082-1A3D-46CE-8125-77082ACEE27A}
 	EndGlobalSection
 EndGlobal
