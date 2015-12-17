@@ -17,10 +17,12 @@ NodeNames:
     - object2
     - shadow
 ~Base:
+    ~Id: 9f6c01be-ef2b-4dc8-a05a-0c58fa268dab
     Location: --import--
     Asset: !SpriteStudioSheetAsset
         Id: 00000000-0000-0000-0000-000000000000
         Tags: []
+        Source: 
         ImporterId: f0b76549-ed9c-4e74-8522-f44ec8e90806
         NodeNames:
             - root

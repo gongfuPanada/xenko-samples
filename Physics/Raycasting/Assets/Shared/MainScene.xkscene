@@ -3,6 +3,7 @@ Id: 86fed268-baa8-4929-9eba-4d14cf3a0e68
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
+    ~Id: c91144cf-1866-4c08-a9d0-88b0ec28a0b9
     RootEntities:
         - d296aa0e-cd27-4f65-936f-dfba810e1ef2
         - ef7d2057-b70a-4f12-af97-1ac2d8736797
@@ -18,13 +19,16 @@ Hierarchy:
                 Name: UI
                 Components:
                     UIComponent.Key:
+                        ~Id: ee506ad3-1840-42d1-a282-00ec4aca40b0
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                     ScriptComponent.Key:
+                        ~Id: 0cecba6e-666a-475d-a627-53689a61dfe9
                         Scripts:
                             - !Raycasting.GuiScript,Raycasting.Game
-                                Font: 1aae175d-f34a-472e-b951-65e34f93c8e3:Font
                                 Id: c780a5dd-7fbf-44b0-99b7-8a048d3b2557
+                                Font: 1aae175d-f34a-472e-b951-65e34f93c8e3:Font
                     TransformComponent.Key:
+                        ~Id: cfb0f8d4-b574-4219-b4b6-4e95b60c9470
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -35,8 +39,10 @@ Hierarchy:
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
+                        ~Id: b3c27e3e-f14c-4851-95dc-a7b08a65791a
                         Texture: d2ae7171-f414-4455-863c-cb002ee3b2bf:XenkoBackground
                     TransformComponent.Key:
+                        ~Id: f9f7f297-de5f-4a13-ad83-08ba31063402
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -47,12 +53,15 @@ Hierarchy:
                 Name: cube3
                 Components:
                     ModelComponent.Key:
+                        ~Id: 1357fa53-0ea6-4769-8687-acfc20e94862
                         Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                         Materials:
                             - null
                     PhysicsComponent.Key:
+                        ~Id: 6698dd67-7012-4c6b-806a-e0bda370baae
                         Elements:
                             - !RigidbodyElement
+                                ~Id: d966fc6b-5b93-45e0-afd3-46e9ffd64b5e
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
@@ -71,12 +80,15 @@ Hierarchy:
                                 NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: 4a359532-2669-4ff6-9c06-2fec379b8dda
                                         Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
                     ScriptComponent.Key:
+                        ~Id: d4930d23-7597-4308-8d58-1bd314da2efd
                         Scripts:
                             - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
                                 Id: e4041541-6dc1-40e6-a1c1-d80fc78f88ef
                     TransformComponent.Key:
+                        ~Id: 93cde709-8aed-4cc1-bf6a-a4abf0dff7fc
                         Position: {X: -0.75, Y: 0.0, Z: -17.77}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -87,8 +99,10 @@ Hierarchy:
                 Name: Ground
                 Components:
                     PhysicsComponent.Key:
+                        ~Id: bd9212d9-d2ba-40db-afec-1d41f3323207
                         Elements:
                             - !StaticColliderElement
+                                ~Id: 121c801c-358a-49b0-bd60-2a5642d4d78a
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
@@ -100,8 +114,10 @@ Hierarchy:
                                 IsTrigger: false
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: 2eb9a1bd-11d4-4567-9987-b331ff903c26
                                         Shape: 1a7f15af-ac01-4464-adfe-7689bd50966e:ground_cs
                     TransformComponent.Key:
+                        ~Id: 678384c1-e7ce-4a72-940a-8f65acf24286
                         Position: {X: 0.0, Y: -0.5, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -112,12 +128,15 @@ Hierarchy:
                 Name: cube2
                 Components:
                     ModelComponent.Key:
+                        ~Id: 619893f8-b3c2-449c-94f0-61673c9dfdcd
                         Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                         Materials:
                             - null
                     PhysicsComponent.Key:
+                        ~Id: 29aa175b-b964-4899-a56f-8d491957ee32
                         Elements:
                             - !RigidbodyElement
+                                ~Id: 88c5c6b8-61b5-4401-adb1-357b024c4015
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
@@ -136,12 +155,15 @@ Hierarchy:
                                 NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: 942f107d-2b37-48b1-b144-2fd78041aa91
                                         Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
                     ScriptComponent.Key:
+                        ~Id: a772ded4-76ff-4d6c-a934-ee561f775cf8
                         Scripts:
                             - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
                                 Id: 58aa8440-db94-4437-b91e-aee2c10b59d9
                     TransformComponent.Key:
+                        ~Id: 2e3ef041-2f80-4db2-95a7-74c7f12119bd
                         Position: {X: -2.38, Y: 0.0, Z: -7.59}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -152,14 +174,18 @@ Hierarchy:
                 Name: Camera
                 Components:
                     CameraComponent.Key:
+                        ~Id: 7b8dae54-4ed8-4d4f-b279-6f323fdf0b14
                         Projection: Perspective
                     ScriptComponent.Key:
+                        ~Id: 7546de76-939e-43ae-bc8d-7f29435370b2
                         Scripts:
                             - !Raycasting.RaycastingScript,Raycasting.Game
                                 Id: 8341119c-188a-44c1-bf8c-4361e2b0e4fb
                     PhysicsComponent.Key:
+                        ~Id: 7215b7df-fe58-4d59-953c-41ffd045b68b
                         Elements: []
                     TransformComponent.Key:
+                        ~Id: e0a24b5d-08a8-48c9-8254-0907f9763dcd
                         Position: {X: 1.0, Y: 3.53, Z: 1.14}
                         Rotation: {W: 0.9921829, X: -0.112758614, Y: 0.05297385, Z: 0.00723811332}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -170,12 +196,15 @@ Hierarchy:
                 Name: cube1
                 Components:
                     ModelComponent.Key:
+                        ~Id: 505f1809-b1cf-488f-a2e4-7b1732b4a16d
                         Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                         Materials:
                             - null
                     PhysicsComponent.Key:
+                        ~Id: f926454e-2ed5-4870-a33e-4cb24b3e9868
                         Elements:
                             - !RigidbodyElement
+                                ~Id: 95d515b3-8831-4460-9e32-a3693cc968e8
                                 CollisionGroup: 0
                                 CanCollideWith: 0
                                 ProcessCollisions: true
@@ -194,12 +223,15 @@ Hierarchy:
                                 NodeName: null
                                 ColliderShapes:
                                     - !ColliderShapeAssetDesc
+                                        ~Id: 04c35708-8bf5-4ead-9c7e-b28a7e50890a
                                         Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
                     ScriptComponent.Key:
+                        ~Id: b0828edd-e8f2-4f59-bc99-a4cf80f89845
                         Scripts:
                             - !Raycasting.ImpulseOnSpaceScript,Raycasting.Game
                                 Id: 3975b5f7-f065-4cd3-87b3-444762288d31
                     TransformComponent.Key:
+                        ~Id: c3393167-1348-480f-b6b8-c6eeae7eef44
                         Position: {X: 3.0, Y: 0.015, Z: -10.19}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -210,39 +242,52 @@ Hierarchy:
                 Name: Ambient light
                 Components:
                     LightComponent.Key:
+                        ~Id: dc8b6c15-cfd7-47e2-a526-809137e092cd
                         Type: !LightAmbient
+                            ~Id: 0012f369-a795-4199-b23f-8e3dbab207e2
                             Color: !ColorRgbProvider
+                                ~Id: 2af9437c-4585-4ad6-8611-0e9cdad5f445
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.7
                     TransformComponent.Key:
+                        ~Id: eda1dfcc-a86f-439b-99dd-f2bccd3b4c87
                         Position: {X: 0.0, Y: 200.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
             Design: {}
 SceneSettings:
+    ~Id: 309ba45b-9be7-4963-bafd-4dcc6de36659
     GraphicsCompositor: !SceneGraphicsCompositorLayers
+        ~Id: eedb73a6-f478-491b-9da3-dec4e330c63f
         Cameras:
-            -   Name: null
+            -   ~Id: d9658718-18ab-4d94-8413-81bceb866072
+                Name: null
                 Camera:
                     Entity: {Id: d296aa0e-cd27-4f65-936f-dfba810e1ef2}
                     Component: CameraComponent.Key
         Layers: []
         Master:
+            ~Id: a25faba5-dbb7-4017-9d7b-5fe8e3a4fb8b
             Name: SceneGraphicsLayer
             Output: !MasterRenderFrameProvider {}
             Renderers:
                 - !ClearRenderFrameRenderer
+                    ~Id: be712fd2-fb12-43bc-9187-0df7ec521122
                     Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
                     Output: !CurrentRenderFrameProvider {}
                 - !SceneCameraRenderer
-                    Mode: !CameraRendererModeForward {}
+                    ~Id: c6ee6f6d-a794-4eab-b267-e97bd04541ab
+                    Mode: !CameraRendererModeForward
+                        ~Id: ea4b4d0a-d65d-4060-ad4d-f5d7a9a78d52
                     Camera:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
     EditorSettings:
+        ~Id: 6f33a281-eda6-4440-9077-522606d5a04e
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
         SceneUnit: 1.0
         Mode: !SceneEditorGraphicsModeLDRSettings
+            ~Id: 5420f6d5-fb70-40ac-b4e9-4f61c96be900
             BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

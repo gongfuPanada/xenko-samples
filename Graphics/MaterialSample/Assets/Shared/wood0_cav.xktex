@@ -6,6 +6,7 @@ Source: ../../RawAssets/wood0_cav.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: bece8f91-24a8-42ce-9441-a5673e7bf1be
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

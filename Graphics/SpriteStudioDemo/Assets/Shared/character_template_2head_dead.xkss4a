@@ -6,6 +6,7 @@ SourceHash: 7bbed142c2c2aca394cccf062b9891b2
 RepeatMode: PlayOnce
 AnimationName: dead
 ~Base:
+    ~Id: c998f01b-9331-44bc-b9bb-5dd27ae5106b
     Location: --import--
     Asset: !SpriteStudioAnimationAsset
         Id: 00000000-0000-0000-0000-000000000000

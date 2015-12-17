@@ -5,6 +5,7 @@ Tags: []
 Source: ../../RawAssets/TrainingFloor.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
+    ~Id: ba1916db-6f06-416e-baf9-a8e4adc20c08
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

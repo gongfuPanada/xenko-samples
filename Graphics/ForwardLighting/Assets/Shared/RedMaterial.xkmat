@@ -20,13 +20,17 @@ Attributes:
         Intensity: !ComputeFloat
             Value: 0.3
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
-        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
-        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
+            ~Id: 9467139f-b6be-4960-a88e-69e8baa5495a
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX
+            ~Id: 9c0d22e6-3f95-4c7c-ac3c-6305a15b26f4
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX
+            ~Id: 6683a4dd-77c2-4170-9a04-148d786f032b
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
 ~Base:
+    ~Id: 4ad5a39f-dea8-4fb6-99b8-27d268c995d1
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
@@ -47,9 +51,12 @@ Layers: []
                 Intensity: !ComputeFloat
                     Value: 1.0
             SpecularModel: !MaterialSpecularMicrofacetModelFeature
-                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
-                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit {}
-                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong {}
+                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
+                    ~Id: f220aa0f-51f7-48cf-8cab-220a540e6b37
+                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit
+                    ~Id: ec9eaaa9-4b5b-4942-8fa4-1eecd800a9d9
+                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong
+                    ~Id: f8ac9edb-dcad-4154-9d07-e4c4ca183538
             Overrides:
                 UVScale: {X: 1.0, Y: 1.0}
         Layers: []

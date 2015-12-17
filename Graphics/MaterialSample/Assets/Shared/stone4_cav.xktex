@@ -6,6 +6,7 @@ Source: ../../RawAssets/stone4_cav.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: 1a5f8956-4976-45d3-af88-4d719433be80
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

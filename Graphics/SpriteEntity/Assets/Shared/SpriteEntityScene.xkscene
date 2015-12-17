@@ -3,6 +3,7 @@ Id: 20ae0cfb-f718-46e8-802c-718c98d77137
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Hierarchy:
+    ~Id: ad2e0be0-9387-4895-8b8c-4375ba46aeca
     RootEntities:
         - 0b04edaf-f330-4ae1-9d93-517d967fbe95
         - 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
@@ -18,9 +19,11 @@ Hierarchy:
                 Name: Camera
                 Components:
                     CameraComponent.Key:
+                        ~Id: 41c28522-e9fb-40df-9389-15298dc0ce3c
                         Projection: Orthographic
                         NearClipPlane: 1.0
                     TransformComponent.Key:
+                        ~Id: 1199c4b7-e01f-4ead-b26f-fefa5b4c61aa
                         Position: {X: 0.0, Y: 2.0, Z: 2.0}
                         Rotation: {W: 0.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -31,8 +34,10 @@ Hierarchy:
                 Name: Background
                 Components:
                     BackgroundComponent.Key:
+                        ~Id: 7c473d65-9c34-4106-bb17-6af291f12cbb
                         Texture: b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
                     TransformComponent.Key:
+                        ~Id: ff5425f6-a6e3-4a13-b4de-45f5cf7935f4
                         Position: {X: 1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -43,11 +48,14 @@ Hierarchy:
                 Name: Enemy02
                 Components:
                     SpriteComponent.Key:
+                        ~Id: aecef97e-687d-404f-b4c7-234c6b6255f0
                         SpriteProvider: !SpriteFromSheet
+                            ~Id: 885c63c1-04a1-4b82-bdc7-67166b89452d
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
+                        ~Id: db2de92d-8d8d-4834-9703-3e8e2bfde710
                         Scripts:
                             - !SpriteEntity.EnemyScript,SpriteEntity.Game
                                 Id: a85ef428-a69d-4da3-aacc-42a3f9ac3460
@@ -56,6 +64,7 @@ Hierarchy:
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
                                 SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
+                        ~Id: 1b93463c-071f-4689-99da-8f2bbe46e2d6
                         Position: {X: 8.0, Y: 8.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -66,11 +75,14 @@ Hierarchy:
                 Name: Player
                 Components:
                     SpriteComponent.Key:
+                        ~Id: cc889329-05ab-4adf-b076-084380e3096e
                         SpriteProvider: !SpriteFromSheet
+                            ~Id: 01e19e1c-2ea7-445d-8bb8-80777d0e5416
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 1
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
+                        ~Id: 34335851-e5be-4f45-b4f2-7903cf9e3f49
                         Scripts:
                             - !SpriteEntity.PlayerScript,SpriteEntity.Game
                                 Id: b173c7c9-bdf1-492e-8bfc-bcdb84475f77
@@ -79,6 +91,7 @@ Hierarchy:
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
                                 SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
+                        ~Id: 3b6c537c-2b4c-4948-97ff-88d0f59f4121
                         Position: {X: -5.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -89,10 +102,12 @@ Hierarchy:
                 Name: Logic
                 Components:
                     ScriptComponent.Key:
+                        ~Id: 3caedc01-ee1a-4ee6-9393-6b2c9d331523
                         Scripts:
                             - !SpriteEntity.LogicScript,SpriteEntity.Game
                                 Id: fac93c9b-4547-4468-9bde-beb247edca11
                     TransformComponent.Key:
+                        ~Id: 00a910e2-b093-4d4a-8636-69e69e007db6
                         Position: {X: -1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -103,13 +118,16 @@ Hierarchy:
                 Name: GUI
                 Components:
                     ScriptComponent.Key:
+                        ~Id: 6d416818-156b-4af5-b1a1-3bcd9b08580b
                         Scripts:
                             - !SpriteEntity.GuiScript,SpriteEntity.Game
                                 Id: 4e10f211-05ae-4774-88d2-805d318a618e
                                 Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
                     UIComponent.Key:
+                        ~Id: 19be439d-29b6-4af3-bd04-0cbee074b166
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                     TransformComponent.Key:
+                        ~Id: 64fc2512-6371-436f-94f3-13f6cb5c86d0
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -120,11 +138,14 @@ Hierarchy:
                 Name: Enemy00
                 Components:
                     SpriteComponent.Key:
+                        ~Id: 4f7a1586-44f0-4790-851b-c7ee7e462691
                         SpriteProvider: !SpriteFromSheet
+                            ~Id: e3d54a9a-3622-4978-9566-0f3bbdb7cac3
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
+                        ~Id: 020cb807-598d-4665-826e-54e7f674350b
                         Scripts:
                             - !SpriteEntity.EnemyScript,SpriteEntity.Game
                                 Id: 458144ae-fe76-44af-96c9-1eedf5947326
@@ -133,6 +154,7 @@ Hierarchy:
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
                                 SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
+                        ~Id: 85cb2cba-7947-4903-ba65-75128ccda221
                         Position: {X: -8.0, Y: 8.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
@@ -143,11 +165,14 @@ Hierarchy:
                 Name: Enemy01
                 Components:
                     SpriteComponent.Key:
+                        ~Id: 76647fa1-78eb-443e-871e-0494e1b6670e
                         SpriteProvider: !SpriteFromSheet
+                            ~Id: 3e16ddc7-fc88-45b6-bc44-b4e6b2a5d652
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     ScriptComponent.Key:
+                        ~Id: eaa9ea7e-5cd2-4c24-9d8c-1cb2bb30944c
                         Scripts:
                             - !SpriteEntity.EnemyScript,SpriteEntity.Game
                                 Id: 5b774599-dce6-4eb2-93ec-72482a64c269
@@ -156,34 +181,44 @@ Hierarchy:
                                     Id: fac93c9b-4547-4468-9bde-beb247edca11
                                 SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     TransformComponent.Key:
+                        ~Id: a9b5b52d-8f3f-4637-bc72-638c025d78cb
                         Position: {X: 0.0, Y: 8.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
             Design: {}
 SceneSettings:
+    ~Id: 1e98c06d-d873-4d1c-a9a6-8fe0b0b01558
     GraphicsCompositor: !SceneGraphicsCompositorLayers
+        ~Id: 518cfb80-45f7-4363-af58-220ff6a0630d
         Cameras:
-            -   Name: null
+            -   ~Id: 5ff65aa1-3e60-4b0b-aa44-b2c94b0922aa
+                Name: null
                 Camera:
                     Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
                     Component: CameraComponent.Key
         Layers: []
         Master:
+            ~Id: 905fd940-858a-4950-9e6c-aa6b43357491
             Name: SceneGraphicsLayer
             Output: !MasterRenderFrameProvider {}
             Renderers:
                 - !ClearRenderFrameRenderer
+                    ~Id: 5ed08a69-de69-4783-8621-fac5287c00aa
                     Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
                     Output: !CurrentRenderFrameProvider {}
                 - !SceneCameraRenderer
-                    Mode: !CameraRendererModeForward {}
+                    ~Id: 9905c6da-5adf-4b40-aadf-e49a7081f060
+                    Mode: !CameraRendererModeForward
+                        ~Id: d3678267-edc9-4aef-b23a-7c80f8a7d5cb
                     Camera:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
     EditorSettings:
+        ~Id: 46bec2fd-ae34-41fe-afb6-0f4e2d7e7f9c
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
         SceneUnit: 1.0
         Mode: !SceneEditorGraphicsModeLDRSettings
+            ~Id: d6d545d4-5c05-4bb7-8c59-76ee4e54de2f
             BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

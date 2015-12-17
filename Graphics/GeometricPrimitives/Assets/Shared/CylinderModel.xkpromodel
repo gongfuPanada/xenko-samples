@@ -6,4 +6,5 @@ Type: !CylinderProceduralModel
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
+        ~Id: 8160c2ae-3f40-4cad-891f-98e81511e9b8
         Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

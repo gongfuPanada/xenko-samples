@@ -6,6 +6,7 @@ Source: ../../RawAssets/wood1_gls.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
+    ~Id: ce7b9146-2a8f-4918-8332-0a4e28680828
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

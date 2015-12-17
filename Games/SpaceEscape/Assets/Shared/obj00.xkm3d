@@ -5,11 +5,14 @@ Tags: []
 Source: ../../RawAssets/model/BG/scene/obj00.FBX
 SourceHash: b67d92d3f1774d22af885fd1623c97c0
 Materials:
-    -   Name: obj00
+    -   ~Id: fd046eea-e385-470a-b2f9-9b761bb0b823
+        Name: obj00
         MaterialInstance:
+            ~Id: 11956d21-61ab-4cb9-a1c0-75c018f2febf
             Material: 5f60b016-d447-417d-8c92-7b6bbe5cbb31:obj00 Material
 Skeleton: null
 ~Base:
+    ~Id: e8c51d49-9b90-4e66-877e-0ebfc968887f
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
@@ -18,7 +21,9 @@ Skeleton: null
         Source: 
         ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
         Materials:
-            -   Name: obj00
+            -   ~Id: 6d7dd7d9-382f-49bd-8996-600c62f3c65f
+                Name: obj00
                 MaterialInstance:
+                    ~Id: 23921e8d-ea54-43eb-9e75-27734663fa5a
                     Material: 5f60b016-d447-417d-8c92-7b6bbe5cbb31:obj00
         Skeleton: null

@@ -6,6 +6,7 @@ Source: ../../RawAssets/character/Sourceimages/mc_01.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Alpha: Interpolated
 ~Base:
+    ~Id: 260e598a-d894-42dd-afab-05ef395e6710
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

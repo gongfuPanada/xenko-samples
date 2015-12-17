@@ -9,6 +9,7 @@ Alpha: Explicit
 GenerateMipmaps: false
 PremultiplyAlpha: false
 ~Base:
+    ~Id: a953df1e-a96c-4ae8-a2df-f6b5dba54155
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

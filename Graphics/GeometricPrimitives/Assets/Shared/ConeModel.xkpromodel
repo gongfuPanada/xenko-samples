@@ -7,4 +7,5 @@ Type: !ConeProceduralModel
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
+        ~Id: b277dff1-bab4-4e31-8fcf-71368e613820
         Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

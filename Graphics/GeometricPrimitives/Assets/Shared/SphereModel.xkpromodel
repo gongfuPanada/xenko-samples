@@ -6,4 +6,5 @@ Type: !SphereProceduralModel
     Scale: {X: 1.0, Y: 1.0, Z: 1.0}
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
+        ~Id: 12d35b3f-de0e-4aaa-9a55-1884c2ccb90a
         Material: 46859e92-96ad-4466-a0ed-a16f85780b32:Material

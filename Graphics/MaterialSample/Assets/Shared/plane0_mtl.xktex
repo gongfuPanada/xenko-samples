@@ -5,6 +5,7 @@ Tags: []
 Source: ../../RawAssets/plane0_mtl.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
+    ~Id: 64ee1a23-25ac-40f3-a0c6-295e278cfbb5
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

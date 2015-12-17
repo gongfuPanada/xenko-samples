@@ -7,6 +7,7 @@ ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 ~Base:
+    ~Id: 7621d9d6-3cc2-440b-b11e-084fe54f265b
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
