@@ -7,5 +7,6 @@ FullDescription: Demonstrates how to create animations for properties of entitie
 Group: Samples/Graphics
 Icon: .xktpl/Icon.png
 DefaultOutputName: AnimatedProperties
+PatternName: CustomAnimation
 Screenshots:
     - .xktpl/screenshot_small.jpg
