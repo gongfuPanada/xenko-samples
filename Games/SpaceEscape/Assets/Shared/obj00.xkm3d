@@ -10,9 +10,9 @@ Materials:
         MaterialInstance:
             ~Id: 11956d21-61ab-4cb9-a1c0-75c018f2febf
             Material: 5f60b016-d447-417d-8c92-7b6bbe5cbb31:obj00 Material
-Skeleton: null
+Skeleton: 9f53d2c9-5a21-4440-aa65-f849e0385304:obj00 Skeleton
 ~Base:
-    ~Id: e8c51d49-9b90-4e66-877e-0ebfc968887f
+    ~Id: c58614d9-ed3e-4ebf-9111-de27a56a3be4
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
