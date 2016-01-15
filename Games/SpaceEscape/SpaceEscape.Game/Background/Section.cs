@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 
 namespace SpaceEscape.Background
@@ -82,7 +83,23 @@ namespace SpaceEscape.Background
             {
                 // Use bounding boxes from parts of the obstacle.
                 foreach (var mesh in modelComponent.Model.Meshes)
-                    collidableObstacle.BoundingBoxes.Add(mesh.BoundingBox);
+                {
+                    var boundingBox = mesh.BoundingBox;
+                    var nodeIndex = mesh.NodeIndex;
+                    while (nodeIndex >= 0)
+                    {
+                        var node = modelComponent.Model.Skeleton.Nodes[nodeIndex];
+                        var transform = node.Transform;
+                        var matrix = Matrix.Transformation(Vector3.Zero, Quaternion.Identity, transform.Scale, Vector3.Zero, transform.Rotation, transform.Position);
+
+                        Vector3.TransformNormal(ref boundingBox.Minimum, ref matrix, out boundingBox.Minimum);
+                        Vector3.TransformNormal(ref boundingBox.Maximum, ref matrix, out boundingBox.Maximum);
+
+                        nodeIndex = node.ParentIndex;
+                    }
+
+                    collidableObstacle.BoundingBoxes.Add(boundingBox);
+                }
             }
             else
             {
