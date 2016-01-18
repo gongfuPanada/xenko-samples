@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -221,7 +221,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
     <SiliconStudioPlatform>Android</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>Android</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Android\Debug\</OutputPath>
@@ -234,7 +234,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Android' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
     <SiliconStudioPlatform>Android</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>Android</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Android\Release\</OutputPath>
@@ -247,7 +247,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Testing|Android' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
     <SiliconStudioPlatform>Android</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>Android</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Android\Testing\</OutputPath>
@@ -260,7 +260,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|Android' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_ANDROID</DefineConstants>
     <SiliconStudioPlatform>Android</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>Android</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\Android\AppStore\</OutputPath>
@@ -274,7 +274,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
     <SiliconStudioPlatform>iOS</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>iOS</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\iOS\Debug\</OutputPath>
@@ -291,7 +291,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
     <SiliconStudioPlatform>iOS</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>iOS</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\iOS\Release\</OutputPath>
@@ -306,7 +306,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Testing|iPhone' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
     <SiliconStudioPlatform>iOS</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>iOS</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\iOS\Testing\</OutputPath>
@@ -323,7 +323,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
     <SiliconStudioPlatform>iOS</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>iOS</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\iOS\AppStore\</OutputPath>
@@ -339,7 +339,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
     <SiliconStudioPlatform>iOS</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>iOS</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\iOS\Debug\</OutputPath>
@@ -353,7 +353,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
+    <DefineConstants>TRACE;SILICONSTUDIO_PLATFORM_MONO_MOBILE;SILICONSTUDIO_PLATFORM_IOS</DefineConstants>
     <SiliconStudioPlatform>iOS</SiliconStudioPlatform>
     <SiliconStudioBuildProfile>iOS</SiliconStudioBuildProfile>
     <OutputPath>..\Bin\iOS\Release\</OutputPath>
