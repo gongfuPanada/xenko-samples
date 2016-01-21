@@ -226,7 +226,7 @@ Hierarchy:
             Design: {}
         -   Entity:
                 Id: d27b3742-0a08-4807-abe9-c2f2a7f35a35
-                Name: CylingerModel
+                Name: CylinderModel
                 Components:
                     ModelComponent.Key:
                         ~Id: 508d38f8-aace-4657-b7a0-48fa51df8caf
