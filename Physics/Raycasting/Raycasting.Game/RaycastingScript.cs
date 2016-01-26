@@ -14,7 +14,7 @@ namespace Raycasting
         public override void Start()
         {
             camera = Entity.Get<CameraComponent>();
-            simulation = Entity.Get<PhysicsComponent>().Simulation;
+            simulation = this.GetSimulation();
         }
 
         public override void Update()

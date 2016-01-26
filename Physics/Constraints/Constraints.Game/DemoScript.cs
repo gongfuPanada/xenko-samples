@@ -30,7 +30,7 @@ namespace Constraints
         
         public override void Start()
         {
-            simulation = Entity.Get<PhysicsComponent>().Simulation;
+            simulation = this.GetSimulation();
             simulation.Gravity = new Vector3(0, -9, 0);
 
             cubeRigidBody = cube.Get<RigidbodyComponent>().Collider;
