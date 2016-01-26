@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: ad2e0be0-9387-4895-8b8c-4375ba46aeca
@@ -18,174 +18,156 @@ Hierarchy:
                 Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95
                 Name: Camera
                 Components:
-                    CameraComponent.Key:
-                        ~Id: 41c28522-e9fb-40df-9389-15298dc0ce3c
-                        Projection: Orthographic
-                        NearClipPlane: 1.0
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 1199c4b7-e01f-4ead-b26f-fefa5b4c61aa
                         Position: {X: 0.0, Y: 2.0, Z: 2.0}
                         Rotation: {W: 0.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !CameraComponent
+                        ~Id: 41c28522-e9fb-40df-9389-15298dc0ce3c
+                        Projection: Orthographic
+                        NearClipPlane: 1.0
             Design: {}
         -   Entity:
                 Id: 2a05c636-e91f-42e6-93ed-69415d19fe2f
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: 7c473d65-9c34-4106-bb17-6af291f12cbb
-                        Texture: b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: ff5425f6-a6e3-4a13-b4de-45f5cf7935f4
                         Position: {X: 1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: 7c473d65-9c34-4106-bb17-6af291f12cbb
+                        Texture: b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
             Design: {}
         -   Entity:
                 Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
                 Name: Enemy02
                 Components:
-                    SpriteComponent.Key:
+                    - !TransformComponent
+                        ~Id: 1b93463c-071f-4689-99da-8f2bbe46e2d6
+                        Position: {X: 8.0, Y: 8.0, Z: -5.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !SpriteEntity.EnemyScript,SpriteEntity.Game
+                        ~Id: a85ef428-a69d-4da3-aacc-42a3f9ac3460
+                        Logic:
+                            Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
+                            Id: fac93c9b-4547-4468-9bde-beb247edca11
+                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                    - !SpriteComponent
                         ~Id: aecef97e-687d-404f-b4c7-234c6b6255f0
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 885c63c1-04a1-4b82-bdc7-67166b89452d
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    ScriptComponent.Key:
-                        ~Id: db2de92d-8d8d-4834-9703-3e8e2bfde710
-                        Scripts:
-                            - !SpriteEntity.EnemyScript,SpriteEntity.Game
-                                Id: a85ef428-a69d-4da3-aacc-42a3f9ac3460
-                                Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
-                                    Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
-                                    Id: fac93c9b-4547-4468-9bde-beb247edca11
-                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    TransformComponent.Key:
-                        ~Id: 1b93463c-071f-4689-99da-8f2bbe46e2d6
-                        Position: {X: 8.0, Y: 8.0, Z: -5.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: 76d096d5-6b97-4d29-bb4c-0d3a35317d5d
                 Name: Player
                 Components:
-                    SpriteComponent.Key:
+                    - !TransformComponent
+                        ~Id: 3b6c537c-2b4c-4948-97ff-88d0f59f4121
+                        Position: {X: -5.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !SpriteEntity.PlayerScript,SpriteEntity.Game
+                        ~Id: b173c7c9-bdf1-492e-8bfc-bcdb84475f77
+                        Logic:
+                            Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
+                            Id: fac93c9b-4547-4468-9bde-beb247edca11
+                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                    - !SpriteComponent
                         ~Id: cc889329-05ab-4adf-b076-084380e3096e
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 01e19e1c-2ea7-445d-8bb8-80777d0e5416
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 1
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    ScriptComponent.Key:
-                        ~Id: 34335851-e5be-4f45-b4f2-7903cf9e3f49
-                        Scripts:
-                            - !SpriteEntity.PlayerScript,SpriteEntity.Game
-                                Id: b173c7c9-bdf1-492e-8bfc-bcdb84475f77
-                                Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
-                                    Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
-                                    Id: fac93c9b-4547-4468-9bde-beb247edca11
-                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    TransformComponent.Key:
-                        ~Id: 3b6c537c-2b4c-4948-97ff-88d0f59f4121
-                        Position: {X: -5.0, Y: 0.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c
                 Name: Logic
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: 3caedc01-ee1a-4ee6-9393-6b2c9d331523
-                        Scripts:
-                            - !SpriteEntity.LogicScript,SpriteEntity.Game
-                                Id: fac93c9b-4547-4468-9bde-beb247edca11
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 00a910e2-b093-4d4a-8636-69e69e007db6
                         Position: {X: -1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !SpriteEntity.LogicScript,SpriteEntity.Game
+                        ~Id: fac93c9b-4547-4468-9bde-beb247edca11
             Design: {}
         -   Entity:
                 Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
                 Name: GUI
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: 6d416818-156b-4af5-b1a1-3bcd9b08580b
-                        Scripts:
-                            - !SpriteEntity.GuiScript,SpriteEntity.Game
-                                Id: 4e10f211-05ae-4774-88d2-805d318a618e
-                                Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
-                    UIComponent.Key:
-                        ~Id: 19be439d-29b6-4af3-bd04-0cbee074b166
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 64fc2512-6371-436f-94f3-13f6cb5c86d0
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !SpriteEntity.GuiScript,SpriteEntity.Game
+                        ~Id: 4e10f211-05ae-4774-88d2-805d318a618e
+                        Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
+                    - !UIComponent
+                        ~Id: 19be439d-29b6-4af3-bd04-0cbee074b166
+                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
             Design: {}
         -   Entity:
                 Id: d295a972-b9cf-48e5-a4ff-767eb25cddef
                 Name: Enemy00
                 Components:
-                    SpriteComponent.Key:
+                    - !TransformComponent
+                        ~Id: 85cb2cba-7947-4903-ba65-75128ccda221
+                        Position: {X: -8.0, Y: 8.0, Z: -5.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !SpriteEntity.EnemyScript,SpriteEntity.Game
+                        ~Id: 458144ae-fe76-44af-96c9-1eedf5947326
+                        Logic:
+                            Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
+                            Id: fac93c9b-4547-4468-9bde-beb247edca11
+                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                    - !SpriteComponent
                         ~Id: 4f7a1586-44f0-4790-851b-c7ee7e462691
                         SpriteProvider: !SpriteFromSheet
                             ~Id: e3d54a9a-3622-4978-9566-0f3bbdb7cac3
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    ScriptComponent.Key:
-                        ~Id: 020cb807-598d-4665-826e-54e7f674350b
-                        Scripts:
-                            - !SpriteEntity.EnemyScript,SpriteEntity.Game
-                                Id: 458144ae-fe76-44af-96c9-1eedf5947326
-                                Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
-                                    Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
-                                    Id: fac93c9b-4547-4468-9bde-beb247edca11
-                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    TransformComponent.Key:
-                        ~Id: 85cb2cba-7947-4903-ba65-75128ccda221
-                        Position: {X: -8.0, Y: 8.0, Z: -5.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
                 Name: Enemy01
                 Components:
-                    SpriteComponent.Key:
+                    - !TransformComponent
+                        ~Id: a9b5b52d-8f3f-4637-bc72-638c025d78cb
+                        Position: {X: 0.0, Y: 8.0, Z: -5.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !SpriteEntity.EnemyScript,SpriteEntity.Game
+                        ~Id: 5b774599-dce6-4eb2-93ec-72482a64c269
+                        Logic:
+                            Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
+                            Id: fac93c9b-4547-4468-9bde-beb247edca11
+                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                    - !SpriteComponent
                         ~Id: 76647fa1-78eb-443e-871e-0494e1b6670e
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 3e16ddc7-fc88-45b6-bc44-b4e6b2a5d652
                             Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    ScriptComponent.Key:
-                        ~Id: eaa9ea7e-5cd2-4c24-9d8c-1cb2bb30944c
-                        Scripts:
-                            - !SpriteEntity.EnemyScript,SpriteEntity.Game
-                                Id: 5b774599-dce6-4eb2-93ec-72482a64c269
-                                Logic: !SpriteEntity.LogicScript,SpriteEntity.Game
-                                    Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
-                                    Id: fac93c9b-4547-4468-9bde-beb247edca11
-                                SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
-                    TransformComponent.Key:
-                        ~Id: a9b5b52d-8f3f-4637-bc72-638c025d78cb
-                        Position: {X: 0.0, Y: 8.0, Z: -5.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
 SceneSettings:
     ~Id: 1e98c06d-d873-4d1c-a9a6-8fe0b0b01558
@@ -196,7 +178,7 @@ SceneSettings:
                 Name: null
                 Camera:
                     Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
-                    Component: CameraComponent.Key
+                    Id: 41c28522-e9fb-40df-9389-15298dc0ce3c
         Layers: []
         Master:
             ~Id: 905fd940-858a-4950-9e6c-aa6b43357491

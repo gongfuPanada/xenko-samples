@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 8da52091-f3ce-45a3-8f1b-01fbf1a19f42
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: 67cc7b50-975b-4b42-b3c1-5b85a4b31221
@@ -12,33 +12,30 @@ Hierarchy:
                 Id: 818ea3cc-e643-45c6-bff5-bd54c2730c76
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: 26cda407-3b29-42bb-b369-8191eebff7a5
-                        Texture: c70d3cb5-77d2-4400-a715-382d092a2e19:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 87500d0e-9041-48f5-924e-8c9cdd0039ef
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: 26cda407-3b29-42bb-b369-8191eebff7a5
+                        Texture: c70d3cb5-77d2-4400-a715-382d092a2e19:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 95d80bd6-50e5-4984-92ae-7b8eeec651a6
                 Name: FontUI
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: 2dc2c3ab-50c1-40f6-9315-90f01b481844
-                        Scripts:
-                            - !TouchInputs.TouchInputsScript,TouchInputs.Game
-                                Id: 38a398b7-285d-4063-a950-7d21a21321cf
-                                Font: 25d9be11-4750-4d09-b58f-0628bf0c74e1:Font
-                                RoundTexture: f21cc317-81d3-41f1-b524-d12766abf594:round
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 131c6474-dd52-4c2a-9305-58229434efcc
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !TouchInputs.TouchInputsScript,TouchInputs.Game
+                        ~Id: 38a398b7-285d-4063-a950-7d21a21321cf
+                        Font: 25d9be11-4750-4d09-b58f-0628bf0c74e1:Font
+                        RoundTexture: f21cc317-81d3-41f1-b524-d12766abf594:round
             Design: {}
 SceneSettings:
     ~Id: 378e55f2-9ab1-4c47-84f4-0e858f46db13

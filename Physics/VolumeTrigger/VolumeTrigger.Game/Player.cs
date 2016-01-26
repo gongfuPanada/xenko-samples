@@ -18,11 +18,12 @@ namespace VolumeTrigger
 
         public override void Start()
         {
-            character = Entity.Get<PhysicsComponent>()[0].Character;
+            character = Entity.Get<CharacterComponent>().Collider;
             character.Gravity = -10.0f;
-            if (Entity.Get<PhysicsComponent>().Count > 1)
+			var rigidBodyComponent = Entity.Get<RigidbodyComponent>();
+            if (rigidBodyComponent != null)
             {
-                Entity.Get<PhysicsComponent>()[1].RigidBody.CanSleep = false;
+				rigidBodyComponent.Collider.CanSleep = false;                
             }
         }
 

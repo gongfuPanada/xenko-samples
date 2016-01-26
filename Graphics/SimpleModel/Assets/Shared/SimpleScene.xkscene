@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 286c3e80-cf3f-4804-ad57-2c617f116e4c
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: ca6ef440-d3da-4def-ac76-e6d14dfc2aad
@@ -15,7 +15,13 @@ Hierarchy:
                 Id: 0d9fd13c-1ccf-4748-82b1-359bdc792644
                 Name: Directional light
                 Components:
-                    LightComponent.Key:
+                    - !TransformComponent
+                        ~Id: b1c532cc-47c8-405c-9335-8994d5ba612c
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !LightComponent
                         ~Id: ff1a23dd-f0d1-4746-a22a-085b93dcb5b7
                         Type: !LightDirectional
                             ~Id: bfb457de-48d1-4e03-9efc-c85af8fb84d1
@@ -32,81 +38,72 @@ Hierarchy:
                                 BiasParameters:
                                     ~Id: cc1a8612-9b78-4ef6-a77e-64d0cd843c99
                         Intensity: 0.1
-                    TransformComponent.Key:
-                        ~Id: b1c532cc-47c8-405c-9335-8994d5ba612c
-                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: 6a93b905-f184-480a-b645-7d2627b97445
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: bc008c19-1695-4f23-8584-697b0b485685
-                        Texture: 2b13c12a-4d48-4058-8a9d-349d3c40a693:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: ebf9a292-62c3-4bd2-a704-fddf69d7bcc2
                         Position: {X: 0.0, Y: 0.0, Z: -5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: bc008c19-1695-4f23-8584-697b0b485685
+                        Texture: 2b13c12a-4d48-4058-8a9d-349d3c40a693:XenkoBackground
             Design: {}
         -   Entity:
                 Id: a0cf3d39-63ba-4770-b9cb-4ce74d002f34
                 Name: Ambient light
                 Components:
-                    LightComponent.Key:
+                    - !TransformComponent
+                        ~Id: 63cb50bb-1564-4572-9b25-9aba0c22c68f
+                        Position: {X: 0.0, Y: 4.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !LightComponent
                         ~Id: 899ae641-3f93-4f37-b221-0830b5733997
                         Type: !LightAmbient
                             ~Id: 8651d615-45e3-4779-85c2-2753662c6654
                             Color: !ColorRgbProvider
                                 ~Id: c56a0201-f26b-4b12-a44c-88ad2390b733
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
-                    TransformComponent.Key:
-                        ~Id: 63cb50bb-1564-4572-9b25-9aba0c22c68f
-                        Position: {X: 0.0, Y: 4.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: d968ed53-6c9e-449c-8488-d17f5f8b6f3e
                 Name: Camera
                 Components:
-                    CameraComponent.Key:
-                        ~Id: 55ed4d92-f3c8-478a-8a8a-8f51193c9070
-                        Projection: Perspective
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 184fa75c-32b8-4922-b12c-03db472c156f
                         Position: {X: 0.0, Y: 1.7, Z: 6.0}
                         Rotation: {W: 0.9961947, X: -0.08715574, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !CameraComponent
+                        ~Id: 55ed4d92-f3c8-478a-8a8a-8f51193c9070
+                        Projection: Perspective
             Design: {}
         -   Entity:
                 Id: f770fd9d-75a5-4846-b29e-9f10ae811c9f
                 Name: character_00 Model
                 Components:
-                    ModelComponent.Key:
+                    - !TransformComponent
+                        ~Id: 6183313c-3ff4-40c5-b6c7-af0959116568
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !SimpleModel.RotateEntityScript,SimpleModel.Game
+                        ~Id: 9eeb736a-58ec-4af9-a61e-bf434a8b5ba2
+                    - !ModelComponent
                         ~Id: d63d07dc-3d08-4667-b1b3-ad586e4d0872
                         Model: 19ec836d-2ea3-43fe-8f79-0f55cfc437be:character_00 Model
                         Materials:
                             - null
                             - null
                             - null
-                    ScriptComponent.Key:
-                        ~Id: 84865024-f057-4dbb-b601-0b987e88e76b
-                        Scripts:
-                            - !SimpleModel.RotateEntityScript,SimpleModel.Game
-                                Id: 9eeb736a-58ec-4af9-a61e-bf434a8b5ba2
-                    TransformComponent.Key:
-                        ~Id: 6183313c-3ff4-40c5-b6c7-af0959116568
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
 SceneSettings:
     ~Id: f3d27853-91bf-49c0-bbb3-bbbcdf06b4c6
@@ -117,7 +114,7 @@ SceneSettings:
                 Name: null
                 Camera:
                     Entity: {Id: d968ed53-6c9e-449c-8488-d17f5f8b6f3e}
-                    Component: CameraComponent.Key
+                    Id: 55ed4d92-f3c8-478a-8a8a-8f51193c9070
         Layers: []
         Master:
             ~Id: 51a8d653-33ea-4549-a9bf-74ef4c5b57de

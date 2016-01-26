@@ -9,8 +9,7 @@ namespace GravitySensor
     {
         public override void Start()
         {
-            var component = Entity.Get<PhysicsComponent>();
-            foreach (var physicsElement in component.Elements)
+            foreach (var physicsElement in Entity.GetAll<PhysicsComponent>())
             {
                 physicsElement.Collider.Restitution = 0.9f;
             }

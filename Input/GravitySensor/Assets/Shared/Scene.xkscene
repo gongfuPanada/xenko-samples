@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: 9d40c09d-0830-4cf6-bcaa-47b200a2c4f4
@@ -18,282 +18,240 @@ Hierarchy:
                 Id: 2db78459-e067-47bc-bc99-7b52e75e3eb4
                 Name: GroundRight
                 Components:
-                    PhysicsComponent.Key:
-                        ~Id: de95f00a-0f3e-4961-9608-b390e0deb6dd
-                        Elements:
-                            - !StaticColliderElement
-                                ~Id: 068b81a4-d447-4f72-9a77-8100b90b4f4d
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: d753e958-7830-4c01-a136-38812a08806f
-                                        Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
-                    ScriptComponent.Key:
-                        ~Id: f4e128a1-568f-464a-8b78-74be364fad15
-                        Scripts:
-                            - !GravitySensor.BounceScript,GravitySensor.Game
-                                Id: 3dc48e9f-e3b3-4e2f-8e04-2cbf497bc08b
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 6cf14761-eda5-45c2-b470-6309168b05bb
                         Position: {X: 8.89, Y: 0.0, Z: 0.0}
                         Rotation: {W: 0.707106769, X: 0.0, Y: 0.0, Z: 0.707106769}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GravitySensor.BounceScript,GravitySensor.Game
+                        ~Id: 3dc48e9f-e3b3-4e2f-8e04-2cbf497bc08b
+                    - !StaticColliderComponent
+                        ~Id: 068b81a4-d447-4f72-9a77-8100b90b4f4d
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: d753e958-7830-4c01-a136-38812a08806f
+                                Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
             Design: {}
         -   Entity:
                 Id: 339ed07f-b58b-4d72-9d97-b7679f710573
                 Name: Camera
                 Components:
-                    CameraComponent.Key:
-                        ~Id: 6b94cf5f-c890-4d8d-a2be-c91b136bb3ed
-                        Projection: Orthographic
-                        FarClipPlane: 10.0
-                    PhysicsComponent.Key:
-                        ~Id: 0d4e40c4-6dfd-4191-b9f4-ff31b92ebabd
-                        Elements: []
-                    ScriptComponent.Key:
-                        ~Id: ae0e8b19-1e3c-4574-b203-5656e4cf0294
-                        Scripts:
-                            - !GravitySensor.GravityScript,GravitySensor.Game
-                                Id: 340ae752-4f79-40d9-88cb-10048105c703
-                            - !GravitySensor.GuiScript,GravitySensor.Game
-                                Id: a6f55234-c9dd-446e-b1fe-838970897afc
-                                Font: e69c3c0c-baca-4e05-9c03-a3f95cdeb5ed:SpriteFont
-                    UIComponent.Key:
-                        ~Id: f75a332a-6b7d-4a17-b507-810eefd8913f
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 29ec249d-f4df-410b-b166-e760b7cb2feb
                         Position: {X: 0.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GravitySensor.GravityScript,GravitySensor.Game
+                        ~Id: 340ae752-4f79-40d9-88cb-10048105c703
+                    - !GravitySensor.GuiScript,GravitySensor.Game
+                        ~Id: a6f55234-c9dd-446e-b1fe-838970897afc
+                        Font: e69c3c0c-baca-4e05-9c03-a3f95cdeb5ed:SpriteFont
+                    - !UIComponent
+                        ~Id: f75a332a-6b7d-4a17-b507-810eefd8913f
+                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                    - !CameraComponent
+                        ~Id: 6b94cf5f-c890-4d8d-a2be-c91b136bb3ed
+                        Projection: Orthographic
+                        FarClipPlane: 10.0
             Design: {}
         -   Entity:
                 Id: 3d8e427f-90f5-4579-b8dd-1f0264f1b47c
                 Name: GroundTop
                 Components:
-                    PhysicsComponent.Key:
-                        ~Id: 8ab4a32c-9dff-41c5-b2f9-479d40c5c166
-                        Elements:
-                            - !StaticColliderElement
-                                ~Id: f7a047a8-1d7d-4718-b45e-eb3b3af5dbcd
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: db98bb68-092f-41af-aac1-25cdbbb67740
-                                        Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
-                    ScriptComponent.Key:
-                        ~Id: 8461aaa8-936c-48df-9ab2-e95a40c74890
-                        Scripts:
-                            - !GravitySensor.BounceScript,GravitySensor.Game
-                                Id: f9212e97-1743-43a1-a61b-97da13bf2aba
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 2b0e6619-da70-4a38-a0a9-ab46206d93ae
                         Position: {X: 0.0, Y: 5.0, Z: 0.0}
                         Rotation: {W: -4.371139E-08, X: 0.0, Y: 0.0, Z: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GravitySensor.BounceScript,GravitySensor.Game
+                        ~Id: f9212e97-1743-43a1-a61b-97da13bf2aba
+                    - !StaticColliderComponent
+                        ~Id: f7a047a8-1d7d-4718-b45e-eb3b3af5dbcd
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: db98bb68-092f-41af-aac1-25cdbbb67740
+                                Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
             Design: {}
         -   Entity:
                 Id: 480d509a-cd2b-48c6-812e-9d77df3c523c
                 Name: GroundLeft
                 Components:
-                    PhysicsComponent.Key:
-                        ~Id: 7e89396c-b0e8-46cf-9290-782568c81f73
-                        Elements:
-                            - !StaticColliderElement
-                                ~Id: ea62aec8-5612-4eff-9f3c-a145a05020b7
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: 20afa7e3-49c0-480a-af0f-550721f43990
-                                        Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
-                    ScriptComponent.Key:
-                        ~Id: fdbda5bb-341a-446c-8ea4-7b969f317570
-                        Scripts:
-                            - !GravitySensor.BounceScript,GravitySensor.Game
-                                Id: 5e3ff17e-fb05-4d78-92d8-3374451f2f57
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 74fb6449-8f4f-42dd-8076-6769686efb58
                         Position: {X: -8.89, Y: 0.0, Z: 0.0}
                         Rotation: {W: 0.707106769, X: 0.0, Y: 0.0, Z: -0.707106769}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GravitySensor.BounceScript,GravitySensor.Game
+                        ~Id: 5e3ff17e-fb05-4d78-92d8-3374451f2f57
+                    - !StaticColliderComponent
+                        ~Id: ea62aec8-5612-4eff-9f3c-a145a05020b7
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: 20afa7e3-49c0-480a-af0f-550721f43990
+                                Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
             Design: {}
         -   Entity:
                 Id: 4e795cc2-f6c6-4936-80db-bbfc789d9264
                 Name: GroundBottom
                 Components:
-                    PhysicsComponent.Key:
-                        ~Id: 11a8b79e-e592-4911-9a52-1ad8e2971a89
-                        Elements:
-                            - !StaticColliderElement
-                                ~Id: eadf208b-395c-4534-9755-97bfeb360dcc
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: be12162f-17d2-4955-97a0-eeb56a8fea9b
-                                        Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
-                    ScriptComponent.Key:
-                        ~Id: 0a40ec7f-e8b5-4300-8750-58804375129e
-                        Scripts:
-                            - !GravitySensor.BounceScript,GravitySensor.Game
-                                Id: 2014eb85-3594-4e1d-ab51-3e37201366d4
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: a8933475-24e8-4edd-89e7-b130f5ad0048
                         Position: {X: 0.0, Y: -5.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GravitySensor.BounceScript,GravitySensor.Game
+                        ~Id: 2014eb85-3594-4e1d-ab51-3e37201366d4
+                    - !StaticColliderComponent
+                        ~Id: eadf208b-395c-4534-9755-97bfeb360dcc
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: be12162f-17d2-4955-97a0-eeb56a8fea9b
+                                Shape: 46edbb45-f107-4e33-a959-8d5de5aef08b:Limit
             Design: {}
         -   Entity:
                 Id: b8081f8f-09fd-4209-9b9e-883d054493a5
                 Name: Ball2
                 Components:
-                    SpriteComponent.Key:
-                        ~Id: 793f872c-7dc0-49af-accf-1d5c99a28c4e
-                        SpriteProvider: !SpriteFromSheet
-                            ~Id: 80d0cf11-5f6f-4829-9f94-7245cd3b04ea
-                            Sheet: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    PhysicsComponent.Key:
-                        ~Id: e5820332-4866-43c5-99bd-2d930c1134c6
-                        Elements:
-                            - !RigidbodyElement
-                                ~Id: b827ef05-7932-4438-9c8c-fb096a372535
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                IsKinematic: false
-                                Mass: 1.0
-                                LinearDamping: 0.0
-                                AngularDamping: 0.0
-                                OverrideGravity: false
-                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                                NodeName: null
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: 3ec1d1b8-75cd-47b6-a90a-6e10648dcebf
-                                        Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
-                    ScriptComponent.Key:
-                        ~Id: e3ade38f-52ba-41b1-8b6a-deb410829f77
-                        Scripts:
-                            - !GravitySensor.NoSleepScript,GravitySensor.Game
-                                Id: bccca136-49c9-46ba-a5df-b10a457c4663
-                            - !GravitySensor.BounceScript,GravitySensor.Game
-                                Id: 24a06fb8-8693-4532-96e3-bc980c7dc3a0
-                            - !GravitySensor.BallScript,GravitySensor.Game
-                                Id: 435a1ec7-46ef-4f8d-901e-63103ba65478
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: f7c7a660-1a1b-4842-a56e-605ad1f66045
                         Position: {X: -5.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.0}
                         Children: []
+                    - !GravitySensor.NoSleepScript,GravitySensor.Game
+                        ~Id: bccca136-49c9-46ba-a5df-b10a457c4663
+                    - !GravitySensor.BounceScript,GravitySensor.Game
+                        ~Id: 24a06fb8-8693-4532-96e3-bc980c7dc3a0
+                    - !GravitySensor.BallScript,GravitySensor.Game
+                        ~Id: 435a1ec7-46ef-4f8d-901e-63103ba65478
+                    - !RigidbodyComponent
+                        ~Id: b827ef05-7932-4438-9c8c-fb096a372535
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: 3ec1d1b8-75cd-47b6-a90a-6e10648dcebf
+                                Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
+                    - !SpriteComponent
+                        ~Id: 793f872c-7dc0-49af-accf-1d5c99a28c4e
+                        SpriteProvider: !SpriteFromSheet
+                            ~Id: 80d0cf11-5f6f-4829-9f94-7245cd3b04ea
+                            Sheet: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
         -   Entity:
                 Id: cb93c888-7592-4e5c-8f57-448e510ef1ff
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: 68f9bb55-724e-4415-b042-2dd20d13fc87
-                        Texture: 612ae0d5-a8e6-49eb-8751-0eb9b0a82ea7:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 1c3bebcf-3762-4b16-99b9-e808dd1a26af
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: 68f9bb55-724e-4415-b042-2dd20d13fc87
+                        Texture: 612ae0d5-a8e6-49eb-8751-0eb9b0a82ea7:XenkoBackground
             Design: {}
         -   Entity:
                 Id: e7a10a2d-0ab4-4ef8-8a9f-1bfce8bc43ad
                 Name: Ball1
                 Components:
-                    SpriteComponent.Key:
-                        ~Id: cc8a56e1-1399-479c-ab12-489c10d80172
-                        SpriteProvider: !SpriteFromSheet
-                            ~Id: 30b254f3-6454-4ecf-8861-22fb72b136fe
-                            Sheet: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    PhysicsComponent.Key:
-                        ~Id: 9a735d59-f6d7-4d8a-90fb-a81592c33b5a
-                        Elements:
-                            - !RigidbodyElement
-                                ~Id: d7d0fa54-8ed7-4c80-9937-62272cf9b11e
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                IsKinematic: false
-                                Mass: 1.0
-                                LinearDamping: 0.0
-                                AngularDamping: 0.0
-                                OverrideGravity: false
-                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                                NodeName: null
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: a3dd257a-e8d9-4aa4-98ab-b93bec9a14c8
-                                        Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
-                    ScriptComponent.Key:
-                        ~Id: 0be4b006-3558-4e50-96f1-5af5829bf628
-                        Scripts:
-                            - !GravitySensor.NoSleepScript,GravitySensor.Game
-                                Id: e4a891e1-ff39-48cd-a585-fc226addf316
-                            - !GravitySensor.BounceScript,GravitySensor.Game
-                                Id: d9766b20-5cd6-4d34-bfe1-74255743e366
-                            - !GravitySensor.BallScript,GravitySensor.Game
-                                Id: 5ebf5192-3802-424c-8527-6f2affb87e2d
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 89e6f127-42de-4a78-a7d2-420fbcdee945
                         Position: {X: 5.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 0.0}
                         Children: []
+                    - !GravitySensor.NoSleepScript,GravitySensor.Game
+                        ~Id: e4a891e1-ff39-48cd-a585-fc226addf316
+                    - !GravitySensor.BounceScript,GravitySensor.Game
+                        ~Id: d9766b20-5cd6-4d34-bfe1-74255743e366
+                    - !GravitySensor.BallScript,GravitySensor.Game
+                        ~Id: 5ebf5192-3802-424c-8527-6f2affb87e2d
+                    - !RigidbodyComponent
+                        ~Id: d7d0fa54-8ed7-4c80-9937-62272cf9b11e
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: a3dd257a-e8d9-4aa4-98ab-b93bec9a14c8
+                                Shape: cc052d82-9498-4400-9dbf-dd9a9ee6bf38:ball_cs
+                    - !SpriteComponent
+                        ~Id: cc8a56e1-1399-479c-ab12-489c10d80172
+                        SpriteProvider: !SpriteFromSheet
+                            ~Id: 30b254f3-6454-4ecf-8861-22fb72b136fe
+                            Sheet: 10c25364-4310-4db2-a7d1-868336f4570c:ball_sg
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
 SceneSettings:
     ~Id: 013586b9-ac71-43da-b43d-e25993b39fa8
@@ -304,7 +262,7 @@ SceneSettings:
                 Name: null
                 Camera:
                     Entity: {Id: 339ed07f-b58b-4d72-9d97-b7679f710573}
-                    Component: CameraComponent.Key
+                    Id: 6b94cf5f-c890-4d8d-a2be-c91b136bb3ed
         Layers: []
         Master:
             ~Id: 375b5234-4c0d-4069-8f14-29bce4371d7e

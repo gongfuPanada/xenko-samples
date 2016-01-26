@@ -115,7 +115,7 @@ namespace GameMenu
             {
                 // Next scene
                 SceneSystem.SceneInstance.Scene = Asset.Load<Scene>("MainScene");
-                Destroy();
+                Cancel();
             }
         }
     }

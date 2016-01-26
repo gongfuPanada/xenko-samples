@@ -2,7 +2,7 @@
 
 namespace SpaceEscape.Background
 {
-    public class ObstacleInfo : Script
+    public class ObstacleInfo : ScriptComponent
     {
         public bool UseSubMeshBoundingBoxes;
     }

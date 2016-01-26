@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SiliconStudio.Xenko.Physics;
 
 namespace SpriteStudioDemo
 {
@@ -11,22 +12,22 @@ namespace SpriteStudioDemo
     {
         public override async Task Execute()
         {
-            var rigidbodyElement = Entity.Get<PhysicsComponent>()[0];
-            var enemyScript = (EnemyScript)Entity.Get<ScriptComponent>().Scripts.First(x => x.Name == "EnemyScript");
+            var rigidbodyElement = Entity.Get<RigidbodyComponent>();
+            var enemyScript = Entity.Get<EnemyScript>();
 
             while (Game.IsRunning)
             {
-                var collision = await rigidbodyElement.RigidBody.NewCollision();
+                var collision = await rigidbodyElement.Collider.NewCollision();
 
-                if (collision.ColliderA.Entity.Name == "bullet" && !rigidbodyElement.RigidBody.IsTrigger) //if we are trigger we should ignore the bullet
+                if (collision.ColliderA.Entity.Name == "bullet" && !rigidbodyElement.Collider.IsTrigger) //if we are trigger we should ignore the bullet
                 {
-                    var script = (BeamScript)collision.ColliderA.Entity.Get<ScriptComponent>().Scripts[0];
+                    var script = collision.ColliderA.Entity.Get<BeamScript>();
                     script.Die();
                     enemyScript.Explode();
                 }
-                else if (collision.ColliderB.Entity.Name == "bullet" && !rigidbodyElement.RigidBody.IsTrigger)
+                else if (collision.ColliderB.Entity.Name == "bullet" && !rigidbodyElement.Collider.IsTrigger)
                 {
-                    var script = (BeamScript)collision.ColliderB.Entity.Get<ScriptComponent>().Scripts[0];
+                    var script = collision.ColliderB.Entity.Get<BeamScript>();
                     script.Die();
                     enemyScript.Explode();
                 }

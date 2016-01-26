@@ -19,8 +19,7 @@ namespace SpriteStudioDemo
         private const float enemyLifeBase = 3.0f;
         private float enemyLife = 3.0f;
 
-        private PhysicsComponent physicsComponent;
-        private RigidbodyElement rigidbodyElement;
+        private RigidbodyComponent rigidbodyElement;
         private AnimationComponent animationComponent;
 
         PlayingAnimation playingAnimation = null;
@@ -32,7 +31,7 @@ namespace SpriteStudioDemo
         private async Task Reset()
         {
             rigidbodyElement.IsKinematic = true; //sto motion and set kinematic (listen to our transform changes)
-            rigidbodyElement.RigidBody.IsTrigger = true; //set as ghost (bullets will go thru)
+            rigidbodyElement.Collider.IsTrigger = true; //set as ghost (bullets will go thru)
 
             Entity.Transform.Position.Y = enemyInitPositionY;
 
@@ -53,8 +52,8 @@ namespace SpriteStudioDemo
             await Script.NextFrame();
 
             rigidbodyElement.IsKinematic = false;
-            rigidbodyElement.RigidBody.IsTrigger = false;
-            rigidbodyElement.RigidBody.Activate();
+            rigidbodyElement.Collider.IsTrigger = false;
+            rigidbodyElement.Collider.Activate();
         }
 
         Task exploding;
@@ -62,7 +61,7 @@ namespace SpriteStudioDemo
         public void Explode()
         {
             rigidbodyElement.IsKinematic = true;
-            rigidbodyElement.RigidBody.IsTrigger = true;
+            rigidbodyElement.Collider.IsTrigger = true;
 
             if (playingAnimation == null || playingAnimation.Name != "Dead")
             {
@@ -87,10 +86,9 @@ namespace SpriteStudioDemo
         {
             animationComponent = Entity.Get<AnimationComponent>();
 
-            physicsComponent = Entity.Get<PhysicsComponent>();
-            rigidbodyElement = (RigidbodyElement)physicsComponent.Elements[0];
-            rigidbodyElement.RigidBody.LinearFactor = new Vector3(0, 1, 0); //allow only Y motion
-            rigidbodyElement.RigidBody.AngularFactor = new Vector3(0, 0, 0); //allow no rotation
+            rigidbodyElement = Entity.Get<RigidbodyComponent>();
+            rigidbodyElement.Collider.LinearFactor = new Vector3(0, 1, 0); //allow only Y motion
+            rigidbodyElement.Collider.AngularFactor = new Vector3(0, 0, 0); //allow no rotation
 
             await Reset();
 

@@ -56,7 +56,7 @@ namespace CharacterControllerSample
         public override void Start()
         {
             playerSprite = Entity.Get<SpriteComponent>();
-            playerController = Entity.Get<PhysicsComponent>().Elements[0].Character;
+            playerController = Entity.Get<CharacterComponent>().Collider;
 
             //Please remember that in the GameStudio element the parameter Step Height is extremely important, it not set properly it will cause the entity to snap fast to the ground
             playerController.JumpSpeed = 5.0f;

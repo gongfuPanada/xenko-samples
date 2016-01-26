@@ -130,15 +130,15 @@ namespace SpriteStudioDemo
 
                     animTask = null;
 
-                    var rb = new RigidbodyElement { CanCollideWith = CollisionFilterGroupFlags.CustomFilter1, CollisionGroup = CollisionFilterGroups.DefaultFilter };
+                    var rb = new RigidbodyComponent { CanCollideWith = CollisionFilterGroupFlags.CustomFilter1, CollisionGroup = CollisionFilterGroups.DefaultFilter };
                     rb.ColliderShapes.Add(new ColliderShapeAssetDesc { Shape = bulletCS });
 
                     // Spawns a new bullet
                     var bullet = new Entity
                     {
                         new SpriteComponent { SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet") },
-                        new PhysicsComponent { Elements = { rb } },
-                        new ScriptComponent { Scripts = { new BeamScript() }}
+                        rb,
+                        new BeamScript()
                     };
                     bullet.Name = "bullet";
 
@@ -147,9 +147,9 @@ namespace SpriteStudioDemo
 
                     SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
 
-                    rb.RigidBody.LinearFactor = new Vector3(1, 0, 0);
-                    rb.RigidBody.AngularFactor = new Vector3(0, 0, 0);
-                    rb.RigidBody.ApplyImpulse(isAgentFacingRight ? new Vector3(25, 0, 0) : new Vector3(-25, 0, 0));
+                    rb.Collider.LinearFactor = new Vector3(1, 0, 0);
+                    rb.Collider.AngularFactor = new Vector3(0, 0, 0);
+                    rb.Collider.ApplyImpulse(isAgentFacingRight ? new Vector3(25, 0, 0) : new Vector3(-25, 0, 0));
 
                     // Start animation for shooting
                     CurrentAgentAnimation = AgentAnimation.Shoot;

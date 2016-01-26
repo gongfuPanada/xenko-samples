@@ -164,7 +164,7 @@ namespace SpriteEntity
                         new SpriteComponent {SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet")},
 
                         // Will make the beam move along a direction at each frame
-                        new ScriptComponent {Scripts = {new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f, SpriteSheet = SpriteSheet}}}
+                        new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f, SpriteSheet = SpriteSheet},
                     };
 
                     bullet.Transform.Position = (isAgentFacingRight) ? Entity.Transform.Position + bulletOffset : Entity.Transform.Position + (bulletOffset*new Vector3(-1, 1, 1));

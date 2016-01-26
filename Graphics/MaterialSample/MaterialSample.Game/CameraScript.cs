@@ -41,7 +41,7 @@ namespace MaterialSample
             Input.ActivatedGestures.Add(new GestureConfigComposite());
             Input.ActivatedGestures.Add(new GestureConfigDrag());
 
-            while (!IsDisposed)
+            while (true)
             {
                 // Update rotation according to mouse deltas
                 var dragEvent = (GestureEventDrag)Input.GestureEvents.FirstOrDefault(e => e.Type == GestureType.Drag);

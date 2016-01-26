@@ -23,7 +23,7 @@ namespace VolumeTrigger
             startRotation = Entity.Transform.Rotation;
 
             //grab a reference to the falling sphere's rigidbody
-            rigidBody = Entity.Get<PhysicsComponent>()[0].RigidBody;
+            rigidBody = Entity.Get<RigidbodyComponent>().Collider;
 
             SimpleMessage.Start += SimpleMessage_Start;
             SimpleMessage.Stop += SimpleMessage_Stop;
@@ -39,7 +39,7 @@ namespace VolumeTrigger
             Entity.Transform.Position = startLocation;
             Entity.Transform.Rotation = startRotation;
             Entity.Transform.UpdateWorldMatrix();
-            Entity.Get<PhysicsComponent>()[0].UpdatePhysicsTransformation();
+            Entity.Get<PhysicsComponent>().UpdatePhysicsTransformation();
         }
 
         private void SimpleMessage_Start(object sender, EventArgs e)

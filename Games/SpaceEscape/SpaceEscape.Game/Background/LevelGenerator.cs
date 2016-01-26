@@ -5,7 +5,7 @@ using SiliconStudio.Xenko.Engine;
 namespace SpaceEscape.Background
 {
 
-    public class LevelGenerator : Script
+    public class LevelGenerator : ScriptComponent
     {
         public Entity Background_a00;
         public Entity Background_b00;
@@ -57,7 +57,7 @@ namespace SpaceEscape.Background
                 case 1: obstacleEntity = Obstacle2; break;
             }
 
-            useSubmeshesBoundingBoxes = obstacleEntity.Get(ScriptComponent.Key).Scripts.OfType<ObstacleInfo>().First().UseSubMeshBoundingBoxes;
+            useSubmeshesBoundingBoxes = obstacleEntity.Get<ObstacleInfo>().UseSubMeshBoundingBoxes;
             obstacleEntity = obstacleEntity.Clone();
 
             // Reset position
@@ -78,7 +78,7 @@ namespace SpaceEscape.Background
             backgroundEnt.Transform.Position = Vector3.Zero;
 
             var levelBlock = new Section();
-            var backgroundInfo = backgroundEnt.Get(ScriptComponent.Key).Scripts.OfType<BackgroundInfo>().First();
+            var backgroundInfo = backgroundEnt.Get<BackgroundInfo>();
             levelBlock.AddBackgroundEntity(backgroundEnt).AddHoleRange(backgroundInfo.Holes);
 
             var len = levelBlock.Length;

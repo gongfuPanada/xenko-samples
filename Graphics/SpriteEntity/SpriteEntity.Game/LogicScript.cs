@@ -24,9 +24,7 @@ namespace SpriteEntity
             for (int i = bullets.Count - 1; i >= 0; i--)
             {
                 var bullet = bullets[i];
-                var bulletScriptComponent = bullets[i].Get<ScriptComponent>();
-                // Get the bullet script (suppose there's only one script)
-                var bulletScript = (BeamScript)bulletScriptComponent.Scripts.FirstOrDefault();
+                var bulletScript = bullets[i].Get<BeamScript>();
 
                 var bulletRectangleCollider = bulletScript.GetBoundingBox();
                 bulletRectangleCollider.X = (int)bullet.Transform.Position.X - bulletRectangleCollider.Width / 2;
@@ -37,8 +35,7 @@ namespace SpriteEntity
                     // Checks for collision with enemies
                     foreach (var enemy in enemies)
                     {
-                        var enemyScriptComponent = enemy.Get<ScriptComponent>();
-                        var enemyScript = (EnemyScript)enemyScriptComponent.Scripts.FirstOrDefault();
+                        var enemyScript = enemy.Get<EnemyScript>();
 
                         if (!enemyScript.IsAlive) continue;
 

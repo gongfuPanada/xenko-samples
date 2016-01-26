@@ -33,9 +33,9 @@ namespace Constraints
             simulation = Entity.Get<PhysicsComponent>().Simulation;
             simulation.Gravity = new Vector3(0, -9, 0);
 
-            cubeRigidBody = cube.Get<PhysicsComponent>()[0].RigidBody;
+            cubeRigidBody = cube.Get<RigidbodyComponent>().Collider;
             cubeRigidBody.CanSleep = false;
-            sphereRigidBody = sphere.Get<PhysicsComponent>()[0].RigidBody;
+            sphereRigidBody = sphere.Get<RigidbodyComponent>().Collider;
             sphereRigidBody.CanSleep = false;
 
             // Create the UI

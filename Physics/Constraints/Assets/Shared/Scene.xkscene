@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 45f5d521-b83c-4608-937d-64f93812fba7
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: 44a86834-7780-4009-881b-b780aff153fc
@@ -17,103 +17,103 @@ Hierarchy:
                 Id: 13bffda7-d5fb-4941-8858-ce0284ec6fa2
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: fc13480f-6539-433b-aa78-22620da5b9dd
-                        Texture: d46cb653-bbdb-4b7b-9449-37beb6774cfd:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: da71ca88-7768-431d-b3e1-03d8127c6b27
                         Position: {X: 1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: fc13480f-6539-433b-aa78-22620da5b9dd
+                        Texture: d46cb653-bbdb-4b7b-9449-37beb6774cfd:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
                 Name: sphere
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 4ac89f6f-764b-453c-abf0-67d063c01c0d
-                        Model: bbff2b2d-985f-4986-9c34-f08cdeff8669:Sphere
-                        Materials:
-                            - null
-                    PhysicsComponent.Key:
-                        ~Id: 3888585a-5dad-45f7-a551-0627ec31de66
-                        Elements:
-                            - !RigidbodyElement
-                                ~Id: 9a3e92bf-7ad3-4d72-86b2-6dd090e69cd6
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                IsKinematic: false
-                                Mass: 1.0
-                                LinearDamping: 0.0
-                                AngularDamping: 0.0
-                                OverrideGravity: false
-                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                                NodeName: null
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: a7d50465-284d-482b-a6f4-9a38762e8475
-                                        Shape: 7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: dc72fb10-f8a9-4fbf-961a-a64b6dfe37b4
                         Position: {X: -2.0, Y: 0.0, Z: -9.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !RigidbodyComponent
+                        ~Id: 9a3e92bf-7ad3-4d72-86b2-6dd090e69cd6
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: a7d50465-284d-482b-a6f4-9a38762e8475
+                                Shape: 7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
+                    - !ModelComponent
+                        ~Id: 4ac89f6f-764b-453c-abf0-67d063c01c0d
+                        Model: bbff2b2d-985f-4986-9c34-f08cdeff8669:Sphere
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
                 Name: cube
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 4e9685dc-f8f8-45a3-a770-01253a1194aa
-                        Model: 140faeee-f1b9-4f29-91a2-14b11ae22718:Cube
-                        Materials:
-                            - null
-                    PhysicsComponent.Key:
-                        ~Id: 10249f66-af7e-4e88-b8fe-37f9c8f7381f
-                        Elements:
-                            - !RigidbodyElement
-                                ~Id: 0ee762a3-5c6a-4816-a3f7-1ce5efec5a16
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                IsKinematic: false
-                                Mass: 1.0
-                                LinearDamping: 0.0
-                                AngularDamping: 0.0
-                                OverrideGravity: false
-                                Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                                NodeName: null
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: 2130674b-0aaa-4e11-8289-b14acbe5df6e
-                                        Shape: f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: db696f49-772b-469a-8130-7933feee8c8c
                         Position: {X: 2.0, Y: 0.0, Z: -9.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !RigidbodyComponent
+                        ~Id: 0ee762a3-5c6a-4816-a3f7-1ce5efec5a16
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: 2130674b-0aaa-4e11-8289-b14acbe5df6e
+                                Shape: f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
+                    - !ModelComponent
+                        ~Id: 4e9685dc-f8f8-45a3-a770-01253a1194aa
+                        Model: 140faeee-f1b9-4f29-91a2-14b11ae22718:Cube
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: a47eeb82-2121-4fd6-b28a-8ec906ba83e1
                 Name: Directional light
                 Components:
-                    LightComponent.Key:
+                    - !TransformComponent
+                        ~Id: 4ab69ec5-018e-453a-8039-51ebe18f50e1
+                        Position: {X: -2.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 0.86, X: -0.42, Y: -0.22, Z: -0.17}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !LightComponent
                         ~Id: 14d7e916-557e-4c62-9b8c-2ea09292ca2b
                         Type: !LightDirectional
                             ~Id: 152e43fb-0b8c-4d01-a45e-984c95dd36be
@@ -130,33 +130,33 @@ Hierarchy:
                                 BiasParameters:
                                     ~Id: cadd46c0-1ff8-488e-932c-28211491d5f2
                         Intensity: 0.75
-                    TransformComponent.Key:
-                        ~Id: 4ab69ec5-018e-453a-8039-51ebe18f50e1
-                        Position: {X: -2.0, Y: 0.0, Z: 0.0}
-                        Rotation: {W: 0.86, X: -0.42, Y: -0.22, Z: -0.17}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: b7690cff-f2ad-4f33-ae7e-26573f84dd7f
                 Name: Camera
                 Components:
-                    CameraComponent.Key:
-                        ~Id: f78e32b9-12e9-4587-9032-34c0b683f570
-                        Projection: Perspective
-                        FarClipPlane: 100.0
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: ddbb0449-963f-4202-b7af-e3cb6c6d9c85
                         Position: {X: 0.0, Y: -1.25, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !CameraComponent
+                        ~Id: f78e32b9-12e9-4587-9032-34c0b683f570
+                        Projection: Perspective
+                        FarClipPlane: 100.0
             Design: {}
         -   Entity:
                 Id: e6289325-fb51-4913-84a6-96f4faa42f40
                 Name: Ambient light
                 Components:
-                    LightComponent.Key:
+                    - !TransformComponent
+                        ~Id: 403cb046-d7ea-4543-ab87-7ae3a92d9bb9
+                        Position: {X: -1.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !LightComponent
                         ~Id: 07072a06-e65e-4cbe-ab8e-b437d5a36158
                         Type: !LightAmbient
                             ~Id: 95631f14-da9c-4010-9380-39435aeab9e8
@@ -164,39 +164,27 @@ Hierarchy:
                                 ~Id: bd211633-3b02-44fe-bf48-946def4d7c0f
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
                         Intensity: 0.25
-                    TransformComponent.Key:
-                        ~Id: 403cb046-d7ea-4543-ab87-7ae3a92d9bb9
-                        Position: {X: -1.0, Y: 0.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: fffa40f6-69e7-46fb-909a-77b26bddb3a2
                 Name: Logic
                 Components:
-                    UIComponent.Key:
-                        ~Id: fbf47521-cdd8-4cc6-8902-7bd3cf961d70
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
-                    PhysicsComponent.Key:
-                        ~Id: b980d966-5444-4279-9076-c1cf85e8fa9c
-                        Elements: []
-                    ScriptComponent.Key:
-                        ~Id: 79b357bb-d6c0-43c1-a4e7-3ac86c6738a5
-                        Scripts:
-                            - !Constraints.DemoScript,Constraints.Game
-                                Id: 46650e10-9713-4da4-a9e9-b9e50263ec16
-                                Font: 62eec53a-f82a-460a-91c3-bf3c6ece95c2:Font
-                                cube:
-                                    Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
-                                sphere:
-                                    Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: a536572c-ec5e-4b1d-bdf3-4364fd5398d3
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !Constraints.DemoScript,Constraints.Game
+                        ~Id: 46650e10-9713-4da4-a9e9-b9e50263ec16
+                        Font: 62eec53a-f82a-460a-91c3-bf3c6ece95c2:Font
+                        cube:
+                            Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
+                        sphere:
+                            Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
+                    - !UIComponent
+                        ~Id: fbf47521-cdd8-4cc6-8902-7bd3cf961d70
+                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
             Design: {}
 SceneSettings:
     ~Id: 149f50ac-ff22-47de-9fef-74012dd59eaa
@@ -207,7 +195,7 @@ SceneSettings:
                 Name: null
                 Camera:
                     Entity: {Id: b7690cff-f2ad-4f33-ae7e-26573f84dd7f}
-                    Component: CameraComponent.Key
+                    Id: f78e32b9-12e9-4587-9032-34c0b683f570
         Layers: []
         Master:
             ~Id: 99b9fcc5-5b04-495f-8f2b-9e978c7c9950

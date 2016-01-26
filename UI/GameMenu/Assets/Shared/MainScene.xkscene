@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 9294c606-6173-4215-a8dc-0d5043d68333
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: e397c235-ffba-44db-b2c5-f251b3c80139
@@ -11,24 +11,21 @@ Hierarchy:
                 Id: 50f9b452-2012-451b-95cd-57ff4f313e4b
                 Name: UI
                 Components:
-                    UIComponent.Key:
-                        ~Id: 55e6243c-8b03-4f7a-8aba-c6fc8959c49a
-                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
-                        VirtualResolutionMode: FixedWidthFixedHeight
-                    ScriptComponent.Key:
-                        ~Id: 3cf54041-c096-4c50-8978-03f647a8dfbe
-                        Scripts:
-                            - !GameMenu.MainScript,GameMenu.Game
-                                Id: 22b8232d-2333-4478-8565-0a003fa813fe
-                                JapaneseFont: cb333065-ba29-41a4-b07c-eeb5d39b5cc6:JapaneseFont
-                                MainSceneImages: dba38b73-6f43-40ba-a4da-8e711695c7e8:MainSceneImages
-                                WesternFont: 6a45aa77-17aa-4fde-9acd-9452744e14ca:WesternFont
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 9acf979c-68b7-4e07-959c-e282a2740efb
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GameMenu.MainScript,GameMenu.Game
+                        ~Id: 22b8232d-2333-4478-8565-0a003fa813fe
+                        JapaneseFont: cb333065-ba29-41a4-b07c-eeb5d39b5cc6:JapaneseFont
+                        MainSceneImages: dba38b73-6f43-40ba-a4da-8e711695c7e8:MainSceneImages
+                        WesternFont: 6a45aa77-17aa-4fde-9acd-9452744e14ca:WesternFont
+                    - !UIComponent
+                        ~Id: 55e6243c-8b03-4f7a-8aba-c6fc8959c49a
+                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
+                        VirtualResolutionMode: FixedWidthFixedHeight
             Design: {}
 SceneSettings:
     ~Id: 1d1dff26-e925-415a-9895-add9f612b42d

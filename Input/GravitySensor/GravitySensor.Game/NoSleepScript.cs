@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 
 namespace GravitySensor
 {
@@ -13,13 +14,9 @@ namespace GravitySensor
     {
         public override Task Execute()
         {
-            var component = Entity.Get<PhysicsComponent>();
-            foreach (var physicsElement in component.Elements)
+            foreach (var physicsElement in Entity.GetAll<RigidbodyComponent>())
             {
-                if (physicsElement.RigidBody != null)
-                {
-                    physicsElement.RigidBody.CanSleep = false;
-                }
+                physicsElement.Collider.CanSleep = false;
             }
 
             return Task.FromResult(0);

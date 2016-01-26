@@ -1,6 +1,7 @@
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Physics;
 
 namespace Raycasting
 {
@@ -13,7 +14,7 @@ namespace Raycasting
         {
             if (Input.IsKeyDown(Keys.Space))
             {
-                var rigidBody = Entity.Get<PhysicsComponent>()[0].RigidBody;
+                var rigidBody = Entity.Get<RigidbodyComponent>().Collider;
 
                 rigidBody.Activate();
                 rigidBody.ApplyImpulse(new Vector3(0, 1, 0));

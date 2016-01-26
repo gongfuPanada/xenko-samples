@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c90e49d7-b3d8-4b19-b771-71cf4460a83b
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: 442725a6-920d-4154-8afe-6fc25b5294d4
@@ -14,52 +14,46 @@ Hierarchy:
                 Name: UI
                 Group: Group1
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: 7bdb7ad6-00cf-4676-beee-70f973166122
-                        Scripts:
-                            - !SimpleDynamicTexture.UIScript,SimpleDynamicTexture.Game
-                                Id: 1d983363-de80-406c-8058-fa5c0bed6ce0
-                                Font: 742bb234-8f43-4702-b9bb-396b663b4a2c:Font
-                    UIComponent.Key:
-                        ~Id: d039ac15-8363-43e7-9f34-d891cb850857
-                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
-                        VirtualResolutionMode: FixedWidthFixedHeight
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 60733af3-e0c3-4c24-9b5c-3bc81d9d57d4
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !SimpleDynamicTexture.UIScript,SimpleDynamicTexture.Game
+                        ~Id: 1d983363-de80-406c-8058-fa5c0bed6ce0
+                        Font: 742bb234-8f43-4702-b9bb-396b663b4a2c:Font
+                    - !UIComponent
+                        ~Id: d039ac15-8363-43e7-9f34-d891cb850857
+                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
+                        VirtualResolutionMode: FixedWidthFixedHeight
             Design: {}
         -   Entity:
                 Id: 3723d251-4a6e-4edb-9858-591bd4312d77
                 Name: MainScript
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: 71bbc9bb-f1ae-434a-81a9-687d6d31e2e9
-                        Scripts:
-                            - !SimpleDynamicTexture.TextureUpdateScript,SimpleDynamicTexture.Game
-                                Id: 50e271e0-83f5-4d14-a10a-d7a603ad9fca
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 6c3519de-0e76-4291-aa17-740b3b065d42
                         Position: {X: -1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !SimpleDynamicTexture.TextureUpdateScript,SimpleDynamicTexture.Game
+                        ~Id: 50e271e0-83f5-4d14-a10a-d7a603ad9fca
             Design: {}
         -   Entity:
                 Id: f9ccd718-d696-48f5-bbb9-846f8a531db5
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: c10c24b7-e307-4742-afc3-9cd25fba85dc
-                        Texture: d83b8b93-533b-4ed9-b064-9308965a6745:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: e8e937c3-def0-410e-adf5-4710d5e89d21
                         Position: {X: 1.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: c10c24b7-e307-4742-afc3-9cd25fba85dc
+                        Texture: d83b8b93-533b-4ed9-b064-9308965a6745:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: c4f80303-7169-4991-89ed-ca66c5f8333d

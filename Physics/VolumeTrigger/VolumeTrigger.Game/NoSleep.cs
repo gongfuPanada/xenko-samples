@@ -11,8 +11,7 @@ namespace VolumeTrigger
     {
         public override Task Execute()
         {
-            var pc = Entity.Get<PhysicsComponent>();
-            foreach (var element in pc.Elements)
+            foreach (var element in Entity.GetAll<PhysicsComponent>())
             {
                 if (element.Collider != null)
                 {

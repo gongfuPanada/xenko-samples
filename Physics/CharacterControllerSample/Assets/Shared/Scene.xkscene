@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: fd2e196c-93bf-4855-9d23-ff3e21d11929
@@ -15,144 +15,129 @@ Hierarchy:
                 Id: 178f557d-4b28-406a-a883-599a87f8bd67
                 Name: Ground
                 Components:
-                    PhysicsComponent.Key:
-                        ~Id: fbcaa1b3-8484-4695-b441-79c13ecccf94
-                        Elements:
-                            - !StaticColliderElement
-                                ~Id: a2e3d53d-39fa-49a5-979d-f1e0e90bef40
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: 004e8079-7573-4ff5-a12f-8c8ad2b31e69
-                                        Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 022c5692-5828-435f-9bc6-cbd4b5a9e7d4
                         Position: {X: 0.0, Y: -5.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !StaticColliderComponent
+                        ~Id: a2e3d53d-39fa-49a5-979d-f1e0e90bef40
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: 004e8079-7573-4ff5-a12f-8c8ad2b31e69
+                                Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
             Design: {}
         -   Entity:
                 Id: 2d5858c9-0df9-4c6c-a24d-65e699737666
                 Name: Enemy
                 Components:
-                    SpriteComponent.Key:
-                        ~Id: 57d45718-9fd5-4fdf-8cc9-ef1d2aa5f5a6
-                        SpriteProvider: !SpriteFromSheet
-                            ~Id: 37a0355a-0d3a-4556-96c0-f64e52b438f8
-                            Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    PhysicsComponent.Key:
-                        ~Id: 7f9a7d29-892d-4765-ad2e-1ece3ca4b190
-                        Elements:
-                            - !StaticColliderElement
-                                ~Id: 05b98de1-1d28-4b8c-a5b4-8db6de434369
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                IsTrigger: false
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: cec57efb-8df7-420e-8232-34805f8db18d
-                                        Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
-                    ScriptComponent.Key:
-                        ~Id: 8fe4ca48-db86-494d-bda2-f048ec6076a2
-                        Scripts:
-                            - !CharacterControllerSample.EnemyScript,CharacterControllerSample.Game
-                                Id: cf0aaa0c-5091-485a-b18d-50fec9ea3f2f
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 447c9352-bb92-4713-b0b4-89e3a67891bb
                         Position: {X: 0.0, Y: -4.6, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !CharacterControllerSample.EnemyScript,CharacterControllerSample.Game
+                        ~Id: cf0aaa0c-5091-485a-b18d-50fec9ea3f2f
+                    - !StaticColliderComponent
+                        ~Id: 05b98de1-1d28-4b8c-a5b4-8db6de434369
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: cec57efb-8df7-420e-8232-34805f8db18d
+                                Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
+                    - !SpriteComponent
+                        ~Id: 57d45718-9fd5-4fdf-8cc9-ef1d2aa5f5a6
+                        SpriteProvider: !SpriteFromSheet
+                            ~Id: 37a0355a-0d3a-4556-96c0-f64e52b438f8
+                            Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
         -   Entity:
                 Id: 5f802772-8c57-4a8f-8284-d161bc6c6323
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: b6361123-5213-472f-9ab4-46ce1f1e9556
-                        Texture: bbb04728-fa87-4c1e-9e1c-f191031914eb:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 274f6528-661f-4d47-b40a-a996d7ef135a
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: b6361123-5213-472f-9ab4-46ce1f1e9556
+                        Texture: bbb04728-fa87-4c1e-9e1c-f191031914eb:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2
                 Name: Camera
                 Components:
-                    CameraComponent.Key:
-                        ~Id: db798a71-bd42-4ee0-8633-b10f7fa15460
-                        Projection: Orthographic
-                        FarClipPlane: 10.0
-                        AspectRatio: 1.777
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: f407c0b6-b934-4b97-861f-e6f31760b85e
                         Position: {X: 0.0, Y: 0.0, Z: 5.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !CameraComponent
+                        ~Id: db798a71-bd42-4ee0-8633-b10f7fa15460
+                        Projection: Orthographic
+                        FarClipPlane: 10.0
+                        AspectRatio: 1.777
             Design: {}
         -   Entity:
                 Id: 9a60a268-6c2d-44d9-bac2-a4c569a73ef0
                 Name: Player
                 Components:
-                    SpriteComponent.Key:
+                    - !TransformComponent
+                        ~Id: 1f1e58ab-1fda-4bef-8f76-da03f1e62ebf
+                        Position: {X: -4.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !CharacterControllerSample.CharacterScript,CharacterControllerSample.Game
+                        ~Id: 85aa35f0-a9e3-4c55-9fd8-3f2eecdd6e9a
+                    - !CharacterComponent
+                        ~Id: 00c69a1d-afd5-4e3c-8b48-e605ba81f788
+                        CollisionGroup: 0
+                        CanCollideWith: 0
+                        ProcessCollisions: true
+                        Enabled: true
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: 0.0
+                        JumpSpeed: 5.0
+                        Gravity: -10.0
+                        ColliderShapes:
+                            - !ColliderShapeAssetDesc
+                                ~Id: 5cceb071-e3a7-4374-9204-1b79019a6114
+                                Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
+                    - !SpriteComponent
                         ~Id: b20862b2-f1f9-4fea-88a3-162e0b9aa502
                         SpriteProvider: !SpriteFromSheet
                             ~Id: e4e5fcad-9232-46d7-b59b-d3cfe620d749
                             Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
                         CurrentFrame: 2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    PhysicsComponent.Key:
-                        ~Id: 8801aa11-3b84-4330-a4ee-ac280b775d79
-                        Elements:
-                            - !CharacterElement
-                                ~Id: 00c69a1d-afd5-4e3c-8b48-e605ba81f788
-                                CollisionGroup: 0
-                                CanCollideWith: 0
-                                ProcessCollisions: true
-                                Enabled: true
-                                CanSleep: true
-                                Restitution: 0.0
-                                Friction: 0.5
-                                RollingFriction: 0.0
-                                FallSpeed: 10.0
-                                MaxSlope: 0.0
-                                JumpSpeed: 5.0
-                                Gravity: -10.0
-                                ColliderShapes:
-                                    - !ColliderShapeAssetDesc
-                                        ~Id: 5cceb071-e3a7-4374-9204-1b79019a6114
-                                        Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
-                    ScriptComponent.Key:
-                        ~Id: 3934482e-995d-4472-8d24-9666221b14c8
-                        Scripts:
-                            - !CharacterControllerSample.CharacterScript,CharacterControllerSample.Game
-                                Id: 85aa35f0-a9e3-4c55-9fd8-3f2eecdd6e9a
-                    TransformComponent.Key:
-                        ~Id: 1f1e58ab-1fda-4bef-8f76-da03f1e62ebf
-                        Position: {X: -4.0, Y: 0.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
 SceneSettings:
     ~Id: 2487527d-63c9-4a09-afca-822f4a8f4832
@@ -163,7 +148,7 @@ SceneSettings:
                 Name: null
                 Camera:
                     Entity: {Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2}
-                    Component: CameraComponent.Key
+                    Id: db798a71-bd42-4ee0-8633-b10f7fa15460
         Layers: []
         Master:
             ~Id: c888f57b-2d69-4163-a476-77a6858feea7

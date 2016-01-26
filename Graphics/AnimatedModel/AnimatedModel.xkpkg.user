@@ -35,7 +35,6 @@ Settings:
             FixedSizeGizmos: false
             GridVisible: true
             HiddenGizmos:
-                - Physics
                 - Transform
             RenderMode: Lighting
             RotationSnapActive: false

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 41bc08b1-d7db-4466-8661-663be2db1dbf
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: 550f6aec-4145-42b0-a64b-a89395a16477
@@ -22,242 +22,212 @@ Hierarchy:
                 Id: 1066a3c5-dc72-4ca6-b58d-066dd7a658d0
                 Name: SphereModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: ab8b856e-5db2-4f72-ae4f-47b9153e9fc6
-                        Model: bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 37e327fc-dd65-4b43-a7a1-8a655715d141
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: eb299280-6731-4070-b2e6-c1a19cc6d12e
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 04511b73-723c-4f00-bac1-82570b647da5
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: eb299280-6731-4070-b2e6-c1a19cc6d12e
+                    - !ModelComponent
+                        ~Id: ab8b856e-5db2-4f72-ae4f-47b9153e9fc6
+                        Model: bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: 1c51f7e5-429e-412a-9e44-c32dbb737e1a
                 Name: CubeModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 56400e2c-5154-4b19-a753-55f451a17237
-                        Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 9881f4a9-2416-4af6-9434-f3bcaa0643ca
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: f0383bea-d5a8-4c5f-8b29-eee0361fcf9d
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: b6ac5870-5619-42b9-b9ba-a5101d209f7d
                         Position: {X: 2.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: f0383bea-d5a8-4c5f-8b29-eee0361fcf9d
+                    - !ModelComponent
+                        ~Id: 56400e2c-5154-4b19-a753-55f451a17237
+                        Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: 1ef38a02-50b8-486a-a331-12d5ae5f500d
                 Name: CapsuleModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 927ab20a-88de-498b-8031-07738a8db390
-                        Model: c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 62471729-e89d-4210-b9b8-923aafe5162b
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: 18b6ac31-4ea6-457e-80db-0db5835068ee
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 4fb8b735-f8d5-4443-83cf-af00c2be89fd
                         Position: {X: 8.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: 18b6ac31-4ea6-457e-80db-0db5835068ee
+                    - !ModelComponent
+                        ~Id: 927ab20a-88de-498b-8031-07738a8db390
+                        Model: c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: 359ed8d5-5381-47fc-9448-6c3c724eb457
                 Name: Camera
                 Components:
-                    CameraComponent.Key:
-                        ~Id: b2758378-32c9-4a5b-8894-4035a933a2cf
-                        Projection: Perspective
-                        FarClipPlane: 100.0
-                    ScriptComponent.Key:
-                        ~Id: 2e69de80-2a59-4fc9-8776-dbe195d72002
-                        Scripts:
-                            - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
-                                Id: 59e4e024-706b-4875-8269-136020255fc8
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 4329c782-0ab0-4b4d-9750-976f27caa0ea
                         Position: {X: 0.0, Y: 1.5, Z: 4.0}
                         Rotation: {W: 0.9848077, X: -0.173648179, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
+                        ~Id: 59e4e024-706b-4875-8269-136020255fc8
+                    - !CameraComponent
+                        ~Id: b2758378-32c9-4a5b-8894-4035a933a2cf
+                        Projection: Perspective
+                        FarClipPlane: 100.0
             Design: {}
         -   Entity:
                 Id: 4e09cad0-435c-4c15-ab32-f97f95fc9ffe
                 Name: TorusModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 66789bdc-90d9-40f4-92d8-7e800e1e4456
-                        Model: af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 414828eb-752f-4367-b2ce-644681a94c80
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: 18d6a3ed-dff5-40a5-abd1-8a0227ca10f3
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: d2ea5f21-7dd2-4838-926c-1af12777b60c
                         Position: {X: -6.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: 18d6a3ed-dff5-40a5-abd1-8a0227ca10f3
+                    - !ModelComponent
+                        ~Id: 66789bdc-90d9-40f4-92d8-7e800e1e4456
+                        Model: af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: 9a2dbd16-9a89-4754-abb6-ec73aa2811f8
                 Name: GeoSphereModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 2d659803-0fcd-4ce4-8581-88db44cce14c
-                        Model: 6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: df611dbf-dda2-4c0e-86a8-cf40712d3fb6
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: a3c4af4c-a57d-416d-ad4d-ea62c3e29b16
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: f336cd57-3366-4105-9f74-d3193a4b1bf2
                         Position: {X: -2.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: a3c4af4c-a57d-416d-ad4d-ea62c3e29b16
+                    - !ModelComponent
+                        ~Id: 2d659803-0fcd-4ce4-8581-88db44cce14c
+                        Model: 6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: 9baef9fd-763c-4414-a47e-d6fd9958b69c
                 Name: PlaneModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 50edd5d5-58b7-4e34-9eb9-e23a0bc2f371
-                        Model: 32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 1bd2e382-4b6b-4382-8ca0-e163b1deef36
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: 9ecb0fd8-b028-4646-ae4c-b54299e2d98f
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 2e3a3375-3c97-4832-89bc-779c8b7aeb2d
                         Position: {X: 4.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: 9ecb0fd8-b028-4646-ae4c-b54299e2d98f
+                    - !ModelComponent
+                        ~Id: 50edd5d5-58b7-4e34-9eb9-e23a0bc2f371
+                        Model: 32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: bd7fb0b4-dd92-419b-96da-6490444278e2
                 Name: ConeModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 9996df6e-2763-433b-90e2-3e2aadd8ea37
-                        Model: 6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 65be7ade-e217-418c-bfb4-f4f98f67a57c
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: f10ef5af-b6d3-4844-a931-56f7e11c62f2
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 67e44566-4d09-4e70-ac49-5b1d4db3f5e8
                         Position: {X: 6.0, Y: -0.75, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: f10ef5af-b6d3-4844-a931-56f7e11c62f2
+                    - !ModelComponent
+                        ~Id: 9996df6e-2763-433b-90e2-3e2aadd8ea37
+                        Model: 6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: ccbde703-076b-4d86-b3ff-f0a00e49a6a3
                 Name: TeapotModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 18538e52-28f7-4b3f-89cf-04f75470319c
-                        Model: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 858f6d18-b934-4926-a445-61433a8a4129
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: 4b230ebc-3591-4f0e-b6e6-e5486f33ca14
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 7d68d53a-856f-4035-ac7d-610c0d49ca11
                         Position: {X: -8.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: 4b230ebc-3591-4f0e-b6e6-e5486f33ca14
+                    - !ModelComponent
+                        ~Id: 18538e52-28f7-4b3f-89cf-04f75470319c
+                        Model: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: cec0dc3f-1d45-44b4-bb75-03b03c7b690a
                 Name: Ambient light
                 Components:
-                    LightComponent.Key:
+                    - !TransformComponent
+                        ~Id: 5aada7b1-3713-4c85-84dc-456227bf6bc5
+                        Position: {X: 0.0, Y: 300.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !LightComponent
                         ~Id: 79787414-a00d-4b16-a52c-9293f3626b59
                         Type: !LightAmbient
                             ~Id: a92ca1a3-fb3e-437e-9cd3-c63bd8766766
                             Color: !ColorRgbProvider
                                 ~Id: 74ea99ee-ffb8-4f14-bbf1-3bb6e81f41a5
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
-                    TransformComponent.Key:
-                        ~Id: 5aada7b1-3713-4c85-84dc-456227bf6bc5
-                        Position: {X: 0.0, Y: 300.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
             Design: {}
         -   Entity:
                 Id: d27b3742-0a08-4807-abe9-c2f2a7f35a35
                 Name: CylinderModel
                 Components:
-                    ModelComponent.Key:
-                        ~Id: 508d38f8-aace-4657-b7a0-48fa51df8caf
-                        Model: 1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
-                        Materials:
-                            - null
-                    ScriptComponent.Key:
-                        ~Id: 3bf21bcc-8319-4ebe-9ad8-e5f6236f5064
-                        Scripts:
-                            - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
-                                Id: a8068f05-a902-4304-9e18-b6e500fba716
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: cc658cd5-2fb0-422f-8231-a077e12834e3
                         Position: {X: -4.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !GeometricPrimitives.RotateEntityScript,GeometricPrimitives.Game
+                        ~Id: a8068f05-a902-4304-9e18-b6e500fba716
+                    - !ModelComponent
+                        ~Id: 508d38f8-aace-4657-b7a0-48fa51df8caf
+                        Model: 1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
+                        Materials:
+                            - null
             Design: {}
         -   Entity:
                 Id: d62e02cb-f3fc-43ae-b6aa-07eccae98182
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: d600dd93-b5a6-4f55-9f5d-c37bdd2a91fc
-                        Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: f77d5d70-38e7-45d9-8fac-b36fc059ae69
                         Position: {X: 0.0, Y: 0.0, Z: -3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: d600dd93-b5a6-4f55-9f5d-c37bdd2a91fc
+                        Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: 91170d5b-aa57-4171-9551-246791088def
@@ -268,7 +238,7 @@ SceneSettings:
                 Name: null
                 Camera:
                     Entity: {Id: 359ed8d5-5381-47fc-9448-6c3c724eb457}
-                    Component: CameraComponent.Key
+                    Id: b2758378-32c9-4a5b-8894-4035a933a2cf
         Layers: []
         Master:
             ~Id: f8810ffb-b113-48bf-868a-0dc42f1da984

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 2871eb8a-27ef-40c9-a40a-9026b53ab794
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
     ~Id: 91262080-3992-4258-af19-619bb157b461
@@ -12,32 +12,29 @@ Hierarchy:
                 Id: 88ed0ede-01dc-46e3-99fb-a4851554899e
                 Name: Background
                 Components:
-                    BackgroundComponent.Key:
-                        ~Id: 33a3b73b-938e-463b-a0d3-b18b110d68a0
-                        Texture: 175006e8-6351-4365-9778-73d54aa5ea9f:XenkoBackground
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 5562ca80-edfe-4545-a347-5f33ecd47fea
                         Position: {X: 0.0, Y: 0.0, Z: -2.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BackgroundComponent
+                        ~Id: 33a3b73b-938e-463b-a0d3-b18b110d68a0
+                        Texture: 175006e8-6351-4365-9778-73d54aa5ea9f:XenkoBackground
             Design: {}
         -   Entity:
                 Id: cf39fbe2-0062-408e-954f-ea56b7b76b97
                 Name: BallScript
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: ff553f45-f982-4917-9d72-be30e7ea2ad2
-                        Scripts:
-                            - !SimpleSprite.BallScript,SimpleSprite.Game
-                                Id: 0d68d8c0-1856-496f-a985-c52da27b163a
-                                Sphere: ceda18e2-1df7-4694-bac1-fdecc81bc570:sphere
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: f6c378d9-1136-4077-88ac-626d6b1eeb9d
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !SimpleSprite.BallScript,SimpleSprite.Game
+                        ~Id: 0d68d8c0-1856-496f-a985-c52da27b163a
+                        Sphere: ceda18e2-1df7-4694-bac1-fdecc81bc570:sphere
             Design: {}
 SceneSettings:
     ~Id: 2a70d72f-0788-4e3c-821b-cf97e96ea140

@@ -48,7 +48,7 @@ namespace SpaceEscape.Background
         public override void Start()
         {
             var levelBlockEntity = LevelBlocks.Entities.First(x => x.Name == "LevelBlocks");
-            levelGenerator = levelBlockEntity.Get(ScriptComponent.Key).Scripts.OfType<LevelGenerator>().First();
+            levelGenerator = levelBlockEntity.Get<LevelGenerator>();
 
             RunningDistance = 0f;
 
