@@ -15,7 +15,7 @@ namespace VolumeTrigger
         private Vector3 startLocation;
         private Quaternion startRotation;
 
-        private RigidBody rigidBody;
+        private RigidbodyComponent rigidBody;
 
         public override Task Execute()
         {
@@ -23,7 +23,7 @@ namespace VolumeTrigger
             startRotation = Entity.Transform.Rotation;
 
             //grab a reference to the falling sphere's rigidbody
-            rigidBody = Entity.Get<RigidbodyComponent>().Collider;
+            rigidBody = Entity.Get<RigidbodyComponent>();
 
             SimpleMessage.Start += SimpleMessage_Start;
             SimpleMessage.Stop += SimpleMessage_Stop;
@@ -34,7 +34,7 @@ namespace VolumeTrigger
         private void SimpleMessage_Stop(object sender, EventArgs e)
         {
             //when out revert to kinematic and old starting position
-            rigidBody.Type = RigidBodyTypes.Kinematic;
+            rigidBody.RigidBodyType = RigidBodyTypes.Kinematic;
             //reset position
             Entity.Transform.Position = startLocation;
             Entity.Transform.Rotation = startRotation;
@@ -45,7 +45,7 @@ namespace VolumeTrigger
         private void SimpleMessage_Start(object sender, EventArgs e)
         {
             //switch to dynamic and awake the rigid body
-            rigidBody.Type = RigidBodyTypes.Dynamic;
+            rigidBody.RigidBodyType = RigidBodyTypes.Dynamic;
             rigidBody.Activate(true); //need to awake to object
         }
     }

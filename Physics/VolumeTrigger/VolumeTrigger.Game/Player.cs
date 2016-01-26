@@ -14,16 +14,16 @@ namespace VolumeTrigger
     public class Player : SyncScript
     {
         private const float speed = 0.25f;
-        private Character character;
+        private CharacterComponent character;
 
         public override void Start()
         {
-            character = Entity.Get<CharacterComponent>().Collider;
+            character = Entity.Get<CharacterComponent>();
             character.Gravity = -10.0f;
 			var rigidBodyComponent = Entity.Get<RigidbodyComponent>();
             if (rigidBodyComponent != null)
             {
-				rigidBodyComponent.Collider.CanSleep = false;                
+				rigidBodyComponent.CanSleep = false;                
             }
         }
 

@@ -11,7 +11,7 @@ namespace VolumeTrigger
     {
         public override async Task Execute()
         {
-            var trigger = Entity.Get<PhysicsComponent>().Collider;
+            var trigger = Entity.Get<PhysicsComponent>();
 
             //start out state machine
             while (Game.IsRunning)

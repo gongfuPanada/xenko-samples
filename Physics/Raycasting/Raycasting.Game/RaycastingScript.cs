@@ -47,7 +47,7 @@ namespace Raycasting
             var result = simulation.Raycast(unprojectedNear, unprojectedFar);
             if (!result.Succeeded || result.Collider == null) return;
 
-            var rigidBody = result.Collider as RigidBody;
+            var rigidBody = result.Collider as RigidbodyComponent;
             if (rigidBody == null) return;
 
             rigidBody.Activate();

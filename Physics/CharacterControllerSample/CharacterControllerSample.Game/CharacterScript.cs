@@ -26,7 +26,7 @@ namespace CharacterControllerSample
 
         private const float speed = 0.075f;
 
-        private Character playerController;
+        private CharacterComponent playerController;
         private SpriteComponent playerSprite;
 
         [DataMember(Mask = LiveScriptingMask)] // keep the value when reloading the script (live-scripting)
@@ -56,13 +56,13 @@ namespace CharacterControllerSample
         public override void Start()
         {
             playerSprite = Entity.Get<SpriteComponent>();
-            playerController = Entity.Get<CharacterComponent>().Collider;
+            playerController = Entity.Get<CharacterComponent>();
 
             //Please remember that in the GameStudio element the parameter Step Height is extremely important, it not set properly it will cause the entity to snap fast to the ground
             playerController.JumpSpeed = 5.0f;
             playerController.Gravity = -10.0f;
             playerController.FallSpeed = 10.0f;
-            playerController.ContactsAlwaysValid = true;
+            playerController.ProcessCollisions = true;
 
             if(!IsLiveReloading)
             {

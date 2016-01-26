@@ -23,8 +23,8 @@ namespace Constraints
         private readonly List<Action> constraintsList = new List<Action>();
         private int constraintIndex;
 
-        private RigidBody cubeRigidBody;
-        private RigidBody sphereRigidBody;
+        private RigidbodyComponent cubeRigidBody;
+        private RigidbodyComponent sphereRigidBody;
 
         private TextBlock constraintNameBlock;
         
@@ -33,9 +33,9 @@ namespace Constraints
             simulation = this.GetSimulation();
             simulation.Gravity = new Vector3(0, -9, 0);
 
-            cubeRigidBody = cube.Get<RigidbodyComponent>().Collider;
+            cubeRigidBody = cube.Get<RigidbodyComponent>();
             cubeRigidBody.CanSleep = false;
-            sphereRigidBody = sphere.Get<RigidbodyComponent>().Collider;
+            sphereRigidBody = sphere.Get<RigidbodyComponent>();
             sphereRigidBody.CanSleep = false;
 
             // Create the UI
@@ -69,7 +69,7 @@ namespace Constraints
             constraintsList[constraintIndex]();
 
             //Add a script for the slider constraint, to apply an impulse on collision
-            cubeRigidBody.ContactsAlwaysValid = true;
+            cubeRigidBody.ProcessCollisions = true;
             Script.AddTask(async () =>
             {
                 while (Game.IsRunning)

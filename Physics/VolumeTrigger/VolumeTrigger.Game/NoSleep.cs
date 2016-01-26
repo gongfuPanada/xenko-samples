@@ -13,9 +13,9 @@ namespace VolumeTrigger
         {
             foreach (var element in Entity.GetAll<PhysicsComponent>())
             {
-                if (element.Collider != null)
+                if (element != null)
                 {
-                    element.Collider.CanSleep = false;
+                    element.CanSleep = false;
                 }
             }
             return Task.FromResult(0);
