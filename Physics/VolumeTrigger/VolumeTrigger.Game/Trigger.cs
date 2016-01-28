@@ -12,18 +12,23 @@ namespace VolumeTrigger
         public override async Task Execute()
         {
             var trigger = Entity.Get<PhysicsComponent>();
+            trigger.ProcessCollisions = true;
 
             //start out state machine
             while (Game.IsRunning)
             {
                 //wait for entities coming in
-                await trigger.FirstCollision();
+                var firstCollision = await trigger.NewCollision();
 
                 SimpleMessage.OnStart();
 
                 //now wait for entities exiting
-                await trigger.AllCollisionsEnded();
-
+                Collision collision;
+                do
+                {
+                    collision = await trigger.CollisionEnded();
+                } while (collision != firstCollision);
+               
                 SimpleMessage.OnStop();
             }
         }
