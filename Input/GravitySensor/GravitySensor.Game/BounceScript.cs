@@ -11,7 +11,7 @@ namespace GravitySensor
         {
             foreach (var physicsElement in Entity.GetAll<PhysicsComponent>())
             {
-                physicsElement.Collider.Restitution = 0.9f;
+                physicsElement.Restitution = 0.9f;
             }
         }
     }

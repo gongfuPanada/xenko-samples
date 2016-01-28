@@ -18,7 +18,6 @@ namespace SpriteStudioDemo
 
         public override async Task Execute()
         {
-            var phy = Entity.Get<RigidbodyComponent>();
             while(Game.IsRunning)
             {
                 await Script.NextFrame();

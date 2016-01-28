@@ -16,7 +16,7 @@ namespace GravitySensor
         {
             foreach (var physicsElement in Entity.GetAll<RigidbodyComponent>())
             {
-                physicsElement.Collider.CanSleep = false;
+                physicsElement.CanSleep = false;
             }
 
             return Task.FromResult(0);

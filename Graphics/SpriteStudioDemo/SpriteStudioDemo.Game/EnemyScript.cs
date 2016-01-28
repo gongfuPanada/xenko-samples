@@ -31,7 +31,7 @@ namespace SpriteStudioDemo
         private async Task Reset()
         {
             rigidbodyElement.IsKinematic = true; //sto motion and set kinematic (listen to our transform changes)
-            rigidbodyElement.Collider.IsTrigger = true; //set as ghost (bullets will go thru)
+            rigidbodyElement.IsTrigger = true; //set as ghost (bullets will go thru)
 
             Entity.Transform.Position.Y = enemyInitPositionY;
 
@@ -52,8 +52,8 @@ namespace SpriteStudioDemo
             await Script.NextFrame();
 
             rigidbodyElement.IsKinematic = false;
-            rigidbodyElement.Collider.IsTrigger = false;
-            rigidbodyElement.Collider.Activate();
+            rigidbodyElement.IsTrigger = false;
+            rigidbodyElement.Activate();
         }
 
         Task exploding;
@@ -61,7 +61,7 @@ namespace SpriteStudioDemo
         public void Explode()
         {
             rigidbodyElement.IsKinematic = true;
-            rigidbodyElement.Collider.IsTrigger = true;
+            rigidbodyElement.IsTrigger = true;
 
             if (playingAnimation == null || playingAnimation.Name != "Dead")
             {
@@ -87,8 +87,8 @@ namespace SpriteStudioDemo
             animationComponent = Entity.Get<AnimationComponent>();
 
             rigidbodyElement = Entity.Get<RigidbodyComponent>();
-            rigidbodyElement.Collider.LinearFactor = new Vector3(0, 1, 0); //allow only Y motion
-            rigidbodyElement.Collider.AngularFactor = new Vector3(0, 0, 0); //allow no rotation
+            rigidbodyElement.LinearFactor = new Vector3(0, 1, 0); //allow only Y motion
+            rigidbodyElement.AngularFactor = new Vector3(0, 0, 0); //allow no rotation
 
             await Reset();
 

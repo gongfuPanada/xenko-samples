@@ -14,7 +14,7 @@ namespace GravitySensor
 
         public override void Start()
         {
-            simulation = Entity.Get<PhysicsComponent>().Simulation;
+            simulation = this.GetSimulation();
             simulation.Gravity = new Vector3(0, 0, 0);
 
             if (Input.Gravity.IsSupported) // enables the orientation sensor.

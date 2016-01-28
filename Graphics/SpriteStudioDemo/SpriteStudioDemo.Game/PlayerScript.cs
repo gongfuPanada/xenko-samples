@@ -147,9 +147,9 @@ namespace SpriteStudioDemo
 
                     SceneSystem.SceneInstance.Scene.Entities.Add(bullet);
 
-                    rb.Collider.LinearFactor = new Vector3(1, 0, 0);
-                    rb.Collider.AngularFactor = new Vector3(0, 0, 0);
-                    rb.Collider.ApplyImpulse(isAgentFacingRight ? new Vector3(25, 0, 0) : new Vector3(-25, 0, 0));
+                    rb.LinearFactor = new Vector3(1, 0, 0);
+                    rb.AngularFactor = new Vector3(0, 0, 0);
+                    rb.ApplyImpulse(isAgentFacingRight ? new Vector3(25, 0, 0) : new Vector3(-25, 0, 0));
 
                     // Start animation for shooting
                     CurrentAgentAnimation = AgentAnimation.Shoot;
