@@ -1,0 +1,10 @@
+!GameSettingsAsset
+Id: e1695e99-c41e-4958-b3d5-9957f3f0232f
+Tags: []
+DefaultScene: a382e22e-7ad1-41a5-90da-7a3d4076bc14:MainScene
+BackBufferWidth: 1280
+BackBufferHeight: 720
+DefaultGraphicsProfile: Level_9_1
+DisplayOrientation: LandscapeRight
+TextureQuality: Fast
+RenderingMode: LDR

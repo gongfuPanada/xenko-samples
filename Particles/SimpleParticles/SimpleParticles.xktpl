@@ -1,0 +1,11 @@
+!TemplateSample
+Id: 35C3FB4D-2A6E-40EB-825E-D4E5670FEE78
+Name: Simple Particles Sample
+Scope: Session
+Description: PLACEHOLDER TEXT Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet odio mattis, pharetra risus ac, placerat dui.
+FullDescription: PLACEHOLDER TEXT Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet odio mattis, pharetra risus ac, placerat dui. Cras posuere laoreet finibus. Vivamus nec augue odio. Cras ante tortor, ornare et odio bibendum, efficitur vulputate enim.
+Group: Samples/Particles
+Icon: ../.xktpl/NewParticles.png
+DefaultOutputName: SimpleParticles
+Screenshots:
+    - .xktpl/screenshot_small.jpg
