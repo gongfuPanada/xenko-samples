@@ -1,0 +1,9 @@
+!GameSettingsAsset
+Id: d7603d7d-449d-4790-a5a0-0f14fb9305bd
+Tags: []
+DefaultScene: d78d894a-a339-4f63-86aa-b48cd6ff1079:MainScene
+BackBufferWidth: 1280
+BackBufferHeight: 720
+DefaultGraphicsProfile: Level_10_0
+DisplayOrientation: LandscapeRight
+TextureQuality: Fast

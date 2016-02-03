@@ -1,0 +1,43 @@
+!Package
+Id: 79443d57-5b95-44f9-9dcd-c3216807764a
+SerializedVersion: {Assets: 0.0.2}
+Tags: []
+Meta:
+    Name: CustomParticles
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: CustomParticles
+    Dependencies:
+        -   Name: Xenko
+            Version: 1.6.0-beta
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: CustomParticles.Game/Effects
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 5f468913-a0e5-4728-9146-2c46ed949809
+                Location: CustomParticles.Game/CustomParticles.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 52f5637f-edca-4a0d-ae2c-221e65cb75ca
+                Location: CustomParticles.Windows/CustomParticles.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []

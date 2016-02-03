@@ -1,0 +1,479 @@
+!SceneAsset
+Id: d78d894a-a339-4f63-86aa-b48cd6ff1079
+SerializedVersion: {Xenko: 1.6.0-beta}
+Tags: []
+Hierarchy:
+    ~Id: 00c2919c-b822-42b8-97a1-50b5e2c8f471
+    RootEntities:
+        - d41cee88-3754-4bf7-aacf-578472ff5570
+        - 52c7c269-0bd5-46dd-ba96-1ab0dd9d1c42
+        - 468c7ef8-b647-4dbc-8c30-861173b84fe2
+        - d9b9acd9-1bc9-48ae-af73-d9df5e120a80
+        - 8e731909-f0c2-420e-9329-fe9a2890c477
+        - 79ed5cbf-60bb-4912-89f5-3c1862a01b98
+        - f08d1282-a256-4c2c-aa94-048dd95eed88
+    Entities:
+        -   Entity:
+                Id: 468c7ef8-b647-4dbc-8c30-861173b84fe2
+                Name: Directional light
+                Components:
+                    - !TransformComponent
+                        ~Id: 78ad12fa-0101-4843-b615-2bd7e8c3c0c5
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {W: 0.7912401, X: -0.5540323, Y: 0.212012157, Z: 0.1484525}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !LightComponent
+                        ~Id: 03023972-b6b3-41a2-8834-5f8103c8567e
+                        Type: !LightDirectional
+                            ~Id: e476cc11-01d8-43e8-a4ca-613c92a62076
+                            Color: !ColorRgbProvider
+                                ~Id: 13862dd8-1da4-4168-8c1e-e90d4ab4876d
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                ~Id: 94b68f06-ac11-4c5e-aab1-406fd4277a52
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    ~Id: 29e5e835-ec56-4e09-84c7-9d6f8dfb4121
+                                    FilterSize: Filter5x5
+                                Size: XLarge
+                                DepthRange:
+                                    ~Id: a8110026-0945-48ac-8ec2-b4b7c3596d25
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic
+                                    ~Id: 3749b252-8201-45ea-9ba3-ec894c3ce068
+                                BiasParameters:
+                                    ~Id: 414fe1d0-14cf-4105-b902-98e0a85dd5ea
+                        Intensity: 5.0
+            Design: {}
+        -   Entity:
+                Id: 52c7c269-0bd5-46dd-ba96-1ab0dd9d1c42
+                Name: Camera
+                Components:
+                    - !TransformComponent
+                        ~Id: d7d18dee-f2c3-4990-a4d7-5414a0f795ca
+                        Position: {X: 4.0, Y: 3.0, Z: 0.0}
+                        Rotation: {W: 0.6963642, X: -0.1227878, Y: 0.6963642, Z: 0.1227878}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !CameraComponent
+                        ~Id: 2570e3c2-feb9-4dab-acc6-43fa58bd7db7
+                        Projection: Perspective
+            Design: {}
+        -   Entity:
+                Id: 79ed5cbf-60bb-4912-89f5-3c1862a01b98
+                Name: ConeEmitter30
+                Components:
+                    - !TransformComponent
+                        ~Id: 10c31666-84ab-40ae-8593-833e427b2fcf
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 0.9659258, X: -0.258819044, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ParticleSystemComponent
+                        ~Id: 1f3c0c39-579d-4f02-9a57-900e4013141c
+                        Control:
+                            ~Id: 8843eb25-3dee-4f59-940c-03fb32788492
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            ~Id: 4b3740fd-181a-423d-a4a8-2e7067a34b22
+                            Settings:
+                                ~Id: c7263d7e-7205-4f61-ad7a-50b624debe7c
+                            BoundingShape: !BoundingBoxStatic
+                                ~Id: cba3896b-1106-44f4-a68c-3e8225d5e174
+                                Minimum: {X: -1.0, Y: -1.0, Z: -1.0}
+                                Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
+                            Emitters:
+                                -   ~Id: 419cc903-39d2-474e-ad95-09b8596d749c
+                                    MaxParticlesOverride: 0
+                                    ParticleMinLifetime: 1.0
+                                    ParticleMaxLifetime: 1.0
+                                    SimulationSpace: World
+                                    RandomSeedMethod: Time
+                                    SortingPolicy: None
+                                    ShapeBuilder: !CustomParticleShape
+                                        ~Id: ab3b02be-9ecb-4278-ba47-f4a158c18c15
+                                        FixYAxis: true
+                                    Material: !ParticleMaterialComputeColor
+                                        ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
+                                        AlphaAdditive: 0.0
+                                        FaceCulling: CullNone
+                                        ComputeColor: !ComputeFloat4
+                                            Value: {X: 5.0, Y: 5.0, Z: 5.0, W: 1.0}
+                                        UVBuilder: null
+                                    Spawners:
+                                        - !CustomParticleSpawner
+                                            ~Id: 7f6ab630-b8ee-4fd9-b90c-66e6b4dc235c
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 1000.0
+                                            BurstCount: 50.0
+                                    Initializers:
+                                        - !InitialSizeSeed
+                                            ~Id: 970f8eb7-7e35-467f-ac7c-d4e2da3fb22a
+                                            InheritLocation: Scale
+                                            ParticleLocator:
+                                                ~Id: 8b62da6f-cd5c-4732-a75c-98ff64e73585
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            SeedOffset: 0
+                                            RandomSize: {X: 0.05, Y: 0.02}
+                                        - !CustomParticleInitializer
+                                            ~Id: ac42c5df-6aeb-43bd-ac75-558566adbf27
+                                            DebugDraw: true
+                                            InheritLocation: Position, Rotation, Scale
+                                            ParticleLocator:
+                                                ~Id: 2863db4f-c8d1-4072-b0f9-5ef7d73597ce
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            SeedOffset: 0
+                                            Angle: 30.0
+                                            Strength: 1.0
+                                    Updaters:
+                                        - !CustomParticleUpdater
+                                            ~Id: a651476b-ac41-41aa-97e5-e458e174db64
+                                            InheritLocation: Position, Rotation, Scale
+                                            ParticleLocator:
+                                                ~Id: fce3c844-a75c-4c26-adab-3d2883069ea2
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Curve: CosSin
+            Design: {}
+        -   Entity:
+                Id: 8e731909-f0c2-420e-9329-fe9a2890c477
+                Name: ConeEmitter15
+                Components:
+                    - !TransformComponent
+                        ~Id: 10c31666-84ab-40ae-8593-833e427b2fcf
+                        Position: {X: 0.0, Y: 0.0, Z: -0.00729335845}
+                        Rotation: {W: 0.997858942, X: -0.06540313, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ParticleSystemComponent
+                        ~Id: 1f3c0c39-579d-4f02-9a57-900e4013141c
+                        Control:
+                            ~Id: 8843eb25-3dee-4f59-940c-03fb32788492
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            ~Id: 4b3740fd-181a-423d-a4a8-2e7067a34b22
+                            Settings:
+                                ~Id: c7263d7e-7205-4f61-ad7a-50b624debe7c
+                            BoundingShape: !BoundingBoxStatic
+                                ~Id: cba3896b-1106-44f4-a68c-3e8225d5e174
+                                Minimum: {X: -1.0, Y: -1.0, Z: -1.0}
+                                Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
+                            Emitters:
+                                -   ~Id: 419cc903-39d2-474e-ad95-09b8596d749c
+                                    MaxParticlesOverride: 0
+                                    ParticleMinLifetime: 1.0
+                                    ParticleMaxLifetime: 1.0
+                                    SimulationSpace: World
+                                    RandomSeedMethod: Time
+                                    SortingPolicy: None
+                                    ShapeBuilder: !CustomParticleShape
+                                        ~Id: ab3b02be-9ecb-4278-ba47-f4a158c18c15
+                                        FixYAxis: true
+                                    Material: !ParticleMaterialComputeColor
+                                        ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
+                                        AlphaAdditive: 0.0
+                                        FaceCulling: CullNone
+                                        ComputeColor: !ComputeFloat4
+                                            Value: {X: 5.0, Y: 5.0, Z: 5.0, W: 1.0}
+                                        UVBuilder: null
+                                    Spawners:
+                                        - !CustomParticleSpawner
+                                            ~Id: 7f6ab630-b8ee-4fd9-b90c-66e6b4dc235c
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 1000.0
+                                            BurstCount: 50.0
+                                    Initializers:
+                                        - !InitialSizeSeed
+                                            ~Id: 970f8eb7-7e35-467f-ac7c-d4e2da3fb22a
+                                            InheritLocation: Scale
+                                            ParticleLocator:
+                                                ~Id: 8b62da6f-cd5c-4732-a75c-98ff64e73585
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            SeedOffset: 0
+                                            RandomSize: {X: 0.05, Y: 0.02}
+                                        - !CustomParticleInitializer
+                                            ~Id: ac42c5df-6aeb-43bd-ac75-558566adbf27
+                                            DebugDraw: true
+                                            InheritLocation: Position, Rotation, Scale
+                                            ParticleLocator:
+                                                ~Id: 2863db4f-c8d1-4072-b0f9-5ef7d73597ce
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            SeedOffset: 0
+                                            Angle: 15.0
+                                            Strength: 2.0
+                                    Updaters:
+                                        - !CustomParticleUpdater
+                                            ~Id: a651476b-ac41-41aa-97e5-e458e174db64
+                                            InheritLocation: Position, Rotation, Scale
+                                            ParticleLocator:
+                                                ~Id: fce3c844-a75c-4c26-adab-3d2883069ea2
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Curve: CosSin
+            Design: {}
+        -   Entity:
+                Id: d41cee88-3754-4bf7-aacf-578472ff5570
+                Name: Ground
+                Components:
+                    - !TransformComponent
+                        ~Id: f9d474d7-e112-4a4d-a63e-fa6baea49936
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ModelComponent
+                        ~Id: a7930162-b804-4d29-8961-626d969c3213
+                        Model: 13c8ae39-023d-4f87-9270-f405701847e7:Ground
+                        Materials: []
+            Design: {}
+        -   Entity:
+                Id: d9b9acd9-1bc9-48ae-af73-d9df5e120a80
+                Name: Skybox
+                Components:
+                    - !TransformComponent
+                        ~Id: 09f4a5f4-f0e9-4375-a31b-563de89c8add
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !SkyboxComponent
+                        ~Id: b3649e1f-75d1-40a5-aace-3536d9c47559
+                        Skybox: 673c8704-1da8-40df-a4d7-f5c0a50e0368:Skybox
+                        Intensity: 3.0
+                    - !LightComponent
+                        ~Id: 38f0a3b5-0052-47a6-80e4-e1a5d2fd3a86
+                        Type: !LightSkybox
+                            ~Id: ad8fdb2e-e90e-4fd9-b5d9-41253bdf15c8
+                        Intensity: 0.25
+            Design: {}
+        -   Entity:
+                Id: f08d1282-a256-4c2c-aa94-048dd95eed88
+                Name: ConeEmitter45
+                Components:
+                    - !TransformComponent
+                        ~Id: 10c31666-84ab-40ae-8593-833e427b2fcf
+                        Position: {X: 0.0, Y: 0.0, Z: -3.62694263E-05}
+                        Rotation: {W: 0.8314696, X: -0.555570245, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ParticleSystemComponent
+                        ~Id: 1f3c0c39-579d-4f02-9a57-900e4013141c
+                        Control:
+                            ~Id: 8843eb25-3dee-4f59-940c-03fb32788492
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            ~Id: 4b3740fd-181a-423d-a4a8-2e7067a34b22
+                            Settings:
+                                ~Id: c7263d7e-7205-4f61-ad7a-50b624debe7c
+                            BoundingShape: !BoundingBoxStatic
+                                ~Id: cba3896b-1106-44f4-a68c-3e8225d5e174
+                                Minimum: {X: -1.0, Y: -1.0, Z: -1.0}
+                                Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
+                            Emitters:
+                                -   ~Id: 419cc903-39d2-474e-ad95-09b8596d749c
+                                    MaxParticlesOverride: 0
+                                    ParticleMinLifetime: 1.0
+                                    ParticleMaxLifetime: 1.0
+                                    SimulationSpace: World
+                                    RandomSeedMethod: Time
+                                    SortingPolicy: None
+                                    ShapeBuilder: !CustomParticleShape
+                                        ~Id: ab3b02be-9ecb-4278-ba47-f4a158c18c15
+                                        FixYAxis: true
+                                    Material: !ParticleMaterialComputeColor
+                                        ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
+                                        AlphaAdditive: 0.0
+                                        FaceCulling: CullNone
+                                        ComputeColor: !ComputeFloat4
+                                            Value: {X: 5.0, Y: 5.0, Z: 5.0, W: 1.0}
+                                        UVBuilder: null
+                                    Spawners:
+                                        - !CustomParticleSpawner
+                                            ~Id: 7f6ab630-b8ee-4fd9-b90c-66e6b4dc235c
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 1000.0
+                                            BurstCount: 50.0
+                                    Initializers:
+                                        - !InitialSizeSeed
+                                            ~Id: 970f8eb7-7e35-467f-ac7c-d4e2da3fb22a
+                                            InheritLocation: Scale
+                                            ParticleLocator:
+                                                ~Id: 8b62da6f-cd5c-4732-a75c-98ff64e73585
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            SeedOffset: 0
+                                            RandomSize: {X: 0.05, Y: 0.02}
+                                        - !CustomParticleInitializer
+                                            ~Id: ac42c5df-6aeb-43bd-ac75-558566adbf27
+                                            DebugDraw: true
+                                            InheritLocation: Position, Rotation, Scale
+                                            ParticleLocator:
+                                                ~Id: 2863db4f-c8d1-4072-b0f9-5ef7d73597ce
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            SeedOffset: 0
+                                            Angle: 45.0
+                                            Strength: 0.3
+                                    Updaters:
+                                        - !CustomParticleUpdater
+                                            ~Id: a651476b-ac41-41aa-97e5-e458e174db64
+                                            InheritLocation: Position, Rotation, Scale
+                                            ParticleLocator:
+                                                ~Id: fce3c844-a75c-4c26-adab-3d2883069ea2
+                                                Translation: {X: 0.0, Y: 0.0, Z: 0.0}
+                                                Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                                Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Curve: CosSin
+            Design: {}
+SceneSettings:
+    ~Id: 3cdd5187-7127-4fd0-b150-0a134d03e873
+    GraphicsCompositor: !SceneGraphicsCompositorLayers
+        ~Id: 7818b10d-8246-4ff7-9a39-873e04e93599
+        Cameras:
+            -   ~Id: bfa90927-09eb-4aee-8a67-ce77a7e3665e
+                Name: null
+                Camera:
+                    Entity: {Id: 52c7c269-0bd5-46dd-ba96-1ab0dd9d1c42}
+                    Id: 2570e3c2-feb9-4dab-acc6-43fa58bd7db7
+        Layers:
+            -   ~Id: 7c09af0f-ab4d-4ca0-a1b9-8920169c3beb
+                Name: SceneGraphicsLayer
+                Output: !LocalRenderFrameProvider
+                    Descriptor:
+                        Format: HDR
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        ~Id: ecfff8d0-b74e-400a-95a4-7f28f14c77f4
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        ~Id: 25811c8f-6091-41a2-b455-72b043f6b540
+                        Mode: !CameraRendererModeForward
+                            ~Id: 1a9ea995-1ddf-4480-8ccb-94ed3f6faf99
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        Master:
+            ~Id: 83385d2d-07f9-48e9-8031-7822774d0627
+            Name: SceneGraphicsLayer
+            Output: !MasterRenderFrameProvider {}
+            Renderers:
+                - !SceneEffectRenderer
+                    ~Id: deef16c8-4943-4aaf-809d-4cbb14c1bdc3
+                    Input: !ImageEffectRendererInput.LayerInput {}
+                    Effect: !PostProcessingEffects
+                        ~Id: 23d4885a-1936-4102-80b3-8bcbf08916ee
+                        Camera:
+                            Index: 0
+                        DepthOfField:
+                            ~Id: 72faeb13-6156-4c96-ae3f-44f63559ff8a
+                            Enabled: false
+                            DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                        BrightFilter:
+                            ~Id: 151d7096-345d-4db8-b53d-3f07d83238e2
+                            Color: {R: 1.0, G: 1.0, B: 1.0}
+                        Bloom:
+                            ~Id: 5026d718-fece-4ae9-b73c-21b99657bd0f
+                            Distortion: {X: 1.0, Y: 1.0}
+                            Afterimage:
+                                ~Id: 258072ff-2517-4910-8d98-dea162784c57
+                                Enabled: false
+                        LightStreak:
+                            ~Id: d319c39f-289b-4295-90f8-35d5eaa543b9
+                            Attenuation: 0.7
+                        LensFlare:
+                            ~Id: 577809e5-5e20-41f3-ac98-24a53002cef6
+                        ColorTransforms:
+                            ~Id: 7e34092f-c11e-4b1c-b014-326b04ccffe3
+                            Transforms:
+                                - !ToneMap
+                                    ~Id: 552537d0-6ca2-4428-81b4-4ac44c13c16b
+                                    Operator: !ToneMapHejl2Operator
+                                        ~Id: b4f49139-73ad-4a11-9fe3-6b33cb2087ac
+                                - !FilmGrain
+                                    ~Id: f958fbfc-4b3b-492c-b154-8b7063bf5358
+                                    Enabled: false
+                                - !Vignetting
+                                    ~Id: f769c644-a425-493e-a4ab-0d722481e7ea
+                                    Enabled: false
+                                    Color: {R: 0.0, G: 0.0, B: 0.0}
+                        Antialiasing: !FXAAEffect
+                            ~Id: ef373b8b-e146-4311-81ec-afb1d19cdfae
+                    Output: !CurrentRenderFrameProvider {}
+    EditorSettings:
+        ~Id: b56bce4a-3ffe-42b7-bd7b-fb1416f2b033
+        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+        SceneUnit: 1.0
+        Mode: !SceneEditorGraphicsModeHDRSettings
+            ~Id: d189acd7-4289-4835-a68f-c172d1aaec6a
+            BackgroundColor: {R: 0.470588237, G: 0.470588237, B: 0.470588237}
+            PostProcessingEffects:
+                ~Id: 38102c3a-4e21-46e0-8eeb-3108913501bc
+                Camera:
+                    Index: 0
+                DepthOfField:
+                    ~Id: 39764bc0-fc13-4a3f-ae1c-7545def89e1b
+                    Enabled: false
+                    DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                BrightFilter:
+                    ~Id: c16a49a3-e8fa-47b2-8337-a1ea479c417a
+                    Color: {R: 1.0, G: 1.0, B: 1.0}
+                Bloom:
+                    ~Id: ede8f2aa-a5a5-4c09-b169-12d88388ac6f
+                    Enabled: false
+                    Distortion: {X: 1.0, Y: 1.0}
+                    Afterimage:
+                        ~Id: 6ed8ccbf-88c3-4325-8cba-85f80ac7053d
+                        Enabled: false
+                LightStreak:
+                    ~Id: 85182337-660b-4a42-b73a-4bbcde0f9abb
+                    Enabled: false
+                    Attenuation: 0.7
+                LensFlare:
+                    ~Id: cb005510-4ed5-4607-aa1e-1898b2bc2e4e
+                    Enabled: false
+                ColorTransforms:
+                    ~Id: 70532817-e33a-48eb-8acb-b5752319e6ed
+                    Transforms:
+                        - !ToneMap
+                            ~Id: dfce5c91-01c3-4980-a4fe-963260245661
+                            Operator: !ToneMapHejl2Operator
+                                ~Id: 8748d406-c3e2-4a51-b1b5-4df12bce32ee
+                        - !FilmGrain
+                            ~Id: ed820180-07fd-4413-87de-6191ea2ace22
+                            Enabled: false
+                        - !Vignetting
+                            ~Id: 8d7dc556-124f-449f-85b0-32aa08fc116c
+                            Enabled: false
+                            Color: {R: 0.0, G: 0.0, B: 0.0}
+                Antialiasing: !FXAAEffect
+                    ~Id: 6a410c70-959a-441f-938c-2fd05797dd6d
+                    Enabled: false
