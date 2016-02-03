@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{652A7590-1151-42DC-BC0C-A94B05CD6745}</ProjectGuid>
+    <ProjectGuid>{BDDD6C01-7873-4066-BC52-3E5847FE9F39}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SimpleParticles</RootNamespace>
@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-    <SiliconStudioPackageGuid>{a5d0e8ff-5230-417f-a589-77def339c9f4}</SiliconStudioPackageGuid>
+    <SiliconStudioPackageGuid>{2b920979-d010-44fa-a415-e52d97e51df3}</SiliconStudioPackageGuid>
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
 	<SiliconStudioRuntime></SiliconStudioRuntime>
@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleParticles.Game\SimpleParticles.Game.csproj">
-      <Project>{d6b59442-fbf8-49f8-8e20-68921bd26b99}</Project>
+      <Project>{c821e6b2-04b2-4983-8348-7ac37b23c5e1}</Project>
       <Name>SimpleParticles.Game</Name>
       <Private>False</Private>
     </ProjectReference>

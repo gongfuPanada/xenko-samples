@@ -1,5 +1,5 @@
 !Package
-Id: a5d0e8ff-5230-417f-a589-77def339c9f4
+Id: 2b920979-d010-44fa-a415-e52d97e51df3
 SerializedVersion: {Assets: 0.0.2}
 Tags: []
 Meta:
@@ -23,7 +23,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: d6b59442-fbf8-49f8-8e20-68921bd26b99
+            -   Id: c821e6b2-04b2-4983-8348-7ac37b23c5e1
                 Location: SimpleParticles.Game/SimpleParticles.Game.csproj
                 Type: Library
     -   Name: Windows
@@ -34,7 +34,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: 652a7590-1151-42dc-bc0c-a94b05cd6745
+            -   Id: bddd6c01-7873-4066-bc52-3e5847fe9f39
                 Location: SimpleParticles.Windows/SimpleParticles.Windows.csproj
                 Type: Executable
 ExplicitFolders: []

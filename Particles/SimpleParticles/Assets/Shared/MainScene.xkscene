@@ -1,5 +1,5 @@
 !SceneAsset
-Id: a382e22e-7ad1-41a5-90da-7a3d4076bc14
+Id: ed0a5e14-b81f-409b-84b1-eedae53bf1be
 SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
@@ -14,14 +14,29 @@ Hierarchy:
         - c4a50eb2-a870-4c4b-858a-e09cc7d1a8b3
         - dbf4ae4f-162b-486c-9db5-4ba9bfb2d775
         - 6a0191a4-fefe-483d-be2b-c55bae7fa77f
+        - 2d712fb9-648d-418a-a5de-54d72c35271b
     Entities:
+        -   Entity:
+                Id: 2d712fb9-648d-418a-a5de-54d72c35271b
+                Name: Background
+                Components:
+                    - !TransformComponent
+                        ~Id: 1d600213-5ae4-48ce-bd5d-ec37ec0f9e0b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !BackgroundComponent
+                        ~Id: 98864749-098e-4590-8cd0-319867a3b541
+                        Texture: 2824632f-13f8-453c-a89d-72a5c6bf0529:XenkoBackground
+            Design: {}
         -   Entity:
                 Id: 3f4d0e44-8345-4836-a0e2-9e4156568ec6
                 Name: Burning Fire
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: 2.0, Y: 0.0, Z: -2.0}
+                        Position: {X: 2.5, Y: 0.0, Z: -2.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -54,13 +69,17 @@ Hierarchy:
                                         ~Id: 3a2f4d08-f75b-4c30-83c0-10cbf47b8c5f
                                         AlphaAdditive: 1.0
                                         FaceCulling: CullNone
-                                        ComputeColor: !ComputeTextureColor
-                                            Texture: b90a6fe3-7f7e-427e-8571-64b8e1e4d364:fire8x8
-                                            FallbackValue:
-                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                                            Scale: {X: 1.0, Y: 1.0}
-                                            Offset: {X: 0.0, Y: 0.0}
-                                            Swizzle: null
+                                        ComputeColor: !ComputeBinaryColor
+                                            Operator: Multiply
+                                            LeftChild: !ComputeFloat4
+                                                Value: {X: 4.0, Y: 4.0, Z: 4.0, W: 1.0}
+                                            RightChild: !ComputeTextureColor
+                                                Texture: f4783993-de71-4012-a499-c3af53d6ed83:fire8x8
+                                                FallbackValue:
+                                                    Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                Scale: {X: 1.0, Y: 1.0}
+                                                Offset: {X: 0.0, Y: 0.0}
+                                                Swizzle: null
                                         UVBuilder: !UVBuilderFlipbook
                                             ~Id: 49982bbf-9512-4dca-b35e-fcd58d9287a6
                                             XDivisions: 8
@@ -127,7 +146,7 @@ Hierarchy:
                                                 Stream: !ColorVertexStreamDefinition
                                                     ~Id: d42a3e8b-56d2-4ea6-9cb7-33b4ad8afd8f
                                             RightChild: !ComputeTextureColor
-                                                Texture: b653e438-667b-449a-becd-34f82fabe546:dota
+                                                Texture: 304c7e62-5bb2-47f2-9768-bbe8f2a6db11:dota
                                                 FallbackValue:
                                                     Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                                 Scale: {X: 1.0, Y: 1.0}
@@ -188,7 +207,7 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 7dc11c08-6dfb-43f6-b46e-d7f20379526f
-                        Model: b37e507d-3789-43ec-a888-fad674896765:Ground
+                        Model: 9045bb0e-a9ee-479a-8c88-2ee45c199e11:Ground
                         Materials: []
             Design: {}
         -   Entity:
@@ -197,7 +216,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: 4.0, Y: 0.0, Z: 2.0}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -231,7 +250,7 @@ Hierarchy:
                                         AlphaAdditive: 0.0
                                         FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: 2b504f3d-12d5-45f5-ae29-68d6729a9714:graysmoke8x8
+                                            Texture: b27de930-de42-4a30-9c94-dca03771c6d3:graysmoke8x8
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -281,7 +300,7 @@ Hierarchy:
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             SeedOffset: 0
-                                            PositionMin: {X: -0.1, Y: 0.4, Z: -0.1}
+                                            PositionMin: {X: -0.1, Y: 0.6, Z: -0.1}
                                             PositionMax: {X: 0.1, Y: 0.5, Z: 0.1}
                                         - !InitialRotationSeed
                                             ~Id: 06a05969-7d65-4667-bc17-236b808abb8b
@@ -414,7 +433,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: -2.0, Y: 0.258276343, Z: -2.0}
+                        Position: {X: -2.5, Y: 0.0, Z: -2.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -447,13 +466,17 @@ Hierarchy:
                                         ~Id: 3a2f4d08-f75b-4c30-83c0-10cbf47b8c5f
                                         AlphaAdditive: 1.0
                                         FaceCulling: CullNone
-                                        ComputeColor: !ComputeTextureColor
-                                            Texture: 4e325346-a12e-4ed8-ac4b-cab832241a0e:explosion8x8
-                                            FallbackValue:
-                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                                            Scale: {X: 1.0, Y: 1.0}
-                                            Offset: {X: 0.0, Y: 0.0}
-                                            Swizzle: null
+                                        ComputeColor: !ComputeBinaryColor
+                                            Operator: Multiply
+                                            LeftChild: !ComputeFloat4
+                                                Value: {X: 2.0, Y: 2.0, Z: 1.5, W: 1.0}
+                                            RightChild: !ComputeTextureColor
+                                                Texture: e512f19c-f1c3-4148-a206-5ffc46b10c4c:explosion8x8
+                                                FallbackValue:
+                                                    Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                Scale: {X: 1.0, Y: 1.0}
+                                                Offset: {X: 0.0, Y: 0.0}
+                                                Swizzle: null
                                         UVBuilder: !UVBuilderFlipbook
                                             ~Id: edff6a40-1566-45a8-868b-c2540f7ce4a8
                                             XDivisions: 8
@@ -508,7 +531,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: -2.0, Y: 0.0, Z: 2.0}
+                        Position: {X: -2.5, Y: 0.0, Z: 2.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -547,7 +570,7 @@ Hierarchy:
                                                 Stream: !ColorVertexStreamDefinition
                                                     ~Id: 8bc36822-a6f3-431d-8bba-de244dff1bbe
                                             RightChild: !ComputeTextureColor
-                                                Texture: b653e438-667b-449a-becd-34f82fabe546:dota
+                                                Texture: 304c7e62-5bb2-47f2-9768-bbe8f2a6db11:dota
                                                 FallbackValue:
                                                     Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                                 Scale: {X: 1.0, Y: 1.0}
@@ -618,7 +641,7 @@ Hierarchy:
                                         - !UpdaterCollider
                                             ~Id: c694e594-1958-459c-b840-899989258a55
                                             DebugDraw: true
-                                            InheritLocation: Position, Rotation, Scale
+                                            InheritLocation: Position, Scale
                                             ParticleLocator:
                                                 ~Id: 5f64c3d0-62b1-4586-bd19-22b84bb4c087
                                                 Translation: {X: 3.0, Y: -0.45, Z: 0.0}
@@ -640,7 +663,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: -4.0, Y: 0.0, Z: 2.0}
+                        Position: {X: 2.5, Y: 0.0, Z: 2.5}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -674,7 +697,7 @@ Hierarchy:
                                         AlphaAdditive: 0.0
                                         FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
-                                            Texture: b653e438-667b-449a-becd-34f82fabe546:dota
+                                            Texture: 304c7e62-5bb2-47f2-9768-bbe8f2a6db11:dota
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             Scale: {X: 1.0, Y: 1.0}
@@ -698,8 +721,8 @@ Hierarchy:
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             SeedOffset: 0
-                                            VelocityMin: {X: -1.0, Y: 1.0, Z: -1.0}
-                                            VelocityMax: {X: 1.0, Y: 3.0, Z: 1.0}
+                                            VelocityMin: {X: -0.5, Y: 1.0, Z: -0.5}
+                                            VelocityMax: {X: 0.5, Y: 3.0, Z: 0.5}
                                         - !InitialSizeSeed
                                             ~Id: 718f2b13-7855-4f35-89ec-7b0b74a7e209
                                             InheritLocation: Scale
@@ -744,6 +767,48 @@ SceneSettings:
         ~Id: 5e3599ac-8469-48ea-a58c-f4336c6e29a0
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
         SceneUnit: 1.0
-        Mode: !SceneEditorGraphicsModeLDRSettings
-            ~Id: 2fe205d1-296e-44d8-a4c6-30abdc3b440c
-            BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}
+        Mode: !SceneEditorGraphicsModeHDRSettings
+            ~Id: 089c307b-b452-46b8-a3ec-9f52d0ecf611
+            BackgroundColor: {R: 0.470588237, G: 0.470588237, B: 0.470588237}
+            PostProcessingEffects:
+                ~Id: 06ffc876-74ac-4702-8035-160f8c67d34b
+                Camera:
+                    Index: 0
+                DepthOfField:
+                    ~Id: e5c3fbbf-bc93-4a2d-83f1-d94a41ef9cb7
+                    Enabled: false
+                    DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
+                BrightFilter:
+                    ~Id: 417025ef-7a1e-4334-8cac-2487e3ee701c
+                    Enabled: false
+                    Color: {R: 1.0, G: 1.0, B: 1.0}
+                Bloom:
+                    ~Id: beb74a18-a1d2-43aa-9b8a-72fb1f6971fa
+                    Distortion: {X: 1.0, Y: 1.0}
+                    Afterimage:
+                        ~Id: 6763bd93-cd76-4d5c-894c-ccfa9acb4d04
+                        Enabled: false
+                LightStreak:
+                    ~Id: af2be13c-9e4f-4d59-b37f-6a3eba5b75d1
+                    Enabled: false
+                    Attenuation: 0.7
+                LensFlare:
+                    ~Id: 761ae17b-a549-4251-8faf-93fe7ab9d045
+                    Enabled: false
+                ColorTransforms:
+                    ~Id: 13acc7bc-2cb9-4b7a-ab2a-d90d1f11f868
+                    Transforms:
+                        - !ToneMap
+                            ~Id: 3cfcf527-2628-4949-b58a-7026cec3436d
+                            Enabled: false
+                            Operator: !ToneMapHejl2Operator
+                                ~Id: 49e7b9b1-0d3f-4638-8809-91dc0621842c
+                        - !FilmGrain
+                            ~Id: ea320d9d-38e8-4420-a3ba-c023242e236d
+                            Enabled: false
+                        - !Vignetting
+                            ~Id: 5af57123-9932-4e02-b98a-9241f8ddbbc8
+                            Enabled: false
+                            Color: {R: 0.0, G: 0.0, B: 0.0}
+                Antialiasing: !FXAAEffect
+                    ~Id: 2b0060e7-5e39-4a0a-84b8-7d0f8c0ac37e

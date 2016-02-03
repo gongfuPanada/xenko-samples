@@ -1,15 +1,16 @@
 !Texture
-Id: 4e325346-a12e-4ed8-ac4b-cab832241a0e
+Id: e512f19c-f1c3-4148-a206-5ffc46b10c4c
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/explosion8x8.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: f5f524f2-a6ac-476d-8e4f-0b21a1709902
+    ~Id: 5daf58ef-feef-45a5-ace7-32238bb58b8a
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
+        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
