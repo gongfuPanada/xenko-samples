@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{52F5637F-EDCA-4A0D-AE2C-221E65CB75CA}</ProjectGuid>
+    <ProjectGuid>{0E2EE5ED-C92B-4B2B-B0A8-770DD1669021}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CustomParticles</RootNamespace>
@@ -12,10 +12,11 @@
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
-    <SiliconStudioPackageGuid>{79443d57-5b95-44f9-9dcd-c3216807764a}</SiliconStudioPackageGuid>
+    <SiliconStudioPackageGuid>{281ce502-785b-4fd2-83c7-ab89105c518a}</SiliconStudioPackageGuid>
     <!-- Force msbuild to check to rebuild this assembly instead of letting VS IDE guess -->
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-	<SiliconStudioRuntime></SiliconStudioRuntime>
+    <SiliconStudioRuntime>
+    </SiliconStudioRuntime>
   </PropertyGroup>
   <PropertyGroup>
     <SiliconStudioCurrentPackagePath>$(MSBuildThisFileDirectory)..\CustomParticles.xkpkg</SiliconStudioCurrentPackagePath>
@@ -33,6 +34,7 @@
     <IntermediateOutputPath>obj\Windows\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -70,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomParticles.Game\CustomParticles.Game.csproj">
-      <Project>{5f468913-a0e5-4728-9146-2c46ed949809}</Project>
+      <Project>{f97f7249-84f1-408f-a5b4-b5e9cbee9de1}</Project>
       <Name>CustomParticles.Game</Name>
       <Private>False</Private>
     </ProjectReference>
@@ -81,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Icon.ico" />
-  </ItemGroup>  
+  </ItemGroup>
   <Import Condition="'$(SiliconStudioRuntime)' == ''" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SiliconStudioPackageProps)" Condition="Exists('$(SiliconStudioPackageProps)')" />
   <Import Project="$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets" Condition="Exists('$(SiliconStudioXenkoDir)\Targets\SiliconStudio.Common.targets')" />

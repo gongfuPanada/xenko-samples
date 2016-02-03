@@ -1,5 +1,5 @@
 !SceneAsset
-Id: d78d894a-a339-4f63-86aa-b48cd6ff1079
+Id: 08e1e27d-7308-43a9-b57a-d32f4108d5ee
 SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
 Hierarchy:
@@ -8,10 +8,10 @@ Hierarchy:
         - d41cee88-3754-4bf7-aacf-578472ff5570
         - 52c7c269-0bd5-46dd-ba96-1ab0dd9d1c42
         - 468c7ef8-b647-4dbc-8c30-861173b84fe2
-        - d9b9acd9-1bc9-48ae-af73-d9df5e120a80
         - 8e731909-f0c2-420e-9329-fe9a2890c477
         - 79ed5cbf-60bb-4912-89f5-3c1862a01b98
         - f08d1282-a256-4c2c-aa94-048dd95eed88
+        - 47dd8f28-5ae6-4f55-b147-d52d92d5f6b4
     Entities:
         -   Entity:
                 Id: 468c7ef8-b647-4dbc-8c30-861173b84fe2
@@ -46,13 +46,27 @@ Hierarchy:
                         Intensity: 5.0
             Design: {}
         -   Entity:
+                Id: 47dd8f28-5ae6-4f55-b147-d52d92d5f6b4
+                Name: Background
+                Components:
+                    - !TransformComponent
+                        ~Id: 58b025a6-b838-488c-9ebe-39defa8ace5a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !BackgroundComponent
+                        ~Id: 2b499a0e-3fd7-4193-9aec-d76540cae411
+                        Texture: d7a3cadc-b22c-46fe-9ed4-ba555361db23:XenkoBackground
+            Design: {}
+        -   Entity:
                 Id: 52c7c269-0bd5-46dd-ba96-1ab0dd9d1c42
                 Name: Camera
                 Components:
                     - !TransformComponent
                         ~Id: d7d18dee-f2c3-4990-a4d7-5414a0f795ca
-                        Position: {X: 4.0, Y: 3.0, Z: 0.0}
-                        Rotation: {W: 0.6963642, X: -0.1227878, Y: 0.6963642, Z: 0.1227878}
+                        Position: {X: 0.0, Y: 1.69542038, Z: 4.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
                     - !CameraComponent
@@ -100,8 +114,13 @@ Hierarchy:
                                         ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
                                         AlphaAdditive: 0.0
                                         FaceCulling: CullNone
-                                        ComputeColor: !ComputeFloat4
-                                            Value: {X: 5.0, Y: 5.0, Z: 5.0, W: 1.0}
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 39c00a3f-332b-4dde-8c79-f1e9bd0df4b3:XenkoLogoWhite
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
                                         UVBuilder: null
                                     Spawners:
                                         - !CustomParticleSpawner
@@ -109,8 +128,8 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 1000.0
-                                            BurstCount: 50.0
+                                            SpawnCount: 10.0
+                                            BurstCount: 15.0
                                     Initializers:
                                         - !InitialSizeSeed
                                             ~Id: 970f8eb7-7e35-467f-ac7c-d4e2da3fb22a
@@ -121,7 +140,7 @@ Hierarchy:
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             SeedOffset: 0
-                                            RandomSize: {X: 0.05, Y: 0.02}
+                                            RandomSize: {X: 0.2, Y: 0.1}
                                         - !CustomParticleInitializer
                                             ~Id: ac42c5df-6aeb-43bd-ac75-558566adbf27
                                             DebugDraw: true
@@ -143,7 +162,7 @@ Hierarchy:
                                                 Translation: {X: 0.0, Y: 0.0, Z: 0.0}
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                            Curve: CosSin
+                                            Curve: CosCos
             Design: {}
         -   Entity:
                 Id: 8e731909-f0c2-420e-9329-fe9a2890c477
@@ -151,7 +170,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: 10c31666-84ab-40ae-8593-833e427b2fcf
-                        Position: {X: 0.0, Y: 0.0, Z: -0.00729335845}
+                        Position: {X: -2.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 0.997858942, X: -0.06540313, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -186,8 +205,13 @@ Hierarchy:
                                         ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
                                         AlphaAdditive: 0.0
                                         FaceCulling: CullNone
-                                        ComputeColor: !ComputeFloat4
-                                            Value: {X: 5.0, Y: 5.0, Z: 5.0, W: 1.0}
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: e9189f9f-0cc2-4bf2-a823-dd5829b61e63:XenkoLogoRed
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
                                         UVBuilder: null
                                     Spawners:
                                         - !CustomParticleSpawner
@@ -195,8 +219,8 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 1000.0
-                                            BurstCount: 50.0
+                                            SpawnCount: 20.0
+                                            BurstCount: 20.0
                                     Initializers:
                                         - !InitialSizeSeed
                                             ~Id: 970f8eb7-7e35-467f-ac7c-d4e2da3fb22a
@@ -207,7 +231,7 @@ Hierarchy:
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             SeedOffset: 0
-                                            RandomSize: {X: 0.05, Y: 0.02}
+                                            RandomSize: {X: 0.2, Y: 0.1}
                                         - !CustomParticleInitializer
                                             ~Id: ac42c5df-6aeb-43bd-ac75-558566adbf27
                                             DebugDraw: true
@@ -243,28 +267,8 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a7930162-b804-4d29-8961-626d969c3213
-                        Model: 13c8ae39-023d-4f87-9270-f405701847e7:Ground
+                        Model: 6736dbe5-2584-46f3-ad36-24d181bd54ba:Ground
                         Materials: []
-            Design: {}
-        -   Entity:
-                Id: d9b9acd9-1bc9-48ae-af73-d9df5e120a80
-                Name: Skybox
-                Components:
-                    - !TransformComponent
-                        ~Id: 09f4a5f4-f0e9-4375-a31b-563de89c8add
-                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
-                    - !SkyboxComponent
-                        ~Id: b3649e1f-75d1-40a5-aace-3536d9c47559
-                        Skybox: 673c8704-1da8-40df-a4d7-f5c0a50e0368:Skybox
-                        Intensity: 3.0
-                    - !LightComponent
-                        ~Id: 38f0a3b5-0052-47a6-80e4-e1a5d2fd3a86
-                        Type: !LightSkybox
-                            ~Id: ad8fdb2e-e90e-4fd9-b5d9-41253bdf15c8
-                        Intensity: 0.25
             Design: {}
         -   Entity:
                 Id: f08d1282-a256-4c2c-aa94-048dd95eed88
@@ -272,7 +276,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: 10c31666-84ab-40ae-8593-833e427b2fcf
-                        Position: {X: 0.0, Y: 0.0, Z: -3.62694263E-05}
+                        Position: {X: 2.0, Y: 0.0, Z: -3.62694263E-05}
                         Rotation: {W: 0.8314696, X: -0.555570245, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -307,8 +311,13 @@ Hierarchy:
                                         ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
                                         AlphaAdditive: 0.0
                                         FaceCulling: CullNone
-                                        ComputeColor: !ComputeFloat4
-                                            Value: {X: 5.0, Y: 5.0, Z: 5.0, W: 1.0}
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: d443ee13-add8-4432-98b0-8e76836eebf8:XenkoLogoGray
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
                                         UVBuilder: null
                                     Spawners:
                                         - !CustomParticleSpawner
@@ -316,7 +325,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 1000.0
+                                            SpawnCount: 100.0
                                             BurstCount: 50.0
                                     Initializers:
                                         - !InitialSizeSeed
@@ -328,7 +337,7 @@ Hierarchy:
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                                             SeedOffset: 0
-                                            RandomSize: {X: 0.05, Y: 0.02}
+                                            RandomSize: {X: 0.05, Y: 0.1}
                                         - !CustomParticleInitializer
                                             ~Id: ac42c5df-6aeb-43bd-ac75-558566adbf27
                                             DebugDraw: true
@@ -350,7 +359,7 @@ Hierarchy:
                                                 Translation: {X: 0.0, Y: 0.0, Z: 0.0}
                                                 Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                                                 Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                            Curve: CosSin
+                                            Curve: SinSin
             Design: {}
 SceneSettings:
     ~Id: 3cdd5187-7127-4fd0-b150-0a134d03e873

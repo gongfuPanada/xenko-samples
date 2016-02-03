@@ -1,5 +1,5 @@
 !MaterialAsset
-Id: 9de42c75-699f-4ba6-8006-d7a7158a87d1
+Id: 06eaea4f-3263-4cda-bf15-8d5de42d557f
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Attributes:
@@ -7,8 +7,13 @@ Attributes:
         GlossinessMap: !ComputeFloat
             Value: 0.0
     Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeColor
-            Value: {R: 0.5294118, G: 0.5294118, B: 0.5294118, A: 1.0}
+        DiffuseMap: !ComputeTextureColor
+            Texture: d443ee13-add8-4432-98b0-8e76836eebf8:XenkoLogoGray
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat

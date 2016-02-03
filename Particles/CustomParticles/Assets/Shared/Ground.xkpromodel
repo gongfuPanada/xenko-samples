@@ -1,5 +1,5 @@
 !ProceduralModelAsset
-Id: 13c8ae39-023d-4f87-9270-f405701847e7
+Id: 6736dbe5-2584-46f3-ad36-24d181bd54ba
 SerializedVersion: {Xenko: 1.5.0-alpha01}
 Tags: []
 Type: !PlaneProceduralModel
@@ -11,4 +11,4 @@ Type: !PlaneProceduralModel
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
         ~Id: 8a7add0f-c580-458c-8295-e76356565d84
-        Material: 9de42c75-699f-4ba6-8006-d7a7158a87d1:Ground Material
+        Material: 06eaea4f-3263-4cda-bf15-8d5de42d557f:Ground Material

@@ -1,5 +1,5 @@
 !Package
-Id: 79443d57-5b95-44f9-9dcd-c3216807764a
+Id: 281ce502-785b-4fd2-83c7-ab89105c518a
 SerializedVersion: {Assets: 0.0.2}
 Tags: []
 Meta:
@@ -23,7 +23,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: 5f468913-a0e5-4728-9146-2c46ed949809
+            -   Id: f97f7249-84f1-408f-a5b4-b5e9cbee9de1
                 Location: CustomParticles.Game/CustomParticles.Game.csproj
                 Type: Library
     -   Name: Windows
@@ -34,7 +34,7 @@ Profiles:
         OutputGroupDirectories: {}
         Properties: {}
         ProjectReferences:
-            -   Id: 52f5637f-edca-4a0d-ae2c-221e65cb75ca
+            -   Id: 0e2ee5ed-c92b-4b2b-b0a8-770dd1669021
                 Location: CustomParticles.Windows/CustomParticles.Windows.csproj
                 Type: Executable
 ExplicitFolders: []
