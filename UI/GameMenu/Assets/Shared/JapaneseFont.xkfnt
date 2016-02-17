@@ -2,7 +2,7 @@
 Id: cb333065-ba29-41a4-b07c-eeb5d39b5cc6
 SerializedVersion: {Xenko: 1.5.0-alpha09}
 Tags: []
-Source: null
+Source: ../../RawAssets/Fonts/SourceHanSans-Light.otf
 FontName: MS Mincho
 Size: 20.0
 Style: Regular

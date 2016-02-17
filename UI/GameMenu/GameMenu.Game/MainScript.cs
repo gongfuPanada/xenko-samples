@@ -662,7 +662,7 @@ namespace GameMenu
                 Content = new TextBlock
                 {
                     Font = JapaneseFont,
-                    TextSize = 34,
+                    TextSize = 28,
                     TextColor = Color.White,
                     Text = "Pictogram-based alphabets are easily supported.\n日本語も簡単に入れることが出来ます。",
                     HorizontalAlignment = HorizontalAlignment.Center,
