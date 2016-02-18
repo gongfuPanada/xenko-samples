@@ -25,7 +25,7 @@ namespace SimpleParticlesTest
         {
             using (var game = new GameTestingClient(Path, TestPlatform))
             {
-                game.Wait(TimeSpan.FromMilliseconds(2000));
+                game.Wait(TimeSpan.FromMilliseconds(5000));
             }
         }
 
