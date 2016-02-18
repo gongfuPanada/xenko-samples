@@ -76,7 +76,6 @@ namespace ParticleMaterialShader.Materials
             UpdateShaders(context);
         }
 
-        private int shadersUpdateCounter;
         private void UpdateShaders(RenderContext context)
         {
             if (shaderGeneratorContext != null)
