@@ -1,16 +1,17 @@
 !Texture
-Id: e9189f9f-0cc2-4bf2-a823-dd5829b61e63
+Id: 2833fb49-fbe8-4d15-9200-1ee5630552af
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/XenkoLogoRed.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: AsIs
 ~Base:
-    ~Id: a873d8ba-c6d8-4f6c-9b18-07d6be9df097
+    ~Id: e0468a18-70dd-43ed-bda8-e5aa653d7a4a
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
+        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

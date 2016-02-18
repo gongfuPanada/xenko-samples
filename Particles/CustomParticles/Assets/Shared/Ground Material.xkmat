@@ -1,30 +1,17 @@
 !MaterialAsset
-Id: 06eaea4f-3263-4cda-bf15-8d5de42d557f
+Id: b0afaaf9-b2a9-4384-a4ca-59dd6d21004e
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Attributes:
-    MicroSurface: !MaterialGlossinessMapFeature
-        GlossinessMap: !ComputeFloat
-            Value: 0.0
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: d443ee13-add8-4432-98b0-8e76836eebf8:XenkoLogoGray
+            Texture: 31d063d3-7159-4004-920c-04f038b43a7b:XenkoLogoGray
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
             Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
-    Specular: !MaterialMetalnessMapFeature
-        MetalnessMap: !ComputeFloat
-            Value: 0.07
-    SpecularModel: !MaterialSpecularMicrofacetModelFeature
-        Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
-            ~Id: f78919b2-5d76-42f9-aa13-b187a31e6b5f
-        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX
-            ~Id: 36b0c1e5-da60-4c6e-bc1d-c6b4eb090540
-        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX
-            ~Id: e035df1b-07d9-4f7a-b8d3-fee7a9d754d4
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
