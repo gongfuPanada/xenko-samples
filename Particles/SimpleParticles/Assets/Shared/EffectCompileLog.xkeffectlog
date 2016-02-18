@@ -1,6 +1,6 @@
 ---
 !EffectCompileRequest
-~Id: 00a59572-6a9f-4914-844c-398eb6bc72a5
+~Id: 3a9e0f3b-4adc-439c-8b11-1ff8ffa57895
 EffectName: XenkoForwardShadingEffect.ShadowMapCaster
 UsedParameters:
     CompilerParameters.DebugKey: true
@@ -11,11 +11,11 @@ UsedParameters:
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
     XenkoEffectBase.ExtensionPostVertexStageShader: !ShaderMixinGeneratorSource
-        ~Id: 00b27511-1c32-4d21-82b1-5bd20316408b
+        ~Id: e6288951-7978-4b3f-811a-3e7cba410727
         Name: ShadowMapCaster
 ---
 !EffectCompileRequest
-~Id: d9c78b70-d26e-4ac0-95f2-e4c0abdd0624
+~Id: 5eea8973-9974-49b0-a9a6-9bf94f871080
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
@@ -23,15 +23,15 @@ UsedParameters:
     CompilerParameters.GraphicsProfileKey: Level_11_0
     Lighting.DirectLightGroups:
         - !ShaderMixinSource
-            ~Id: 0b7980c6-ed31-42cd-b1e0-8d35ada273d7
+            ~Id: 34cb1e53-1b3d-45b6-8e58-d816c38f13d0
             Compositions: {}
             Macros: []
             Mixins:
-                -   ~Id: a1b7b4ea-d993-43f2-93ef-47f2e14765d0
+                -   ~Id: 3c67b70e-8d83-40a6-913d-680c035cf720
                     ClassName: LightDirectionalGroup
                     GenericArguments:
                         - 8
-                -   ~Id: fe97ac03-dae0-447c-9f55-3666029c9e9f
+                -   ~Id: d39df56f-2767-48bd-aea7-5fb33ca3792e
                     ClassName: ShadowMapReceiverDirectional
                     GenericArguments:
                         - 4
@@ -39,44 +39,44 @@ UsedParameters:
                         - false
                         - true
                         - false
-                -   ~Id: f25ecd78-2867-42bc-b208-23bf535dac69
+                -   ~Id: dc2d6a4e-195a-40b4-92b5-2e124fa235ce
                     ClassName: ShadowMapFilterPcf
                     GenericArguments:
                         - 5
             Name: null
     Lighting.EnvironmentLights:
         - !ShaderMixinSource
-            ~Id: 9f789b52-fc13-4110-99c2-da0727a0ec46
+            ~Id: 11db7603-796f-4b85-8cfe-6aef18720ee8
             Compositions: {}
             Macros: []
             Mixins:
-                -   ~Id: d985bd26-503a-4fe6-8230-de935f352619
+                -   ~Id: 27f7a737-1466-402f-a270-7e6bce633186
                     ClassName: LightSimpleAmbient
             Name: null
     Material.HasNormalMap: false
     Material.HasSkinningPosition: false
     Material.PixelStageStreamInitializer: !ShaderMixinSource
-        ~Id: 016fd59c-1b33-4570-84b5-f88dab8bb76b
+        ~Id: c0495d4a-b1e1-4891-a1a2-122c39e2622f
         Compositions: {}
         Macros: []
         Mixins:
-            -   ~Id: 09722cd2-be44-4d99-bb39-8d547946281b
+            -   ~Id: 167bff0e-f764-4fb2-bd6d-2d8b7eab6056
                 ClassName: MaterialStream
-            -   ~Id: 0791e7ec-8958-4894-a3a4-a44761123ca8
+            -   ~Id: 9ff297cb-a6b5-42a2-b7d0-e5dc2df20516
                 ClassName: MaterialPixelShadingStream
         Name: null
     Material.PixelStageSurfaceFilter: null
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
-        ~Id: 6ea209cd-c38f-49e1-84eb-044a38fdc8b7
+        ~Id: 6f1e389b-db5a-4842-ae25-913104bad3e6
         Compositions:
             layers: !ShaderArraySource
-                ~Id: c1862d3f-e48c-481f-9869-0614c7ce42dd
+                ~Id: 13b0a692-ddbd-4f2a-bf9f-f3cd36919f31
                 Values:
                     - !ShaderMixinSource
-                        ~Id: a2df7ba0-e2ff-43a2-bced-a8f6605b6414
+                        ~Id: 2dbcaeaf-8676-48f5-b6ed-c0180fb15ac8
                         Compositions:
                             diffuseMap: !ShaderClassSource
-                                ~Id: a97ca805-8a52-4a86-9ef9-2631aa3276c1
+                                ~Id: 4a0fbf35-6f20-47a0-97e0-afdb2c04847c
                                 ClassName: ComputeColorTextureScaledOffsetDynamicSampler
                                 GenericArguments:
                                     - Material.DiffuseMap
@@ -87,28 +87,28 @@ UsedParameters:
                                     - Material.TextureOffset
                         Macros: []
                         Mixins:
-                            -   ~Id: bbf48d6d-a7c1-46e6-8227-a12b68a4dbe6
+                            -   ~Id: 1d93f548-8437-4822-b823-c76a952269af
                                 ClassName: MaterialSurfaceDiffuse
                         Name: null
                     - !ShaderMixinSource
-                        ~Id: 08e51cdc-7070-4288-b108-51837b58fc20
+                        ~Id: 2ef3c063-14c9-4594-b278-5ff99803de42
                         Compositions:
                             surfaces: !ShaderArraySource
-                                ~Id: 283fac91-b875-44b9-be6e-1284dd7f3ef2
+                                ~Id: 6dee1cb3-5d99-462e-b3d4-c91e0e45b1c0
                                 Values:
                                     - !ShaderClassSource
-                                        ~Id: 127d0421-5cea-4fe7-b5d4-975de53a719f
+                                        ~Id: 9d312266-dea7-4220-8b7c-cbbe26bdbcfc
                                         ClassName: MaterialSurfaceShadingDiffuseLambert
                                         GenericArguments:
                                             - false
                         Macros: []
                         Mixins:
-                            -   ~Id: 115cf8f0-c167-4230-a9f2-e6f6dfa46268
+                            -   ~Id: 1e6fc780-a1e9-4e62-8e1a-898bbd77b90c
                                 ClassName: MaterialSurfaceLightingAndShading
                         Name: null
         Macros: []
         Mixins:
-            -   ~Id: 79edb97e-3093-4109-ba8e-eaafcba915b1
+            -   ~Id: 3fc72ae3-0b8e-4800-9f4f-2c64bd4a65f6
                 ClassName: MaterialSurfaceArray
         Name: null
     Material.TessellationShader: null
@@ -116,22 +116,22 @@ UsedParameters:
     XenkoEffectBase.ExtensionPostVertexStageShader: null
 ---
 !EffectCompileRequest
-~Id: a2e31c15-8649-49d7-96c5-aa143c934335
+~Id: 2efa7c35-f054-4d5f-bc92-674b92455fb2
 EffectName: ParticleEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
     CompilerParameters.GraphicsProfileKey: Level_11_0
     ParticleBase.BaseColor: !ShaderMixinSource
-        ~Id: 926e5aae-05d8-4950-a83d-a643259eb5e2
+        ~Id: 76965d46-c9ef-459a-b50c-392f048e7281
         Compositions:
             color1: !ShaderClassSource
-                ~Id: 7c0a7d4b-e0ff-443f-bd89-7e42235511e8
+                ~Id: 0e4bc74a-1ba3-4a64-8d1d-42d43911c8fd
                 ClassName: ComputeColorConstantColorLink
                 GenericArguments:
                     - ParticleBase.EmissiveValue
             color2: !ShaderClassSource
-                ~Id: 592427ad-da73-43f8-9f49-f03072549f24
+                ~Id: d988c69a-e3fe-4075-978d-c7f718a8661d
                 ClassName: ComputeColorTextureScaledOffsetDynamicSampler
                 GenericArguments:
                     - ParticleBase.EmissiveMap
@@ -142,28 +142,28 @@ UsedParameters:
                     - Material.TextureOffset
         Macros: []
         Mixins:
-            -   ~Id: 839377de-abf9-4cf7-9cfd-14093375784a
+            -   ~Id: 5dcdb885-7cfc-400f-a044-1c2ec7997c5a
                 ClassName: ComputeColorMultiply
         Name: null
 ---
 !EffectCompileRequest
-~Id: 62d8b230-1944-41ef-9a67-d1e109885dd6
+~Id: 959695f3-70da-4e90-8894-92edbef26479
 EffectName: ParticleEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
     CompilerParameters.GraphicsProfileKey: Level_11_0
     ParticleBase.BaseColor: !ShaderMixinSource
-        ~Id: df20ae70-cb79-4a05-a16b-7f5762cfead7
+        ~Id: f967a98e-9259-430c-8286-36af37ae69ab
         Compositions:
             color1: !ShaderClassSource
-                ~Id: 0e12d5ee-f841-4723-870b-f11587d29d0f
+                ~Id: ddae469a-6021-442f-bb41-2859593fe484
                 ClassName: ComputeColorFromStream
                 GenericArguments:
                     - COLOR0
                     - rgba
             color2: !ShaderClassSource
-                ~Id: b700fe45-b93d-4cc2-86ba-cdb210daf7d6
+                ~Id: 878ba3b9-57ba-4095-adf1-de9546ac1edf
                 ClassName: ComputeColorTextureScaledOffsetDynamicSampler
                 GenericArguments:
                     - ParticleBase.EmissiveMap
@@ -174,19 +174,19 @@ UsedParameters:
                     - Material.TextureOffset
         Macros: []
         Mixins:
-            -   ~Id: b99846c1-b6e9-40fd-85d9-224d55986713
+            -   ~Id: b29920e7-e093-488e-aa66-3dc71048b01c
                 ClassName: ComputeColorMultiply
         Name: null
 ---
 !EffectCompileRequest
-~Id: 46fd1cee-9664-46f8-82f1-dc498595009d
+~Id: 00fa0b70-c14c-4164-a29f-1b7203e13025
 EffectName: ParticleEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
     CompilerParameters.GraphicsPlatformKey: Direct3D11
     CompilerParameters.GraphicsProfileKey: Level_11_0
     ParticleBase.BaseColor: !ShaderClassSource
-        ~Id: 6a8704dd-543f-44ff-932c-4b2ae06c1f04
+        ~Id: e4c28869-c3fe-4f6c-b6b0-f53461aef284
         ClassName: ComputeColorTextureScaledOffsetDynamicSampler
         GenericArguments:
             - ParticleBase.EmissiveMap
@@ -197,7 +197,7 @@ UsedParameters:
             - Material.TextureOffset
 ---
 !EffectCompileRequest
-~Id: b4a982d9-c747-4f16-bb65-b266c52ff727
+~Id: bdbdec43-aa04-44ad-85e0-dab441dc9f91
 EffectName: DepthMinMaxEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
@@ -206,7 +206,7 @@ UsedParameters:
     DepthMinMax.IsFirstPassKey: true
 ---
 !EffectCompileRequest
-~Id: 23a6d1aa-20a9-43c4-81ab-38f46f8d9569
+~Id: a9847600-7865-494f-abe3-d38e9f8aa913
 EffectName: DepthMinMaxEffect
 UsedParameters:
     CompilerParameters.DebugKey: true
