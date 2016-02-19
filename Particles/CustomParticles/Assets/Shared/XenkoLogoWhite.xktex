@@ -4,9 +4,8 @@ SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/XenkoLogoWhite.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
-Format: AsIs
 ~Base:
-    ~Id: 5587921f-8ea4-4e04-97d7-0f9d22bf9d59
+    ~Id: 6784d225-dfb6-4f39-ad74-0b3775c8d254
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
