@@ -4,6 +4,6 @@ Tags: []
 DefaultScene: df7aa22c-6efc-4706-8c07-03a643513525:SpriteFontScene
 BackBufferWidth: 1280
 BackBufferHeight: 720
-DefaultGraphicsProfile: Level_9_1
+DefaultGraphicsProfile: Level_9_3
 DisplayOrientation: LandscapeRight
 TextureQuality: Fast

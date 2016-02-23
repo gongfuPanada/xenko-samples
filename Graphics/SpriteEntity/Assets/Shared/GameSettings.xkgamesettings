@@ -4,6 +4,6 @@ Tags: []
 DefaultScene: 20ae0cfb-f718-46e8-802c-718c98d77137:SpriteEntityScene
 BackBufferWidth: 1280
 BackBufferHeight: 720
-DefaultGraphicsProfile: Level_9_1
+DefaultGraphicsProfile: Level_9_3
 DisplayOrientation: LandscapeRight
 TextureQuality: Fast
