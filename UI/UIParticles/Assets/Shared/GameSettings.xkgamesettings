@@ -1,0 +1,9 @@
+!GameSettingsAsset
+Id: c8722f0b-9651-48ed-960c-720e4b78676a
+Tags: []
+DefaultScene: 9aa87f82-5341-4e43-baa6-a47d17c60fd4:SplashScene
+BackBufferWidth: 600
+BackBufferHeight: 600
+DefaultGraphicsProfile: Level_9_3
+DisplayOrientation: Portrait
+TextureQuality: Fast

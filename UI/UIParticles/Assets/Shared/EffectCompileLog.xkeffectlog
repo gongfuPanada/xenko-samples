@@ -1,0 +1,144 @@
+---
+!EffectCompileRequest
+~Id: 1ed202aa-adbf-4bb4-bf9e-ae285c1a9ac6
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 0
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 5db67142-447c-4917-82f7-5174ad1d39aa
+        ClassName: ComputeColorFromStream
+        GenericArguments:
+            - COLOR0
+            - rgba
+---
+!EffectCompileRequest
+~Id: f70cb1c5-acb8-4e63-9a98-2422dd6f000c
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 0
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 8ce2e010-e9cd-4e3d-823f-2b8633544cd9
+        ClassName: ComputeColorConstantColorLink
+        GenericArguments:
+            - ParticleBase.EmissiveValue
+---
+!EffectCompileRequest
+~Id: e181f9e2-6877-43dd-96c2-050ca284e6c4
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 0
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 82170c78-3eb7-4873-8952-986183c5db79
+        ClassName: ComputeColorTextureScaledOffsetDynamicSampler
+        GenericArguments:
+            - ParticleBase.EmissiveMap
+            - TEXCOORD0
+            - Material.Sampler.i0
+            - rgba
+            - Material.TextureScale
+            - Material.TextureOffset
+---
+!EffectCompileRequest
+~Id: 522dc357-5319-48fc-8e84-06ed7925f8e0
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 0
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: e4388b6a-7447-469c-a5fc-f57b9595b070
+        ClassName: ComputeColorFromStream
+        GenericArguments:
+            - COLOR0
+            - rgba
+---
+!EffectCompileRequest
+~Id: 64f8bda2-dcd4-40fb-bd81-981eb66473df
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 0
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 691f69fc-4eb1-4d0c-9e8e-2a21edb18976
+        ClassName: ComputeColorConstantColorLink
+        GenericArguments:
+            - ParticleBase.EmissiveValue
+---
+!EffectCompileRequest
+~Id: 1adedf54-a5d6-4bb3-bfdc-58455b02879d
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 0
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 119e3d33-d97d-4899-b95f-1a78acb452b4
+        ClassName: ComputeColorTextureScaledOffsetDynamicSampler
+        GenericArguments:
+            - ParticleBase.EmissiveMap
+            - TEXCOORD0
+            - Material.Sampler.i0
+            - rgba
+            - Material.TextureScale
+            - Material.TextureOffset
+---
+!EffectCompileRequest
+~Id: 2bcaa3e7-0a69-4d10-a91e-84857300de63
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 1
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 7865d263-bdd9-4f75-8275-3efcf3cc3dbe
+        ClassName: ComputeColorFromStream
+        GenericArguments:
+            - COLOR0
+            - rgba
+---
+!EffectCompileRequest
+~Id: b7242a9b-c855-46eb-9d42-a11f16799f26
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 1
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 45553f0e-7d2f-46b4-b4be-ecc76a357851
+        ClassName: ComputeColorConstantColorLink
+        GenericArguments:
+            - ParticleBase.EmissiveValue
+---
+!EffectCompileRequest
+~Id: b16ecac8-b3fe-42fe-b4d7-823d6fb46718
+EffectName: ParticleEffect
+UsedParameters:
+    CompilerParameters.DebugKey: true
+    CompilerParameters.GraphicsPlatformKey: Direct3D11
+    CompilerParameters.GraphicsProfileKey: Level_11_0
+    CompilerParameters.OptimizationLevelKey: 1
+    ParticleBase.BaseColor: !ShaderClassSource
+        ~Id: 20b8d8a5-9400-47ce-971d-eb8e646dbe24
+        ClassName: ComputeColorTextureScaledOffsetDynamicSampler
+        GenericArguments:
+            - ParticleBase.EmissiveMap
+            - TEXCOORD0
+            - Material.Sampler.i0
+            - rgba
+            - Material.TextureScale
+            - Material.TextureOffset
