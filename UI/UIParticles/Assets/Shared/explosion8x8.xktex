@@ -5,7 +5,7 @@ Tags: []
 Source: ../../RawAssets/explosion8x8.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: 841e2c2b-bc80-4e3e-9bb3-ceef459ba0bb
+    ~Id: 0a3ac629-6ea5-4ba8-a4b5-03927793b1d7
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

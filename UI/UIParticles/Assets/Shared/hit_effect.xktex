@@ -6,7 +6,7 @@ Source: ../../RawAssets/hit_effect.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: AsIs
 ~Base:
-    ~Id: df945745-587c-4e6a-8fc5-fc01317856e6
+    ~Id: 7e9984ba-1a66-4abb-a307-023b95294b15
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
