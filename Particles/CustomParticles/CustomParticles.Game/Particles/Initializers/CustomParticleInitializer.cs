@@ -2,6 +2,7 @@
 // This file is distributed under GPL v3. See LICENSE.md for details.
 
 using System;
+using System.ComponentModel;
 using SiliconStudio.Core;
 using SiliconStudio.Core.Annotations;
 using SiliconStudio.Core.Mathematics;
@@ -85,14 +86,24 @@ namespace CustomParticles.Particles.Initializers
         [Display("Seed offset")]
         public UInt32 SeedOffset { get; set; } = 0;
 
+        /// <summary>
+        /// Should this Particle Module's bounds be displayed as a debug draw
+        /// </summary>
+        /// <userdoc>
+        /// Display the Particle Module's bounds as a wireframe debug shape.
+        /// </userdoc>
+        [DataMember(-1)]
+        [DefaultValue(false)]
+        public bool DebugDraw { get; set; } = false;
+
         public override bool TryGetDebugDrawShape(out DebugDrawShape debugDrawShape, out Vector3 translation, out Quaternion rotation, out Vector3 scale)
         {
+            if (!DebugDraw)
+                return base.TryGetDebugDrawShape(out debugDrawShape, out translation, out rotation, out scale);
+
             debugDrawShape = DebugDrawShape.Cone;
 
             rotation = WorldRotation;
-
-//            scale = (PositionMax - PositionMin);
-//            translation = (PositionMax + PositionMin) * 0.5f * WorldScale;
 
             scale = new Vector3(1, -1 , 1);
             translation = new Vector3(0, Strength + 1, 0);
