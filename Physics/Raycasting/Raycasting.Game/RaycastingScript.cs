@@ -1,6 +1,7 @@
 using System.Linq;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Graphics;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Physics;
 
@@ -27,18 +28,21 @@ namespace Raycasting
 
         private void Raycast(Vector2 screenPos)
         {
-            screenPos.X *= GraphicsDevice.BackBuffer.Width;
-            screenPos.Y *= GraphicsDevice.BackBuffer.Height;
+            var backBuffer = GraphicsDevice.Presenter.BackBuffer;
+            screenPos.X *= backBuffer.Width;
+            screenPos.Y *= backBuffer.Height;
+
+            var viewport = new Viewport(0, 0, backBuffer.Width, backBuffer.Height);
 
             var unprojectedNear =
-                GraphicsDevice.Viewport.Unproject(
+                viewport.Unproject(
                     new Vector3(screenPos, 0.0f),
                     camera.ProjectionMatrix,
                     camera.ViewMatrix,
                     Matrix.Identity);
 
             var unprojectedFar =
-                GraphicsDevice.Viewport.Unproject(
+                viewport.Unproject(
                     new Vector3(screenPos, 1.0f),
                     camera.ProjectionMatrix,
                     camera.ViewMatrix,

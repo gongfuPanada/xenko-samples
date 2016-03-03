@@ -88,7 +88,7 @@ namespace SimpleDynamicTexture
                     TogglePixel((RenderTextureSize - 1) - SymmetricDefaultShape[i], SymmetricDefaultShape[i + 1]);
             }
 
-            renderTexture.SetData(textureData);
+            renderTexture.SetData(Game.GraphicsContext.CommandList, textureData);
         }
 
         public override void Update()
@@ -96,12 +96,12 @@ namespace SimpleDynamicTexture
             if (Input.PointerEvents.Count == 0) 
                 return;
 
-            var destinationRectangle = new RectangleF(0, 0, GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+            var destinationRectangle = new RectangleF(0, 0, GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
 
             // Process pointer event
             foreach (var pointerEvent in Input.PointerEvents)
             {
-                var pixelPosition = pointerEvent.Position * new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+                var pixelPosition = pointerEvent.Position * new Vector2(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
 
                 if (pointerEvent.State != PointerState.Down || !destinationRectangle.Contains(pixelPosition)) continue;
 
@@ -113,7 +113,7 @@ namespace SimpleDynamicTexture
                 TogglePixel(pixelX, pixelY);
             }
 
-            renderTexture.SetData(textureData);
+            renderTexture.SetData(Game.GraphicsContext.CommandList, textureData);
         }
 
         public override void Cancel()
@@ -145,11 +145,11 @@ namespace SimpleDynamicTexture
         /// </summary>
         /// <param name="renderContext">The render context</param>
         /// <param name="frame">The render frame</param>
-        private void RenderTexture(RenderContext renderContext, RenderFrame frame)
+        private void RenderTexture(RenderDrawContext renderContext, RenderFrame frame)
         {
-            spriteBatch.Begin(SpriteSortMode.Texture, null, GraphicsDevice.SamplerStates.PointClamp, GraphicsDevice.DepthStencilStates.None);
+            spriteBatch.Begin(renderContext.GraphicsContext, SpriteSortMode.Texture, null, GraphicsDevice.SamplerStates.PointClamp, GraphicsDevice.DepthStencilStates.None);
 
-            spriteBatch.Draw(renderTexture, new RectangleF(0, 0, GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height), Color.White);
+            spriteBatch.Draw(renderTexture, new RectangleF(0, 0, GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height), Color.White);
 
             spriteBatch.End();
         }

@@ -46,7 +46,7 @@ namespace UIParticles
 
         private void AdjustVirtualResolution(object sender, EventArgs e)
         {
-            var backBufferSize = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+            var backBufferSize = new Vector2(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
             Entity.Get<UIComponent>().VirtualResolution = new Vector3(backBufferSize, 1000);
         }
 

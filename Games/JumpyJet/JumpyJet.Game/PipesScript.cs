@@ -101,7 +101,7 @@ namespace JumpyJet
         
         private void CreatePipe(Entity pipeEntity, float startPosX)
         {
-            var pipe = new PipeSet(pipeEntity, -GameScript.GameSpeed, startPosX, GraphicsDevice.BackBuffer.Width);
+            var pipe = new PipeSet(pipeEntity, -GameScript.GameSpeed, startPosX, GraphicsDevice.Presenter.BackBuffer.Width);
             pipeSetList.Add(pipe);
             Entity.AddChild(pipe.Entity);
         }

@@ -127,7 +127,7 @@ namespace SimpleTerrain
         /// </summary>
         private void CreateUI()
         {
-            var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
+            var virtualResolution = new Vector3(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height, 1);
 
             loadingModal = new ModalElement { Visibility = Visibility.Collapsed };
 
@@ -570,15 +570,17 @@ namespace SimpleTerrain
         /// <param name="heightMap"></param>
         private void InitializeBuffersFromTerrain(HeightMap heightMap)
         {
+            var commandList = Game.GraphicsContext.CommandList;
+
             // Set data in VertexBuffer
-            var mappedSubResource = GraphicsDevice.MapSubresource(terrainVertexBuffer, 0, MapMode.WriteDiscard);
+            var mappedSubResource = commandList.MapSubresource(terrainVertexBuffer, 0, MapMode.WriteDiscard);
             SetVertexDataFromHeightMap(heightMap, mappedSubResource.DataBox.DataPointer);
-            GraphicsDevice.UnmapSubresource(mappedSubResource);
+            commandList.UnmapSubresource(mappedSubResource);
 
             // Set data in IndexBuffer
-            mappedSubResource = GraphicsDevice.MapSubresource(terrainIndexBuffer, 0, MapMode.WriteDiscard);
+            mappedSubResource = commandList.MapSubresource(terrainIndexBuffer, 0, MapMode.WriteDiscard);
             var elementCount = SetIndexDataForTerrain(heightMap.Size, mappedSubResource.DataBox.DataPointer);
-            GraphicsDevice.UnmapSubresource(mappedSubResource);
+            commandList.UnmapSubresource(mappedSubResource);
 
             terrainMesh.Draw.DrawCount = elementCount;
         }
