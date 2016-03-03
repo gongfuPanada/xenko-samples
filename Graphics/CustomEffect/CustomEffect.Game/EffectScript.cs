@@ -12,28 +12,32 @@ namespace CustomEffect
     public class EffectScript : StartupScript
     {
         private Effect customEffect;
-        private PrimitiveQuad quad;
-        private SamplerState samplingState;
+        private SpriteBatch spriteBatch;
+        private EffectInstance customEffectInstance;
         private SceneDelegateRenderer renderer;
+        private SamplerState samplerState;
 
         public Texture Logo;
 
         public override void Start()
         {
             base.Start();
-            
+
             customEffect = EffectSystem.LoadEffect("Effect").WaitForResult();
-            quad = new PrimitiveQuad(GraphicsDevice, customEffect);
+            customEffectInstance = new EffectInstance(customEffect);
+
+            spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = new Vector3(1) };
 
             // set fixed parameters once
-            quad.Parameters.Set(EffectKeys.Center, new Vector2(0.5f, 0.5f));
-            quad.Parameters.Set(EffectKeys.Frequency, 40);
-            quad.Parameters.Set(EffectKeys.Spread, 0.5f);
-            quad.Parameters.Set(EffectKeys.Amplitude, 0.015f);
-            quad.Parameters.Set(EffectKeys.InvAspectRatio, GraphicsDevice.BackBuffer.Height / (float)GraphicsDevice.BackBuffer.Width);
+            customEffectInstance.Parameters.Set(TexturingKeys.Sampler, samplerState);
+            customEffectInstance.Parameters.Set(EffectKeys.Center, new Vector2(0.5f, 0.5f));
+            customEffectInstance.Parameters.Set(EffectKeys.Frequency, 40);
+            customEffectInstance.Parameters.Set(EffectKeys.Spread, 0.5f);
+            customEffectInstance.Parameters.Set(EffectKeys.Amplitude, 0.015f);
+            customEffectInstance.Parameters.Set(EffectKeys.InvAspectRatio, GraphicsDevice.Presenter.BackBuffer.Height / (float)GraphicsDevice.Presenter.BackBuffer.Width);
 
             // NOTE: Linear-Wrap sampling is not available for non-square non-power-of-two textures on opengl es 2.0
-            samplingState = SamplerState.New(GraphicsDevice, new SamplerStateDescription(TextureFilter.Linear, TextureAddressMode.Clamp));
+            samplerState = SamplerState.New(GraphicsDevice, new SamplerStateDescription(TextureFilter.Linear, TextureAddressMode.Clamp));
             
             // Add Effect rendering to the end of the pipeline
             var scene = SceneSystem.SceneInstance.Scene;
@@ -52,11 +56,13 @@ namespace CustomEffect
             base.Cancel();
         }
 
-        private void RenderQuad(RenderContext renderContext, RenderFrame frame)
+        private void RenderQuad(RenderDrawContext renderContext, RenderFrame frame)
         {
-            GraphicsDevice.SetBlendState(GraphicsDevice.BlendStates.NonPremultiplied);
-            quad.Parameters.Set(EffectKeys.Phase, -3 * (float)Game.UpdateTime.Total.TotalSeconds);
-            quad.Draw(Logo, samplingState, Color.White);
+            customEffectInstance.Parameters.Set(EffectKeys.Phase, -3 * (float)Game.UpdateTime.Total.TotalSeconds);
+
+            spriteBatch.Begin(renderContext.GraphicsContext, blendState: GraphicsDevice.BlendStates.NonPremultiplied, depthStencilState: GraphicsDevice.DepthStencilStates.None, effect: customEffectInstance);
+            spriteBatch.Draw(Logo, new RectangleF(0, 0, 1, 1), Color.White);
+            spriteBatch.End();
         }
     }
 }
