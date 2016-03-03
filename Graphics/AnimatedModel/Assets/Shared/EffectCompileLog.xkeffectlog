@@ -83,7 +83,6 @@ UsedParameters:
         Mixins:
             -   ClassName: MaterialSurfaceArray
         Name: null
-    Material.SkinningBones: 16
     Material.SkinningMaxBones: 56
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
@@ -173,7 +172,6 @@ UsedParameters:
         Mixins:
             -   ClassName: MaterialSurfaceArray
         Name: null
-    Material.SkinningBones: 17
     Material.SkinningMaxBones: 56
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
@@ -263,7 +261,6 @@ UsedParameters:
         Mixins:
             -   ClassName: MaterialSurfaceArray
         Name: null
-    Material.SkinningBones: 12
     Material.SkinningMaxBones: 56
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
@@ -353,7 +350,6 @@ UsedParameters:
         Mixins:
             -   ClassName: MaterialSurfaceArray
         Name: null
-    Material.SkinningBones: 5
     Material.SkinningMaxBones: 56
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
@@ -443,7 +439,6 @@ UsedParameters:
         Mixins:
             -   ClassName: MaterialSurfaceArray
         Name: null
-    Material.SkinningBones: 24
     Material.SkinningMaxBones: 56
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
@@ -533,7 +528,6 @@ UsedParameters:
         Mixins:
             -   ClassName: MaterialSurfaceArray
         Name: null
-    Material.SkinningBones: 1
     Material.SkinningMaxBones: 56
     Material.TessellationShader: null
     Material.VertexStageSurfaceShaders: null
