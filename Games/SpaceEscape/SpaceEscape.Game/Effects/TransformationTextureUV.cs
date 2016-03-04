@@ -18,6 +18,6 @@ namespace SiliconStudio.Xenko.Rendering
 {
     public static partial class TransformationTextureUVKeys
     {
-        public static readonly ParameterKey<Vector4> TextureRegion = ParameterKeys.New<Vector4>(new Vector4(0,0,1,1));
+        public static readonly ValueParameterKey<Vector4> TextureRegion = ParameterKeys.NewValue<Vector4>(new Vector4(0,0,1,1));
     }
 }

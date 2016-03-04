@@ -18,7 +18,7 @@ namespace SiliconStudio.Xenko.Rendering
 {
     public static partial class TransformationBendWorldKeys
     {
-        public static readonly ParameterKey<float> DeformFactorX = ParameterKeys.New<float>(-0.001f);
-        public static readonly ParameterKey<float> DeformFactorY = ParameterKeys.New<float>(-0.0006f);
+        public static readonly ValueParameterKey<float> DeformFactorX = ParameterKeys.NewValue<float>(-0.001f);
+        public static readonly ValueParameterKey<float> DeformFactorY = ParameterKeys.NewValue<float>(-0.0006f);
     }
 }

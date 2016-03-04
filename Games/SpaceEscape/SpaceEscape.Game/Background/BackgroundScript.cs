@@ -56,7 +56,7 @@ namespace SpaceEscape.Background
             skyplaneEntity = new Entity { new ModelComponent(SkyplaneModel) };
 
             skyplaneEntity.Transform.Position= SkyPlanePosition;
-            skyplaneEntity.Get<ModelComponent>().Parameters.Set(GameParameters.EnableBend, false);
+//            skyplaneEntity.Get<ModelComponent>().Parameters.Set(GameParameters.EnableBend, false);
             SkyplaneModel.Meshes[0].Parameters.Set(GameParameters.EnableOnflyTextureUVChange, true);
 
             // Add skyPlane with LevelBlocks to EntitySystem

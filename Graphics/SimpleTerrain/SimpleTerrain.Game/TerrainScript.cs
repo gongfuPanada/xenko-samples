@@ -389,21 +389,21 @@ namespace SimpleTerrain
             // Wireframe toggle button
             var wireFrameToggleButton = new Button { Content = new TextBlock { Text = "Wire frame On", Font = Font }, HorizontalAlignment = HorizontalAlignment.Left };
 
-            wireFrameToggleButton.Click += (s, e) =>
-            {
-                renderWireFrame = !renderWireFrame;
-                ((TextBlock)wireFrameToggleButton.Content).Text = renderWireFrame ? "Wire frame Off" : "Wire frame On";
+            //wireFrameToggleButton.Click += (s, e) =>
+            //{
+            //    renderWireFrame = !renderWireFrame;
+            //    ((TextBlock)wireFrameToggleButton.Content).Text = renderWireFrame ? "Wire frame Off" : "Wire frame On";
 
-                var modelComponent = TerrainEntity.Get<ModelComponent>();
-                if (renderWireFrame)
-                {
-                    modelComponent.Parameters.Set(Effect.RasterizerStateKey, GraphicsDevice.RasterizerStates.WireFrame);
-                }
-                else
-                {
-                    modelComponent.Parameters.Remove(Effect.RasterizerStateKey);
-                }
-            };
+            //    var modelComponent = TerrainEntity.Get<ModelComponent>();
+            //    if (renderWireFrame)
+            //    {
+            //        modelComponent.Parameters.Set(Effect.RasterizerStateKey, GraphicsDevice.RasterizerStates.WireFrame);
+            //    }
+            //    else
+            //    {
+            //        modelComponent.Parameters.Remove(Effect.RasterizerStateKey);
+            //    }
+            //};
 
             // Light toggle button
             var lightToggleButton = new Button { Content = new TextBlock { Text = "Directional Light Off", Font = Font }, HorizontalAlignment = HorizontalAlignment.Left };

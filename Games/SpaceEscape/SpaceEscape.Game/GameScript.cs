@@ -39,7 +39,7 @@ namespace SpaceEscape
             BackgroundScript.DistanceUpdated += SetDistanceInUI;
 
             // Adjust the color of fog effect.
-            GraphicsDevice.Parameters.Set(FogEffectKeys.FogColor, Color.FromAbgr(0xFF7D02FF));
+//            GraphicsDevice.Parameters.Set(FogEffectKeys.FogColor, Color.FromAbgr(0xFF7D02FF));
 
             // set behavior of UI button
             UIScript.StartButton.Click += StartGame;
