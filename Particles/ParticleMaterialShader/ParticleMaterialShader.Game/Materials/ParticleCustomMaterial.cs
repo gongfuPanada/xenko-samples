@@ -21,8 +21,12 @@ namespace ParticleMaterialShader.Materials
     [Display("CustomParticleMaterial")]
     public class ParticleCustomMaterial : ParticleMaterialSimple
     {
+        private ShaderGeneratorContext shaderGeneratorContext;
+        private ShaderSource shaderBaseColor;
+        private ShaderSource shaderBaseScalar;
+
         [DataMemberIgnore]
-        protected override string EffectName { get; set; } = "ParticleCustomEffect";
+        public override string EffectName { get; protected set; } = "ParticleCustomEffect";
 
         /// <summary>
         /// <see cref="IComputeColor"/> allows several channels to be blended together, including textures, vertex streams and fixed values.
@@ -66,30 +70,24 @@ namespace ParticleMaterialShader.Materials
         public UVBuilder UVBuilder1;
         private AttributeDescription texCoord1 = new AttributeDescription("TEXCOORD1");
 
-        [DataMemberIgnore]
-        private ShaderGeneratorContext shaderGeneratorContext;
-
         protected override void InitializeCore(RenderContext context)
         {
             base.InitializeCore(context);
 
+            shaderGeneratorContext = new ShaderGeneratorContext(context.GraphicsDevice) { Parameters = Parameters };
+
             UpdateShaders(context);
+        }
+
+        public override void ValidateEffect(RenderContext context, ref EffectValidator effectValidator)
+        {
+            //UpdateShaders(context.GraphicsDevice);
+            effectValidator.ValidateParameter(ParticleBaseKeys.BaseColor, shaderBaseColor);
+            effectValidator.ValidateParameter(ParticleBaseKeys.BaseColor, shaderBaseScalar);
         }
 
         private void UpdateShaders(RenderContext context)
         {
-            if (shaderGeneratorContext != null)
-            {
-                ParameterCollections.Remove(shaderGeneratorContext.Parameters);
-                shaderGeneratorContext = null;
-            }
-
-            if (shaderGeneratorContext == null)
-            {
-                shaderGeneratorContext = new ShaderGeneratorContext(context.GraphicsDevice);
-                ParameterCollections.Add(shaderGeneratorContext.Parameters);
-            }
-
             shaderGeneratorContext.Parameters.Clear();
 
             if (ComputeColor != null && ComputeScalar != null)
@@ -97,30 +95,19 @@ namespace ParticleMaterialShader.Materials
                 // Don't forget to set the proper color space!
                 shaderGeneratorContext.ColorSpace = context.GraphicsDevice.ColorSpace;
 
-                var shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));
-                shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseColor, shaderBaseColor);
+                shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));
+                Parameters.Set(ParticleCustomShaderKeys.BaseColor, shaderBaseColor);
 
-                var shaderBaseScalar = ComputeScalar.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.IntensityMap, ParticleCustomShaderKeys.IntensityValue, Color.White));
-                shaderGeneratorContext.Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
-
-                // Check if shader code has changed
-                if (!shaderBaseColor.Equals(shaderSource1) || !shaderBaseScalar.Equals(shaderSource2))
-                {
-                    shaderSource1 = shaderBaseColor;
-                    shaderSource2 = shaderBaseScalar;
-                    VertexLayoutHasChanged = true;
-                }
+                shaderBaseScalar = ComputeScalar.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.IntensityMap, ParticleCustomShaderKeys.IntensityValue, Color.White));
+                Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
             }
         }
-
-        private ShaderSource shaderSource1;
-        private ShaderSource shaderSource2;
 
         public override void UpdateVertexBuilder(ParticleVertexBuilder vertexBuilder)
         {
             base.UpdateVertexBuilder(vertexBuilder);
 
-            var code = shaderSource1?.ToString();
+            var code = shaderBaseColor?.ToString();
 
             if (code?.Contains("COLOR0") ?? false)
             {
@@ -133,14 +120,6 @@ namespace ParticleMaterialShader.Materials
 
             vertexBuilder.AddVertexElement(ParticleVertexElements.TexCoord[1]);
         }
-
-        public override void Setup(GraphicsDevice graphicsDevice, RenderContext context, Matrix viewMatrix, Matrix projMatrix, Color4 color)
-        {
-            base.Setup(graphicsDevice, context, viewMatrix, projMatrix, color);
-
-            UpdateShaders(context);
-        }
-
 
         public unsafe override void PatchVertexBuffer(ParticleVertexBuilder vertexBuilder, Vector3 invViewX, Vector3 invViewY, ParticleSorter sorter)
         {

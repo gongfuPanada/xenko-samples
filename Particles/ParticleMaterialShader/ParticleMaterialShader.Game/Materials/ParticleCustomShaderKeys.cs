@@ -10,21 +10,12 @@ namespace SiliconStudio.Xenko.Rendering
 {
     public partial class ParticleCustomShaderKeys
     {
-        static ParticleCustomShaderKeys()
-        {
-            
-        }
+        public static readonly PermutationParameterKey<ShaderSource> BaseColor = ParameterKeys.NewPermutation<ShaderSource>();
+        public static readonly ObjectParameterKey<Texture> EmissiveMap = ParameterKeys.NewObject<Texture>();
+        public static readonly ValueParameterKey<Color4> EmissiveValue = ParameterKeys.NewValue<Color4>();
 
-        public static readonly ParameterKey<ShaderSource> BaseColor     = ParameterKeys.New<ShaderSource>();
-
-        public static readonly ParameterKey<Texture> EmissiveMap = ParameterKeys.New<Texture>();
-        public static readonly ParameterKey<Color4> EmissiveValue = ParameterKeys.New<Color4>();
-
-
-
-        public static readonly ParameterKey<ShaderSource> BaseIntensity = ParameterKeys.New<ShaderSource>();
-
-        public static readonly ParameterKey<Texture> IntensityMap = ParameterKeys.New<Texture>();
-        public static readonly ParameterKey<float> IntensityValue = ParameterKeys.New<float>();
+        public static readonly PermutationParameterKey<ShaderSource> BaseIntensity = ParameterKeys.NewPermutation<ShaderSource>();
+        public static readonly ObjectParameterKey<Texture> IntensityMap = ParameterKeys.NewObject<Texture>();
+        public static readonly ValueParameterKey<float> IntensityValue = ParameterKeys.NewValue<float>();
     }
 }
