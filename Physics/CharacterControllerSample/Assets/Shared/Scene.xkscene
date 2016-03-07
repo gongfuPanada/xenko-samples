@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: fd2e196c-93bf-4855-9d23-ff3e21d11929
@@ -25,12 +25,12 @@ Hierarchy:
                         ~Id: a2e3d53d-39fa-49a5-979d-f1e0e90bef40
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
@@ -53,12 +53,12 @@ Hierarchy:
                         ~Id: 05b98de1-1d28-4b8c-a5b4-8db6de434369
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
@@ -117,12 +117,12 @@ Hierarchy:
                         ~Id: 00c69a1d-afd5-4e3c-8b48-e605ba81f788
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         FallSpeed: 10.0
                         MaxSlope: 0.0
                         JumpSpeed: 5.0
@@ -164,6 +164,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 415a18a4-1295-4fbf-9a88-3226b99108dd
                     Camera:
+                        ~Id: bef110ec-f321-4b02-b151-f1c0e7b77180
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 7207a5b4-cbf4-4edc-a7fb-0dfa83e2414e
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: ae49a161-82af-45da-a9db-2e589a7ff239
@@ -214,6 +214,7 @@ SceneSettings:
                         ~Id: 7b9b951d-3ee3-48ab-95dc-047e2888bde7
                         ModelEffect: SpaceEscapeEffectMain
                     Camera:
+                        ~Id: 8f656152-ae67-472b-b036-3f08cc9a4ea9
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
