@@ -6,6 +6,7 @@ using SiliconStudio.Xenko.Rendering;
 using SiliconStudio.Xenko.Engine;
 using SpaceEscape.Effects;
 using System.Linq;
+using SiliconStudio.Core.Extensions;
 
 namespace SpaceEscape.Background
 {
@@ -56,7 +57,7 @@ namespace SpaceEscape.Background
             skyplaneEntity = new Entity { new ModelComponent(SkyplaneModel) };
 
             skyplaneEntity.Transform.Position= SkyPlanePosition;
-//            skyplaneEntity.Get<ModelComponent>().Parameters.Set(GameParameters.EnableBend, false);
+            SkyplaneModel.Meshes[0].Parameters.Set(GameParameters.EnableBend, false);
             SkyplaneModel.Meshes[0].Parameters.Set(GameParameters.EnableOnflyTextureUVChange, true);
 
             // Add skyPlane with LevelBlocks to EntitySystem
