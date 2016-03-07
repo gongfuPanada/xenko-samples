@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 941a9765-9ce2-4a8e-bb1b-4dfc8ea1d541
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: 8507550b-7993-4793-82da-8d27ab036c71
@@ -201,6 +201,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 213caf85-ab0e-4d32-9cef-75ed14de487d
                     Camera:
+                        ~Id: 644fed6d-9e6f-4e81-b2ad-33d20069a09d
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}

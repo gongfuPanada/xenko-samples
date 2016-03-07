@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: 9d40c09d-0830-4cf6-bcaa-47b200a2c4f4
@@ -30,12 +30,12 @@ Hierarchy:
                         ~Id: 068b81a4-d447-4f72-9a77-8100b90b4f4d
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
@@ -81,12 +81,12 @@ Hierarchy:
                         ~Id: f7a047a8-1d7d-4718-b45e-eb3b3af5dbcd
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
@@ -109,12 +109,12 @@ Hierarchy:
                         ~Id: ea62aec8-5612-4eff-9f3c-a145a05020b7
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
@@ -137,12 +137,12 @@ Hierarchy:
                         ~Id: eadf208b-395c-4534-9755-97bfeb360dcc
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
@@ -169,12 +169,12 @@ Hierarchy:
                         ~Id: b827ef05-7932-4438-9c8c-fb096a372535
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 1.0
@@ -228,12 +228,12 @@ Hierarchy:
                         ~Id: d7d0fa54-8ed7-4c80-9937-62272cf9b11e
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 1.0
@@ -278,6 +278,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 7126ca24-5614-49d0-ba9e-2e2b38809048
                     Camera:
+                        ~Id: f7c4f86e-a9bd-4465-9144-8192a206a98e
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}

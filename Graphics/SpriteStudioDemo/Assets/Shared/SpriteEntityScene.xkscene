@@ -1,6 +1,6 @@
 !SceneAsset
 Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: 75c8a95e-8fbd-43ce-b53f-81e2c64d261e
@@ -67,12 +67,12 @@ Hierarchy:
                         ~Id: 84294d6f-a035-4bf9-be38-dcd7035a5810
                         CollisionGroup: CustomFilter1
                         CanCollideWith: DefaultFilter
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -103,12 +103,12 @@ Hierarchy:
                         ~Id: 4a1368df-990a-4d63-ab49-3a444fd68fab
                         CollisionGroup: DefaultFilter
                         CanCollideWith: CustomFilter1
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !StaticPlaneColliderShapeDesc
@@ -182,12 +182,12 @@ Hierarchy:
                         ~Id: ad6c2a2c-6b7f-4883-9119-24943a9348e5
                         CollisionGroup: CustomFilter1
                         CanCollideWith: DefaultFilter
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -228,12 +228,12 @@ Hierarchy:
                         ~Id: 209be0ce-9316-46d2-8605-97e95c780d44
                         CollisionGroup: CustomFilter1
                         CanCollideWith: DefaultFilter
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -275,6 +275,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 0604e99b-284e-4f86-a8f0-9d8faf78d345
                     Camera:
+                        ~Id: c177c08b-ea1c-4e37-a359-54de19ad7525
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}

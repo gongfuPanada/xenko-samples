@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c2262423-9422-4dd1-9fcb-ead76f9a93ba
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: bad0d8a1-15a6-4d40-af0c-8cef471c06ce
@@ -1475,6 +1475,7 @@ SceneSettings:
                         Mode: !CameraRendererModeForward
                             ~Id: c4868f99-9ef0-463f-babc-00ad61c3a1f4
                         Camera:
+                            ~Id: 68d1f817-b917-41af-b76a-7e2e8c054583
                             Index: 0
                         Output: !CurrentRenderFrameProvider {}
                         Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
@@ -1489,6 +1490,7 @@ SceneSettings:
                     Effect: !PostProcessingEffects
                         ~Id: c362b2fb-e48b-4e2c-bcfd-353abba90e06
                         Camera:
+                            ~Id: ac91b42d-6949-49a7-9616-52c0a2ab7bed
                             Index: 0
                         DepthOfField:
                             ~Id: 0e785956-91e4-4d0e-8c77-a915f45b77b7
@@ -1534,6 +1536,7 @@ SceneSettings:
             PostProcessingEffects:
                 ~Id: 2794b6ad-09da-4f87-a93c-27c4b3b86856
                 Camera:
+                    ~Id: ea03c339-68e3-4220-8b91-e42bed1b7e73
                     Index: 0
                 DepthOfField:
                     ~Id: 7f832281-9776-45db-a877-361e50db1996

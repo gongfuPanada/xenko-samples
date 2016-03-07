@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c90e49d7-b3d8-4b19-b771-71cf4460a83b
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: 442725a6-920d-4154-8afe-6fc25b5294d4
@@ -78,6 +78,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 026b1bbc-3f37-45a1-979e-0367f5521b39
                     Camera:
+                        ~Id: 4d8e2190-6031-4f3a-8af3-0f57f07249e3
                         Index: 0
                     CullingMask: Group0
                     Output: !CurrentRenderFrameProvider {}
@@ -87,6 +88,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 14a7a57a-53a9-43fa-b8c6-078f7e423f02
                     Camera:
+                        ~Id: 67139c67-edc7-4a26-ac0f-be0bf3cfa5a0
                         Index: 0
                     CullingMask: Group1
                     Output: !CurrentRenderFrameProvider {}
