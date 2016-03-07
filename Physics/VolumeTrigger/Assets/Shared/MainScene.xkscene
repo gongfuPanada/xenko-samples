@@ -1,6 +1,6 @@
 !SceneAsset
 Id: a5a4f13e-6366-43de-b071-a87c1dfff115
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: 60e0c56a-a89d-4ecb-8c32-7e57276c9659
@@ -52,12 +52,12 @@ Hierarchy:
                         ~Id: 8b611364-6303-4520-9db7-098f40abeecf
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -94,12 +94,12 @@ Hierarchy:
                         ~Id: bd95c249-90b2-43fb-b8df-b3cfa2974a87
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -136,12 +136,12 @@ Hierarchy:
                         ~Id: ef9e3724-6fea-4df2-819a-fee92ff7aa9d
                         CollisionGroup: CharacterFilter
                         CanCollideWith: DefaultFilter, SensorTrigger
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         FallSpeed: 10.0
                         MaxSlope: 0.0
                         JumpSpeed: 5.0
@@ -175,12 +175,12 @@ Hierarchy:
                         ~Id: fb16c8ce-168d-4834-9f92-5cfc5eb0adb1
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -217,12 +217,12 @@ Hierarchy:
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -259,12 +259,12 @@ Hierarchy:
                         ~Id: c495e000-fe10-43f1-bbac-85640eafd46e
                         CollisionGroup: DefaultFilter
                         CanCollideWith: DefaultFilter, CharacterFilter
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -302,12 +302,12 @@ Hierarchy:
                         ~Id: 7a5e3802-11cc-4fbd-a999-a8866ed80be0
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -344,12 +344,12 @@ Hierarchy:
                         ~Id: c7164168-9c7b-4a1c-bd92-93e45f99ffab
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -386,12 +386,12 @@ Hierarchy:
                         ~Id: 533ca968-2941-46fb-b7dd-fc29ce31dbc6
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -456,12 +456,12 @@ Hierarchy:
                         ~Id: 8423347f-e697-46e6-8a4f-8df5679744e9
                         CollisionGroup: DefaultFilter
                         CanCollideWith: KinematicFilter, SensorTrigger, CharacterFilter
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: true
                         ColliderShapes:
                             - !BoxColliderShapeDesc
@@ -494,12 +494,12 @@ Hierarchy:
                         ~Id: 00e29481-90d9-4b63-91d7-2b41a411b431
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -536,12 +536,12 @@ Hierarchy:
                         ~Id: 6b4cd3c5-1d87-40bd-a30e-1c4043f54005
                         CollisionGroup: DefaultFilter
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: true
                         Mass: 1.0
@@ -574,12 +574,12 @@ Hierarchy:
                         ~Id: 0804dd98-ed62-4939-97c3-63d697c8f29f
                         CollisionGroup: DefaultFilter
                         CanCollideWith: DefaultFilter, SensorTrigger, CharacterFilter
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         ColliderShapes:
                             - !StaticPlaneColliderShapeDesc
@@ -618,6 +618,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: 0b7ba40e-2325-44a0-ad55-e9ded74b9590
                     Camera:
+                        ~Id: 26675861-d311-4d46-8893-e6b8dac3c294
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}

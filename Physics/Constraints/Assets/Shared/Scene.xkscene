@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 45f5d521-b83c-4608-937d-64f93812fba7
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.0-beta01}
 Tags: []
 Hierarchy:
     ~Id: 44a86834-7780-4009-881b-b780aff153fc
@@ -41,12 +41,12 @@ Hierarchy:
                         ~Id: 9a3e92bf-7ad3-4d72-86b2-6dd090e69cd6
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 1.0
@@ -79,12 +79,12 @@ Hierarchy:
                         ~Id: 0ee762a3-5c6a-4816-a3f7-1ce5efec5a16
                         CollisionGroup: 0
                         CanCollideWith: 0
-                        ProcessCollisions: true
-                        Enabled: true
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
                         IsTrigger: false
                         IsKinematic: false
                         Mass: 1.0
@@ -211,6 +211,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: f01ae577-09c9-4a2b-a351-cb811ab208ab
                     Camera:
+                        ~Id: e7caff09-c57e-4dd6-85c9-898ef2bff7b1
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
