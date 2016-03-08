@@ -1,11 +1,11 @@
 !Texture
-Id: 57ddc762-34cf-4786-a32c-9faeb0671d86
+Id: 8b03c447-e775-437b-a178-b7c0921ebf24
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/hit_effect.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: 328ed7d5-ea4a-40b5-b336-88951c03b9a5
+    ~Id: 367797d4-0010-4d8e-ab25-07d2e48e29dc
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Engine.Design;
 using SiliconStudio.Xenko.Graphics;
 using SiliconStudio.Xenko.Particles.Components;
 using SiliconStudio.Xenko.UI;
@@ -29,6 +32,9 @@ namespace UIParticles
         public SpriteSheet SplashScreenImages;
 
         public SpriteSheet ButtonsImages;
+
+        [Display("Hit Effect Prefab")]
+        public Prefab Prefab;
 
         private const int virtualWidth = 600;
         private const int virtualHeight = 600;
@@ -91,7 +97,7 @@ namespace UIParticles
                 fusePercentage = 1f;
                 desiredState = GameState.NewGame;
                 var effectOffset = new Vector3(45 - xenkoButtonConfetti.RenderSize.X / 2, -5, 0);
-                SpawnParticles(xenkoButtonConfetti.WorldMatrix.TranslationVector + effectOffset, "Hit");
+                SpawnParticles(xenkoButtonConfetti.WorldMatrix.TranslationVector + effectOffset, Prefab, 2f);
             };
             //*********************************
 
@@ -126,7 +132,7 @@ namespace UIParticles
             {
                 desiredState = GameState.EndGame;
                 var effectOffset = new Vector3(45 - xenkoButtonStars.RenderSize.X / 2, -5, 0);
-                SpawnParticles(xenkoButtonStars.WorldMatrix.TranslationVector + effectOffset, "Hit");
+                SpawnParticles(xenkoButtonStars.WorldMatrix.TranslationVector + effectOffset, Prefab, 2f);
             };
             //*********************************
 
@@ -172,14 +178,50 @@ namespace UIParticles
             return worldPosition / screenResolution;
         }
 
-        protected void SpawnParticles(Vector3 uiPosition, string particleName)
+        protected void SpawnParticles(Vector3 uiPosition, Prefab hitEffectPrefab, float time)
         {
-            var particleEntity = SceneSystem.SceneInstance.Scene.Entities.FirstOrDefault(item => item.Name.Equals(particleName));
-            if (particleEntity == null)
+            if (hitEffectPrefab == null)
                 return;
 
-            particleEntity.Get<ParticleSystemComponent>().ParticleSystem.RestartSimulation();
-            particleEntity.Transform.Position = ToOrthographicCamera(uiPosition);
+            Func<Task> spawnTask = async () =>
+            {
+                var spawnedEntities = new List<Entity>();
+
+                // Add
+                foreach (var prefabEntity in hitEffectPrefab.Entities)
+                {
+                    var clonedEntity = EntityCloner.Clone(prefabEntity);
+
+                    clonedEntity.Get<ParticleSystemComponent>()?.ParticleSystem.RestartSimulation();
+
+                    clonedEntity.Transform.Position = ToOrthographicCamera(uiPosition);
+
+                    SceneSystem.SceneInstance.Scene.Entities.Add(clonedEntity);
+
+                    spawnedEntities.Add(clonedEntity);
+                }
+
+                // Countdown
+                var secondsCountdown = time;
+                while (secondsCountdown > 0f)
+                {
+                    await Script.NextFrame();
+                    secondsCountdown -= (float)Game.UpdateTime.Elapsed.TotalSeconds;
+                }
+
+                // Remove
+                foreach (var clonedEntity in spawnedEntities)
+                {
+                    SceneSystem.SceneInstance.Scene.Entities.Remove(clonedEntity);
+
+                    clonedEntity.Get<ParticleSystemComponent>()?.ParticleSystem.Dispose();
+                    clonedEntity.Dispose();
+                }
+
+                spawnedEntities.Clear();
+            };
+
+            Script.AddTask(spawnTask);
         }
 
 
