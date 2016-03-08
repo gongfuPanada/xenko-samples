@@ -21,7 +21,6 @@ namespace ParticleMaterialShader.Materials
     [Display("CustomParticleMaterial")]
     public class ParticleCustomMaterial : ParticleMaterialSimple
     {
-        private ShaderGeneratorContext shaderGeneratorContext;
         private ShaderSource shaderBaseColor;
         private ShaderSource shaderBaseScalar;
 
@@ -74,32 +73,51 @@ namespace ParticleMaterialShader.Materials
         {
             base.InitializeCore(context);
 
-            shaderGeneratorContext = new ShaderGeneratorContext(context.GraphicsDevice) { Parameters = Parameters };
+            UpdateShaders(context.GraphicsDevice);
+        }
 
-            UpdateShaders(context);
+
+        /// <inheritdoc />
+        public override void Setup(RenderContext context)
+        {
+            base.Setup(context);
+
+            UpdateShaders(context.GraphicsDevice);
         }
 
         public override void ValidateEffect(RenderContext context, ref EffectValidator effectValidator)
         {
-            //UpdateShaders(context.GraphicsDevice);
             effectValidator.ValidateParameter(ParticleBaseKeys.BaseColor, shaderBaseColor);
             effectValidator.ValidateParameter(ParticleBaseKeys.BaseColor, shaderBaseScalar);
         }
 
-        private void UpdateShaders(RenderContext context)
+        private void UpdateShaders(GraphicsDevice graphicsDevice)
         {
-            shaderGeneratorContext.Parameters.Clear();
-
             if (ComputeColor != null && ComputeScalar != null)
             {
+                var shaderGeneratorContext = new ShaderGeneratorContext(graphicsDevice)
+                {
+                    Parameters = Parameters,
+                    ColorSpace = graphicsDevice.ColorSpace
+                };
+
                 // Don't forget to set the proper color space!
-                shaderGeneratorContext.ColorSpace = context.GraphicsDevice.ColorSpace;
+                shaderGeneratorContext.ColorSpace = graphicsDevice.ColorSpace;
 
-                shaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));
-                Parameters.Set(ParticleCustomShaderKeys.BaseColor, shaderBaseColor);
+                var newShaderBaseColor = ComputeColor.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.EmissiveMap, ParticleCustomShaderKeys.EmissiveValue, Color.White));
+                var newShaderBaseScalar = ComputeScalar.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.IntensityMap, ParticleCustomShaderKeys.IntensityValue, Color.White));
 
-                shaderBaseScalar = ComputeScalar.GenerateShaderSource(shaderGeneratorContext, new MaterialComputeColorKeys(ParticleCustomShaderKeys.IntensityMap, ParticleCustomShaderKeys.IntensityValue, Color.White));
-                Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
+                // Check if shader code has changed
+                if (!newShaderBaseColor.Equals(shaderBaseColor) || !newShaderBaseScalar.Equals(shaderBaseScalar))
+                {
+                    shaderBaseColor = newShaderBaseColor;
+                    shaderBaseScalar = newShaderBaseScalar;
+                    Parameters.Set(ParticleCustomShaderKeys.BaseColor, shaderBaseColor);
+                    Parameters.Set(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
+
+                    // TODO: Is this necessary?
+                    HasVertexLayoutChanged = true;
+                }
             }
         }
 
