@@ -1,11 +1,11 @@
 !Texture
-Id: 7cff7495-2e55-4223-bf56-1ea314e6c539
+Id: df6a8279-5019-45ee-98df-6b3b31365893
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
 Source: ../../RawAssets/whitesmoke8x8.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: f304ddc2-bcf0-4cc5-acfd-e2bcd7e4785e
+    ~Id: 4137ad81-27c5-43ba-9582-5a247ec0ca04
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

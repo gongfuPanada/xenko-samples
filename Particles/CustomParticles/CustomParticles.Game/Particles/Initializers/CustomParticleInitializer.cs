@@ -74,14 +74,6 @@ namespace CustomParticles.Particles.Initializers
             }
         }
 
-        /// <summary>
-        /// Note on inheritance. The current values only change once per frame, when the SetParentTRS is called. 
-        /// This is intentional and reduces overhead, because SetParentTRS is called exactly once/turn.
-        /// </summary>
-        [DataMember(5)]
-        [Display("Inheritance")]
-        public InheritLocation InheritLocation { get; set; } = InheritLocation.Position | InheritLocation.Rotation | InheritLocation.Scale;
-
         [DataMember(8)]
         [Display("Seed offset")]
         public UInt32 SeedOffset { get; set; } = 0;

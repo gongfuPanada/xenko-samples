@@ -18,7 +18,7 @@ using SiliconStudio.Xenko.Particles.Materials;
 namespace ParticleMaterialShader.Materials
 {
     [DataContract("ParticleCustomMaterial")]
-    [Display("CustomParticleMaterial")]
+    [Display("ParticleCustomMaterial")]
     public class ParticleCustomMaterial : ParticleMaterialSimple
     {
         [DataMemberIgnore]
