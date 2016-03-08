@@ -47,7 +47,7 @@ namespace SpaceEscape.Rendering
         }
 
         /// <inheritdoc/>
-        public override void PrepareEffectPermutations()
+        public override void PrepareEffectPermutations(RenderThreadContext context)
         {
             var renderEffects = RootRenderFeature.RenderData.GetData(renderEffectKey);
             int effectSlotCount = ((RootEffectRenderFeature)RootRenderFeature).EffectPermutationSlotCount;
