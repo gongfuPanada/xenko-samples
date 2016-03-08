@@ -87,8 +87,8 @@ namespace ParticleMaterialShader.Materials
 
         public override void ValidateEffect(RenderContext context, ref EffectValidator effectValidator)
         {
-            effectValidator.ValidateParameter(ParticleBaseKeys.BaseColor, shaderBaseColor);
-            effectValidator.ValidateParameter(ParticleBaseKeys.BaseColor, shaderBaseScalar);
+            effectValidator.ValidateParameter(ParticleCustomShaderKeys.BaseColor, shaderBaseColor);
+            effectValidator.ValidateParameter(ParticleCustomShaderKeys.BaseIntensity, shaderBaseScalar);
         }
 
         private void UpdateShaders(GraphicsDevice graphicsDevice)

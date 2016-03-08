@@ -28,7 +28,5 @@ namespace SiliconStudio.Xenko.Rendering
         {
             mixin compose baseIntensity = ParticleCustomShaderKeys.BaseIntensity;
         }
-
    };
-
 }
