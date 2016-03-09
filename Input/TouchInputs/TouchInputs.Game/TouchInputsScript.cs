@@ -230,10 +230,10 @@ namespace TouchInputs
             }
         }
 
-        private void Render(RenderContext context, RenderFrame frame)
+        private void Render(RenderDrawContext context, RenderFrame frame)
         {
             // depth test off mode 
-            spriteBatch.Begin(depthStencilState:context.GraphicsDevice.DepthStencilStates.None);
+            spriteBatch.Begin(context.GraphicsContext, depthStencilState: DepthStencilStates.None);
             
             // render the keyboard key states
             spriteBatch.DrawString(Font, KeyboardSessionString, textLeftTopCorner, fontColor);

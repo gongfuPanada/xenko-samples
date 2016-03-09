@@ -28,7 +28,7 @@ namespace JumpyJet
 
         public override void Start()
         {
-            var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 20f);
+            var virtualResolution = new Vector3(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height, 20f);
 
             // Create Parallax Background
             backgroundParallax.Add(new BackgroundSection(ParallaxBackgrounds.Sprites[0], virtualResolution, GameScript.GameSpeed / 4f, Pal0Depth));
@@ -69,9 +69,9 @@ namespace JumpyJet
             spriteBatch.Dispose();
         }
 
-        public void DrawParallax(RenderContext context, RenderFrame frame)
+        public void DrawParallax(RenderDrawContext context, RenderFrame frame)
         {
-            spriteBatch.Begin();
+            spriteBatch.Begin(context.GraphicsContext);
 
             foreach (var pallaraxBackground in backgroundParallax)
                 pallaraxBackground.DrawSprite(spriteBatch);

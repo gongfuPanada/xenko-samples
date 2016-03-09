@@ -114,7 +114,7 @@ namespace MaterialSample
         /// </summary>
         private void OnWindowSizeChanged(object sender, EventArgs eventArgs)
         {
-            CameraComponent.AspectRatio = GraphicsDevice.BackBuffer.Width / (float)GraphicsDevice.BackBuffer.Height;
+            CameraComponent.AspectRatio = GraphicsDevice.Presenter.BackBuffer.Width / (float)GraphicsDevice.Presenter.BackBuffer.Height;
         }
     }
 }

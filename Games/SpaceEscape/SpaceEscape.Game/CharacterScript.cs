@@ -223,7 +223,7 @@ namespace SpaceEscape
         private InputState ProcessInputFromDragGesture(GestureEventDrag gestureEvent)
         {
             // Get drag vector and multiply by the screenRatio of the screen, also flip y (-screenRatio).
-            var screenRatio = (float)GraphicsDevice.BackBuffer.Height / GraphicsDevice.BackBuffer.Width;
+            var screenRatio = (float)GraphicsDevice.Presenter.BackBuffer.Height / GraphicsDevice.Presenter.BackBuffer.Width;
             var dragVector = (gestureEvent.CurrentPosition - gestureEvent.StartPosition) * new Vector2(1f, -screenRatio);
             var dragDirection = Vector2.Normalize(dragVector);
 

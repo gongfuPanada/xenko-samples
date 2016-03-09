@@ -217,7 +217,7 @@ namespace SpriteEntity
                 return InputState.None;
 
             // Transform pointer's position from normorlize coordinate to virtual resolution coordinate
-            var resolution = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+            var resolution = new Vector2(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
             var virtualCoordinatePointerPosition = resolution*pointerState.Position;
 
             // Get current position of the agent, since the origin of the sprite is at the center, region needs to be shifted to top-left
@@ -237,7 +237,7 @@ namespace SpriteEntity
 
         private float VirtualCoordToPixel(float virtualCoord)
         {
-            return (virtualCoord + (gameWidthHalfX))/gameWidthX*GraphicsDevice.BackBuffer.Width;
+            return (virtualCoord + (gameWidthHalfX))/gameWidthX*GraphicsDevice.Presenter.BackBuffer.Width;
         }
     }
 }

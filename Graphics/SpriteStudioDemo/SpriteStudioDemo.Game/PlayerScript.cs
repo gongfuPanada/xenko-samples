@@ -207,7 +207,7 @@ namespace SpriteStudioDemo
 			}
 			
             // Transform pointer's position from normorlize coordinate to virtual resolution coordinate
-            var resolution = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+            var resolution = new Vector2(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
             var virtualCoordinatePointerPositionA = resolution.X * (pointerState.Position.X + 0.05f);
             var virtualCoordinatePointerPositionB = resolution.X * (pointerState.Position.X - 0.05f);
 
@@ -225,7 +225,7 @@ namespace SpriteStudioDemo
 
         private float VirtualCoordToPixel(float virtualCoord)
         {
-            return (virtualCoord + (gameWidthHalfX)) / gameWidthX * GraphicsDevice.BackBuffer.Width;
+            return (virtualCoord + (gameWidthHalfX)) / gameWidthX * GraphicsDevice.Presenter.BackBuffer.Width;
         }
     }
 }

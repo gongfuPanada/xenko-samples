@@ -53,9 +53,6 @@ namespace SimpleTerrain
         private ModalElement loadingModal;
         private TextBlock loadingTextBlock;
 
-        // Raster states (Wireframe / Normal) Parameters
-        private bool renderWireFrame;
-
         #region Fault formation properties
         private int TerrainSizePowerFactor
         {
@@ -127,7 +124,7 @@ namespace SimpleTerrain
         /// </summary>
         private void CreateUI()
         {
-            var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
+            var virtualResolution = new Vector3(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height, 1);
 
             loadingModal = new ModalElement { Visibility = Visibility.Collapsed };
 
@@ -386,25 +383,6 @@ namespace SimpleTerrain
             parametersGrid.Children.Add(zoomFactorDecButton);
             parametersGrid.Children.Add(zoomFactorIncButton);
 
-            // Wireframe toggle button
-            var wireFrameToggleButton = new Button { Content = new TextBlock { Text = "Wire frame On", Font = Font }, HorizontalAlignment = HorizontalAlignment.Left };
-
-            wireFrameToggleButton.Click += (s, e) =>
-            {
-                renderWireFrame = !renderWireFrame;
-                ((TextBlock)wireFrameToggleButton.Content).Text = renderWireFrame ? "Wire frame Off" : "Wire frame On";
-
-                var modelComponent = TerrainEntity.Get<ModelComponent>();
-                if (renderWireFrame)
-                {
-                    modelComponent.Parameters.Set(Effect.RasterizerStateKey, GraphicsDevice.RasterizerStates.WireFrame);
-                }
-                else
-                {
-                    modelComponent.Parameters.Remove(Effect.RasterizerStateKey);
-                }
-            };
-
             // Light toggle button
             var lightToggleButton = new Button { Content = new TextBlock { Text = "Directional Light Off", Font = Font }, HorizontalAlignment = HorizontalAlignment.Left };
 
@@ -429,7 +407,6 @@ namespace SimpleTerrain
                 {
                     new TextBlock { Font = Font, Text = "Fault formation parameters", TextSize = 19},
                     parametersGrid,
-                    wireFrameToggleButton,
                     lightToggleButton,
                     reCreateTerrainButton
                 }
@@ -570,15 +547,17 @@ namespace SimpleTerrain
         /// <param name="heightMap"></param>
         private void InitializeBuffersFromTerrain(HeightMap heightMap)
         {
+            var commandList = Game.GraphicsContext.CommandList;
+
             // Set data in VertexBuffer
-            var mappedSubResource = GraphicsDevice.MapSubresource(terrainVertexBuffer, 0, MapMode.WriteDiscard);
+            var mappedSubResource = commandList.MapSubresource(terrainVertexBuffer, 0, MapMode.WriteDiscard);
             SetVertexDataFromHeightMap(heightMap, mappedSubResource.DataBox.DataPointer);
-            GraphicsDevice.UnmapSubresource(mappedSubResource);
+            commandList.UnmapSubresource(mappedSubResource);
 
             // Set data in IndexBuffer
-            mappedSubResource = GraphicsDevice.MapSubresource(terrainIndexBuffer, 0, MapMode.WriteDiscard);
+            mappedSubResource = commandList.MapSubresource(terrainIndexBuffer, 0, MapMode.WriteDiscard);
             var elementCount = SetIndexDataForTerrain(heightMap.Size, mappedSubResource.DataBox.DataPointer);
-            GraphicsDevice.UnmapSubresource(mappedSubResource);
+            commandList.UnmapSubresource(mappedSubResource);
 
             terrainMesh.Draw.DrawCount = elementCount;
         }

@@ -18,18 +18,18 @@ namespace SiliconStudio.Xenko.Rendering
 {
     public static partial class VertexTextureTerrainKeys
     {
-        public static readonly ParameterKey<SamplerState> MeshTextureSampler = ParameterKeys.New<SamplerState>();
-        public static readonly ParameterKey<float> MinimumHeight0 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> OptimalHeight0 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> MaximumHeight0 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> MinimumHeight1 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> OptimalHeight1 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> MaximumHeight1 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> MinimumHeight2 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> OptimalHeight2 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<float> MaximumHeight2 = ParameterKeys.New<float>();
-        public static readonly ParameterKey<Texture> MeshTexture0 = ParameterKeys.New<Texture>();
-        public static readonly ParameterKey<Texture> MeshTexture1 = ParameterKeys.New<Texture>();
-        public static readonly ParameterKey<Texture> MeshTexture2 = ParameterKeys.New<Texture>();
+        public static readonly ObjectParameterKey<SamplerState> MeshTextureSampler = ParameterKeys.NewObject<SamplerState>();
+        public static readonly ValueParameterKey<float> MinimumHeight0 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> OptimalHeight0 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> MaximumHeight0 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> MinimumHeight1 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> OptimalHeight1 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> MaximumHeight1 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> MinimumHeight2 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> OptimalHeight2 = ParameterKeys.NewValue<float>();
+        public static readonly ValueParameterKey<float> MaximumHeight2 = ParameterKeys.NewValue<float>();
+        public static readonly ObjectParameterKey<Texture> MeshTexture0 = ParameterKeys.NewObject<Texture>();
+        public static readonly ObjectParameterKey<Texture> MeshTexture1 = ParameterKeys.NewObject<Texture>();
+        public static readonly ObjectParameterKey<Texture> MeshTexture2 = ParameterKeys.NewObject<Texture>();
     }
 }

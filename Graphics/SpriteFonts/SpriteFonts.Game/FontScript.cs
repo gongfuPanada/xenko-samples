@@ -102,7 +102,7 @@ at full size and full measure";
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = new Vector3(virtualResolution, 1000) };
 
             centerVirtualPosition = new Vector2(virtualResolution.X * 0.5f, virtualResolution.Y * 0.5f);
-            screenSize = new Vector2(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height);
+            screenSize = new Vector2(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
 
             screenRenderers.Add(DrawIntroductionCategory);
             screenRenderers.Add(DrawStaticCategory);
@@ -139,12 +139,12 @@ at full size and full measure";
 
         #region Draw Methods
 
-        private void DrawFont(RenderContext context, RenderFrame frame)
+        private void DrawFont(RenderDrawContext context, RenderFrame frame)
         {
             if(isPlaying)
                 currentTime += (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(context.GraphicsContext);
             screenRenderers[currentScreenIndex]();
             spriteBatch.End();
         }

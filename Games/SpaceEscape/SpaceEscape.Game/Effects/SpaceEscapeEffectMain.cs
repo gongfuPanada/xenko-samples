@@ -18,9 +18,9 @@ namespace SpaceEscape.Effects
 {
     [DataContract]public partial class GameParameters : ShaderMixinParameters
     {
-        public static readonly ParameterKey<bool> EnableFog = ParameterKeys.New<bool>(true);
-        public static readonly ParameterKey<bool> EnableBend = ParameterKeys.New<bool>(true);
-        public static readonly ParameterKey<bool> EnableOnflyTextureUVChange = ParameterKeys.New<bool>(false);
+        public static readonly PermutationParameterKey<bool> EnableFog = ParameterKeys.NewPermutation<bool>(true);
+        public static readonly PermutationParameterKey<bool> EnableBend = ParameterKeys.NewPermutation<bool>(true);
+        public static readonly PermutationParameterKey<bool> EnableOnflyTextureUVChange = ParameterKeys.NewPermutation<bool>(false);
     };
     internal static partial class ShaderMixins
     {

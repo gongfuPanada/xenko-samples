@@ -33,7 +33,7 @@ namespace SimpleSprite
         public override void Start()
         {
             // create the ball sprite.
-            var virtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
+            var virtualResolution = new Vector3(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height, 1);
             spriteBatch = new SpriteBatch(GraphicsDevice) { VirtualResolution = virtualResolution };
 
             // Initialize ball's state related variables.
@@ -88,9 +88,9 @@ namespace SimpleSprite
             spriteBatch.Dispose();
         }
 
-        private void RenderSpheres(RenderContext renderContext, RenderFrame frame)
+        private void RenderSpheres(RenderDrawContext renderContext, RenderFrame frame)
         {
-            spriteBatch.Begin();
+            spriteBatch.Begin(renderContext.GraphicsContext);
 
             // draw the ball
             var time = (float)Game.DrawTime.Total.TotalSeconds;
