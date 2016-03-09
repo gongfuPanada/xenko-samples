@@ -60,7 +60,7 @@ namespace CustomEffect
         {
             customEffectInstance.Parameters.Set(EffectKeys.Phase, -3 * (float)Game.UpdateTime.Total.TotalSeconds);
 
-            spriteBatch.Begin(renderContext.GraphicsContext, blendState: GraphicsDevice.BlendStates.NonPremultiplied, depthStencilState: GraphicsDevice.DepthStencilStates.None, effect: customEffectInstance);
+            spriteBatch.Begin(renderContext.GraphicsContext, blendState: BlendStates.NonPremultiplied, depthStencilState: DepthStencilStates.None, effect: customEffectInstance);
             spriteBatch.Draw(Logo, new RectangleF(0, 0, 1, 1), Color.White);
             spriteBatch.End();
         }

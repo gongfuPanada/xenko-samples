@@ -147,7 +147,7 @@ namespace SimpleDynamicTexture
         /// <param name="frame">The render frame</param>
         private void RenderTexture(RenderDrawContext renderContext, RenderFrame frame)
         {
-            spriteBatch.Begin(renderContext.GraphicsContext, SpriteSortMode.Texture, null, GraphicsDevice.SamplerStates.PointClamp, GraphicsDevice.DepthStencilStates.None);
+            spriteBatch.Begin(renderContext.GraphicsContext, SpriteSortMode.Texture, null, GraphicsDevice.SamplerStates.PointClamp, DepthStencilStates.None);
 
             spriteBatch.Draw(renderTexture, new RectangleF(0, 0, GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height), Color.White);
 
