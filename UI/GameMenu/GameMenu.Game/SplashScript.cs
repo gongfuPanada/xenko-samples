@@ -114,7 +114,7 @@ namespace GameMenu
             if (Input.PointerEvents.Count > 0)
             {
                 // Next scene
-                SceneSystem.SceneInstance.Scene = Asset.Load<Scene>("MainScene");
+                SceneSystem.SceneInstance.Scene = Content.Load<Scene>("MainScene");
                 Cancel();
             }
         }

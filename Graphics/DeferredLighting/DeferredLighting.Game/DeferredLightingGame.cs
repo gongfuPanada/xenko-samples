@@ -55,13 +55,13 @@ namespace DeferredLighting
             rotateLights = true;
 
             // load the model
-            characterEntity = Asset.Load<Entity>("character_00");
+            characterEntity = Content.Load<Entity>("character_00");
             characterEntity.Transformation.Rotation = Quaternion.RotationAxis(Vector3.UnitX, (float)(0.5 * Math.PI));
             characterEntity.Transformation.Translation = characterInitPos;
             Entities.Add(characterEntity);
 
             // create the stand
-            var material = Asset.Load<Material>("character_00_material_mc00");
+            var material = Content.Load<Material>("character_00_material_mc00");
             var standEntity = CreateStand(material);
             standEntity.Transformation.Translation = new Vector3(0, 0, -80);
             standEntity.Transformation.Rotation = Quaternion.RotationAxis(Vector3.UnitX, (float)(0.5 * Math.PI));
@@ -119,7 +119,7 @@ namespace DeferredLighting
         {
             VirtualResolution = new Vector3(GraphicsDevice.BackBuffer.Width, GraphicsDevice.BackBuffer.Height, 1);
 
-            var font = Asset.Load<SpriteFont>("Font");
+            var font = Content.Load<SpriteFont>("Font");
             var canvas = new Canvas();
             var stackPanel = new StackPanel
             {
@@ -285,7 +285,7 @@ namespace DeferredLighting
                     },
                     Parameters =
                     {
-                        {TexturingKeys.Texture0, Asset.Load<Texture>("TrainingFloor")},
+                        {TexturingKeys.Texture0, Content.Load<Texture>("TrainingFloor")},
                         {TexturingKeys.Sampler0, GraphicsDevice.SamplerStates.AnisotropicWrap},
                         {MaterialKeys.SpecularColorValue, 0.1f*Color4.White}
                     }
@@ -312,7 +312,7 @@ namespace DeferredLighting
                     },
                     Parameters =
                     {
-                        {TexturingKeys.Texture0, Asset.Load<Texture>("red")},
+                        {TexturingKeys.Texture0, Content.Load<Texture>("red")},
                         {TexturingKeys.Sampler0, GraphicsDevice.SamplerStates.AnisotropicWrap},
                         {MaterialKeys.SpecularColorValue, 0.3f*Color4.White}
                     }
