@@ -26,7 +26,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: aeaff4f6-a57a-4c8b-9712-57cf6a2d3788
-                        Position: {X: -5.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -3.0, Y: 0.0, Z: -3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children:
@@ -109,7 +109,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: 10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 3.0, Y: 0.0, Z: -3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -599,13 +599,15 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: d719501e-2e96-4fe6-b6dc-1425efb29de3
-                        Position: {X: 0.0, Y: 4.0, Z: 13.130908}
+                        Position: {X: 0.0, Y: 4.0, Z: 12.0}
                         Rotation: {W: 0.9961947, X: -0.08715574, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
                     - !CameraComponent
                         ~Id: 2d3c6f87-3797-4988-95bd-0c6964dd3579
                         Projection: Perspective
+                    - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
+                        ~Id: aa747cc9-ee50-4f4e-bd4e-5442adb9b30c
             Design: {}
         -   Entity:
                 Id: a8f82a89-f9fb-46ca-a616-77288dbac198
@@ -631,7 +633,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: -5.0, Y: 0.5, Z: 0.0}
+                        Position: {X: -3.0, Y: 0.5, Z: -3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -746,7 +748,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: aeaff4f6-a57a-4c8b-9712-57cf6a2d3788
-                        Position: {X: -10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -3.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children:
@@ -779,7 +781,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: 3.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 1.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -961,7 +963,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: aeaff4f6-a57a-4c8b-9712-57cf6a2d3788
-                        Position: {X: 10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 3.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children:
@@ -976,7 +978,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: -10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -3.0, Y: 0.0, Z: 3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -1100,7 +1102,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: aeaff4f6-a57a-4c8b-9712-57cf6a2d3788
-                        Position: {X: 5.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 3.0, Y: 0.0, Z: -3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children:
