@@ -368,7 +368,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -3.0, Y: 0.0, Z: -3.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
@@ -681,7 +681,7 @@ Hierarchy:
                 Components:
                     - !TransformComponent
                         ~Id: ca6746df-9948-4ab1-a823-3099b697ba41
-                        Position: {X: -3.0, Y: 0.5, Z: -3.0}
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
