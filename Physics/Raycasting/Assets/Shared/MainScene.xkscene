@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 86fed268-baa8-4929-9eba-4d14cf3a0e68
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: c91144cf-1866-4c08-a9d0-88b0ec28a0b9
@@ -26,7 +26,7 @@ Hierarchy:
                         Children: []
                     - !Raycasting.GuiScript,Raycasting.Game
                         ~Id: c780a5dd-7fbf-44b0-99b7-8a048d3b2557
-                        Font: 1aae175d-f34a-472e-b951-65e34f93c8e3:Font
+                        Font: aaa92595-c09f-40e7-b454-f37d0a61ca43/1aae175d-f34a-472e-b951-65e34f93c8e3:Font
                     - !UIComponent
                         ~Id: ee506ad3-1840-42d1-a282-00ec4aca40b0
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
@@ -43,7 +43,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: b3c27e3e-f14c-4851-95dc-a7b08a65791a
-                        Texture: d2ae7171-f414-4455-863c-cb002ee3b2bf:XenkoBackground
+                        Texture: bd6a2914-d590-4114-854f-fcd971fe8b66/d2ae7171-f414-4455-863c-cb002ee3b2bf:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 492b70e8-7fe8-4891-8313-fc83f68ea561
@@ -78,10 +78,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 4a359532-2669-4ff6-9c06-2fec379b8dda
-                                Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                                Shape: 6a3f1ace-2ebd-4821-b261-0daab1e523c7/353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
                     - !ModelComponent
                         ~Id: 1357fa53-0ea6-4769-8687-acfc20e94862
-                        Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
+                        Model: 1b1f1dfd-8c2e-4fc2-9762-13efa808b51b/226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                         Materials:
                             - null
             Design: {}
@@ -109,7 +109,7 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 2eb9a1bd-11d4-4567-9987-b331ff903c26
-                                Shape: 1a7f15af-ac01-4464-adfe-7689bd50966e:ground_cs
+                                Shape: 6e07932d-ee9e-4300-b571-a327b24bfa67/1a7f15af-ac01-4464-adfe-7689bd50966e:ground_cs
             Design: {}
         -   Entity:
                 Id: a17f7b08-0abd-49a5-9014-bec26ca0e547
@@ -144,10 +144,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 942f107d-2b37-48b1-b144-2fd78041aa91
-                                Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                                Shape: dd756b08-2025-468e-8e6e-fa771687027b/353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
                     - !ModelComponent
                         ~Id: 619893f8-b3c2-449c-94f0-61673c9dfdcd
-                        Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
+                        Model: 9558ff2d-92f4-413f-b275-ac9e4e693932/226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                         Materials:
                             - null
             Design: {}
@@ -200,10 +200,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 04c35708-8bf5-4ead-9c7e-b28a7e50890a
-                                Shape: 353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
+                                Shape: f82a3f14-5f55-4a00-9a21-a5dd629dc386/353d6001-19b0-4883-b810-fe25b88c19ab:cube_cs
                     - !ModelComponent
                         ~Id: 505f1809-b1cf-488f-a2e4-7b1732b4a16d
-                        Model: 226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
+                        Model: 8c56dc7a-0be8-4ab8-a125-cfab6fe27f70/226ee5dd-9c34-426a-8901-c217d0cd8a60:Cube
                         Materials:
                             - null
             Design: {}
@@ -236,6 +236,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: d296aa0e-cd27-4f65-936f-dfba810e1ef2}
                     Id: 7b8dae54-4ed8-4d4f-b279-6f323fdf0b14
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: a25faba5-dbb7-4017-9d7b-5fe8e3a4fb8b

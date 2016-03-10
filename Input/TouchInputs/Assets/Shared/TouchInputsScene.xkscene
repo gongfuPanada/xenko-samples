@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 8da52091-f3ce-45a3-8f1b-01fbf1a19f42
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 67cc7b50-975b-4b42-b3c1-5b85a4b31221
@@ -20,7 +20,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 26cda407-3b29-42bb-b369-8191eebff7a5
-                        Texture: c70d3cb5-77d2-4400-a715-382d092a2e19:XenkoBackground
+                        Texture: d3ce110b-a1ee-4a36-94fe-1b62e4998ef7/c70d3cb5-77d2-4400-a715-382d092a2e19:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 95d80bd6-50e5-4984-92ae-7b8eeec651a6
@@ -34,14 +34,15 @@ Hierarchy:
                         Children: []
                     - !TouchInputs.TouchInputsScript,TouchInputs.Game
                         ~Id: 38a398b7-285d-4063-a950-7d21a21321cf
-                        Font: 25d9be11-4750-4d09-b58f-0628bf0c74e1:Font
-                        RoundTexture: f21cc317-81d3-41f1-b524-d12766abf594:round
+                        Font: 665b488f-6597-4f9a-8d12-bccb46f9ed95/25d9be11-4750-4d09-b58f-0628bf0c74e1:Font
+                        RoundTexture: 6ccf73d7-09f2-49d4-a13e-85e06eaa2f05/f21cc317-81d3-41f1-b524-d12766abf594:round
             Design: {}
 SceneSettings:
     ~Id: 378e55f2-9ab1-4c47-84f4-0e858f46db13
     GraphicsCompositor: !SceneGraphicsCompositorLayers
         ~Id: 92ef9d61-574d-4b55-81d2-c584e26b01cc
         Cameras: []
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: 28527981-bcc2-4391-b7be-72daec58fd6a

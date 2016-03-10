@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 9294c606-6173-4215-a8dc-0d5043d68333
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: e397c235-ffba-44db-b2c5-f251b3c80139
@@ -19,9 +19,9 @@ Hierarchy:
                         Children: []
                     - !GameMenu.MainScript,GameMenu.Game
                         ~Id: 22b8232d-2333-4478-8565-0a003fa813fe
-                        JapaneseFont: cb333065-ba29-41a4-b07c-eeb5d39b5cc6:JapaneseFont
-                        MainSceneImages: dba38b73-6f43-40ba-a4da-8e711695c7e8:MainSceneImages
-                        WesternFont: 6a45aa77-17aa-4fde-9acd-9452744e14ca:WesternFont
+                        JapaneseFont: dd9a8112-eb31-47b3-978a-80443dba6d94/cb333065-ba29-41a4-b07c-eeb5d39b5cc6:JapaneseFont
+                        MainSceneImages: 56f2c06f-0010-420f-8814-96c5f0f1ffcd/dba38b73-6f43-40ba-a4da-8e711695c7e8:MainSceneImages
+                        WesternFont: 08b90328-e57a-4afd-b64b-785f89e51782/6a45aa77-17aa-4fde-9acd-9452744e14ca:WesternFont
                     - !UIComponent
                         ~Id: 55e6243c-8b03-4f7a-8aba-c6fc8959c49a
                         VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
@@ -32,6 +32,7 @@ SceneSettings:
     GraphicsCompositor: !SceneGraphicsCompositorLayers
         ~Id: 89ae28bf-7fdf-4392-a13a-56aa42d48fbb
         Cameras: []
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: 134142f8-9c84-4f1d-bb09-5c23071ec08a

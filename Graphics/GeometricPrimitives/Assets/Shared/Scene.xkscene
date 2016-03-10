@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 41bc08b1-d7db-4466-8661-663be2db1dbf
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 550f6aec-4145-42b0-a64b-a89395a16477
@@ -32,7 +32,7 @@ Hierarchy:
                         ~Id: eb299280-6731-4070-b2e6-c1a19cc6d12e
                     - !ModelComponent
                         ~Id: ab8b856e-5db2-4f72-ae4f-47b9153e9fc6
-                        Model: bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
+                        Model: 792f6174-731e-4303-9b54-461ef7927667/bd6edb02-4f2d-40e8-924f-04a76ee88c94:SphereModel
                         Materials:
                             - null
             Design: {}
@@ -50,7 +50,7 @@ Hierarchy:
                         ~Id: f0383bea-d5a8-4c5f-8b29-eee0361fcf9d
                     - !ModelComponent
                         ~Id: 56400e2c-5154-4b19-a753-55f451a17237
-                        Model: 5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
+                        Model: a2446ae9-4c5b-43e5-84cc-7df543fc569e/5e3c83a1-5fee-48d2-aa83-a9b8189c0582:CubeModel
                         Materials:
                             - null
             Design: {}
@@ -68,7 +68,7 @@ Hierarchy:
                         ~Id: 18b6ac31-4ea6-457e-80db-0db5835068ee
                     - !ModelComponent
                         ~Id: 927ab20a-88de-498b-8031-07738a8db390
-                        Model: c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
+                        Model: 8b74d9a4-1e8e-4701-8894-57c3ea932696/c0a0ac30-cb79-44a6-878b-f8a53948d844:CapsuleModel
                         Materials:
                             - null
             Design: {}
@@ -103,7 +103,7 @@ Hierarchy:
                         ~Id: 18d6a3ed-dff5-40a5-abd1-8a0227ca10f3
                     - !ModelComponent
                         ~Id: 66789bdc-90d9-40f4-92d8-7e800e1e4456
-                        Model: af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
+                        Model: 21698b70-de99-424f-a289-4cd1f53d0b95/af6fc443-73d0-418c-b1d0-4a238b0c6668:TorusModel
                         Materials:
                             - null
             Design: {}
@@ -121,7 +121,7 @@ Hierarchy:
                         ~Id: a3c4af4c-a57d-416d-ad4d-ea62c3e29b16
                     - !ModelComponent
                         ~Id: 2d659803-0fcd-4ce4-8581-88db44cce14c
-                        Model: 6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
+                        Model: 224fd93f-519a-4350-b566-1e6c3ca2a340/6383f6dd-32af-4660-921e-4258f9b06b4b:GeoSphereModel
                         Materials:
                             - null
             Design: {}
@@ -139,7 +139,7 @@ Hierarchy:
                         ~Id: 9ecb0fd8-b028-4646-ae4c-b54299e2d98f
                     - !ModelComponent
                         ~Id: 50edd5d5-58b7-4e34-9eb9-e23a0bc2f371
-                        Model: 32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
+                        Model: f088d80f-f33f-4cba-855c-351816f026cd/32d3b7c9-36f8-4f54-a03e-55f45051ca20:PlaneModel
                         Materials:
                             - null
             Design: {}
@@ -157,7 +157,7 @@ Hierarchy:
                         ~Id: f10ef5af-b6d3-4844-a931-56f7e11c62f2
                     - !ModelComponent
                         ~Id: 9996df6e-2763-433b-90e2-3e2aadd8ea37
-                        Model: 6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
+                        Model: f3eef8e0-4258-44cc-bde4-8673d5467331/6d09340c-0029-4aea-80f0-6333b96389fa:ConeModel
                         Materials:
                             - null
             Design: {}
@@ -175,7 +175,7 @@ Hierarchy:
                         ~Id: 4b230ebc-3591-4f0e-b6e6-e5486f33ca14
                     - !ModelComponent
                         ~Id: 18538e52-28f7-4b3f-89cf-04f75470319c
-                        Model: 7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
+                        Model: 592f3d5d-a6ab-430c-ab05-0393ec01ec9c/7cae3c9b-cce2-4036-9b9b-ba3fe5bfa8b0:TeapotModel
                         Materials:
                             - null
             Design: {}
@@ -211,7 +211,7 @@ Hierarchy:
                         ~Id: a8068f05-a902-4304-9e18-b6e500fba716
                     - !ModelComponent
                         ~Id: 508d38f8-aace-4657-b7a0-48fa51df8caf
-                        Model: 1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
+                        Model: a4ffdd12-99ae-40b8-bc8d-a0d894633726/1104c568-b3b0-4545-b682-31def5e6d4f2:CylinderModel
                         Materials:
                             - null
             Design: {}
@@ -227,7 +227,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: d600dd93-b5a6-4f55-9f5d-c37bdd2a91fc
-                        Texture: f48790de-bd5a-4f83-a71b-a6a559dcb698:XenkoBackground
+                        Texture: 13038288-caf6-4645-91a6-8f1532817439/f48790de-bd5a-4f83-a71b-a6a559dcb698:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: 91170d5b-aa57-4171-9551-246791088def
@@ -239,6 +239,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 359ed8d5-5381-47fc-9448-6c3c724eb457}
                     Id: b2758378-32c9-4a5b-8894-4035a933a2cf
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: f8810ffb-b113-48bf-868a-0dc42f1da984

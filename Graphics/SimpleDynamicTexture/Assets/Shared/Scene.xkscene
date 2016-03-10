@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c90e49d7-b3d8-4b19-b771-71cf4460a83b
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 442725a6-920d-4154-8afe-6fc25b5294d4
@@ -22,7 +22,7 @@ Hierarchy:
                         Children: []
                     - !SimpleDynamicTexture.UIScript,SimpleDynamicTexture.Game
                         ~Id: 1d983363-de80-406c-8058-fa5c0bed6ce0
-                        Font: 742bb234-8f43-4702-b9bb-396b663b4a2c:Font
+                        Font: 9eb69756-ea58-414c-8249-9ee8e983cb8c/742bb234-8f43-4702-b9bb-396b663b4a2c:Font
                     - !UIComponent
                         ~Id: d039ac15-8363-43e7-9f34-d891cb850857
                         VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
@@ -53,7 +53,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: c10c24b7-e307-4742-afc3-9cd25fba85dc
-                        Texture: d83b8b93-533b-4ed9-b064-9308965a6745:XenkoBackground
+                        Texture: 98e71beb-d78f-4a3c-a870-8ecbc0191bb5/d83b8b93-533b-4ed9-b064-9308965a6745:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: c4f80303-7169-4991-89ed-ca66c5f8333d
@@ -63,6 +63,7 @@ SceneSettings:
             -   ~Id: 3358da3a-2dd0-4bbc-b9e2-38846751132a
                 Name: null
                 Camera: null
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: a63716a6-a8bf-4535-b6a1-47f3ea6ef7d7

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 75c8a95e-8fbd-43ce-b53f-81e2c64d261e
@@ -41,7 +41,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 4eaeffe8-d225-4327-89df-6813f39119d2
-                        Texture: 4b0f48d8-839e-4c71-8ca5-fc72e88cb68a:Bkg
+                        Texture: 7d966d17-e360-4285-a791-8ea6b9d7f93e/4b0f48d8-839e-4c71-8ca5-fc72e88cb68a:Bkg
             Design: {}
         -   Entity:
                 Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
@@ -56,8 +56,8 @@ Hierarchy:
                     - !AnimationComponent
                         ~Id: 61d7e562-b1e2-4f07-b6cf-f5ef728d282a
                         Animations:
-                            Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
-                            Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
+                            Dead: acd1a42c-78c4-4b8c-a964-649692ef2cf0/071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
+                            Wait: e035d28c-f392-4e9e-82a1-77c45c6ba4a2/23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
                         ~Id: 9a7ae650-cecf-4c0f-bd0d-9c840e9dffe2
@@ -84,10 +84,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 2ee384a5-482a-4d81-9aac-c83de353e0c2
-                                Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
+                                Shape: 173aea09-cfd6-4b83-815f-c8af7c8ed0c1/77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
                     - !SpriteStudioComponent
                         ~Id: eb83b7ab-0e47-4a53-93b4-543cb811b527
-                        Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
+                        Sheet: 21548422-d50e-40c8-b01c-59a3c79ae29f/7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
             Design: {}
         -   Entity:
                 Id: 629bf924-6828-46d6-a813-63d56a0f95b9
@@ -129,17 +129,17 @@ Hierarchy:
                     - !AnimationComponent
                         ~Id: e5054314-d214-40c7-9a08-890d5ba014f9
                         Animations:
-                            Attack: 230575a8-df6b-4de2-ae9f-93bfcb02d538:character_template_3head_attack3
-                            Run: 0450fe8b-c834-4ab2-856b-19704944755c:character_template_3head_run
-                            Stance: ee0096d9-18f6-410a-ab68-d88a7c7ce9fc:character_template_3head_wait
+                            Attack: 8ffdb873-4af9-48ec-8c57-68963f127d50/230575a8-df6b-4de2-ae9f-93bfcb02d538:character_template_3head_attack3
+                            Run: 8784df56-94c4-4f8b-ba41-d3d2374d46fa/0450fe8b-c834-4ab2-856b-19704944755c:character_template_3head_run
+                            Stance: a46cf6d2-7122-4c88-be51-3d3fbeeb5bad/ee0096d9-18f6-410a-ab68-d88a7c7ce9fc:character_template_3head_wait
                         PlayingAnimations: []
                     - !SpriteStudioDemo.PlayerScript,SpriteStudioDemo.Game
                         ~Id: 018ca6a8-c34d-4b93-9901-3c685336a2f0
-                        BulletColliderShape: 7946c040-eeda-424d-a2f5-3ede14470c1a:Bullet_CS
-                        BulletSheet: fba79776-e90e-42eb-ac60-a137b2e7378d:SpriteSheet
+                        BulletColliderShape: 352445bc-b50a-48f2-948f-9908a706f87a/7946c040-eeda-424d-a2f5-3ede14470c1a:Bullet_CS
+                        BulletSheet: 705369d1-1890-4cd1-8f86-228796e5c877/fba79776-e90e-42eb-ac60-a137b2e7378d:SpriteSheet
                     - !SpriteStudioComponent
                         ~Id: a7c40e4a-4f39-4723-bd72-990ea2aadc40
-                        Sheet: ed4d6771-9481-4867-b85a-9d04280baba5:character_template_3head
+                        Sheet: 65afdb23-b9b8-48e5-907b-aba90a148d42/ed4d6771-9481-4867-b85a-9d04280baba5:character_template_3head
             Design: {}
         -   Entity:
                 Id: cf253c4b-ccf0-4a8a-85e6-0019307e4cac
@@ -153,7 +153,7 @@ Hierarchy:
                         Children: []
                     - !SpriteStudioDemo.GuiScript,SpriteStudioDemo.Game
                         ~Id: c21d3a58-43c4-4b22-99a1-d932a8b9c338
-                        Font: 58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
+                        Font: 276142dd-3e99-47b1-a49f-fec092e33483/58cd9ec1-ff48-4b50-aa88-43e0351fcb95:Font
                     - !UIComponent
                         ~Id: c0d2276e-0d39-43f9-9df8-cee475719561
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
@@ -171,8 +171,8 @@ Hierarchy:
                     - !AnimationComponent
                         ~Id: ac8bfd48-9918-40f2-b3c6-124cc93870df
                         Animations:
-                            Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
-                            Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
+                            Dead: f9e3cfd9-b7b9-4d67-abb4-492da802d4bc/071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
+                            Wait: 28ddd987-a6e1-4d3e-8ac3-a60b765c7fcd/23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
                         ~Id: 9f65e4cf-6b91-4031-b923-bcaf2c20a868
@@ -199,10 +199,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 9b855dde-5612-4476-894c-1e13eddd2fd6
-                                Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
+                                Shape: dda85f49-29f0-49bf-b3b5-c2c2abcd1d09/77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
                     - !SpriteStudioComponent
                         ~Id: ffb3726f-f3ca-4106-b754-902470aa29bb
-                        Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
+                        Sheet: 7fc83fa8-9529-48b8-a6e2-5cf1e09383ff/7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
             Design: {}
         -   Entity:
                 Id: d4867e32-71f8-4d81-a742-2d99ef6e5060
@@ -217,8 +217,8 @@ Hierarchy:
                     - !AnimationComponent
                         ~Id: 4a9121b4-7fe4-4a1c-80dc-c5bd05c02c7b
                         Animations:
-                            Dead: 071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
-                            Wait: 23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
+                            Dead: 288e5653-3d8f-4626-8bb9-f8e1f4696165/071d843d-2efa-4b49-83ef-f6ee79e8dbb5:character_template_2head_dead
+                            Wait: 20bb5d67-5210-4d68-82bc-629f72be8e13/23bad94a-8864-48ca-88e7-cc3c7121f156:character_template_2head_wait
                         PlayingAnimations: []
                     - !SpriteStudioDemo.EnemyScript,SpriteStudioDemo.Game
                         ~Id: a0969d82-476f-4aaa-82f2-7eff15b86395
@@ -245,10 +245,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: b4ac5cf5-d2ed-4391-88df-83e8a79e0c84
-                                Shape: 77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
+                                Shape: 30220c02-c1b1-4cf3-9b3d-eb6652e4cf54/77a32831-fdf3-41b4-9443-751500fcbc10:enemy_collider
                     - !SpriteStudioComponent
                         ~Id: 6c1ae6d5-980c-4d1b-bbd6-a21986cd4b61
-                        Sheet: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
+                        Sheet: 2bfc3f46-5f1d-4676-8ed4-200ecc05b914/7595b1d1-3f94-4cc5-bbfc-ec51687b96d6:character_template_2head
             Design: {}
 SceneSettings:
     ~Id: f3526002-9bc4-4ab4-819f-af3429bca2b6
@@ -260,6 +260,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
                     Id: 9be240a7-a303-4cc1-9aa1-0eb9365669ec
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: ab3c2b60-408a-423c-be52-b3fc6d9f2ef3

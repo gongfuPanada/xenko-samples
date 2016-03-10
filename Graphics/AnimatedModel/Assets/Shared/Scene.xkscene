@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 1d1214c6-8844-4fae-8142-1f986349f8d3
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 8ea4b31c-374c-48ef-a71f-0f91be1a5e2b
@@ -24,14 +24,14 @@ Hierarchy:
                     - !AnimationComponent
                         ~Id: 0b066f56-06f9-4fe5-9319-be71331e8664
                         Animations:
-                            Idle: 0ec9050c-302e-4289-911f-94265cb7b60b:he00_normal_idle Animation
-                            Run: 6dc385f9-d6ff-4933-8fb8-1f481477aeb2:he03_run Animation
+                            Idle: 13e6656a-9f57-4365-8860-ff472dbe3de5/0ec9050c-302e-4289-911f-94265cb7b60b:he00_normal_idle Animation
+                            Run: 500a61a8-fe5a-456b-9928-14ff9f541f68/6dc385f9-d6ff-4933-8fb8-1f481477aeb2:he03_run Animation
                         PlayingAnimations: []
                     - !AnimatedModel.RotateEntity,AnimatedModel.Game
                         ~Id: 083db1bb-5241-4c2b-9d52-900851b0ea99
                     - !ModelComponent
                         ~Id: 52f13394-f393-49e7-98b1-356161a493f4
-                        Model: 7f052b2a-84c2-4f8a-932c-c073b2de47de:knight
+                        Model: 9880be81-0717-4be3-add0-ba2ae527e3b4/7f052b2a-84c2-4f8a-932c-c073b2de47de:knight
                         Materials:
                             - null
                             - null
@@ -76,7 +76,7 @@ Hierarchy:
                         Children: []
                     - !AnimatedModel.UIScript,AnimatedModel.Game
                         ~Id: acf594de-a7ed-4d13-9359-b9809a1ee083
-                        Font: dc5e460a-ac52-45b9-a69f-cc5a5a5f9cf7:Font
+                        Font: 225bcc36-ee1c-468a-b587-9036bf0b8c11/dc5e460a-ac52-45b9-a69f-cc5a5a5f9cf7:Font
                         Knight:
                             Id: 069945be-764a-4de9-88f4-458740f821ff
                     - !UIComponent
@@ -112,7 +112,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 4a58a89d-ac9b-4066-afb8-0f4656231d6a
-                        Texture: 51b041a7-2f3e-4327-aa2f-9ac598ddedb1:XenkoBackground
+                        Texture: d3ec68db-60ac-4e27-a891-a38bab1cda17/51b041a7-2f3e-4327-aa2f-9ac598ddedb1:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: ea4beb3a-6866-43b6-bcfc-8b8251d919b5
@@ -124,6 +124,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93}
                     Id: 794a9a18-82e3-4894-aeaa-84772e97d29e
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: e246798a-4250-4c03-a5d4-159588546141

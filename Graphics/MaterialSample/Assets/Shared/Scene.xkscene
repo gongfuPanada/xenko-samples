@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c2262423-9422-4dd1-9fcb-ead76f9a93ba
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: bad0d8a1-15a6-4d40-af0c-8cef471c06ce
@@ -50,9 +50,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 7b7059ad-0b0f-459f-abd0-2f990fa1365d
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 866a57e1-e628-4f0e-b723-0d74f4c27472/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
+                            - 68bbf33c-9f53-4cd7-a78d-39f2e043da71/25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
             Design: {}
         -   Entity:
                 Id: 0b25e0dc-5e21-40ec-9f9d-1102b4613c4a
@@ -66,9 +66,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 14b54624-259a-4922-809e-a34cb5584879
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 7732a4ba-3992-4cfb-8341-2bf6d7f65780/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
+                            - 85739d43-5e45-49d0-a376-e7cd60306bcf/b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
             Design: {}
         -   Entity:
                 Id: 0c90be28-e0fd-40a5-83e3-f8ea75a40a3b
@@ -82,9 +82,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 81fad0c1-440a-4ae2-97dc-a3dbbae6d539
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 88d746f0-ec5e-44fc-a6ee-02f01c125123/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
+                            - abf33de0-ca67-471a-8719-190371eaea36/a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
             Design: {}
         -   Entity:
                 Id: 10e90041-bf77-47fe-836b-42813cb9400f
@@ -98,9 +98,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 39c4637c-cae4-42a3-87b1-33feff19454f
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: ec1dba14-d384-4e67-81ad-9fd487ba48d9/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
+                            - 4853b208-fb66-4431-a80f-f86e5270e979/e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
             Design: {}
         -   Entity:
                 Id: 147c3547-06ad-41a1-b0fb-ccf983b3c97a
@@ -114,9 +114,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 84551f0e-678a-43c3-8390-1568d496ea61
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 9a619b64-cdcf-49b6-b33d-b6cae4947630/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
+                            - f6f6a3da-fd0e-4c32-b075-fd1335ae51da/1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
             Design: {}
         -   Entity:
                 Id: 190d9bbc-c577-4741-90ca-059043c3e5ec
@@ -146,9 +146,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 730b4183-2312-43bc-bfd8-7ab238790354
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 53668926-bda6-4824-ad48-05cdadbbdafd/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
+                            - 26f8d836-f965-4cd9-af8e-a66ca2f0d7c9/f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
             Design: {}
         -   Entity:
                 Id: 1cac84ce-0c9d-4508-bf75-22888a3d07c7
@@ -194,9 +194,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a62a0dad-3c39-47d1-ae23-9be51592f220
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 9777d20a-095b-4532-8ce7-7502fd3ed548/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
+                            - 949fee42-36a8-49ad-b76d-d48e763167a5/79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
             Design: {}
         -   Entity:
                 Id: 27bb72d3-a76a-407e-8cae-75241f0d3ffc
@@ -210,9 +210,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a828637f-721d-40bf-9a38-68497f33d323
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: e4acf950-18cd-424b-8c2b-73ab99773146/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
+                            - a78cddff-d423-438a-9625-d0f5679e1e7e/4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
             Design: {}
         -   Entity:
                 Id: 2a5d7361-7ad5-4142-8b2b-8a72bbcc66fc
@@ -226,9 +226,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: ed21cb11-cfa0-442c-90b9-ba92aaa513a6
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 83a9240f-2f1d-422d-b2a7-d2032de8dd56/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
+                            - d59a0039-60ca-40ca-8092-68ac2b75eca0/14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
             Design: {}
         -   Entity:
                 Id: 2d582ddd-6559-4212-8632-3988f1afe02d
@@ -242,9 +242,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 665e2dd6-40fa-4fb8-a55e-84eb05541f68
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 6a68bb11-fd02-414a-964d-fb3c7fe55408/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
+                            - 6a017ee0-9d73-45a9-909b-6ec9469e3dd9/ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
             Design: {}
         -   Entity:
                 Id: 2df1dd40-c381-4340-a996-071817dfc53e
@@ -258,9 +258,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: f609aae5-e9c1-4102-a98a-305f856d4697
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 26d7fe9e-beca-4e2b-86bc-b780dc423491/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
+                            - 7b2933ee-16f2-464e-956f-3cc065d32083/b9692315-792e-4703-bdce-bbb62778486a:layer_0_3
             Design: {}
         -   Entity:
                 Id: 2f8235e3-c991-4682-876b-dcb547009f43
@@ -320,9 +320,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a7f7c1d6-33bc-4a22-9274-e681e4a11efb
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 7705455e-da95-4b77-83fa-43f8b672ebf9/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
+                            - 3b85f3ef-1fb2-483d-b273-adb8d99c7574/5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
             Design: {}
         -   Entity:
                 Id: 32c93004-9343-4fa8-8aed-ffe5a1310172
@@ -336,9 +336,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 846fa4b3-f5c1-4ff3-8ca8-b620a4b6c36c
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 9503b2b3-e316-47d3-8a09-4bb62cd003d0/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
+                            - 3df97da6-88f5-4910-ab5e-27dc883bf044/4ca73c8f-71aa-45c4-8487-ebbf965a7e02:common_stone_3
             Design: {}
         -   Entity:
                 Id: 3b7c2fc3-8605-4aad-b8b4-bd920b9bb946
@@ -368,9 +368,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 73a8b6f1-1ca8-45e4-ab5f-b97d137f7ffe
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 92148bcd-d356-4557-a97e-6418e86fccb1/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
+                            - 7a763b0f-8513-4710-ab15-27ca9c41d000/ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
             Design: {}
         -   Entity:
                 Id: 3c4bfa2d-562f-40cc-9a84-320743baa72e
@@ -384,9 +384,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 3b81d66a-286b-44d4-8cce-e9e088e4fb73
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 982a0442-4edb-4fba-be2e-45a9a6c3e815/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
+                            - 1fef0c02-0afe-4730-bfe7-013ca294a394/22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
             Design: {}
         -   Entity:
                 Id: 4163da3c-46cc-41d3-839f-ef0ea4e373c4
@@ -400,9 +400,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 0e8138a9-9aef-4efb-9ebe-d588207ded75
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: d78d0c1a-c35d-4074-a648-ba453f4ce794/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
+                            - af1e8f50-c35d-4e8f-9481-4e38f308ae5b/5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
             Design: {}
         -   Entity:
                 Id: 432ce6f1-45eb-4518-8067-090f0354d337
@@ -416,9 +416,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 39e24e48-b2eb-4428-a22a-71a843940d33
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: b293b2dc-7f9e-4c0a-9e72-6dde94a6bb7d/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
+                            - b84e8fd0-b7c5-41d2-91c1-7ec03fad51cc/f1a7ee91-1ec5-4eb9-879e-e3229587970d:m_b_0
             Design: {}
         -   Entity:
                 Id: 47b03fbf-99ff-40da-8877-3a07100afa7f
@@ -448,9 +448,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 70d28ca7-3a34-4ab3-a844-9c1b25218622
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: f1cc7c93-fa0e-46ee-ada5-2b64063f3ab3/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
+                            - 990a0c34-b0a4-4b5f-9355-8aaebe27587d/25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
             Design: {}
         -   Entity:
                 Id: 523ece28-8059-420e-88ec-aadf1f4de965
@@ -480,9 +480,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 1ccbc6ac-15a8-4aa5-96ea-f09c346af066
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 8dddb7ab-4b2e-45ba-80b4-e14d78c3e05c/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 10066c60-169a-4322-80b6-9e7a97027077:m_b_2
+                            - b8ed1500-62bf-478f-ae11-3c68a2c2f8b3/10066c60-169a-4322-80b6-9e7a97027077:m_b_2
             Design: {}
         -   Entity:
                 Id: 5f383352-ab4a-40c0-85b6-16d769643320
@@ -496,9 +496,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 55f07af3-0529-44d8-a6d4-236fc862560a
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: c9efa6ce-333f-4430-9952-b291d890fc05/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
+                            - 3279d774-b7a9-4854-b65f-d401524d63a4/850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
             Design: {}
         -   Entity:
                 Id: 60cd8919-2eba-4f17-b2bb-19424bc75ca8
@@ -528,9 +528,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 51d1bbae-c455-4cd6-837f-0d8c1986bd05
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 7e02541c-2c18-4209-9553-11b456a20e0a/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
+                            - cd004f04-f098-4087-843e-dcab946bc088/d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
             Design: {}
         -   Entity:
                 Id: 66adb3f4-e80f-493f-a029-5e734cc4846c
@@ -544,9 +544,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: d8228cf0-8f94-49e7-9e7b-e0fd75dfafc5
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 48bf7864-7f6f-4342-b7e9-d5d303ac41ae/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
+                            - 07c95a74-9191-4270-a233-a3a50702ce53/9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
             Design: {}
         -   Entity:
                 Id: 69e6db7d-2e3f-46b2-a10d-409360ad4065
@@ -560,9 +560,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 1a29f9d4-dc53-4fed-bd87-7ba040a9346e
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: df4ef6ec-13d5-44bf-ba1b-f51413018297/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
+                            - 7fe33b87-d394-4be3-8c64-bcc823d14874/8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
             Design: {}
         -   Entity:
                 Id: 71051f26-b313-461e-b7e4-478581c83b45
@@ -576,9 +576,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 6ca1b773-85de-4a23-bfae-e84d113109ef
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 8be92ef5-b4f7-4145-8a16-37398bc35de9/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
+                            - 1da96eff-5797-49c4-b42b-e511e960d468/9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
             Design: {}
         -   Entity:
                 Id: 718bca7c-ec07-4dc3-a14b-4227f6437589
@@ -608,9 +608,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a3531fdb-7b50-4c6e-9684-993b7027698f
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: e0433c28-8ca5-44a9-afc8-5285b585300c/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
+                            - a5af0dfe-3156-4448-8da4-bd5f9910eeb9/5d192e33-2209-4ec5-9c52-19128423d1b3:common_stone_1
             Design: {}
         -   Entity:
                 Id: 74c9a343-17d3-404c-a550-13d8ac79ce20
@@ -656,9 +656,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 2c0d16ad-742d-453a-b560-ab5ae9b5cfc1
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 5577d5fe-7fe7-4356-8988-6829585d55f6/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
+                            - 5ab94bdc-3eaa-4e2a-8f2b-59f54f2497c6/53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
             Design: {}
         -   Entity:
                 Id: 7970cd55-5c5b-47ef-b952-51ed30239c0a
@@ -672,9 +672,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: c2974e09-cb07-4b6e-b758-11b5bf43cad1
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: b4a63150-4063-425e-870e-726f3a7dd2e6/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
+                            - 532685a5-8482-4614-ba1f-0a0b0a56c7d4/964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
             Design: {}
         -   Entity:
                 Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e
@@ -704,9 +704,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: db6699e5-7326-454f-add6-fdcdba2f3bfd
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: acf37633-8434-44ad-9193-567a9455bdec/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
+                            - cfc55589-1f20-4aa3-94aa-eda834e0363a/53c56a2a-42dc-4c0a-ad12-36060dc9aa76:m_b_1
             Design: {}
         -   Entity:
                 Id: 8303aa1e-eac3-4eb5-b72e-296dae64ae48
@@ -752,9 +752,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 7851bf01-1726-480b-bc88-74ecbb5f7a3d
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 85672eb8-df9c-4599-86c9-94857815e293/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
+                            - 2ab444f2-c5ad-41e4-91b7-bb439d81221c/79d2ee65-44f0-4c12-aae0-d8a2040d02ea:m_a_1
             Design: {}
         -   Entity:
                 Id: 8d390636-fce4-4337-99ed-c5635fd0d711
@@ -768,9 +768,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a3c876de-8d1d-430a-a518-d54e70549e4f
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: aa1babbc-599e-4a55-96d1-5debbbaad069/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
+                            - dc235bf3-bceb-4524-9f70-35150cf051c1/a7c6542d-9b18-4c14-a927-7f9a502d06c0:m_c_1
             Design: {}
         -   Entity:
                 Id: 8f89b6a1-18ef-4121-abbd-fb9e2823d9da
@@ -784,9 +784,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 70dbc365-0bf0-4a2e-9e5f-27fa23389fab
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 95b3b0a1-6eed-4753-8794-7017c85f8dc3/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
+                            - 04168d29-7913-4e78-99af-3dc23ea1e63d/8b374ade-e5f6-4597-b7b5-294cc84d58d7:m_b_3
             Design: {}
         -   Entity:
                 Id: 8fa64e28-8ee6-45f4-9546-9f0374069848
@@ -832,9 +832,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 2ca1f55a-71d4-47db-8d30-69c57cd4fe44
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: d25243d7-3ce0-46bf-b475-7e1582909689/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
+                            - de3e17c7-bbb1-4383-ac83-d6f8dea148ec/e76e0341-24e3-456c-b09a-04fddd41f0b0:common_wood_1
             Design: {}
         -   Entity:
                 Id: ab17a4f1-2a07-4fcd-a3aa-ac8687dceb80
@@ -848,9 +848,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 4d7b2627-49f9-4269-972d-21691c3c41d6
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 460a2a68-6085-44b6-9cd0-a5b7a4c4bd0d/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
+                            - c4112cad-0f4d-4e4b-9b2d-a6fe58055f9a/ff6c9ae4-9c05-4380-b11b-77df9f28ed5c:common_metal_0
             Design: {}
         -   Entity:
                 Id: ae343e4f-12b6-48ec-a125-f1aee5ce8521
@@ -896,9 +896,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 17cbeda6-3623-450e-b124-5ae5053bc758
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 78fcaec7-50f8-4e18-a8d7-37d378f1e05c/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
+                            - 4cf68fc2-bdee-4a2d-8d35-4952273cc144/1dd5ee91-31f2-48b3-827a-36b4c00d1f8b:layer_0_2
             Design: {}
         -   Entity:
                 Id: b223dcf9-2cda-4105-bc36-632940805fc7
@@ -912,9 +912,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 4d85514c-fecb-4f94-9f17-7209148ed61a
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 249801c7-b535-4a74-bfc6-67062ca56083/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
+                            - 421754a3-1f3d-4e16-995e-7c71dd100484/964cd572-c985-4201-9bf3-856dc4f1cf9b:layer_0_1
             Design: {}
         -   Entity:
                 Id: b51ad02e-9a7a-4f39-bd8d-a4f5b7cffd71
@@ -928,9 +928,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 3d3a65b5-0ba2-4b37-ba3a-225d8811d239
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: a9fbd606-6629-453d-a518-7a2fb40e4a01/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
+                            - 1ab32a39-206c-4a1f-93b0-5bde352dfc33/5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
             Design: {}
         -   Entity:
                 Id: b7212b22-f0fa-433e-b2d4-4b5a4bd9732b
@@ -960,9 +960,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 669501f9-276d-447b-86bd-d1ebcb9f217d
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 221f8047-85aa-4c9c-9852-db122f67452f/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
+                            - 9cfa2782-8ddb-400b-8d0e-726e7bcdc9d9/46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
             Design: {}
         -   Entity:
                 Id: bceafa8f-dfb7-4567-b524-1e06d5f7c36c
@@ -976,9 +976,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 052c4ec5-e7f7-416a-8c2a-6922ca0b21a1
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 6859b30e-740e-4942-b71b-50208bea8b90/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
+                            - 370c98ee-1e0e-412d-8371-b08088df8f08/acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
             Design: {}
         -   Entity:
                 Id: c2966b22-9241-4d35-b053-de1ae3f41dc5
@@ -992,10 +992,10 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 85a6b1f7-f8c7-4321-ad3e-7cd2885b0a51
-                        Texture: 355b7e54-fa45-44fc-818d-9fc46b8c0fbb:XenkoBackground
+                        Texture: e66c8ee7-96c6-42f4-8331-69996420ac6c/355b7e54-fa45-44fc-818d-9fc46b8c0fbb:XenkoBackground
                     - !SkyboxComponent
                         ~Id: bd1c6dc8-dabe-46ff-84c0-b24243c10875
-                        Skybox: d6ac5a30-abd7-4043-b09b-098c178504b1:Skybox
+                        Skybox: 945a62fd-8fe1-4b21-906a-4dc8d725f868/d6ac5a30-abd7-4043-b09b-098c178504b1:Skybox
                     - !LightComponent
                         ~Id: c08137ec-eee5-4287-878b-2c7301147796
                         Type: !LightSkybox
@@ -1014,9 +1014,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: c0030f30-bf84-4051-9b3b-7d47becb86f0
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 18ac19c3-d00c-48be-a95d-8d241f03e5a0/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
+                            - 8e5a1725-e9fd-4d25-a9e1-04a814563252/71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
             Design: {}
         -   Entity:
                 Id: c481ec15-4e0b-4529-b351-7bbe42285fd9
@@ -1046,9 +1046,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 6c527113-dc48-4746-8b5c-a5e837bbe212
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 26b99429-3f54-406a-8dcb-e05186350c6d/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
+                            - d5a59804-98eb-4630-9ce9-8ef9ddc5b7e1/5cc3db23-f6e4-403a-91dc-5b7ffb5e18ce:common_wood_0
             Design: {}
         -   Entity:
                 Id: c8ecbcd1-6bdd-418b-8371-0eab3c4399ae
@@ -1078,9 +1078,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: ac1876bb-c09c-47a1-b00d-6c3d892f7b90
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 73c195c2-f085-4a4c-86cb-8c1239c25449/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
+                            - 550dc0cb-292f-49b5-9445-9dcccc0e94c6/acc52134-b4c5-4ffd-89ca-41918c4d8236:common_stone_0
             Design: {}
         -   Entity:
                 Id: cb43ee92-1080-4502-ac04-c722b14bdc81
@@ -1094,9 +1094,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 25eafe68-13bb-4215-b85e-e93aa8b07c79
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: 647c50a1-f1e0-499d-aa89-8ab2c0fe77ef/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
+                            - 1b690133-53a2-46a6-bd43-985e777cabe4/d9e839cc-ae37-4198-b5a6-9ff9baae6fdb:m_c_2
             Design: {}
         -   Entity:
                 Id: cb87f048-923c-430b-9f62-e8f27cc75b7e
@@ -1110,9 +1110,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 29533aee-7a07-4958-b298-2c84ec842951
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: b18d01fc-1bdd-423f-8091-dfe4f1739099/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
+                            - db94698a-a3d6-47f2-94f5-61e8b4246357/ac2f11d5-9490-48f5-922c-60129b457116:m_a_2
             Design: {}
         -   Entity:
                 Id: cba5515e-e9ff-4ec9-be5e-a86e76f9737c
@@ -1173,9 +1173,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: af086037-375a-4f5f-abbb-245cda544d65
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: f9b40a0d-634a-4c4e-8184-deffbd29ffea/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
+                            - 539f9c3d-7685-4478-af84-aeb0af58e9cb/5e5fa97d-8db3-4f07-9814-e5020ea61b9f:m_c_3
             Design: {}
         -   Entity:
                 Id: d56d2a8a-5d85-4c83-bcf5-e3876cc23c92
@@ -1205,9 +1205,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 0106a9ea-e868-4a1f-b407-9bd20e637169
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: e10df467-2527-4373-949d-ffd1ca68f704/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
+                            - dca1f61a-fe43-4b42-b280-e34ef1425b01/9c2c0285-4edb-4f28-8610-583f3b25463b:common_wood_2
             Design: {}
         -   Entity:
                 Id: dfa3de16-8fc4-44a2-9aa2-a1883ee33365
@@ -1221,9 +1221,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 011117b3-51b4-4d91-a020-f0ef4cfc3dd7
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 5529b44d-497b-4e9f-b7c5-3aeeb34226aa/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
+                            - 63ecb09f-6a8e-408d-8015-b9b0dda0b591/850cba1a-24b3-408a-9071-fa9fb5ad23ee:layer_0
             Design: {}
         -   Entity:
                 Id: e1ee3746-530f-4704-8692-c05d2762acfb
@@ -1269,7 +1269,7 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: ccec203d-3e50-42d7-ad4c-c6a662d785f3
-                        Model: 20192b41-7766-4193-9f6b-c3b7d418d138:SampleGround
+                        Model: 1e91905c-edc0-4938-973c-4eb784d58b81/20192b41-7766-4193-9f6b-c3b7d418d138:SampleGround
                         Materials:
                             - null
             Design: {}
@@ -1285,9 +1285,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: dad8e031-2862-4160-8043-c8f40b295901
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: bda29a87-b89b-47b9-a04e-ccca3e9fe3e3/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
+                            - 8ea39bd4-c54f-4dd4-82b6-59f07b2dfea9/14e3eacd-153a-45ee-8a6e-84fa182d7659:t_a_0
             Design: {}
         -   Entity:
                 Id: e9673629-befe-4565-8f50-bd1c25b3e72a
@@ -1301,9 +1301,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 78f32c4b-f374-479a-8184-99c7fcc88ef3
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 0438bccc-7139-47f8-bb12-3e71418b74d5/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
+                            - 244a3b61-6e3e-4a5d-be94-9e3795ace08a/46f6db70-e43c-4cd2-852e-e2d65d5c4cb4:m_a_3
             Design: {}
         -   Entity:
                 Id: ece16954-9211-4fa2-a645-f644bbc6e829
@@ -1317,9 +1317,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: b91c151d-578b-4e93-be02-a75bbe7c96c3
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: aa60f017-f09c-4573-9282-3be03811625c/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
+                            - ce48c3d8-ebc8-41fa-b665-81947ad5646f/71056bbf-4c45-47c4-a1b5-3237ab71ab21:e_a_0
             Design: {}
         -   Entity:
                 Id: efb6f02f-819d-4667-a2c1-a3d7ccb31190
@@ -1333,9 +1333,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: dc5a7ab0-7bf8-46d8-88ed-deb3d271292b
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: db60c83a-36a8-44ce-b451-bd07ac165b29/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - 10066c60-169a-4322-80b6-9e7a97027077:m_b_2
+                            - 002ea1c4-907a-4cb5-b895-b7986c148637/10066c60-169a-4322-80b6-9e7a97027077:m_b_2
             Design: {}
         -   Entity:
                 Id: f0c16e2d-71a3-403e-91d6-d12c1fd88f62
@@ -1365,9 +1365,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: a0be35b4-9fcf-4552-9cb6-8ab0abf2dff2
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: fb71b2dd-5c79-413f-92a0-65dc513b5cae/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
+                            - 2a05a37e-648f-4e66-8d58-8e78d84c79fa/9e16dca9-dc72-42a7-ae49-e5fce6e41c13:layer_0_3_1
             Design: {}
         -   Entity:
                 Id: f5738400-85e6-4d43-b9e7-4c80282b37ae
@@ -1381,9 +1381,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 8abff520-9fb1-4e67-afe3-05fafe90c6fb
-                        Model: a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
+                        Model: e0af1813-bd1d-440a-bcd1-149d6fb1bf75/a7e0bdca-e552-44ce-a072-880ed908bfee:SampleBox Model
                         Materials:
-                            - a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
+                            - ff411dbe-f323-4cb5-97ea-381a36d7df4e/a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
             Design: {}
         -   Entity:
                 Id: fa7f9c6f-9209-4837-aa08-b9add4173248
@@ -1429,9 +1429,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 88f00e38-dca7-4c5b-859d-41fcc68cffb1
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: abfe5d50-bd49-4d0a-a24e-599350642d14/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
+                            - a4d7a287-91cf-4c9b-a543-89157407b831/a56e544f-ee16-4e4e-91df-4909d380a646:common_stone_4
             Design: {}
         -   Entity:
                 Id: feb1d6cc-15dc-44ff-b4a6-8409cd1e17e8
@@ -1445,9 +1445,9 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: ddb138b4-e0c7-4024-8171-794d196ce0d0
-                        Model: f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
+                        Model: 312763ab-3a7e-48be-9ef7-f36c7e6a4b52/f97daf3b-009a-4948-aba0-d655a7663e89:SampleSphere
                         Materials:
-                            - 22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
+                            - d6f8b5fc-24bc-4f80-ac27-4c3cfcb5d561/22d7b091-df1c-4262-bea5-a6ce847ac38d:m_a_0
             Design: {}
 SceneSettings:
     ~Id: d31d1016-50fc-4ff8-9b2f-121a0d00cdbe
@@ -1459,6 +1459,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 7a3e8a5f-da8a-4727-a2df-4e5e4d1c670e}
                     Id: 65ed2634-031b-4918-b563-5cc7b0659770
+        ModelEffect: null
         Layers:
             -   ~Id: 2978b6b3-7757-48f5-a2cd-7c912a2e7cca
                 Name: SceneGraphicsLayer

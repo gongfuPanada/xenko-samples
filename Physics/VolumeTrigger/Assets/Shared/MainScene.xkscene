@@ -1,6 +1,6 @@
 !SceneAsset
 Id: a5a4f13e-6366-43de-b071-a87c1dfff115
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 60e0c56a-a89d-4ecb-8c32-7e57276c9659
@@ -69,10 +69,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 88b6f334-07c9-48ba-9b6b-bf3040e1e9cb
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 8258f7db-3885-4407-bc9b-2c31a4225eca/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: c783e895-01f1-41e1-8b4f-26f1a250155a
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 90b0fd78-149f-4772-b4e6-b47a0496de3b/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -111,10 +111,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 5a501aa9-01dd-4ce2-a06a-5d50b57ca7c5
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: d7de6790-92d5-440a-85ba-62a0227e13f9/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: 14bd0ae6-b853-4653-9c19-09d8bfb91236
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 918d61c7-bc9e-4b17-b83e-27c52a222ecf/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -153,7 +153,7 @@ Hierarchy:
                                 LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                     - !ModelComponent
                         ~Id: 5c9108d4-628d-4aba-bc30-09fb941ef880
-                        Model: 9fab8da2-f2c8-4586-9435-20d8fad479e2:Player
+                        Model: f4f5ae2c-74ca-4ec1-b882-bdff5a07d410/9fab8da2-f2c8-4586-9435-20d8fad479e2:Player
                         Materials:
                             - null
             Design: {}
@@ -192,10 +192,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: a1e58682-c4fa-40d3-8bc1-83896f3778b0
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 73311e2e-cbb5-43b3-908d-e5e7a4a79452/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: 52bd1687-8827-40b5-816d-5aab04ea6546
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 61705a24-b445-4d5c-91e4-f0a0f4ce6447/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -234,10 +234,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 2c771e67-1b76-4797-9b0c-a38561ec8555
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 0ce09fa3-5d6b-49a4-899f-18d6505e87c5/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: b6206e02-57ac-44f1-b652-28dd240d2770
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 1e21167f-c5d5-4edc-9009-d880df031a5c/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -280,7 +280,7 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     - !ModelComponent
                         ~Id: 25b6a499-09c6-4311-8f88-2cfb1100888d
-                        Model: ad7e799e-d4fa-4bc2-8e00-49bf70e31434:Ball
+                        Model: 0413f86d-8ea2-4542-a5e6-6da8a1670376/ad7e799e-d4fa-4bc2-8e00-49bf70e31434:Ball
                         Materials:
                             - null
             Design: {}
@@ -319,10 +319,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: cc5c8910-3143-42f9-8039-887b43cb4336
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: e34f5804-a23d-41e2-95e4-10e1331dd382/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: 113963b1-7f27-4c18-b3c0-890687ba6a5d
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: b3cb6677-5a9e-4063-bd4a-4726fd3dc978/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -361,10 +361,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: fc922d42-9dff-4a7e-a201-7ed3f225bb71
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 32a319a6-d7e9-441d-aa3c-be88444faa69/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: 4e566baa-8e00-4e42-aba1-0de60ad2f081
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 3c1af9b8-b80c-4743-8473-3cee6a681208/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -403,10 +403,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: ddf8ffbf-8ccb-4623-8696-0f9aee5af8c1
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 986b9fa0-b7f5-4064-be0b-f76a1eda8a53/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: 3ecfe24a-6af9-4bba-aa4f-7d8350093d25
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: e0c5e772-6ddd-431c-9876-0c82ecbf65bb/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -472,9 +472,9 @@ Hierarchy:
                                 LocalRotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                     - !ModelComponent
                         ~Id: 2e2aa22e-4ab5-41fd-ac11-b9dbcd9be00f
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 3ecf4734-5281-423b-aaf5-1182baf5b550/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
-                            - cf9193b2-993a-4329-b6de-983ae136628a:TriggerMat
+                            - 53ebca6c-0ceb-478f-a634-c07797b4955f/cf9193b2-993a-4329-b6de-983ae136628a:TriggerMat
             Design: {}
         -   Entity:
                 Id: d4b8ee23-dbf6-4006-b1f1-0fff89140908
@@ -511,10 +511,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 6fc78be3-0d58-4050-943e-a2fa1076b905
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 477db3b0-adbe-4309-831a-4798cd9aeffe/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: 004d82ee-0ff9-4cc2-b872-d7553818599b
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 5043fa3f-a287-4f90-b93c-098f722cd151/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -553,10 +553,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: ea40c47c-a20a-48bf-8005-4ab7c4a8c81e
-                                Shape: 1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
+                                Shape: 890ff736-fe12-41db-a806-4047efdbde90/1525ad3b-81e7-4106-92cc-bbcf577e6c73:BoxCS
                     - !ModelComponent
                         ~Id: e853eb67-d43f-4ac9-a883-e9cdab269081
-                        Model: bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
+                        Model: 1f75a35c-e24d-4a63-8e77-ab03260d43e2/bd2fa89a-6eb0-41d8-a979-b2d0e53de6b6:ProceduralModel
                         Materials:
                             - null
             Design: {}
@@ -588,7 +588,7 @@ Hierarchy:
                                 Offset: 0.0
                     - !ModelComponent
                         ~Id: 0074137e-ede2-49a7-9b82-35359ec18a1a
-                        Model: 6993a85b-a9ab-4c74-89d3-5643c2d48cba:Ground
+                        Model: 1a824d36-1f51-4408-803d-0066fa26b173/6993a85b-a9ab-4c74-89d3-5643c2d48cba:Ground
                         Materials:
                             - null
             Design: {}
@@ -602,6 +602,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 34123ad7-7f97-4c0a-b592-d844e0400f5e}
                     Id: b5838899-93ff-4e3e-b9ad-2bc49a8669d6
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: 17a2cee1-74fc-4e3c-a5f8-0a0b1e0eac85

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 29e02098-532b-4738-ac20-a4483eb406b9
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: fd2e196c-93bf-4855-9d23-ff3e21d11929
@@ -35,7 +35,7 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 004e8079-7573-4ff5-a12f-8c8ad2b31e69
-                                Shape: e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
+                                Shape: fb2cbffc-33d9-4fd4-bba3-133ed3f6d86c/e4708b46-77d6-4961-b2fe-c3401a7e5e65:ground_cs
             Design: {}
         -   Entity:
                 Id: 2d5858c9-0df9-4c6c-a24d-65e699737666
@@ -63,12 +63,12 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: cec57efb-8df7-420e-8232-34805f8db18d
-                                Shape: e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
+                                Shape: 59527f73-653f-4162-9534-af5438e92e0c/e3030570-16a5-4ee6-b77b-37b4f19d16c7:enemy_cs
                     - !SpriteComponent
                         ~Id: 57d45718-9fd5-4fdf-8cc9-ef1d2aa5f5a6
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 37a0355a-0d3a-4556-96c0-f64e52b438f8
-                            Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                            Sheet: 61090137-d20f-41c5-812d-c1525c2c196e/4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
         -   Entity:
@@ -83,7 +83,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: b6361123-5213-472f-9ab4-46ce1f1e9556
-                        Texture: bbb04728-fa87-4c1e-9e1c-f191031914eb:XenkoBackground
+                        Texture: ea03aac1-7686-4c4a-bbd7-4ddfff9c1199/bbb04728-fa87-4c1e-9e1c-f191031914eb:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2
@@ -130,12 +130,12 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 5cceb071-e3a7-4374-9204-1b79019a6114
-                                Shape: 8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
+                                Shape: 4e19dae9-71a0-46a8-b186-3e5150f9e274/8ae92172-efa9-454c-9cf6-4b464c25356e:player_cs
                     - !SpriteComponent
                         ~Id: b20862b2-f1f9-4fea-88a3-162e0b9aa502
                         SpriteProvider: !SpriteFromSheet
                             ~Id: e4e5fcad-9232-46d7-b59b-d3cfe620d749
-                            Sheet: 4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
+                            Sheet: 36131d0a-711c-46a0-a1f1-6bf579563283/4a17b086-10b4-4c11-b9ec-8baad5730240:SpriteSheet
                         CurrentFrame: 2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
@@ -149,6 +149,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 996fb61d-3623-4019-8dfe-949fd5a5c3d2}
                     Id: db798a71-bd42-4ee0-8633-b10f7fa15460
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: c888f57b-2d69-4163-a476-77a6858feea7

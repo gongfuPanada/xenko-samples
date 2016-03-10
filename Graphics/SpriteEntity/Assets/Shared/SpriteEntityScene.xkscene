@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 20ae0cfb-f718-46e8-802c-718c98d77137
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: ad2e0be0-9387-4895-8b8c-4375ba46aeca
@@ -41,7 +41,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 7c473d65-9c34-4106-bb17-6af291f12cbb
-                        Texture: b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
+                        Texture: 6ac5d8b6-4ce2-4d20-aee1-8c9fa39461fe/b54a97d3-eaf6-454c-8bf7-05b2d77696a8:SpriteBackground
             Design: {}
         -   Entity:
                 Id: 590ac468-5d53-43d9-81a6-2d43c1c06bc5
@@ -58,12 +58,12 @@ Hierarchy:
                         Logic:
                             Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                             Id: fac93c9b-4547-4468-9bde-beb247edca11
-                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                        SpriteSheet: e2ac3351-837e-44c8-a010-d9ac15b3d6d4/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     - !SpriteComponent
                         ~Id: aecef97e-687d-404f-b4c7-234c6b6255f0
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 885c63c1-04a1-4b82-bdc7-67166b89452d
-                            Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                            Sheet: b3c45725-8d66-4e65-87b3-7d0169f00af3/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
@@ -82,12 +82,12 @@ Hierarchy:
                         Logic:
                             Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                             Id: fac93c9b-4547-4468-9bde-beb247edca11
-                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                        SpriteSheet: e8573016-b7f5-4471-abaf-4f04c560c703/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     - !SpriteComponent
                         ~Id: cc889329-05ab-4adf-b076-084380e3096e
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 01e19e1c-2ea7-445d-8bb8-80777d0e5416
-                            Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                            Sheet: 2635cba6-62fb-43b0-9a74-960f6b04e47b/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 1
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
@@ -116,7 +116,7 @@ Hierarchy:
                         Children: []
                     - !SpriteEntity.GuiScript,SpriteEntity.Game
                         ~Id: 4e10f211-05ae-4774-88d2-805d318a618e
-                        Font: f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
+                        Font: 67204768-f5d5-4670-8ead-bd9a5f200ea4/f79f8e5b-4c7a-44df-9d25-26e8ed6eb050:Font
                     - !UIComponent
                         ~Id: 19be439d-29b6-4af3-bd04-0cbee074b166
                         VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
@@ -136,12 +136,12 @@ Hierarchy:
                         Logic:
                             Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                             Id: fac93c9b-4547-4468-9bde-beb247edca11
-                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                        SpriteSheet: 2ed28e28-ea90-4fbd-8e1e-1e10992da9fb/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     - !SpriteComponent
                         ~Id: 4f7a1586-44f0-4790-851b-c7ee7e462691
                         SpriteProvider: !SpriteFromSheet
                             ~Id: e3d54a9a-3622-4978-9566-0f3bbdb7cac3
-                            Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                            Sheet: bc198807-fdf3-4d2f-b2f4-6e30169cc298/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
@@ -160,12 +160,12 @@ Hierarchy:
                         Logic:
                             Entity: {Id: a705ea8e-81df-49da-b4a6-5655efd6cb0c}
                             Id: fac93c9b-4547-4468-9bde-beb247edca11
-                        SpriteSheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                        SpriteSheet: 79fd83db-b294-492c-bd83-6af1d67deef6/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                     - !SpriteComponent
                         ~Id: 76647fa1-78eb-443e-871e-0494e1b6670e
                         SpriteProvider: !SpriteFromSheet
                             ~Id: 3e16ddc7-fc88-45b6-bc44-b4e6b2a5d652
-                            Sheet: 1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
+                            Sheet: 84798798-7637-4b87-96e9-af74c91f6312/1a934b0a-e0e0-4bf0-b0c8-ab2f2a816477:SpriteSheet
                         CurrentFrame: 6
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Design: {}
@@ -179,6 +179,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
                     Id: 41c28522-e9fb-40df-9389-15298dc0ce3c
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: 905fd940-858a-4950-9e6c-aa6b43357491

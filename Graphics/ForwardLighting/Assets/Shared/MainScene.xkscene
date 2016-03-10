@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 39ecd5b5-134a-4651-9ebe-118605b09d03
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 25fae3fd-63bc-4959-8a1f-bf56b8f875a9
@@ -33,7 +33,7 @@ Hierarchy:
                             Id: d8a19b9d-f21d-47d9-90e8-8ce1de293c14
                     - !ModelComponent
                         ~Id: ec62b4ba-0a33-4713-8b27-127b6dac731b
-                        Model: 94cb0ec2-52f7-4dcc-94cd-cd983f1409bb:character_00
+                        Model: 3f50d669-e357-49ed-b1fc-f4b0217a6cbf/94cb0ec2-52f7-4dcc-94cd-cd983f1409bb:character_00
                         Materials:
                             - null
                             - null
@@ -93,7 +93,7 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 2c879191-3fa4-4983-8dc8-d7f45705515a
-                        Model: c1ca91c4-0af6-45f6-afb4-320e01fcd413:BorderModel
+                        Model: 3bf79bfb-09e5-4f17-b01f-a5f6552f276c/c1ca91c4-0af6-45f6-afb4-320e01fcd413:BorderModel
                         Materials:
                             - null
             Design: {}
@@ -115,7 +115,7 @@ Hierarchy:
                         DirectionalLight2:
                             Entity: {Id: 129299d6-35ae-48b3-a51a-e8cf44493c2c}
                             Id: 4ce0d5f7-eb04-4951-acd8-f7d5ab5809c5
-                        Font: a7b3ff14-423f-4466-b27e-871d0d7ac7da:Font
+                        Font: 6d07398f-5c23-4fca-a021-fab5fce27d7b/a7b3ff14-423f-4466-b27e-871d0d7ac7da:Font
                         PointLight:
                             Entity: {Id: 92384700-0ee6-42e3-a038-e4ed7a11b0ab}
                             Id: ed0dd2cf-ba32-43e2-8487-a51fc28519e8
@@ -191,7 +191,7 @@ Hierarchy:
                         Children: []
                     - !ModelComponent
                         ~Id: 8ebcb75e-113b-43a1-8ed7-ebecdb013da8
-                        Model: 00f608bd-b4e5-4e50-94af-6d593671e035:FloorModel
+                        Model: d0621875-5e4e-41a2-b376-be1a1f39fa74/00f608bd-b4e5-4e50-94af-6d593671e035:FloorModel
                         Materials:
                             - null
             Design: {}
@@ -249,7 +249,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 018887eb-7a61-41fb-b2a5-f4df9cee81f7
-                        Texture: 082a7591-1735-45ab-a1c4-02fdcb6f9d15:XenkoBackground
+                        Texture: 41b2602e-d903-4868-9429-9e46a80ac3d0/082a7591-1735-45ab-a1c4-02fdcb6f9d15:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: 29625ef5-e9e4-47de-b725-a08315cb95cd
@@ -261,6 +261,7 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 3f496e95-7123-467f-a2de-5e1de5fea9a1}
                     Id: 1e9e51d1-89f2-4afb-93ec-68cb8c8b6a49
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: 0271e889-fc6d-4164-a9c0-20744e2eb4d9

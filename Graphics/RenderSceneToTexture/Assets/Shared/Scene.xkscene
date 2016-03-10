@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: bfd87fc1-aa2e-4563-b1d5-852df6475831
@@ -42,7 +42,7 @@ Hierarchy:
                         Children: []
                     - !RenderSceneToTexture.SetSpriteSource,RenderSceneToTexture.Game
                         ~Id: c31d8e1f-53f2-456a-a026-55ebe9720de5
-                        RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
+                        RenderFrame: c337ed8f-03b8-4641-b73c-5d71308f72cd/2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
                     - !SpriteComponent
                         ~Id: 9206d318-0eec-4baa-ac05-b1cd6e893efa
                         SpriteProvider: !SpriteFromTexture
@@ -128,7 +128,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: bd36fd77-5b09-4a58-92ce-82be90aa012f
-                        Texture: b237783b-085e-40e5-b6b4-c41c2b98eb41:XenkoBackground
+                        Texture: 1090e094-f098-458d-8e73-bff2fed2820d/b237783b-085e-40e5-b6b4-c41c2b98eb41:XenkoBackground
             Design: {}
         -   Entity:
                 Id: dbc67230-cb46-4563-8193-084016acd341
@@ -171,13 +171,13 @@ Hierarchy:
                     - !AnimationComponent
                         ~Id: 6b597dd4-f0b3-488a-a450-01177661fc4d
                         Animations:
-                            Idle: 144a63cd-8847-447e-8b00-4c33204abfb9:he00_normal_idle
+                            Idle: d38454a4-e9c0-45bd-b607-b6929b062f3e/144a63cd-8847-447e-8b00-4c33204abfb9:he00_normal_idle
                         PlayingAnimations: []
                     - !RenderSceneToTexture.PlayAnimation,RenderSceneToTexture.Game
                         ~Id: e67ed2c3-6fab-4b93-bfea-3fceab01a27c
                     - !ModelComponent
                         ~Id: 036205d7-8a24-4194-a484-27af5acff6e0
-                        Model: 9e7f08db-ca99-4171-b503-6ea0f8e5114d:knight
+                        Model: 09595b43-97c5-46c0-87d7-56b1c518cd9e/9e7f08db-ca99-4171-b503-6ea0f8e5114d:knight
                         Materials:
                             - null
                             - null
@@ -198,11 +198,12 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 14088c66-6d9b-4e26-a601-9784ff3ae859}
                     Id: 07c9ff4c-26fb-4945-9fd1-899f98a86e77
+        ModelEffect: null
         Layers:
             -   ~Id: 230ac439-6a7a-467b-8126-b0a05aa620b8
                 Name: SceneGraphicsLayer
                 Output: !SharedRenderFrameProvider
-                    RenderFrame: 2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
+                    RenderFrame: 46113113-1139-4391-b35b-df25bcc50fa8/2355d4e2-1680-48ca-8ad6-34d291c1489d:RenderFrame
                 Renderers:
                     - !ClearRenderFrameRenderer
                         ~Id: 16c90dcc-6be0-41bf-bcda-8a8a7ae607d6

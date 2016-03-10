@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 2871eb8a-27ef-40c9-a40a-9026b53ab794
-SerializedVersion: {Xenko: 1.6.0-beta01}
+SerializedVersion: {Xenko: 1.6.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 91262080-3992-4258-af19-619bb157b461
@@ -20,7 +20,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: 33a3b73b-938e-463b-a0d3-b18b110d68a0
-                        Texture: 175006e8-6351-4365-9778-73d54aa5ea9f:XenkoBackground
+                        Texture: 96e31fc0-90fa-48fb-8b98-9d236f56d3cd/175006e8-6351-4365-9778-73d54aa5ea9f:XenkoBackground
             Design: {}
         -   Entity:
                 Id: cf39fbe2-0062-408e-954f-ea56b7b76b97
@@ -34,13 +34,14 @@ Hierarchy:
                         Children: []
                     - !SimpleSprite.BallScript,SimpleSprite.Game
                         ~Id: 0d68d8c0-1856-496f-a985-c52da27b163a
-                        Sphere: ceda18e2-1df7-4694-bac1-fdecc81bc570:sphere
+                        Sphere: 4305804c-ac8f-475e-ad38-7b48bc8d40a8/ceda18e2-1df7-4694-bac1-fdecc81bc570:sphere
             Design: {}
 SceneSettings:
     ~Id: 2a70d72f-0788-4e3c-821b-cf97e96ea140
     GraphicsCompositor: !SceneGraphicsCompositorLayers
         ~Id: be433e8b-7ade-4674-9c01-8638c876c7e1
         Cameras: []
+        ModelEffect: null
         Layers: []
         Master:
             ~Id: 1930f449-66e6-4612-9ff2-5003d398e530
