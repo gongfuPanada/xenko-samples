@@ -1829,11 +1829,11 @@ EffectName: ColorTransformGroupEffect
 UsedParameters:
     ColorTransformGroup.Transforms:
         - !ToneMap
-            Operator: !ToneMapU2FilmicOperator
+            Operator: !ToneMapU2FilmicOperator {}
         - !FilmGrain
             Amount: 0.1
             GrainSize: 2.0
-        - !LuminanceToChannelTransform
+        - !LuminanceToChannelTransform {}
 ---
 !EffectCompileRequest
 EffectName: FXAAShaderEffect
