@@ -5,12 +5,12 @@ using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Core.Mathematics;
 
-namespace GeometricPrimitives
+namespace SimpleParticles
 {
     /// <summary>
     /// Script that update the position of the camera.
     /// </summary>
-    public class CameraNavigationScript : AsyncScript
+    public class CameraOrbitScript : AsyncScript
     {
         private Vector3 lookAtPosition = new Vector3(0, 0, 0);
         private float lookAtAngle = 90f;
@@ -26,8 +26,6 @@ namespace GeometricPrimitives
         private float movingSpeedX;
         private float movingSpeedY;
         private bool userIsTouchingScreen;
-
-        public int Test = 2;
 
         public override async Task Execute()
         {

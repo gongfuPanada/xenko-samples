@@ -606,8 +606,6 @@ Hierarchy:
                     - !CameraComponent
                         ~Id: 2d3c6f87-3797-4988-95bd-0c6964dd3579
                         Projection: Perspective
-                    - !GeometricPrimitives.CameraNavigationScript,GeometricPrimitives.Game
-                        ~Id: aa747cc9-ee50-4f4e-bd4e-5442adb9b30c
             Design: {}
         -   Entity:
                 Id: a8f82a89-f9fb-46ca-a616-77288dbac198
