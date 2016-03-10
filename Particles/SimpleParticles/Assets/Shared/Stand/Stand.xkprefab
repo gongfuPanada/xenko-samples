@@ -1,0 +1,41 @@
+!PrefabAsset
+Id: 53cc6cc3-c95a-41a3-8113-58245f060178
+Tags: []
+Hierarchy:
+    ~Id: 35b74603-f814-4bd4-9389-ead219e142a1
+    RootEntities:
+        - a630d502-056b-4c84-94cf-959178d60894
+        - 248c3333-f6fa-4640-905a-97df50d46569
+    Entities:
+        -   Entity:
+                Id: 248c3333-f6fa-4640-905a-97df50d46569
+                Name: ProceduralTorus
+                Components:
+                    - !TransformComponent
+                        ~Id: 00b34cf0-bb78-4aff-be2d-bf7bb688d49b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ModelComponent
+                        ~Id: bcad5c09-80d9-43c5-9555-42ee5bebefe1
+                        Model: 2af48bdb-04a7-4df6-b43d-48431f920359/14c15ac5-dd16-4bec-8250-9a837f09f283:Stand/ProceduralTorus
+                        Materials:
+                            - null
+            Design: {}
+        -   Entity:
+                Id: a630d502-056b-4c84-94cf-959178d60894
+                Name: ProceduralModel
+                Components:
+                    - !TransformComponent
+                        ~Id: 74c5d810-ffa2-4672-b2ee-a1f3fa97054f
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ModelComponent
+                        ~Id: e64a449e-7c5d-482f-9705-aac73786bae2
+                        Model: ee6850a9-ab91-460f-bddc-e3edc43e799d/c46f9ef1-3f08-4541-b48a-d577621cb434:Stand/ProceduralCylinder
+                        Materials:
+                            - null
+            Design: {}

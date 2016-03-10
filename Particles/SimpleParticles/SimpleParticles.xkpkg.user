@@ -1,6 +1,31 @@
 !SettingsFile
 Settings:
     Package/SceneSettings:
+        53cc6cc3-c95a-41a3-8113-58245f060178:
+            ActiveStream: Color Base
+            CamAspectRatio: 1.77777779
+            CamFarClipPlane: 1000.0
+            CamNearClipPlane: 0.1
+            CamOrthographicSize: 10.0
+            CamPitchYaw: {X: -0.8804491, Y: -0.9348656}
+            CamPosition: {X: -2.75575638, Y: 4.660457, Z: 1.58411932}
+            CamProjection: Perspective
+            CamVerticalFieldOfView: 45.0
+            CameraPreviewVisible: true
+            ComponentGizmoSize: 1.0
+            FixedSizeGizmos: false
+            GridVisible: true
+            HiddenGizmos:
+                - Transform
+            RenderMode: Lighting
+            RotationSnapActive: false
+            RotationSnapValue: 22.5
+            ScaleSnapActive: false
+            ScaleSnapValue: 1.1
+            SelectionMaskVisible: true
+            TransformationGizmoSize: 1.0
+            TranslationSnapActive: false
+            TranslationSnapValue: 1.0
         a382e22e-7ad1-41a5-90da-7a3d4076bc14:
             ActiveStream: Color Base
             CamAspectRatio: 1.77777779
