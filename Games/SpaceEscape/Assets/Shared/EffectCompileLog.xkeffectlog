@@ -1,42 +1,7 @@
-﻿---
+---
 !EffectCompileRequest
 EffectName: SpaceEscapeEffectMain
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    GameParameters.EnableBend: true
-    GameParameters.EnableFog: true
-    GameParameters.EnableOnflyTextureUVChange: false
-    Lighting.DirectLightGroups:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightDirectionalGroup
-                    GenericArguments:
-                        - 1
-                -   ClassName: DirectLightGroupFixed
-                    GenericArguments:
-                        - 1
-            Name: null
-    Lighting.EnvironmentLights:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightSimpleAmbient
-            Name: null
-    Material.HasNormalMap: false
-    Material.HasSkinningPosition: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -55,7 +20,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -67,24 +31,15 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
----
-!EffectCompileRequest
-EffectName: SpaceEscapeEffectMain
-UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    GameParameters.EnableBend: true
-    GameParameters.EnableFog: true
-    GameParameters.EnableOnflyTextureUVChange: false
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
     Lighting.DirectLightGroups:
         - !ShaderMixinSource
             Compositions: {}
@@ -96,24 +51,19 @@ UsedParameters:
                 -   ClassName: DirectLightGroupFixed
                     GenericArguments:
                         - 1
-            Name: null
     Lighting.EnvironmentLights:
         - !ShaderMixinSource
             Compositions: {}
             Macros: []
             Mixins:
                 -   ClassName: LightSimpleAmbient
-            Name: null
-    Material.HasNormalMap: false
-    Material.HasSkinningPosition: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    GameParameters.EnableBend: true
+    GameParameters.EnableFog: true
+    GameParameters.EnableOnflyTextureUVChange: false
+---
+!EffectCompileRequest
+EffectName: SpaceEscapeEffectMain
+UsedParameters:
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -132,7 +82,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             computeColorSource: !ShaderClassSource
@@ -145,7 +94,6 @@ UsedParameters:
                                 GenericArguments:
                                     - matAlphaDiscard
                                     - r
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -157,26 +105,17 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
                     - !ShaderClassSource
                         ClassName: MaterialSurfaceTransparentAlphaDiscard
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
----
-!EffectCompileRequest
-EffectName: SpaceEscapeEffectMain
-UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    GameParameters.EnableBend: false
-    GameParameters.EnableFog: true
-    GameParameters.EnableOnflyTextureUVChange: true
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
     Lighting.DirectLightGroups:
         - !ShaderMixinSource
             Compositions: {}
@@ -188,24 +127,19 @@ UsedParameters:
                 -   ClassName: DirectLightGroupFixed
                     GenericArguments:
                         - 1
-            Name: null
     Lighting.EnvironmentLights:
         - !ShaderMixinSource
             Compositions: {}
             Macros: []
             Mixins:
                 -   ClassName: LightSimpleAmbient
-            Name: null
-    Material.HasNormalMap: false
-    Material.HasSkinningPosition: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    GameParameters.EnableBend: true
+    GameParameters.EnableFog: true
+    GameParameters.EnableOnflyTextureUVChange: false
+---
+!EffectCompileRequest
+EffectName: SpaceEscapeEffectMain
+UsedParameters:
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -224,7 +158,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -236,11 +169,32 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 1
+                -   ClassName: DirectLightGroupFixed
+                    GenericArguments:
+                        - 1
+    Lighting.EnvironmentLights:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightSimpleAmbient
+    GameParameters.EnableBend: false
+    GameParameters.EnableFog: true
+    GameParameters.EnableOnflyTextureUVChange: true

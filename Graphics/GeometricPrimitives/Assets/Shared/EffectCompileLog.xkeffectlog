@@ -2,27 +2,6 @@
 !EffectCompileRequest
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    Lighting.DirectLightGroups: []
-    Lighting.EnvironmentLights:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightSimpleAmbient
-            Name: null
-    Material.HasNormalMap: false
-    Material.HasSkinningPosition: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -41,7 +20,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -53,11 +31,19 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Lighting.DirectLightGroups: []
+    Lighting.EnvironmentLights:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightSimpleAmbient

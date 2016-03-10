@@ -2,34 +2,10 @@
 !EffectCompileRequest
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    Lighting.DirectLightGroups:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightDirectionalGroup
-                    GenericArguments:
-                        - 1
-                -   ClassName: DirectLightGroupFixed
-                    GenericArguments:
-                        - 1
-            Name: null
-    Lighting.EnvironmentLights: []
-    Material.HasNormalMap: true
-    Material.HasSkinningNormal: true
     Material.HasSkinningPosition: true
+    Material.HasSkinningNormal: true
     Material.HasSkinningTangent: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    Material.SkinningMaxBones: 4
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -48,7 +24,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             normalMap: !ShaderClassSource
@@ -66,7 +41,6 @@ UsedParameters:
                                 GenericArguments:
                                     - false
                                     - true
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -78,47 +52,36 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.SkinningMaxBones: 56
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Material.HasNormalMap: true
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 1
+                -   ClassName: DirectLightGroupFixed
+                    GenericArguments:
+                        - 1
+    Lighting.EnvironmentLights: []
 ---
 !EffectCompileRequest
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    Lighting.DirectLightGroups:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightDirectionalGroup
-                    GenericArguments:
-                        - 1
-                -   ClassName: DirectLightGroupFixed
-                    GenericArguments:
-                        - 1
-            Name: null
-    Lighting.EnvironmentLights: []
-    Material.HasNormalMap: true
-    Material.HasSkinningNormal: true
     Material.HasSkinningPosition: true
+    Material.HasSkinningNormal: true
     Material.HasSkinningTangent: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    Material.SkinningMaxBones: 9
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -137,7 +100,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             normalMap: !ShaderClassSource
@@ -155,7 +117,6 @@ UsedParameters:
                                 GenericArguments:
                                     - false
                                     - true
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -167,47 +128,36 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.SkinningMaxBones: 56
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Material.HasNormalMap: true
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 1
+                -   ClassName: DirectLightGroupFixed
+                    GenericArguments:
+                        - 1
+    Lighting.EnvironmentLights: []
 ---
 !EffectCompileRequest
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    Lighting.DirectLightGroups:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightDirectionalGroup
-                    GenericArguments:
-                        - 1
-                -   ClassName: DirectLightGroupFixed
-                    GenericArguments:
-                        - 1
-            Name: null
-    Lighting.EnvironmentLights: []
-    Material.HasNormalMap: true
-    Material.HasSkinningNormal: true
     Material.HasSkinningPosition: true
+    Material.HasSkinningNormal: true
     Material.HasSkinningTangent: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    Material.SkinningMaxBones: 5
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -226,7 +176,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             normalMap: !ShaderClassSource
@@ -244,7 +193,6 @@ UsedParameters:
                                 GenericArguments:
                                     - false
                                     - true
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -256,47 +204,36 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.SkinningMaxBones: 56
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Material.HasNormalMap: true
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 1
+                -   ClassName: DirectLightGroupFixed
+                    GenericArguments:
+                        - 1
+    Lighting.EnvironmentLights: []
 ---
 !EffectCompileRequest
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    Lighting.DirectLightGroups:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightDirectionalGroup
-                    GenericArguments:
-                        - 1
-                -   ClassName: DirectLightGroupFixed
-                    GenericArguments:
-                        - 1
-            Name: null
-    Lighting.EnvironmentLights: []
-    Material.HasNormalMap: true
-    Material.HasSkinningNormal: true
     Material.HasSkinningPosition: true
+    Material.HasSkinningNormal: true
     Material.HasSkinningTangent: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    Material.SkinningMaxBones: 1
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -315,7 +252,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             normalMap: !ShaderClassSource
@@ -333,7 +269,6 @@ UsedParameters:
                                 GenericArguments:
                                     - false
                                     - true
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -345,47 +280,36 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.SkinningMaxBones: 56
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Material.HasNormalMap: true
+    Lighting.DirectLightGroups:
+        - !ShaderMixinSource
+            Compositions: {}
+            Macros: []
+            Mixins:
+                -   ClassName: LightDirectionalGroup
+                    GenericArguments:
+                        - 1
+                -   ClassName: DirectLightGroupFixed
+                    GenericArguments:
+                        - 1
+    Lighting.EnvironmentLights: []
 ---
 !EffectCompileRequest
 EffectName: XenkoForwardShadingEffect
 UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
-    Lighting.DirectLightGroups:
-        - !ShaderMixinSource
-            Compositions: {}
-            Macros: []
-            Mixins:
-                -   ClassName: LightDirectionalGroup
-                    GenericArguments:
-                        - 1
-                -   ClassName: DirectLightGroupFixed
-                    GenericArguments:
-                        - 1
-            Name: null
-    Lighting.EnvironmentLights: []
-    Material.HasNormalMap: true
-    Material.HasSkinningNormal: true
     Material.HasSkinningPosition: true
+    Material.HasSkinningNormal: true
     Material.HasSkinningTangent: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
+    Material.SkinningMaxBones: 20
     Material.PixelStageSurfaceShaders: !ShaderMixinSource
         Compositions:
             layers: !ShaderArraySource
@@ -404,7 +328,6 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             normalMap: !ShaderClassSource
@@ -422,7 +345,6 @@ UsedParameters:
                                 GenericArguments:
                                     - false
                                     - true
-                        Name: null
                     - !ShaderMixinSource
                         Compositions:
                             surfaces: !ShaderArraySource
@@ -434,22 +356,16 @@ UsedParameters:
                         Macros: []
                         Mixins:
                             -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
         Macros: []
         Mixins:
             -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.SkinningMaxBones: 56
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
----
-!EffectCompileRequest
-EffectName: XenkoForwardShadingEffect
-UsedParameters:
-    CompilerParameters.DebugKey: true
-    CompilerParameters.GraphicsPlatformKey: Direct3D11
-    CompilerParameters.GraphicsProfileKey: Level_11_0
+    Material.PixelStageStreamInitializer: !ShaderMixinSource
+        Compositions: {}
+        Macros: []
+        Mixins:
+            -   ClassName: MaterialStream
+            -   ClassName: MaterialPixelShadingStream
+    Material.HasNormalMap: true
     Lighting.DirectLightGroups:
         - !ShaderMixinSource
             Compositions: {}
@@ -461,74 +377,4 @@ UsedParameters:
                 -   ClassName: DirectLightGroupFixed
                     GenericArguments:
                         - 1
-            Name: null
     Lighting.EnvironmentLights: []
-    Material.HasNormalMap: true
-    Material.HasSkinningNormal: true
-    Material.HasSkinningPosition: true
-    Material.HasSkinningTangent: false
-    Material.PixelStageStreamInitializer: !ShaderMixinSource
-        Compositions: {}
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialStream
-            -   ClassName: MaterialPixelShadingStream
-        Name: null
-    Material.PixelStageSurfaceFilter: null
-    Material.PixelStageSurfaceShaders: !ShaderMixinSource
-        Compositions:
-            layers: !ShaderArraySource
-                Values:
-                    - !ShaderMixinSource
-                        Compositions:
-                            diffuseMap: !ShaderClassSource
-                                ClassName: ComputeColorTextureScaledOffsetDynamicSampler
-                                GenericArguments:
-                                    - Material.DiffuseMap
-                                    - TEXCOORD0
-                                    - Material.Sampler.i0
-                                    - rgba
-                                    - Material.TextureScale
-                                    - Material.TextureOffset
-                        Macros: []
-                        Mixins:
-                            -   ClassName: MaterialSurfaceDiffuse
-                        Name: null
-                    - !ShaderMixinSource
-                        Compositions:
-                            normalMap: !ShaderClassSource
-                                ClassName: ComputeColorTextureScaledOffsetDynamicSampler
-                                GenericArguments:
-                                    - Material.NormalMap
-                                    - TEXCOORD0
-                                    - Material.Sampler.i0
-                                    - rgba
-                                    - Material.TextureScale.i1
-                                    - Material.TextureOffset.i1
-                        Macros: []
-                        Mixins:
-                            -   ClassName: MaterialSurfaceNormalMap
-                                GenericArguments:
-                                    - false
-                                    - true
-                        Name: null
-                    - !ShaderMixinSource
-                        Compositions:
-                            surfaces: !ShaderArraySource
-                                Values:
-                                    - !ShaderClassSource
-                                        ClassName: MaterialSurfaceShadingDiffuseLambert
-                                        GenericArguments:
-                                            - false
-                        Macros: []
-                        Mixins:
-                            -   ClassName: MaterialSurfaceLightingAndShading
-                        Name: null
-        Macros: []
-        Mixins:
-            -   ClassName: MaterialSurfaceArray
-        Name: null
-    Material.SkinningMaxBones: 56
-    Material.TessellationShader: null
-    Material.VertexStageSurfaceShaders: null
-    XenkoEffectBase.ExtensionPostVertexStageShader: null
