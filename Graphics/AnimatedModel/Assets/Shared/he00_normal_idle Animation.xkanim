@@ -4,11 +4,10 @@ SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../RawAssets/knight/he00_normal_idle.fbx
 RepeatMode: LoopInfinite
-Skeleton: 218816f5-b393-4b12-adaf-e0e12817d892:knight Skeleton
+Skeleton: 5aa6358f-e7c4-4c89-af2e-feea6fc199f4/218816f5-b393-4b12-adaf-e0e12817d892:knight Skeleton
 RootMotion: false
-PreviewModel: 7f052b2a-84c2-4f8a-932c-c073b2de47de:knight
+PreviewModel: e323daec-29ad-4954-ad0d-18ed74d6a3e4/7f052b2a-84c2-4f8a-932c-c073b2de47de:knight
 ~Base:
-    ~Id: 50a10066-469c-4abb-8ad9-a9b70e779982
     Location: --import--
     Asset: !Animation
         Id: 00000000-0000-0000-0000-000000000000

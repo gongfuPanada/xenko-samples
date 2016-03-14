@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Graphics;
 using SiliconStudio.Xenko.UI;

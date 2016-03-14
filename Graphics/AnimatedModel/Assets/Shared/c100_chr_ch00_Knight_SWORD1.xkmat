@@ -5,24 +5,25 @@ Tags: []
 Attributes:
     Surface: !MaterialNormalMapFeature
         NormalMap: !ComputeTextureColor
-            Texture: 008d4b9a-a403-40fd-bb98-1924015ba2fa:c100_weapon_nm
+            Texture: 00b65bb4-133b-49c7-9c54-08336beb8a40/008d4b9a-a403-40fd-bb98-1924015ba2fa:c100_weapon_nm
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: 713eef4b-f312-4992-93e1-02eb55acbb3e:c100_weapon_cm
+            Texture: 00e477af-7578-471e-aad1-840c758c62e4/713eef4b-f312-4992-93e1-02eb55acbb3e:c100_weapon_cm
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
 ~Base:
-    ~Id: b1f4722c-9c1f-4070-b552-8f8b5643abec
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
@@ -31,18 +32,20 @@ Layers: []
         Attributes:
             Surface: !MaterialNormalMapFeature
                 NormalMap: !ComputeTextureColor
-                    Texture: 008d4b9a-a403-40fd-bb98-1924015ba2fa:c100_weapon_nm
+                    Texture: 0cc364b3-8cf4-44a2-ab7e-5f9d6d109a91/008d4b9a-a403-40fd-bb98-1924015ba2fa:c100_weapon_nm
                     FallbackValue:
                         Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     Scale: {X: 1.0, Y: 1.0}
                     Offset: {X: 0.0, Y: 0.0}
+                    Swizzle: null
             Diffuse: !MaterialDiffuseMapFeature
                 DiffuseMap: !ComputeTextureColor
-                    Texture: 713eef4b-f312-4992-93e1-02eb55acbb3e:c100_weapon_cm
+                    Texture: dd9043f1-7700-49b9-af1b-f0482e3989cc/713eef4b-f312-4992-93e1-02eb55acbb3e:c100_weapon_cm
                     FallbackValue:
                         Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     Scale: {X: 1.0, Y: 1.0}
                     Offset: {X: 0.0, Y: 0.0}
+                    Swizzle: null
             DiffuseModel: !MaterialDiffuseLambertModelFeature {}
             Specular: !MaterialSpecularMapFeature
                 SpecularMap: !ComputeColor
