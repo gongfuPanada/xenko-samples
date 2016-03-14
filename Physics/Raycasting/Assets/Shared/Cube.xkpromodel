@@ -8,4 +8,4 @@ Type: !CubeProceduralModel
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
         ~Id: 1b2d01f0-fe06-439f-a48f-cfa9d07e63cf
-        Material: 2685fa72-22c3-4025-bd46-7d546f9f915b:Material
+        Material: 7fc1a9a9-c6f7-4c79-8d81-3624b42f9b27/2685fa72-22c3-4025-bd46-7d546f9f915b:Material

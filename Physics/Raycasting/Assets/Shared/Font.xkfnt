@@ -10,7 +10,8 @@ IsDynamic: true
 DefaultCharacter: ' '
 CharacterSet: null
 CharacterRegions:
-    -   Start: ' '
+    -   ~Id: 5c5e2eba-f060-4ef1-8093-0f290d415f0a
+        Start: ' '
         End: "\x7F"
 AntiAlias: Grayscale
 Spacing: 0.0
