@@ -6,7 +6,6 @@ Source: ../../RawAssets/knight/c100_body_nm.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
-    ~Id: e374d00c-9b07-4e02-97d1-66463745b11b
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

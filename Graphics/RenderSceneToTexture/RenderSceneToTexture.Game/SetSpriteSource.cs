@@ -1,4 +1,4 @@
-﻿using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Rendering;
 using SiliconStudio.Xenko.Rendering.Sprites;
 

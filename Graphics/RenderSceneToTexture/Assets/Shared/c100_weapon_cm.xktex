@@ -6,7 +6,6 @@ Source: ../../RawAssets/knight/c100_weapon_cm.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
-    ~Id: da6e4af3-cc47-4b97-b15b-3722353b6007
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
