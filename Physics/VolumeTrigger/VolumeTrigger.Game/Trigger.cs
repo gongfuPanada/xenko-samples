@@ -1,14 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Physics;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
+using SiliconStudio.Xenko.Engine.Events;
 
 namespace VolumeTrigger
 {
     public class Trigger : AsyncScript
     {
+		[DataMemberIgnore]
+		public EventKey<bool> TriggerEvent = new EventKey<bool>();
+		
         public override async Task Execute()
         {
             var trigger = Entity.Get<PhysicsComponent>();
@@ -20,7 +22,7 @@ namespace VolumeTrigger
                 //wait for entities coming in
                 var firstCollision = await trigger.NewCollision();
 
-                SimpleMessage.OnStart();
+                TriggerEvent.Broadcast(true);
 
                 //now wait for entities exiting
                 Collision collision;
@@ -29,7 +31,7 @@ namespace VolumeTrigger
                     collision = await trigger.CollisionEnded();
                 } while (collision != firstCollision);
                
-                SimpleMessage.OnStop();
+                TriggerEvent.Broadcast(false);
             }
         }
     }
