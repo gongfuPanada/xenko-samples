@@ -309,7 +309,7 @@ namespace UIParticles
             var particleConfetti = SceneSystem.SceneInstance.Scene.Entities.FirstOrDefault(item => item.Name.Equals("ConfettiBig"));
             if (particleConfetti != null)
             {
-                particleConfetti.Transform.Position = new Vector3(0, 0.65f, 0);
+                particleConfetti.Transform.Position = new Vector3(0, 0.5f, 0);
                 particleConfetti.Get<ParticleSystemComponent>().ParticleSystem.Play();
             }
         }
