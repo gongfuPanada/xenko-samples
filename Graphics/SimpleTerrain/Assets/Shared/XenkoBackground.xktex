@@ -6,7 +6,6 @@ Source: ../../RawAssets/XenkoBackground.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: Color32Bits
 ~Base:
-    ~Id: 6e91aab5-bec0-4e0c-990c-dcac82eaad68
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

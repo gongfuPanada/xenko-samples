@@ -5,7 +5,6 @@ Tags: []
 Source: ../../RawAssets/moutain.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: 928272f1-e962-41d5-8c64-08f9e2b659d7
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

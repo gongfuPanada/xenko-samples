@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 941a9765-9ce2-4a8e-bb1b-4dfc8ea1d541
-SerializedVersion: {Xenko: 1.6.0-beta02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: 8507550b-7993-4793-82da-8d27ab036c71
@@ -99,15 +99,15 @@ Hierarchy:
                             Id: 5dd4622e-6c2d-4419-b5da-f47a31ccecd8
                         DirectionalLight1:
                             Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
-                        Font: 3dc7ee80-91f6-4a67-8ce6-2b46c0ff190d/e9497ed3-30e1-4692-9a33-b737ff5dea2f:Font
-                        GrassTexture: 98127d9f-d479-4043-a10b-052a11ead5d4/22c955d4-cd3f-4461-bb81-2260fbb58a12:grass
-                        MountainTexture: a122d3c5-d004-4a6d-9e6d-0d16dd25f003/bf4dc32f-c97a-4bbe-97e7-0df231bc2a62:mountain
+                        Font: 7d9432bd-c02f-406d-9528-d60d055bddc2/e9497ed3-30e1-4692-9a33-b737ff5dea2f:Font
+                        GrassTexture: 8875866f-6a92-4b2f-8e6b-d39c148eb687/22c955d4-cd3f-4461-bb81-2260fbb58a12:grass
+                        MountainTexture: b65f65e3-0d8f-4134-9ebd-4adb3a283111/bf4dc32f-c97a-4bbe-97e7-0df231bc2a62:mountain
                         TerrainEntity:
                             Id: da79f57e-8d85-4ad1-8483-d2c92b00daac
-                        TerrainMaterial: 79791943-90ea-4cd9-a7db-38cf34676321/982ebcc3-acca-4232-acb5-cc7fa793af0d:TerrainMaterial
+                        TerrainMaterial: 9239412c-2329-405b-b7a7-b9da4e1353d4/982ebcc3-acca-4232-acb5-cc7fa793af0d:TerrainMaterial
                         UIEntity:
                             Id: f8f9b440-fe83-4642-b9f2-f9014ce7a9ac
-                        WaterTexture: aa0ac169-f016-41ee-9a36-977789ef0c57/091fda79-9023-4ef4-a55c-8bb3f7718e27:water
+                        WaterTexture: eb9492c4-75be-4390-a23b-1a86ceb23f6b/091fda79-9023-4ef4-a55c-8bb3f7718e27:water
             Design: {}
         -   Entity:
                 Id: 65f83bea-3d79-4cf7-9577-0ac08abb70e2
@@ -174,7 +174,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: a5d8e687-ed18-4590-a815-b6b94a18c0ac
-                        Texture: f3844ae2-d2fe-4595-85b7-adc200fb1d09/a940cc05-727b-43d9-8d48-51e13912adab:XenkoBackground
+                        Texture: 93cfa1d7-a5ed-4651-a89c-520e5cdf8f21/a940cc05-727b-43d9-8d48-51e13912adab:XenkoBackground
             Design: {}
 SceneSettings:
     ~Id: 5428aeb3-d4be-4f57-9688-2a24699342bd
@@ -186,7 +186,6 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 55f31111-98d0-4cd8-adc6-c78f31d72118}
                     Id: 3ae674c5-7a1d-4769-9c39-bd85e02b76f5
-        ModelEffect: null
         Layers: []
         Master:
             ~Id: 369501cb-d077-4349-8bc3-a0bd30330d40
