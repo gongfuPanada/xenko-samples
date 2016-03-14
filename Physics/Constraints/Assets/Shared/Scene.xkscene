@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 45f5d521-b83c-4608-937d-64f93812fba7
-SerializedVersion: {Xenko: 1.6.0-beta02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: 44a86834-7780-4009-881b-b780aff153fc
@@ -25,7 +25,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: fc13480f-6539-433b-aa78-22620da5b9dd
-                        Texture: 3a59d557-60cc-462c-9794-64e8e13baab1/d46cb653-bbdb-4b7b-9449-37beb6774cfd:XenkoBackground
+                        Texture: d66fc875-96b3-455a-9560-e26e15794ccb/d46cb653-bbdb-4b7b-9449-37beb6774cfd:XenkoBackground
             Design: {}
         -   Entity:
                 Id: 70f2e3d6-2d8d-4cc5-aa99-1b9cae14aed2
@@ -39,8 +39,6 @@ Hierarchy:
                         Children: []
                     - !RigidbodyComponent
                         ~Id: 9a3e92bf-7ad3-4d72-86b2-6dd090e69cd6
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -58,10 +56,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: a7d50465-284d-482b-a6f4-9a38762e8475
-                                Shape: 1ff480e4-5a81-4a08-89ec-514633c9d929/7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
+                                Shape: 568dc7e2-a7f9-4f68-87a4-3f1c3a91d84b/7e1985f8-0b02-4b1e-b636-1614deb4f36b:sphere_cs
                     - !ModelComponent
                         ~Id: 4ac89f6f-764b-453c-abf0-67d063c01c0d
-                        Model: 92929283-da0f-4bef-8506-89782164c82e/bbff2b2d-985f-4986-9c34-f08cdeff8669:Sphere
+                        Model: acab96af-0356-49fe-a86d-853e91771950/bbff2b2d-985f-4986-9c34-f08cdeff8669:Sphere
                         Materials:
                             - null
             Design: {}
@@ -77,8 +75,6 @@ Hierarchy:
                         Children: []
                     - !RigidbodyComponent
                         ~Id: 0ee762a3-5c6a-4816-a3f7-1ce5efec5a16
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -96,10 +92,10 @@ Hierarchy:
                         ColliderShapes:
                             - !ColliderShapeAssetDesc
                                 ~Id: 2130674b-0aaa-4e11-8289-b14acbe5df6e
-                                Shape: 7c76016f-2981-4ef9-b672-78e5bf8f6904/f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
+                                Shape: de7b3a04-737e-4256-ab4f-efdd613c98a3/f9e50676-761f-47c9-87e3-1e949c24ff9e:cube_cs
                     - !ModelComponent
                         ~Id: 4e9685dc-f8f8-45a3-a770-01253a1194aa
-                        Model: 850e3b83-ac0f-4a03-80ca-bf925c488098/140faeee-f1b9-4f29-91a2-14b11ae22718:Cube
+                        Model: d912859b-a152-422f-ab7f-7c4650068431/140faeee-f1b9-4f29-91a2-14b11ae22718:Cube
                         Materials:
                             - null
             Design: {}
@@ -177,7 +173,7 @@ Hierarchy:
                         Children: []
                     - !Constraints.DemoScript,Constraints.Game
                         ~Id: 46650e10-9713-4da4-a9e9-b9e50263ec16
-                        Font: ee27ac3b-8e15-409c-999f-7a45f4a22993/62eec53a-f82a-460a-91c3-bf3c6ece95c2:Font
+                        Font: 8c3a1598-0c68-4b66-be63-b47ce5898a7d/62eec53a-f82a-460a-91c3-bf3c6ece95c2:Font
                         cube:
                             Id: 909c7c74-e1e9-4d9e-aa61-207f1d6367d0
                         sphere:
@@ -196,7 +192,6 @@ SceneSettings:
                 Camera:
                     Entity: {Id: b7690cff-f2ad-4f33-ae7e-26573f84dd7f}
                     Id: f78e32b9-12e9-4587-9032-34c0b683f570
-        ModelEffect: null
         Layers: []
         Master:
             ~Id: 99b9fcc5-5b04-495f-8f2b-9e978c7c9950
