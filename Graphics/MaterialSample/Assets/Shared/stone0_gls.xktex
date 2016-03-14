@@ -6,7 +6,6 @@ Source: ../../RawAssets/stone0_gls.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
-    ~Id: 8f013b3e-50e6-48e0-9835-d2c2955e6322
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

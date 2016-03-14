@@ -5,7 +5,6 @@ Tags: []
 Source: ../../RawAssets/Pisa.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: fa8c1881-2434-4d55-9a81-9af62d7a0100
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

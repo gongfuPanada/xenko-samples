@@ -24,7 +24,6 @@ Attributes:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
 ~Base:
-    ~Id: 23029954-5203-47c8-8998-31c2c3c28abe
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000

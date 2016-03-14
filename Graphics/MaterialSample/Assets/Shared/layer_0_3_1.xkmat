@@ -24,13 +24,12 @@ Attributes:
         UVScale: {X: 1.0, Y: 1.0}
 Layers:
     -   ~Id: 0484aaff-1cbd-465c-af4a-f798814b918f
-        Material: 7077ac99-7723-4886-bbba-98cc56ef43bb:Material
+        Material: deafcb7d-b944-4ab8-b8fe-70573aadcf6a/7077ac99-7723-4886-bbba-98cc56ef43bb:Material
         BlendMap: !ComputeFloat
             Value: 1.0
         Overrides:
             UVScale: {X: 1.0, Y: 1.0}
 ~Base:
-    ~Id: 3ebadb9e-9edd-43ee-b4c3-fc68401514b2
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000

@@ -9,10 +9,9 @@ Materials:
         Name: m_a_0
         MaterialInstance:
             ~Id: c6ab42e4-6573-4082-8c91-8875a1e5ab2c
-            Material: 25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
+            Material: bddf3264-f8e4-4d71-8f54-855648066547/25786aa8-e384-4d84-a4d6-b31907995cf4:m_c_0
 Skeleton: null
 ~Base:
-    ~Id: 8fbfc93a-8ecd-4a4d-898d-f927c2396633
     Location: --import--
     Asset: !Model
         Id: 00000000-0000-0000-0000-000000000000
@@ -25,5 +24,5 @@ Skeleton: null
                 Name: m_a_0
                 MaterialInstance:
                     ~Id: 2a5083fe-f135-422f-a39b-617e6737b772
-                    Material: df7da395-5832-43b5-b92b-870c1ef6e052:m_a_0_1
+                    Material: c31bb37d-3629-450c-b9dc-bb0b57549195/df7da395-5832-43b5-b92b-870c1ef6e052:m_a_0_1
         Skeleton: null

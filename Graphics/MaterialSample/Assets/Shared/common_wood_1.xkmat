@@ -5,25 +5,27 @@ Tags: []
 Attributes:
     Surface: !MaterialNormalMapFeature
         NormalMap: !ComputeTextureColor
-            Texture: 81c245fe-a1be-465b-9715-4020e477df9a:wood1_nml
+            Texture: 90ddecc3-5a68-445f-8e6a-1aca52a1cff1/81c245fe-a1be-465b-9715-4020e477df9a:wood1_nml
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.5, Y: 1.5}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeTextureScalar
-            Texture: c46170c7-177b-4394-9ea7-2693198e1f3e:wood1_gls
+            Texture: 596be086-47be-43f2-8c8a-3df4f80b7263/c46170c7-177b-4394-9ea7-2693198e1f3e:wood1_gls
             FallbackValue:
                 Value: 1.0
             Scale: {X: 1.5, Y: 1.5}
             Offset: {X: 0.0, Y: 0.0}
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: 666771ea-1f32-4ed3-be45-de8e32b567e0:wood1_dif
+            Texture: 3719b7ec-8589-42d3-8a7d-641247e2cb9e/666771ea-1f32-4ed3-be45-de8e32b567e0:wood1_dif
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.5, Y: 1.5}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
@@ -44,7 +46,7 @@ Attributes:
         DirectLightingFactor: !ComputeFloat
             Value: 0.0
         CavityMap: !ComputeTextureScalar
-            Texture: 2730aa97-e27f-4fd2-8b5a-1f12e5b5ae1c:wood1_cav
+            Texture: 4b6d09e4-17be-4fcf-9c5c-bc46f92c7fb1/2730aa97-e27f-4fd2-8b5a-1f12e5b5ae1c:wood1_cav
             FallbackValue:
                 Value: 1.0
             Scale: {X: 1.5, Y: 1.5}

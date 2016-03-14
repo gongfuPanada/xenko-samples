@@ -6,7 +6,6 @@ Source: ../../RawAssets/metal0_dif.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
-    ~Id: 1febb792-b38b-4661-a68f-e3706d79b721
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

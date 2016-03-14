@@ -6,7 +6,6 @@ Source: ../../RawAssets/metal0_gls.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
-    ~Id: d5e220e2-7b52-4f04-802f-70b73e748edf
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

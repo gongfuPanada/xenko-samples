@@ -7,7 +7,6 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Hint: NormalMap
 PremultiplyAlpha: false
 ~Base:
-    ~Id: e30cb738-c4f6-4c69-b7aa-eaa1985b1a1d
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

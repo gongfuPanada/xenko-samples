@@ -6,7 +6,6 @@ Source: ../../RawAssets/wood1_dif.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:
-    ~Id: 79480138-d991-43af-9805-a06da864b6c4
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
