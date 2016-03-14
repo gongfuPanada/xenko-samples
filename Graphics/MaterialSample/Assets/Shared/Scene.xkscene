@@ -285,6 +285,7 @@ Hierarchy:
                                 Filter: !LightShadowMapFilterTypePcf
                                     ~Id: d45b8868-e4d1-4cb8-9257-c57812708933
                                 Size: Large
+                                CascadeCount: TwoCascades
                                 DepthRange:
                                     ~Id: d037e04b-bc66-4166-a81b-4c487e231c6f
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic
@@ -1137,6 +1138,7 @@ Hierarchy:
                                 Filter: !LightShadowMapFilterTypePcf
                                     ~Id: 2ece0726-42ff-4137-b921-02749d84ff2c
                                 Size: Large
+                                CascadeCount: TwoCascades
                                 DepthRange:
                                     ~Id: fb0b6dfc-f76d-4429-8ad2-3a64fb805ed6
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic

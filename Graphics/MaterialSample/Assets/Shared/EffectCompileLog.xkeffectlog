@@ -113,7 +113,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
@@ -298,7 +298,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
@@ -465,7 +465,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
@@ -565,7 +565,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
@@ -774,7 +774,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
@@ -955,7 +955,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
@@ -1082,7 +1082,7 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
                     GenericArguments: [3]
     Lighting.EnvironmentLights:
