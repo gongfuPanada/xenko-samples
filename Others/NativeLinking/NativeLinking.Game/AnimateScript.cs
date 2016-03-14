@@ -1,4 +1,4 @@
-﻿using NativeLinking.LibraryWrapper;
+using NativeLinking.LibraryWrapper;
 using SiliconStudio.Xenko.Engine;
 
 namespace NativeLinking
