@@ -11,4 +11,4 @@ Type: !PlaneProceduralModel
     UvScale: {X: 1.0, Y: 1.0}
     MaterialInstance:
         ~Id: 7701735a-5fcb-43fb-928d-56f73679cce5
-        Material: 3e676b2c-cc70-4bd8-849e-a8e30b9b2274:Ground Material
+        Material: 0467e097-99f9-48c2-8a25-48be10d3a4d6/3e676b2c-cc70-4bd8-849e-a8e30b9b2274:Ground Material
