@@ -88,8 +88,8 @@ Hierarchy:
                                 Enabled: true
                                 Filter: !LightShadowMapFilterTypePcf
                                     ~Id: 26db02c2-1a5d-4617-8c06-ad3887276e3a
-                                    FilterSize: Filter5x5
-                                Size: XLarge
+                                Size: Large
+                                CascadeCount: TwoCascades
                                 DepthRange:
                                     ~Id: cf1da1ad-4256-452b-8a2d-6b6b42816bbc
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic

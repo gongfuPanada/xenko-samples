@@ -64,9 +64,9 @@ UsedParameters:
                 -   ClassName: LightDirectionalGroup
                     GenericArguments: [8]
                 -   ClassName: ShadowMapReceiverDirectional
-                    GenericArguments: [4, 8, false, true, false]
+                    GenericArguments: [2, 8, false, true, false]
                 -   ClassName: ShadowMapFilterPcf
-                    GenericArguments: [5]
+                    GenericArguments: [3]
     Lighting.EnvironmentLights:
         - !ShaderMixinGeneratorSource
             Name: LightSkyboxEffect
