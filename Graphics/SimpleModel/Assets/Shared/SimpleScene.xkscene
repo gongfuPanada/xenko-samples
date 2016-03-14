@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 286c3e80-cf3f-4804-ad57-2c617f116e4c
-SerializedVersion: {Xenko: 1.6.0-beta02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: ca6ef440-d3da-4def-ac76-e6d14dfc2aad
@@ -51,7 +51,7 @@ Hierarchy:
                         Children: []
                     - !BackgroundComponent
                         ~Id: bc008c19-1695-4f23-8584-697b0b485685
-                        Texture: 2a0704d6-54c8-4dad-ab62-155e420415a5/2b13c12a-4d48-4058-8a9d-349d3c40a693:XenkoBackground
+                        Texture: 632fe55a-9d55-4658-90b0-db1af6529637/2b13c12a-4d48-4058-8a9d-349d3c40a693:XenkoBackground
             Design: {}
         -   Entity:
                 Id: a0cf3d39-63ba-4770-b9cb-4ce74d002f34
@@ -99,7 +99,7 @@ Hierarchy:
                         ~Id: 9eeb736a-58ec-4af9-a61e-bf434a8b5ba2
                     - !ModelComponent
                         ~Id: d63d07dc-3d08-4667-b1b3-ad586e4d0872
-                        Model: fc52713c-e0e1-449a-8325-0dcee57d519b/19ec836d-2ea3-43fe-8f79-0f55cfc437be:character_00 Model
+                        Model: 22177e53-65aa-4c17-ba0e-5c510baa7dcf/19ec836d-2ea3-43fe-8f79-0f55cfc437be:character_00 Model
                         Materials:
                             - null
                             - null
@@ -115,7 +115,6 @@ SceneSettings:
                 Camera:
                     Entity: {Id: d968ed53-6c9e-449c-8488-d17f5f8b6f3e}
                     Id: 55ed4d92-f3c8-478a-8a8a-8f51193c9070
-        ModelEffect: null
         Layers: []
         Master:
             ~Id: 51a8d653-33ea-4549-a9bf-74ef4c5b57de

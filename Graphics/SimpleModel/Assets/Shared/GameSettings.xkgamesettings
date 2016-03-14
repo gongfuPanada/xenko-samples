@@ -2,7 +2,7 @@
 Id: 6cc36787-9847-4863-8d7f-22e3c4fc9a01
 SerializedVersion: {Xenko: 1.6.0-beta}
 Tags: []
-DefaultScene: 286c3e80-cf3f-4804-ad57-2c617f116e4c:SimpleScene
+DefaultScene: d33a50c3-ce84-4d50-8dfd-355140981b16/286c3e80-cf3f-4804-ad57-2c617f116e4c:SimpleScene
 Defaults:
     - !SiliconStudio.Xenko.Graphics.RenderingSettings,SiliconStudio.Xenko.Graphics
         ~Id: ed8acbad-d0b0-40e5-beb3-aabe349a08f2

@@ -5,11 +5,12 @@ Tags: []
 Attributes:
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: 89c643cc-d56e-4116-8f84-e72114d4b4e3:mc_01
+            Texture: 9f24bb2e-004c-4fbe-8753-75f48c6957b6/89c643cc-d56e-4116-8f84-e72114d4b4e3:mc_01
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Transparency: !MaterialTransparencyAdditiveFeature
         Alpha: !ComputeFloat
@@ -20,7 +21,6 @@ Attributes:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
 ~Base:
-    ~Id: fd78379e-15c7-4687-9cb6-0742cf7ab268
     Location: --import--
     Asset: !MaterialAsset
         Id: 00000000-0000-0000-0000-000000000000
@@ -29,11 +29,12 @@ Layers: []
         Attributes:
             Diffuse: !MaterialDiffuseMapFeature
                 DiffuseMap: !ComputeTextureColor
-                    Texture: 89c643cc-d56e-4116-8f84-e72114d4b4e3:mc_01
+                    Texture: f3c84bb6-3d35-4302-bb9a-301103ee2755/89c643cc-d56e-4116-8f84-e72114d4b4e3:mc_01
                     FallbackValue:
                         Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     Scale: {X: 1.0, Y: 1.0}
                     Offset: {X: 0.0, Y: 0.0}
+                    Swizzle: null
             DiffuseModel: !MaterialDiffuseLambertModelFeature {}
             Specular: !MaterialSpecularMapFeature
                 SpecularMap: !ComputeColor
