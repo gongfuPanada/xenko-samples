@@ -195,11 +195,6 @@ UsedParameters:
     ColorTransformGroup.Transforms:
         - !ToneMap
             Operator: !ToneMapHejl2Operator {}
-        - !FilmGrain
-            Enabled: false
-        - !Vignetting
-            Enabled: false
-            Color: {R: 0.0, G: 0.0, B: 0.0}
         - !LuminanceToChannelTransform {}
 ---
 !EffectCompileRequest
