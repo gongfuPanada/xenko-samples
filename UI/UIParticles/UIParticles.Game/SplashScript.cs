@@ -192,7 +192,7 @@ namespace UIParticles
                 {
                     var clonedEntity = EntityCloner.Clone(prefabEntity);
 
-                    clonedEntity.Get<ParticleSystemComponent>()?.ParticleSystem.RestartSimulation();
+                    clonedEntity.Get<ParticleSystemComponent>()?.ParticleSystem.ResetSimulation();
 
                     clonedEntity.Transform.Position = ToOrthographicCamera(uiPosition);
 
