@@ -1,6 +1,6 @@
 !SceneAsset
 Id: d23da80d-8ef3-4400-9f16-190a9c6bd3b3
-SerializedVersion: {Xenko: 1.6.0-beta02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: 75c8a95e-8fbd-43ce-b53f-81e2c64d261e
@@ -101,7 +101,6 @@ Hierarchy:
                         Children: []
                     - !StaticColliderComponent
                         ~Id: 4a1368df-990a-4d63-ab49-3a444fd68fab
-                        CollisionGroup: DefaultFilter
                         CanCollideWith: CustomFilter1
                         CanSleep: true
                         Restitution: 0.0
@@ -260,7 +259,6 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 0b04edaf-f330-4ae1-9d93-517d967fbe95}
                     Id: 9be240a7-a303-4cc1-9aa1-0eb9365669ec
-        ModelEffect: null
         Layers: []
         Master:
             ~Id: ab3c2b60-408a-423c-be52-b3fc6d9f2ef3

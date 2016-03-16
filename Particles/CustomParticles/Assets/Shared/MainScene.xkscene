@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 4b722b46-48b5-4585-9f5e-f9a590faf4eb
-SerializedVersion: {Xenko: 1.6.0-beta02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: 98dbbab5-03a8-4f89-9541-7265202f5faa
@@ -417,7 +417,6 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 0aa895fb-6425-436b-b4ae-964210c3ada6}
                     Id: d8d38afa-0110-4116-a878-70e266cd78ea
-        ModelEffect: null
         Layers: []
         Master:
             ~Id: 7e5318e4-9a74-4cfd-be29-2197572eee0f

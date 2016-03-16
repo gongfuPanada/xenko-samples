@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: {Xenko: 1.6.0-beta02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: 9d40c09d-0830-4cf6-bcaa-47b200a2c4f4
@@ -28,8 +28,6 @@ Hierarchy:
                         ~Id: 3dc48e9f-e3b3-4e2f-8e04-2cbf497bc08b
                     - !StaticColliderComponent
                         ~Id: 068b81a4-d447-4f72-9a77-8100b90b4f4d
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -79,8 +77,6 @@ Hierarchy:
                         ~Id: f9212e97-1743-43a1-a61b-97da13bf2aba
                     - !StaticColliderComponent
                         ~Id: f7a047a8-1d7d-4718-b45e-eb3b3af5dbcd
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -107,8 +103,6 @@ Hierarchy:
                         ~Id: 5e3ff17e-fb05-4d78-92d8-3374451f2f57
                     - !StaticColliderComponent
                         ~Id: ea62aec8-5612-4eff-9f3c-a145a05020b7
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -135,8 +129,6 @@ Hierarchy:
                         ~Id: 2014eb85-3594-4e1d-ab51-3e37201366d4
                     - !StaticColliderComponent
                         ~Id: eadf208b-395c-4534-9755-97bfeb360dcc
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -167,8 +159,6 @@ Hierarchy:
                         ~Id: 435a1ec7-46ef-4f8d-901e-63103ba65478
                     - !RigidbodyComponent
                         ~Id: b827ef05-7932-4438-9c8c-fb096a372535
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -226,8 +216,6 @@ Hierarchy:
                         ~Id: 5ebf5192-3802-424c-8527-6f2affb87e2d
                     - !RigidbodyComponent
                         ~Id: d7d0fa54-8ed7-4c80-9937-62272cf9b11e
-                        CollisionGroup: 0
-                        CanCollideWith: 0
                         CanSleep: true
                         Restitution: 0.0
                         Friction: 0.5
@@ -263,7 +251,6 @@ SceneSettings:
                 Camera:
                     Entity: {Id: 339ed07f-b58b-4d72-9d97-b7679f710573}
                     Id: 6b94cf5f-c890-4d8d-a2be-c91b136bb3ed
-        ModelEffect: null
         Layers: []
         Master:
             ~Id: 375b5234-4c0d-4069-8f14-29bce4371d7e
