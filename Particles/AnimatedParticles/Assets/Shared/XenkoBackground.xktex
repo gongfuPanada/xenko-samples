@@ -2,7 +2,7 @@
 Id: 584eaed2-88b4-49c8-90f1-9f9f15619cec
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
-Source: ../../RawAssets/XenkoBackground.jpg
+Source: ../../Resources/XenkoBackground.jpg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Format: AsIs
 ~Base:

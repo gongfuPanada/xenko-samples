@@ -1,7 +1,7 @@
 !SpriteStudioSheetAsset
 Id: 7595b1d1-3f94-4cc5-bbfc-ec51687b96d6
 Tags: []
-Source: ../../RawAssets/character_template_2head.ssae
+Source: ../../Resources/character_template_2head.ssae
 SourceHash: 7bbed142c2c2aca394cccf062b9891b2
 NodeNames:
     - root

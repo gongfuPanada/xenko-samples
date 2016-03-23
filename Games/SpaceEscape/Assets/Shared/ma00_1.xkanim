@@ -2,7 +2,7 @@
 Id: ebbd2b1f-cbb4-4016-bcc8-2a7cc09c48c9
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
-Source: ../../RawAssets/model/character/scene/ma00_1.FBX
+Source: ../../Resources/model/character/scene/ma00_1.FBX
 RepeatMode: LoopInfinite
 Skeleton: bfe057df-2fd1-402a-97bc-bd16edee241a:character_00 Skeleton
 RootMotion: false

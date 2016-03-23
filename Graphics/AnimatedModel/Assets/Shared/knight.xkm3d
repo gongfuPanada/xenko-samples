@@ -2,7 +2,7 @@
 Id: 7f052b2a-84c2-4f8a-932c-c073b2de47de
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
-Source: ../../RawAssets/knight/knight.fbx
+Source: ../../Resources/knight/knight.fbx
 SourceHash: af4ac6da9a62b02bd84f4a8147dd38a7
 Materials:
     -   ~Id: 594a66a2-33fb-464c-bd27-bee2ad28dc69

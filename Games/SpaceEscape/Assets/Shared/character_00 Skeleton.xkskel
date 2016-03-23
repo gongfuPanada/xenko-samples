@@ -1,7 +1,7 @@
 !Skeleton
 Id: bfe057df-2fd1-402a-97bc-bd16edee241a
 Tags: []
-Source: ../../RawAssets/model/character/scene/character_00.FBX
+Source: ../../Resources/model/character/scene/character_00.FBX
 SourceHash: 1a0b83c9b02b333469043d7a7a964b16
 ScaleImport: 0.0
 Nodes:

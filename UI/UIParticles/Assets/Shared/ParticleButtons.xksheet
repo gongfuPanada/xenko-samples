@@ -10,14 +10,14 @@ Packing:
     AllowRotations: false
 Sprites:
     -   ~Id: 9b447984-90be-4a2e-b266-b9b8cbae431b
-        Source: ../../RawAssets/buttons.png
+        Source: ../../Resources/buttons.png
         Name: rope_big
         TextureRegion: {X: 7, Y: 425, Width: 480, Height: 16}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}
     -   ~Id: 9b447984-90be-4a2e-b266-b9b8cbae431b
-        Source: ../../RawAssets/buttons.png
+        Source: ../../Resources/buttons.png
         Name: rope_small
         TextureRegion: {X: 7, Y: 456, Width: 477, Height: 10}
         Center: {X: 0.0, Y: 0.0}

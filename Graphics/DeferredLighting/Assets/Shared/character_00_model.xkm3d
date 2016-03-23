@@ -3,7 +3,7 @@ Id: 89913ac7-40c6-40d5-93ee-1fa6981a9d80
 SerializedVersion: 1
 BuildOrder: 500
 Tags: []
-Source: ../../RawAssets/character/scene/character_00.FBX
+Source: ../../Resources/character/scene/character_00.FBX
 ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
 SourceHash: 1a0b83c9b02b333469043d7a7a964b16
 Nodes:

@@ -2,7 +2,7 @@
 Id: 71eebbdf-2481-433e-99e4-437ffaf19340
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
-Source: ../../RawAssets/plane0_mtl.jpeg
+Source: ../../Resources/plane0_mtl.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
     Location: --import--

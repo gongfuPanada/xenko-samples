@@ -2,7 +2,7 @@
 Id: 31d063d3-7159-4004-920c-04f038b43a7b
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
-Source: ../../RawAssets/XenkoLogoGray.png
+Source: ../../Resources/XenkoLogoGray.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
     ~Id: 664447b9-d670-422e-aa1a-4e25a8d2eadb

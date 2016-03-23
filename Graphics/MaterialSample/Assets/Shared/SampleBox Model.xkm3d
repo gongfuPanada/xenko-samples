@@ -2,7 +2,7 @@
 Id: a7e0bdca-e552-44ce-a072-880ed908bfee
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
-Source: ../../RawAssets/SampleBox.FBX
+Source: ../../Resources/SampleBox.FBX
 SourceHash: b5f389bd04fd3ea2cf5333d4c74d12d3
 Materials:
     -   ~Id: 5f57f6dc-372b-4ae4-8b06-5375a2187c83

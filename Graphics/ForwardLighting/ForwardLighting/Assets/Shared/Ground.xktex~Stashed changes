@@ -1,7 +1,7 @@
 !Texture
 Id: 4adc4854-98e0-4c71-9888-43bc74a0fd6f
 Tags: []
-Source: ../../RawAssets/Ground.jpg
+Source: ../../Resources/Ground.jpg
 ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:

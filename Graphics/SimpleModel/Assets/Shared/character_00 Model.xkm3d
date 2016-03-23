@@ -3,7 +3,7 @@ Id: 19ec836d-2ea3-43fe-8f79-0f55cfc437be
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 BuildOrder: 500
 Tags: []
-Source: ../../RawAssets/character/scene/character_00.FBX
+Source: ../../Resources/character/scene/character_00.FBX
 SourceHash: 1a0b83c9b02b333469043d7a7a964b16
 Materials:
     -   ~Id: e1ed7286-a418-428e-b113-c7f1012d89d5

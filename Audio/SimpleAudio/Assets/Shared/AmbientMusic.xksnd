@@ -1,7 +1,7 @@
 !SoundMusic
 Id: 8005b476-6375-4984-ae01-4ed70428924e
 Tags: []
-Source: ../../RawAssets/FishLampByUlrick-EvensSalies.mp3
+Source: ../../Resources/FishLampByUlrick-EvensSalies.mp3
 ~Base:
     ~Id: f2c6bf0d-78e5-436f-8f30-8c706eeba9f7
     Location: --import--

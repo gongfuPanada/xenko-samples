@@ -1,7 +1,7 @@
 !Skeleton
 Id: 218816f5-b393-4b12-adaf-e0e12817d892
 Tags: []
-Source: ../../RawAssets/knight/knight.fbx
+Source: ../../Resources/knight/knight.fbx
 SourceHash: af4ac6da9a62b02bd84f4a8147dd38a7
 ScaleImport: 0.0
 Nodes:

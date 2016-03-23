@@ -2,7 +2,7 @@
 Id: e19ec8c3-699e-4a5f-ad09-9f5e750b9b0d
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
-Source: ../../RawAssets/model/BG/scene/obj00.FBX
+Source: ../../Resources/model/BG/scene/obj00.FBX
 SourceHash: b67d92d3f1774d22af885fd1623c97c0
 Materials:
     -   ~Id: fd046eea-e385-470a-b2f9-9b761bb0b823

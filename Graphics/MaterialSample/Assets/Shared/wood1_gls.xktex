@@ -2,7 +2,7 @@
 Id: c46170c7-177b-4394-9ea7-2693198e1f3e
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
-Source: ../../RawAssets/wood1_gls.jpeg
+Source: ../../Resources/wood1_gls.jpeg
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false
 ~Base:

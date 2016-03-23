@@ -2,7 +2,7 @@
 Id: 6784fa36-34e7-4990-baf6-7a854e5caaa9
 SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
-Source: ../../RawAssets/model/character/scene/ma03.FBX
+Source: ../../Resources/model/character/scene/ma03.FBX
 RepeatMode: PlayOnce
 Skeleton: bfe057df-2fd1-402a-97bc-bd16edee241a:character_00 Skeleton
 RootMotion: false

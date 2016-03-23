@@ -1,7 +1,7 @@
 !SoundEffect
 Id: 5c8a7de1-f572-41c6-a564-f300f42d7245
 Tags: []
-Source: ../../RawAssets/wave.wav
+Source: ../../Resources/wave.wav
 ~Base:
     ~Id: ac02de79-0fe7-4f9c-ad4a-8f46a1d28a9c
     Location: --import--

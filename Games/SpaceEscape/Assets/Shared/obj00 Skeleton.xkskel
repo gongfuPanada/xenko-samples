@@ -1,7 +1,7 @@
 !Skeleton
 Id: 9f53d2c9-5a21-4440-aa65-f849e0385304
 Tags: []
-Source: ../../RawAssets/model/BG/scene/obj00.FBX
+Source: ../../Resources/model/BG/scene/obj00.FBX
 SourceHash: b67d92d3f1774d22af885fd1623c97c0
 Nodes:
     - {~Id: defa0a51-df2e-4c71-b1f5-5213d4ab9afe, Name: RootNode, Depth: 0}

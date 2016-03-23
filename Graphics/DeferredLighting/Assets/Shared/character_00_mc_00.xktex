@@ -1,7 +1,7 @@
 !Texture
 Id: 01d7fbf9-8a45-4713-90d0-2f6998a13551
 Tags: []
-Source: ../../RawAssets/character/Sourceimages/mc_00.jpg
+Source: ../../Resources/character/Sourceimages/mc_00.jpg
 ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 PremultiplyAlpha: false

@@ -2,7 +2,7 @@
 Id: 55fb2fb6-7870-493e-a157-5d295c26d5b4
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
-Source: ../../RawAssets/Pisa.dds
+Source: ../../Resources/Pisa.dds
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
     Location: --import--
