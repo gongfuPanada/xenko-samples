@@ -1,0 +1,41 @@
+!PrefabAsset
+Id: aa22481f-1979-4f36-83bd-180f45449a69
+Tags: []
+Hierarchy:
+    ~Id: 78e61d98-7dba-4162-bd7f-45f74215f0a3
+    RootEntities:
+        - af610df6-587b-48a0-9371-a4e7f44c9d14
+        - fa55fd9b-b627-42ce-acd8-7c493a432827
+    Entities:
+        -   Entity:
+                Id: af610df6-587b-48a0-9371-a4e7f44c9d14
+                Name: ProceduralModel
+                Components:
+                    - !TransformComponent
+                        ~Id: 21ffa16c-b85b-410f-8b69-13e72c558b07
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ModelComponent
+                        ~Id: c7dd4c56-ab3e-4473-b13e-94131d48ad5c
+                        Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
+                        Materials:
+                            - null
+            Design: {}
+        -   Entity:
+                Id: fa55fd9b-b627-42ce-acd8-7c493a432827
+                Name: ProceduralModel (3)
+                Components:
+                    - !TransformComponent
+                        ~Id: 349bfe8b-99d5-463d-a181-7bd51ca6a483
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !ModelComponent
+                        ~Id: 385c8fc2-e39c-4a47-b55f-94d88a506ef6
+                        Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
+                        Materials:
+                            - null
+            Design: {}

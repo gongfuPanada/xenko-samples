@@ -1,0 +1,21 @@
+!Animation
+Id: b199a554-a157-4cc3-a03b-09301cbe42b2
+SerializedVersion: {Xenko: 1.5.0-alpha02}
+Tags: []
+Source: ../../../Resources/knight/he20_atk_rightleft.fbx
+RepeatMode: LoopInfinite
+Skeleton: f122a88e-a535-464a-abb5-63cd71ed55db/84cbd6b6-9d7e-4c63-9d7f-5570b7e14f00:knight Skeleton
+RootMotion: false
+PreviewModel: d9d4c611-c816-4089-976e-8ea836d3ce11/523eb034-e48c-4a09-aa0e-69a75404fe85:knight
+~Base:
+    Location: --import--
+    Asset: !Animation
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
+        Tags: []
+        Source: 
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        RepeatMode: LoopInfinite
+        Skeleton: 89aad8f1-cd6e-4eb9-a4f4-dc3e9581cd89/5fa1df98-9ed6-4632-bb77-02dda6a61ff5:he20_atk_rightleft Skeleton
+        RootMotion: false
+        PreviewModel: null

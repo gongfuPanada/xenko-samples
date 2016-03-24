@@ -1,0 +1,21 @@
+!Animation
+Id: 3be15a76-7b59-4f43-9871-adfae55724e0
+SerializedVersion: {Xenko: 1.5.0-alpha02}
+Tags: []
+Source: ../../../Resources/knight/he16_step_left.fbx
+RepeatMode: LoopInfinite
+Skeleton: f122a88e-a535-464a-abb5-63cd71ed55db/84cbd6b6-9d7e-4c63-9d7f-5570b7e14f00:knight Skeleton
+RootMotion: false
+PreviewModel: d9d4c611-c816-4089-976e-8ea836d3ce11/523eb034-e48c-4a09-aa0e-69a75404fe85:knight
+~Base:
+    Location: --import--
+    Asset: !Animation
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
+        Tags: []
+        Source: 
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        RepeatMode: LoopInfinite
+        Skeleton: 1767cf40-51b4-46a1-8cc1-7926d940f3ce/62439b63-82ce-4139-8335-872b01b0c729:he16_step_left Skeleton
+        RootMotion: false
+        PreviewModel: null

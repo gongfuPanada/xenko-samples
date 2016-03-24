@@ -1,0 +1,21 @@
+!Animation
+Id: ccf832ff-4c9f-48a8-a786-ee93e501c970
+SerializedVersion: {Xenko: 1.5.0-alpha02}
+Tags: []
+Source: ../../../Resources/knight/he11_end_fight.fbx
+RepeatMode: LoopInfinite
+Skeleton: f122a88e-a535-464a-abb5-63cd71ed55db/84cbd6b6-9d7e-4c63-9d7f-5570b7e14f00:knight Skeleton
+RootMotion: false
+PreviewModel: d9d4c611-c816-4089-976e-8ea836d3ce11/523eb034-e48c-4a09-aa0e-69a75404fe85:knight
+~Base:
+    Location: --import--
+    Asset: !Animation
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: {Xenko: 1.5.0-alpha02}
+        Tags: []
+        Source: 
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        RepeatMode: LoopInfinite
+        Skeleton: e8da26d4-5007-4cfd-a980-88c04c5dafa6/f8311d3f-554d-465e-bd71-0e702ad5c58a:he11_end_fight Skeleton
+        RootMotion: false
+        PreviewModel: null
