@@ -25,7 +25,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 0.0, G: 0.925490141, B: 1.0, A: 1.0}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -42,9 +42,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -194,7 +194,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 0.0, B: 0.0, A: 0.3137255}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -211,9 +211,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -363,7 +363,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 0.9372549, B: 0.0, A: 0.768627465}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -380,9 +380,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270

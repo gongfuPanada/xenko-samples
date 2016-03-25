@@ -41,9 +41,9 @@ Hierarchy:
                                         SmoothingPolicy: Best
                                         Segments: 15
                                         EdgePolicy: Center
-                                        TexCoordsPolicy: Stretched
+                                        TextureCoordinatePolicy: Stretched
                                         TexCoordsFactor: 1.0
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
