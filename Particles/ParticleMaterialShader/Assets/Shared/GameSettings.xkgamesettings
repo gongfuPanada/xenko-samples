@@ -1,8 +1,8 @@
 !GameSettingsAsset
 Id: a08061e8-d840-4020-a6f8-7ff07804ab47
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.1-alpha01}
 Tags: []
-DefaultScene: d18360d9-08c6-41e6-a8f0-dcc78e9a723d:MainScene
+DefaultScene: d1ada9a9-942c-46bd-a110-c3348446a377/d18360d9-08c6-41e6-a8f0-dcc78e9a723d:MainScene
 Defaults:
     - !SiliconStudio.Xenko.Graphics.RenderingSettings,SiliconStudio.Xenko.Graphics
         ~Id: 1dcea8c3-5687-4345-b64f-f784d55b6838

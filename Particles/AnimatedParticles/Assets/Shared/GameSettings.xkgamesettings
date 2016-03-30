@@ -1,6 +1,6 @@
 !GameSettingsAsset
 Id: 64e8c593-05be-4a1b-8e0a-b04015aa6f68
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.1-alpha01}
 Tags: []
 DefaultScene: 716383ac-7979-4b4d-953a-50157bd34bb1/2195e36c-46ec-496b-8072-098c114f4a7f:MainScene
 Defaults:
@@ -15,6 +15,14 @@ Defaults:
         ColorSpace: Linear
         DisplayOrientation: LandscapeRight
         PreferredGraphicsPlatform: Default
+    - !SiliconStudio.Xenko.Physics.PhysicsSettings,SiliconStudio.Xenko.Physics
+        ~Id: 9367ca16-64c4-4051-acfb-8add8bf03b61
+        Flags: None
+        MaxSubSteps: 1
+        FixedTimeStep: 0.0166666675
+    - !SiliconStudio.Xenko.Assets.Textures.TextureSettings,SiliconStudio.Xenko.Assets
+        ~Id: adce205a-59f9-4391-920d-e4bb776d4715
+        TextureQuality: Fast
 Overrides: []
 PlatformFilters:
     - PowerVR SGX 54[0-9]

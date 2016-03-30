@@ -52,7 +52,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 338dbe82-cdcd-4c14-aef9-d961d27d23ec
         -   Entity:
                 Id: 03dd5648-2a32-4ff3-9267-1b1bcf8406b5
                 Name: PrefabRibbon
@@ -87,7 +87,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 0.0, B: 0.0, A: 0.3137255}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -104,9 +104,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -291,7 +291,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 8916af48-c7ce-452d-a0ab-4ef078869929
         -   Entity:
                 Id: 196b3578-6c33-421d-923b-f1fb41f50145
                 Name: ProceduralModel
@@ -309,7 +309,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 02ee2e79-afb7-4ac4-85ec-39b20b76fb1f
         -   Entity:
                 Id: 19b87b8e-9b1a-46e5-9534-fda3f95d23d8
                 Name: Mr Seven
@@ -376,7 +376,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 0.9372549, B: 0.0, A: 0.768627465}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -393,9 +393,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -648,7 +648,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 21f46b8d-f0f6-494a-8787-a6cbdee770ea
         -   Entity:
                 Id: 56a4f13c-ad90-4bb1-bf0c-cf6a0ab85085
                 Name: PrefabPedestal
@@ -835,7 +835,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 33fdebc0-f263-468e-a15c-bf263cbc155c
         -   Entity:
                 Id: 75508145-9633-47b2-932b-4e7087505a68
                 Name: ProceduralModel (3)
@@ -853,7 +853,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 1168dffb-2137-4169-aa80-dc97b4710333
         -   Entity:
                 Id: 796468cf-3194-482d-b1a8-8bb105d9bfc7
                 Name: PrefabPedestal
@@ -903,7 +903,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 0.0, G: 0.925490141, B: 1.0, A: 1.0}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -920,9 +920,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -1074,7 +1074,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: c69c4efd-daad-4df0-8d44-bf90084e4650
         -   Entity:
                 Id: 9b590d0c-a428-42ca-a839-cce3e6b98479
                 Name: SwooshRed
@@ -1092,7 +1092,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 0.0, B: 0.0, A: 0.3137255}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -1109,9 +1109,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -1245,7 +1245,7 @@ Hierarchy:
                                             DisplayParticleScaleUniform: false
             Design:
                 BaseId: 73b67cca-fec1-4630-87d1-113a8ec9036b
-                BasePartInstanceId: 0ca212f6-de67-4195-a9b5-665269ad1785
+                BasePartInstanceId: 2f324a7a-a2f1-4ebd-92ea-7ef9d18e097a
         -   Entity:
                 Id: af7180fc-0e8e-4f31-961c-320dec6f9aa0
                 Name: SwooshYellow
@@ -1263,7 +1263,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 1.0, G: 0.9372549, B: 0.0, A: 0.768627465}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -1280,9 +1280,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -1416,7 +1416,7 @@ Hierarchy:
                                             DisplayParticleScaleUniform: false
             Design:
                 BaseId: 7ec2ead0-9009-428f-9f87-c0cb3464e0ab
-                BasePartInstanceId: 0ca212f6-de67-4195-a9b5-665269ad1785
+                BasePartInstanceId: 66c4cf88-8368-493a-a7a0-f674b6693881
         -   Entity:
                 Id: b5279763-d0ee-4fc2-bf4c-710ff412bd93
                 Name: Camera
@@ -1578,7 +1578,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 94c885d7-675f-4651-90e8-7ac91eb1aa3e
         -   Entity:
                 Id: dee3f678-cff4-45f0-ba78-0c68aab480d1
                 Name: PrefabPedestal
@@ -1611,7 +1611,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 3e3f5298-57c9-421e-afe5-fa4a6f81ae5c
         -   Entity:
                 Id: e5bf4202-a2c0-4fca-a9be-72e94817c531
                 Name: SwooshBlue
@@ -1629,7 +1629,7 @@ Hierarchy:
                             ResetSeconds: 5.0
                             Control: Play
                         Color: {R: 0.0, G: 0.925490141, B: 1.0, A: 1.0}
-                        Speed: 1.0
+                        Speed: 0.3
                         ParticleSystem:
                             ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                             Settings:
@@ -1646,9 +1646,9 @@ Hierarchy:
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                         SmoothingPolicy: Best
                                         Segments: 8
-                                        TexCoordsPolicy: DistanceBased
+                                        TextureCoordinatePolicy: DistanceBased
                                         TexCoordsFactor: 0.2
-                                        UvRotate:
+                                        UVRotate:
                                             FlipX: false
                                             FlipY: false
                                             UvClockwise: Degree270
@@ -1782,7 +1782,7 @@ Hierarchy:
                                             DisplayParticleScaleUniform: false
             Design:
                 BaseId: 70784fb7-8085-44bc-9615-8ab8b33df3a1
-                BasePartInstanceId: 0ca212f6-de67-4195-a9b5-665269ad1785
+                BasePartInstanceId: c77eec2f-790c-4fff-8ced-0f1c48579d41
         -   Entity:
                 Id: e5c3b2c9-6475-4ff9-b111-e6a87b14a84b
                 Name: 7Ribbons
@@ -1846,7 +1846,7 @@ Hierarchy:
                             - 10cb2fd5-92a9-4f3e-93f5-6023a1ad05be/9c1aa720-fc74-44ec-86b4-0dda38ed9bf6:Prefabs/Material
             Design:
                 BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+                BasePartInstanceId: 1c9f176f-a07c-4288-bfe5-88249de2bad8
 SceneSettings:
     ~Id: ea4beb3a-6866-43b6-bcfc-8b8251d919b5
     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -1912,7 +1912,7 @@ SceneSettings:
                                         ResetSeconds: 5.0
                                         Control: Play
                                     Color: {R: 0.0, G: 0.925490141, B: 1.0, A: 1.0}
-                                    Speed: 1.0
+                                    Speed: 0.3
                                     ParticleSystem:
                                         ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                                         Settings:
@@ -1929,9 +1929,9 @@ SceneSettings:
                                                     ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                                     SmoothingPolicy: Best
                                                     Segments: 8
-                                                    TexCoordsPolicy: DistanceBased
+                                                    TextureCoordinatePolicy: DistanceBased
                                                     TexCoordsFactor: 0.2
-                                                    UvRotate:
+                                                    UVRotate:
                                                         FlipX: false
                                                         FlipY: false
                                                         UvClockwise: Degree270
@@ -2081,7 +2081,7 @@ SceneSettings:
                                         ResetSeconds: 5.0
                                         Control: Play
                                     Color: {R: 1.0, G: 0.0, B: 0.0, A: 0.3137255}
-                                    Speed: 1.0
+                                    Speed: 0.3
                                     ParticleSystem:
                                         ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                                         Settings:
@@ -2098,9 +2098,9 @@ SceneSettings:
                                                     ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                                     SmoothingPolicy: Best
                                                     Segments: 8
-                                                    TexCoordsPolicy: DistanceBased
+                                                    TextureCoordinatePolicy: DistanceBased
                                                     TexCoordsFactor: 0.2
-                                                    UvRotate:
+                                                    UVRotate:
                                                         FlipX: false
                                                         FlipY: false
                                                         UvClockwise: Degree270
@@ -2250,7 +2250,7 @@ SceneSettings:
                                         ResetSeconds: 5.0
                                         Control: Play
                                     Color: {R: 1.0, G: 0.9372549, B: 0.0, A: 0.768627465}
-                                    Speed: 1.0
+                                    Speed: 0.3
                                     ParticleSystem:
                                         ~Id: adc72d3c-c0e0-44f0-bf04-44848258cc9f
                                         Settings:
@@ -2267,9 +2267,9 @@ SceneSettings:
                                                     ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
                                                     SmoothingPolicy: Best
                                                     Segments: 8
-                                                    TexCoordsPolicy: DistanceBased
+                                                    TextureCoordinatePolicy: DistanceBased
                                                     TexCoordsFactor: 0.2
-                                                    UvRotate:
+                                                    UVRotate:
                                                         FlipX: false
                                                         FlipY: false
                                                         UvClockwise: Degree270

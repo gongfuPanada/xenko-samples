@@ -1,6 +1,6 @@
 !GameSettingsAsset
 Id: e6395b48-106b-4111-bc8b-8cf309b8edb6
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.1-alpha01}
 Tags: []
 DefaultScene: afd572dc-29df-43ab-ba47-cef426593b07/6736d805-6194-40bf-8056-7c52758e2e4b:Scene
 Defaults:
