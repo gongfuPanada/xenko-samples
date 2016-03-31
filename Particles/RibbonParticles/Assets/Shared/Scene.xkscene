@@ -32,9 +32,7 @@ Hierarchy:
                         Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
                         Materials:
                             - null
-            Design:
-                BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+            Design: {}
         -   Entity:
                 Id: 03c8d317-792f-4cea-a12a-f5d62a0222af
                 Name: ProceduralModel (3)
@@ -50,9 +48,7 @@ Hierarchy:
                         Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
                         Materials:
                             - null
-            Design:
-                BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: 338dbe82-cdcd-4c14-aef9-d961d27d23ec
+            Design: {}
         -   Entity:
                 Id: 03dd5648-2a32-4ff3-9267-1b1bcf8406b5
                 Name: PrefabRibbon
@@ -271,9 +267,7 @@ Hierarchy:
                         Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
                         Materials:
                             - null
-            Design:
-                BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: c0cfe4d1-fe17-447b-8ee7-ccb1881fbf4a
+            Design: {}
         -   Entity:
                 Id: 1304e7b3-798b-4602-afe4-374726417b27
                 Name: ProceduralModel
@@ -289,9 +283,7 @@ Hierarchy:
                         Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
                         Materials:
                             - null
-            Design:
-                BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: 8916af48-c7ce-452d-a0ab-4ef078869929
+            Design: {}
         -   Entity:
                 Id: 196b3578-6c33-421d-923b-f1fb41f50145
                 Name: ProceduralModel
@@ -307,9 +299,7 @@ Hierarchy:
                         Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
                         Materials:
                             - null
-            Design:
-                BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: 02ee2e79-afb7-4ac4-85ec-39b20b76fb1f
+            Design: {}
         -   Entity:
                 Id: 19b87b8e-9b1a-46e5-9534-fda3f95d23d8
                 Name: Mr Seven
@@ -646,9 +636,7 @@ Hierarchy:
                         Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
                         Materials:
                             - null
-            Design:
-                BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: 21f46b8d-f0f6-494a-8787-a6cbdee770ea
+            Design: {}
         -   Entity:
                 Id: 56a4f13c-ad90-4bb1-bf0c-cf6a0ab85085
                 Name: PrefabPedestal
@@ -833,9 +821,7 @@ Hierarchy:
                         Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
                         Materials:
                             - null
-            Design:
-                BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: 33fdebc0-f263-468e-a15c-bf263cbc155c
+            Design: {}
         -   Entity:
                 Id: 75508145-9633-47b2-932b-4e7087505a68
                 Name: ProceduralModel (3)
@@ -851,9 +837,7 @@ Hierarchy:
                         Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
                         Materials:
                             - null
-            Design:
-                BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: 1168dffb-2137-4169-aa80-dc97b4710333
+            Design: {}
         -   Entity:
                 Id: 796468cf-3194-482d-b1a8-8bb105d9bfc7
                 Name: PrefabPedestal
@@ -1072,9 +1056,7 @@ Hierarchy:
                         Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
                         Materials:
                             - null
-            Design:
-                BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: c69c4efd-daad-4df0-8d44-bf90084e4650
+            Design: {}
         -   Entity:
                 Id: 9b590d0c-a428-42ca-a839-cce3e6b98479
                 Name: SwooshRed
@@ -1576,9 +1558,7 @@ Hierarchy:
                         Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
                         Materials:
                             - null
-            Design:
-                BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: 94c885d7-675f-4651-90e8-7ac91eb1aa3e
+            Design: {}
         -   Entity:
                 Id: dee3f678-cff4-45f0-ba78-0c68aab480d1
                 Name: PrefabPedestal
@@ -1609,9 +1589,7 @@ Hierarchy:
                         Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
                         Materials:
                             - null
-            Design:
-                BaseId: fa55fd9b-b627-42ce-acd8-7c493a432827
-                BasePartInstanceId: 3e3f5298-57c9-421e-afe5-fa4a6f81ae5c
+            Design: {}
         -   Entity:
                 Id: e5bf4202-a2c0-4fca-a9be-72e94817c531
                 Name: SwooshBlue
@@ -1844,9 +1822,7 @@ Hierarchy:
                         Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
                         Materials:
                             - 10cb2fd5-92a9-4f3e-93f5-6023a1ad05be/9c1aa720-fc74-44ec-86b4-0dda38ed9bf6:Prefabs/Material
-            Design:
-                BaseId: af610df6-587b-48a0-9371-a4e7f44c9d14
-                BasePartInstanceId: 1c9f176f-a07c-4288-bfe5-88249de2bad8
+            Design: {}
 SceneSettings:
     ~Id: ea4beb3a-6866-43b6-bcfc-8b8251d919b5
     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -2401,46 +2377,4 @@ SceneSettings:
                                                         DisplayParticleRotation: false
                                                         DisplayParticleScale: false
                                                         DisplayParticleScaleUniform: false
-                        Design: {}
-    -   Location: Prefabs/PrefabPedestal
-        Asset: !PrefabAsset
-            Id: aa22481f-1979-4f36-83bd-180f45449a69
-            Tags: []
-            Hierarchy:
-                ~Id: 78e61d98-7dba-4162-bd7f-45f74215f0a3
-                RootEntities:
-                    - af610df6-587b-48a0-9371-a4e7f44c9d14
-                    - fa55fd9b-b627-42ce-acd8-7c493a432827
-                Entities:
-                    -   Entity:
-                            Id: af610df6-587b-48a0-9371-a4e7f44c9d14
-                            Name: ProceduralModel
-                            Components:
-                                - !TransformComponent
-                                    ~Id: 21ffa16c-b85b-410f-8b69-13e72c558b07
-                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                    Children: []
-                                - !ModelComponent
-                                    ~Id: c7dd4c56-ab3e-4473-b13e-94131d48ad5c
-                                    Model: 292dd20d-568e-46bf-8e50-1a26b0ff84ce/522783bc-8761-432d-9c35-fec9651dc4d8:Prefabs/ProceduralModel
-                                    Materials:
-                                        - null
-                        Design: {}
-                    -   Entity:
-                            Id: fa55fd9b-b627-42ce-acd8-7c493a432827
-                            Name: ProceduralModel (3)
-                            Components:
-                                - !TransformComponent
-                                    ~Id: 349bfe8b-99d5-463d-a181-7bd51ca6a483
-                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                                    Children: []
-                                - !ModelComponent
-                                    ~Id: 385c8fc2-e39c-4a47-b55f-94d88a506ef6
-                                    Model: 9594ba77-67e5-49b1-a3f5-6f5c40c7fdb9/b5c33e7e-0e72-4011-95cd-cbd0c8601774:Prefabs/Ring
-                                    Materials:
-                                        - null
                         Design: {}
