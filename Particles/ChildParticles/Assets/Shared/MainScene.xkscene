@@ -931,7 +931,7 @@ Hierarchy:
                                             LoopCondition: Looping
                                             Delay: {X: 0.0, Y: 0.0}
                                             Duration: {X: 1.0, Y: 1.0}
-                                            SpawnCount: 1.4
+                                            SpawnCount: 2.0
                                     Initializers:
                                         - !InitialSizeSeed
                                             ~Id: a347267c-07a7-4f57-82d6-5f0dd24b1346
@@ -1007,8 +1007,13 @@ Hierarchy:
                                                 Scale: {X: 1.0, Y: 1.0}
                                                 Offset: {X: 0.0, Y: 0.0}
                                                 Swizzle: null
-                                            RightChild: !ComputeFloat4
-                                                Value: {X: 0.1, Y: 0.1, Z: 0.1, W: 0.4}
+                                            RightChild: !ComputeBinaryColor
+                                                Operator: Multiply
+                                                LeftChild: !ComputeVertexStreamColor
+                                                    Stream: !ColorVertexStreamDefinition
+                                                        ~Id: 041a1d5f-ea58-4826-bc3e-7819c896533e
+                                                RightChild: !ComputeFloat4
+                                                    Value: {X: 0.5, Y: 0.5, Z: 0.5, W: 0.5}
                                         UVBuilder: !UVBuilderFlipbook
                                             ~Id: da17ae3f-4705-40c2-b456-6734c647adc4
                                             XDivisions: 8
@@ -1089,6 +1094,25 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: false
                                             AngularRotation: {X: 0.0, Y: 360.0}
+                                        - !InitialColorParent
+                                            ~Id: f999e7c4-4bc4-49b3-bafa-01cedafffe95
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticleScaleUniform: false
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            ParentName: Parent
+                                            ParentSeedOffset: 0
+                                            ParentControlFlag: None
+                                            SeedOffset: 0
+                                            ColorMin: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            ColorMax: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                     Updaters: []
                                     CanEmitParticles: true
                                 -   ~Id: b2896e0a-5d32-4b81-aa31-2d5fe6e4a9f3
