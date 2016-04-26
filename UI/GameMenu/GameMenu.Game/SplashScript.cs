@@ -1,6 +1,7 @@
 ﻿using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.Rendering.Sprites;
 using SiliconStudio.Xenko.UI;
 using SiliconStudio.Xenko.UI.Controls;
 using SiliconStudio.Xenko.UI.Panels;
@@ -20,7 +21,7 @@ namespace GameMenu
             // Create and initialize "Xenko Samples" Text
             var xenkoSampleTextBlock = new ContentDecorator
             {
-                BackgroundImage = SplashScreenImages["xenko_sample_text_bg"],
+                BackgroundImage = SpriteFromSheet.Create(SplashScreenImages, "xenko_sample_text_bg"),
                 Content = new TextBlock
                 {
                     Font = WesternFont,
@@ -37,7 +38,7 @@ namespace GameMenu
             // Create and initialize "UI" Text
             var uiTextBlock = new ContentDecorator
             {
-                BackgroundImage = SplashScreenImages["ui_text_bg"],
+                BackgroundImage = SpriteFromSheet.Create(SplashScreenImages, "ui_text_bg"),
                 Content = new TextBlock
                 {
                     Font = WesternFont,
@@ -55,7 +56,7 @@ namespace GameMenu
             // Create and initialize Xenko Logo
             var xenkoLogoImageElement = new ImageElement
             {
-                Source = SplashScreenImages["Logo"],
+                Source = SpriteFromSheet.Create(SplashScreenImages, "Logo"),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
 
@@ -65,7 +66,7 @@ namespace GameMenu
             // Create and initialize "Touch Screen to Start"
             var touchStartLabel = new ContentDecorator
             {
-                BackgroundImage = SplashScreenImages["touch_start_frame"],
+                BackgroundImage = SpriteFromSheet.Create(SplashScreenImages, "touch_start_frame"),
                 Content = new TextBlock
                 {
                     Font = WesternFont,
@@ -103,7 +104,7 @@ namespace GameMenu
             grid.Children.Add(touchStartLabel);
 
             // Add the background
-            var background = new ImageElement { Source = SplashScreenImages["background_uiimage"], StretchType = StretchType.Fill };
+            var background = new ImageElement { Source = SpriteFromSheet.Create(SplashScreenImages, "background_uiimage"), StretchType = StretchType.Fill };
             background.SetPanelZIndex(-1);
 
             Entity.Get<UIComponent>().RootElement = new UniformGrid { Children = { background, grid } };

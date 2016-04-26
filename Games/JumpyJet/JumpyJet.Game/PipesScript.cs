@@ -31,8 +31,7 @@ namespace JumpyJet
             // Load assets TODO: replace this by prefab when available.
             var pipeEntity = new Entity("pipe") { new SpriteComponent
             {
-                SpriteProvider = new SpriteFromSheet { Sheet = Sprites },
-                CurrentFrame = 2,
+                SpriteProvider = new SpriteFromSheet { Sheet = Sprites, CurrentFrame = 2 },
                 IgnoreDepth = true
             } };
 

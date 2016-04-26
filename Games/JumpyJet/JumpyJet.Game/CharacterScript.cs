@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Input;
+using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace JumpyJet
 {
@@ -41,12 +42,12 @@ namespace JumpyJet
         /// <summary>
         /// The position of the back of the character along the X axis.
         /// </summary>
-        public float PositionBack { get {  return Entity.Transform.Position.X - agentWidth / 2f;} }
+        public float PositionBack => Entity.Transform.Position.X - agentWidth / 2f;
 
         public void Start()
         {
             // Get texture region from the sprite
-            var textureRegion = Entity.Get<SpriteComponent>().SpriteProvider.GetSprite(0).Region;
+            var textureRegion = Entity.Get<SpriteComponent>().SpriteProvider.GetSprite().Region;
             agentWidth = textureRegion.Width;
             agentHeight = textureRegion.Height;
 
@@ -74,7 +75,9 @@ namespace JumpyJet
             velocity = StartVelocity;
             isRunning = false;
 
-            Entity.Get<SpriteComponent>().CurrentFrame = FallingSpriteFrameIndex;
+            var provider = Entity.Get<SpriteComponent>().SpriteProvider as SpriteFromSheet;
+            if (provider != null)
+                provider.CurrentFrame = FallingSpriteFrameIndex;
         }
 
         /// <summary>
@@ -143,7 +146,9 @@ namespace JumpyJet
             var rotationSign = isFalling ? -1 : 1;
 
             // Set falling sprite frame
-            Entity.Get<SpriteComponent>().CurrentFrame = isFalling? FallingSpriteFrameIndex: FlyingSpriteFrameIndex;
+            var provider = Entity.Get<SpriteComponent>().SpriteProvider as SpriteFromSheet;
+            if (provider != null)
+                provider.CurrentFrame = isFalling? FallingSpriteFrameIndex: FlyingSpriteFrameIndex;
 
             // Rotate a sprite
             rotation.Z += rotationSign * MathUtil.Pi * 0.01f;

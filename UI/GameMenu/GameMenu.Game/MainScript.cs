@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.Rendering.Sprites;
 using SiliconStudio.Xenko.UI;
 using SiliconStudio.Xenko.UI.Controls;
 using SiliconStudio.Xenko.UI.Panels;
@@ -36,7 +37,7 @@ namespace GameMenu
         private ModalElement shipSelectPopup; // Root of SpaceShip select popup
         private ModalElement welcomePopup; // Root of welcome popup
 
-        private Sprite popupWindowImage; // Window frame for popup which is shared between SpaceShip select and welcome popups
+        private ISpriteProvider popupWindowImage; // Window frame for popup which is shared between SpaceShip select and welcome popups
         private TextBlock nameTextBlock; // Name of the character
         private ImageElement currentShipImage; // Current SpaceShip of the character
         private int activeShipIndex;
@@ -90,7 +91,7 @@ namespace GameMenu
             {
                 if (value > MaximumStar) return;
                 powerStatus = value;
-                powerStatusStar.Source = starSprites[powerStatus];
+                powerStatusStar.Source = (SpriteFromTexture)starSprites[powerStatus];
                 shipList[activeShipIndex].Power = powerStatus;
             }
             get { return powerStatus; }
@@ -103,7 +104,7 @@ namespace GameMenu
             {
                 if (value > MaximumStar) return;
                 controlStatus = value;
-                controlStatusStar.Source = starSprites[controlStatus];
+                controlStatusStar.Source = (SpriteFromTexture)starSprites[controlStatus];
                 shipList[activeShipIndex].Control = controlStatus;
             }
             get { return controlStatus; }
@@ -117,7 +118,7 @@ namespace GameMenu
             {
                 if (value > MaximumStar) return;
                 speedStatus = value;
-                speedStatusStar.Source = starSprites[speedStatus];
+                speedStatusStar.Source = (SpriteFromTexture)starSprites[speedStatus];
                 shipList[activeShipIndex].Speed = speedStatus;
             }
             get { return speedStatus; }
@@ -131,7 +132,7 @@ namespace GameMenu
 
         protected override void LoadScene()
         {
-            popupWindowImage = MainSceneImages["popup_window"];
+            popupWindowImage = SpriteFromSheet.Create(MainSceneImages, "popup_window");
 
             // Preload stars
             starSprites.Add(MainSceneImages["star0"]);
@@ -162,7 +163,7 @@ namespace GameMenu
             CreateShipSelectionPopup();
 
             // Create the background
-            var background = new ImageElement { Source = MainSceneImages["background_uiimage"], StretchType = StretchType.Fill };
+            var background = new ImageElement { Source = SpriteFromSheet.Create(MainSceneImages, "background_uiimage"), StretchType = StretchType.Fill };
             background.SetPanelZIndex(-1);
 
             // Overlay pop-ups and the main screen
@@ -238,8 +239,7 @@ namespace GameMenu
                 ScrollBarColor = Color.Orange
             };
 
-            var scrollViewerBackgroundImage = MainSceneImages["scroll_background"];
-            var scrollViewerDecorator = new ContentDecorator { BackgroundImage = scrollViewerBackgroundImage, Content = contentScrollView, };
+            var scrollViewerDecorator = new ContentDecorator { BackgroundImage = SpriteFromSheet.Create(MainSceneImages, "scroll_background"), Content = contentScrollView, };
             scrollViewerDecorator.SetGridRow(2);
 
             var layoutGrid = new Grid();
@@ -272,9 +272,9 @@ namespace GameMenu
         {
             foreach (var ship in shipList)
             {
-                ship.PowerImageElement.Source = borderStarImages[ship.Power];
-                ship.ControlImageElement.Source = borderStarImages[ship.Control];
-                ship.SpeedImageElement.Source = borderStarImages[ship.Speed];
+                ship.PowerImageElement.Source = (SpriteFromTexture)borderStarImages[ship.Power];
+                ship.ControlImageElement.Source = (SpriteFromTexture)borderStarImages[ship.Control];
+                ship.SpeedImageElement.Source = (SpriteFromTexture)borderStarImages[ship.Speed];
             }
         }
 
@@ -298,7 +298,7 @@ namespace GameMenu
             starGrid.SetGridColumn(2);
 
             // Ship image
-            var shipSprite = MainSceneImages[spaceShip.Name];
+            var shipSprite = SpriteFromSheet.Create(MainSceneImages, spaceShip.Name);
             var shipImageElement = new ImageElement { Source = shipSprite };
             shipImageElement.SetGridColumn(4);
 
@@ -317,7 +317,7 @@ namespace GameMenu
             shipContent.Children.Add(shipImageElement);
 
             //
-            var shipSelectFrameSprite = MainSceneImages["weapon_select_frame"];
+            var shipSelectFrameSprite = SpriteFromSheet.Create(MainSceneImages, "weapon_select_frame");
 
             var shipButton = new Button
             {
@@ -350,8 +350,7 @@ namespace GameMenu
 
             if (spaceShip.IsLocked)
             {
-                var lockIconImage = MainSceneImages["lock_icon"];
-                var lockIconElement = new ImageElement { Source = lockIconImage, StretchType = StretchType.Fill, };
+                var lockIconElement = new ImageElement { Source = SpriteFromSheet.Create(MainSceneImages, "lock_icon"), StretchType = StretchType.Fill, };
                 lockIconElement.SetPanelZIndex(1);
                 buttonGrid.Children.Add(lockIconElement);
             }
@@ -407,9 +406,9 @@ namespace GameMenu
                 Text = DefaultName,
                 MaxLength = 15,
                 TextAlignment = TextAlignment.Center,
-                ActiveImage = MainSceneImages["tex_edit_activated_background"],
-                InactiveImage = MainSceneImages["tex_edit_inactivated_background"],
-                MouseOverImage = MainSceneImages["tex_edit_inactivated_background"],
+                ActiveImage = SpriteFromSheet.Create(MainSceneImages, "tex_edit_activated_background"),
+                InactiveImage = SpriteFromSheet.Create(MainSceneImages, "tex_edit_inactivated_background"),
+                MouseOverImage = SpriteFromSheet.Create(MainSceneImages, "tex_edit_inactivated_background"),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 MinimumWidth = 340,
@@ -489,13 +488,12 @@ namespace GameMenu
         {
             // Create Life bar
             lifeBarGaugeImage = MainSceneImages["life_bar"];
-            var lifeBarCoverImage = MainSceneImages["character_frame"];
             gaugeBarRegion = lifeBarGaugeImage.Region;
 
             var lifebarGauge = new ImageElement
             {
                 Name = "LifeBarBackground",
-                Source = lifeBarGaugeImage,
+                Source = (SpriteFromTexture)lifeBarGaugeImage,
                 StretchType = StretchType.Fill,
             };
             lifebarGauge.SetGridColumn(1);
@@ -515,7 +513,7 @@ namespace GameMenu
             var lifebarForeground = new ImageElement
             {
                 Name = "LifeBarForeGround",
-                Source = lifeBarCoverImage,
+                Source = SpriteFromSheet.Create(MainSceneImages, "character_frame"),
                 StretchType = StretchType.Fill,
             };
             lifebarForeground.SetGridColumnSpan(3);
@@ -539,7 +537,7 @@ namespace GameMenu
             // Bonus items
             var bonusIcon = new ImageElement
             {
-                Source = MainSceneImages["gold_icon"],
+                Source = SpriteFromSheet.Create(MainSceneImages, "gold_icon"),
                 Name = "bonus Icon",
                 VerticalAlignment = VerticalAlignment.Center
             };
@@ -556,7 +554,7 @@ namespace GameMenu
             // Money 
             var moneyIcon = new ImageElement
             {
-                Source = MainSceneImages["money_icon"],
+                Source = SpriteFromSheet.Create(MainSceneImages, "money_icon"),
                 Name = "money Icon",
                 Margin = new Thickness(20, 0, 0, 0),
                 VerticalAlignment = VerticalAlignment.Center
@@ -603,7 +601,7 @@ namespace GameMenu
 
         private Button CreateTextButton(string text)
         {
-            var buttonImage = MainSceneImages["button0"];
+            var buttonImage = SpriteFromSheet.Create(MainSceneImages, "button0");
 
             return new Button
             {
@@ -637,7 +635,7 @@ namespace GameMenu
             };
             var nameLabel = new ContentDecorator
             {
-                BackgroundImage = MainSceneImages["tex_edit_inactivated_background"],
+                BackgroundImage = SpriteFromSheet.Create(MainSceneImages, "tex_edit_inactivated_background"),
                 Content = nameTextBlock,
                 Padding = new Thickness(20, 15, 20, 20),
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -649,7 +647,7 @@ namespace GameMenu
             var characterImage = new ImageElement
             {
                 Name = "HeroImage",
-                Source = MainSceneImages["character"],
+                Source = SpriteFromSheet.Create(MainSceneImages, "character"),
                 HorizontalAlignment = HorizontalAlignment.Center,
             };
             characterImage.SetGridRow(2);
@@ -657,7 +655,7 @@ namespace GameMenu
             // Create Explanation TextBlock
             var explanationLabel = new ContentDecorator
             {
-                BackgroundImage = MainSceneImages["description_frame"],
+                BackgroundImage = SpriteFromSheet.Create(MainSceneImages, "description_frame"),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Content = new TextBlock
                 {
@@ -717,7 +715,7 @@ namespace GameMenu
             var item = new ContentDecorator
             {
                 Content = content,
-                BackgroundImage = MainSceneImages[imageName],
+                BackgroundImage = SpriteFromSheet.Create(MainSceneImages, imageName),
                 HorizontalAlignment = HorizontalAlignment.Center
             };
             item.SetGridRow(rowIndex);
@@ -743,7 +741,7 @@ namespace GameMenu
             statusPanel.SetGridColumn(1);
 
             // SpaceShip Button
-            currentShipImage = new ImageElement { Source = MainSceneImages[shipList[activeShipIndex].Name], };
+            currentShipImage = new ImageElement { Source = SpriteFromSheet.Create(MainSceneImages, shipList[activeShipIndex].Name) };
             currentShipImage.SetGridRow(1);
 
             var shipImageSpacerGrid = new Grid { HorizontalAlignment = HorizontalAlignment.Center };
@@ -754,7 +752,7 @@ namespace GameMenu
             shipImageSpacerGrid.ColumnDefinitions.Add(new StripDefinition());
             shipImageSpacerGrid.LayerDefinitions.Add(new StripDefinition());
 
-            var shipButtonDesign = MainSceneImages["display_element"];
+            var shipButtonDesign = SpriteFromSheet.Create(MainSceneImages, "display_element");
             var currentShipButton = new Button
             {
                 NotPressedImage = shipButtonDesign,
@@ -815,9 +813,9 @@ namespace GameMenu
         {
             var button = new Button
             {
-                NotPressedImage = MainSceneImages["small_display_element"],
-                MouseOverImage = MainSceneImages["small_display_element"],
-                PressedImage = MainSceneImages["small_display_element_pressed"],
+                NotPressedImage = SpriteFromSheet.Create(MainSceneImages, "small_display_element"),
+                MouseOverImage = SpriteFromSheet.Create(MainSceneImages, "small_display_element"),
+                PressedImage = SpriteFromSheet.Create(MainSceneImages, "small_display_element_pressed"),
                 MinimumWidth = 80,
                 Name = text,
                 Content = new TextBlock

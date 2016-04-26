@@ -136,7 +136,7 @@ namespace SpriteStudioDemo
                     // Spawns a new bullet
                     var bullet = new Entity
                     {
-                        new SpriteComponent { SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet") },
+                        new SpriteComponent { SpriteProvider = SpriteFromSheet.Create(spriteSheet, "bullet") },
                         rb,
                         new BeamScript()
                     };

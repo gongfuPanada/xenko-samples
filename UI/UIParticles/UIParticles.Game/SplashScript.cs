@@ -8,6 +8,7 @@ using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Engine.Design;
 using SiliconStudio.Xenko.Graphics;
 using SiliconStudio.Xenko.Particles.Components;
+using SiliconStudio.Xenko.Rendering.Sprites;
 using SiliconStudio.Xenko.UI;
 using SiliconStudio.Xenko.UI.Controls;
 using SiliconStudio.Xenko.UI.Panels;
@@ -51,7 +52,7 @@ namespace UIParticles
             // Create and initialize "Xenko Samples" Text
             var xenkoSampleTextBlock = new ContentDecorator
             {
-                BackgroundImage = SplashScreenImages["xenko_sample_text_bg"],
+                BackgroundImage = SpriteFromSheet.Create(SplashScreenImages, "xenko_sample_text_bg"),
                 Content = new TextBlock
                 {
                     Font = WesternFont,
@@ -68,7 +69,7 @@ namespace UIParticles
 
             //*********************************
             // Confetti button
-            var buttonImage = SplashScreenImages["button_long"];
+            var buttonImage = SpriteFromSheet.Create(SplashScreenImages, "button_long");
 
             var xenkoButtonConfetti = new Button
             {
@@ -103,7 +104,7 @@ namespace UIParticles
 
             //*********************************
             // Stars button
-            var buttonStars = SplashScreenImages["button_short"];
+            var buttonStars = SpriteFromSheet.Create(SplashScreenImages, "button_short");
 
             var xenkoButtonStars = new Button
             {
@@ -164,7 +165,7 @@ namespace UIParticles
             grid.Children.Add(bottomBar);
 
             // Add the background
-            var background = new ImageElement { Source = SplashScreenImages["background_uiimage"], StretchType = StretchType.Fill };
+            var background = new ImageElement { Source = SpriteFromSheet.Create(SplashScreenImages, "background_uiimage"), StretchType = StretchType.Fill };
             background.SetPanelZIndex(-1);
 
             Entity.Get<UIComponent>().RootElement = new UniformGrid { Children = { background, grid } };
@@ -338,7 +339,7 @@ namespace UIParticles
             var lifebarGauge = new ImageElement
             {
                 Name = "LifeBarBackground",
-                Source = lifeBarGaugeImage,
+                Source = SpriteFromSheet.Create(ButtonsImages, "rope_small"),
                 StretchType = StretchType.Fill,
             };
             lifebarGauge.SetGridColumn(1);

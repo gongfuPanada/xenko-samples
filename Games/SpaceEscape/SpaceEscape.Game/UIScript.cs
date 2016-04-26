@@ -2,6 +2,7 @@
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Graphics;
+using SiliconStudio.Xenko.Rendering.Sprites;
 using SiliconStudio.Xenko.UI;
 using SiliconStudio.Xenko.UI.Controls;
 using SiliconStudio.Xenko.UI.Panels;
@@ -30,7 +31,7 @@ namespace SpaceEscape
         private ModalElement gameOverRoot;
 
         private TextBlock distanceTextBlock;
-        private Sprite buttonImage;
+        private ISpriteProvider buttonImage;
 
         /// <summary>
         /// Load resource and construct ui components
@@ -40,7 +41,7 @@ namespace SpaceEscape
             base.Start();
             
             // Load resources shared by different UI screens
-            buttonImage = UIImages["button"];
+            buttonImage = SpriteFromSheet.Create(UIImages, "button");
 
             // Load and create specific UI screens.
             CreateMainMenuUI();
@@ -50,7 +51,7 @@ namespace SpaceEscape
 
         private void CreateMainMenuUI()
         {
-            var xenkoLogo = new ImageElement { Source = UIImages["xk_logo"] };
+            var xenkoLogo = new ImageElement { Source = SpriteFromSheet.Create(UIImages, "xk_logo") };
 
             xenkoLogo.SetCanvasPinOrigin(new Vector3(0.5f, 0.5f, 1f));
             xenkoLogo.SetCanvasRelativeSize(new Vector3(0.8f, 0.5f, 1f));
@@ -90,7 +91,7 @@ namespace SpaceEscape
 
             var scoreBoard = new ContentDecorator
             {
-                BackgroundImage = UIImages["distance_bg"],
+                BackgroundImage = SpriteFromSheet.Create(UIImages, "distance_bg"),
                 Content = distanceTextBlock,
                 Padding = new Thickness(60, 31, 25, 35),
                 MinimumWidth = 290f // Set the minimum width of score button so that it wont modify when the content (text) changes, and less than minimum.

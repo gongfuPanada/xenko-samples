@@ -161,7 +161,7 @@ namespace SpriteEntity
                     // Spawns a new bullet
                     var bullet = new Entity
                     {
-                        new SpriteComponent {SpriteProvider = new SpriteFromSheet {Sheet = spriteSheet}, CurrentFrame = spriteSheet.FindImageIndex("bullet")},
+                        new SpriteComponent { SpriteProvider = SpriteFromSheet.Create(spriteSheet, "bullet") },
 
                         // Will make the beam move along a direction at each frame
                         new BeamScript {DirectionX = isAgentFacingRight ? 1f : -1f, SpriteSheet = SpriteSheet},
