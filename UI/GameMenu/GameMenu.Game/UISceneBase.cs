@@ -47,7 +47,7 @@ namespace GameMenu
         private void AdjustVirtualResolution(object sender, EventArgs e)
         {
             var backBufferSize = new Vector2(GraphicsDevice.Presenter.BackBuffer.Width, GraphicsDevice.Presenter.BackBuffer.Height);
-            Entity.Get<UIComponent>().VirtualResolution = new Vector3(backBufferSize, 1000);
+            Entity.Get<UIComponent>().Resolution = new Vector3(backBufferSize, 1000);
         }
 
         protected void CreateScene()
