@@ -433,7 +433,7 @@ namespace SimpleTerrain
 
             var uiComponent = UIEntity.Get<UIComponent>();
             uiComponent.RootElement = new Canvas { Children = { buttonDescription, loadingModal, loadingTextBlock } };
-            uiComponent.VirtualResolution = virtualResolution;
+            uiComponent.Resolution = virtualResolution;
         }
 
         private void UpdateCamera()
