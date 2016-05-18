@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 4b722b46-48b5-4585-9f5e-f9a590faf4eb
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 98dbbab5-03a8-4f89-9541-7265202f5faa
@@ -85,18 +85,12 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 419cc903-39d2-474e-ad95-09b8596d749c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !CustomParticleShape
                                         ~Id: ab3b02be-9ecb-4278-ba47-f4a158c18c15
                                         FixYAxis: true
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: a1ef67d2-5738-42e1-bb9b-56cc93ec39e8/84bd244b-1b5e-46c0-a25a-f87f1351dcbb:XenkoLogoWhite
                                             FallbackValue:
@@ -191,18 +185,12 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 419cc903-39d2-474e-ad95-09b8596d749c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !CustomParticleShape
                                         ~Id: ab3b02be-9ecb-4278-ba47-f4a158c18c15
                                         FixYAxis: true
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: ec2e83dc-26e3-44b5-95f6-fd934a98df45/2833fb49-fbe8-4d15-9200-1ee5630552af:XenkoLogoRed
                                             FallbackValue:
@@ -297,18 +285,12 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 419cc903-39d2-474e-ad95-09b8596d749c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !CustomParticleShape
                                         ~Id: ab3b02be-9ecb-4278-ba47-f4a158c18c15
                                         FixYAxis: true
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 16931489-96bf-4c3f-b7a0-248c5049a3bb
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 2f45f106-215c-4578-8350-84a3ba5976eb/31d063d3-7159-4004-920c-04f038b43a7b:XenkoLogoGray
                                             FallbackValue:

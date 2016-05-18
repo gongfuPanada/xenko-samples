@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 8eb3fe28-2a08-441a-a015-a428d2e17bef
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: aecd4341-53ba-488c-a2ff-8542bb30980d
@@ -136,10 +136,8 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: d711d068-26eb-47f1-9fdf-d3c3581a23b3
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
                                     SimulationSpace: Local
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 3f1b0b46-f64a-419c-bfa8-c79c2106ec89
@@ -150,11 +148,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4f9be5d1-3f51-4e7c-9295-459878b67b7e
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -537,8 +534,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -549,11 +544,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -617,6 +610,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
                                         - !InitialSpawnOrder
                                             ~Id: 72956298-06a7-4df1-9325-d057ca87c38f
                                             InheritPosition: true
@@ -823,8 +817,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -835,11 +827,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -1097,8 +1087,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -1109,11 +1097,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: d72ae450-ceb7-49ff-a964-768858402c07/9916626a-2c4e-4949-a4aa-9e02c4309b0f:dota
                                             FallbackValue:
@@ -1178,6 +1164,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
                                         - !InitialSpawnOrder
                                             ~Id: 72956298-06a7-4df1-9325-d057ca87c38f
                                             InheritPosition: true
@@ -1333,8 +1320,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 100
                                     ParticleLifetime: {X: 0.15, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -1345,11 +1330,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeFloat4
@@ -1666,8 +1650,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 10
                                     ParticleLifetime: {X: 0.05, Y: 0.05}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -1678,11 +1660,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -2119,9 +2100,6 @@ Hierarchy:
                                 -   ~Id: f21a1902-eee2-4993-bce1-3a738c37ed4f
                                     MaxParticlesOverride: 100
                                     ParticleLifetime: {X: 0.1, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 5c200a94-d248-4a6b-b8e9-e194ed8ff20d
                                         SamplerPosition: null
@@ -2130,7 +2108,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4fdb88ee-ea20-48b3-970c-a00339d4b036
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 057894de-4180-40a9-a5d4-19ac0ac9c6ee/b9b96234-dcac-48da-979c-65eae07be389:dot
                                             FallbackValue:
@@ -2179,6 +2156,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -0.2, Y: 0.0, Z: -0.2}
                                             PositionMax: {X: 0.2, Y: 0.0, Z: 0.2}
+                                            Interpolate: false
                                         - !InitialVelocitySeed
                                             ~Id: e86f3415-0f5e-4ac9-a567-539d1ccc1dc2
                                             InheritPosition: true
@@ -2224,8 +2202,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -2236,11 +2212,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -2412,10 +2386,8 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: d711d068-26eb-47f1-9fdf-d3c3581a23b3
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
                                     SimulationSpace: Local
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 3f1b0b46-f64a-419c-bfa8-c79c2106ec89
@@ -2426,11 +2398,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4f9be5d1-3f51-4e7c-9295-459878b67b7e
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -2933,8 +2904,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.5, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -2945,11 +2914,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -3013,6 +2980,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
                                         - !InitialSpawnOrder
                                             ~Id: 72956298-06a7-4df1-9325-d057ca87c38f
                                             InheritPosition: true
@@ -3289,8 +3257,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -3301,11 +3267,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: d72ae450-ceb7-49ff-a964-768858402c07/9916626a-2c4e-4949-a4aa-9e02c4309b0f:dota
                                             FallbackValue:
@@ -3779,8 +3743,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -3791,11 +3753,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -3937,8 +3897,6 @@ Hierarchy:
                                 -   ~Id: e0d71f48-4fff-4a21-8602-fadfebb2263a
                                     MaxParticlesOverride: 50
                                     ParticleLifetime: {X: 0.2, Y: 0.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 6d9cb2b0-2b8c-445c-a356-470cfc6ff6fc
@@ -3949,11 +3907,9 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: e9fbc71f-148a-42b8-a357-436a74ce3bdf
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             FallbackValue:
                                                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -4017,6 +3973,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: 0.0, Z: -1.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
                                         - !InitialSpawnOrder
                                             ~Id: 72956298-06a7-4df1-9325-d057ca87c38f
                                             InheritPosition: true
@@ -4096,7 +4053,6 @@ Hierarchy:
                                     MaxParticlesOverride: 20
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
                                     SimulationSpace: Local
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 8792371c-25ad-4cd2-85a2-ebbf3e9f966f
@@ -4107,11 +4063,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4f9be5d1-3f51-4e7c-9295-459878b67b7e
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -4365,9 +4320,6 @@ Hierarchy:
                                 -   ~Id: f21a1902-eee2-4993-bce1-3a738c37ed4f
                                     MaxParticlesOverride: 100
                                     ParticleLifetime: {X: 0.1, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 5c200a94-d248-4a6b-b8e9-e194ed8ff20d
                                         SamplerPosition: null
@@ -4376,7 +4328,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4fdb88ee-ea20-48b3-970c-a00339d4b036
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 057894de-4180-40a9-a5d4-19ac0ac9c6ee/b9b96234-dcac-48da-979c-65eae07be389:dot
                                             FallbackValue:
@@ -4425,6 +4376,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -0.2, Y: 0.0, Z: -0.2}
                                             PositionMax: {X: 0.2, Y: 0.0, Z: 0.2}
+                                            Interpolate: false
                                         - !InitialVelocitySeed
                                             ~Id: e86f3415-0f5e-4ac9-a567-539d1ccc1dc2
                                             InheritPosition: true
@@ -4586,9 +4538,6 @@ Hierarchy:
                                 -   ~Id: f21a1902-eee2-4993-bce1-3a738c37ed4f
                                     MaxParticlesOverride: 100
                                     ParticleLifetime: {X: 0.1, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 5c200a94-d248-4a6b-b8e9-e194ed8ff20d
                                         SamplerPosition: null
@@ -4597,7 +4546,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4fdb88ee-ea20-48b3-970c-a00339d4b036
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 057894de-4180-40a9-a5d4-19ac0ac9c6ee/b9b96234-dcac-48da-979c-65eae07be389:dot
                                             FallbackValue:
@@ -4646,6 +4594,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -0.2, Y: 0.0, Z: -0.2}
                                             PositionMax: {X: 0.2, Y: 0.0, Z: 0.2}
+                                            Interpolate: false
                                         - !InitialVelocitySeed
                                             ~Id: e86f3415-0f5e-4ac9-a567-539d1ccc1dc2
                                             InheritPosition: true
@@ -4690,10 +4639,8 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: d711d068-26eb-47f1-9fdf-d3c3581a23b3
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
                                     SimulationSpace: Local
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 3f1b0b46-f64a-419c-bfa8-c79c2106ec89
@@ -4704,11 +4651,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree0
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 4f9be5d1-3f51-4e7c-9295-459878b67b7e
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor

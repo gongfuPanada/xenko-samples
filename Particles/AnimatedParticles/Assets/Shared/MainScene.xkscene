@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 2195e36c-46ec-496b-8072-098c114f4a7f
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: d125baf1-c3b3-4dda-88c2-993a8f52b0fe
@@ -47,11 +47,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: null
@@ -75,8 +71,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -155,11 +149,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: !ComputeCurveSamplerVector3
@@ -191,8 +181,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -271,11 +259,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: null
@@ -299,8 +283,6 @@ Hierarchy:
                                                         TangentType: Linear
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -394,11 +376,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: null
@@ -406,8 +384,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -533,11 +509,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: null
@@ -545,8 +517,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -703,11 +673,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: null
@@ -715,8 +681,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -850,11 +814,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderQuad
                                         ~Id: 597e2d55-b7f2-4e6f-a099-c877759b9695
                                         SamplerPosition: null
@@ -902,8 +862,6 @@ Hierarchy:
                                                         TangentType: Linear
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -982,11 +940,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: null
@@ -994,8 +948,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 6d5eb04d-61ae-4cdf-951d-01f7e0a99ad2/ad3bc951-0f20-464d-a236-fb9c3727f4e7:XenkoLogoWhite
                                             FallbackValue:
@@ -1090,11 +1042,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 13d74d38-b4eb-44e9-b49a-d45cc481fa42
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 2.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 9c90cd6e-c2f9-4927-8cba-402d675de576
                                         SamplerPosition: !ComputeCurveSamplerVector3
@@ -1139,7 +1087,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3f09759b-01af-40c2-8380-617a6d128599
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
