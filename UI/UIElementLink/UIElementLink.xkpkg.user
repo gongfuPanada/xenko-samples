@@ -1,0 +1,152 @@
+!SettingsFile
+Settings:
+    Package/Scene/ActiveStream: Color Base
+    Package/Scene/Camera/FarClipPlane: 1000.0
+    Package/Scene/Camera/NearClipPlane: 0.1
+    Package/Scene/Camera/OrthographicSize: 10.0
+    Package/Scene/Camera/Projection: Perspective
+    Package/Scene/Camera/VerticalFieldOfView: 45.0
+    Package/Scene/CameraPreviewVisible: true
+    Package/Scene/CamPitchYaw: {X: -0.319520831, Y: 0.7620027}
+    Package/Scene/CamPosition: {X: 4.40436363, Y: 2.12884569, Z: 4.41033745}
+    Package/Scene/ComponentGizmoSize: 1.0
+    Package/Scene/FixedSizeGizmos: false
+    Package/Scene/GridVisible: true
+    Package/Scene/HiddenGizmos:
+        - Physics
+        - Transform
+    Package/Scene/RenderMode: SingleStream
+    Package/Scene/RotationSnapActive: false
+    Package/Scene/RotationSnapValue: 22.5
+    Package/Scene/ScaleSnapActive: false
+    Package/Scene/ScaleSnapValue: 1.1
+    Package/Scene/SelectionMaskVisible: true
+    Package/Scene/TransformationGizmoSize: 1.0
+    Package/Scene/TranslationSnapActive: false
+    Package/Scene/TranslationSnapValue: 1.0
+    Package/SceneSettings:
+        0bbdf1ab-bb41-46c5-86ef-4f2635d65c6a:
+            ActiveStream: Color Base
+            CamAspectRatio: 1.77777779
+            CamFarClipPlane: 1000.0
+            CamNearClipPlane: 0.1
+            CamOrthographicSize: 10.0
+            CamPitchYaw: {X: -0.639022648, Y: -6.734484}
+            CamPosition: {X: -0.9257101, Y: 1.73693109, Z: 2.10548878}
+            CamProjection: Perspective
+            CamVerticalFieldOfView: 45.0
+            CameraPreviewVisible: true
+            ComponentGizmoSize: 1.0
+            FixedSizeGizmos: false
+            GridVisible: true
+            HiddenGizmos:
+                - Transform
+            RenderMode: Lighting
+            RotationSnapActive: false
+            RotationSnapValue: 22.5
+            ScaleSnapActive: false
+            ScaleSnapValue: 1.1
+            SelectionMaskVisible: true
+            TransformationGizmoSize: 1.0
+            TranslationSnapActive: false
+            TranslationSnapValue: 1.0
+        29793f1f-5779-4c5c-9f7a-51555ff03281:
+            ActiveStream: Color Base
+            CamAspectRatio: 1.77777779
+            CamFarClipPlane: 1000.0
+            CamNearClipPlane: 0.1
+            CamOrthographicSize: 10.0
+            CamPitchYaw: {X: -0.187636524, Y: 9.762077}
+            CamPosition: {X: -2.25257468, Y: 1.29236925, Z: -6.423059}
+            CamProjection: Perspective
+            CamVerticalFieldOfView: 45.0
+            CameraPreviewVisible: true
+            ComponentGizmoSize: 1.0
+            FixedSizeGizmos: false
+            GridVisible: true
+            HiddenGizmos:
+                - Transform
+            RenderMode: Lighting
+            RotationSnapActive: false
+            RotationSnapValue: 22.5
+            ScaleSnapActive: false
+            ScaleSnapValue: 1.1
+            SelectionMaskVisible: true
+            TransformationGizmoSize: 1.0
+            TranslationSnapActive: false
+            TranslationSnapValue: 1.0
+        67a9eb30-7686-4b8c-89c3-19f12755774e:
+            ActiveStream: Color Base
+            CamAspectRatio: 1.77777779
+            CamFarClipPlane: 3000.0
+            CamNearClipPlane: 0.1
+            CamOrthographicSize: 10.0
+            CamPitchYaw: {X: -0.411004543, Y: 0.252651662}
+            CamPosition: {X: 99.15355, Y: 172.873932, Z: 384.065338}
+            CamProjection: Perspective
+            CamVerticalFieldOfView: 45.0
+            CameraPreviewVisible: true
+            ComponentGizmoSize: 1.0
+            FixedSizeGizmos: false
+            GridVisible: true
+            HiddenGizmos:
+                - Transform
+            RenderMode: Lighting
+            RotationSnapActive: false
+            RotationSnapValue: 22.5
+            ScaleSnapActive: false
+            ScaleSnapValue: 1.1
+            SelectionMaskVisible: true
+            TransformationGizmoSize: 1.0
+            TranslationSnapActive: false
+            TranslationSnapValue: 1.0
+        a140a866-a7b3-4c89-8953-5f7adc428c0a:
+            ActiveStream: Color Base
+            CamAspectRatio: 1.77777779
+            CamFarClipPlane: 1000.0
+            CamNearClipPlane: 0.1
+            CamOrthographicSize: 10.0
+            CamPitchYaw: {X: -0.146371454, Y: 0.0104171149}
+            CamPosition: {X: 0.201943323, Y: 2.85799217, Z: 19.3849335}
+            CamProjection: Perspective
+            CamVerticalFieldOfView: 45.0
+            CameraPreviewVisible: true
+            ComponentGizmoSize: 1.0
+            FixedSizeGizmos: false
+            GridVisible: true
+            HiddenGizmos:
+                - Transform
+            RenderMode: Lighting
+            RotationSnapActive: false
+            RotationSnapValue: 22.5
+            ScaleSnapActive: false
+            ScaleSnapValue: 1.1
+            SelectionMaskVisible: true
+            TransformationGizmoSize: 1.0
+            TranslationSnapActive: false
+            TranslationSnapValue: 1.0
+        fd03d0c2-d6c0-4fec-b92a-5459b5122534:
+            ActiveStream: Color Base
+            CamAspectRatio: 1.77777779
+            CamFarClipPlane: 3000.0
+            CamNearClipPlane: 0.1
+            CamOrthographicSize: 10.0
+            CamPitchYaw: {X: -0.08225901, Y: 12.5218353}
+            CamPosition: {X: -45.4860344, Y: 86.01398, Z: 1042.09106}
+            CamProjection: Perspective
+            CamVerticalFieldOfView: 45.0
+            CameraPreviewVisible: true
+            ComponentGizmoSize: 1.0
+            FixedSizeGizmos: false
+            GridVisible: true
+            HiddenGizmos:
+                - Transform
+            RenderMode: Lighting
+            RotationSnapActive: false
+            RotationSnapValue: 22.5
+            ScaleSnapActive: false
+            ScaleSnapValue: 1.1
+            SelectionMaskVisible: true
+            TransformationGizmoSize: 1.0
+            TranslationSnapActive: false
+            TranslationSnapValue: 1.0
