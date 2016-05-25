@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 6736d805-6194-40bf-8056-7c52758e2e4b
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 8ea4b31c-374c-48ef-a71f-0f91be1a5e2b
@@ -91,10 +91,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.3, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -105,11 +102,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree270
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                             FallbackValue:
@@ -374,10 +370,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.3, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -388,11 +381,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree270
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                             FallbackValue:
@@ -895,10 +887,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.3, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -909,11 +898,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree270
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                             FallbackValue:
@@ -1082,10 +1070,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.3, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -1096,11 +1081,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree270
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                             FallbackValue:
@@ -1253,10 +1237,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.3, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -1267,11 +1248,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree270
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                             FallbackValue:
@@ -1615,10 +1595,7 @@ Hierarchy:
                             BoundingShape: null
                             Emitters:
                                 -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.3, Y: 0.3}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -1629,11 +1606,10 @@ Hierarchy:
                                         UVRotate:
                                             FlipX: false
                                             FlipY: false
-                                            UvClockwise: Degree270
+                                            UVClockwise: Degree0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                             FallbackValue:
@@ -1896,10 +1872,7 @@ SceneSettings:
                                         BoundingShape: null
                                         Emitters:
                                             -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                                MaxParticlesOverride: 0
                                                 ParticleLifetime: {X: 0.3, Y: 0.3}
-                                                SimulationSpace: World
-                                                RandomSeedMethod: Time
                                                 SortingPolicy: ByOrder
                                                 ShapeBuilder: !ShapeBuilderRibbon
                                                     ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -1910,11 +1883,10 @@ SceneSettings:
                                                     UVRotate:
                                                         FlipX: false
                                                         FlipY: false
-                                                        UvClockwise: Degree270
+                                                        UVClockwise: Degree0
                                                 Material: !ParticleMaterialComputeColor
                                                     ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                                     AlphaAdditive: 1.0
-                                                    FaceCulling: CullNone
                                                     ComputeColor: !ComputeTextureColor
                                                         Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                                         FallbackValue:
@@ -2065,10 +2037,7 @@ SceneSettings:
                                         BoundingShape: null
                                         Emitters:
                                             -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                                MaxParticlesOverride: 0
                                                 ParticleLifetime: {X: 0.3, Y: 0.3}
-                                                SimulationSpace: World
-                                                RandomSeedMethod: Time
                                                 SortingPolicy: ByOrder
                                                 ShapeBuilder: !ShapeBuilderRibbon
                                                     ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -2079,11 +2048,10 @@ SceneSettings:
                                                     UVRotate:
                                                         FlipX: false
                                                         FlipY: false
-                                                        UvClockwise: Degree270
+                                                        UVClockwise: Degree0
                                                 Material: !ParticleMaterialComputeColor
                                                     ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                                     AlphaAdditive: 1.0
-                                                    FaceCulling: CullNone
                                                     ComputeColor: !ComputeTextureColor
                                                         Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                                         FallbackValue:
@@ -2234,10 +2202,7 @@ SceneSettings:
                                         BoundingShape: null
                                         Emitters:
                                             -   ~Id: 4a1169c2-4a53-4936-942b-d9a5533391fa
-                                                MaxParticlesOverride: 0
                                                 ParticleLifetime: {X: 0.3, Y: 0.3}
-                                                SimulationSpace: World
-                                                RandomSeedMethod: Time
                                                 SortingPolicy: ByOrder
                                                 ShapeBuilder: !ShapeBuilderRibbon
                                                     ~Id: 84321c5b-ada9-4bc8-8b92-9c795553cfc0
@@ -2248,11 +2213,10 @@ SceneSettings:
                                                     UVRotate:
                                                         FlipX: false
                                                         FlipY: false
-                                                        UvClockwise: Degree270
+                                                        UVClockwise: Degree0
                                                 Material: !ParticleMaterialComputeColor
                                                     ~Id: 1737e1ea-7294-40bb-8914-3b74bdd480ae
                                                     AlphaAdditive: 1.0
-                                                    FaceCulling: CullNone
                                                     ComputeColor: !ComputeTextureColor
                                                         Texture: 540a8e5f-c18a-426b-96bc-dd28f14e042d/f8a9d365-cece-45f9-9abc-c59ffb6b03c3:Textures/swoosh
                                                         FallbackValue:

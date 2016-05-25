@@ -1,16 +1,14 @@
 !Texture
-Id: b5e092de-265a-4178-9a06-c9ea1432561a
+Id: 250eb6f0-4f9f-4cf8-9d53-df18e1cc0b46
 SerializedVersion: {Xenko: 1.4.0-beta}
 Tags: []
-Source: ../../Resources/explosion8x8.dds
+Source: ../../Resources/smoke28x8.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: 263f49ff-657f-47ad-8fda-2be5f9d0c0fb
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000
         SerializedVersion: {Xenko: 1.4.0-beta}
         Tags: []
-        Source: 
         ImporterId: a60986f3-a594-4278-bd9d-68ea172f0558
         ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

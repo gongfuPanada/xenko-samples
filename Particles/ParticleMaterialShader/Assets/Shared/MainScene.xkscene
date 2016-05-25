@@ -1,6 +1,6 @@
 !SceneAsset
 Id: d18360d9-08c6-41e6-a8f0-dcc78e9a723d
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: ea5cd3ad-c9e2-4ebb-bee3-45718a6c92b3
@@ -56,11 +56,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: bb3d3982-356f-49ef-8cc3-d6f7f898b8fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 38bf15aa-b345-44cd-86a8-c7dbce7cd955
                                         SamplerPosition: null
@@ -68,8 +64,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 5d41b623-7e2a-4cd6-ba66-dd1bdac1dae1
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeShaderClassColor
                                             MixinReference: ComputeColorRed
                                             Generics: {}
@@ -179,11 +173,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: bb3d3982-356f-49ef-8cc3-d6f7f898b8fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 38bf15aa-b345-44cd-86a8-c7dbce7cd955
                                         SamplerPosition: null
@@ -191,8 +181,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 5d41b623-7e2a-4cd6-ba66-dd1bdac1dae1
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeVertexStreamColor
@@ -309,11 +297,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: bb3d3982-356f-49ef-8cc3-d6f7f898b8fa
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 3.0, Y: 4.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 38bf15aa-b345-44cd-86a8-c7dbce7cd955
                                         SamplerPosition: null
@@ -321,8 +305,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleCustomMaterial
                                         ~Id: 772cf7c6-2c8e-4acb-80fa-070853a1035a
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 9a0ee52b-2c70-45aa-951e-63f5d0ccaf06/ed4bd58a-5aae-4644-9a04-e5571510284c:XenkoLogoGray
                                             FallbackValue:

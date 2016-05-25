@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 71292a97-5a05-4865-9ac8-e113ffad9561
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: aecd4341-53ba-488c-a2ff-8542bb30980d
@@ -160,9 +160,6 @@ Hierarchy:
                                     EmitterName: Parent
                                     MaxParticlesOverride: 10
                                     ParticleLifetime: {X: 5.0, Y: 5.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 2ab38a0c-d352-40d8-a5d3-2e1805bf75cc
                                         SamplerPosition: null
@@ -171,7 +168,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 76b52138-4451-4a0c-9ca5-6653286d086d
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeVertexStreamColor
@@ -284,13 +280,10 @@ Hierarchy:
                                             ForceVortex: 20.0
                                             ForceRepulsive: -5.0
                                             ForceFixed: {X: 0.0, Y: 0.0, Z: 0.0}
-                                    CanEmitParticles: true
                                 -   ~Id: 91d88f6c-15be-4e16-ac0f-1141a9d2f5ed
                                     EmitterName: Child
                                     MaxParticlesOverride: 2000
                                     ParticleLifetime: {X: 0.5, Y: 0.5}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByOrder
                                     ShapeBuilder: !ShapeBuilderRibbon
                                         ~Id: 7842f39a-971d-4348-b7e3-f34532724e55
@@ -305,7 +298,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 7f5a1f8b-0896-40f1-bf54-d80be03da426
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeBinaryColor
@@ -441,7 +433,6 @@ Hierarchy:
                                                             TangentType: Linear
                                             SamplerOptional: null
                                             SeedOffset: 0
-                                    CanEmitParticles: true
             Design: {}
         -   Entity:
                 Id: 6a0191a4-fefe-483d-be2b-c55bae7fa77f
@@ -473,9 +464,6 @@ Hierarchy:
                                     EmitterName: Smoke
                                     MaxParticlesOverride: 300
                                     ParticleLifetime: {X: 0.5, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: e350449b-7a5d-4f16-bfe6-2fbf16a0d07a
                                         SamplerPosition: null
@@ -483,8 +471,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3a2f4d08-f75b-4c30-83c0-10cbf47b8c5f
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 886511aa-0183-4aef-a18a-ed96fdae6d2b/72741f20-0066-47e9-a73d-c5ac24900e47:smoke
                                             FallbackValue:
@@ -594,24 +580,18 @@ Hierarchy:
                                             PositionMin: {X: -0.1, Y: 0.4, Z: -0.1}
                                             PositionMax: {X: 0.1, Y: 0.5, Z: 0.1}
                                     Updaters: []
-                                    CanEmitParticles: true
                                 -   ~Id: 174e07ad-24bf-4896-980a-4e670de88288
                                     EmitterName: Stone
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 3.0, Y: 3.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderOrientedQuad
                                         ~Id: 28168dac-7417-48dd-9b25-8cb7b9cb1a5f
                                         SamplerPosition: null
+                                        SamplerSize: null
                                         ScaleLength: true
                                         LengthFactor: 1.0
-                                        SamplerSize: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: a00e3e5e-7586-409d-9e27-19541249f608
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -731,7 +711,6 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: false
-                                    CanEmitParticles: true
             Design: {}
         -   Entity:
                 Id: 7698999c-4c4d-43e0-ac5d-5e2360bafde7
@@ -877,11 +856,7 @@ Hierarchy:
                             Emitters:
                                 -   ~Id: d4b08a56-47b2-4b0d-a35d-7d1354611737
                                     EmitterName: Parent
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 0.8, Y: 1.2}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: f84900d0-e330-42b8-99b8-23b2c9166110
                                         SamplerPosition: null
@@ -890,7 +865,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 6bbb8f9d-cae2-48ab-9c5e-0f10de5debbf
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -961,13 +935,10 @@ Hierarchy:
                                             ColorMin: {R: 1.0, G: 0.0, B: 0.0, A: 1.0}
                                             ColorMax: {R: 0.725, G: 1.0, B: 0.0, A: 1.0}
                                     Updaters: []
-                                    CanEmitParticles: true
                                 -   ~Id: ff5d0bf8-297b-4284-9dc9-a491b58a3fc1
                                     EmitterName: ChildSmoke
                                     MaxParticlesOverride: 1000
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
                                     SortingPolicy: ByDepth
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: cd8c490d-a80e-494c-8c65-2790ad158eac
@@ -976,8 +947,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 2f09fc45-37c2-4e9d-90a6-f8d3a24f5435
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeTextureColor
@@ -1094,19 +1063,13 @@ Hierarchy:
                                             ColorMin: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                             ColorMax: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                                     Updaters: []
-                                    CanEmitParticles: true
                                 -   ~Id: b2896e0a-5d32-4b81-aa31-2d5fe6e4a9f3
                                     EmitterName: ChildExplosion
                                     MaxParticlesOverride: 1000
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderOrientedQuad
                                         ~Id: 9407ef99-944e-4abd-a584-faae0870b430
                                         SamplerPosition: null
-                                        ScaleLength: true
-                                        LengthFactor: 2.0
                                         SamplerSize: !ComputeCurveSamplerFloat
                                             ~Id: 3298a300-1cdc-43b2-afbe-b3447f853363
                                             Curve: !ComputeAnimationCurveFloat
@@ -1124,10 +1087,11 @@ Hierarchy:
                                                         Key: 1.0
                                                         Value: 0.0
                                                         TangentType: Linear
+                                        ScaleLength: true
+                                        LengthFactor: 2.0
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 39f88ba4-d39f-4c3a-b658-6941b79397b1
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeVertexStreamColor
@@ -1251,7 +1215,6 @@ Hierarchy:
                                             DisplayParticleRotation: false
                                             DisplayParticleScale: false
                                             DisplayParticleScaleUniform: false
-                                    CanEmitParticles: true
             Design: {}
         -   Entity:
                 Id: c392f952-51b2-4dde-aad9-9449a33be394
@@ -1318,9 +1281,6 @@ Hierarchy:
                                     EmitterName: Self
                                     MaxParticlesOverride: 1000
                                     ParticleLifetime: {X: 1.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: e350449b-7a5d-4f16-bfe6-2fbf16a0d07a
                                         SamplerPosition: null
@@ -1329,7 +1289,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 3a2f4d08-f75b-4c30-83c0-10cbf47b8c5f
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeBinaryColor
                                             Operator: Multiply
                                             LeftChild: !ComputeVertexStreamColor
@@ -1502,7 +1461,6 @@ Hierarchy:
                                             KillParticles: false
                                             Restitution: 0.7
                                             Friction: 0.1
-                                    CanEmitParticles: true
             Design: {}
         -   Entity:
                 Id: ec35c281-2510-44b4-b37d-927c58ef95e9
