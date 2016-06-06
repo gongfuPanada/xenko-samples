@@ -173,8 +173,6 @@ namespace GameMenu
             overlay.Children.Add(welcomePopup);
             overlay.Children.Add(shipSelectPopup);
 
-			overlay.UIElementServices = new UIElementServices { Services = this.Services };
-
             // Set the root element to the overall overlay
             var uiComponent = Entity.Get<UIComponent>();
             uiComponent.RootElement = overlay;
