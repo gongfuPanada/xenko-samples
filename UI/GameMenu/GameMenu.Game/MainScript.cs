@@ -173,6 +173,8 @@ namespace GameMenu
             overlay.Children.Add(welcomePopup);
             overlay.Children.Add(shipSelectPopup);
 
+			overlay.UIElementServices = new UIElementServices { Services = this.Services };
+
             // Set the root element to the overall overlay
             var uiComponent = Entity.Get<UIComponent>();
             uiComponent.RootElement = overlay;
@@ -398,7 +400,7 @@ namespace GameMenu
             };
 
             // Create Edit text
-            var nameEditText = new EditText(Services)
+            var nameEditText = new EditText()
             {
                 Font = WesternFont,
                 TextSize = 32,
@@ -475,13 +477,14 @@ namespace GameMenu
                 Content = popupContentPanel,
                 Padding = new Thickness(85, 130, 85, 110)
             };
-
+			
             welcomePopup = new ModalElement
             {
                 Visibility = Visibility.Collapsed,
                 Content = welcomePopupContent,
             };
             welcomePopup.SetPanelZIndex(1);
+			
         }
 
         private UIElement CreateMainScreneTopBar()
