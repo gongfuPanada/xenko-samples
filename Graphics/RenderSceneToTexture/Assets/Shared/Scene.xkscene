@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 84efeed8-fdd2-4e9b-9cfb-d4ea3e5aa6aa
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: bfd87fc1-aa2e-4563-b1d5-852df6475831
@@ -218,6 +218,7 @@ SceneSettings:
                         CullingMask: Group0
                         Output: !CurrentRenderFrameProvider {}
                         Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                        ForceAspectRatio: false
         Master:
             ~Id: 72df8af4-a4fa-4843-915e-016a5f742d3c
             Name: SceneGraphicsLayer
@@ -236,6 +237,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 8db1c8c4-1db4-4ca0-acee-bad64ae74566
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

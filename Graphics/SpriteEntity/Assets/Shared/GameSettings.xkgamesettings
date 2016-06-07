@@ -1,13 +1,14 @@
 !GameSettingsAsset
 Id: 0c2b2f92-9733-4277-94aa-122d07ea4d2f
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.1-alpha01}
 Tags: []
-DefaultScene: 20ae0cfb-f718-46e8-802c-718c98d77137:SpriteEntityScene
+DefaultScene: 98566261-8070-4fa2-83dd-fec2a76cc5ea/20ae0cfb-f718-46e8-802c-718c98d77137:SpriteEntityScene
 Defaults:
     - !SiliconStudio.Xenko.Graphics.RenderingSettings,SiliconStudio.Xenko.Graphics
         ~Id: 928f5811-240b-4e11-81a9-68b5ed35cc6b
         DefaultBackBufferWidth: 1280
         DefaultBackBufferHeight: 720
+        AdaptBackBufferToScreen: false
         DefaultGraphicsProfile: Level_9_3
         ColorSpace: Linear
         DisplayOrientation: LandscapeRight

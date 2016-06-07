@@ -8,6 +8,7 @@ Defaults:
         ~Id: a47b320e-1f8b-431b-ac71-5a60443b80e9
         DefaultBackBufferWidth: 1280
         DefaultBackBufferHeight: 720
+        AdaptBackBufferToScreen: false
         DefaultGraphicsProfile: Level_9_3
         ColorSpace: Linear
         DisplayOrientation: LandscapeRight

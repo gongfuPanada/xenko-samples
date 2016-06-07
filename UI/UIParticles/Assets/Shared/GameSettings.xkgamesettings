@@ -1,6 +1,6 @@
 !GameSettingsAsset
 Id: ee826f6c-55f8-4082-b5bd-9fc206888a73
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.1-alpha01}
 Tags: []
 DefaultScene: a64d29e4-08ac-4142-ad05-effc37af5f95/a8ddac34-2bf1-452c-bdf5-47e2d633e83a:SplashScene
 Defaults:
@@ -8,6 +8,7 @@ Defaults:
         ~Id: 310bc228-4efa-4391-9ad7-456325dae9f5
         DefaultBackBufferWidth: 600
         DefaultBackBufferHeight: 600
+        AdaptBackBufferToScreen: false
         DefaultGraphicsProfile: Level_9_3
         ColorSpace: Linear
         DisplayOrientation: Portrait

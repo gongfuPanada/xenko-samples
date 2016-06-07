@@ -4,15 +4,13 @@ SerializedVersion: {Xenko: 1.5.0-alpha09}
 Tags: []
 Source: null
 FontName: Arial
-Size: 16.0
 Style: Italic
 IsDynamic: true
 DefaultCharacter: ' '
 CharacterSet: null
 CharacterRegions:
-    -   Start: ' '
+    -   ~Id: 5687481f-cdc6-4277-b95a-f7f3a557b9cc
+        Start: ' '
         End: "\x7F"
 AntiAlias: Grayscale
-Spacing: 0.0
-LineSpacing: 0.0
 UseKerning: false

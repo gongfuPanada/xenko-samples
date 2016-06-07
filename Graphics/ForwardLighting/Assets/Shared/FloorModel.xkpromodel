@@ -10,4 +10,4 @@ Type: !CylinderProceduralModel
     UvScale: {X: 6.0, Y: 6.0}
     MaterialInstance:
         ~Id: 09e8da44-7163-4252-b2ce-4ecebfa5a039
-        Material: 03ad0abd-afc4-4b32-89ae-d6f2623014e2:TrainingFloorMaterial
+        Material: 6a8c45b3-d14f-4760-a82e-94d4ad1d328a/03ad0abd-afc4-4b32-89ae-d6f2623014e2:TrainingFloorMaterial

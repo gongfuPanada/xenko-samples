@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c90e49d7-b3d8-4b19-b771-71cf4460a83b
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 442725a6-920d-4154-8afe-6fc25b5294d4
@@ -25,8 +25,10 @@ Hierarchy:
                         Font: 9eb69756-ea58-414c-8249-9ee8e983cb8c/742bb234-8f43-4702-b9bb-396b663b4a2c:Font
                     - !UIComponent
                         ~Id: d039ac15-8363-43e7-9f34-d891cb850857
-                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
-                        VirtualResolutionMode: FixedWidthFixedHeight
+                        Page: null
+                        Resolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        ResolutionStretch: FixedWidthFixedHeight
             Design: {}
         -   Entity:
                 Id: 3723d251-4a6e-4edb-9858-591bd4312d77
@@ -83,6 +85,7 @@ SceneSettings:
                     CullingMask: Group0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
                 - !SceneCameraRenderer
                     ~Id: dcd86402-2f89-4923-8438-989d65943668
                     Mode: !CameraRendererModeForward
@@ -93,6 +96,7 @@ SceneSettings:
                     CullingMask: Group1
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: f05efc76-b803-4255-ae19-f108f1ad328a
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

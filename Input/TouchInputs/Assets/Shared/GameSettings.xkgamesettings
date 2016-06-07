@@ -1,13 +1,14 @@
 !GameSettingsAsset
 Id: a008e8ac-ccf1-4cf9-9891-6a14af73da17
-SerializedVersion: {Xenko: 1.6.0-beta}
+SerializedVersion: {Xenko: 1.6.1-alpha01}
 Tags: []
-DefaultScene: 8da52091-f3ce-45a3-8f1b-01fbf1a19f42:TouchInputsScene
+DefaultScene: 077990dd-c013-417e-87e4-d2bee6b58fc9/8da52091-f3ce-45a3-8f1b-01fbf1a19f42:TouchInputsScene
 Defaults:
     - !SiliconStudio.Xenko.Graphics.RenderingSettings,SiliconStudio.Xenko.Graphics
         ~Id: 751fd8a1-f8e5-4949-8109-3f3e52c9e2b3
         DefaultBackBufferWidth: 1280
         DefaultBackBufferHeight: 720
+        AdaptBackBufferToScreen: false
         DefaultGraphicsProfile: Level_9_3
         ColorSpace: Linear
         DisplayOrientation: LandscapeRight

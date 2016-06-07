@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 5f4a3789-b182-4b32-9088-acbf9e13edb5
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 6bab66c7-1a75-4d3e-8865-8c3fdef200ef
@@ -131,7 +131,9 @@ Hierarchy:
                         UIText: Tap on the screen!
                     - !UIComponent
                         ~Id: d8888db9-f55d-4b73-9b6b-3ec597f8f469
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Page: null
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
             Design: {}
 SceneSettings:
     ~Id: df51691c-bfdf-40f2-859c-c41a1396724a
@@ -162,6 +164,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 1558e183-eeee-4a1b-ba1a-8d3f33abf299
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

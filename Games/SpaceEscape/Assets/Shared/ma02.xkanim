@@ -4,19 +4,6 @@ SerializedVersion: {Xenko: 1.5.0-alpha02}
 Tags: []
 Source: ../../Resources/model/character/scene/ma02.FBX
 RepeatMode: PlayOnce
-Skeleton: bfe057df-2fd1-402a-97bc-bd16edee241a:character_00 Skeleton
+Skeleton: 8bfcb1ac-24ab-4578-863a-9fbe4b16c0e1/bfe057df-2fd1-402a-97bc-bd16edee241a:character_00 Skeleton
 RootMotion: false
-PreviewModel: 920f4445-c00d-474f-b8c0-33b385d58b8f:character_00
-~Base:
-    ~Id: d8c98730-8783-401a-91d0-63a998e558f7
-    Location: --import--
-    Asset: !Animation
-        Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.5.0-alpha02}
-        Tags: []
-        Source: 
-        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
-        RepeatMode: LoopInfinite
-        Skeleton: null
-        RootMotion: false
-        PreviewModel: null
+PreviewModel: 94426ef5-7e07-47e7-a420-0714f0fe154d/920f4445-c00d-474f-b8c0-33b385d58b8f:character_00

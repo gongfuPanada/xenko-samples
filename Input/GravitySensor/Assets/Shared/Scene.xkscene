@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 3b831f6c-eb4c-4276-9f4c-fd6c9fe13f77
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 9d40c09d-0830-4cf6-bcaa-47b200a2c4f4
@@ -57,7 +57,9 @@ Hierarchy:
                         Font: 1cd08a03-d7b3-4dab-9660-b78ba787b67a/e69c3c0c-baca-4e05-9c03-a3f95cdeb5ed:SpriteFont
                     - !UIComponent
                         ~Id: f75a332a-6b7d-4a17-b507-810eefd8913f
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Page: null
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
                     - !CameraComponent
                         ~Id: 6b94cf5f-c890-4d8d-a2be-c91b136bb3ed
                         Projection: Orthographic
@@ -270,6 +272,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 598560ed-f978-422b-bf4f-406c5330ea97
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

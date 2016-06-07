@@ -1,5 +1,6 @@
 !PrefabAsset
 Id: 8e9236c1-dca5-49a8-8577-1ad6c63084d8
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: f9a77ff2-8835-4f7b-a7e3-e3040f58d67e
@@ -37,9 +38,6 @@ Hierarchy:
                                 -   ~Id: d21a2636-0bee-4b92-8b52-302ac4a7ef2d
                                     MaxParticlesOverride: 1
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: a4d24b55-4645-4be9-ae8c-1fcb183fc1c5
                                         SamplerPosition: null
@@ -47,8 +45,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 462e6bae-87b3-46d9-bfb0-b93fd8e368b8
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: fee9459c-4d50-4926-8896-8f719d9fcf08/8b03c447-e775-437b-a178-b7c0921ebf24:hit_effect
                                             FallbackValue:

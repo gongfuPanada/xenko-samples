@@ -418,6 +418,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 51a833e5-7e65-41fa-9baa-0844a1052de3
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

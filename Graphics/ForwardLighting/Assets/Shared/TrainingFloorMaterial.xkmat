@@ -8,11 +8,12 @@ Attributes:
             Value: 0.5
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: f4e322d8-7507-463e-b17b-fc10de8e6728:TrainingFloor
+            Texture: 5c6d2052-93b5-417f-aaff-8c9751781a63/f4e322d8-7507-463e-b17b-fc10de8e6728:TrainingFloor
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialSpecularMapFeature
         SpecularMap: !ComputeFloat4
@@ -29,34 +30,3 @@ Attributes:
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
-~Base:
-    ~Id: 4d6fa232-c6ae-42d1-b4cd-eebc7f54f2ad
-    Location: --import--
-    Asset: !MaterialAsset
-        Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
-        Tags: []
-        Attributes:
-            Diffuse: !MaterialDiffuseMapFeature
-                DiffuseMap: !ComputeTextureColor
-                    Texture: aa658fe5-a6a4-4377-ab2d-56c1facf76f4:mc_00
-                    FallbackValue:
-                        Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    Scale: {X: 1.0, Y: 1.0}
-                    Offset: {X: 0.0, Y: 0.0}
-            DiffuseModel: !MaterialDiffuseLambertModelFeature {}
-            Specular: !MaterialSpecularMapFeature
-                SpecularMap: !ComputeColor
-                    Value: {R: 0.9, G: 0.9, B: 0.9, A: 1.0}
-                Intensity: !ComputeFloat
-                    Value: 1.0
-            SpecularModel: !MaterialSpecularMicrofacetModelFeature
-                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
-                    ~Id: cccea84b-4c4e-4a91-93bd-74dfc462d42a
-                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit
-                    ~Id: bb4b45cb-d6e7-4f5f-b1d3-a80c7073417a
-                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong
-                    ~Id: d1f29dc7-f7c9-42bf-9b97-ce8dd5b00a79
-            Overrides:
-                UVScale: {X: 1.0, Y: 1.0}
-        Layers: []

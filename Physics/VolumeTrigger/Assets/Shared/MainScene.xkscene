@@ -1,6 +1,6 @@
 !SceneAsset
 Id: a5a4f13e-6366-43de-b071-a87c1dfff115
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 60e0c56a-a89d-4ecb-8c32-7e57276c9659
@@ -655,6 +655,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 1096c3a4-86a1-4c49-94ea-11857af6fe72
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
@@ -666,6 +667,7 @@ SceneSettings:
     -   Location: BallPrefab
         Asset: !PrefabAsset
             Id: 2603278e-1a16-4d57-a24c-563472a5b86b
+            SerializedVersion: {Xenko: 1.7.0-beta02}
             Tags: []
             Hierarchy:
                 ~Id: e29a41a1-54c5-4d5d-bab0-c4afaca25327
@@ -716,6 +718,7 @@ SceneSettings:
     -   Location: Colliders
         Asset: !PrefabAsset
             Id: e13cbc01-7701-438b-b6d4-c97e66098dd8
+            SerializedVersion: {Xenko: 1.7.0-beta02}
             Tags: []
             Hierarchy:
                 ~Id: fa564810-a090-42a2-a7bf-db3b69a3426f
@@ -811,7 +814,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: 71591d1d-8448-4de6-bffe-9444b68c75cf
                     -   Entity:
                             Id: 462c1a6d-4105-4d81-a6ff-4d2922a68f53
                             Name*: Cube7
@@ -852,7 +855,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: 42bca581-f3b0-4c84-82ae-aada5ad6edfd
                     -   Entity:
                             Id: 554f8faa-e43d-4790-92e3-31fa97ad884d
                             Name*: Cube9
@@ -893,7 +896,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: 36562445-42fc-4b29-84b9-b96db4881859
                     -   Entity:
                             Id: 7e967465-e0f1-4346-ba03-bfaf8f3a04c0
                             Name*: Cube2
@@ -934,7 +937,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: 7e0c0e30-dba7-4c4b-a20d-299e2dae07b8
                     -   Entity:
                             Id: 8b979eea-e7ca-4c96-91f9-716520ecffa6
                             Name*: Cube5
@@ -975,7 +978,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: e7813fd7-7fe8-43c0-a4a8-4c68ebabf1f0
                     -   Entity:
                             Id: 9a21b30e-26ff-406d-aeba-d3e0788bbb75
                             Name*: Cube8
@@ -1016,7 +1019,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: d4ab52d6-eaa6-49e8-98a3-5ef1558d4b24
                     -   Entity:
                             Id: c35ab69e-a4cc-41ac-a740-89706a59148d
                             Name*: Cube4
@@ -1057,7 +1060,7 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: f900ee98-b321-43e5-a2e9-ce47d36de943
                     -   Entity:
                             Id: e4055f69-b082-49a3-8c1c-51004796b9cf
                             Name: Cube1
@@ -1098,4 +1101,4 @@ SceneSettings:
                                         - null
                         Design:
                             BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                            BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                            BasePartInstanceId: 80bbd32c-3741-4c9a-b7ac-f5556993dca8

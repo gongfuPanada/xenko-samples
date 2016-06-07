@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 8da52091-f3ce-45a3-8f1b-01fbf1a19f42
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 67cc7b50-975b-4b42-b3c1-5b85a4b31221
@@ -61,6 +61,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: f8e182d0-3e84-44e2-8e0f-db9cd5db96da
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

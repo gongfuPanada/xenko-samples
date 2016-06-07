@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 86fed268-baa8-4929-9eba-4d14cf3a0e68
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: c91144cf-1866-4c08-a9d0-88b0ec28a0b9
@@ -29,7 +29,9 @@ Hierarchy:
                         Font: 53a8eb8d-6e79-4e5c-965d-82de13339339/1aae175d-f34a-472e-b951-65e34f93c8e3:Font
                     - !UIComponent
                         ~Id: ee506ad3-1840-42d1-a282-00ec4aca40b0
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Page: null
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
             Design: {}
         -   Entity:
                 Id: 33ffa674-1b2b-477c-be9c-f112ad4d7f25
@@ -292,6 +294,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 6f33a281-eda6-4440-9077-522606d5a04e
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
@@ -303,6 +306,7 @@ SceneSettings:
     -   Location: CubePrefab
         Asset: !PrefabAsset
             Id: 81d2f7ea-8b18-44ab-96fd-6a0383065606
+            SerializedVersion: {Xenko: 1.7.0-beta02}
             Tags: []
             Hierarchy:
                 ~Id: be299a1b-2b49-45ba-9075-844aff0d5ca0

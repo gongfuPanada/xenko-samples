@@ -1,6 +1,6 @@
 !SceneAsset
 Id: c2262423-9422-4dd1-9fcb-ead76f9a93ba
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: bad0d8a1-15a6-4d40-af0c-8cef471c06ce
@@ -1481,6 +1481,7 @@ SceneSettings:
                             Index: 0
                         Output: !CurrentRenderFrameProvider {}
                         Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                        ForceAspectRatio: false
         Master:
             ~Id: 66708f54-01aa-46eb-bca6-327b8718c1ca
             Name: SceneGraphicsLayer

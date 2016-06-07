@@ -36,29 +36,3 @@ Attributes:
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
-~Base:
-    Location: --import--
-    Asset: !MaterialAsset
-        Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
-        Tags: []
-        Attributes:
-            Diffuse: !MaterialDiffuseMapFeature
-                DiffuseMap: !ComputeColor
-                    Value: {R: 0.9450981, G: 0.733333349, B: 0.156862751, A: 1.0}
-            DiffuseModel: !MaterialDiffuseLambertModelFeature {}
-            Specular: !MaterialSpecularMapFeature
-                SpecularMap: !ComputeColor
-                    Value: {R: 0.9, G: 0.9, B: 0.9, A: 1.0}
-                Intensity: !ComputeFloat
-                    Value: 1.0
-            SpecularModel: !MaterialSpecularMicrofacetModelFeature
-                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
-                    ~Id: 62163a66-e893-404f-b27f-fbed29393e9e
-                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit
-                    ~Id: 1ce18e99-1c21-43db-a054-ee0a884c4e09
-                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong
-                    ~Id: 4e48ad1c-4233-4631-8c46-5dedfc97be81
-            Overrides:
-                UVScale: {X: 1.0, Y: 1.0}
-        Layers: []

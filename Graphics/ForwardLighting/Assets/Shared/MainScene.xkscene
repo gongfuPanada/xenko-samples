@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 39ecd5b5-134a-4651-9ebe-118605b09d03
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 25fae3fd-63bc-4959-8a1f-bf56b8f875a9
@@ -124,7 +124,9 @@ Hierarchy:
                             Id: bc698866-6571-4096-b8ee-6c1d21328503
                     - !UIComponent
                         ~Id: b66f1e83-4580-423d-ae5f-6798c0e085c6
-                        VirtualResolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Page: null
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
             Design: {}
         -   Entity:
                 Id: 92384700-0ee6-42e3-a038-e4ed7a11b0ab
@@ -280,6 +282,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 45abdc9c-b59d-4891-aa01-3483bdf47529
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

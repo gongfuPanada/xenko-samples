@@ -8,11 +8,12 @@ Attributes:
             Value: 0.7
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: aa658fe5-a6a4-4377-ab2d-56c1facf76f4:mc_00
+            Texture: 259ffb50-e98b-46af-aea7-0faed67b82d9/aa658fe5-a6a4-4377-ab2d-56c1facf76f4:mc_00
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialSpecularMapFeature
         SpecularMap: !ComputeFloat4
@@ -28,44 +29,14 @@ Attributes:
             ~Id: 592a88c2-906b-4ade-b41e-d663395c335d
     Emissive: !MaterialEmissiveMapFeature
         EmissiveMap: !ComputeTextureColor
-            Texture: f1325456-f87c-49da-a9ed-497f472f6012:mc_00_em
+            Texture: 37374af9-736a-4dbe-a07b-1f4728f56188/f1325456-f87c-49da-a9ed-497f472f6012:mc_00_em
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
             Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
         Intensity: !ComputeFloat
             Value: 1.0
     Overrides:
         UVScale: {X: 1.0, Y: 1.0}
 Layers: []
-~Base:
-    ~Id: 8f57ef1b-c05f-48bb-b68f-caa8d3a48380
-    Location: --import--
-    Asset: !MaterialAsset
-        Id: 00000000-0000-0000-0000-000000000000
-        SerializedVersion: {Xenko: 1.4.0-beta}
-        Tags: []
-        Attributes:
-            Diffuse: !MaterialDiffuseMapFeature
-                DiffuseMap: !ComputeTextureColor
-                    Texture: aa658fe5-a6a4-4377-ab2d-56c1facf76f4:mc_00
-                    FallbackValue:
-                        Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    Scale: {X: 1.0, Y: 1.0}
-                    Offset: {X: 0.0, Y: 0.0}
-            DiffuseModel: !MaterialDiffuseLambertModelFeature {}
-            Specular: !MaterialSpecularMapFeature
-                SpecularMap: !ComputeColor
-                    Value: {R: 0.9, G: 0.9, B: 0.9, A: 1.0}
-                Intensity: !ComputeFloat
-                    Value: 1.0
-            SpecularModel: !MaterialSpecularMicrofacetModelFeature
-                Fresnel: !MaterialSpecularMicrofacetFresnelSchlick
-                    ~Id: de0bd8d4-e95d-4e7d-8d57-d988fac8b97b
-                Visibility: !MaterialSpecularMicrofacetVisibilityImplicit
-                    ~Id: 0107321a-0a96-4801-889d-2349cfd101ce
-                NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionBlinnPhong
-                    ~Id: 4f05035d-4133-405f-a591-2ade87614657
-            Overrides:
-                UVScale: {X: 1.0, Y: 1.0}
-        Layers: []

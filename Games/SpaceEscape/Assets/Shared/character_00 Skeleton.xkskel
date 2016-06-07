@@ -2,7 +2,6 @@
 Id: bfe057df-2fd1-402a-97bc-bd16edee241a
 Tags: []
 Source: ../../Resources/model/character/scene/character_00.FBX
-SourceHash: 1a0b83c9b02b333469043d7a7a964b16
 ScaleImport: 0.0
 Nodes:
     - {~Id: cbb75c39-ef6f-4bb2-8efa-dac9c1f2b57e, Name: RootNode, Depth: 0}
@@ -47,3 +46,5 @@ Nodes:
     - {~Id: 06756343-cc3c-482e-b1c7-11852403645d, Name: cloth_B_2, Depth: 4}
     - {~Id: 5b9709ba-cac4-43cb-8acf-696d655a47bf, Name: cloth_a_1, Depth: 3}
     - {~Id: 8bdf7259-db5c-4080-99ad-426348535bf2, Name: cloth_a_2, Depth: 4}
+~SourceHashes:
+    ../../Resources/model/character/scene/character_00.FBX: 1a0b83c9b02b333469043d7a7a964b16

@@ -1,6 +1,6 @@
 !SceneAsset
 Id: a8ddac34-2bf1-452c-bdf5-47e2d633e83a
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: f6179207-c6a1-4692-a2df-cffa00f09103
@@ -42,11 +42,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 7f979763-ff9d-495e-8be8-08d87893992c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 3.0, Y: 5.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderQuad
                                         ~Id: 93927801-d36d-4985-8918-a3a08292390e
                                         SamplerPosition: null
@@ -54,8 +50,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 365f41ff-32eb-4a1d-88b6-1601a92005f0
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeVertexStreamColor
                                             Stream: !ColorVertexStreamDefinition
                                                 ~Id: 60bf8db5-a305-45c2-9575-57105575323e
@@ -100,6 +94,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: -1.0, Z: -1.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
                                         - !InitialVelocitySeed
                                             ~Id: 9d42cc8e-acc7-4c9f-9196-23e0791a02e7
                                             InheritPosition: true
@@ -206,11 +201,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 7f979763-ff9d-495e-8be8-08d87893992c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 3.0, Y: 5.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderHexagon
                                         ~Id: 98a09802-13ca-4a0f-bca9-034c6fa81f42
                                         SamplerPosition: null
@@ -219,7 +210,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 365f41ff-32eb-4a1d-88b6-1601a92005f0
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeFloat4
                                             Value: {X: 1.0, Y: 1.0, Z: 0.0, W: 0.0}
                                         UVBuilder: null
@@ -263,6 +253,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: -1.0, Z: -1.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            Interpolate: false
                                         - !InitialVelocitySeed
                                             ~Id: 9d42cc8e-acc7-4c9f-9196-23e0791a02e7
                                             InheritPosition: true
@@ -339,9 +330,6 @@ Hierarchy:
                                 -   ~Id: 7f979763-ff9d-495e-8be8-08d87893992c
                                     MaxParticlesOverride: 1
                                     ParticleLifetime: {X: 1.0, Y: 1.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 54f73632-abf8-4b88-8379-0fd8507a5043
                                         SamplerPosition: null
@@ -350,7 +338,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 365f41ff-32eb-4a1d-88b6-1601a92005f0
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: 63d5905e-4d00-40d5-b95f-c438ec90d7d6/8b03c447-e775-437b-a178-b7c0921ebf24:hit_effect
                                             FallbackValue:
@@ -409,8 +396,10 @@ Hierarchy:
                         WesternFont: 1831cb77-cb72-421f-9daa-69ed5f410ff1/e6bf6615-520f-4e8e-aebe-0503f8daffb6:WesternFont
                     - !UIComponent
                         ~Id: a8b1b6f6-8ad4-4580-bd94-0370455f3450
-                        VirtualResolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
-                        VirtualResolutionMode: FixedWidthFixedHeight
+                        Page: null
+                        Resolution: {X: 640.0, Y: 1136.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                        ResolutionStretch: FixedWidthFixedHeight
             Design: {}
         -   Entity:
                 Id: a2f71ae3-80f0-4440-8584-7b52eb7f1706
@@ -457,11 +446,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 7f979763-ff9d-495e-8be8-08d87893992c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 12.0, Y: 15.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderQuad
                                         ~Id: 93927801-d36d-4985-8918-a3a08292390e
                                         SamplerPosition: null
@@ -469,8 +454,6 @@ Hierarchy:
                                         SamplerRotation: null
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 365f41ff-32eb-4a1d-88b6-1601a92005f0
-                                        AlphaAdditive: 0.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeVertexStreamColor
                                             Stream: !ColorVertexStreamDefinition
                                                 ~Id: 60bf8db5-a305-45c2-9575-57105575323e
@@ -515,6 +498,7 @@ Hierarchy:
                                             DisplayParticleScale: false
                                             PositionMin: {X: -1.0, Y: -1.0, Z: -20.0}
                                             PositionMax: {X: 1.0, Y: 1.0, Z: 20.0}
+                                            Interpolate: false
                                         - !InitialVelocitySeed
                                             ~Id: 9d42cc8e-acc7-4c9f-9196-23e0791a02e7
                                             InheritPosition: true
@@ -619,11 +603,7 @@ Hierarchy:
                                 Maximum: {X: 1.0, Y: 1.0, Z: 1.0}
                             Emitters:
                                 -   ~Id: 7f979763-ff9d-495e-8be8-08d87893992c
-                                    MaxParticlesOverride: 0
                                     ParticleLifetime: {X: 1.0, Y: 2.0}
-                                    SimulationSpace: World
-                                    RandomSeedMethod: Time
-                                    SortingPolicy: None
                                     ShapeBuilder: !ShapeBuilderBillboard
                                         ~Id: 54f73632-abf8-4b88-8379-0fd8507a5043
                                         SamplerPosition: null
@@ -632,7 +612,6 @@ Hierarchy:
                                     Material: !ParticleMaterialComputeColor
                                         ~Id: 365f41ff-32eb-4a1d-88b6-1601a92005f0
                                         AlphaAdditive: 1.0
-                                        FaceCulling: CullNone
                                         ComputeColor: !ComputeTextureColor
                                             Texture: bebf159a-e5cb-4dc2-8c60-116d39c96ef5/e4d44771-d2f6-46ce-8001-81f9e71b4a7a:explosion8x8
                                             FallbackValue:
@@ -718,6 +697,7 @@ SceneSettings:
                     CullingMask: Group0, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30, Group31
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
                 - !ClearRenderFrameRenderer
                     ~Id: 590c04fa-c99f-423d-96b4-7da2cbca7629
                     ClearFlags: DepthOnly
@@ -733,6 +713,7 @@ SceneSettings:
                     CullingMask: Group1
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: df9ebb5c-51f9-4edb-b4bb-eb8af7533d02
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}

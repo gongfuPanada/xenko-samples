@@ -1,5 +1,6 @@
 !PrefabAsset
 Id: b6784169-c2e8-436b-8945-a9fb1ba4baa5
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: 5f6f7847-0e78-4824-8813-a70db8f1176d
@@ -18,6 +19,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false

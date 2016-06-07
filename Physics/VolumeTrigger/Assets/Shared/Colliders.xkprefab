@@ -1,5 +1,6 @@
 !PrefabAsset
 Id: e13cbc01-7701-438b-b6d4-c97e66098dd8
+SerializedVersion: {Xenko: 1.7.0-beta02}
 Tags: []
 Hierarchy:
     ~Id: fa564810-a090-42a2-a7bf-db3b69a3426f
@@ -26,6 +27,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -66,6 +68,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -93,7 +96,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: 71591d1d-8448-4de6-bffe-9444b68c75cf
         -   Entity:
                 Id: 462c1a6d-4105-4d81-a6ff-4d2922a68f53
                 Name*: Cube7
@@ -106,6 +109,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -133,7 +137,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: 42bca581-f3b0-4c84-82ae-aada5ad6edfd
         -   Entity:
                 Id: 554f8faa-e43d-4790-92e3-31fa97ad884d
                 Name*: Cube9
@@ -146,6 +150,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -173,7 +178,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: 36562445-42fc-4b29-84b9-b96db4881859
         -   Entity:
                 Id: 7e967465-e0f1-4346-ba03-bfaf8f3a04c0
                 Name*: Cube2
@@ -186,6 +191,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -213,7 +219,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: 7e0c0e30-dba7-4c4b-a20d-299e2dae07b8
         -   Entity:
                 Id: 8b979eea-e7ca-4c96-91f9-716520ecffa6
                 Name*: Cube5
@@ -226,6 +232,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -253,7 +260,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: e7813fd7-7fe8-43c0-a4a8-4c68ebabf1f0
         -   Entity:
                 Id: 9a21b30e-26ff-406d-aeba-d3e0788bbb75
                 Name*: Cube8
@@ -266,6 +273,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -293,7 +301,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: d4ab52d6-eaa6-49e8-98a3-5ef1558d4b24
         -   Entity:
                 Id: c35ab69e-a4cc-41ac-a740-89706a59148d
                 Name*: Cube4
@@ -306,6 +314,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -333,7 +342,7 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: f900ee98-b321-43e5-a2e9-ce47d36de943
         -   Entity:
                 Id: e4055f69-b082-49a3-8c1c-51004796b9cf
                 Name: Cube1
@@ -346,6 +355,7 @@ Hierarchy:
                         Children: []
                     - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                         ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                        TriggerEntity: null
                     - !RigidbodyComponent
                         ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                         CanSleep: false
@@ -373,11 +383,12 @@ Hierarchy:
                             - null
             Design:
                 BaseId: bd21c191-c738-4b04-aa3b-1ea9736fb9a0
-                BasePartInstanceId: 04211d09-fbcc-43b3-acf6-e9fb6608435c
+                BasePartInstanceId: 80bbd32c-3741-4c9a-b7ac-f5556993dca8
 ~BaseParts:
     -   Location: CubePrefab
         Asset: !PrefabAsset
             Id: b6784169-c2e8-436b-8945-a9fb1ba4baa5
+            SerializedVersion: {Xenko: 1.7.0-beta02}
             Tags: []
             Hierarchy:
                 ~Id: 5f6f7847-0e78-4824-8813-a70db8f1176d
@@ -396,6 +407,7 @@ Hierarchy:
                                     Children: []
                                 - !VolumeTrigger.AutoResetRigidbody,VolumeTrigger.Game
                                     ~Id: 2d8df8bb-ca7a-4135-a8dd-44e9b932746c
+                                    TriggerEntity: null
                                 - !RigidbodyComponent
                                     ~Id: bb5b0832-d05b-4100-ba2c-f58c62312deb
                                     CanSleep: false

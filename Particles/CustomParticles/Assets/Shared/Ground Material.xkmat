@@ -5,7 +5,7 @@ Tags: []
 Attributes:
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeTextureColor
-            Texture: 31d063d3-7159-4004-920c-04f038b43a7b:XenkoLogoGray
+            Texture: 96ad7091-3094-42aa-8d4c-f46861f1128a/31d063d3-7159-4004-920c-04f038b43a7b:XenkoLogoGray
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Scale: {X: 1.0, Y: 1.0}
