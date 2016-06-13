@@ -83,11 +83,6 @@ namespace Constraints
             });
         }
 
-        public override void Cancel()
-        {
-            RemoveConstraint();
-        }
-
         void CreatePoint2PointConstraint()
         {
             cubeRigidBody.LinearFactor = Vector3.Zero;
