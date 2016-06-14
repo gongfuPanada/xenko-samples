@@ -47,5 +47,4 @@ routerlog.txt
 *.ilk
 *.pri
 *.lib
-Others/NativeLinking/NativeLibrary/Android/libs/
-Others/NativeLinking/NativeLibrary/libs
+!Others/NativeLinking/NativeLibs/**/*
